@@ -1098,6 +1098,7 @@ AtlasLoot_TableNames = {
 	["ENGINEERINGMENU"] = { "dummy", "dummy" },
 	["LEATHERWORKINGMENU"] = { "dummy", "dummy" },
 	["TAILORINGMENU"] = { "dummy", "dummy" },
+	["JEWELCRAFTMENU"] = { "dummy", "dummy" },
 	["COOKINGMENU"] = { "dummy", "dummy" },
 	["FIRSTAIDMENU"] = { "dummy", "dummy" },
 	["WORLDBOSSMENU"] = { "dummy", "dummy" },
@@ -1553,6 +1554,9 @@ AtlasLoot_TableNamesBoss = {
 		["AQOpening"] = { "AQ Opening Quest Line", "AtlasLootItems" },
 		["AQEnchants"] = { "AQ Enchants", "AtlasLootItems" },
 	},
+	--Kara40
+	["NoKara40"] = { "No Kara 40", "AtlasLootItems" },
+
 	["Uldaman Entrance"] = {
 		["UldMagreganDeepshadow"] = { AL["Magregan Deepshadow"], "AtlasLootItems" },
 		["UldTabletofRyuneh"] = { "Tablet of Ryun'eh", "AtlasLootItems" },

@@ -799,6 +799,9 @@ AtlasLootBossButtons = {
 		"AQ40SET";
 		"AQOpening";
 	};
+	Kara40 = {
+		"Kara40";
+	};
 	Uldaman = {
 		"VanillaKeys";
 		"";
@@ -3248,9 +3251,10 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 0,"","","" },
 		{ 21686, "INV_Shoulder_02", "=q4=Mantle of Phrenic Power", "=ds=#s3#, #a1# =q7=Princess Yauj", "25%" },
 		{ 21684, "INV_Shoulder_28", "=q4=Mantle of the Desert's Fury", "=ds=#s3#, #a3# =q7=Princess Yauj", "25%" },
-		{ 21683, "INV_Shoulder_29", "=q4=Mantle of the Desert Crusade", "=ds=#s3#, #a4# =q7=Princess Yauj", "25%" },
+		{ 21683, "INV_Shoulder_29", "=q4=Mantle of the Redeemed Prophecy", "=ds=#s3#, #a4# =q7=Princess Yauj", "25%" },
 		{ 21682, "INV_Gauntlets_21", "=q4=Bile-Covered Gauntlets", "=ds=#s9#, #a2# =q7=Princess Yauj", "25%" },
 		{ 21687, "INV_Jewelry_Ring_24", "=q4=Ukko's Ring of Darkness", "=ds=#s13# =q7=Princess Yauj", "25%" },
+		{ 21695, "INV_Jewelry_Ring_AhnQiraj_04", "=q4=Angelista's Touch", "=ds=#s13#", "Unknown Droprate" },
 	};
 	AQ40Sartura = {
 		{ 21669, "INV_Helmet_01", "=q4=Creeping Vine Helm", "=ds=#s1#, #a2#", "15%" },
@@ -3519,6 +3523,9 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 23557, "INV_Weapon_Rifle_10", "=q4=Larvae of the Great Worm", "=ds=#w5#", "13%" },
 		{ 21613, "INV_Boots_04", "=q4=Wormhide Boots", "=ds=#s12#, #a2#", "13%" },
 		{ 21612, "INV_Boots_Chain_08", "=q4=Wormscale Stompers", "=ds=#s12#, #a3#", "13%" },
+		{ 21614, "INV_Helmet_09", "=q4=Wormhide Protector", "=ds=#s1#, #a2#", "Unknown %" },
+		{ 55554, "INV_Gauntlets_26", "=q4=Carapace Handguards", "=ds=#s9#, #a3#", "Unknown %" },
+		{ 55553, "inv_gauntlets_23", "=q4=Gloves of the Primordial Burrower", "=ds=#s9#, #a2#", "Unknown %" },
 		{ 0,"","","" },
 		{ 21614, "INV_Helmet_09", "=q4=Wormhide Protector", "=ds=#s1#, #a2#" },
 		{ 55554, "INV_Gauntlets_26", "=q4=Carapace Handguards", "=ds=#s9#, #a3#" },
@@ -3714,6 +3721,9 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 21521, "INV_Sword_51", "=q4=Runesword of the Red", "=ds=#h3#, #w10#" },
 		{ 21522, "INV_Weapon_ShortBlade_25", "=q4=Shadowsong's Sorrow", "=ds=#h1#, #w4#" },
 		{ 21520, "INV_Sword_49", "=q4=Ravencrest's Legacy", "=ds=#h1#, #w10#" },
+	};
+	NoKara40 = {
+		{ 694201337, "", "=q6=Kara 40 Cannot Be Added", "Until the database website is back" },
 	};
 	GnGrubbis = {
 		{ 9445, "INV_Gauntlets_17", "=q3=Grubbis Paws", "=ds=#s9#, #a3#", "10%" },
@@ -6699,7 +6709,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 	};
 	LBRSSpirestoneBattleLord = {
 		{ 13284, "INV_Boots_01", "=q3=Swiftdart Battleboots", "=ds=#s12#, #a3#", "40%" },
-		{ 13285, "INV_Weapon_Halberd_11", "=q3=The Nicker", "=ds=#h2#, #w1#", "60%" },
+		{ 13285, "INV_Weapon_Halberd_11", "=q3=The Blackrock Slicer", "=ds=#h2#, #w1#", "60%" },
 	};
 	LBRSVosh = {
 		{ 16712, "INV_Gauntlets_24", "=q3=Shadowcraft Gloves", "=ds=#s9#, #a2# (D1, =q12=#c6#=ds=)", "17%" },

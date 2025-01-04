@@ -1,4 +1,4 @@
-﻿local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
+local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
 
 -- Colours stored for code readability
 local GREY = "|cff999999";
@@ -6465,6 +6465,105 @@ AtlasLoot_ButtonRegistry = {
 		Back_Title = AL["Tailoring"];
 		Prev_Page = "TailoringBags1";
 		Prev_Title = AL["Tailoring"] .. ": " .. AL["Bags"];
+	};
+	["JewelcraftingApprentice1"] = {
+		Title = AL["Jewelcrafting"] .. ": " .. AL["Apprentice"];
+		Back_Page = "JEWELCRAFTMENU";
+		Back_Title = AL["Jewelcrafting"];
+		Prev_Page = "JewelcraftingGemstones1";
+		Prev_Title = AL["Jewelcrafting"] .. ": " .. AL["Gemstones"];
+		Next_Page = "JewelcraftingJourneyman1";
+		Next_Title = AL["Jewelcrafting"] .. ": " .. AL["Journeyman"];
+	};
+	["JewelcraftingJourneyman1"] = {
+		Title = AL["Jewelcrafting"] .. ": " .. AL["Journeyman"];
+		Back_Page = "JEWELCRAFTMENU";
+		Back_Title = AL["Jewelcrafting"];
+		Prev_Page = "JewelcraftingApprentice1";
+		Prev_Title = AL["Jewelcrafting"] .. ": " .. AL["Journeyman"];
+		Next_Page = "JewelcraftingJourneyman2";
+		Next_Title = AL["Jewelcrafting"] .. ": " .. AL["Journeyman"];
+	};
+	["JewelcraftingJourneyman2"] = {
+		Title = AL["Jewelcrafting"] .. ": " .. AL["Journeyman"];
+		Back_Page = "JEWELCRAFTMENU";
+		Back_Title = AL["Jewelcrafting"];
+		Prev_Page = "JewelcraftingJourneyman1";
+		Prev_Title = AL["Jewelcrafting"] .. ": " .. AL["Journeyman"];
+		Next_Page = "JewelcraftingExpert1";
+		Next_Title = AL["Jewelcrafting"] .. ": " .. AL["Expert"];
+	};
+	["JewelcraftingExpert1"] = {
+		Title = AL["Jewelcrafting"] .. ": " .. AL["Expert"];
+		Back_Page = "JEWELCRAFTMENU";
+		Back_Title = AL["Jewelcrafting"];
+		Prev_Page = "JewelcraftingJourneyman2";
+		Prev_Title = AL["Jewelcrafting"] .. ": " .. AL["Journeyman"];
+		Next_Page = "JewelcraftingExpert2";
+		Next_Title = AL["Jewelcrafting"] .. ": " .. AL["Expert"];
+	};
+	["JewelcraftingExpert2"] = {
+		Title = AL["Jewelcrafting"] .. ": " .. AL["Expert"];
+		Back_Page = "JEWELCRAFTMENU";
+		Back_Title = AL["Jewelcrafting"];
+		Prev_Page = "JewelcraftingExpert1";
+		Prev_Title = AL["Jewelcrafting"] .. ": " .. AL["Expert"];
+		Next_Page = "JewelcraftingExpert3";
+		Next_Title = AL["Jewelcrafting"] .. ": " .. AL["Artisan"];
+	};
+	["JewelcraftingExpert3"] = {
+		Title = AL["Jewelcrafting"] .. ": " .. AL["Expert"];
+		Back_Page = "JEWELCRAFTMENU";
+		Back_Title = AL["Jewelcrafting"];
+		Prev_Page = "JewelcraftingExpert2";
+		Prev_Title = AL["Jewelcrafting"] .. ": " .. AL["Expert"];
+		Next_Page = "JewelcraftingArtisan1";
+		Next_Title = AL["Jewelcrafting"] .. ": " .. AL["Artisan"];
+	};
+	["JewelcraftingArtisan1"] = {
+		Title = AL["Jewelcrafting"] .. ": " .. AL["Artisan"];
+		Back_Page = "JEWELCRAFTMENU";
+		Back_Title = AL["Jewelcrafting"];
+		Prev_Page = "JewelcraftingExpert3";
+		Prev_Title = AL["Jewelcrafting"] .. ": " .. AL["Expert"];
+		Next_Page = "JewelcraftingArtisan2";
+		Next_Title = AL["Jewelcrafting"] .. ": " .. AL["Artisan"];
+	};
+	["JewelcraftingArtisan2"] = {
+		Title = AL["Jewelcrafting"] .. ": " .. AL["Artisan"];
+		Back_Page = "JEWELCRAFTMENU";
+		Back_Title = AL["Jewelcrafting"];
+		Prev_Page = "JewelcraftingArtisan1";
+		Prev_Title = AL["Jewelcrafting"] .. ": " .. AL["Artisan"];
+		Next_Page = "JewelcraftingGemology1";
+		Next_Title = AL["Jewelcrafting"] .. ": " .. AL["Gemology"];
+	};
+	["JewelcraftingGemology1"] = {
+		Title = AL["Jewelcrafting"] .. ": " .. AL["Gemology"];
+		Back_Page = "JEWELCRAFTMENU";
+		Back_Title = AL["Jewelcrafting"];
+		Prev_Page = "JewelcraftingArtisan2";
+		Prev_Title = AL["Jewelcrafting"] .. ": " .. AL["Artisan"];
+		Next_Page = "JewelcraftingGoldsmithing1";
+		Next_Title = AL["Jewelcrafting"] .. ": " .. AL["Goldsmithing"];
+	};
+	["JewelcraftingGoldsmithing1"] = {
+		Title = AL["Jewelcrafting"] .. ": " .. AL["Goldsmithing"];
+		Back_Page = "JEWELCRAFTMENU";
+		Back_Title = AL["Jewelcrafting"];
+		Prev_Page = "JewelcraftingGemology1";
+		Prev_Title = AL["Jewelcrafting"] .. ": " .. AL["Gemology"];
+		Next_Page = "JewelcraftingGemstones1";
+		Next_Title = AL["Jewelcrafting"] .. ": " .. AL["Gemstones"];
+	};
+	["JewelcraftingGemstones1"] = {
+		Title = AL["Jewelcrafting"] .. ": " .. AL["Gemstones"];
+		Back_Page = "JEWELCRAFTMENU";
+		Back_Title = AL["Jewelcrafting"];
+		Prev_Page = "JewelcraftingGoldsmithing1";
+		Prev_Title = AL["Jewelcrafting"] .. ": " .. AL["Goldsmithing"];
+		Next_Page = "JewelcraftingApprentice1";
+		Next_Title = AL["Jewelcrafting"] .. ": " .. AL["Apprentice"];
 	};
 	["CookingApprentice1"] = {
 		Title = AL["Cooking"] .. ": " .. AL["Apprentice"];

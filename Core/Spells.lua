@@ -6812,7 +6812,7 @@ GetSpellInfoAtlasLootDB = {
 			["craftQuantityMin"] = "",
 			["craftQuantityMax"] = "",
 			["reagents"] = {
-				[1] = {2996, 2},
+				[1] = {2996, 3},
 				[2] = {2320, 2},
 				[3] = {2604, 2},
 			},
@@ -8374,6 +8374,21 @@ GetSpellInfoAtlasLootDB = {
 			["reagents"] = {
 				[1] = {3824},
 				[2] = {8836, 2},
+				[3] = {8925},
+			},
+		},
+		[17579] = {
+			["name"] = "Alchemy: Greater Holy Protection Potion",
+			["requires"] = "",
+			["tools"] = "",
+			["castTime"] = 3,
+			["text"] = "",
+			["craftItem"] = 13460,
+			["craftQuantityMin"] = "",
+			["craftQuantityMax"] = "",
+			["reagents"] = {
+				[1] = {7069},
+				[2] = {13464},
 				[3] = {8925},
 			},
 		},
@@ -12304,6 +12319,21 @@ GetSpellInfoAtlasLootDB = {
 				[1] = {2840, 8},
 				[2] = {3470, 4},
 				[3] = {2880, 4},
+			},
+		},
+		[45063] = {
+			["name"] = "Blacksmithing: Blast Shield",
+			["requires"] = "",
+			["tools"] = "",
+			["castTime"] = 10,
+			["text"] = "",
+			["craftItem"] = 51264,
+			["craftQuantityMin"] = "",
+			["craftQuantityMax"] = "",
+			["reagents"] = {
+				[1] = {2840, 12},
+				[2] = {3470, 2},
+				[3] = {818, 2},
 			},
 		},
 		[46663] = {
@@ -19146,6 +19176,22 @@ GetSpellInfoAtlasLootDB = {
 				[4] = {14341},
 			},
 		},
+		[54001] = {
+			["name"] = "Leatherworking: Blue Dragonscale Boots",
+			["requires"] = "",
+			["tools"] = "",
+			["castTime"] = 60,
+			["text"] = "",
+			["craftItem"] = 65015,
+			["craftQuantityMin"] = "",
+			["craftQuantityMax"] = "",
+			["reagents"] = {
+				[1] = {8170, 24},
+				[2] = {15415, 25},
+				[3] = {15407},
+				[4] = {14341},
+			},
+		},
 		[19085] = {
 			["name"] = "Leatherworking: Black Dragonscale Breastplate",
 			["requires"] = "",
@@ -23482,6 +23528,5 @@ GetSpellInfoAtlasLootDB = {
 				[3] = {3466, 2},
 			},
 		},
-
 	},
 }

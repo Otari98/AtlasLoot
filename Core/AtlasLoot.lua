@@ -21,6 +21,7 @@ AtlasLoot = AceLibrary("AceAddon-2.0"):new("AceDB-2.0")
 local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
 
 --Establish version number and compatible version of Atlas
+
 local ver = string.gsub(GetAddOnMetadata("AtlasLoot", "Version"), "%.", "0")
 _,_, ver = string.find(ver, "(%d+)")
 local version = tonumber(ver)
@@ -2309,6 +2310,96 @@ AtlasLoot_HewdropDown = {
 --This table defines all the subtables needed for the full menu
 --Each sub table entry contains the text entry and the loot table that goes wih it
 AtlasLoot_HewdropDown_SubTables = {
+	["PriestSets"] = {
+		{ (AL["Dungeon Sets"]), "T0Priest" },
+		{ (AL["Tier 1"]), "T1Priest" },
+		{ (AL["Zul'Gurub"]), "ZGPriest" },
+		{ (AL["AQ20"]), "AQ20Priest" },
+		{ (AL["Tier 2"]), "T2Priest" },
+		{ (AL["AQ40"]), "AQ40Priest" },
+		{ (AL["Tier 3"]), "T3Priest" },
+		{ (AL["Kara40"]), "T35Priest" },
+	},
+	["MageSets"] = {
+		{ (AL["Dungeon Sets"]), "T0Mage" },
+		{ (AL["Tier 1"]), "T1Mage" },
+		{ (AL["Zul'Gurub"]), "ZGMage" },
+		{ (AL["AQ20"]), "AQ20Mage" },
+		{ (AL["Tier 2"]), "T2Mage" },
+		{ (AL["AQ40"]), "AQ40Mage" },
+		{ (AL["Tier 3"]), "T3Mage" },
+		{ (AL["Kara40"]), "T35Mage" },
+	},
+	["WarlockSets"] = {
+		{ (AL["Dungeon Sets"]), "T0Warlock" },
+		{ (AL["Tier 1"]), "T1Warlock" },
+		{ (AL["Zul'Gurub"]), "ZGWarlock" },
+		{ (AL["AQ20"]), "AQ20Warlock" },
+		{ (AL["Tier 2"]), "T2Warlock" },
+		{ (AL["AQ40"]), "AQ40Warlock" },
+		{ (AL["Tier 3"]), "T3Warlock" },
+		{ (AL["Kara40"]), "T35Warlock" },
+	},
+	["RogueSets"] = {
+		{ (AL["Dungeon Sets"]), "T0Rogue" },
+		{ (AL["Tier 1"]), "T1Rogue" },
+		{ (AL["Zul'Gurub"]), "ZGRogue" },
+		{ (AL["AQ20"]), "AQ20Rogue" },
+		{ (AL["Tier 2"]), "T2Rogue" },
+		{ (AL["AQ40"]), "AQ40Rogue" },
+		{ (AL["Tier 3"]), "T3Rogue" },
+		{ (AL["Kara40"]), "T35Rogue" },
+	},
+	["DruidSets"] = {
+		{ (AL["Dungeon Sets"]), "T0Druid" },
+		{ (AL["Tier 1"]), "T1Druid" },
+		{ (AL["Zul'Gurub"]), "ZGDruid" },
+		{ (AL["AQ20"]), "AQ20Druid" },
+		{ (AL["Tier 2"]), "T2Druid" },
+		{ (AL["AQ40"]), "AQ40Druid" },
+		{ (AL["Tier 3"]), "T3Druid" },
+		{ (AL["Kara40"]), "T35Druid" },
+	},
+	["HunterSets"] = {
+		{ (AL["Dungeon Sets"]), "T0Hunter" },
+		{ (AL["Tier 1"]), "T1Hunter" },
+		{ (AL["Zul'Gurub"]), "ZGHunter" },
+		{ (AL["AQ20"]), "AQ20Hunter" },
+		{ (AL["Tier 2"]), "T2Hunter" },
+		{ (AL["AQ40"]), "AQ40Hunter" },
+		{ (AL["Tier 3"]), "T3Hunter" },
+		{ (AL["Kara40"]), "T35Hunter" },
+	},
+	["ShamanSets"] = {
+		{ (AL["Dungeon Sets"]), "T0Shaman" },
+		{ (AL["Tier 1"]), "T1Shaman" },
+		{ (AL["Zul'Gurub"]), "ZGShaman" },
+		{ (AL["AQ20"]), "AQ20Shaman" },
+		{ (AL["Tier 2"]), "T2Shaman" },
+		{ (AL["AQ40"]), "AQ40Shaman" },
+		{ (AL["Tier 3"]), "T3Shaman" },
+		{ (AL["Kara40"]), "T35Shaman" },
+	},
+	["PaladinSets"] = {
+		{ (AL["Dungeon Sets"]), "T0Paladin" },
+		{ (AL["Tier 1"]), "T1Paladin" },
+		{ (AL["Zul'Gurub"]), "ZGPaladin" },
+		{ (AL["AQ20"]), "AQ20Paladin" },
+		{ (AL["Tier 2"]), "T2Paladin" },
+		{ (AL["AQ40"]), "AQ40Paladin" },
+		{ (AL["Tier 3"]), "T3Paladin" },
+		{ (AL["Kara40"]), "T35Paladin" },
+	},
+	["WarriorSets"] = {
+		{ (AL["Dungeon Sets"]), "T0Warrior" },
+		{ (AL["Tier 1"]), "T1Warrior" },
+		{ (AL["Zul'Gurub"]), "ZGWarrior" },
+		{ (AL["AQ20"]), "AQ20Warrior" },
+		{ (AL["Tier 2"]), "T2Warrior" },
+		{ (AL["AQ40"]), "AQ40Warrior" },
+		{ (AL["Tier 3"]), "T3Warrior" },
+		{ (AL["Kara40"]), "T35Warrior" },
+	},
 	["HateforgeQuarry"] = {
 		{ AL["High Foreman Bargul Blackhammer"], "HQHighForemanBargulBlackhammer" },
 		{ AL["Engineer Figgles"], "HQEngineerFiggles" },
@@ -2747,6 +2838,9 @@ AtlasLoot_HewdropDown_SubTables = {
 		{ AL["AQ Enchants"], "AQEnchants" },
 		{ AL["AQ Opening Quest Chain"], "AQOpening" },
 	},
+	["Kara40"] = {
+		{ "No Kara40 Yet", "NoKara40" },
+	},
 	["WailingCaverns"] = {
 		{ AL["Lord Cobrahn"], "WCLordCobrahn" },
 		{ AL["Lady Anacondra"], "WCLadyAnacondra" },
@@ -2977,6 +3071,17 @@ AtlasLoot_HewdropDown_SubTables = {
 		{ "|cfff48cba"..AL["Paladin"], "T3Paladin" },
 		{ "|cffc69b6d"..AL["Warrior"], "T3Warrior" },
 	},
+	["T35Sets"] = {
+		{ "|cffffffff"..AL["Priest"], "T35Priest" },
+		{ "|cff68ccef"..AL["Mage"], "T35Mage" },
+		{ "|cff9382c9"..AL["Warlock"], "T35Warlock" },
+		{ "|cfffff468"..AL["Rogue"], "T35Rogue" },
+		{ "|cffff7c0a"..AL["Druid"], "T35Druid" },
+		{ "|cffaad372"..AL["Hunter"], "T35Hunter" },
+		{ "|cff2773ff"..AL["Shaman"], "T35Shaman" },
+		{ "|cfff48cba"..AL["Paladin"], "T35Paladin" },
+		{ "|cffc69b6d"..AL["Warrior"], "T35Warrior" },
+	},
 	["ZGSets"] = {
 		{ "|cffffffff"..AL["Priest"], "ZGPriest" },
 		{ "|cff68ccef"..AL["Mage"], "ZGMage" },
@@ -3125,6 +3230,15 @@ AtlasLoot_HewdropDown_SubTables = {
 	["Survival"] = {
 		{ AtlasLoot_TableNames["Survival1"][1], "Survival1" },
 		{ AtlasLoot_TableNames["Survival2"][1], "Survival2" },
+	},
+	["Jewelcrafting"] = {
+		{ AtlasLoot_TableNames["JewelcraftingApprentice1"][1], "JewelcraftingApprentice1" },
+		{ AtlasLoot_TableNames["JewelcraftingJourneyman1"][1], "JewelcraftingJourneyman1" },
+		{ AtlasLoot_TableNames["JewelcraftingExpert1"][1], "JewelcraftingExpert1" },
+		{ AtlasLoot_TableNames["JewelcraftingArtisan1"][1], "JewelcraftingArtisan1" },
+		{ AtlasLoot_TableNames["JewelcraftingGemology1"][1], "JewelcraftingGemology1" },
+		{ AtlasLoot_TableNames["JewelcraftingGoldsmithing1"][1], "JewelcraftingGoldsmithing1" },
+		{ AtlasLoot_TableNames["JewelcraftingGemstones1"][1], "JewelcraftingGemstones1" },
 	},
 };
 
@@ -3921,6 +4035,7 @@ AtlasLoot_updater:SetScript("OnEvent", function()
 		local _,title = GetAddOnInfo("AtlasLoot")
 		local remoteversion = tonumber(remoteversion)
 		if remoteversion >= 40000 then remoteversion = 0 end --Block for people using some version from another version of WoW.
+		if remoteversion >= 10200 then remoteversion = 0 end
 		if v == "VERSION" and remoteversion and title == remotetitle then
 			if remoteversion > localversion then
 				AtlasLoot_updateavailable = remoteversion
@@ -3951,6 +4066,7 @@ AtlasLoot_updater:SetScript("OnEvent", function()
 				local remoteversion = tonumber(remoteversion) or 0
 				local _,title = GetAddOnInfo("AtlasLoot")
 				if remoteversion >= 40000 then remoteversion = 0 end --Block for people using some version from another version of WoW.
+				if remoteversion >= 10200 then remoteversion = 0 end
 				if v == "VERSION" and remoteversion and title == remotetitle then
 					if remoteversion > localversion then
 						AtlasLoot_updateavailable = remoteversion
