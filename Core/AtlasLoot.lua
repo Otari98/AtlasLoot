@@ -214,37 +214,37 @@ function AtlasLoot_OnVariablesLoaded()
 		AtlasLootItemsFrame:Hide();
 	end
 	--Check and migrate old WishList entry format to the newer one
-	if version < 40301 then
-		--Check if we really need to do a migration since it will load all modules
-		--We also create a helper table here which store IDs that need to search for
-		local idsToSearch = {};
-		for i = 1, table.getn(AtlasLootCharDB["WishList"]) do
-			if (type(AtlasLootCharDB["WishList"][i][1]) == "number") then
-				if (AtlasLootCharDB["WishList"][i][1] > 0 and not AtlasLootCharDB["WishList"][i][5]) then
-					tinsert(idsToSearch, i, AtlasLootCharDB["WishList"][i][1]);
-				end
-			end
-		end
-		if table.getn(idsToSearch) > 0 then
-			--Let's do this
-			for _, dataSource in ipairs(AtlasLoot_SearchTables) do
-				if AtlasLoot_Data[dataSource] then
-					for dataID, lootTable in pairs(AtlasLoot_Data[dataSource]) do
-						for _, entry in ipairs(lootTable) do
-							for k, v in pairs(idsToSearch) do
-								if(entry[1] == v)then
-									AtlasLootCharDB["WishList"][k][5] = dataID.."|"..dataSource;
-									break;
-								end
-							end
-						end
-					end
-				end
-			end
-		end
-		AtlasLootCharDB.AutoQuery = false;
-		AtlasLootOptions_Init();
-	end
+	-- if version < 40301 then
+	-- 	--Check if we really need to do a migration since it will load all modules
+	-- 	--We also create a helper table here which store IDs that need to search for
+	-- 	local idsToSearch = {};
+	-- 	for i = 1, table.getn(AtlasLootCharDB["WishList"]) do
+	-- 		if (type(AtlasLootCharDB["WishList"][i][1]) == "number") then
+	-- 			if (AtlasLootCharDB["WishList"][i][1] > 0 and not AtlasLootCharDB["WishList"][i][5]) then
+	-- 				tinsert(idsToSearch, i, AtlasLootCharDB["WishList"][i][1]);
+	-- 			end
+	-- 		end
+	-- 	end
+	-- 	if table.getn(idsToSearch) > 0 then
+	-- 		--Let's do this
+	-- 		for _, dataSource in ipairs(AtlasLoot_SearchTables) do
+	-- 			if AtlasLoot_Data[dataSource] then
+	-- 				for dataID, lootTable in pairs(AtlasLoot_Data[dataSource]) do
+	-- 					for _, entry in ipairs(lootTable) do
+	-- 						for k, v in pairs(idsToSearch) do
+	-- 							if(entry[1] == v)then
+	-- 								AtlasLootCharDB["WishList"][k][5] = dataID.."|"..dataSource;
+	-- 								break;
+	-- 							end
+	-- 						end
+	-- 					end
+	-- 				end
+	-- 			end
+	-- 		end
+	-- 	end
+	--	AtlasLootCharDB.AutoQuery = false;
+	-- 	AtlasLootOptions_Init();
+	-- end
 	--Adds an AtlasLoot button to the Feature Frame in Cosmos
 	if(EarthFeature_AddButton) then
 		EarthFeature_AddButton(
@@ -360,14 +360,14 @@ function AtlasLootOptions_Fresh()
 	AtlasLootCharDB.Opaque = false;
 	AtlasLootCharDB.ItemIDs = false;
 	AtlasLootCharDB.FirstTime = true;
-	AtlasLootCharDB.ItemSpam = true;
+	AtlasLootCharDB.ItemSpam = false;
 	AtlasLootCharDB.MinimapButton = true;
 	AtlasLootCharDB.MinimapButtonPosition = 315;
 	AtlasLootCharDB.MinimapButtonRadius = 78;
 	AtlasLootCharDB.HidePanel = false;
 	AtlasLootCharDB.LastBoss = "DUNGEONSMENU1";
 	AtlasLootCharDB.LastBossText = AL["Dungeons & Raids"];
-	AtlasLootCharDB.AutoQuery = false;
+	-- AtlasLootCharDB.AutoQuery = false;
 	AtlasLootCharDB.PartialMatching = true;
 end
 
@@ -2070,8 +2070,8 @@ function AtlasLootOptions_ResetPosition()
 end
 
 function AtlasLootOptions_DefaultSettings()
-	AtlasLootCharDB.SafeLinks = true;
-	AtlasLootCharDB.AllLinks = false;
+	AtlasLootCharDB.SafeLinks = false;
+	AtlasLootCharDB.AllLinks = true;
 	AtlasLootCharDB.DefaultTT = true;
 	AtlasLootCharDB.LootlinkTT = false;
 	AtlasLootCharDB.ItemSyncTT = false;
@@ -2082,7 +2082,7 @@ function AtlasLootOptions_DefaultSettings()
 	AtlasLootCharDB.ItemSpam = true;
 	AtlasLootCharDB.MinimapButton = true;
 	AtlasLootCharDB.HidePanel = false;
-	AtlasLootCharDB.AutoQuery = false;
+	-- AtlasLootCharDB.AutoQuery = false;
 	AtlasLootCharDB.PartialMatching = true;
 	AtlasLootCharDB.LastBoss = "DUNGEONSMENU1";
 	AtlasLootCharDB.LastBossText = AL["Dungeons & Raids"];
@@ -3148,7 +3148,7 @@ function AtlasLootItem_OnEnter()
 			getglobal("AtlasLootTooltipTextRight"..i):SetText("");
 		end
 	end
-	if (this.itemID ~= 0) then
+	if (this.itemID and this.itemID ~= 0) then
 		if string.sub(this.itemID, 1, 1) == "s" then
 			isItem = false;
 			isEnchant = false;

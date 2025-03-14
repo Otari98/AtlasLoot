@@ -1,28 +1,29 @@
 --[[
 Name: AceLocale-2.2
-Revision: $Rev: 13951 $
+Revision: $Rev: 17638 $
 Developed by: The Ace Development Team (http://www.wowace.com/index.php/The_Ace_Development_Team)
 Inspired By: Ace 1.x by Turan (turan@gryphon.com)
 Website: http://www.wowace.com/
 Documentation: http://www.wowace.com/index.php/AceLocale-2.2
 SVN: http://svn.wowace.com/root/trunk/Ace2/AceLocale-2.2
 Description: Localization library for addons to use to handle proper
-			 localization and internationalization.
+             localization and internationalization.
 Dependencies: AceLibrary
 ]]
 
 local MAJOR_VERSION = "AceLocale-2.2"
-local MINOR_VERSION = "$Revision: 13951 $"
+local MINOR_VERSION = "$Revision: 17638 $"
 
 if not AceLibrary then error(MAJOR_VERSION .. " requires AceLibrary.") end
 if not AceLibrary:IsNewVersion(MAJOR_VERSION, MINOR_VERSION) then return end
 
+if loadstring("return function(...) return ... end") and AceLibrary:HasInstance(MAJOR_VERSION) then return end -- lua51 check
 local AceLocale = {}
 
 local DEFAULT_LOCALE = "enUS"
 local _G = getfenv(0)
 
-local BASE_TRANSLATIONS, DEBUGGING, TRANSLATIONS, BASE_LOCALE, TRANSLATION_TABLES, REVERSE_TRANSLATIONS, STRICTNESS, DYNAMIC_LOCALES, CURRENT_LOCALE
+local BASE_TRANSLATIONS, DEBUGGING, TRANSLATIONS, BASE_LOCALE, TRANSLATION_TABLES, REVERSE_TRANSLATIONS, STRICTNESS, DYNAMIC_LOCALES, CURRENT_LOCALE, NAME
 
 local rawget = rawget
 local rawset = rawset
@@ -63,7 +64,7 @@ local function clearCache(self)
 	rawset(self, REVERSE_TRANSLATIONS, nil)
 	
 	for k in pairs(self) do
-		if cache[k] ~= nil then
+		if rawget(cache, k) ~= nil then
 			self[k] = nil
 		end
 	end
@@ -141,16 +142,26 @@ AceLocale.prototype = { class = AceLocale }
 
 function AceLocale.prototype:EnableDebugging()
 	if rawget(self, BASE_TRANSLATIONS) then
-		AceLocale:error("Cannot enable debugging after a translation has been registered.")
+		AceLocale.error(self, "Cannot enable debugging after a translation has been registered.")
 	end
 	rawset(self, DEBUGGING, true)
 end
 
-function AceLocale.prototype:EnableDynamicLocales()
-	if rawget(self, BASE_TRANSLATIONS) then
-		AceLocale:error("Cannot enable dynamic locales after a translation has been registered.")
+function AceLocale.prototype:EnableDynamicLocales(override)
+	AceLocale.argCheck(self, override, 2, "boolean", "nil")
+	if not override and rawget(self, BASE_TRANSLATIONS) then
+		AceLocale.error(self, "Cannot enable dynamic locales after a translation has been registered.")
 	end
-	rawset(self, DYNAMIC_LOCALES, true)
+	if not rawget(self, DYNAMIC_LOCALES) then
+		rawset(self, DYNAMIC_LOCALES, true)
+		if rawget(self, BASE_LOCALE) then
+			if not rawget(self, TRANSLATION_TABLES) then
+				rawset(self, TRANSLATION_TABLES, {})
+			end
+			self[TRANSLATION_TABLES][self[BASE_LOCALE]] = self[BASE_TRANSLATIONS]
+			self[TRANSLATION_TABLES][self[CURRENT_LOCALE]] = self[TRANSLATIONS]
+		end
+	end
 end
 
 function AceLocale.prototype:RegisterTranslations(locale, func)
@@ -163,6 +174,12 @@ function AceLocale.prototype:RegisterTranslations(locale, func)
 	
 	if rawget(self, BASE_TRANSLATIONS) and GetLocale() ~= locale then
 		if rawget(self, DEBUGGING) or rawget(self, DYNAMIC_LOCALES) then
+			if not rawget(self, TRANSLATION_TABLES) then
+				rawset(self, TRANSLATION_TABLES, {})
+			end
+			if self[TRANSLATION_TABLES][locale] then
+				AceLocale.error(self, "Cannot provide the same locale more than once. %q provided twice.", locale)
+			end
 			local t = func()
 			func = nil
 			if type(t) ~= "table" then
@@ -240,9 +257,31 @@ end
 
 function AceLocale.prototype:GetLocale()
 	if not rawget(self, TRANSLATION_TABLES) then
-		AceLocale.error(self, "Cannot call `SetLocale' without first calling `RegisterTranslations'.")
+		AceLocale.error(self, "Cannot call `GetLocale' without first calling `RegisterTranslations'.")
 	end
 	return self[CURRENT_LOCALE]
+end
+
+local function iter(t, position)
+	return (next(t, position))
+end
+
+function AceLocale.prototype:IterateAvailableLocales()
+	if not rawget(self, DYNAMIC_LOCALES) then
+		AceLocale.error(self, "Cannot call `IterateAvailableLocales' without first calling `EnableDynamicLocales'.")
+	end
+	if not rawget(self, TRANSLATION_TABLES) then
+		AceLocale.error(self, "Cannot call `IterateAvailableLocales' without first calling `RegisterTranslations'.")
+	end
+	return iter, self[TRANSLATION_TABLES], nil
+end
+
+function AceLocale.prototype:HasLocale(locale)
+	if not rawget(self, DYNAMIC_LOCALES) then
+		AceLocale.error(self, "Cannot call `HasLocale' without first calling `EnableDynamicLocales'.")
+	end
+	AceLocale.argCheck(self, locale, 2, "string")
+	return rawget(self, TRANSLATION_TABLES) and self[TRANSLATION_TABLES][locale] ~= nil
 end
 
 function AceLocale.prototype:SetStrictness(strict)
@@ -350,7 +389,7 @@ function AceLocale.prototype:Debug()
 		return
 	end
 	local words = {}
-	local locales = {"enUS", "deDE", "frFR", "koKR", "zhCN", "zhTW", "esES"}
+	local locales = {"enUS", "ruRU", "deDE", "frFR", "koKR", "zhCN", "zhTW", "esES"}
 	local localizations = {}
 	DEFAULT_CHAT_FRAME:AddMessage("--- AceLocale Debug ---")
 	for _,locale in ipairs(locales) do
@@ -401,7 +440,7 @@ function AceLocale.prototype:Debug()
 		else
 			DEFAULT_CHAT_FRAME:AddMessage(string.format("Locale %q missing:", locale))
 			for word in pairs(t) do
-				DEFAULT_CHAT_FRAME:AddMessage(string.format("	%q", word))
+				DEFAULT_CHAT_FRAME:AddMessage(string.format("    %q", word))
 			end
 		end
 	end
@@ -444,6 +483,16 @@ local function activate(self, oldLib, oldDeactivate)
 	DYNAMIC_LOCALES = self.DYNAMIC_LOCALES
 	CURRENT_LOCALE = self.CURRENT_LOCALE
 	
+	
+	local GetTime = GetTime
+	local timeUntilClear = GetTime() + 5
+	scheduleClear = function()
+		if next(newRegistries) then
+			self.frame:Show()
+			timeUntilClear = GetTime() + 5
+		end
+	end
+	
 	if not self.registry then
 		self.registry = {}
 	else
@@ -465,14 +514,6 @@ local function activate(self, oldLib, oldDeactivate)
 		end
 	end
 	
-	local GetTime = GetTime
-	local timeUntilClear = GetTime() + 5
-	scheduleClear = function()
-		if next(newRegistries) then
-			self.frame:Show()
-			timeUntilClear = GetTime() + 5
-		end
-	end
 	self.frame:SetScript("OnEvent", scheduleClear)
 	self.frame:SetScript("OnUpdate", function() -- (this, elapsed)
 		if timeUntilClear - GetTime() <= 0 then

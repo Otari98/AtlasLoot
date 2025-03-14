@@ -8125,7 +8125,6 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 20381, "INV_Misc_MonsterScales_11", "=q2=Dreamscale", "", "5%" },
 		{ 61197, "INV_Stone_05", "=q3=Fading Dream Fragment", "", "0.35%" },
 		{ 0, "", "", "" },
-		{ 54001, "INV_Crate_02", "=q2=Dream Frog", "=ds=#e15#", "0.08%" },
-		
+		{ 54001, "INV_Crate_02", "=q3=Dream Frog", "=ds=#e15#", "0.08%" },
 	};
 };

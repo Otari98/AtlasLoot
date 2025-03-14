@@ -1050,6 +1050,7 @@ AtlasLoot_TableNames = {
 	["WORLDBOSSMENU"] = { "dummy", "dummy" },
 	["JEWELCRAFTMENU"] = { "dummy", "dummy" },
 	["WishList"] = { AL["WishList"], "AtlasLootCharDB" },
+    ["SearchResult"] = { AL["Search"], "AtlasLootCharDB" },
 	--If all else fails!
 	["EmptyInstance"] = { "AtlasLoot", "AtlasLootFallback" },
 };
