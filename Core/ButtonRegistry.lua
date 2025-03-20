@@ -3430,6 +3430,68 @@ AtlasLoot_ButtonRegistry = {
 		Back_Page = "DUNGEONSMENU2";
 		Back_Title = AL["Dungeons & Raids"];
 	};
+
+	-- Upper Karazhan Halls
+	["UKHKing"] = {
+		Title = AL["King (Chess fight)"];
+		Next_Page = "UKHSanvTasdal";
+		Next_Title = AL["Sanv Tas'dal"];
+		Back_Page = "DUNGEONSMENU2";
+		Back_Title = AL["Dungeons & Raids"];
+	};
+	["UKHSanvTasdal"] = {
+		Title = AL["Sanv Tas'dal"];
+		Next_Page = "UKHKruul";
+		Next_Title = AL["Kruul"];
+		Prev_Page = "UKHKing";
+		Prev_Title = AL["King (Chess fight)"];
+		Back_Page = "DUNGEONSMENU2";
+		Back_Title = AL["Dungeons & Raids"];
+	};
+	["UKHKruul"] = {
+		Title = AL["Kruul"];
+		Next_Page = "UKHIncantagos";
+		Next_Title = AL["Ley-Watcher Incantagos"];
+		Prev_Page = "UKHSanvTasdal";
+		Prev_Title = AL["Sanv Tas'dal"];
+		Back_Page = "DUNGEONSMENU2";
+		Back_Title = AL["Dungeons & Raids"];
+	};
+	["UKHIncantagos"] = {
+		Title = AL["Ley-Watcher Incantagos"];
+		Next_Page = "UKHAnomalus";
+		Next_Title = AL["Anomalus"];
+		Prev_Page = "UKHKruul";
+		Prev_Title = AL["Kruul"];
+		Back_Page = "DUNGEONSMENU2";
+		Back_Title = AL["Dungeons & Raids"];
+	};
+	["UKHAnomalus"] = {
+		Title = AL["Anomalus"];
+		Next_Page = "UKHGnarlmoon";
+		Next_Title = AL["Keeper Gnarlmoon"];
+		Prev_Page = "UKHIncantagos";
+		Prev_Title = AL["Ley-Watcher Incantagos"];
+		Back_Page = "DUNGEONSMENU2";
+		Back_Title = AL["Dungeons & Raids"];
+	};
+	["UKHGnarlmoon"] = {
+		Title = AL["Keeper Gnarlmoon"];
+		Next_Page = "UKHTrash";
+		Next_Title = AL["Trash Mobs"];
+		Prev_Page = "UKHAnomalus";
+		Prev_Title = AL["Anomalus"];
+		Back_Page = "DUNGEONSMENU2";
+		Back_Title = AL["Dungeons & Raids"];
+	};
+	["UKHTrash"] = {
+		Title = AL["Trash Mobs"];
+		Prev_Page = "UKHGnarlmoon";
+		Prev_Title = AL["Keeper Gnarlmoon"];
+		Back_Page = "DUNGEONSMENU2";
+		Back_Title = AL["Dungeons & Raids"];
+	};
+
 	["Onyxia"] = {
 		Title = AL["Onyxia's Lair"];
 		Back_Page = "DUNGEONSMENU2";
