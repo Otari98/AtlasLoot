@@ -3484,10 +3484,19 @@ AtlasLoot_ButtonRegistry = {
 		Back_Page = "DUNGEONSMENU2";
 		Back_Title = AL["Dungeons & Raids"];
 	};
-	["UKHTrash"] = {
-		Title = AL["Trash Mobs"];
+	["UKHUnknown"] = {
+		Title = AL["Unknown boss Upper Kara"];
 		Prev_Page = "UKHGnarlmoon";
 		Prev_Title = AL["Keeper Gnarlmoon"];
+		Next_Page = "UKHTrash";
+		Next_Title = AL["Trash Mobs"];
+		Back_Page = "DUNGEONSMENU2";
+		Back_Title = AL["Dungeons & Raids"];
+	},
+	["UKHTrash"] = {
+		Title = AL["Trash Mobs"];
+		Prev_Page = "UKHUnknown";
+		Prev_Title = AL["Unknown boss Upper Kara"];
 		Back_Page = "DUNGEONSMENU2";
 		Back_Title = AL["Dungeons & Raids"];
 	};

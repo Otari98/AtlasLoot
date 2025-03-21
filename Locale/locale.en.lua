@@ -1553,6 +1553,7 @@ AL:RegisterTranslations("enUS", function() return {
   ["Ley-Watcher Incantagos"] = true,
 	["Anomalus"] = true,
 	["Keeper Gnarlmoon"] = true,
+	["Unknown boss Upper Kara"]  = true,
 	["Korrak the Bloodrager"] = true,
 	["Ivus & Lokholar"] = true,
 	["Cloak"] = true,

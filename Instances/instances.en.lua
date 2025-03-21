@@ -8132,7 +8132,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 55100, "INV_Scroll_04", "=q4=Checkmate", "", 12.5 },
 		{ 55101, "INV_Scroll_04", "=q4=King's Edict", "", 12.5 },
 		{ 55103, "INV_Scroll_04", "=q4=Royal Seal of Greymane", "", 12.5 },
-		{ 55102, "INV_Scroll_04", "=q4=Insomnius' Retribution", "", 12.5 },
+		{ 60296, "INV_Scroll_04", "=q4=Necklace of Insomnius", "", 12.5 },
 		{ 55104, "INV_Scroll_04", "=q4=Pawn's Advance", "", 12.5 },
 		{ 55105, "INV_Scroll_04", "=q4=Bishop's Reverence", "", 12.5 },
 		{ 55274, "INV_Scroll_04", "=q4=Chain-Cloak of the Rookguard", "", 12.5 },
@@ -8197,6 +8197,27 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 55080, "INV_Scroll_04", "=q4=Bloodmoon, Sickle of the Murderous Flight", "", 25 },
 		{ 55082, "INV_Scroll_04", "=q4=Idol of Laceration", "", 25 },
 		{ 55083, "INV_Scroll_04", "=q4=Crown of the Wildpack", "", 25 },
+	};
+	UKHUnknown = {
+			{ 55107, "INV_Scroll_04", "=q4=Gloves of Leyline Convergence", "", 25 },
+			{ 55109, "INV_Scroll_04", "=q4=Legwraps of Meticulous Planning", "", 25 },
+			{ 55110, "INV_Scroll_04", "=q4=Libram of the Eternal Tower", "", 25 },
+			{ 55111, "INV_Scroll_04", "=q4=Eye of Dormant Corruption", "", 25 },
+			{ 55112, "INV_Scroll_04", "=q4=Pendant of Forgiven Mistakes", "", 25 },
+
+			{ 55120, "INV_Scroll_04", "=q4=Al'Kazeth, Claw of Ruptured Elements", "", 25 },
+			{ 55121, "INV_Scroll_04", "=q4=Bulwark of Enduring Earth", "", 25 },
+			{ 55122, "INV_Scroll_04", "=q4=Earthquake Leggings", "", 25 },
+			{ 55123, "INV_Scroll_04", "=q4=Loop of Hardened Slate", "", 25 },
+			{ 55124, "INV_Scroll_04", "=q4=Pure Jewel of Draenor", "", 25 },
+			{ 55125, "INV_Scroll_04", "=q4=Handwraps of Dead Winds", "", 25 },
+			{ 55126, "INV_Scroll_04", "=q4=Mantle of the Drifting Stars", "", 25 },
+
+			{ 55133, "INV_Scroll_04", "=q4=Claw of the Mageweaver", "", 25 },
+			{ 55094, "INV_Scroll_04", "=q4=Medivh's Hindsight", "", 25 },
+
+			{ 55108, "INV_Scroll_04", "=q4=Dreadslayer Shoulderblades", "", 25 },
+			{ 55113, "INV_Scroll_04", "=q4=Dreadslayer Horns", "", 25 },
 	};
 	UKHTrash = {
 
