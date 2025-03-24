@@ -8127,6 +8127,44 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 0, "", "", "" },
 		{ 54001, "INV_Crate_02", "=q2=Dream Frog", "=ds=#e15#", "0.08%" },
 	};
+	UKHGnarlmoon = {
+		{ 55078, "INV_Scroll_04", "=q4=Ley-attuned Choker", "", 25 },
+		{ 55084, "INV_Scroll_04", "=q4=Torn Wings of Midnight", "", 25 },
+		{ 55081, "INV_Scroll_04", "=q4=Manadrenched Feather Slippers", "", 25 },
+		{ 55285, "INV_Scroll_04", "=q4=Crite's Holy Hands", "", 25 },
+		{ 55079, "INV_Scroll_04", "=q4=Ravenkeeper’s Frenzied Embrace", "", 25 },
+		{ 55080, "INV_Scroll_04", "=q4=Bloodmoon, Sickle of the Murderous Flight", "", 25 },
+		{ 55082, "INV_Scroll_04", "=q4=Idol of Laceration", "", 25 },
+		{ 55083, "INV_Scroll_04", "=q4=Crown of the Wildpack", "", 25 },
+	};
+	UKHIncantagos = {
+		{ 41403, "INV_Enchant_ShardGlowingSmall", "=q4=Enchanted Amethyst", "=ds=#m3#" },
+		{ 55133, "INV_Weapon_ShortBlade_27", "=q4=Claw of the Mageweaver", "=q1=#m4# =ds=#h4#, #w13#" },
+		{ 55134, "Inv_Wand_05", "=q4=Rod of Permafrost", "=q1=#m4# =ds=#w12#" },
+		{ 55135, "Inv_misc_monsterscales_09", "=q4=Shard of Leyflow", "=q1=#m4# =ds=#s14#" },
+		{ 0, "", "", "" },
+		{ 41373, "INV_Misc_EngGizmos_08", "=q4=Draconic Focus", "=ds=#m3#" },
+		{ 0, "", "", "" },
+		{ 55086, "INV_Belt_22", "=q4=Magehunter Belt", "=ds=#s10#, #a3# ", 25 },
+		{ 55099, "INV_Pants_Plate_18", "=q4=Leysteel Legplates", "=ds=#s11#, #a4#", 25 },
+		{ 55089, "INV_Bracer_02", "=q4=Bands of the Surgebreaker", "=ds=#s8#, #a2#", 25 },
+		{ 55507, "INV_Scroll_04", "=q4=Choker of Terminal Arcanum", "", 25 },
+		{ 55085, "INV_Pants_Cloth_13", "=q4=Magispark Leggings", "=ds=#s11#, #a1#", 25 },
+		{ 55087, "INV_Misc_Gem_Variety_01", "=q4=Jewel of Wild Magics", "=ds=#s14#", 25 },
+		{ 55090, "INV_Shield_23", "=q4=Scaleshield of Azure Flight", "=ds=#w8#", 25 },
+		{ 55091, "INV_Jewelry_Ring_Saphire", "=q4=Loop of Infused Renewal", "=ds=#s13#  =q16=#c4#=ds=, =q9=#c5#=ds=, =q15=#c7#=ds=, =q13=#c1#", 25 },
+	};
+	UKHAnomalus = {
+		{ 41412, "INV_Scroll_04", "=q4=Cosmic Residue", "", -100 },
+		{ 55092, "INV_Scroll_04", "=q4=Manahide Slippers", "", "" },
+		{ 55095, "INV_Scroll_04", "=q4=Cloak of the Bloody Ravager", "", 25 },
+		{ 55096, "INV_Scroll_04", "=q4=Phase-shifting Crossbow", "", 25 },
+		{ 55279, "INV_Scroll_04", "=q4=Branch of Resolute Defense", "", 25 },
+		{ 55093, "INV_Scroll_04", "=q4=Remains of Overwhelming Power", "", 25 },
+		{ 55106, "INV_Scroll_04", "=q4=Bindings of Contained Magic", "", 25 },
+		{ 55097, "INV_Scroll_04", "=q4=Choker of Chromatic Power", "", 25 },
+		{ 55098, "INV_Scroll_04", "=q4=Gloves of Nourishment", "", 25 },
+	};
 	UKHKing = {
 		{ 55088, "INV_Scroll_04", "=q4=Dragonclaw Gauntlets", "", 12.5 },
 		{ 55100, "INV_Scroll_04", "=q4=Checkmate", "", 12.5 },
@@ -8164,39 +8202,6 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 55490, "INV_Scroll_04", "=q4=Brutal Leggings of Ascendancy", "", 50 },
 		{ 55130, "INV_Scroll_04", "=q4=Wristwraps of Exiled Radiance", "", 11.1 },
 		{ 55482, "INV_Scroll_04", "=q4=Ephemeral Pendant", "", 4 },
-	};
-	UKHIncantagos = {
-		{ 41403, "INV_Scroll_04", "=q4=Enchanted Amethyst", "", 100 },
-		{ 41373, "INV_Scroll_04", "=q4=Draconic Focus", "", -100 },
-		{ 55086, "INV_Scroll_04", "=q4=Magehunter Belt", "", 25 },
-		{ 55099, "INV_Scroll_04", "=q4=Leysteel Legplates", "", 25 },
-		{ 55089, "INV_Scroll_04", "=q4=Bands of the Surgebreaker", "", 25 },
-		{ 55507, "INV_Scroll_04", "=q4=Choker of Terminal Arcanum", "", 25 },
-		{ 55085, "INV_Scroll_04", "=q4=Magispark Leggings", "", 25 },
-		{ 55087, "INV_Scroll_04", "=q4=Jewel of Wild Magics", "", 25 },
-		{ 55090, "INV_Scroll_04", "=q4=Scaleshield of Azure Flight", "", 25 },
-		{ 55091, "INV_Scroll_04", "=q4=Loop of Infused Renewal", "", 25 },
-	};
-	UKHAnomalus = {
-		{ 41412, "INV_Scroll_04", "=q4=Cosmic Residue", "", -100 },
-		{ 55092, "INV_Scroll_04", "=q4=Manahide Slippers", "", "" },
-		{ 55095, "INV_Scroll_04", "=q4=Cloak of the Bloody Ravager", "", 25 },
-		{ 55096, "INV_Scroll_04", "=q4=Phase-shifting Crossbow", "", 25 },
-		{ 55279, "INV_Scroll_04", "=q4=Branch of Resolute Defense", "", 25 },
-		{ 55093, "INV_Scroll_04", "=q4=Remains of Overwhelming Power", "", 25 },
-		{ 55106, "INV_Scroll_04", "=q4=Bindings of Contained Magic", "", 25 },
-		{ 55097, "INV_Scroll_04", "=q4=Choker of Chromatic Power", "", 25 },
-		{ 55098, "INV_Scroll_04", "=q4=Gloves of Nourishment", "", 25 },
-	};
-	UKHGnarlmoon = {
-		{ 55078, "INV_Scroll_04", "=q4=Ley-attuned Choker", "", 25 },
-		{ 55084, "INV_Scroll_04", "=q4=Torn Wings of Midnight", "", 25 },
-		{ 55081, "INV_Scroll_04", "=q4=Manadrenched Feather Slippers", "", 25 },
-		{ 55285, "INV_Scroll_04", "=q4=Crite's Holy Hands", "", 25 },
-		{ 55079, "INV_Scroll_04", "=q4=Ravenkeeper’s Frenzied Embrace", "", 25 },
-		{ 55080, "INV_Scroll_04", "=q4=Bloodmoon, Sickle of the Murderous Flight", "", 25 },
-		{ 55082, "INV_Scroll_04", "=q4=Idol of Laceration", "", 25 },
-		{ 55083, "INV_Scroll_04", "=q4=Crown of the Wildpack", "", 25 },
 	};
 	UKHUnknown = {
 			{ 55107, "INV_Scroll_04", "=q4=Gloves of Leyline Convergence", "", 25 },
