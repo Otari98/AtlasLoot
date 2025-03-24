@@ -8143,8 +8143,6 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 55134, "Inv_Wand_05", "=q4=Rod of Permafrost", "=q1=#m4# =ds=#w12#" },
 		{ 55135, "Inv_misc_monsterscales_09", "=q4=Shard of Leyflow", "=q1=#m4# =ds=#s14#" },
 		{ 0, "", "", "" },
-		{ 41373, "INV_Misc_EngGizmos_08", "=q4=Draconic Focus", "=ds=#m3#" },
-		{ 0, "", "", "" },
 		{ 55086, "INV_Belt_22", "=q4=Magehunter Belt", "=ds=#s10#, #a3# ", 25 },
 		{ 55099, "INV_Pants_Plate_18", "=q4=Leysteel Legplates", "=ds=#s11#, #a4#", 25 },
 		{ 55089, "INV_Bracer_02", "=q4=Bands of the Surgebreaker", "=ds=#s8#, #a2#", 25 },
@@ -8153,6 +8151,8 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 55087, "INV_Misc_Gem_Variety_01", "=q4=Jewel of Wild Magics", "=ds=#s14#", 25 },
 		{ 55090, "INV_Shield_23", "=q4=Scaleshield of Azure Flight", "=ds=#w8#", 25 },
 		{ 55091, "INV_Jewelry_Ring_Saphire", "=q4=Loop of Infused Renewal", "=ds=#s13#  =q16=#c4#=ds=, =q9=#c5#=ds=, =q15=#c7#=ds=, =q13=#c1#", 25 },
+		{ 0, "", "", "" },
+		{ 41373, "INV_Misc_EngGizmos_08", "=q4=Draconic Focus", "=ds=#m3#" },
 	};
 	UKHAnomalus = {
 		{ 41412, "INV_Scroll_04", "=q4=Cosmic Residue", "", -100 },
