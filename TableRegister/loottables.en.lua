@@ -510,6 +510,7 @@ AtlasLoot_TableNames = {
 	["UKHSanvTasdal"] = { AL["Upper Karazhan Halls"].." - "..AL["Sanv Tas'dal"], "AtlasLootItems" },
 	["UKHKruul"] = { AL["Upper Karazhan Halls"].." - "..AL["Kruul"], "AtlasLootItems" },
 	["UKHIncantagos"] = { AL["Upper Karazhan Halls"].." - "..AL["Ley-Watcher Incantagos"], "AtlasLootItems" },
+	["UKHEcho"] = { AL["Upper Karazhan Halls"].." - "..AL["Echo of Medivh"], "AtlasLootItems" },
 	["UKHAnomalus"] = { AL["Upper Karazhan Halls"].." - "..AL["Anomalus"], "AtlasLootItems" },
 	["UKHGnarlmoon"] = { AL["Upper Karazhan Halls"].." - "..AL["Keeper Gnarlmoon"], "AtlasLootItems" },
 	["UKHTrash"] = { AL["Upper Karazhan Halls"].." - "..AL["Trash Mobs"], "AtlasLootItems" },

@@ -1552,6 +1552,7 @@ AL:RegisterTranslations("enUS", function() return {
 	["Kruul"] = true,
   ["Ley-Watcher Incantagos"] = true,
 	["Anomalus"] = true,
+	["Echo of Medivh"] = true,
 	["Keeper Gnarlmoon"] = true,
 	["Unknown boss Upper Kara"]  = true,
 	["Korrak the Bloodrager"] = true,
