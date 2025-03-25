@@ -2194,11 +2194,11 @@ AtlasLoot_HewdropDown = {
 			{{ AL["[RAID] Molten Core"], "MoltenCore", "Submenu" },},
 			{{ AL["[RAID] Onyxia's Lair"], "Onyxia", "Submenu" },},
 			{{ AL["[RAID] Lower Karazhan Halls"], "LowerKara", "Submenu" },},
-			{{ AL["[RAID] Upper Karazhan Halls"], "UpperKara", "Submenu" },},
 			{{ AL["[RAID] Blackwing Lair"], "BlackwingLair", "Submenu" },},
 			{{ AL["[RAID] Emerald Sanctum"], "EmeraldSanctum", "Submenu" },},
 			{{ AL["[RAID] Temple of Ahn'Qiraj"], "TempleofAQ", "Submenu" },},
 			{{ AL["[RAID] Naxxramas"], "Naxxramas", "Submenu" },},
+			{{ AL["[RAID] Upper Karazhan Halls"], "UpperKara", "Submenu" },},
 		},
 	},
 	{[AL["World Bosses"]] = {
@@ -2796,12 +2796,12 @@ AtlasLoot_HewdropDown_SubTables = {
 		{ AL["LKH Enchants"], "LKHEnchants" },
 	},
 	["UpperKara"] = {
+		{ AL["Keeper Gnarlmoon"], "UKHGnarlmoon" },
+		{ AL["Ley-Watcher Incantagos"], "UKHIncantagos" },
+		{ AL["Anomalus"], "UKHAnomalus" },
 		{ AL["King (Chess fight)"], "UKHKing" },
 		{ AL["Sanv Tas'dal"], "UKHSanvTasdal" },
 		{ AL["Kruul"], "UKHKruul" },
-		{ AL["Ley-Watcher Incantagos"], "UKHIncantagos" },
-		{ AL["Anomalus"], "UKHAnomalus" },
-		{ AL["Keeper Gnarlmoon"], "UKHGnarlmoon" },
 		{ AL["Trash Mobs"], "UKHTrash" },
 	},
 	["WorldBosses"] = {
