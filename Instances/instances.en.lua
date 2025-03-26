@@ -8128,14 +8128,14 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 54001, "INV_Crate_02", "=q2=Dream Frog", "=ds=#e15#", "0.08%" },
 	};
 	UKHGnarlmoon = {
-		{ 55078, "INV_Scroll_04", "=q4=Ley-attuned Choker", "", 25 },
-		{ 55084, "INV_Scroll_04", "=q4=Torn Wings of Midnight", "", 25 },
-		{ 55081, "INV_Scroll_04", "=q4=Manadrenched Feather Slippers", "", 25 },
-		{ 55285, "INV_Scroll_04", "=q4=Crite's Holy Hands", "", 25 },
-		{ 55079, "INV_Scroll_04", "=q4=Ravenkeeper’s Frenzied Embrace", "", 25 },
-		{ 55080, "INV_Scroll_04", "=q4=Bloodmoon, Sickle of the Murderous Flight", "", 25 },
-		{ 55082, "INV_Scroll_04", "=q4=Idol of Laceration", "", 25 },
-		{ 55083, "INV_Scroll_04", "=q4=Crown of the Wildpack", "", 25 },
+		{ 55078, "INV_Misc_QuestionMark", "=q4=Ley-attuned Choker", "=ds=?#s2#?" },
+		{ 55084, "INV_Misc_Cape_10", "=q4=Torn Wings of Midnight", "=ds=#s4#" },
+		{ 55081, "INV_Boots_05", "=q4=Manadrenched Feather Slippers", "=ds=#s12#, #a1#" },
+		{ 55285, "INV_Misc_QuestionMark", "=q4=Crite's Holy Hands", "=ds=?#s9#?" },
+		{ 55079, "INV_Misc_QuestionMark", "=q4=Ravenkeeper’s Frenzied Embrace", "" },
+		{ 55080, "INV_Bloodmoon", "=q4=Bloodmoon, Sickle of the Murderous Flight", "=ds=#h1#, #w1#" },
+		{ 55082, "INV_QirajIdol_War", "=q4=Idol of Laceration", "=ds=#s16#, #e16#" },
+		{ 55083, "inv_helmet_24", "=q4=Crown of the Wildpack", "=ds=#s1#, #a3#" },
 	};
 	UKHIncantagos = {
 		{ 41403, "INV_Enchant_ShardGlowingSmall", "=q4=Enchanted Amethyst", "=ds=#m3#" },
@@ -8146,7 +8146,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 55086, "INV_Belt_22", "=q4=Magehunter Belt", "=ds=#s10#, #a3# ", 25 },
 		{ 55099, "INV_Pants_Plate_18", "=q4=Leysteel Legplates", "=ds=#s11#, #a4#", 25 },
 		{ 55089, "INV_Bracer_02", "=q4=Bands of the Surgebreaker", "=ds=#s8#, #a2#", 25 },
-		{ 55507, "INV_Scroll_04", "=q4=Choker of Terminal Arcanum", "", 25 },
+		{ 55507, "INV_Misc_QuestionMark", "=q4=Choker of Terminal Arcanum", "", 25 },
 		{ 55085, "INV_Pants_Cloth_13", "=q4=Magispark Leggings", "=ds=#s11#, #a1#", 25 },
 		{ 55087, "INV_Misc_Gem_Variety_01", "=q4=Jewel of Wild Magics", "=ds=#s14#", 25 },
 		{ 55090, "INV_Shield_23", "=q4=Scaleshield of Azure Flight", "=ds=#w8#", 25 },
@@ -8155,74 +8155,143 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 41373, "INV_Misc_EngGizmos_08", "=q4=Draconic Focus", "=ds=#m3#" },
 	};
 	UKHAnomalus = {
-		{ 41412, "INV_Scroll_04", "=q4=Cosmic Residue", "", -100 },
-		{ 55092, "INV_Scroll_04", "=q4=Manahide Slippers", "", "" },
-		{ 55095, "INV_Scroll_04", "=q4=Cloak of the Bloody Ravager", "", 25 },
-		{ 55096, "INV_Scroll_04", "=q4=Phase-shifting Crossbow", "", 25 },
-		{ 55279, "INV_Scroll_04", "=q4=Branch of Resolute Defense", "", 25 },
-		{ 55093, "INV_Scroll_04", "=q4=Remains of Overwhelming Power", "", 25 },
-		{ 55106, "INV_Scroll_04", "=q4=Bindings of Contained Magic", "", 25 },
-		{ 55097, "INV_Scroll_04", "=q4=Choker of Chromatic Power", "", 25 },
-		{ 55098, "INV_Scroll_04", "=q4=Gloves of Nourishment", "", 25 },
-	};
+		{ 55092, "INV_Boots_Plate_06", "=q4=Manahide Slippers", "=ds=#s12#, #a2#" },
+		{ 55095, "INV_Misc_Cape_18", "=q4=Cloak of the Bloody Ravager", "=ds=#s4#" },
+		{ 55096, "INV_Misc_QuestionMark", "=q4=Phase-shifting Crossbow", "=ds=#w3#" },
+		{ 55279, "INV_Misc_QuestionMark", "=q4=Branch of Resolute Defense", "" },
+		{ 55093, "INV_Enchant_DustSoul", "=q4=Remains of Overwhelming Power", "=ds=#s14#" },
+		{ 55106, "INV_Bracer_10", "=q4=Bindings of Contained Magic", "=ds=#s8#, #a1#" },
+		{ 55097, "INV_Misc_QuestionMark", "=q4=Choker of Chromatic Power", "=ds=#s2#" },
+		{ 55098, "INV_Gauntlets_05", "=q4=Gloves of Nourishment", "=ds=#s9#, #a2#" },
+		{ 0, "", "", "" },
+		{ 41412, "INV_Enchant_DustSoul", "=q4=Cosmic Residue", "=ds=#m3#" },	};
+	UKHEcho = {
+		{ 55094, "INV_Jewelry_Ring_Jade", "=q4=Medivh's Hindsight", "=ds=#s13#", "25%" },
+		{ 55107, "INV_Gauntlets_05", "=q4=Gloves of Leyline Convergence", "=ds=#s9#, #a1#", "25%" },
+		{ 55111, "Spell_Shadow_SoulGem", "=q4=Eye of Dormant Corruption", "=ds=#s14#", "25%" },
+		{ 55112, "INV_Jewelry_Talisman_Health", "=q4=Pendant of Forgiven Mistakes", "=ds=#s2#", "25%" },
+		{ 0, "", "", "" },
+		{ 55108, "INV_DemonhornShoulders", "=q4=Dreadslayer Shoulderblades", "=ds=#s3#, #a4#", "25%" },
+		{ 55109, "INV_Pants_02", "=q4=Legwraps of Meticulous Planning", "=ds=#s11#, #a2#", "25%" },
+		{ 55110, "INV_Misc_Book_07", "=q4=Libram of the Eternal Tower", "=ds=#s16#, #e18#", "25%" },
+		{ 0, "INV_Misc_QuestionMark", "=q4=Forgotten Raven's Mallet", "=ds=#h1#, #w6#", "25%" },
+		{ 0, "", "", "" },
+		{ 0, "INV_Misc_Gem_Diamond_01", "=q3=Pristine Lay Crytstal", "=ds=", "3.25%" },
+		{ 0, "INV_Enchant_EssenceMysticalSmall", "=q1=Anima of the Guardian", "=ds=#m3#" }, };
 	UKHKing = {
-		{ 55088, "INV_Scroll_04", "=q4=Dragonclaw Gauntlets", "", 12.5 },
-		{ 55100, "INV_Scroll_04", "=q4=Checkmate", "", 12.5 },
-		{ 55101, "INV_Scroll_04", "=q4=King's Edict", "", 12.5 },
-		{ 55103, "INV_Scroll_04", "=q4=Royal Seal of Greymane", "", 12.5 },
-		{ 60296, "INV_Scroll_04", "=q4=Necklace of Insomnius", "", 12.5 },
-		{ 55104, "INV_Scroll_04", "=q4=Pawn's Advance", "", 12.5 },
-		{ 55105, "INV_Scroll_04", "=q4=Bishop's Reverence", "", 12.5 },
-		{ 55274, "INV_Scroll_04", "=q4=Chain-Cloak of the Rookguard", "", 12.5 },
-		{ 55483, "INV_Scroll_04", "=q4=Ethereal Boots of Conquest", "", 50 },
-		{ 55484, "INV_Scroll_04", "=q4=Ethereal Boots of Ascendancy", "", 50 },
-	};
+		{ 55088, "INV_Gauntlets_05", "=q4=Dragonclaw Gauntlets", "=ds=#s9#, #a4#" },
+		{ 55100, "INV_Checkmate", "=q4=Checkmate", "=ds=#h2#, #w6#" },
+		{ 55101, "INV_Misc_Book_11", "=q4=King's Edict", "=ds=#s14#" },
+		{ 55103, "BTNLancelot_Ring", "=q4=Royal Seal of Greymane", "=ds=#s13#" },
+		{ 55104, "INV_Boots_Chain_05", "=q4=Pawn's Advance", "=ds=#s12#, #a2#" },
+		{ 55105, "INV_BishopHat", "=q4=Bishop's Reverence", "=ds=#s1#, #a1#" },
+		{ 55274, "INV_Misc_QuestionMark", "=q4=Chain-Cloak of the Rookguard", "=ds=#s4#" },
+		{ 0, "", "", "" },
+		{ 55483, "INV_Boots_Cloth_01", "=q4=Ethereal Boots of Conquest", "=q17=#c9#=ds=, =q9=#c5#=ds=, =q11=#c8#, =q13=#c1#", "50%", "", "", "", "", "", "", "", "", "", "", {
+			{ { 47274, "=ds=#s12#, #a4#" }, }, -- war
+			{ { 47232, "=ds=#s12#, #a1#" }, { 47238, "=ds=#s12#, #a1#" }, }, -- priest
+			{ { 47310, "=ds=#s12#, #a1#" }, { 47316, "=ds=#s12#, #a1#" }, }, -- lock
+			{ { 47394, "=ds=#s12#, #a2#" }, { 47400, "=ds=#s12#, #a2#" }, { 47406, "=ds=#s3#, #a2#" } }, -- druid
+		},
+		},
+		{ 55484, "INV_Boots_Cloth_01", "=q4=Ethereal Boots of Ascendancy", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q12=#c6#, =q15=#c7#=ds=, =q10=#c3#=ds=", "50%", "", "", "", "", "", "", "", "", "", "", {
+			{ { 47064, "=ds=#s12#, #a4#" }, { 47070, "=ds=#s12#, #a4#" }, { 47076, "=ds=#s12#, #a4#" }, }, -- paladin
+			{ { 47322, "=ds=#s12#, #a3#" }, }, -- hunter
+			{ { 47328, "=ds=#s12#, #a2#" }, }, -- rogue
+			{ { 47184, "=ds=#s12#, #a3#" }, { 47190, "=ds=#s12#, #a3#" }, { 47196, "=ds=#s12#, #a3#" } }, -- shaman
+			{ { 47112, "=ds=#s12#, #a1#" }, { 47118, "=ds=#s12#, #a1#" }, }, -- mage
+		},
+		},
+		{ 0, "", "", "" },
+		{ 60296, "INV_Jewelry_Necklace_01", "=q4=Necklace of Insomnius", "=ds=#m3#" }, };
 	UKHSanvTasdal = {
-		{ 55113, "INV_Scroll_04", "=q4=Dreadslayer Horns", "", 14.3 },
-		{ 55114, "INV_Scroll_04", "=q4=Totem of Broken Earth", "", 14.2 },
-		{ 55115, "INV_Scroll_04", "=q4=Riftcarver's Implement", "", 14.3 },
-		{ 55116, "INV_Scroll_04", "=q4=Raka'shishi, Spear of the Adrift Hunt", "", 14.3 },
-		{ 55117, "INV_Scroll_04", "=q4=Girdle of the Faded Primals", "", 14.3 },
-		{ 55118, "INV_Scroll_04", "=q4=Kum'isha's Tattered Drape", "", 14.3 },
-		{ 55119, "INV_Scroll_04", "=q4=Forgotten Hide Helm", "", 14.3 },
-		{ 55486, "INV_Scroll_04", "=q4=Shifting Mantle of Ascendancy", "", 50 },
-		{ 55485, "INV_Scroll_04", "=q4=Shifting Mantle of Conquest", "", 50 },
-		{ 55482, "INV_Scroll_04", "=q4=Ephemeral Pendant", "", 4 },
+		{ 55113, "INV_DemonhornHelmet", "=q4=Dreadslayer Horns", "=ds=#s1#, #a4#" },
+		{ 55114, "INV_QirajIdol_Sage", "=q4=Totem of Broken Earth", "=ds=#s16#, #e17#" },
+		{ 55115, "INV_Riftcarver", "=q4=Riftcarver's Implement", "=ds=#h1#, #w4#" },
+		{ 55116, "INV_DraeneiSpear", "=q4=Raka'shishi, Spear of the Adrift Hunt", "=ds=#h2#, #w7#" },
+		{ 55117, "INV_Belt_22", "=q4=Girdle of the Faded Primals", "=ds=#s10#, #a3#" },
+		{ 55118, "INV_Misc_Cape_06", "=q4=Kum'isha's Tattered Drape", "=ds=#s4#" },
+		{ 55119, "inv_helmet_24", "=q4=Forgotten Hide Helm", "=ds=#s1#, #a2#" },
+		{ 0, "", "", "" },
+		{ 55485, "INV_Shoulder_17", "=q4=Shifting Mantle of Conquest", "=q17=#c9#=ds=, =q9=#c5#=ds=, =q11=#c8#, =q13=#c1#", "50%", "", "", "", "", "", "", "", "", "", "", {
+			{ { 47271, "=ds=#s3#, #a4#" }, }, -- war
+			{ { 47229, "=ds=#s3#, #a1#" }, { 47235, "=ds=#s3#, #a1#" }, }, -- priest
+			{ { 47307, "=ds=#s3#, #a1#" }, { 47313, "=ds=#s3#, #a1#" }, }, -- lock
+			{ { 47391, "=ds=#s3#, #a2#" }, { 47397, "=ds=#s3#, #a2#" }, { 47403, "=ds=#s3#, #a2#" } }, -- druid
+		},
+		},
+		{ 55486, "INV_Shoulder_17", "=q4=Shifting Mantle of Ascendancy", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q12=#c6#, =q15=#c7#=ds=, =q10=#c3#=ds=", "50%", "", "", "", "", "", "", "", "", "", "", {
+			{ { 47061, "=ds=#s3#, #a4#" }, { 47067, "=ds=#s3#, #a4#" }, { 47073, "=ds=#s3#, #a4#" }, }, -- paladin
+			{ { 47319, "=ds=#s3#, #a3#" }, }, -- hunter
+			{ { 47325, "=ds=#s3#, #a2#" }, }, -- rogue
+			{ { 47181, "=ds=#s3#, #a3#" }, { 47187, "=ds=#s3#, #a3#" }, { 47193, "=ds=#s3#, #a3#" } }, -- shaman
+			{ { 47109, "=ds=#s3#, #a1#" }, { 47115, "=ds=#s3#, #a1#" }, }, -- mage
+		},
+		},
+		{ 55482, "INV_Jewelry_Necklace_29", "=q4=Ephemeral Pendant", "=ds=? T3.5 Neck Material ?", "4%", "", "", "", "", "", "", "", "", "", "", {
+			{ { 47275, "=ds=#s3#, #a4#" }, }, -- war
+			{ { 47233, "=ds=#s3#, #a1#" }, { 47239, "=ds=#s3#, #a1#" }, }, -- priest
+			{ { 47311, "=ds=#s3#, #a1#" }, { 47317, "=ds=#s3#, #a1#" }, }, -- lock
+			{ { 47395, "=ds=#s3#, #a2#" }, { 47401, "=ds=#s3#, #a2#" }, { 47407, "=ds=#s3#, #a2#" } }, -- druid
+			{ { 47065, "=ds=#s12#, #a4#" }, { 47071, "=ds=#s12#, #a4#" }, { 47077, "=ds=#s12#, #a4#" }, }, -- paladin
+			{ { 47323, "=ds=#s12#, #a3#" }, }, -- hunter
+			{ { 47329, "=ds=#s12#, #a2#" }, }, -- rogue
+			{ { 47185, "=ds=#s12#, #a3#" }, { 47191, "=ds=#s12#, #a3#" }, { 47197, "=ds=#s12#, #a3#" } }, -- shaman
+			{ { 47113, "=ds=#s12#, #a1#" }, { 47119, "=ds=#s12#, #a1#" }, }, -- mage
+		},
+		},
 	};
 	UKHKruul = {
-		{ 55489, "INV_Scroll_04", "=q4=Brutal Leggings of Conquest", "", 50 },
-		{ 55510, "INV_Scroll_04", "=q4=Fragments of Aldrach", "", 11.1 },
-		{ 55511, "INV_Scroll_04", "=q4=Hellflame", "", 11.2 },
-		{ 55506, "INV_Scroll_04", "=q4=Worldbreaker Girdle", "", 11.1 },
-		{ 55132, "INV_Scroll_04", "=q4=Pendant of Purified Demon's Blood", "", 11.1 },
-		{ 55131, "INV_Scroll_04", "=q4=Shieldrender Talisman", "", 11.1 },
-		{ 55127, "INV_Scroll_04", "=q4=Shar'tateth, the Shattered Edge", "", 11.1 },
-		{ 55128, "INV_Scroll_04", "=q4=Comet Signaller", "", 11.1 },
-		{ 55129, "INV_Scroll_04", "=q4=Desecration", "", 11.1 },
-		{ 55490, "INV_Scroll_04", "=q4=Brutal Leggings of Ascendancy", "", 50 },
-		{ 55130, "INV_Scroll_04", "=q4=Wristwraps of Exiled Radiance", "", 11.1 },
-		{ 55482, "INV_Scroll_04", "=q4=Ephemeral Pendant", "", 4 },
+		{ 55510, "INV_Misc_QuestionMark", "=q4=Fragments of Aldrach", "" },
+		{ 55511, "INV_Misc_QuestionMark", "=q4=Hellflame", "" },
+		{ 55506, "INV_Misc_QuestionMark", "=q4=Worldbreaker Girdle", "=ds=#s10#" },
+		{ 55132, "INV_Misc_QuestionMark", "=q4=Pendant of Purified Demon's Blood", "=ds=?#s2#?" },
+		{ 55131, "INV_Misc_QuestionMark", "=q4=Shieldrender Talisman", "=ds=?#s14#?" },
+		{ 55127, "Inv_Demonaxe", "=q4=Shar'tateth, the Shattered Edge", "=ds=#h2#, #w1#" },
+		{ 55128, "ability_thunderbolt", "=q4=Comet Signaller", "=ds=#h1#, #w6#" },
+		{ 55129, "INV_Desecration", "=q4=Desecration", "=ds=#h3#, #w10#" },
+		{ 55130, "inv_bracer_09", "=q4=Wristwraps of Exiled Radiance", "=ds=#s8#, #a1#" },
+		{ 0, "", "", "" },
+		{ 55489, "INV_Pants_Plate_11", "=q4=Brutal Leggings of Conquest", "=q17=#c9#=ds=, =q9=#c5#=ds=, =q11=#c8#, =q13=#c1#", "50%", "", "", "", "", "", "", "", "", "", "", {
+			{ { 47273, "=ds=#s11#, #a4#" }, }, -- war
+			{ { 47231, "=ds=#s11#, #a1#" }, { 47237, "=ds=#s11#, #a1#" }, }, -- priest
+			{ { 47309, "=ds=#s11#, #a1#" }, { 47315, "=ds=#s11#, #a1#" }, }, -- lock
+			{ { 47393, "=ds=#s11#, #a2#" }, { 47399, "=ds=#s11#, #a2#" }, { 47405, "=ds=#s11#, #a2#" } }, -- druid
+		},
+		},
+		{ 55490, "INV_Pants_Plate_11", "=q4=Brutal Leggings of Ascendancy", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q12=#c6#, =q15=#c7#=ds=, =q10=#c3#=ds=", "50%", "", "", "", "", "", "", "", "", "", "", {
+			{ { 47063, "=ds=#s11#, #a4#" }, { 47069, "=ds=#s11#, #a4#" }, { 47075, "=ds=#s11#, #a4#" }, }, -- paladin
+			{ { 47321, "=ds=#s11#, #a3#" }, }, -- hunter
+			{ { 47327, "=ds=#s11#, #a2#" }, }, -- rogue
+			{ { 47183, "=ds=#s11#, #a3#" }, { 47189, "=ds=#s11#, #a3#" }, { 47195, "=ds=#s3#, #a3#" } }, -- shaman
+			{ { 47111, "=ds=#s11#, #a1#" }, { 47117, "=ds=#s11#, #a1#" }, }, -- mage
+		},
+		},
+		{ 55482, "INV_Jewelry_Necklace_29", "=q4=Ephemeral Pendant", "=ds=? T3.5 Neck Material ?", "4%", "", "", "", "", "", "", "", "", "", "", {
+			{ { 47275, "=ds=#s3#, #a4#" }, }, -- war
+			{ { 47233, "=ds=#s3#, #a1#" }, { 47239, "=ds=#s3#, #a1#" }, }, -- priest
+			{ { 47311, "=ds=#s3#, #a1#" }, { 47317, "=ds=#s3#, #a1#" }, }, -- lock
+			{ { 47395, "=ds=#s3#, #a2#" }, { 47401, "=ds=#s3#, #a2#" }, { 47407, "=ds=#s3#, #a2#" } }, -- druid
+			{ { 47065, "=ds=#s12#, #a4#" }, { 47071, "=ds=#s12#, #a4#" }, { 47077, "=ds=#s12#, #a4#" }, }, -- paladin
+			{ { 47323, "=ds=#s12#, #a3#" }, }, -- hunter
+			{ { 47329, "=ds=#s12#, #a2#" }, }, -- rogue
+			{ { 47185, "=ds=#s12#, #a3#" }, { 47191, "=ds=#s12#, #a3#" }, { 47197, "=ds=#s12#, #a3#" } }, -- shaman
+			{ { 47113, "=ds=#s12#, #a1#" }, { 47119, "=ds=#s12#, #a1#" }, }, -- mage
+		},
+		},
 	};
 	UKHUnknown = {
-			{ 55107, "INV_Scroll_04", "=q4=Gloves of Leyline Convergence", "", 25 },
-			{ 55109, "INV_Scroll_04", "=q4=Legwraps of Meticulous Planning", "", 25 },
-			{ 55110, "INV_Scroll_04", "=q4=Libram of the Eternal Tower", "", 25 },
-			{ 55111, "INV_Scroll_04", "=q4=Eye of Dormant Corruption", "", 25 },
-			{ 55112, "INV_Scroll_04", "=q4=Pendant of Forgiven Mistakes", "", 25 },
-
-			{ 55120, "INV_Scroll_04", "=q4=Al'Kazeth, Claw of Ruptured Elements", "", 25 },
-			{ 55121, "INV_Scroll_04", "=q4=Bulwark of Enduring Earth", "", 25 },
-			{ 55122, "INV_Scroll_04", "=q4=Earthquake Leggings", "", 25 },
-			{ 55123, "INV_Scroll_04", "=q4=Loop of Hardened Slate", "", 25 },
-			{ 55124, "INV_Scroll_04", "=q4=Pure Jewel of Draenor", "", 25 },
-			{ 55125, "INV_Scroll_04", "=q4=Handwraps of Dead Winds", "", 25 },
-			{ 55126, "INV_Scroll_04", "=q4=Mantle of the Drifting Stars", "", 25 },
-
-			{ 55133, "INV_Scroll_04", "=q4=Claw of the Mageweaver", "", 25 },
-			{ 55094, "INV_Scroll_04", "=q4=Medivh's Hindsight", "", 25 },
-
-			{ 55108, "INV_Scroll_04", "=q4=Dreadslayer Shoulderblades", "", 25 },
-			{ 55113, "INV_Scroll_04", "=q4=Dreadslayer Horns", "", 25 },
+			{ 55120, "INV_ElementalFist", "=q4=Al'Kazeth, Claw of Ruptured Elements", "=ds=#h1#, #w13#" },
+			{ 55121, "INV_Bulwark", "=q4=Bulwark of Enduring Earth", "=ds=#w8#" },
+			{ 55122, "INV_Pants_Mail_15", "=q4=Earthquake Leggings", "=ds=#s11#, #a3#" },
+			{ 55123, "INV_Jewelry_Ring_Bronze", "=q4=Loop of Hardened Slate", "=ds=#s13#" },
+			{ 55124, "INV_Misc_Gem_Diamond_02", "=q4=Pure Jewel of Draenor", "=ds=#s14#" },
+			{ 55125, "INV_Gauntlets_05", "=q4=Handwraps of Dead Winds", "=ds=#s9#, #a2#" },
+			{ 55126, "inv_shoulder_14", "=q4=Mantle of the Drifting Stars", "=ds=#s3#, #a2#" },
+			{ 0, "", "", "" },
+			{ 55133, "INV_Weapon_ShortBlade_27", "=q4=Claw of the Mageweaver", "=ds=#h4#, #w13#" },
+			{ 0, "", "", "" },
+			{ 55113, "INV_DemonhornHelmet", "=q4=Dreadslayer Horns", "=ds=#s1#, #a4#" },
 	};
 	UKHTrash = {
 

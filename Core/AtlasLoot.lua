@@ -2799,6 +2799,7 @@ AtlasLoot_HewdropDown_SubTables = {
 		{ AL["Keeper Gnarlmoon"], "UKHGnarlmoon" },
 		{ AL["Ley-Watcher Incantagos"], "UKHIncantagos" },
 		{ AL["Anomalus"], "UKHAnomalus" },
+		{ AL["Echo of Medivh"], "UKHEcho" },
 		{ AL["King (Chess fight)"], "UKHKing" },
 		{ AL["Sanv Tas'dal"], "UKHSanvTasdal" },
 		{ AL["Kruul"], "UKHKruul" },

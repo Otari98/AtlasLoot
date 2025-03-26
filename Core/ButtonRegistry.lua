@@ -3454,10 +3454,19 @@ AtlasLoot_ButtonRegistry = {
 	};
 	["UKHAnomalus"] = {
 		Title = AL["Anomalus"];
-		Next_Page = "UKHKing";
-		Next_Title = AL["King (Chess fight)"];
+		Next_Page = "UKHEcho";
+		Next_Title = AL["Echo of Medivh"];
 		Prev_Page = "UKHIncantagos";
 		Prev_Title = AL["Ley-Watcher Incantagos"];
+		Back_Page = "DUNGEONSMENU2";
+		Back_Title = AL["Dungeons & Raids"];
+	};
+	["UKHEcho"] = {
+		Title = AL["Echo of Medivh"];
+		Next_Page = "UKHKing";
+		Next_Title = AL["King (Chess fight)"];
+		Prev_Page = "UKHAnomalus";
+		Prev_Title = AL["Anomalus"];
 		Back_Page = "DUNGEONSMENU2";
 		Back_Title = AL["Dungeons & Raids"];
 	};
@@ -3465,8 +3474,8 @@ AtlasLoot_ButtonRegistry = {
 		Title = AL["King (Chess fight)"];
 		Next_Page = "UKHSanvTasdal";
 		Next_Title = AL["Sanv Tas'dal"];
-		Prev_Page = "UKHAnomalus";
-		Prev_Title = AL["Anomalus"];
+		Prev_Page = "UKHEcho";
+		Prev_Title = AL["Echo of Medivh"];
 		Back_Page = "DUNGEONSMENU2";
 		Back_Title = AL["Dungeons & Raids"];
 	};
