@@ -2599,9 +2599,9 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s23663", "inv_shoulder_19", "=q3=Mantle of the Timbermaw", "=ds=#sr# =so1=300 =so2=315 =so3=330 =so4=345" },
 		{ "s18448", "inv_shoulder_02", "=q3=Mooncloth Shoulders", "=ds=#sr# =so1=300 =so2=315 =so3=330 =so4=345" },
 		{ "s28482", "inv_shoulder_18", "=q3=Sylvan Shoulders", "=ds=#sr# =so1=300 =so2=315 =so3=330 =so4=345" },
+		{ "s55519", "INV_Shoulder_14", "=q3=Cosmic Mantle", "=ds=#sr# =so1=300 =so2=300 =so3=300 =so4=300" },
 		{ "s20848", "inv_shoulder_23", "=q4=Flarecore Mantle", "=ds=#sr# =so1=300 =so2=315 =so3=330 =so4=345" },
 		{ "s45457", "INV_Shoulder_05", "=q4=Dreamthread Mantle", "=ds=#sr# =so1=300 =so2=300 =so3=300 =so4=300" },
-		{ "s55519", "INV_Shoulder_14", "=q3=Cosmic Mantle", "=ds=#sr# =so1=300 =so2=300 =so3=300 =so4=300" },
 	},
 	TailoringCloak1 = {
 		{ "s2387", "inv_misc_cape_14", "=q1=Linen Cloak", "=ds=#sr# =so1=1 =so2=35 =so3=47 =so4=60" },
@@ -2618,8 +2618,8 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s18418", "inv_misc_cape_18", "=q2=Cindercloth Cloak", "=ds=#sr# =so1=275 =so2=290 =so3=305 =so4=320" },
 		{ "s18422", "inv_misc_cape_18", "=q3=Cloak of Fire", "=ds=#sr# =so1=275 =so2=290 =so3=305 =so4=320" },
 		{ "s22870", "inv_misc_cape_06", "=q3=Cloak of Warding", "=ds=#sr# =so1=300 =so2=315 =so3=330 =so4=345" },
-		{ "s28208", "inv_misc_cape_16", "=q4=Glacial Cloak", "=ds=#sr# =so1=300 =so2=315 =so3=330 =so4=345" },
 		{ "s55534", "INV_Misc_Cape_06", "=q3=Ley-Kissed Drape", "=ds=#sr# =so1=300 =so2=300 =so3=300 =so4=300" },
+		{ "s28208", "inv_misc_cape_16", "=q4=Glacial Cloak", "=ds=#sr# =so1=300 =so2=315 =so3=330 =so4=345" },
 	},
 	TailoringChest1 = {
 		{ "s7623", "inv_chest_cloth_21", "=q2=Brown Linen Robe", "=ds=#sr# =so1=30 =so2=55 =so3=72 =so4=90" },
