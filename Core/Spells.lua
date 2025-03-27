@@ -5794,7 +5794,7 @@ GetSpellInfoAtlasLootDB = {
 				[5] = {14227, 4},
 			},
 		},
-				[20849] = {
+		[20849] = {
 			["name"] = "Tailoring: Flarecore Gloves",
 			["requires"] = "",
 			["tools"] = "",
@@ -5811,7 +5811,7 @@ GetSpellInfoAtlasLootDB = {
 				[5] = {14341, 2},
 			},
 		},
-				[23667] = {
+		[23667] = {
 			["name"] = "Tailoring: Flarecore Leggings",
 			["requires"] = "",
 			["tools"] = "",
@@ -5828,7 +5828,7 @@ GetSpellInfoAtlasLootDB = {
 				[5] = {14227, 4},
 			},
 		},
-				[20848] = {
+		[20848] = {
 			["name"] = "Tailoring: Flarecore Mantle",
 			["requires"] = "",
 			["tools"] = "",
@@ -5845,7 +5845,7 @@ GetSpellInfoAtlasLootDB = {
 				[5] = {14341, 2},
 			},
 		},
-				[23666] = {
+		[23666] = {
 			["name"] = "Tailoring: Flarecore Robe",
 			["requires"] = "",
 			["tools"] = "",
@@ -5862,7 +5862,7 @@ GetSpellInfoAtlasLootDB = {
 				[5] = {14227, 4},
 			},
 		},
-				[28208] = {
+		[28208] = {
 			["name"] = "Tailoring: Glacial Cloak",
 			["requires"] = "",
 			["tools"] = "",
@@ -5878,7 +5878,7 @@ GetSpellInfoAtlasLootDB = {
 				[4] = {14227, 4},
 			},
 		},
-				[28205] = {
+		[28205] = {
 			["name"] = "Tailoring: Glacial Gloves",
 			["requires"] = "",
 			["tools"] = "",
@@ -5894,7 +5894,7 @@ GetSpellInfoAtlasLootDB = {
 				[4] = {14227, 4},
 			},
 		},
-				[28207] = {
+		[28207] = {
 			["name"] = "Tailoring: Glacial Vest",
 			["requires"] = "",
 			["tools"] = "",
@@ -5910,7 +5910,7 @@ GetSpellInfoAtlasLootDB = {
 				[4] = {14227, 8},
 			},
 		},
-				[28209] = {
+		[28209] = {
 			["name"] = "Tailoring: Glacial Wrists",
 			["requires"] = "",
 			["tools"] = "",
@@ -5926,7 +5926,7 @@ GetSpellInfoAtlasLootDB = {
 				[4] = {14227, 4},
 			},
 		},
-				[18454] = {
+		[18454] = {
 			["name"] = "Tailoring: Gloves of Spell Mastery",
 			["requires"] = "",
 			["tools"] = "",
@@ -5945,7 +5945,7 @@ GetSpellInfoAtlasLootDB = {
 				[7] = {14341, 2},
 			},
 		},
-				[18457] = {
+		[18457] = {
 			["name"] = "Tailoring: Robe of the Archmage",
 			["requires"] = "",
 			["tools"] = "",
@@ -5963,7 +5963,7 @@ GetSpellInfoAtlasLootDB = {
 				[6] = {14341, 2},
 			},
 		},
-				[18458] = {
+		[18458] = {
 			["name"] = "Tailoring: Robe of the Void",
 			["requires"] = "",
 			["tools"] = "",
@@ -6136,7 +6136,7 @@ GetSpellInfoAtlasLootDB = {
 				[3] = {14227, 2},
 			},
 		},
-				[24093] = {
+		[24093] = {
 			["name"] = "Tailoring: Bloodvine Boots",
 			["requires"] = "",
 			["tools"] = "",
@@ -6153,7 +6153,7 @@ GetSpellInfoAtlasLootDB = {
 				[5] = {14227, 4},
 			},
 		},
-				[24092] = {
+		[24092] = {
 			["name"] = "Tailoring: Bloodvine Leggings",
 			["requires"] = "",
 			["tools"] = "",
@@ -6170,7 +6170,7 @@ GetSpellInfoAtlasLootDB = {
 				[5] = {14227, 2},
 			},
 		},
-				[24091] = {
+		[24091] = {
 			["name"] = "Tailoring: Bloodvine Vest",
 			["requires"] = "",
 			["tools"] = "",
@@ -6187,7 +6187,7 @@ GetSpellInfoAtlasLootDB = {
 				[5] = {14227, 2},
 			},
 		},
-				[18455] = {
+		[18455] = {
 			["name"] = "Tailoring: Bottomless Bag",
 			["requires"] = "",
 			["tools"] = "",
@@ -6204,7 +6204,7 @@ GetSpellInfoAtlasLootDB = {
 				[5] = {14341, 2},
 			},
 		},
-				[22870] = {
+		[22870] = {
 			["name"] = "Tailoring: Cloak of Warding",
 			["requires"] = "",
 			["tools"] = "",
@@ -6220,7 +6220,7 @@ GetSpellInfoAtlasLootDB = {
 				[4] = {14341, 2},
 			},
 		},
-				[22867] = {
+		[22867] = {
 			["name"] = "Tailoring: Felcloth Gloves",
 			["requires"] = "",
 			["tools"] = "",
@@ -6237,7 +6237,7 @@ GetSpellInfoAtlasLootDB = {
 				[5] = {14341, 2},
 			},
 		},
-				[28210] = {
+		[28210] = {
 			["name"] = "Tailoring: Gaea's Embrace",
 			["requires"] = "",
 			["tools"] = "",
@@ -6253,7 +6253,7 @@ GetSpellInfoAtlasLootDB = {
 				[4] = {14227, 4},
 			},
 		},
-				[22868] = {
+		[22868] = {
 			["name"] = "Tailoring: Inferno Gloves",
 			["requires"] = "",
 			["tools"] = "",
@@ -6301,7 +6301,7 @@ GetSpellInfoAtlasLootDB = {
 				[4] = {14344},
 			},
 		},
-				[23663] = {
+		[23663] = {
 			["name"] = "Tailoring: Mantle of the Timbermaw",
 			["requires"] = "",
 			["tools"] = "",
@@ -6317,7 +6317,7 @@ GetSpellInfoAtlasLootDB = {
 				[4] = {14227, 2},
 			},
 		},
-				[18452] = {
+		[18452] = {
 			["name"] = "Tailoring: Mooncloth Circlet",
 			["requires"] = "",
 			["tools"] = "",
@@ -6334,7 +6334,7 @@ GetSpellInfoAtlasLootDB = {
 				[5] = {14341, 2},
 			},
 		},
-				[22869] = {
+		[22869] = {
 			["name"] = "Tailoring: Mooncloth Gloves",
 			["requires"] = "",
 			["tools"] = "",
@@ -6350,7 +6350,7 @@ GetSpellInfoAtlasLootDB = {
 				[4] = {14341, 2},
 			},
 		},
-				[22902] = {
+		[22902] = {
 			["name"] = "Tailoring: Mooncloth Robe",
 			["requires"] = "",
 			["tools"] = "",
@@ -6366,7 +6366,7 @@ GetSpellInfoAtlasLootDB = {
 				[4] = {14341, 2},
 			},
 		},
-				[18448] = {
+		[18448] = {
 			["name"] = "Tailoring: Mooncloth Shoulders",
 			["requires"] = "",
 			["tools"] = "",
@@ -6381,7 +6381,7 @@ GetSpellInfoAtlasLootDB = {
 				[3] = {14341},
 			},
 		},
-				[18447] = {
+		[18447] = {
 			["name"] = "Tailoring: Mooncloth Vest",
 			["requires"] = "",
 			["tools"] = "",
@@ -6396,7 +6396,7 @@ GetSpellInfoAtlasLootDB = {
 				[3] = {14341},
 			},
 		},
-				[24902] = {
+		[24902] = {
 			["name"] = "Tailoring: Runed Stygian Belt",
 			["requires"] = "",
 			["tools"] = "",
@@ -6413,7 +6413,7 @@ GetSpellInfoAtlasLootDB = {
 				[5] = {14227, 2},
 			},
 		},
-				[24903] = {
+		[24903] = {
 			["name"] = "Tailoring: Runed Stygian Boots",
 			["requires"] = "",
 			["tools"] = "",
@@ -6430,7 +6430,7 @@ GetSpellInfoAtlasLootDB = {
 				[5] = {14227, 2},
 			},
 		},
-				[24901] = {
+		[24901] = {
 			["name"] = "Tailoring: Runed Stygian Leggings",
 			["requires"] = "",
 			["tools"] = "",
@@ -6446,7 +6446,7 @@ GetSpellInfoAtlasLootDB = {
 				[4] = {14227, 2},
 			},
 		},
-				[28481] = {
+		[28481] = {
 			["name"] = "Tailoring: Sylvan Crown",
 			["requires"] = "",
 			["tools"] = "",
@@ -6462,7 +6462,7 @@ GetSpellInfoAtlasLootDB = {
 				[4] = {14227, 2},
 			},
 		},
-				[28482] = {
+		[28482] = {
 			["name"] = "Tailoring: Sylvan Shoulders",
 			["requires"] = "",
 			["tools"] = "",
@@ -6477,7 +6477,7 @@ GetSpellInfoAtlasLootDB = {
 				[3] = {14227, 2},
 			},
 		},
-				[28480] = {
+		[28480] = {
 			["name"] = "Tailoring: Sylvan Vest",
 			["requires"] = "",
 			["tools"] = "",
@@ -6493,7 +6493,88 @@ GetSpellInfoAtlasLootDB = {
 				[4] = {14227, 2},
 			},
 		},
-				[27660] = {
+		[55518] = {
+			["name"] = "Tailoring: Cosmic Headdress",
+			["requires"] = "",
+			["tools"] = "",
+			["castTime"] = 60,
+			["text"] = "",
+			["craftItem"] = 55518,
+			["craftQuantityMin"] = "",
+			["craftQuantityMax"] = "",
+			["reagents"] = {
+				[1] = {61673, 5},
+				[2] = {14342, 2},
+				[3] = {14048, 6},
+				[4] = {14227, 3},
+			},
+		},
+		[55519] = {
+			["name"] = "Tailoring: Cosmic Mantle",
+			["requires"] = "",
+			["tools"] = "",
+			["castTime"] = 60,
+			["text"] = "",
+			["craftItem"] = 55519,
+			["craftQuantityMin"] = "",
+			["craftQuantityMax"] = "",
+			["reagents"] = {
+				[1] = {61673, 4},
+				[2] = {14342, 2},
+				[3] = {14048, 3},
+				[4] = {14227, 4},
+			},
+		},
+		[55520] = {
+			["name"] = "Tailoring: Cosmic Vest",
+			["requires"] = "",
+			["tools"] = "",
+			["castTime"] = 60,
+			["text"] = "",
+			["craftItem"] = 55520,
+			["craftQuantityMin"] = "",
+			["craftQuantityMax"] = "",
+			["reagents"] = {
+				[1] = {61673, 7},
+				[2] = {14342, 3},
+				[3] = {14048, 8},
+				[4] = {14227, 2},
+			},
+		},
+		[55521] = {
+			["name"] = "Tailoring: Cosmic Leggings",
+			["requires"] = "",
+			["tools"] = "",
+			["castTime"] = 60,
+			["text"] = "",
+			["craftItem"] = 55521,
+			["craftQuantityMin"] = "",
+			["craftQuantityMax"] = "",
+			["reagents"] = {
+				[1] = {61673, 7},
+				[2] = {14342, 3},
+				[3] = {14048, 6},
+				[4] = {14227, 2},
+			},
+		},
+		[55534] = {
+			["name"] = "Tailoring: Ley-Kissed Drape",
+			["requires"] = "",
+			["tools"] = "",
+			["castTime"] = 60,
+			["text"] = "",
+			["craftItem"] = 55534,
+			["craftQuantityMin"] = "",
+			["craftQuantityMax"] = "",
+			["reagents"] = {
+				[1] = {61673, 4},
+				[2] = {14342, 2},
+				[3] = {14048, 6},
+				[4] = {14227, 4},
+				[5] = {13926, 1},
+			},
+		},
+		[27660] = {
 			["name"] = "Tailoring: Big Bag of Enchantment",
 			["requires"] = "",
 			["tools"] = "",
@@ -6509,7 +6590,7 @@ GetSpellInfoAtlasLootDB = {
 				[4] = {14227, 4},
 			},
 		},
-				[18451] = {
+		[18451] = {
 			["name"] = "Tailoring: Felcloth Robe",
 			["requires"] = "",
 			["tools"] = "",
@@ -6525,7 +6606,7 @@ GetSpellInfoAtlasLootDB = {
 				[4] = {14341, 2},
 			},
 		},
-				[18453] = {
+		[18453] = {
 			["name"] = "Tailoring: Felcloth Shoulders",
 			["requires"] = "",
 			["tools"] = "",
@@ -6542,7 +6623,7 @@ GetSpellInfoAtlasLootDB = {
 				[5] = {14341, 2},
 			},
 		},
-				[18445] = {
+		[18445] = {
 			["name"] = "Tailoring: Mooncloth Bag",
 			["requires"] = "",
 			["tools"] = "",
@@ -6557,7 +6638,7 @@ GetSpellInfoAtlasLootDB = {
 				[3] = {14341},
 			},
 		},
-				[18449] = {
+		[18449] = {
 			["name"] = "Tailoring: Runecloth Shoulders",
 			["requires"] = "",
 			["tools"] = "",
@@ -6573,7 +6654,7 @@ GetSpellInfoAtlasLootDB = {
 				[4] = {14341},
 			},
 		},
-				[27725] = {
+		[27725] = {
 			["name"] = "Tailoring: Satchel of Cenarius",
 			["requires"] = "",
 			["tools"] = "",
@@ -6589,7 +6670,7 @@ GetSpellInfoAtlasLootDB = {
 				[4] = {14227, 4},
 			},
 		},
-				[18446] = {
+		[18446] = {
 			["name"] = "Tailoring: Wizardweave Robe",
 			["requires"] = "",
 			["tools"] = "",
@@ -6604,7 +6685,7 @@ GetSpellInfoAtlasLootDB = {
 				[3] = {14341},
 			},
 		},
-				[18450] = {
+		[18450] = {
 			["name"] = "Tailoring: Wizardweave Turban",
 			["requires"] = "",
 			["tools"] = "",
@@ -6620,7 +6701,7 @@ GetSpellInfoAtlasLootDB = {
 				[4] = {14341},
 			},
 		},
-				[22759] = {
+		[22759] = {
 			["name"] = "Tailoring: Flarecore Wraps",
 			["requires"] = "",
 			["tools"] = "",
@@ -13277,6 +13358,130 @@ GetSpellInfoAtlasLootDB = {
 				[4] = {12810, 2},
 			},
 		},
+		[55526] = {
+			["name"] = "Blacksmithing: Otherworldly Coif",
+			["requires"] = AL["Anvil"],
+			["tools"] = {5956},
+			["castTime"] = 60,
+			["text"] = "",
+			["craftItem"] = 55526,
+			["craftQuantityMin"] = "",
+			["craftQuantityMax"] = "",
+			["reagents"] = {
+				[1] = {12359, 6},
+				[2] = {12655, 1},
+				[3] = {12360, 1},
+				[4] = {12607, 1},
+			},
+		},
+		[55527] = {
+			["name"] = "Blacksmithing: Otherworldly Spaulders",
+			["requires"] = AL["Anvil"],
+			["tools"] = {5956},
+			["castTime"] = 60,
+			["text"] = "",
+			["craftItem"] = 55527,
+			["craftQuantityMin"] = "",
+			["craftQuantityMax"] = "",
+			["reagents"] = {
+				[1] = {12359, 5},
+				[2] = {12655, 1},
+				[3] = {12360, 1},
+				[4] = {12607, 3},
+			},
+		},
+		[55528] = {
+			["name"] = "Blacksmithing: Otherworldly Breastplate",
+			["requires"] = AL["Anvil"],
+			["tools"] = {5956},
+			["castTime"] = 60,
+			["text"] = "",
+			["craftItem"] = 55528,
+			["craftQuantityMin"] = "",
+			["craftQuantityMax"] = "",
+			["reagents"] = {
+				[1] = {12359, 6},
+				[2] = {12655, 1},
+				[3] = {12360, 2},
+				[4] = {12607, 2},
+			},
+		},
+		[55529] = {
+			["name"] = "Blacksmithing: Otherworldly Leggings",
+			["requires"] = AL["Anvil"],
+			["tools"] = {5956},
+			["castTime"] = 60,
+			["text"] = "",
+			["craftItem"] = 55529,
+			["craftQuantityMin"] = "",
+			["craftQuantityMax"] = "",
+			["reagents"] = {
+				[1] = {12359, 7},
+				[2] = {12655, 1},
+				[3] = {12360, 2},
+				[4] = {12607, 2},
+			},
+		},
+		[55530] = {
+			["name"] = "Blacksmithing: Reflective Helmet",
+			["requires"] = AL["Anvil"],
+			["tools"] = {5956},
+			["castTime"] = 60,
+			["text"] = "",
+			["craftItem"] = 55530,
+			["craftQuantityMin"] = "",
+			["craftQuantityMax"] = "",
+			["reagents"] = {
+				[1] = {12359, 6},
+				[2] = {12360, 2},
+				[3] = {12655, 7},
+			},
+		},
+		[55531] = {
+			["name"] = "Blacksmithing: Reflective Pauldrons",
+			["requires"] = AL["Anvil"],
+			["tools"] = {5956},
+			["castTime"] = 60,
+			["text"] = "",
+			["craftItem"] = 55531,
+			["craftQuantityMin"] = "",
+			["craftQuantityMax"] = "",
+			["reagents"] = {
+				[1] = {12359, 7},
+				[2] = {12360, 2},
+				[3] = {12655, 9},
+			},
+		},
+		[55532] = {
+			["name"] = "Blacksmithing: Reflective Breastplate",
+			["requires"] = AL["Anvil"],
+			["tools"] = {5956},
+			["castTime"] = 60,
+			["text"] = "",
+			["craftItem"] = 55532,
+			["craftQuantityMin"] = "",
+			["craftQuantityMax"] = "",
+			["reagents"] = {
+				[1] = {12359, 5},
+				[2] = {12360, 2},
+				[3] = {12655, 10},
+			},
+		},
+		[55533] = {
+			["name"] = "Blacksmithing: Reflective Leggings",
+			["requires"] = AL["Anvil"],
+			["tools"] = {5956},
+			["castTime"] = 60,
+			["text"] = "",
+			["craftItem"] = 55533,
+			["craftQuantityMin"] = "",
+			["craftQuantityMax"] = "",
+			["reagents"] = {
+				[1] = {12359, 7},
+				[2] = {12360, 2},
+				[3] = {12655, 12},
+			},
+		},
 		[15296] = {
 			["name"] = "Blacksmithing: Dark Iron Plate",
 			["requires"] = AL["Black Anvil"],
@@ -18932,6 +19137,70 @@ GetSpellInfoAtlasLootDB = {
 				[2] = {20498, 30},
 				[3] = {7078, 2},
 				[4] = {15407},
+			},
+		},
+		[55522] = {
+			["name"] = "Leatherworking: Etheral Helmet",
+			["requires"] = "",
+			["tools"] = "",
+			["castTime"] = 60,
+			["text"] = "",
+			["craftItem"] = 55522,
+			["craftQuantityMin"] = "",
+			["craftQuantityMax"] = "",
+			["reagents"] = {
+				[1] = {61673, 5},
+				[2] = {15407, 2},
+				[3] = {12810, 8},
+				[4] = {14227, 1},
+			},
+		},
+		[55523] = {
+			["name"] = "Leatherworking: Etheral Shoulder Pads",
+			["requires"] = "",
+			["tools"] = "",
+			["castTime"] = 60,
+			["text"] = "",
+			["craftItem"] = 55523,
+			["craftQuantityMin"] = "",
+			["craftQuantityMax"] = "",
+			["reagents"] = {
+				[1] = {61673, 4},
+				[2] = {15407, 2},
+				[3] = {12810, 7},
+				[4] = {14227, 2},
+			},
+		},
+		[55524] = {
+			["name"] = "Leatherworking: Etheral Tunic",
+			["requires"] = "",
+			["tools"] = "",
+			["castTime"] = 60,
+			["text"] = "",
+			["craftItem"] = 55524,
+			["craftQuantityMin"] = "",
+			["craftQuantityMax"] = "",
+			["reagents"] = {
+				[1] = {61673, 8},
+				[2] = {15407, 4},
+				[3] = {12810, 12},
+				[4] = {14227, 1},
+			},
+		},
+		[55525] = {
+			["name"] = "Leatherworking: Etheral Leggings",
+			["requires"] = "",
+			["tools"] = "",
+			["castTime"] = 60,
+			["text"] = "",
+			["craftItem"] = 55525,
+			["craftQuantityMin"] = "",
+			["craftQuantityMax"] = "",
+			["reagents"] = {
+				[1] = {61673, 6},
+				[2] = {15407, 3},
+				[3] = {12810, 13},
+				[4] = {14227, 2},
 			},
 		},
 		[26279] = {
