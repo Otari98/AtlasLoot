@@ -3432,7 +3432,7 @@ AtlasLoot_ButtonRegistry = {
 	};
 
 	-- Upper Karazhan Halls
-	-- Guessed order:keeper gnarlmoon -> incantagos -> anomalus -> echo of medivh (optional) -> king's council -> sanv tas'dal  -> rupturan -> kruul -> mephistroph
+	-- Guessed order:keeper gnarlmoon -> incantagos -> anomalus -> echo of medivh (optional) -> king's council -> sanv tas'dal  -> rupturan -> kruul -> Mephistroth
 
 	["UKHGnarlmoon"] = {
 		Title = AL["Keeper Gnarlmoon"];
@@ -3490,17 +3490,26 @@ AtlasLoot_ButtonRegistry = {
 	};
 	["UKHKruul"] = {
 		Title = AL["Kruul"];
-		Next_Page = "UKHUnknown";
-		Next_Title = AL["Unknown boss Upper Kara"];
+		Next_Page = "UKHRupturan";
+		Next_Title = AL["Rupturan"];
 		Prev_Page = "UKHSanvTasdal";
 		Prev_Title = AL["Sanv Tas'dal"];
 		Back_Page = "DUNGEONSMENU2";
 		Back_Title = AL["Dungeons & Raids"];
 	};
-	["UKHUnknown"] = {
-		Title = AL["Unknown boss Upper Kara"];
+	["UKHRupturan"] = {
+		Title = AL["Rupturan"];
 		Prev_Page = "UKHKruul";
 		Prev_Title = AL["Kruul"];
+		Next_Page = "UKHMephistroth";
+		Next_Title = AL["Mephistroth"];
+		Back_Page = "DUNGEONSMENU2";
+		Back_Title = AL["Dungeons & Raids"];
+	},
+	["UKHMephistroth"] = {
+		Title = AL["Mephistroth"];
+		Prev_Page = "UKHRupturan";
+		Prev_Title = AL["Rupturan"];
 		Next_Page = "UKHTrash";
 		Next_Title = AL["Trash Mobs"];
 		Back_Page = "DUNGEONSMENU2";
@@ -3508,8 +3517,8 @@ AtlasLoot_ButtonRegistry = {
 	},
 	["UKHTrash"] = {
 		Title = AL["Trash Mobs"];
-		Prev_Page = "UKHUnknown";
-		Prev_Title = AL["Unknown boss Upper Kara"];
+		Prev_Page = "UKHMephistroth";
+		Prev_Title = AL["Mephistroth"];
 		Next_Page = "UKHGnarlmoon";
 		Next_Title = AL["Keeper Gnarlmoon"];
 		Back_Page = "DUNGEONSMENU2";

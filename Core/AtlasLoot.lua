@@ -2803,6 +2803,8 @@ AtlasLoot_HewdropDown_SubTables = {
 		{ AL["King (Chess fight)"], "UKHKing" },
 		{ AL["Sanv Tas'dal"], "UKHSanvTasdal" },
 		{ AL["Kruul"], "UKHKruul" },
+		{ AL["Rupturan"], "UKHRupturan" },
+		{ AL["Mephistroth"], "UKHMephistroth" },
 		{ AL["Trash Mobs"], "UKHTrash" },
 	},
 	["WorldBosses"] = {
