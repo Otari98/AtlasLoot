@@ -505,10 +505,12 @@ AtlasLoot_TableNames = {
 	["LKHMoroes"] = { AL["Lower Karazhan Halls"].." - "..AL["Moroes"], "AtlasLootItems" },
 	["LKHTrash"] = { AL["Lower Karazhan Halls"].." - "..AL["Trash Mobs"], "AtlasLootItems" },
 	["LKHEnchants"] = { AL["Lower Karazhan Halls"].." - ".."Enchants", "AtlasLootItems" },
-		--Upper Karazhan Halls
-	["UKHKing"] = { AL["Upper Karazhan Halls"].." - "..AL["King (Chess fight)"], "AtlasLootItems" },
-	["UKHSanvTasdal"] = { AL["Upper Karazhan Halls"].." - "..AL["Sanv Tas'dal"], "AtlasLootItems" },
+	--Upper Karazhan Halls
+	["UKHMephistroth"] = { AL["Upper Karazhan Halls"].." - "..AL["Mephistroth"], "AtlasLootItems" },
 	["UKHKruul"] = { AL["Upper Karazhan Halls"].." - "..AL["Kruul"], "AtlasLootItems" },
+	["UKHRupturan"] = { AL["Upper Karazhan Halls"].." - "..AL["Rupturan"], "AtlasLootItems" },
+	["UKHSanvTasdal"] = { AL["Upper Karazhan Halls"].." - "..AL["Sanv Tas'dal"], "AtlasLootItems" },
+	["UKHKing"] = { AL["Upper Karazhan Halls"].." - "..AL["King (Chess fight)"], "AtlasLootItems" },
 	["UKHIncantagos"] = { AL["Upper Karazhan Halls"].." - "..AL["Ley-Watcher Incantagos"], "AtlasLootItems" },
 	["UKHEcho"] = { AL["Upper Karazhan Halls"].." - "..AL["Echo of Medivh"], "AtlasLootItems" },
 	["UKHAnomalus"] = { AL["Upper Karazhan Halls"].." - "..AL["Anomalus"], "AtlasLootItems" },
