@@ -3696,6 +3696,7 @@ end
 function AtlasLoot_ContainerItem_OnClick(arg1)
 	local itemID = this:GetID()
 	local name, link, quality, _, _, _, _, _, tex = GetItemInfo(itemID)
+	if not link then return end
 	local _, _, _, color = GetItemQualityColor(quality)
 	tex = string.gsub(tex, "Interface\\Icons\\", "")
 	local extra = this.extraInfo
@@ -3705,12 +3706,10 @@ function AtlasLoot_ContainerItem_OnClick(arg1)
 		dataSource = lastSelectedButton.dataSource
 	end
 	if IsShiftKeyDown() and arg1 == "LeftButton" then
-		if AtlasLootCharDB.AllLinks then
-			if WIM_EditBoxInFocus then
-				WIM_EditBoxInFocus:Insert("\124"..string.sub(color, 2).."|Hitem:"..itemID.."\124h["..name.."]|h|r");
-			elseif ChatFrameEditBox:IsVisible() then
-				ChatFrameEditBox:Insert("\124"..string.sub(color, 2).."|Hitem:"..itemID.."\124h["..name.."]|h|r");
-			end
+		if WIM_EditBoxInFocus then
+			WIM_EditBoxInFocus:Insert("\124"..string.sub(color, 2).."|Hitem:"..itemID.."\124h["..name.."]|h|r");
+		elseif ChatFrameEditBox:IsVisible() then
+			ChatFrameEditBox:Insert("\124"..string.sub(color, 2).."|Hitem:"..itemID.."\124h["..name.."]|h|r");
 		end
 	elseif(IsControlKeyDown() and name) then
 		DressUpItemLink(link);
