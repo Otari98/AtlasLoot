@@ -1,5 +1,5 @@
-# AtlasLoot
-AtlasLoot Turtle WoW Edition allows you to view loot from bosses/ enchants/ crafted items/ reputation rewards/ PvP rewards in game!
+# Atlas-TW
+Atlas Turtle WoW Edition allows you to view loot from bosses/ enchants/ crafted items/ reputation rewards/ PvP rewards/Quests/Maps in game!
 ## Features of this fork
  - Option to show source and drop rate on item tooltips.
  - All professions sorted by slot/purpose.
@@ -7,10 +7,6 @@ AtlasLoot Turtle WoW Edition allows you to view loot from bosses/ enchants/ craf
  - Reworked menus for crafting/reputations/collections/pvp.
  - Reworked dropdown menus.
  - Keybinds, and many bugfixes.
-
-## Recommended addons to use with AtlasLoot
-  - [Atlas](https://github.com/Otari98/Atlas)
-  - [AtlasQuest](https://github.com/Otari98/AtlasQuest)
 
 ## Preview
 ![123](https://github.com/user-attachments/assets/69f48fbf-c9a0-42d6-a907-24b7f2f1d81c)
@@ -32,3 +28,4 @@ AtlasLoot Turtle WoW Edition allows you to view loot from bosses/ enchants/ craf
  - Shagu (pfUI update code)
  - Lexie (Turtle WoW fixes/updates)
  - Otari (overhaul/revamp, menu changes, bugfixes/updates)
+ - pepopo978 (kara40 etc)

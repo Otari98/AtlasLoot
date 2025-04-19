@@ -1,0 +1,64 @@
+## Interface: 11200
+## Title: Atlas-TW
+## Notes: Atlas-TW: instance Map Browser, shows the possible loot from the bosses and shows the Quests for the instance.
+## Notes-deDE: Instanzkarten-Browser
+## Notes-frFR: Navigateur de cartes d'instances
+## Notes-zhTW: 副本地圖集, 瀏覽各副本、戰場地圖以及飛行地圖
+## Notes-zhCN: 副本地图浏览器
+## Notes-esES: Navegador de Mapas de Mazmorras
+## Notes-ruRU: Обозреватель подземелий
+## Version: 1.22
+## Version-AtlasLoot: 4.13.1
+## Version-AtlasQuest: 4.63
+## X-Date: April, 2025
+## Author: Otwo, Dan Gilbert, Daviesh, Thandrenn, Asurn, Loather, Rabidmax, Dazerdude, Lichery, Pompa, Xerron, Gurky, Otari98, pepopo
+## X-Category: MYADDONS_CATEGORY_MAP
+## X-OptionsFrame: AtlasOptionsFrame
+## SavedVariables: AtlasOptions
+## SavedVariablesPerCharacter: AtlasQuest_Options, AtlasLootCharDB
+## OptionalDeps: Titan, myAddOns, EarthFeatureFrame, Alphamap, AtlasLoader, LootLink, ItemSync, EquipCompare, EQCompare
+
+Libs\AceLibrary\AceLibrary.lua
+Libs\AceOO-2.0\AceOO-2.0.lua
+Libs\AceEvent-2.0\AceEvent-2.0.lua
+Libs\AceDB-2.0\AceDBa-2.0.lua
+Libs\AceLocale-2.2\AceLocale-2.2.lua
+Libs\AceAddon-2.0\AceAddon-2.0.lua
+Libs\Hewdrop-2.0\Hewdrop-2.0.lua
+
+Libs\Babble-Class-2.2\Babble-Class-2.2.lua
+Libs\Babble-Faction-2.2a\Babble-Faction-2.2a.lua
+Libs\Babble-ItemSet-2.2a\Babble-ItemSet-2.2a.lua
+Libs\Babble-Zone-2.2a\Babble-Zone-2.2a.lua
+Libs\Babble-Boss-2.2a\Babble-Boss-2.2a.lua
+Libs\Babble-Spell-2.2a\Babble-Spell-2.2a.lua
+
+
+Atlas-enUS.lua
+
+AtlasMaps.lua
+AtlasDropDown.lua
+Atlas.lua
+Atlas.xml
+AtlasButton.lua
+AtlasButton.xml
+AtlasOptions.lua
+AtlasOptions.xml
+
+Loot\AtlasLoot-enUS.lua
+
+Loot\Sets.lua
+Loot\Crafting.lua
+Loot\Battlegrounds.lua
+Loot\WorldEvents.lua
+Loot\Factions.lua
+Loot\Instances.lua
+Loot\WorldBosses.lua
+Loot\RareMobs.lua
+Loot\LootTables.lua
+Loot\Core\AtlasLoot.xml
+
+Quest\AtlasQuest-enUS.lua
+
+Quest\InsideFrame.xml
+Quest\AtlasQuest.xml
