@@ -1720,19 +1720,19 @@ function AtlasLoot_OpenMenu(menuName)
 	AtlasLootDefaultFrame_SelectedTable:Show()
 	AtlasLootCharDB.LastBoss = this.lootpage
 	AtlasLootCharDB.LastBossText = menuName
-	if menuName == "Crafting" then
+	if menuName == L["Crafting"] then
 		AtlasLoot_ShowItemsFrame("CRAFTINGMENU", "dummy", "dummy", pFrame)
-	elseif menuName == "PvP Rewards" then
+	elseif menuName == L["PvP Rewards"] then
 		AtlasLoot_ShowItemsFrame("PVPMENU", "dummy", "dummy", pFrame)
-	elseif menuName == "World Events" then
+	elseif menuName == L["World Events"] then
 		AtlasLoot_ShowItemsFrame("WORLDEVENTMENU", "dummy", "dummy", pFrame)
-	elseif menuName == "Collections" then
+	elseif menuName == L["Collections"] then
 		AtlasLoot_ShowItemsFrame("SETMENU", "dummy", "dummy", pFrame)
-	elseif menuName == "Factions" then
+	elseif menuName == L["Factions"] then
 		AtlasLoot_ShowItemsFrame("REPMENU", "dummy", "dummy", pFrame)
-	elseif menuName == "World Bosses" then
+	elseif menuName == L["World Bosses"] then
 		AtlasLoot_ShowItemsFrame("WORLDBOSSMENU", "dummy", "dummy", pFrame)
-	elseif menuName == "Dungeons & Raids" then
+	elseif menuName == L["Dungeons & Raids"] then
 		AtlasLoot_ShowItemsFrame("DUNGEONSMENU1", "dummy", "dummy", pFrame)
 	end
 	CloseDropDownMenus()
