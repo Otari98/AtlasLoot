@@ -4,144 +4,181 @@ local strfind = string.find
 local GetItemInfo = GetItemInfo
 local GREY = "|cff999999"
 
-local lastSearchName = nil
-local lastSearchID = nil
+local lastSearchName
+local lastSearchID
+
 local function GetItemIDByName(name)
-	if name ~= lastSearchName then
-    	for itemID = 1, 99999 do
-      		local itemName = GetItemInfo(itemID)
-      		if (itemName and itemName == name) then
-        		lastSearchID = itemID
-				break
-     		end
-    	end
-		lastSearchName = name
-  	end
-	return lastSearchID
-end
-
-local HookSetItemRef = SetItemRef
-SetItemRef = function(link, text, button)
-    local item, _, id = string.find(link, "item:(%d+)")
-	ItemRefTooltip.itemID = id
-    HookSetItemRef(link, text, button)
-    if not IsShiftKeyDown() and not IsControlKeyDown() and item then
-        AtlasLootTip.extendTooltip(ItemRefTooltip)
+    if not name then return nil end
+    if name ~= lastSearchName then
+        for itemID = 1, 99999 do
+            local itemName = GetItemInfo(itemID)
+            if (itemName and itemName == name) then
+                lastSearchID = itemID
+                break
+            end
+        end
+        lastSearchName = name
     end
+    return lastSearchID
 end
 
-local HookSetHyperlink = GameTooltip.SetHyperlink
-function GameTooltip.SetHyperlink(self, arg1)
-  if arg1 then
-    local _, _, linktype = string.find(arg1, "^(.-):(.+)$")
-    if linktype == "item" then
-        local _, _, id = string.find(arg1,"item:(%d+)")
-  		GameTooltip.itemID = id
+local function HookTooltip(tooltip)
+    local original_SetLootRollItem    = tooltip.SetLootRollItem
+    local original_SetLootItem        = tooltip.SetLootItem
+    local original_SetMerchantItem    = tooltip.SetMerchantItem
+    local original_SetQuestLogItem    = tooltip.SetQuestLogItem
+    local original_SetQuestItem       = tooltip.SetQuestItem
+    local original_SetHyperlink       = tooltip.SetHyperlink
+    local original_SetBagItem         = tooltip.SetBagItem
+    local original_SetInboxItem       = tooltip.SetInboxItem
+    local original_SetInventoryItem   = tooltip.SetInventoryItem
+    local original_SetCraftItem       = tooltip.SetCraftItem
+    local original_SetCraftSpell      = tooltip.SetCraftSpell
+    local original_SetTradeSkillItem  = tooltip.SetTradeSkillItem
+    local original_SetAuctionItem     = tooltip.SetAuctionItem
+    local original_SetAuctionSellItem = tooltip.SetAuctionSellItem
+    local original_SetTradePlayerItem = tooltip.SetTradePlayerItem
+    local original_SetTradeTargetItem = tooltip.SetTradeTargetItem
+
+    local original_OnHide = tooltip:GetScript("OnHide")
+
+    tooltip:SetScript("OnHide", function()
+        if original_OnHide then original_OnHide() end
+        this.itemID = nil
+    end)
+
+    function tooltip.SetLootRollItem(self, rollID)
+        original_SetLootRollItem(self, rollID)
+        local _, _, id = strfind(GetLootRollItemLink(rollID) or "", "item:(%d+)")
+        self.itemID = tonumber(id)
+        AtlasLootTip.extendTooltip(self)
     end
-    return HookSetHyperlink(self, arg1)
-  end
-end
 
-local HookSetBagItem = GameTooltip.SetBagItem
-function GameTooltip.SetBagItem(self, container, slot)
-	if GetContainerItemLink(container, slot) then
-		local _, _, id = string.find(GetContainerItemLink(container, slot),"item:(%d+)")
-		GameTooltip.itemID = id
-	end
-  return HookSetBagItem(self, container, slot)
-end
+    function tooltip.SetLootItem(self, slot)
+        original_SetLootItem(self, slot)
+        local _, _, id = strfind(GetLootSlotLink(slot) or "", "item:(%d+)")
+        self.itemID = tonumber(id)
+        AtlasLootTip.extendTooltip(self)
+    end
 
-local HookSetInboxItem = GameTooltip.SetInboxItem
-function GameTooltip.SetInboxItem(self, mailID, attachmentIndex)
-	local itemName = GetInboxItem(mailID)
-	if itemName then
-		GameTooltip.itemID = GetItemIDByName(itemName)
-	end
-	return HookSetInboxItem(self, mailID, attachmentIndex)
-end
+    function tooltip.SetMerchantItem(self, merchantIndex)
+        original_SetMerchantItem(self, merchantIndex)
+        local _, _, id = strfind(GetMerchantItemLink(merchantIndex) or "", "item:(%d+)")
+        self.itemID = tonumber(id)
+        AtlasLootTip.extendTooltip(self)
+    end
 
-local HookSetInventoryItem = GameTooltip.SetInventoryItem
-function GameTooltip.SetInventoryItem(self, unit, slot)
-	if GetInventoryItemLink(unit, slot) then
-		local _, _, id = string.find(GetInventoryItemLink(unit, slot),"item:(%d+)")
-		GameTooltip.itemID = id
-	end
-	return HookSetInventoryItem(self, unit, slot)
-end
+    function tooltip.SetQuestLogItem(self, itemType, index)
+        original_SetQuestLogItem(self, itemType, index)
+        local _, _, id = strfind(GetQuestLogItemLink(itemType, index) or "", "item:(%d+)")
+        self.itemID = tonumber(id)
+        AtlasLootTip.extendTooltip(self)
+    end
 
-local HookSetCraftItem = GameTooltip.SetCraftItem
-function GameTooltip.SetCraftItem(self, skill, slot)
-	if GetCraftReagentItemLink(skill, slot) then
-		local _, _, id = string.find(GetCraftReagentItemLink(skill, slot),"item:(%d+)")
-		GameTooltip.itemID = id
-	end
-	return HookSetCraftItem(self, skill, slot)
-end
+    function tooltip.SetQuestItem(self, itemType, index)
+        original_SetQuestItem(self, itemType, index)
+        local _, _, id = strfind(GetQuestItemLink(itemType, index) or "", "item:(%d+)")
+        self.itemID = tonumber(id)
+        AtlasLootTip.extendTooltip(self)
+    end
 
-local HookSetTradeSkillItem = GameTooltip.SetTradeSkillItem
-function GameTooltip.SetTradeSkillItem(self, skillIndex, reagentIndex)
-	if reagentIndex then
-		if GetTradeSkillReagentItemLink(skillIndex, reagentIndex) then
-			local _, _, id = string.find(GetTradeSkillReagentItemLink(skillIndex, reagentIndex),"item:(%d+)")
-			GameTooltip.itemID = id
-		end
-	else
-		if GetTradeSkillItemLink(skillIndex) then
-			local _, _, id = string.find(GetTradeSkillItemLink(skillIndex),"item:(%d+)")
-			GameTooltip.itemID = id
-		end
-	end
-	return HookSetTradeSkillItem(self, skillIndex, reagentIndex)
-end
+    function tooltip.SetHyperlink(self, arg1)
+        original_SetHyperlink(self, arg1)
+        local _, _, id = strfind(arg1 or "", "item:(%d+)")
+        self.itemID = tonumber(id)
+        AtlasLootTip.extendTooltip(self)
+    end
 
-local HookSetAuctionItem = GameTooltip.SetAuctionItem
-function GameTooltip.SetAuctionItem(self, atype, index)
-	local itemName = GetAuctionItemInfo(atype, index)
-	if itemName then
-		GameTooltip.itemID = GetItemIDByName(itemName)
-	end
-	return HookSetAuctionItem(self, atype, index)
-end
+    function tooltip.SetBagItem(self, container, slot)
+        local hasCooldown, repairCost = original_SetBagItem(self, container, slot)
+        local _, _, id = strfind(GetContainerItemLink(container, slot) or "", "item:(%d+)")
+        self.itemID = tonumber(id)
+        AtlasLootTip.extendTooltip(self)
+        return hasCooldown, repairCost
+    end
 
-local HookSetAuctionSellItem = GameTooltip.SetAuctionSellItem
-function GameTooltip.SetAuctionSellItem(self)
-	local itemName = GetAuctionSellItemInfo()
-	if itemName then
-		GameTooltip.itemID = GetItemIDByName(itemName)
-	end
-	return HookSetAuctionSellItem(self)
-end
+    function tooltip.SetInboxItem(self, mailID, attachmentIndex)
+        original_SetInboxItem(self, mailID, attachmentIndex)
+        local itemName = GetInboxItem(mailID)
+        self.itemID = GetItemIDByName(itemName)
+        AtlasLootTip.extendTooltip(self)
+    end
 
-local HookSetTradePlayerItem = GameTooltip.SetTradePlayerItem
-function GameTooltip.SetTradePlayerItem(self, index)
-	if GetTradePlayerItemLink(index) then
-		local _, _, id = string.find(GetTradePlayerItemLink(index),"item:(%d+)")
-		GameTooltip.itemID = id
-	end
-	return HookSetTradePlayerItem(self, index)
-end
+    function tooltip.SetInventoryItem(self, unit, slot)
+        local hasItem, hasCooldown, repairCost = original_SetInventoryItem(self, unit, slot)
+        local _, _, id = strfind(GetInventoryItemLink(unit, slot) or "", "item:(%d+)")
+        self.itemID = tonumber(id)
+        AtlasLootTip.extendTooltip(self)
+        return hasItem, hasCooldown, repairCost
+    end
 
-local HookSetTradeTargetItem = GameTooltip.SetTradeTargetItem
-function GameTooltip.SetTradeTargetItem(self, index)
-	if GetTradeTargetItemLink(index) then
-		local _, _, id = string.find(GetTradeTargetItemLink(index),"item:(%d+)")
-		GameTooltip.itemID = id
-	end
-	return HookSetTradeTargetItem(self, index)
+    function tooltip.SetCraftItem(self, skill, slot)
+        original_SetCraftItem(self, skill, slot)
+        local _, _, id = strfind(GetCraftReagentItemLink(skill, slot) or "", "item:(%d+)")
+        self.itemID = tonumber(id)
+        AtlasLootTip.extendTooltip(self)
+    end
+
+    function tooltip.SetCraftSpell(self, slot)
+        original_SetCraftSpell(self, slot)
+        local _, _, id = strfind(GetCraftItemLink(slot) or "", "item:(%d+)")
+        self.itemID = tonumber(id)
+        AtlasLootTip.extendTooltip(self)
+    end
+
+    function tooltip.SetTradeSkillItem(self, skillIndex, reagentIndex)
+        original_SetTradeSkillItem(self, skillIndex, reagentIndex)
+        if reagentIndex then
+            local _, _, id = strfind(GetTradeSkillReagentItemLink(skillIndex, reagentIndex) or "", "item:(%d+)")
+            self.itemID = tonumber(id)
+        else
+            local _, _, id = strfind(GetTradeSkillItemLink(skillIndex) or "", "item:(%d+)")
+            self.itemID = tonumber(id)
+        end
+        AtlasLootTip.extendTooltip(self)
+    end
+
+    function tooltip.SetAuctionItem(self, atype, index)
+        original_SetAuctionItem(self, atype, index)
+        local itemName = GetAuctionItemInfo(atype, index)
+        self.itemID = GetItemIDByName(itemName)
+        AtlasLootTip.extendTooltip(self)
+    end
+
+    function tooltip.SetAuctionSellItem(self)
+        original_SetAuctionSellItem(self)
+        local itemName = GetAuctionSellItemInfo()
+        self.itemID = GetItemIDByName(itemName)
+        AtlasLootTip.extendTooltip(self)
+    end
+
+    function tooltip.SetTradePlayerItem(self, index)
+        original_SetTradePlayerItem(self, index)
+        local _, _, id = strfind(GetTradePlayerItemLink(index) or "", "item:(%d+)")
+        self.itemID = tonumber(id)
+        AtlasLootTip.extendTooltip(self)
+    end
+
+    function tooltip.SetTradeTargetItem(self, index)
+        original_SetTradeTargetItem(self, index)
+        local _, _, id = strfind(GetTradeTargetItemLink(index) or "", "item:(%d+)")
+        self.itemID = tonumber(id)
+        AtlasLootTip.extendTooltip(self)
+    end
 end
 
 local sets = {
-	["SpiritofEskhandar"]=true,
-	["HakkariBlades"]=true,
-	["PrimalBlessing"]=true,
-	["ShardOfGods"]=true,
-	["DalRend"]=true,
-	["SpiderKiss"]=true,
-	["UnobMounts"]=true,
-	["Legendaries"]=true,
-	["Artifacts"]=true,
-	["ZGRings"]=true,
-	["Tabards"]=true,
+    ["SpiritofEskhandar"] = true,
+    ["HakkariBlades"] = true,
+    ["PrimalBlessing"] = true,
+    ["ShardOfGods"] = true,
+    ["DalRend"] = true,
+    ["SpiderKiss"] = true,
+    ["UnobMounts"] = true,
+    ["Legendaries"] = true,
+    ["Artifacts"] = true,
+    ["ZGRings"] = true,
+    ["Tabards"] = true,
 }
 
 local function SetContains(set, key)
@@ -153,7 +190,7 @@ end
 
 local lastItemID, lastSourceStr, lastDropRate
 function AtlasLootTip.extendTooltip(tooltip)
-	if AtlasLootCharDB.ShowSource ~= true or IsShiftKeyDown() then
+	if not AtlasLootCharDB.ShowSource then
 		return
 	end
 	local tooltipName = tooltip:GetName()
@@ -451,10 +488,8 @@ function AtlasLootTip.extendTooltip(tooltip)
 	tooltip:Show()
 end
 
-AtlasLootTip:SetScript("OnHide", function()
-	GameTooltip.itemID = nil
-	ItemRefTooltip.itemID = nil
-end)
+HookTooltip(GameTooltip)
+HookTooltip(ItemRefTooltip)
 
 AtlasLootTip:SetScript("OnShow", function()
 	if aux_frame and aux_frame:IsVisible() then
@@ -465,8 +500,8 @@ AtlasLootTip:SetScript("OnShow", function()
                 end
             end
         end
+        AtlasLootTip.extendTooltip(GameTooltip)
     end
-	AtlasLootTip.extendTooltip(GameTooltip)
 end)
 
 -- adapted from http://shagu.org/ShaguTweaks/
@@ -485,8 +520,5 @@ AtlasLootTip.HookAddonOrVariable = function(addon, func)
 end
 
 AtlasLootTip.HookAddonOrVariable("Tmog", function()
-    local tmog = CreateFrame("Frame", nil, TmogTooltip)
-    tmog:SetScript("OnShow", function()
-        AtlasLootTip.extendTooltip(TmogTooltip)
-    end)
+    HookTooltip(TmogTooltip)
 end)
