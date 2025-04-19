@@ -9,7 +9,7 @@ AL:RegisterTranslations("esES", function() return {
 	["Select Loot Table"] = "Selecciona tabla",
 	["Select Sub-Table"] = "Selecciona subtabla",
 	["Drop Rate: "] = "Prob. de conseguirse: ",
-	["Left-click to open AtlasLoot.\nMiddle-click for AtlasLoot options.\nRight-click and drag to move this button."] = true,
+	-- ["Left-click to open AtlasLoot.\nMiddle-click for AtlasLoot options.\nRight-click and drag to move this button."] = true,
 	--["DKP"] = true,
 	["Priority:"] = "Prioridad:",
 	["Click boss name to view loot."] = "Haz click sobre el nombre del jefe para ver el botín.",
@@ -172,7 +172,6 @@ AL:RegisterTranslations("esES", function() return {
 	["Fireworks"] = "Fuegos artificiales",
 	--Extra inventory stuff
 	["Cloak"] = "Capa",
-	["Weapons"] = "Armas",
 	--Labels for loot descriptions
 	["Classes:"] = "Clases",
 	["This Item Begins a Quest"] = "Este objeto empieza una misión",
@@ -226,8 +225,6 @@ AL:RegisterTranslations("esES", function() return {
 	["Fires of Outland"] = "Fuegos de Terrallende",
 	["Servants of the Betrayer"] = "Sirvientes del Traidor",
 	["Hunt for Illidan"] = "Caza de Illidan", 
-	["Loot Card Items"] = "Objetos (juegos de cartas)",
-	["UDE Items"] = "Objetos (puntos UDE)",
 	["Drums of Wars"] = "Tambores de guerra",
 	["Loot Card Items"] = "Botín de barajas",
 	["UDE Items"] = "Objectos UDE", --Check

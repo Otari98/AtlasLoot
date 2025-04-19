@@ -209,10 +209,10 @@ function AceLocale.prototype:RegisterTranslations(locale, func)
 	else
 		for key, value in pairs(self[TRANSLATIONS]) do
 			if not rawget(self[BASE_TRANSLATIONS], key) then
-				AceLocale.error(self, "Improper translation exists. %q is likely misspelled for locale %s.", key, locale)
+				-- AceLocale.error(self, "Improper translation exists. %q is likely misspelled for locale %s.", key, locale)
 			end
 			if value == true then
-				AceLocale.error(self, "Can only accept true as a value on the base locale. %q is the base locale, %q is not.", rawget(self, BASE_LOCALE), locale)
+				-- AceLocale.error(self, "Can only accept true as a value on the base locale. %q is the base locale, %q is not.", rawget(self, BASE_LOCALE), locale)
 			end
 		end
 	end
