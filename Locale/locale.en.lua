@@ -1618,5 +1618,18 @@ AL:RegisterTranslations("enUS", function() return {
     ["Prelate Ironmane"] = true,
     ["Zandara Windhoof"] = true,
     ["Vangros"] = true,
+
+    ["Upper Karazhan Halls"] = true,
+	["Raid Karazhan Halls"] = true,
+    ["[RAID] Upper Karazhan Halls"] = "|cffff0000[RAID]|cffffd200 Upper Karazhan Halls",
+	["Keeper Gnarlmoon"] = true,
+    ["Ley-Watcher Incantagos"] = true,
+	["Anomalus"] = true,
+	["Echo of Medivh"] = true,
+    ["King (Chess fight)"] = true,
+	["Sanv Tas'dal"] = true,
+	["Kruul"] = true,
+	["Rupturan the Broken"] = true,
+	["Mephistroth"] = true,
 	}
 end)

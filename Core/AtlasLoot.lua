@@ -2198,6 +2198,7 @@ AtlasLoot_HewdropDown = {
 			{{ AL["[RAID] Emerald Sanctum"], "EmeraldSanctum", "Submenu" },},
 			{{ AL["[RAID] Temple of Ahn'Qiraj"], "TempleofAQ", "Submenu" },},
 			{{ AL["[RAID] Naxxramas"], "Naxxramas", "Submenu" },},
+            {{ AL["[RAID] Upper Karazhan Halls"], "UpperKara", "Submenu" },},
 		},
 	},
 	{[AL["World Bosses"]] = {
@@ -2801,6 +2802,18 @@ AtlasLoot_HewdropDown_SubTables = {
 		{ AL["Moroes"], "LKHMoroes" },
 		{ AL["Trash Mobs"], "LKHTrash" },
 		{ AL["LKH Enchants"], "LKHEnchants" },
+	},
+    ["UpperKara"] = {
+		{ AL["Keeper Gnarlmoon"], "UKHGnarlmoon" },
+		{ AL["Ley-Watcher Incantagos"], "UKHIncantagos" },
+		{ AL["Anomalus"], "UKHAnomalus" },
+		{ AL["Echo of Medivh"], "UKHEcho" },
+		{ AL["King (Chess fight)"], "UKHKing" },
+		{ AL["Sanv Tas'dal"], "UKHSanvTasdal" },
+		{ AL["Kruul"], "UKHKruul" },
+		{ AL["Rupturan the Broken"], "UKHRupturan" },
+		{ AL["Mephistroth"], "UKHMephistroth" },
+		{ AL["Trash Mobs"], "UKHTrash" },
 	},
 	["WorldBosses"] = {
 		{ AL["Azuregos"], "AAzuregos" },

@@ -1306,6 +1306,92 @@ AtlasLoot_ButtonRegistry = {
 		Back_Page = "DUNGEONSMENU2";
 		Back_Title = AL["Dungeons & Raids"];
 	};
+    ["UKHGnarlmoon"] = {
+		Title = AL["Keeper Gnarlmoon"];
+		Next_Page = "UKHIncantagos";
+		Next_Title = AL["Ley-Watcher Incantagos"];
+		Back_Page = "DUNGEONSMENU2";
+		Back_Title = AL["Dungeons & Raids"];
+	};
+	["UKHIncantagos"] = {
+		Title = AL["Ley-Watcher Incantagos"];
+		Next_Page = "UKHAnomalus";
+		Next_Title = AL["Anomalus"];
+		Prev_Page = "UKHGnarlmoon";
+		Prev_Title = AL["Keeper Gnarlmoon"];
+		Back_Page = "DUNGEONSMENU2";
+		Back_Title = AL["Dungeons & Raids"];
+	};
+	["UKHAnomalus"] = {
+		Title = AL["Anomalus"];
+		Next_Page = "UKHEcho";
+		Next_Title = AL["Echo of Medivh"];
+		Prev_Page = "UKHIncantagos";
+		Prev_Title = AL["Ley-Watcher Incantagos"];
+		Back_Page = "DUNGEONSMENU2";
+		Back_Title = AL["Dungeons & Raids"];
+	};
+	["UKHEcho"] = {
+		Title = AL["Echo of Medivh"];
+		Next_Page = "UKHKing";
+		Next_Title = AL["King (Chess fight)"];
+		Prev_Page = "UKHAnomalus";
+		Prev_Title = AL["Anomalus"];
+		Back_Page = "DUNGEONSMENU2";
+		Back_Title = AL["Dungeons & Raids"];
+	};
+	["UKHKing"] = {
+		Title = AL["King (Chess fight)"];
+		Next_Page = "UKHSanvTasdal";
+		Next_Title = AL["Sanv Tas'dal"];
+		Prev_Page = "UKHEcho";
+		Prev_Title = AL["Echo of Medivh"];
+		Back_Page = "DUNGEONSMENU2";
+		Back_Title = AL["Dungeons & Raids"];
+	};
+	["UKHSanvTasdal"] = {
+		Title = AL["Sanv Tas'dal"];
+		Next_Page = "UKHKruul";
+		Next_Title = AL["Kruul"];
+		Prev_Page = "UKHKing";
+		Prev_Title = AL["King (Chess fight)"];
+		Back_Page = "DUNGEONSMENU2";
+		Back_Title = AL["Dungeons & Raids"];
+	};
+	["UKHKruul"] = {
+		Title = AL["Kruul"];
+		Next_Page = "UKHRupturan";
+		Next_Title = AL["Rupturan the Broken"];
+		Prev_Page = "UKHSanvTasdal";
+		Prev_Title = AL["Sanv Tas'dal"];
+		Back_Page = "DUNGEONSMENU2";
+		Back_Title = AL["Dungeons & Raids"];
+	};
+	["UKHRupturan"] = {
+		Title = AL["Rupturan the Broken"];
+		Prev_Page = "UKHKruul";
+		Prev_Title = AL["Kruul"];
+		Next_Page = "UKHMephistroth";
+		Next_Title = AL["Mephistroth"];
+		Back_Page = "DUNGEONSMENU2";
+		Back_Title = AL["Dungeons & Raids"];
+	},
+	["UKHMephistroth"] = {
+		Title = AL["Mephistroth"];
+		Prev_Page = "UKHRupturan";
+		Prev_Title = AL["Rupturan the Broken"];
+		Next_Page = "UKHTrash";
+		Next_Title = AL["Trash Mobs"];
+		Back_Page = "DUNGEONSMENU2";
+		Back_Title = AL["Dungeons & Raids"];
+	},
+	["UKHTrash"] = {
+		Title = AL["Trash Mobs"];
+		Prev_Page = "UKHMephistroth";
+		Prev_Title = AL["Mephistroth"];
+		Back_Page = "DUNGEONSMENU2";
+		Back_Title = AL["Dungeons & Raids"];
+	};
 	["SMVishas"] = {
 		Title = AL["Interrogator Vishas"];
 		Next_Page = "SMDukeDreadmoore";

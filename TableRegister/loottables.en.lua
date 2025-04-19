@@ -513,6 +513,17 @@ AtlasLoot_TableNames = {
 	["LKHMoroes"] = { AL["Lower Karazhan Halls"].." - "..AL["Moroes"], "AtlasLootItems" },
 	["LKHTrash"] = { AL["Lower Karazhan Halls"].." - "..AL["Trash Mobs"], "AtlasLootItems" },
 	["LKHEnchants"] = { AL["Lower Karazhan Halls"].." - ".."Enchants", "AtlasLootItems" },
+    -- Upper Karazhan Halls
+	["UKHGnarlmoon"] = { AL["Upper Karazhan Halls"].." - "..AL["Keeper Gnarlmoon"], "AtlasLootItems" },
+	["UKHIncantagos"] = { AL["Upper Karazhan Halls"].." - "..AL["Ley-Watcher Incantagos"], "AtlasLootItems" },
+	["UKHAnomalus"] = { AL["Upper Karazhan Halls"].." - "..AL["Anomalus"], "AtlasLootItems" },
+	["UKHEcho"] = { AL["Upper Karazhan Halls"].." - "..AL["Echo of Medivh"], "AtlasLootItems" },
+	["UKHKing"] = { AL["Upper Karazhan Halls"].." - "..AL["King (Chess fight)"], "AtlasLootItems" },
+	["UKHSanvTasdal"] = { AL["Upper Karazhan Halls"].." - "..AL["Sanv Tas'dal"], "AtlasLootItems" },
+	["UKHKruul"] = { AL["Upper Karazhan Halls"].." - "..AL["Kruul"], "AtlasLootItems" },
+	["UKHRupturan"] = { AL["Upper Karazhan Halls"].." - "..AL["Rupturan the Broken"], "AtlasLootItems" },
+	["UKHMephistroth"] = { AL["Upper Karazhan Halls"].." - "..AL["Mephistroth"], "AtlasLootItems" },
+	["UKHTrash"] = { AL["Upper Karazhan Halls"].." - "..AL["Trash Mobs"], "AtlasLootItems" },
 	------------
 	--- Sets ---
 	------------
@@ -1621,6 +1632,18 @@ AtlasLoot_TableNamesBoss = {
 		["LKHTrash"] = { AL["Trash Mobs"], "AtlasLootItems" },
 		["LKHEchants"] = { AL["LKH Enchants"], "AtlasLootItems" },
 	},
+    ["Upper Karazhan Halls"] = {
+        ["UKHGnarlmoon"] = { AL["Keeper Gnarlmoon"], "AtlasLootItems" },
+        ["UKHIncantagos"] = { AL["Ley-Watcher Incantagos"], "AtlasLootItems" },
+        ["UKHAnomalus"] = { AL["Anomalus"], "AtlasLootItems" },
+        ["UKHEcho"] = { AL["Echo of Medivh"], "AtlasLootItems" },
+        ["UKHKing"] = { AL["King (Chess fight)"], "AtlasLootItems" },
+        ["UKHSanvTasdal"] = { AL["Sanv Tas'dal"], "AtlasLootItems" },
+        ["UKHKruul"] = { AL["Kruul"], "AtlasLootItems" },
+        ["UKHRupturan"] = { AL["Rupturan the Broken"], "AtlasLootItems" },
+        ["UKHMephistroth"] = { AL["Mephistroth"], "AtlasLootItems" },
+        ["UKHTrash"] = { AL["Trash Mobs"], "AtlasLootItems" },
+    },
 	------------
 	--- Sets ---
 	------------
