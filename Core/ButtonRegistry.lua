@@ -849,10 +849,19 @@ AtlasLoot_ButtonRegistry = {
 		Back_Page = "DUNGEONSMENU2";
 		Back_Title = AL["Dungeons & Raids"];
 	};
+    ["DMJaredVoss"] = {
+		Title = AL["Jared Voss"];
+		Next_Page = "DMRhahkZor";
+		Next_Title = AL["Rhahk'Zor"];
+		Back_Page = "DUNGEONSMENU1";
+		Back_Title = AL["Dungeons & Raids"];
+	};
 	["DMRhahkZor"] = {
 		Title = AL["Rhahk'Zor"];
 		Next_Page = "DMMinerJohnson";
 		Next_Title = AL["Miner Johnson"].." ("..AL["Rare"]..")";
+        Prev_Page = "DMJaredVoss";
+		Prev_Title = AL["Jared Voss"];
 		Back_Page = "DUNGEONSMENU1";
 		Back_Title = AL["Dungeons & Raids"];
 	};
@@ -885,10 +894,19 @@ AtlasLoot_ButtonRegistry = {
 	};
 	["DMGilnid"] = {
 		Title = AL["Gilnid"];
-		Next_Page = "DMMrSmite";
-		Next_Title = AL["Mr. Smite"];
+		Next_Page = "DMHarvester";
+		Next_Title = AL["Masterpiece Harvester"];
 		Prev_Page = "DMSneedsShredder";
 		Prev_Title = AL["Sneed's Shredder"];
+		Back_Page = "DUNGEONSMENU1";
+		Back_Title = AL["Dungeons & Raids"];
+	};
+    ["DMHarvester"] = {
+		Title = AL["Masterpiece Harvester"];
+		Next_Page = "DMMrSmite";
+		Next_Title = AL["Mr. Smite"];
+		Prev_Page = "DMGilnid";
+		Prev_Title = AL["Gilnid"];
 		Back_Page = "DUNGEONSMENU1";
 		Back_Title = AL["Dungeons & Raids"];
 	};
@@ -896,8 +914,8 @@ AtlasLoot_ButtonRegistry = {
 		Title = AL["Mr. Smite"];
 		Next_Page = "DMCookie";
 		Next_Title = AL["Cookie"];
-		Prev_Page = "DMGilnid";
-		Prev_Title = AL["Gilnid"];
+		Prev_Page = "DMHarvester";
+		Prev_Title = AL["Masterpiece Harvester"];
 		Back_Page = "DUNGEONSMENU1";
 		Back_Title = AL["Dungeons & Raids"];
 	};
@@ -1290,8 +1308,17 @@ AtlasLoot_ButtonRegistry = {
 	};
 	["SMVishas"] = {
 		Title = AL["Interrogator Vishas"];
+		Next_Page = "SMDukeDreadmoore";
+		Next_Title = AL["Duke Dreadmoore"];
+		Back_Page = "DUNGEONSMENU1";
+		Back_Title = AL["Dungeons & Raids"];
+	};
+    ["SMDukeDreadmoore"] = {
+		Title = AL["Duke Dreadmoore"];
 		Next_Page = "SMScorn";
 		Next_Title = AL["Scorn"].." ("..AL["Scourge Invasion"]..")";
+		Prev_Page = "SMVishas";
+		Prev_Title = AL["Interrogator Vishas"];
 		Back_Page = "DUNGEONSMENU1";
 		Back_Title = AL["Dungeons & Raids"];
 	};
@@ -1299,8 +1326,8 @@ AtlasLoot_ButtonRegistry = {
 		Title = AL["Scorn"].." ("..AL["Scourge Invasion"]..")";
 		Next_Page = "SMIronspine";
 		Next_Title = AL["Ironspine"].." ("..AL["Rare"]..")";
-		Prev_Page = "SMVishas";
-		Prev_Title = AL["Interrogator Vishas"];
+		Prev_Page = "SMDukeDreadmoore";
+		Prev_Title = AL["Duke Dreadmoore"];
 		Back_Page = "DUNGEONSMENU1";
 		Back_Title = AL["Dungeons & Raids"];
 	};
@@ -1349,8 +1376,17 @@ AtlasLoot_ButtonRegistry = {
 	};
 	["SMHoundmasterLoksey"] = {
 		Title = AL["Houndmaster Loksey"];
+		Next_Page = "SMBrotherWystan";
+		Next_Title = AL["Brother Wystan"];
+		Back_Page = "DUNGEONSMENU1";
+		Back_Title = AL["Dungeons & Raids"];
+	};
+    ["SMBrotherWystan"] = {
+		Title = AL["Brother Wystan"];
 		Next_Page = "SMDoan";
 		Next_Title = AL["Arcanist Doan"];
+        Prev_Page = "SMHoundmasterLoksey";
+		Prev_Title = AL["Houndmaster Loksey"];
 		Back_Page = "DUNGEONSMENU1";
 		Back_Title = AL["Dungeons & Raids"];
 	};
@@ -1358,8 +1394,8 @@ AtlasLoot_ButtonRegistry = {
 		Title = AL["Arcanist Doan"];
 		Next_Page = "SMLTrash";
 		Next_Title = AL["Trash Mobs"];
-		Prev_Page = "SMHoundmasterLoksey";
-		Prev_Title = AL["Houndmaster Loksey"];
+		Prev_Page = "SMBrotherWystan";
+		Prev_Title = AL["Brother Wystan"];
 		Back_Page = "DUNGEONSMENU1";
 		Back_Title = AL["Dungeons & Raids"];
 	};
@@ -1372,15 +1408,24 @@ AtlasLoot_ButtonRegistry = {
 	};
 	["SMHerod"] = {
 		Title = AL["Herod"];
+		Next_Page = "SMQuartermaster";
+		Next_Title = AL["Armory Quartermaster Daghelm"];
+		Back_Page = "DUNGEONSMENU1";
+		Back_Title = AL["Dungeons & Raids"];
+	};
+    ["SMQuartermaster"] = {
+		Title = AL["Armory Quartermaster Daghelm"];
 		Next_Page = "SMATrash";
 		Next_Title = AL["Trash Mobs"];
+        Prev_Page = "SMHerod";
+		Prev_Title = AL["Herod"];
 		Back_Page = "DUNGEONSMENU1";
 		Back_Title = AL["Dungeons & Raids"];
 	};
 	["SMATrash"] = {
 		Title = AL["Trash Mobs"];
-		Prev_Page = "SMHerod";
-		Prev_Title = AL["Herod"];
+		Prev_Page = "SMQuartermaster";
+		Prev_Title = AL["Armory Quartermaster Daghelm"];
 		Back_Page = "DUNGEONSMENU1";
 		Back_Title = AL["Dungeons & Raids"];
 	};
@@ -1673,17 +1718,26 @@ AtlasLoot_ButtonRegistry = {
 	};
 	["SFKArchmageArugal"] = {
 		Title = AL["Archmage Arugal"];
-		Next_Page = "SFKTrash";
-		Next_Title = AL["Trash Mobs"];
+		Next_Page = "SFKPrelate";
+		Next_Title = AL["Prelate Ironmane"];
 		Prev_Page = "SFKWolfMasterNandos";
 		Prev_Title = AL["Wolf Master Nandos"];
 		Back_Page = "DUNGEONSMENU1";
 		Back_Title = AL["Dungeons & Raids"];
 	};
-	["SFKTrash"] = {
-		Title = AL["Trash Mobs"];
+    ["SFKPrelate"] = {
 		Prev_Page = "SFKArchmageArugal";
 		Prev_Title = AL["Archmage Arugal"];
+		Title = AL["Prelate Ironmane"];
+        Next_Page = "SFKTrash";
+		Next_Title = AL["Trash Mobs"];
+		Back_Page = "DUNGEONSMENU1";
+		Back_Title = AL["Dungeons & Raids"];
+	};
+	["SFKTrash"] = {
+		Title = AL["Trash Mobs"];
+		Prev_Page = "SFKPrelate";
+		Prev_Title = AL["Prelate Ironmane"];
 		Back_Page = "DUNGEONSMENU1";
 		Back_Title = AL["Dungeons & Raids"];
 	};
@@ -3190,28 +3244,55 @@ AtlasLoot_ButtonRegistry = {
 	};
 	["WCKresh"] = {
 		Title = AL["Kresh"];
-		Next_Page = "WCLordPythas";
-		Next_Title = AL["Lord Pythas"];
+		Next_Page = "WCDeviateFaerieDragon";
+		Next_Title = AL["Deviate Faerie Dragon"].." ("..AL["Rare"]..")";
 		Prev_Page = "WCLadyAnacondra";
 		Prev_Title = AL["Lady Anacondra"];
 		Back_Page = "DUNGEONSMENU1";
 		Back_Title = AL["Dungeons & Raids"];
 	};
-	["WCLordPythas"] = {
-		Title = AL["Lord Pythas"];
-		Next_Page = "WCSkum";
-		Next_Title = AL["Skum"];
+	["WCDeviateFaerieDragon"] = {
+		Title = AL["Deviate Faerie Dragon"].." ("..AL["Rare"]..")";
+		Next_Page = "WCZandara";
+		Next_Title = AL["Zandara Windhoof"];
 		Prev_Page = "WCKresh";
 		Prev_Title = AL["Kresh"];
 		Back_Page = "DUNGEONSMENU1";
 		Back_Title = AL["Dungeons & Raids"];
 	};
+    ["WCZandara"] = {
+		Title = AL["Zandara Windhoof"];
+		Next_Page = "WCLordPythas";
+		Next_Title = AL["Lord Pythas"];
+		Prev_Page = "WCDeviateFaerieDragon";
+		Prev_Title = AL["Deviate Faerie Dragon"].." ("..AL["Rare"]..")";
+		Back_Page = "DUNGEONSMENU1";
+		Back_Title = AL["Dungeons & Raids"];
+    };
+	["WCLordPythas"] = {
+		Title = AL["Lord Pythas"];
+		Next_Page = "WCSkum";
+		Next_Title = AL["Skum"];
+		Prev_Page = "WCZandara";
+		Prev_Title = AL["Zandara Windhoof"];
+		Back_Page = "DUNGEONSMENU1";
+		Back_Title = AL["Dungeons & Raids"];
+	};
 	["WCSkum"] = {
 		Title = AL["Skum"];
-		Next_Page = "WCLordSerpentis";
-		Next_Title = AL["Lord Serpentis"];
+		Next_Page = "WCVangros";
+		Next_Title = AL["Vangros"];
 		Prev_Page = "WCLordPythas";
 		Prev_Title = AL["Lord Pythas"];
+		Back_Page = "DUNGEONSMENU1";
+		Back_Title = AL["Dungeons & Raids"];
+	};
+    ["WCVangros"] = {
+		Title = AL["Vangros"];
+		Next_Page = "WCLordSerpentis";
+		Next_Title = AL["Lord Serpentis"];
+		Prev_Page = "WCSkum";
+		Prev_Title = AL["Skum"];
 		Back_Page = "DUNGEONSMENU1";
 		Back_Title = AL["Dungeons & Raids"];
 	};
@@ -3219,8 +3300,8 @@ AtlasLoot_ButtonRegistry = {
 		Title = AL["Lord Serpentis"];
 		Next_Page = "WCVerdan";
 		Next_Title = AL["Verdan the Everliving"];
-		Prev_Page = "WCSkum";
-		Prev_Title = AL["Skum"];
+		Prev_Page = "WCVangros";
+		Prev_Title = AL["Vangros"];
 		Back_Page = "DUNGEONSMENU1";
 		Back_Title = AL["Dungeons & Raids"];
 	};
@@ -3235,26 +3316,17 @@ AtlasLoot_ButtonRegistry = {
 	};
 	["WCMutanus"] = {
 		Title = AL["Mutanus the Devourer"];
-		Next_Page = "WCDeviateFaerieDragon";
-		Next_Title = AL["Deviate Faerie Dragon"].." ("..AL["Rare"]..")";
+		Next_Page = "WCTrash";
+		Next_Title = AL["Trash Mobs"];
 		Prev_Page = "WCVerdan";
 		Prev_Title = AL["Verdan the Everliving"];
 		Back_Page = "DUNGEONSMENU1";
 		Back_Title = AL["Dungeons & Raids"];
 	};
-	["WCDeviateFaerieDragon"] = {
-		Title = AL["Deviate Faerie Dragon"].." ("..AL["Rare"]..")";
-		Next_Page = "WCTrash";
-		Next_Title = AL["Trash Mobs"];
-		Prev_Page = "WCMutanus";
-		Prev_Title = AL["Mutanus the Devourer"];
-		Back_Page = "DUNGEONSMENU1";
-		Back_Title = AL["Dungeons & Raids"];
-	};
 	["WCTrash"] = {
 		Title = AL["Trash Mobs"];
-		Prev_Page = "WCDeviateFaerieDragon";
-		Prev_Title = AL["Deviate Faerie Dragon"].." ("..AL["Rare"]..")";
+		Prev_Page = "WCMutanus";
+		Prev_Title = AL["Mutanus the Devourer"];
 		Back_Page = "DUNGEONSMENU1";
 		Back_Title = AL["Dungeons & Raids"];
 	};

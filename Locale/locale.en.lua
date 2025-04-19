@@ -1610,5 +1610,13 @@ AL:RegisterTranslations("enUS", function() return {
 	["Cla'ckora"] = true,
 	["Hinterlands"] = true,
 	["Duskwood"] = true,
+    ["Brother Wystan"] = true,
+    ["Duke Dreadmoore"] = true,
+    ["Armory Quartermaster Daghelm"] = true,
+    ["Jared Voss"] = true,
+    ["Masterpiece Harvester"] = true,
+    ["Prelate Ironmane"] = true,
+    ["Zandara Windhoof"] = true,
+    ["Vangros"] = true,
 	}
 end)

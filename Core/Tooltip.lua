@@ -1,6 +1,7 @@
 -- extra info on GameTooltip and ItemRefTooltip
 local AtlasLootTip = CreateFrame("Frame", "AtlasLootTip", GameTooltip)
-
+local strfind = string.find
+local GetItemInfo = GetItemInfo
 local GREY = "|cff999999"
 
 local lastSearchName = nil
@@ -37,8 +38,8 @@ function GameTooltip.SetHyperlink(self, arg1)
         local _, _, id = string.find(arg1,"item:(%d+)")
   		GameTooltip.itemID = id
     end
+    return HookSetHyperlink(self, arg1)
   end
-  return HookSetHyperlink(self, arg1)
 end
 
 local HookSetBagItem = GameTooltip.SetBagItem
@@ -155,29 +156,18 @@ function AtlasLootTip.extendTooltip(tooltip)
 	if AtlasLootCharDB.ShowSource ~= true or IsShiftKeyDown() then
 		return
 	end
-	local strfind = string.find
-	local pairs = pairs
 	local tooltipName = tooltip:GetName()
-	local originalTooltip = {}
     local itemName = getglobal(tooltipName .. "TextLeft1"):GetText()
 	local line2 = getglobal(tooltipName .. "TextLeft2")
 	local craftSpell, source, sourceStr, dropRate
 	local isCraft, isWBLoot, isPvP, isRepReward, isSetPiece, isWorldEvent = false, false, false, false, false, false
 	local itemID = tonumber(tooltip.itemID)
-	if itemName and itemName ~= "Fashion Coin" and itemID then
+	if itemName and itemID and itemID ~= 51217 then -- 51217 Fashion Coin
 		if itemID ~= lastItemID then
-			for row = 1, 30 do
-				local tooltipRowLeft = getglobal(tooltipName .. 'TextLeft' .. row)
-				if tooltipRowLeft then
-					local rowtext = tooltipRowLeft:GetText()
-					if rowtext then
-						originalTooltip[row] = {}
-						originalTooltip[row].text = rowtext
-					end
-				end
-			end
-			for row=1, table.getn(originalTooltip) do
-				if strfind(originalTooltip[row].text, "—",1,true) then -- skip items that state which rep they require
+			for row = 1, tooltip:NumLines() do
+                local rowtext = getglobal(tooltipName.."TextLeft"..row):GetText()
+                -- skip items that state which rep they require
+				if strfind(rowtext or "", "—", 1, true) then
 					return
 				end
 			end

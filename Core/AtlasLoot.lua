@@ -2431,11 +2431,13 @@ AtlasLoot_HewdropDown_SubTables = {
 		{ AL["Trash Mobs"], "BWLTrashMobs" },
 	},
 	["Deadmines"] = {
+        { AL["Jared Voss"], "DMJaredVoss" },
 		{ AL["Rhahk'Zor"], "DMRhahkZor" },
 		{ AL["Miner Johnson"].." ("..AL["Rare"]..")", "DMMinerJohnson" },
 		{ AL["Sneed"], "DMSneed" },
 		{ AL["Sneed's Shredder"], "DMSneedsShredder" },
 		{ AL["Gilnid"], "DMGilnid" },
+        { AL["Masterpiece Harvester"], "DMHarvester" },
 		{ AL["Mr. Smite"], "DMMrSmite" },
 		{ AL["Cookie"], "DMCookie" },
 		{ AL["Captain Greenskin"], "DMCaptainGreenskin" },
@@ -2493,6 +2495,7 @@ AtlasLoot_HewdropDown_SubTables = {
 	},
 	["SMGraveyard"] = {
 		{ AL["Interrogator Vishas"], "SMVishas" },
+        { AL["Duke Dreadmoore"], "SMDukeDreadmoore" },
 		{ AL["Scorn"].." ("..AL["Scourge Invasion"]..")", "SMScorn" },
 		{ AL["Ironspine"].." ("..AL["Rare"]..")", "SMIronspine" },
 		{ AL["Azshir the Sleepless"].." ("..AL["Rare"]..")", "SMAzshir" },
@@ -2502,11 +2505,13 @@ AtlasLoot_HewdropDown_SubTables = {
 	},
 	["SMLibrary"] = {
 		{ AL["Houndmaster Loksey"], "SMHoundmasterLoksey" },
+        { AL["Brother Wystan"], "SMBrotherWystan" },
 		{ AL["Arcanist Doan"], "SMDoan" },
 		{ AL["Trash Mobs"], "SMLTrash" },
 	},
 	["SMArmory"] = {
 		{ AL["Herod"], "SMHerod" },
+        { AL["Armory Quartermaster Daghelm"], "SMQuartermaster" },
 		{ AL["Trash Mobs"], "SMATrash" },
 	},
 	["SMCathedral"] = {
@@ -2548,6 +2553,7 @@ AtlasLoot_HewdropDown_SubTables = {
 		{ AL["Arugal's Voidwalker"], "SFKArugalsVoidwalker" },
 		{ AL["Wolf Master Nandos"], "SFKWolfMasterNandos" },
 		{ AL["Archmage Arugal"], "SFKArchmageArugal" },
+        { AL["Prelate Ironmane"], "SFKPrelate"},
 		{ AL["Trash Mobs"], "SFKTrash" },
 	},
 	["TheStockade"] = {
@@ -2760,12 +2766,14 @@ AtlasLoot_HewdropDown_SubTables = {
 		{ AL["Lord Cobrahn"], "WCLordCobrahn" },
 		{ AL["Lady Anacondra"], "WCLadyAnacondra" },
 		{ AL["Kresh"], "WCKresh" },
+		{ AL["Deviate Faerie Dragon"].." ("..AL["Rare"]..")", "WCDeviateFaerieDragon" },
+        { AL["Zandara Windhoof"], "WCZandara" },
 		{ AL["Lord Pythas"], "WCLordPythas" },
 		{ AL["Skum"], "WCSkum" },
+        { AL["Vangros"], "WCVangros" },
 		{ AL["Lord Serpentis"], "WCLordSerpentis" },
 		{ AL["Verdan the Everliving"], "WCVerdan" },
 		{ AL["Mutanus the Devourer"], "WCMutanus" },
-		{ AL["Deviate Faerie Dragon"].." ("..AL["Rare"]..")", "WCDeviateFaerieDragon" },
 		{ AL["Trash Mobs"], "WCTrash" },
 	},
 	["ZulFarrak"] = {
