@@ -2268,7 +2268,7 @@
 					</OnShow>
 				</Scripts>
 			</Button>
-			<EditBox name="AtlasLootSearchBox" inherits="InputBoxTemplate" letters="100">
+			<EditBox name="AtlasLootSearchBox" inherits="InputBoxTemplate" letters="100" toplevel="true">
 				<Size>
 					<AbsDimension x="240" y="35"></AbsDimension>
 				</Size>
