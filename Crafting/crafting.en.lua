@@ -3603,9 +3603,9 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s41065", "INV_Stone_08", "=q1=Coarse Gemstone Cluster", "=ds=#sr# =so1=125 =so2=140 =so3=142 =so4=145" },
 		{ "s41057", "INV_Crown_01", "=q2=Agatestone Crown", "=ds=#sr# =so1=125 =so2=145 =so3=155 =so4=165" },
 		{ "s41061", "INV_Belt_31", "=q2=Binding Signet", "=ds=#sr# =so1=125 =so2=145 =so3=155 =so4=165" },
+        { "s41063", "INV_Bracer_14", "=q2=Enchanted Bracelets", "=ds=#sr# =so1=125 =so2=145 =so3=155 =so4=165" },
 	};
 	JewelcraftingJourneyman2 = {
-		{ "s41063", "INV_Bracer_14", "=q2=Enchanted Bracelets", "=ds=#sr# =so1=125 =so2=145 =so3=155 =so4=165" },
 		{ "s41776", "INV_Jewelry_Ring_24", "=q2=Ring of Midnight", "=ds=#sr# =so1=125 =so2=145 =so3=155 =so4=165" },
 		{ "s41059", "INV_Staff_15", "=q2=Moonlight Staff", "=ds=#sr# =so1=125 =so2=150 =so3=160 =so4=170" },
 		{ "s41568", "INV_Jewelry_Ring_10", "=q2=Dazzling Moonstone Band", "=ds=#sr# =so1=130 =so2=150 =so3=160 =so4=170" },
