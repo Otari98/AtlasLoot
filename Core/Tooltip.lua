@@ -6,12 +6,12 @@ local GetItemInfo = GetItemInfo
 local GREY = "|cff999999"
 
 local WrappingLines = {
-    ["Set: %s"] = gsub("^"..ITEM_SET_BONUS, " %%s", ""),
-    ["(%d) Set: %s"] = gsub(gsub(ITEM_SET_BONUS_GRAY, "%(%%d%)", "^%%(%%d%%)"), " %%s", ""),
-    ["Effect: %s"] = gsub("^"..ITEM_SPELL_EFFECT, " %%s", ""),
-    ["Equip:"] = "^"..ITEM_SPELL_TRIGGER_ONEQUIP,
-    ["Chance on hit:"] = "^"..ITEM_SPELL_TRIGGER_ONPROC,
-    ["Use:"] = "^"..ITEM_SPELL_TRIGGER_ONUSE,
+    ["Set: %s"] = gsub("^" .. ITEM_SET_BONUS, " %%s", ""),                                   -- "^Set:"
+    ["(%d) Set: %s"] = gsub(gsub(ITEM_SET_BONUS_GRAY, "%(%%d%)", "^%%(%%d%%)"), " %%s", ""), -- "^%(%d%) Set:"
+    ["Effect: %s"] = gsub("^" .. ITEM_SPELL_EFFECT, " %%s", ""),                             -- "^Effect:"
+    ["Equip:"] = "^" .. ITEM_SPELL_TRIGGER_ONEQUIP,                                          -- "^Equip:"
+    ["Chance on hit:"] = "^" .. ITEM_SPELL_TRIGGER_ONPROC,                                   -- "^Chance on hit:"
+    ["Use:"] = "^" .. ITEM_SPELL_TRIGGER_ONUSE,                                              -- "^Use:"
 }
 
 local lines = {}
@@ -24,8 +24,8 @@ local function AddSourceLine(tooltip, sourceStr)
     local numLines = tooltip:NumLines()
     local left, right
     local leftText, rightText
-    local rL, gL, bL
-    local rR, gR, bR
+    local leftR, leftG, leftB
+    local rightR, rightG, rightB
     local wrap
 
     for i in pairs(lines) do
@@ -39,26 +39,28 @@ local function AddSourceLine(tooltip, sourceStr)
         right = getglobal(name .. "TextRight" .. i)
         leftText = left:GetText()
         rightText = right:IsShown() and right:GetText()
-        rL, gL, bL = left:GetTextColor()
-        rR, gR, bR = right:GetTextColor()
+        leftR, leftG, leftB = left:GetTextColor()
+        rightR, rightG, rightB = right:GetTextColor()
         lines[i][1] = leftText
         lines[i][2] = rightText
-        lines[i][3] = rL
-        lines[i][4] = gL
-        lines[i][5] = bL
-        lines[i][6] = rR
-        lines[i][7] = gR
-        lines[i][8] = bR
+        lines[i][3] = leftR
+        lines[i][4] = leftG
+        lines[i][5] = leftB
+        lines[i][6] = rightR
+        lines[i][7] = rightG
+        lines[i][8] = rightB
     end
-    
-    if not lines[1][1] then return end
+
+    if not lines[1][1] then
+        return
+    end
 
     tooltip:SetText(lines[1][1], lines[1][3], lines[1][4], lines[1][5], 1, false)
 
     if numLines < 28 then
         tooltip:AddLine(sourceStr)
     elseif lines[2][1] then
-        lines[2][1] = sourceStr.."\n"..lines[2][1]
+        lines[2][1] = sourceStr .. "\n" .. lines[2][1]
     end
 
     for i = 2, getn(lines) do
@@ -83,7 +85,7 @@ local function AddSourceLine(tooltip, sourceStr)
     tooltip:Show()
 end
 
-local sets = {
+local Sets = {
     ["SpiritofEskhandar"] = true,
     ["HakkariBlades"] = true,
     ["PrimalBlessing"] = true,
@@ -97,7 +99,7 @@ local sets = {
     ["Tabards"] = true,
 }
 
-local professions = {
+local Professions = {
     ["Apprentice"] = true,
     ["Journeyman"] = true,
     ["Expert"] = true,
@@ -132,271 +134,266 @@ local function SetPartialMatch(set, str)
 end
 
 local function SetContains(set, key)
-	if not set or not key then
-		return false
-	end
-	return set[key] ~= nil
+    if not set or not key then
+        return false
+    end
+    return set[key] ~= nil
 end
 
 local lastItemID, lastSourceStr, lastDropRate
 local function ExtendTooltip(tooltip)
-	if not AtlasLootCharDB.ShowSource then
-		return
-	end
-	local tooltipName = tooltip:GetName()
-	local line2 = getglobal(tooltipName .. "TextLeft2")
-	local craftSpell, source, sourceStr, dropRate
-	local isCraft, isWBLoot, isPvP, isRepReward, isSetPiece, isWorldEvent = false, false, false, false, false, false
-	local itemID = tonumber(tooltip.itemID)
-	if itemID and itemID ~= 51217 then -- 51217 Fashion Coin
-		if itemID ~= lastItemID then
-			for row = 1, tooltip:NumLines() do
-                local rowtext = getglobal(tooltipName.."TextLeft"..row):GetText()
+    if not AtlasLootCharDB.ShowSource then
+        return
+    end
+    local tooltipName = tooltip:GetName()
+    local craftSpell, source, sourceStr, dropRate
+    local isCraft, isWBLoot, isPvP, isRepReward, isSetPiece, isWorldEvent = false, false, false, false, false, false
+    local itemID = tonumber(tooltip.itemID)
+    if itemID and itemID ~= 51217 then -- 51217 Fashion Coin
+        if itemID ~= lastItemID then
+            for row = 1, tooltip:NumLines() do
+                local rowtext = getglobal(tooltipName .. "TextLeft" .. row):GetText()
                 -- skip items that state which rep they require
-				if strfind(rowtext or "", "—", 1, true) then
-					return
-				end
-			end
-			-- first check if its craftable item
-			for k,v in pairs(GetSpellInfoAtlasLootDB["craftspells"]) do
-				if v["craftItem"] == itemID then
-					craftSpell = "s"..tostring(k)
-					break
-				end
-			end
-			for k, v in pairs(GetSpellInfoAtlasLootDB["enchants"]) do
-				if v["item"] and v["item"] == itemID then
-					craftSpell = "e"..tostring(k)
-					break
-				end
-			end
-			for k1, v1 in pairs(AtlasLoot_Data["AtlasLootCrafting"]) do
-				if source then
-					break
-				end
-				for k2, v2 in pairs(AtlasLoot_Data["AtlasLootCrafting"][k1]) do
-					if v2[1] ~= 0 and v2[1] ~= "" then
-						if (v2[1] == craftSpell or v2[1] == itemID) and SetPartialMatch(professions, k1) then
-							source = k1
-							isCraft = true
-							dropRate = AtlasLoot_FixText(v2[4] or "") or ""
-                            dropRate = gsub(dropRate or "", "\124cff%x%x%x%x%x%x", "")
+                if strfind(rowtext or "", "—", 1, true) then
+                    return
+                end
+            end
+            -- first check if its craftable item
+            for k, v in pairs(GetSpellInfoAtlasLootDB["craftspells"]) do
+                if v["craftItem"] == itemID then
+                    craftSpell = "s" .. tostring(k)
+                    break
+                end
+            end
+            for k, v in pairs(GetSpellInfoAtlasLootDB["enchants"]) do
+                if v["item"] and v["item"] == itemID then
+                    craftSpell = "e" .. tostring(k)
+                    break
+                end
+            end
+            for k1, v1 in pairs(AtlasLoot_Data["AtlasLootCrafting"]) do
+                if source then
+                    break
+                end
+                for k2, v2 in pairs(AtlasLoot_Data["AtlasLootCrafting"][k1]) do
+                    if v2[1] ~= 0 and v2[1] ~= "" then
+                        if (v2[1] == craftSpell or v2[1] == itemID) and SetPartialMatch(Professions, k1) then
+                            source = k1
+                            isCraft = true
+                            dropRate = AtlasLoot_FixText(v2[4] or "") or ""
+                            dropRate = gsub(dropRate or "", "\124c%x%x%x%x%x%x%x%x", "")
                             local skill = ""
-                            _, _, dropRate, skill = strfind(dropRate or "", "("..AL["Skill:"]..") (%d+)")
+                            _, _, dropRate, skill = strfind(dropRate or "", "(" .. AL["Skill:"] .. ") (%d+)")
                             if dropRate and skill then
-                                dropRate = skill ~= "300" and dropRate.." "..skill.."+" or dropRate.." "..skill
+                                dropRate = skill ~= "300" and dropRate .. " " .. skill .. "+" or dropRate .. " " .. skill
                                 lastDropRate = dropRate
                             else
                                 lastDropRate = nil
                             end
-							break
-						end
-					end
-				end
-			end
-			-- check if its world boss loot
-			if not isCraft then
-                for k1,v1 in pairs(AtlasLoot_Data["AtlasLootWBItems"]) do
-					if source then
-						break
-					end
-					for k2,v2 in pairs(AtlasLoot_Data["AtlasLootWBItems"][k1]) do
-						if v2[1] == itemID then
-							source = k1
-							isWBLoot = true
+                            break
+                        end
+                    end
+                end
+            end
+            -- check if its world boss loot
+            if not isCraft then
+                for k1, v1 in pairs(AtlasLoot_Data["AtlasLootWBItems"]) do
+                    if source then
+                        break
+                    end
+                    for k2, v2 in pairs(AtlasLoot_Data["AtlasLootWBItems"][k1]) do
+                        if v2[1] == itemID then
+                            source = k1
+                            isWBLoot = true
                             if v2[5] and v2[5] ~= "" then
                                 dropRate = v2[5]
                                 lastDropRate = dropRate
                             else
                                 lastDropRate = nil
                             end
-							break
-						end
-					end
-				end
-			end
+                            break
+                        end
+                    end
+                end
+            end
             -- check if its a pvp reward
             if not isCraft and not isWBLoot then
-                for k1,v1 in pairs(AtlasLoot_Data["AtlasLootGeneralPvPItems"]) do
-					if source then
-						break
-					end
-					for k2,v2 in pairs(AtlasLoot_Data["AtlasLootGeneralPvPItems"][k1]) do
-						if v2[1] == itemID then
-							source = k1
-							isPvP = true
+                for k1, v1 in pairs(AtlasLoot_Data["AtlasLootGeneralPvPItems"]) do
+                    if source then
+                        break
+                    end
+                    for k2, v2 in pairs(AtlasLoot_Data["AtlasLootGeneralPvPItems"][k1]) do
+                        if v2[1] == itemID then
+                            source = k1
+                            isPvP = true
                             lastDropRate = nil
-							break
-						end
-					end
-				end
+                            break
+                        end
+                    end
+                end
             end
             -- check if its a rep reward
-			-- bgs
+            -- bgs
             if not isCraft and not isWBLoot and not isPvP then
-                for k1,v1 in pairs(AtlasLoot_Data["AtlasLootBGItems"]) do
-					if source then
-						break
-					end
-					for k2,v2 in pairs(AtlasLoot_Data["AtlasLootBGItems"][k1]) do
-						if v2[1] == itemID then
-							source = k1
-							isRepReward = true
-							if v2[5] and v2[5] ~= "" then
-								dropRate = v2[5]
-								lastDropRate = dropRate
-							else
-								lastDropRate = nil
-							end
-							break
-						end
-					end
-				end
-				-- factions
-                for k1,v1 in pairs(AtlasLoot_Data["AtlasLootRepItems"]) do
-					if source then
-						break
-					end
-					for k2,v2 in pairs(AtlasLoot_Data["AtlasLootRepItems"][k1]) do
-						if v2[1] == itemID then
-							source = k1
-							isRepReward = true
-							if v2[5] and v2[5] ~= "" --[[and source ~= "Darkmoon" and not strfind(source, "Cenarion",1,true)]] then
-								dropRate = v2[5]
-								lastDropRate = dropRate
-							else
-								lastDropRate = nil
-							end
-							break
-						end
-					end
-				end
+                for k1, v1 in pairs(AtlasLoot_Data["AtlasLootBGItems"]) do
+                    if source then
+                        break
+                    end
+                    for k2, v2 in pairs(AtlasLoot_Data["AtlasLootBGItems"][k1]) do
+                        if v2[1] == itemID then
+                            source = k1
+                            isRepReward = true
+                            if v2[5] and v2[5] ~= "" then
+                                dropRate = v2[5]
+                                lastDropRate = dropRate
+                            else
+                                lastDropRate = nil
+                            end
+                            break
+                        end
+                    end
+                end
+                -- factions
+                for k1, v1 in pairs(AtlasLoot_Data["AtlasLootRepItems"]) do
+                    if source then
+                        break
+                    end
+                    for k2, v2 in pairs(AtlasLoot_Data["AtlasLootRepItems"][k1]) do
+                        if v2[1] == itemID then
+                            source = k1
+                            isRepReward = true
+                            if v2[5] and v2[5] ~= "" then
+                                dropRate = v2[5]
+                                lastDropRate = dropRate
+                            else
+                                lastDropRate = nil
+                            end
+                            break
+                        end
+                    end
+                end
             end
             -- check if its a set piece
-			if not isCraft and not isWBLoot and not isPvP and not isRepReward then
-				for k1,v1 in pairs(AtlasLoot_Data["AtlasLootSetItems"]) do
-					if source then
-						break
-					end
-					for k2,v2 in pairs(AtlasLoot_Data["AtlasLootSetItems"][k1]) do
-						if v2[1] == itemID then
-							source = k1
-							isSetPiece = true
-							if (SetContains(sets, source) or strfind(source, "WorldEpics",1,true)) then
-								source = nil
-								isSetPiece = false
-							end
-							lastDropRate = nil
-							break
-						end
-					end
-				end
-			end
-			-- check world events
-			if not isCraft and not isWBLoot and not isPvP and not isRepReward and not isSetPiece then
-				for k1,v1 in pairs(AtlasLoot_Data["AtlasLootWorldEvents"]) do
-					if source then
-						break
-					end
-					for k2,v2 in pairs(AtlasLoot_Data["AtlasLootWorldEvents"][k1]) do
-						if v2[1] == itemID then
-							source = k1
-							isWorldEvent = true
-							if v2[5] and v2[5] ~= "" then
-								dropRate = v2[5]
-								lastDropRate = dropRate
-							else
-								lastDropRate = nil
-							end
-							break
-						end
-					end
-				end
-			end
-            -- check if its a dungeon/raid loot
-			if not isCraft and not isWBLoot and not isPvP and not isRepReward and not isWorldEvent and not isSetPiece then
-				for k1,v1 in pairs(AtlasLoot_Data["AtlasLootItems"]) do
-					if source then
-						break
-					end
-					for k2,v2 in pairs(AtlasLoot_Data["AtlasLootItems"][k1]) do
-						if v2[1] == itemID then
-							if k1 ~= "VanillaKeys" then
-								source = k1
-							end
-							if v2[5] and v2[5] ~= "" then
-								dropRate = v2[5]
-								lastDropRate = dropRate
-							else
-								lastDropRate = nil
-							end
-							break
-						end
-					end
-				end
-				-- check containers
-				for k1,v1 in pairs(AtlasLoot_Data["AtlasLootItems"]) do
-					if source then
-						break
-					end
-					for k2,v2 in pairs(AtlasLoot_Data["AtlasLootItems"][k1]) do
-						if source then
-							break
-						end
-						if v2[16] then
-							for i, n in pairs(v2[16]) do
-								if source then
-									break
-								end
-								for i2, n2 in pairs(v2[16][i]) do
-									if v2[16][i][i2][1] == itemID then
-										source = k1
-										break
-									end
-								end
-							end
-						end
-					end
-				end
-			end
-			lastItemID = itemID
-			if not source then
-				lastSourceStr = nil
-                return
-			end
-			for k,v in pairs(AtlasLoot_TableNames) do
-				if k == source then
-					sourceStr = AtlasLoot_TableNames[k][1]
-					lastSourceStr = sourceStr
-					break
-				end
-			end
-			
-			if not sourceStr then
-				return
-			end
-
-			-- if line2:GetText() then
-                local str
-				if dropRate then
-					str = GREY..sourceStr.." ("..dropRate..")|r"
-				else
-					str = GREY..sourceStr.."|r"
-				end
-                AddSourceLine(tooltip, str)
-			-- end
-		elseif lastSourceStr then
-            -- if line2:GetText() then
-                local str
-                if lastDropRate then
-                    str = GREY..lastSourceStr.." ("..lastDropRate..")|r"
-                else
-                    str = GREY..lastSourceStr.."|r"
+            if not isCraft and not isWBLoot and not isPvP and not isRepReward then
+                for k1, v1 in pairs(AtlasLoot_Data["AtlasLootSetItems"]) do
+                    if source then
+                        break
+                    end
+                    for k2, v2 in pairs(AtlasLoot_Data["AtlasLootSetItems"][k1]) do
+                        if v2[1] == itemID then
+                            source = k1
+                            isSetPiece = true
+                            if (SetContains(Sets, source) or strfind(source, "WorldEpics", 1, true)) then
+                                source = nil
+                                isSetPiece = false
+                            end
+                            lastDropRate = nil
+                            break
+                        end
+                    end
                 end
-                AddSourceLine(tooltip, str)
-            -- end
-		end
-	end
+            end
+            -- check world events
+            if not isCraft and not isWBLoot and not isPvP and not isRepReward and not isSetPiece then
+                for k1, v1 in pairs(AtlasLoot_Data["AtlasLootWorldEvents"]) do
+                    if source then
+                        break
+                    end
+                    for k2, v2 in pairs(AtlasLoot_Data["AtlasLootWorldEvents"][k1]) do
+                        if v2[1] == itemID then
+                            source = k1
+                            isWorldEvent = true
+                            if v2[5] and v2[5] ~= "" then
+                                dropRate = v2[5]
+                                lastDropRate = dropRate
+                            else
+                                lastDropRate = nil
+                            end
+                            break
+                        end
+                    end
+                end
+            end
+            -- check if its a dungeon/raid loot
+            if not isCraft and not isWBLoot and not isPvP and not isRepReward and not isWorldEvent and not isSetPiece then
+                for k1, v1 in pairs(AtlasLoot_Data["AtlasLootItems"]) do
+                    if source then
+                        break
+                    end
+                    for k2, v2 in pairs(AtlasLoot_Data["AtlasLootItems"][k1]) do
+                        if v2[1] == itemID then
+                            if k1 ~= "VanillaKeys" then
+                                source = k1
+                            end
+                            if v2[5] and v2[5] ~= "" then
+                                dropRate = v2[5]
+                                lastDropRate = dropRate
+                            else
+                                lastDropRate = nil
+                            end
+                            break
+                        end
+                    end
+                end
+                -- check containers
+                for k1, v1 in pairs(AtlasLoot_Data["AtlasLootItems"]) do
+                    if source then
+                        break
+                    end
+                    for k2, v2 in pairs(AtlasLoot_Data["AtlasLootItems"][k1]) do
+                        if source then
+                            break
+                        end
+                        if v2[16] then
+                            for i, n in pairs(v2[16]) do
+                                if source then
+                                    break
+                                end
+                                for i2, n2 in pairs(v2[16][i]) do
+                                    if v2[16][i][i2][1] == itemID then
+                                        source = k1
+                                        break
+                                    end
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+            lastItemID = itemID
+            if not source then
+                lastSourceStr = nil
+                return
+            end
+            for k, v in pairs(AtlasLoot_TableNames) do
+                if k == source then
+                    sourceStr = AtlasLoot_TableNames[k][1]
+                    lastSourceStr = sourceStr
+                    break
+                end
+            end
+
+            if not sourceStr then
+                return
+            end
+
+            local str
+            if dropRate then
+                str = GREY .. sourceStr .. " (" .. dropRate .. ")|r"
+            else
+                str = GREY .. sourceStr .. "|r"
+            end
+            AddSourceLine(tooltip, str)
+        elseif lastSourceStr then
+            local str
+            if lastDropRate then
+                str = GREY .. lastSourceStr .. " (" .. lastDropRate .. ")|r"
+            else
+                str = GREY .. lastSourceStr .. "|r"
+            end
+            AddSourceLine(tooltip, str)
+        end
+    end
 end
 
 local lastSearchName
@@ -407,7 +404,7 @@ local function GetItemIDByName(name)
     if name ~= lastSearchName then
         for itemID = 1, 99999 do
             local itemName = GetItemInfo(itemID)
-            if (itemName and itemName == name) then
+            if itemName and itemName == name then
                 lastSearchID = itemID
                 break
             end
@@ -435,7 +432,7 @@ local function HookTooltip(tooltip)
     local original_SetTradePlayerItem = tooltip.SetTradePlayerItem
     local original_SetTradeTargetItem = tooltip.SetTradeTargetItem
 
-    local original_OnHide = tooltip:GetScript("OnHide")
+    local original_OnHide             = tooltip:GetScript("OnHide")
 
     tooltip:SetScript("OnHide", function()
         if original_OnHide then original_OnHide() end
@@ -566,7 +563,7 @@ HookTooltip(GameTooltip)
 HookTooltip(ItemRefTooltip)
 
 AtlasLootTip:SetScript("OnShow", function()
-	if aux_frame and aux_frame:IsVisible() then
+    if aux_frame and aux_frame:IsVisible() then
         if GetMouseFocus():GetParent() then
             if GetMouseFocus():GetParent().row then
                 if GetMouseFocus():GetParent().row.record.item_id then
@@ -585,11 +582,11 @@ AtlasLootTip.HookAddonOrVariable = function(addon, func)
     lurker:RegisterEvent("ADDON_LOADED")
     lurker:RegisterEvent("VARIABLES_LOADED")
     lurker:RegisterEvent("PLAYER_ENTERING_WORLD")
-    lurker:SetScript("OnEvent",function()
-		if IsAddOnLoaded(addon) or getglobal(addon) then
-			this:func()
-			this:UnregisterAllEvents()
-		end
+    lurker:SetScript("OnEvent", function()
+        if IsAddOnLoaded(addon) or getglobal(addon) then
+            this:func()
+            this:UnregisterAllEvents()
+        end
     end)
 end
 
