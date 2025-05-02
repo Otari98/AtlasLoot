@@ -5,6 +5,13 @@ local strfind = string.find
 local GetItemInfo = GetItemInfo
 local GREY = "|cff999999"
 
+local tooltipMoney = 0
+local original_SetTooltipMoney = SetTooltipMoney
+function SetTooltipMoney(frame, money)
+    original_SetTooltipMoney(frame, money)
+    tooltipMoney = money or 0
+end
+
 local WrappingLines = {
     ["Set: %s"] = gsub("^" .. ITEM_SET_BONUS, " %%s", ""),                                   -- "^Set:"
     ["(%d) Set: %s"] = gsub(gsub(ITEM_SET_BONUS_GRAY, "%(%%d%)", "^%%(%%d%%)"), " %%s", ""), -- "^%(%d%) Set:"
@@ -81,7 +88,11 @@ local function AddSourceLine(tooltip, sourceStr)
             tooltip:AddLine(lines[i][1], lines[i][3], lines[i][4], lines[i][5], wrap)
         end
     end
-
+    if tooltipMoney > 0 then
+        local moneyFrame = getglobal(tooltip:GetName().."MoneyFrame")
+        moneyFrame:SetPoint("LEFT", tooltip:GetName().."TextLeft"..tooltip:NumLines(), "LEFT", 4, 0)
+        moneyFrame:Show()
+    end
     tooltip:Show()
 end
 
@@ -437,6 +448,7 @@ local function HookTooltip(tooltip)
     tooltip:SetScript("OnHide", function()
         if original_OnHide then original_OnHide() end
         this.itemID = nil
+        tooltipMoney = 0
     end)
 
     function tooltip.SetLootRollItem(self, rollID)
