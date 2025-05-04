@@ -122,7 +122,7 @@ AL:RegisterTranslations("frFR", function() return {
     ["Crimson Sorcerer"] = "Ensorceleur cramoisi",
     ["Crimson Templar"] = "Templier cramoisi",
     ["Cryptstalker Armor"] = "Armure de traqueur des cryptes",
-    ["DM North Tribute Chest"] = "Coffre du Roi (HT Nord)",
+    ["Tribute Chest"] = "Coffre du Roi (HT Nord)",
     ["Dal'Rend's Arms"] = "Armes de Dal'Rend",
     ["Dark Coffer"] = "Coffre Noir",
     ["Darkmantle Armor"] = "Armure Sombremante",

@@ -125,7 +125,7 @@ AL:RegisterTranslations("zhCN", function() return {
     ["Crimson Templar"] = "赤红圣殿骑士",
     ["Cryptstalker Armor"] = "地穴追猎者",
     ["DKP"] = "DKP",
-    ["DM North Tribute Chest"] = "厄运之槌北区贡品",
+    ["Tribute Chest"] = "厄运之槌北区贡品",
     ["Dal'Rend's Arms"] = "雷德双刀",
     ["Dark Coffer"] = "黑暗宝箱",
     ["Darkmantle Armor"] = "暗幕",

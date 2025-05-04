@@ -125,7 +125,7 @@ AL:RegisterTranslations("ruRU", function() return {
     ["Crimson Templar"] = "Crimson Templar",
     ["Cryptstalker Armor"] = "Cryptstalker Armor",
     ["DKP"] = "ДКП",
-    ["DM North Tribute Chest"] = "DM North Tribute Chest",
+    ["Tribute Chest"] = "Tribute Chest",
     ["Dal'Rend's Arms"] = "Dal'Rend's Arms",
     ["Dark Coffer"] = "Dark Coffer",
     ["Darkmantle Armor"] = "Darkmantle Armor",

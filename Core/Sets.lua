@@ -95,12 +95,6 @@ function AtlasLootSetMenu()
 	AtlasLootMenuItem_10_Icon:SetTexture("Interface\\Icons\\INV_Misc_QirajiCrystal_05");
 	AtlasLootMenuItem_10.lootpage = "RareMounts";
 	AtlasLootMenuItem_10:Show();
-	-- Fashion
-	AtlasLootMenuItem_24_Name:SetText(AL["Fashion"]);
-	AtlasLootMenuItem_24_Extra:SetText("");
-	AtlasLootMenuItem_24_Icon:SetTexture("Interface\\Icons\\Ability_Hunter_Pet_Turtle");
-	AtlasLootMenuItem_24.lootpage = "DonationRewards2";
-	AtlasLootMenuItem_24:Show();
 	--Sets
 	AtlasLootMenuItem_2_Name:SetText(AL["Sets"]);
 	AtlasLootMenuItem_2_Extra:SetText("");
@@ -108,17 +102,17 @@ function AtlasLootSetMenu()
 	AtlasLootMenuItem_2.lootpage = "PRE60SET";
 	AtlasLootMenuItem_2:Show();
 	--World Epics
-	AtlasLootMenuItem_22_Name:SetText(AL["World Epics"]);
-	AtlasLootMenuItem_22_Extra:SetText("");
-	AtlasLootMenuItem_22_Icon:SetTexture("Interface\\Icons\\INV_Gauntlets_30");
-	AtlasLootMenuItem_22.lootpage = "WORLDEPICS";
-	AtlasLootMenuItem_22:Show();
+	AtlasLootMenuItem_23_Name:SetText(AL["World Epics"]);
+	AtlasLootMenuItem_23_Extra:SetText("");
+	AtlasLootMenuItem_23_Icon:SetTexture("Interface\\Icons\\INV_Gauntlets_30");
+	AtlasLootMenuItem_23.lootpage = "WorldEpics1";
+	AtlasLootMenuItem_23:Show();
 	--Tabards
-	AtlasLootMenuItem_25_Name:SetText(AL["Tabards"]);
-	AtlasLootMenuItem_25_Extra:SetText("");
-	AtlasLootMenuItem_25_Icon:SetTexture("Interface\\Icons\\INV_Shirt_GuildTabard_01");
-	AtlasLootMenuItem_25.lootpage = "Tabards";
-	AtlasLootMenuItem_25:Show();
+	AtlasLootMenuItem_24_Name:SetText(AL["Tabards"]);
+	AtlasLootMenuItem_24_Extra:SetText("");
+	AtlasLootMenuItem_24_Icon:SetTexture("Interface\\Icons\\INV_Shirt_GuildTabard_01");
+	AtlasLootMenuItem_24.lootpage = "Tabards";
+	AtlasLootMenuItem_24:Show();
 	--Dungeon Set 1/2
 	AtlasLootMenuItem_17_Name:SetText(AL["Dungeon 1/2 Sets"]);
 	AtlasLootMenuItem_17_Extra:SetText("");

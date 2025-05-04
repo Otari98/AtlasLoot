@@ -5069,16 +5069,9 @@ AtlasLoot_ButtonRegistry = {
 		Title = AL["Tabards"];
 		Back_Page = "SETMENU";
 		Back_Title = AL["Collections"];
-		Next_Page = "DonationRewards1";
-		Next_Title = AL["Tabards"];
 	};
 	["Legendaries"] = {
 		Title = AL["Legendary Items"];
-		Back_Page = "SETMENU";
-		Back_Title = AL["Collections"];
-	};
-	["Artifacts"] = {
-		Title = AL["Artifact Items"];
 		Back_Page = "SETMENU";
 		Back_Title = AL["Collections"];
 	};
@@ -5086,16 +5079,6 @@ AtlasLoot_ButtonRegistry = {
 		Title = AL["PvP Mounts"];
 		Back_Page = "PVPMENU";
 		Back_Title = AL["PvP Rewards"];
-	};
-	["UnobMounts"] = {
-		Title = AL["Unobtainable Mounts"];
-		Back_Page = "SETMENU";
-		Back_Title = AL["Collections"];
-	};
-	["OldMounts"] = {
-		Title = AL["Old Mounts"];
-		Back_Page = "SETMENU";
-		Back_Title = AL["Collections"];
 	};
 	["RareMounts"] = {
 		Title = AL["Rare Mounts"];
@@ -5116,43 +5099,11 @@ AtlasLoot_ButtonRegistry = {
 		Back_Page = "SETMENU";
 		Back_Title = AL["Collections"];
 	};
-	--donation tabards
-	["DonationRewards1"] = {
-		Title = AL["Tabards"];
-		Back_Page = "SETMENU";
-		Back_Title = AL["Collections"];
-		Prev_Page = "Tabards";
-		Prev_Title = AL["Tabards"];
-	};
-	--fashion
-	["DonationRewards2"] = {
-		Title = AL["Fashion"];
-		Back_Page = "SETMENU";
-		Back_Title = AL["Collections"];
-		Next_Page = "DonationRewards3";
-		Next_Title = AL["Fashion"];
-	};
-	["DonationRewards3"] = {
-		Title = AL["Fashion"];
-		Back_Page = "SETMENU";
-		Back_Title = AL["Collections"];
-		Prev_Page = "DonationRewards2";
-		Prev_Title = AL["Fashion"];
-		Next_Page = "DonationRewards4";
-		Next_Title = AL["Fashion"];
-	};
-	["DonationRewards4"] = {
-		Title = AL["Fashion"];
-		Back_Page = "SETMENU";
-		Back_Title = AL["Collections"];
-		Prev_Page = "DonationRewards3";
-		Prev_Title = AL["Fashion"];
-	};
 	["WorldEpics1"] = {
 		Title = AtlasLoot_TableNames["WorldEpics1"][1];
 		Next_Page = "WorldEpics2";
 		Next_Title = AtlasLoot_TableNames["WorldEpics2"][1];
-		Back_Page = "WORLDEPICS";
+		Back_Page = "SETMENU";
 		Back_Title = AL["World Epics"];
 	};
 	["WorldEpics2"] = {
@@ -5161,14 +5112,14 @@ AtlasLoot_ButtonRegistry = {
 		Next_Title = AtlasLoot_TableNames["WorldEpics3"][1];
 		Prev_Page = "WorldEpics1";
 		Prev_Title = AtlasLoot_TableNames["WorldEpics1"][1];
-		Back_Page = "WORLDEPICS";
+		Back_Page = "SETMENU";
 		Back_Title = AL["World Epics"];
 	};
 	["WorldEpics3"] = {
 		Title = AtlasLoot_TableNames["WorldEpics3"][1];
 		Prev_Page = "WorldEpics2";
 		Prev_Title = AtlasLoot_TableNames["WorldEpics2"][1];
-		Back_Page = "WORLDEPICS";
+		Back_Page = "SETMENU";
 		Back_Title = AL["World Epics"];
 	};
 	["AQ40Trash2"] = {

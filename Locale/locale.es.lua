@@ -122,7 +122,7 @@ AL:RegisterTranslations("esES", function() return {
     ["Crimson Sorcerer"] = "Hechicero Carmesí",
     ["Crimson Templar"] = "Templario Carmesí",
     ["Cryptstalker Armor"] = "Armadura de acechacriptas",
-    ["DM North Tribute Chest"] = "Cofre del tributo de LM norte",
+    ["Tribute Chest"] = "Cofre del tributo de LM norte",
     ["Dal'Rend's Arms"] = "Armas de Dal'Rend",
     ["Dark Coffer"] = "El cofre oscuro",
     ["Darkmantle Armor"] = "Armadura mantoscuro",
