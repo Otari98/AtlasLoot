@@ -46,13 +46,13 @@ function AtlasLoot_PrepMenu(backPage, title)
 		getglobal("AtlasLootMenuItem_" .. i .. "_Extra"):Show();
 	end
 	AtlasLoot_BossName:SetText("|cffFFFFFF" .. title);
-	AtlasLoot_SetItemInfoFrame(AtlasLoot_AnchorFrame);
+	-- AtlasLoot_SetItemInfoFrame(AtlasLoot_AnchorPoint);
 end
 
 function AtlasLootSetMenu()
 	AtlasLoot_PrepMenu(nil, AL["Collections"])
 	AtlasLootCharDB.LastBoss = "SETMENU"
-	AtlasLootCharDB.LastBossText = "Collections"
+	AtlasLootCharDB.LastBossText = AL["Collections"]
 	--ZG
 	AtlasLootMenuItem_3_Name:SetText(AL["Zul'Gurub Sets"]);
 	AtlasLootMenuItem_3_Extra:SetText("");

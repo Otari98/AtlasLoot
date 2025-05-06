@@ -47,8 +47,9 @@ local DEFAULT = "|cffFFd200";
 --Establish number of boss lines in the Atlas frame for scrolling
 local ATLAS_LOOT_BOSS_LINES	= 24;
 
---Set the default anchor for the loot frame to the AtlasLoot frame
-AtlasLoot_AnchorFrame = AtlasLootDefaultFrame;
+local Anchor_Atlas = { "TOPLEFT", "AtlasFrame", "TOPLEFT", 18, -84 }
+local Anchor_AlphaMap = { "TOPLEFT", "AlphaMapAlphaMapFrame", "TOPLEFT", 0, 0 }
+local Anchor_Default = { "TOPLEFT", "AtlasLootDefaultFrame_LootBackground", "TOPLEFT", 2, -2 }
 
 --Variables to hold hooked Atlas functions
 Hooked_Atlas_Refresh = nil;
@@ -115,7 +116,7 @@ Called whenever the loot browser is shown and sets up buttons and loot tables
 ]]
 function AtlasLootDefaultFrame_OnShow()
 	--Definition of where I want the loot table to be shown
-	pFrame = { "TOPLEFT", "AtlasLootDefaultFrame_LootBackground", "TOPLEFT", "2", "-2" };
+	AtlasLoot_AnchorPoint = Anchor_Default;
 	--Having the Atlas and loot browser frames shown at the same time would
 	--cause conflicts, so I hide the Atlas frame when the loot browser appears
 	if AtlasFrame then
@@ -124,12 +125,19 @@ function AtlasLootDefaultFrame_OnShow()
 	--Remove the selection of a loot table in Atlas
 	AtlasLootItemsFrame.activeBoss = nil;
 	--Set the item table to the loot table
-	AtlasLoot_SetItemInfoFrame(pFrame);
+	-- AtlasLoot_SetItemInfoFrame(AtlasLoot_AnchorPoint);
 	--Show the last displayed loot table
+    if AtlasLootCharDB.LastBoss == "WishList" then
+        AtlasLoot_ShowWishList()
+        return
+    elseif AtlasLootCharDB.LastBoss == "SearchResult" then
+        AtlasLoot:ShowSearchResult()
+        return
+    end
 	if AtlasLootItemsFrame.refresh then
-		AtlasLoot_ShowBossLoot(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[3], pFrame)
+		AtlasLoot_ShowBossLoot(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[3], AtlasLoot_AnchorPoint)
 	else
-		AtlasLoot_ShowBossLoot(AtlasLootCharDB.LastBoss, AtlasLootCharDB.LastBossText, pFrame);
+		AtlasLoot_ShowBossLoot(AtlasLootCharDB.LastBoss, AtlasLootCharDB.LastBossText, AtlasLoot_AnchorPoint);
 	end
 end
 
@@ -431,10 +439,8 @@ function AtlasLoot_SetupForAtlas()
 	AtlasLootPanel:ClearAllPoints();
 	AtlasLootPanel:SetParent(AtlasFrame);
 	AtlasLootPanel:SetPoint("TOP", "AtlasFrame", "BOTTOM", 0, 9);
-	--Anchor the loot table to the Atlas frame
-	AtlasLoot_SetItemInfoFrame();
+    AtlasLoot_AnchorPoint = Anchor_Atlas
 	AtlasLootItemsFrame:Hide();
-	AtlasLoot_AnchorFrame = AtlasFrame;
 end
 
 --[[
@@ -443,31 +449,30 @@ pFrame - Data structure with anchor info.  Format: {Anchor Point, Relative Frame
 This function anchors the item frame where appropriate.  The main Atlas frame can be passed instead of a custom pFrame.
 If no pFrame is specified, the Atlas Frame is used if Atlas is installed.
 ]]
-function AtlasLoot_SetItemInfoFrame(pFrame)
-	if ( pFrame ) then
-		--If a pFrame is specified, use it
-		if(pFrame==AtlasFrame and AtlasFrame) then
-			AtlasLootItemsFrame:ClearAllPoints();
-			AtlasLootItemsFrame:SetParent(AtlasFrame);
-			AtlasLootItemsFrame:SetPoint("TOPLEFT", "AtlasFrame", "TOPLEFT", 18, -84);
-		else
-			AtlasLootItemsFrame:ClearAllPoints();
-			AtlasLootItemsFrame:SetParent(pFrame[2]);
-			AtlasLootItemsFrame:ClearAllPoints();
-			AtlasLootItemsFrame:SetPoint(pFrame[1], pFrame[2], pFrame[3], pFrame[4], pFrame[5]);
-		end
-	elseif ( AtlasFrame ) then
-		--If no pFrame is specified and Atlas is installed, anchor in Atlas
-		AtlasLootItemsFrame:ClearAllPoints();
-		AtlasLootItemsFrame:SetParent(AtlasFrame);
-		AtlasLootItemsFrame:SetPoint("TOPLEFT", "AtlasFrame", "TOPLEFT", 18, -84);
-	elseif ( AtlasDefaultFrame ) then
-		AtlasLootItemsFrame:ClearAllPoints();
-		AtlasLootItemsFrame:SetParent(AtlasLootDefaultFrame);
-		AtlasLootItemsFrame:SetPoint("TOPLEFT", "AtlasLootDefaultFrame", "TOPLEFT", 0, 0);
-	end
-	AtlasLootItemsFrame:Show();
-end
+-- function AtlasLoot_SetItemInfoFrame(pFrame)
+-- 	if ( pFrame ) then
+-- 		--If a pFrame is specified, use it
+-- 		if(pFrame==AtlasFrame and AtlasFrame) then
+-- 			AtlasLootItemsFrame:ClearAllPoints();
+-- 			AtlasLootItemsFrame:SetParent(AtlasFrame);
+-- 			AtlasLootItemsFrame:SetPoint("TOPLEFT", "AtlasFrame", "TOPLEFT", 18, -84);
+-- 		else
+-- 			AtlasLootItemsFrame:ClearAllPoints();
+-- 			AtlasLootItemsFrame:SetParent(pFrame[2]);
+-- 			AtlasLootItemsFrame:SetPoint(pFrame[1], pFrame[2], pFrame[3], pFrame[4], pFrame[5]);
+-- 		end
+-- 	elseif ( AtlasFrame ) then
+-- 		--If no pFrame is specified and Atlas is installed, anchor in Atlas
+-- 		AtlasLootItemsFrame:ClearAllPoints();
+-- 		AtlasLootItemsFrame:SetParent(AtlasFrame);
+-- 		AtlasLootItemsFrame:SetPoint("TOPLEFT", "AtlasFrame", "TOPLEFT", 18, -84);
+-- 	elseif ( AtlasLootDefaultFrame ) then
+-- 		AtlasLootItemsFrame:ClearAllPoints();
+-- 		AtlasLootItemsFrame:SetParent(AtlasLootDefaultFrame);
+-- 		AtlasLootItemsFrame:SetPoint("TOPLEFT", "AtlasLootDefaultFrame", "TOPLEFT", 0, 0);
+-- 	end
+-- 	AtlasLootItemsFrame:Show();
+-- end
 
 --[[
 AtlasLoot_AtlasScrollBar_Update:
@@ -710,7 +715,6 @@ function AtlasLoot_Atlas_OnShow()
 	else
 		AtlasLootPanel:Show();
 	end
-	pFrame = AtlasFrame;
 end
 
 --[[
@@ -1429,11 +1433,10 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 		end
 	end
 	--For Alphamap and Atlas integration, show a 'close' button to hide the loot table and restore the map view
-	if (AtlasLootItemsFrame:GetParent() == AlphaMapAlphaMapFrame or AtlasLootItemsFrame:GetParent() == AtlasFrame) then
-		AtlasLootItemsFrame_CloseButton:Show();
-	else
-		AtlasLootItemsFrame_CloseButton:Hide();
-	end
+    AtlasLootItemsFrame_CloseButton:Hide();
+	if (AtlasFrame and AtlasFrame:IsShown()) or (AlphaMapAlphaMapFrame and AlphaMapAlphaMapFrame:IsShown()) then
+        AtlasLootItemsFrame_CloseButton:Show();
+    end
 	local subMenu = nil
 	local bossName = ""
 	for k in pairs(AtlasLoot_HewdropDown_SubTables) do
@@ -1458,7 +1461,28 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 		AtlasLootDefaultFrame_SelectedTable:Hide()
 	end
 	--Anchor the item frame where it is supposed to be
-	AtlasLoot_SetItemInfoFrame(pFrame);
+    if ( pFrame ) then
+		--If a pFrame is specified, use it
+		if(pFrame==AtlasFrame and AtlasFrame) then
+			AtlasLootItemsFrame:ClearAllPoints();
+			AtlasLootItemsFrame:SetParent(AtlasFrame);
+			AtlasLootItemsFrame:SetPoint("TOPLEFT", "AtlasFrame", "TOPLEFT", 18, -84);
+		else
+			AtlasLootItemsFrame:ClearAllPoints();
+			AtlasLootItemsFrame:SetParent(pFrame[2]);
+			AtlasLootItemsFrame:SetPoint(pFrame[1], pFrame[2], pFrame[3], pFrame[4], pFrame[5]);
+		end
+	elseif ( AtlasFrame ) then
+		--If no pFrame is specified and Atlas is installed, anchor in Atlas
+		AtlasLootItemsFrame:ClearAllPoints();
+		AtlasLootItemsFrame:SetParent(AtlasFrame);
+		AtlasLootItemsFrame:SetPoint("TOPLEFT", "AtlasFrame", "TOPLEFT", 18, -84);
+	elseif ( AtlasLootDefaultFrame ) then
+		AtlasLootItemsFrame:ClearAllPoints();
+		AtlasLootItemsFrame:SetParent(AtlasLootDefaultFrame);
+		AtlasLootItemsFrame:SetPoint("TOPLEFT", "AtlasLootDefaultFrame", "TOPLEFT", 0, 0);
+	end
+	AtlasLootItemsFrame:Show();
 	AtlasLootItemsFrameContainer:Hide()
 end
 
@@ -1470,14 +1494,14 @@ tabletype - Whether the tablename indexes an actual table or needs to generate a
 Called when a button in AtlasLoot_Hewdrop is clicked
 ]]
 function AtlasLoot_HewdropClick(tablename, text, tabletype)
-	AtlasLootCharDB.LastMenu = { tablename, text, tabletype }
+	-- AtlasLootCharDB.LastMenu = { tablename, text, tabletype }
 	--Definition of where I want the loot table to be shown
-	pFrame = { "TOPLEFT", "AtlasLootDefaultFrame_LootBackground", "TOPLEFT", "2", "-2" };
+	AtlasLoot_AnchorPoint = Anchor_Default
 
 	--If the button clicked was linked to a loot table
 	if tabletype == "Table" then
 		--Show the loot table
-		AtlasLoot_ShowBossLoot(tablename, text, pFrame);
+		AtlasLoot_ShowBossLoot(tablename, text, AtlasLoot_AnchorPoint);
 		--Save needed info for fuure re-display of the table
 		AtlasLootCharDB.LastBoss = tablename;
 		AtlasLootCharDB.LastBossText = text;
@@ -1490,7 +1514,7 @@ function AtlasLoot_HewdropClick(tablename, text, tabletype)
 		--Enable the submenu button
 		AtlasLootDefaultFrame_SubMenu:Enable();
 		--Show the first loot table associated with the submenu
-		AtlasLoot_ShowBossLoot(AtlasLoot_HewdropDown_SubTables[tablename][1][2], AtlasLoot_HewdropDown_SubTables[tablename][1][1], pFrame);
+		AtlasLoot_ShowBossLoot(AtlasLoot_HewdropDown_SubTables[tablename][1][2], AtlasLoot_HewdropDown_SubTables[tablename][1][1], AtlasLoot_AnchorPoint);
 		--Save needed info for fuure re-display of the table
 		AtlasLootCharDB.LastBoss = AtlasLoot_HewdropDown_SubTables[tablename][1][2];
 		AtlasLootCharDB.LastBossText = AtlasLoot_HewdropDown_SubTables[tablename][1][1];
@@ -1515,9 +1539,9 @@ Called when a button in AtlasLoot_HewdropSubMenu is clicked
 ]]
 function AtlasLoot_HewdropSubMenuClick(tablename, text)
 	--Definition of where I want the loot table to be shown
-	pFrame = { "TOPLEFT", "AtlasLootDefaultFrame_LootBackground", "TOPLEFT", "2", "-2" };
+	AtlasLoot_AnchorPoint = Anchor_Default
 	--Show the select loot table
-	AtlasLoot_ShowBossLoot(tablename, text, pFrame);
+	AtlasLoot_ShowBossLoot(tablename, text, AtlasLoot_AnchorPoint);
 	--Save needed info for fuure re-display of the table
 	AtlasLootCharDB.LastBoss = tablename;
 	AtlasLootCharDB.LastBossText = text;
@@ -1717,19 +1741,19 @@ function AtlasLoot_OpenMenu(menuName)
 	AtlasLootCharDB.LastBoss = this.lootpage;
 	AtlasLootCharDB.LastBossText = menuName;
 	if menuName == AL["Crafting"] then
-		AtlasLoot_ShowItemsFrame("CRAFTINGMENU", "dummy", "dummy", pFrame)
+		AtlasLoot_ShowItemsFrame("CRAFTINGMENU", "dummy", "dummy", AtlasLoot_AnchorPoint)
 	elseif menuName == AL["PvP Rewards"] then
-		AtlasLoot_ShowItemsFrame("PVPMENU", "dummy", "dummy", pFrame)
+		AtlasLoot_ShowItemsFrame("PVPMENU", "dummy", "dummy", AtlasLoot_AnchorPoint)
 	elseif menuName == AL["World Events"] then
-		AtlasLoot_ShowItemsFrame("WORLDEVENTMENU", "dummy", "dummy", pFrame)
+		AtlasLoot_ShowItemsFrame("WORLDEVENTMENU", "dummy", "dummy", AtlasLoot_AnchorPoint)
 	elseif menuName == AL["Collections"] then
-		AtlasLoot_ShowItemsFrame("SETMENU", "dummy", "dummy", pFrame)
+		AtlasLoot_ShowItemsFrame("SETMENU", "dummy", "dummy", AtlasLoot_AnchorPoint)
 	elseif menuName == AL["Factions"] then
-		AtlasLoot_ShowItemsFrame("REPMENU", "dummy", "dummy", pFrame)
+		AtlasLoot_ShowItemsFrame("REPMENU", "dummy", "dummy", AtlasLoot_AnchorPoint)
 	elseif menuName == AL["World Bosses"] then
-		AtlasLoot_ShowItemsFrame("WORLDBOSSMENU", "dummy", "dummy", pFrame)
+		AtlasLoot_ShowItemsFrame("WORLDBOSSMENU", "dummy", "dummy", AtlasLoot_AnchorPoint)
 	elseif menuName == AL["Dungeons & Raids"] then
-		AtlasLoot_ShowItemsFrame("DUNGEONSMENU1", "dummy", "dummy", pFrame)
+		AtlasLoot_ShowItemsFrame("DUNGEONSMENU1", "dummy", "dummy", AtlasLoot_AnchorPoint)
 	end
 	CloseDropDownMenus()
 end
@@ -1791,7 +1815,7 @@ function AtlasLootMenuItem_OnClick()
 		CloseDropDownMenus()
 		AtlasLootCharDB.LastBoss = this.lootpage;
 		AtlasLootCharDB.LastBossText = pagename;
-		AtlasLoot_ShowBossLoot(this.lootpage, pagename, AtlasLoot_AnchorFrame);
+		AtlasLoot_ShowBossLoot(this.lootpage, pagename, AtlasLoot_AnchorPoint);
 		AtlasLootDefaultFrame_SelectedCategory:SetText(pagename);
 		AtlasLootDefaultFrame_SelectedCategory:Show();
 	end
@@ -1821,7 +1845,7 @@ function AtlasLoot_NavButton_OnClick()
 		else
 			AtlasLootCharDB.LastBoss = this.lootpage;
 			AtlasLootCharDB.LastBossText = this.title;
-			AtlasLoot_ShowItemsFrame(this.lootpage, AtlasLootItemsFrame.refresh[2], this.title, pFrame);
+			AtlasLoot_ShowItemsFrame(this.lootpage, AtlasLootItemsFrame.refresh[2], this.title, AtlasLoot_AnchorPoint);
 			if AtlasLootDefaultFrame_SelectedTable:GetText()~=nil then 
 				AtlasLootDefaultFrame_SelectedTable:SetText(AtlasLoot_BossName:GetText())
 			else
@@ -1829,10 +1853,10 @@ function AtlasLoot_NavButton_OnClick()
 			end
 		end
 	elseif AtlasLootItemsFrame.refresh and AtlasLootItemsFrame.refresh[2] then
-		AtlasLoot_ShowItemsFrame(this.lootpage, AtlasLootItemsFrame.refresh[2], this.title, pFrame);
+		AtlasLoot_ShowItemsFrame(this.lootpage, AtlasLootItemsFrame.refresh[2], this.title, AtlasLoot_AnchorPoint);
 	else
 		--Fallback for if the requested loot page is a menu and does not have a .refresh instance
-		AtlasLoot_ShowItemsFrame(this.lootpage, "dummy", this.title, pFrame);
+		AtlasLoot_ShowItemsFrame(this.lootpage, "dummy", this.title, AtlasLoot_AnchorPoint);
 	end
 	for k,v in pairs(AtlasLoot_MenuList) do
 		if this.lootpage == v then
@@ -1943,16 +1967,14 @@ AtlasLoot_RefreshQuickLookButtons()
 Enables/disables the quicklook buttons depending on what is assigned
 ]]
 function AtlasLoot_RefreshQuickLookButtons()
-	local i=1;
-	while i<5 do
-		if ((not AtlasLootCharDB["QuickLooks"][i]) or (not AtlasLootCharDB["QuickLooks"][i][1])) or (AtlasLootCharDB["QuickLooks"][i][1]==nil) then
+	for i = 1, 4 do
+		if (not AtlasLootCharDB["QuickLooks"][i]) or (not AtlasLootCharDB["QuickLooks"][i][1]) then
 			getglobal("AtlasLootPanel_Preset"..i):Disable();
 			getglobal("AtlasLootDefaultFrame_Preset"..i):Disable();
 		else
 			getglobal("AtlasLootPanel_Preset"..i):Enable();
 			getglobal("AtlasLootDefaultFrame_Preset"..i):Enable();
 		end
-		i=i+1;
 	end
 end
 
@@ -1961,7 +1983,7 @@ AtlasLoot_ClearQuickLookButton()
 Clears a quicklook button.
 ]]
 function AtlasLoot_ClearQuickLookButton(button)
-	if not button or button == nil then return end
+	if not button then return end
 	AtlasLootCharDB["QuickLooks"][button] = nil
 	AtlasLoot_RefreshQuickLookButtons()
 	DEFAULT_CHAT_FRAME:AddMessage(BLUE..AL["AtlasLoot"]..": "..WHITE..AL["QuickLook"].." "..button.." "..AL["has been reset!"]);
@@ -1985,8 +2007,7 @@ function AtlasLoot_ShowBossLoot(dataID, boss, pFrame)
 		else
 			--Use the original WoW instance data by default
 			local dataSource = AtlasLoot_TableNames[dataID][2];
-			--Set anchor point, set selected table and call AtlasLoot_ShowItemsFrame
-			AtlasLoot_AnchorFrame = pFrame;
+			--Set selected table and call AtlasLoot_ShowItemsFrame
 			AtlasLootItemsFrame.externalBoss = dataID;
 			AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame);
 		end
@@ -3617,4 +3638,39 @@ function AtlasLoot_GetChatLink(id)
 	local _, _, _, color = GetItemQualityColor(quality)
 	color = string.sub(color, 2)
 	return "|"..color.."|H"..itemLink.."|h["..itemName.."]|h|r"
+end
+
+function AtlasLoot_QuickLook_OnClick(id)
+    if IsAltKeyDown() then
+        AtlasLoot_ClearQuickLookButton(id)
+        return
+    end
+    if this:GetParent() == AtlasLootPanel then
+        if AtlasLootPanel:GetParent() == AtlasFrame then
+            AtlasLoot_AnchorPoint = Anchor_Atlas
+        elseif AtlasLootPanel:GetParent() == AlphaMapAlphaMapFrame then
+            AtlasLoot_AnchorPoint = Anchor_AlphaMap
+        end
+    else
+        AtlasLoot_AnchorPoint = Anchor_Default
+    end
+    AtlasLoot_ShowItemsFrame(AtlasLootCharDB["QuickLooks"][id][1], AtlasLootCharDB["QuickLooks"][id][2], AtlasLootCharDB["QuickLooks"][id][3], AtlasLoot_AnchorPoint);
+end
+
+function AtlasLoot_QuickLook_OnShow(id)
+    this:SetText(AL["QuickLook"].." "..id)
+    this:SetFrameLevel(this:GetParent():GetFrameLevel() + 1)
+    if (not AtlasLootCharDB["QuickLooks"][id]) or (not AtlasLootCharDB["QuickLooks"][id][1]) then
+        this:Disable()
+    end
+end
+
+function AtlasLoot_QuickLook_OnEnter(id)
+    if this:IsEnabled() then
+        GameTooltip:ClearLines()
+        GameTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 5)
+        GameTooltip:AddLine(WHITE..AtlasLootCharDB["QuickLooks"][id][3].."|r")
+        GameTooltip:AddLine(AL["ALT+Click to clear"])
+        GameTooltip:Show()
+    end
 end

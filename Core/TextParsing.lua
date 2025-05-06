@@ -555,16 +555,16 @@ function AtlasLoot_FixText(text)
 	text = gsub(text, "#pvps2#", AL["Rare Set"]);
 	
 	--Text colouring
-	text = gsub(text, "=q0=", "|cff9d9d9d");
-	text = gsub(text, "=q1=", "|cffFFFFFF");
-	text = gsub(text, "=q2=", "|cff1eff00");
-	text = gsub(text, "=q3=", "|cff0070dd");
-	text = gsub(text, "=q4=", "|cffa335ee");
-	text = gsub(text, "=q5=", "|cffFF8000");
-	text = gsub(text, "=q6=", "|cffFF0000");
-	text = gsub(text, "=q7=", "|cff03c0f6"); -- "dropped by" colour
-	text = gsub(text, "=q8=", "|cff2773ff"); -- alliance colour, alliance rank colour
-	text = gsub(text, "=q9=", "|cffffffff"); -- priest colour
+	text = gsub(text, "=q0=", "|cff9d9d9d");  -- poor
+	text = gsub(text, "=q1=", "|cffFFFFFF");  -- common
+	text = gsub(text, "=q2=", "|cff1eff00");  -- uncommon
+	text = gsub(text, "=q3=", "|cff0070dd");  -- rare
+	text = gsub(text, "=q4=", "|cffa335ee");  -- epic
+	text = gsub(text, "=q5=", "|cffFF8000");  -- legendary
+	text = gsub(text, "=q6=", "|cffFF0000");  -- red
+	text = gsub(text, "=q7=", "|cff03c0f6");  -- "dropped by" colour
+	text = gsub(text, "=q8=", "|cff2773ff");  -- alliance colour, alliance rank colour
+	text = gsub(text, "=q9=", "|cffffffff");  -- priest colour
 	text = gsub(text, "=q10=", "|cff68ccef"); -- mage colour
 	text = gsub(text, "=q11=", "|cff9382c9"); -- warlock colour
 	text = gsub(text, "=q12=", "|cfffff468"); -- rogue colour
@@ -576,7 +576,7 @@ function AtlasLoot_FixText(text)
 	text = gsub(text, "=q18=", "|cffff3100"); -- horde rank colour
 	text = gsub(text, "=q19=", "|cffe6cc80"); -- horde rank colour
 	text = gsub(text, "=ec1=", "|cffFF8400");
-	text = gsub(text, "=ds=", "|cffFFd200");
+	text = gsub(text, "=ds=", "|cffFFd200");  -- default gold color
 	
 	--Dropped by names
 	text = gsub(text, "#db1#", AL["Patchwerk"]);

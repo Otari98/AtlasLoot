@@ -3,7 +3,7 @@ local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
 function AtlasLootRepMenu()
 	AtlasLoot_PrepMenu(nil, AL["Factions"])
 	AtlasLootCharDB.LastBoss = "REPMENU"
-	AtlasLootCharDB.LastBossText = "Factions"
+	AtlasLootCharDB.LastBossText = AL["Factions"]
 	--Argent Dawn
 	AtlasLootMenuItem_1_Name:SetText(AL["Argent Dawn"]);
 	AtlasLootMenuItem_1_Extra:SetText("");

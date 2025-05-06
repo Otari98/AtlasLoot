@@ -102,7 +102,7 @@ local function ExtendTooltip(tooltip)
     if not AtlasLootCharDB.ShowSource then
         return
     end
-    local tooltipName = tooltip:GetName()
+    -- local tooltipName = tooltip:GetName()
     local itemID = tonumber(tooltip.itemID)
     if itemID and itemID ~= 51217 then -- 51217 Fashion Coin
         if itemID ~= lastItemID then
@@ -302,10 +302,10 @@ AtlasLootTip:SetScript("OnShow", function()
             if GetMouseFocus():GetParent().row then
                 if GetMouseFocus():GetParent().row.record.item_id then
                     GameTooltip.itemID = GetMouseFocus():GetParent().row.record.item_id
+                    ExtendTooltip(GameTooltip)
                 end
             end
         end
-        ExtendTooltip(GameTooltip)
     end
 end)
 
@@ -2661,8 +2661,8 @@ AtlasLoot_Data["AtlasLootSources"] = {
     [17623] = AL["PvP"].." "..AL["Rank"].." 13",
     [17624] = AL["PvP"].." "..AL["Rank"].." 13",
     [17625] = AL["PvP"].." "..AL["Rank"].." 12",
-    [17690] = AL["Frostwolf Clan"]..AL["Neutral"],
-    [17691] = AL["Stormpike Guard"]..AL["Neutral"],
+    [17690] = AL["Frostwolf Clan"].." - "..AL["Neutral"],
+    [17691] = AL["Stormpike Guard"].." - "..AL["Neutral"],
     [17704] = AL["Blacksmithing"].." ("..AL["Skill:"].." 190+)",
     [17706] = AL["Feast of Winter Veil"],
     [17707] = AL["Maraudon"].." - "..AL["Princess Theradras"].." (14%)",
@@ -2716,16 +2716,16 @@ AtlasLoot_Data["AtlasLootSources"] = {
     [17771] = AL["Smelting"].." ("..AL["Skill:"].." 300)",
     [17780] = AL["Maraudon"].." - "..AL["Princess Theradras"].." (1%)",
     [17782] = AL["Molten Core"].." - "..AL["Garr"].." (5%)",
-    [17900] = AL["Stormpike Guard"]..AL["Friendly"],
-    [17901] = AL["Stormpike Guard"]..AL["Honored"],
-    [17902] = AL["Stormpike Guard"]..AL["Revered"],
-    [17903] = AL["Stormpike Guard"]..AL["Exalted"],
-    [17904] = AL["Stormpike Guard"]..AL["Exalted"],
-    [17905] = AL["Frostwolf Clan"]..AL["Friendly"],
-    [17906] = AL["Frostwolf Clan"]..AL["Honored"],
-    [17907] = AL["Frostwolf Clan"]..AL["Revered"],
-    [17908] = AL["Frostwolf Clan"]..AL["Exalted"],
-    [17909] = AL["Frostwolf Clan"]..AL["Exalted"],
+    [17900] = AL["Stormpike Guard"].." - "..AL["Friendly"],
+    [17901] = AL["Stormpike Guard"].." - "..AL["Honored"],
+    [17902] = AL["Stormpike Guard"].." - "..AL["Revered"],
+    [17903] = AL["Stormpike Guard"].." - "..AL["Exalted"],
+    [17904] = AL["Stormpike Guard"].." - "..AL["Exalted"],
+    [17905] = AL["Frostwolf Clan"].." - "..AL["Friendly"],
+    [17906] = AL["Frostwolf Clan"].." - "..AL["Honored"],
+    [17907] = AL["Frostwolf Clan"].." - "..AL["Revered"],
+    [17908] = AL["Frostwolf Clan"].." - "..AL["Exalted"],
+    [17909] = AL["Frostwolf Clan"].." - "..AL["Exalted"],
     [17943] = AL["Maraudon"].." - "..AL["Landslide"].." (25%)",
     [17962] = AL["Tanaris"].." - "..AL["Ostarius"].." (100%)",
     [17966] = AL["Onyxia's Lair"].." - "..AL["Onyxia"].." (100%)",
@@ -2740,12 +2740,12 @@ AtlasLoot_Data["AtlasLootSources"] = {
     [18103] = AL["Upper Blackrock Spire"].." - "..AL["Warchief Rend Blackhand"].." (23%)",
     [18104] = AL["Upper Blackrock Spire"].." - "..AL["Warchief Rend Blackhand"].." (17%)",
     [18168] = AL["Engineering"].." ("..AL["Skill:"].." 300)",
-    [18169] = AL["Argent Dawn"]..AL["Revered"],
-    [18170] = AL["Argent Dawn"]..AL["Revered"],
-    [18171] = AL["Argent Dawn"]..AL["Revered"],
-    [18172] = AL["Argent Dawn"]..AL["Revered"],
-    [18173] = AL["Argent Dawn"]..AL["Revered"],
-    [18182] = AL["Argent Dawn"]..AL["Revered"],
+    [18169] = AL["Argent Dawn"].." - "..AL["Revered"],
+    [18170] = AL["Argent Dawn"].." - "..AL["Revered"],
+    [18171] = AL["Argent Dawn"].." - "..AL["Revered"],
+    [18172] = AL["Argent Dawn"].." - "..AL["Revered"],
+    [18173] = AL["Argent Dawn"].." - "..AL["Revered"],
+    [18182] = AL["Argent Dawn"].." - "..AL["Revered"],
     [18202] = AL["Azshara"].." - "..AL["Azuregos"].." (10%)",
     [18203] = AL["Molten Core"].." - "..AL["Magmadar"].." (20%)",
     [18204] = AL["Blasted Lands"].." - "..AL["Lord Kazzak"].." (20%)",
