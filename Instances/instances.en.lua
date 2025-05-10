@@ -8368,7 +8368,6 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 55352, "INV_Misc_Cape_20", "=q4=Cloak of Rapid Regeneration", "=ds=#s4#" },
 		{ 55354, "INV_Gauntlets_05", "=q4=Khadgar's Guidance", "=ds=#s9#, #a1#" },
 		{ 55355, "INV_Belt_03", "=q4=Memory of the Last Guardian", "=ds=#s10#, #a1#" },
-		{ 0, "INV_Misc_QuestionMark", "=q4=Netherclaw Gauntlets", "=ds=?#s9#?" },
 		{ 92082, "Spell_Shadow_SummonFelHunter", "=q4=Felforged Dreadhound", "=ds=#e7#", "5%" },
 		{ 41485, "INV_Misc_Gem_Diamond_01", "=q3=Pristine Lay Crytstal", "=ds=", "" },
 		{ 0, "", "", "" },
