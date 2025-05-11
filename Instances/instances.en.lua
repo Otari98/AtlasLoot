@@ -6277,8 +6277,6 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 18779,"INV_Misc_Note_06","=q3=Bottom Half of Advanced Armorsmithing: Volume I","=ds=#m8#", "1" },
 		{ 12727, "INV_Scroll_05", "=q3=Plans: Enchanted Thorium Breastplate", "=q1=#m4# =ds=#p2# #m14#" },
 		{ 12618, "INV_Chest_Plate10", "=q3=Enchanted Thorium Breastplate", "=ds=#s5#, #a4#" },
-		{ 0, "", "", "" },
-		{ 0, "", "", "" },
 		{ 0, "INV_Box_01", "=q6=#cb10#", "" },
 		{ 12806, "INV_Chest_Plate04", "=q3=Unforged Rune Covered Breastplate", "=ds=#m8#" },
 		{ 12696, "INV_Scroll_03", "=q3=Plans: Demon Forged Breastplate", "=q1=#m4#, =ds=#p2# #m20#" },
@@ -6300,7 +6298,6 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 12940,"INV_Sword_43","=q3=Dal'Rend's Sacred Charge","=ds=#h3#, #w10#", "8%" },
 		{ 12939,"INV_Sword_40","=q3=Dal'Rend's Tribal Guardian","=ds=#h4#, #w10#", "8%" },
 		{ 12583,"INV_Weapon_Halberd_04","=q3=Blackhand Doomsaw","=ds=#w7# ", "8%" },
-		{ 0, "", "", "" },
         { 51217, "INV_misc_ribbon_01", "=q2=Fashion Coin", "=ds=#e27#", "5%" },
 	};
 	UBRSGyth = {
