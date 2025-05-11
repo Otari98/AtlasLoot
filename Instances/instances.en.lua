@@ -6277,8 +6277,6 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 18779,"INV_Misc_Note_06","=q3=Bottom Half of Advanced Armorsmithing: Volume I","=ds=#m8#", "1" },
 		{ 12727, "INV_Scroll_05", "=q3=Plans: Enchanted Thorium Breastplate", "=q1=#m4# =ds=#p2# #m14#" },
 		{ 12618, "INV_Chest_Plate10", "=q3=Enchanted Thorium Breastplate", "=ds=#s5#, #a4#" },
-		{ 0, "", "", "" },
-		{ 0, "", "", "" },
 		{ 0, "INV_Box_01", "=q6=#cb10#", "" },
 		{ 12806, "INV_Chest_Plate04", "=q3=Unforged Rune Covered Breastplate", "=ds=#m8#" },
 		{ 12696, "INV_Scroll_03", "=q3=Plans: Demon Forged Breastplate", "=q1=#m4#, =ds=#p2# #m20#" },
@@ -6300,7 +6298,6 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 12940,"INV_Sword_43","=q3=Dal'Rend's Sacred Charge","=ds=#h3#, #w10#", "8%" },
 		{ 12939,"INV_Sword_40","=q3=Dal'Rend's Tribal Guardian","=ds=#h4#, #w10#", "8%" },
 		{ 12583,"INV_Weapon_Halberd_04","=q3=Blackhand Doomsaw","=ds=#w7# ", "8%" },
-		{ 0, "", "", "" },
         { 51217, "INV_misc_ribbon_01", "=q2=Fashion Coin", "=ds=#e27#", "5%" },
 	};
 	UBRSGyth = {
@@ -8361,44 +8358,51 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 55346, "INV_Weapon_BoneBow2", "=q4=Rain of Spiders", "=ds=#w2#" },
 		{ 55347, "INV_Thunderfall", "=q4=Thunderfall, Stormhammer of the Chief Thane", "=ds=#h1#, #w6#" },
 		{ 0, "", "", "" },
-		{ 55579, "BTNHeartAmulet", "=q4=Heart of Mephistroth", "=ds=#m3#", "100%", "", "", "", "", "", "", "", "", "", "", {
-            { { 55515, "=q1=#m4# =ds=#s4#" }, { 55516, "=q1=#m4# =ds=#s13#" }, { 55517, "=q1=#m4# =ds=#s13#" } },
-        },
-        },
-        { 0, "", "", "" },
-        { 92082, "Spell_Shadow_SummonFelHunter", "=q4=Felforged Dreadhound", "=ds=#e7#", "100%" },
-        { 0, "", "", "" },
-        { 41485, "INV_Misc_Gem_Diamond_01", "=q3=Pristine Ley Crystal", "=ds=#e12#", "100%"},
+		{ 55348, "INV_Kirel", "=q4=Kirel'narak, the Death Sentence", "=ds=#w9#", "" },
+		{ 55512, "inv_shoulder_01", "=q4=Forgotten Hide Pauldrons", "=ds=#s3#, #a2#", "" },
+		{ 55349, "INV_Nethraka", "=q4=Nethraka, Wing of Oblivion", "=ds=#w8#", "" },
+		{ 55350, "Inv_Censer", "=q4=Censer of Soulwarding", "=ds=#s15#" },
+		{ 55352, "INV_Misc_Cape_20", "=q4=Cloak of Rapid Regeneration", "=ds=#s4#" },
+		{ 55354, "INV_Gauntlets_05", "=q4=Khadgar's Guidance", "=ds=#s9#, #a1#" },
+		{ 55355, "INV_Belt_03", "=q4=Memory of the Last Guardian", "=ds=#s10#, #a1#" },
+		{ 92082, "Spell_Shadow_SummonFelHunter", "=q4=Felforged Dreadhound", "=ds=#e7#", "5%" },
+		{ 41485, "INV_Misc_Gem_Diamond_01", "=q3=Pristine Lay Crytstal", "=ds=", "" },
 		{ 0, "", "", "" },
-        { 0, "", "", "" },
-        { 55491, "INV_Chest_Cloth_45", "=q4=Nathrezim Armor of Treachery", "=q17=#c9#=ds=, =q9=#c5#=ds=, =q11=#c8#, =q13=#c1#", "50%, 25%", "", "", "", "", "", "", "", "", "", "", {
-            { { 47272, "=ds=#s3#, #a4#" }, }, -- war
-            { { 47230, "=ds=#s3#, #a1#" }, { 47236, "=ds=#s3#, #a1#" }, }, -- priest
-            { { 47308, "=ds=#s3#, #a1#" }, { 47314, "=ds=#s3#, #a1#" }, }, -- lock
-            { { 47392, "=ds=#s3#, #a2#" }, { 47398, "=ds=#s3#, #a2#" }, { 47404, "=ds=#s3#, #a2#" } }, -- druid
-        },
-        },
-        { 55492, "INV_Shoulder_17", "=q4=Nathrezim Armor of Deceit", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q12=#c6#, =q15=#c7#=ds=, =q10=#c3#=ds=", "50%, 25%", "", "", "", "", "", "", "", "", "", "", {
-            { { 47062, "=ds=#s3#, #a4#" }, { 47068, "=ds=#s3#, #a4#" }, { 47074, "=ds=#s3#, #a4#" }, }, -- paladin
-            { { 47320, "=ds=#s3#, #a3#" }, }, -- hunter
-            { { 47326, "=ds=#s3#, #a2#" }, }, -- rogue
-            { { 47182, "=ds=#s3#, #a3#" }, { 47188, "=ds=#s3#, #a3#" }, { 47194, "=ds=#s3#, #a3#" } }, -- shaman
-            { { 47110, "=ds=#s3#, #a1#" }, { 47116, "=ds=#s3#, #a1#" }, }, -- mage
-        },
-        },
-        { 0, "", "", "" },
-        { 55482, "INV_Jewelry_Necklace_29", "=q4=Ephemeral Pendant", "=ds=T3.5 Neck", "10%", "", "", "", "", "", "", "", "", "", "", {
-            { { 47275, "=ds=#s3#, #a4#" }, }, -- war
-            { { 47233, "=ds=#s3#, #a1#" }, { 47239, "=ds=#s3#, #a1#" }, }, -- priest
-            { { 47311, "=ds=#s3#, #a1#" }, { 47317, "=ds=#s3#, #a1#" }, }, -- lock
-            { { 47395, "=ds=#s3#, #a2#" }, { 47401, "=ds=#s3#, #a2#" }, { 47407, "=ds=#s3#, #a2#" } }, -- druid
-            { { 47065, "=ds=#s12#, #a4#" }, { 47071, "=ds=#s12#, #a4#" }, { 47077, "=ds=#s12#, #a4#" }, }, -- paladin
-            { { 47323, "=ds=#s12#, #a3#" }, }, -- hunter
-            { { 47329, "=ds=#s12#, #a2#" }, }, -- rogue
-            { { 47185, "=ds=#s12#, #a3#" }, { 47191, "=ds=#s12#, #a3#" }, { 47197, "=ds=#s12#, #a3#" } }, -- shaman
-            { { 47113, "=ds=#s12#, #a1#" }, { 47119, "=ds=#s12#, #a1#" }, }, -- mage
-        },
-        },
+		{ 55579, "BTNHeartAmulet", "=q4=Heart of Mephistroth", "=ds=#m3#", "100%" },
+		{ 55515, "INV_Misc_Cape_17", "=q4=Felforged Nathrezan Veil", "=q1=#m4# =ds=#s4#" },
+		{ 55516, "BTNGoldMysticRing", "=q4=Felforged Nathrezan Circlet", "=q1=#m4# =ds=#s13#" },
+		{ 55517, "INV_Jewelry_Ring_Emerald", "=q4=Felforged Nathrezan Aureole", "=q1=#m4# =ds=#s13#" },
+		{ 0, "", "", "" },
+		{ 55491, "INV_Chest_Cloth_45", "=q4=Nathrezim Armor of Treachery", "=q17=#c9#=ds=, =q9=#c5#=ds=, =q11=#c8#, =q13=#c1#", "50%, 25%", "", "", "", "", "", "", "", "", "", "", {
+			{ { 47272, "=ds=#s3#, #a4#" }, }, -- war
+			{ { 47230, "=ds=#s3#, #a1#" }, { 47236, "=ds=#s3#, #a1#" }, }, -- priest
+			{ { 47308, "=ds=#s3#, #a1#" }, { 47314, "=ds=#s3#, #a1#" }, }, -- lock
+			{ { 47392, "=ds=#s3#, #a2#" }, { 47398, "=ds=#s3#, #a2#" }, { 47404, "=ds=#s3#, #a2#" } }, -- druid
+		},
+		},
+		{ 55492, "INV_Shoulder_17", "=q4=Nathrezim Armor of Deceit", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q12=#c6#, =q15=#c7#=ds=, =q10=#c3#=ds=", "50%, 25%", "", "", "", "", "", "", "", "", "", "", {
+			{ { 47062, "=ds=#s3#, #a4#" }, { 47068, "=ds=#s3#, #a4#" }, { 47074, "=ds=#s3#, #a4#" }, }, -- paladin
+			{ { 47320, "=ds=#s3#, #a3#" }, }, -- hunter
+			{ { 47326, "=ds=#s3#, #a2#" }, }, -- rogue
+			{ { 47182, "=ds=#s3#, #a3#" }, { 47188, "=ds=#s3#, #a3#" }, { 47194, "=ds=#s3#, #a3#" } }, -- shaman
+			{ { 47110, "=ds=#s3#, #a1#" }, { 47116, "=ds=#s3#, #a1#" }, }, -- mage
+		},
+		},
+		{ 0, "", "", "" },
+		{ 55482, "INV_Jewelry_Necklace_29", "=q4=Ephemeral Pendant", "=ds=T3.5 Neck", "4%", "", "", "", "", "", "", "", "", "", "", {
+			{ { 47275, "=ds=#s3#, #a4#" }, }, -- war
+			{ { 47233, "=ds=#s3#, #a1#" }, { 47239, "=ds=#s3#, #a1#" }, }, -- priest
+			{ { 47311, "=ds=#s3#, #a1#" }, { 47317, "=ds=#s3#, #a1#" }, }, -- lock
+			{ { 47395, "=ds=#s3#, #a2#" }, { 47401, "=ds=#s3#, #a2#" }, { 47407, "=ds=#s3#, #a2#" } }, -- druid
+			{ { 47065, "=ds=#s12#, #a4#" }, { 47071, "=ds=#s12#, #a4#" }, { 47077, "=ds=#s12#, #a4#" }, }, -- paladin
+			{ { 47323, "=ds=#s12#, #a3#" }, }, -- hunter
+			{ { 47329, "=ds=#s12#, #a2#" }, }, -- rogue
+			{ { 47185, "=ds=#s12#, #a3#" }, { 47191, "=ds=#s12#, #a3#" }, { 47197, "=ds=#s12#, #a3#" } }, -- shaman
+			{ { 47113, "=ds=#s12#, #a1#" }, { 47119, "=ds=#s12#, #a1#" }, }, -- mage
+		},
+		},
+		{ 0, "", "", "" },
+		{ 41447, "INV_Misc_Gem_Pearl_06", "=q5=Soul of the Dreadlord", "=ds=#m3#" },
 	};
 	UKHTrash = {
 		{ 55275, "INV_Misc_Gem_Amethyst_03", "=q4=Slivers of Nullification", "=ds=#s14#", "0.25%" },
