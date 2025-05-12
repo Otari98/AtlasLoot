@@ -5,11 +5,15 @@ local strfind = string.find
 local GetItemInfo = GetItemInfo
 local GREY = "|cff999999"
 
+local insideHook = false
 local tooltipMoney = 0
 local original_SetTooltipMoney = SetTooltipMoney
 function SetTooltipMoney(frame, money)
-    original_SetTooltipMoney(frame, money)
-    tooltipMoney = money or 0
+    if insideHook then
+        tooltipMoney = money or 0
+    else
+        original_SetTooltipMoney(frame, money)
+    end
 end
 
 local WrappingLines = {
@@ -89,12 +93,6 @@ local function AddSourceLine(tooltip, sourceStr)
             tooltip:AddLine(lines[i][1], lines[i][3], lines[i][4], lines[i][5], wrap)
         end
     end
-    if tooltipMoney > 0 then
-        local moneyFrame = getglobal(tooltip:GetName().."MoneyFrame")
-        moneyFrame:SetPoint("LEFT", tooltip:GetName().."TextLeft"..tooltip:NumLines(), "LEFT", 4, 0)
-        moneyFrame:Show()
-    end
-    tooltip:Show()
 end
 
 local lastItemID, lastSourceStr
@@ -102,31 +100,25 @@ local function ExtendTooltip(tooltip)
     if not AtlasLootCharDB.ShowSource then
         return
     end
-    -- local tooltipName = tooltip:GetName()
     local itemID = tonumber(tooltip.itemID)
     if itemID and itemID ~= 51217 then -- 51217 Fashion Coin
         if itemID ~= lastItemID then
             lastItemID = itemID
             lastSourceStr = nil
-            -- for row = 1, tooltip:NumLines() do
-            --     local rowtext = getglobal(tooltipName .. "TextLeft" .. row):GetText()
-            --     -- skip items that state which rep they require
-            --     if strfind(rowtext or "", "—", 1, true) then
-            --         return
-            --     end
-            -- end
             local source = AtlasLoot_Data["AtlasLootSources"][itemID]
             if source then
                 local str = GREY .. source .. "|r"
-                AddSourceLine(tooltip, str)
                 lastSourceStr = str
             end
-        else
-            if lastSourceStr then
-                AddSourceLine(tooltip, lastSourceStr)
-            end
+        end
+        if lastSourceStr then
+            AddSourceLine(tooltip, lastSourceStr)
         end
     end
+    if tooltipMoney > 0 then
+        original_SetTooltipMoney(tooltip, tooltipMoney)
+    end
+    tooltip:Show()
 end
 
 local lastSearchName
@@ -174,49 +166,63 @@ local function HookTooltip(tooltip)
     end)
 
     function tooltip.SetLootRollItem(self, rollID)
+        insideHook = true
         original_SetLootRollItem(self, rollID)
+        insideHook = false
         local _, _, id = strfind(GetLootRollItemLink(rollID) or "", "item:(%d+)")
         self.itemID = tonumber(id)
         ExtendTooltip(self)
     end
 
     function tooltip.SetLootItem(self, slot)
+        insideHook = true
         original_SetLootItem(self, slot)
+        insideHook = false
         local _, _, id = strfind(GetLootSlotLink(slot) or "", "item:(%d+)")
         self.itemID = tonumber(id)
         ExtendTooltip(self)
     end
 
     function tooltip.SetMerchantItem(self, merchantIndex)
+        insideHook = true
         original_SetMerchantItem(self, merchantIndex)
+        insideHook = false
         local _, _, id = strfind(GetMerchantItemLink(merchantIndex) or "", "item:(%d+)")
         self.itemID = tonumber(id)
         ExtendTooltip(self)
     end
 
     function tooltip.SetQuestLogItem(self, itemType, index)
+        insideHook = true
         original_SetQuestLogItem(self, itemType, index)
+        insideHook = false
         local _, _, id = strfind(GetQuestLogItemLink(itemType, index) or "", "item:(%d+)")
         self.itemID = tonumber(id)
         ExtendTooltip(self)
     end
 
     function tooltip.SetQuestItem(self, itemType, index)
+        insideHook = true
         original_SetQuestItem(self, itemType, index)
+        insideHook = false
         local _, _, id = strfind(GetQuestItemLink(itemType, index) or "", "item:(%d+)")
         self.itemID = tonumber(id)
         ExtendTooltip(self)
     end
 
     function tooltip.SetHyperlink(self, arg1)
+        insideHook = true
         original_SetHyperlink(self, arg1)
+        insideHook = false
         local _, _, id = strfind(arg1 or "", "item:(%d+)")
         self.itemID = tonumber(id)
         ExtendTooltip(self)
     end
 
     function tooltip.SetBagItem(self, container, slot)
+        insideHook = true
         local hasCooldown, repairCost = original_SetBagItem(self, container, slot)
+        insideHook = false
         local _, _, id = strfind(GetContainerItemLink(container, slot) or "", "item:(%d+)")
         self.itemID = tonumber(id)
         ExtendTooltip(self)
@@ -224,14 +230,18 @@ local function HookTooltip(tooltip)
     end
 
     function tooltip.SetInboxItem(self, mailID, attachmentIndex)
+        insideHook = true
         original_SetInboxItem(self, mailID, attachmentIndex)
+        insideHook = false
         local itemName = GetInboxItem(mailID)
         self.itemID = GetItemIDByName(itemName)
         ExtendTooltip(self)
     end
 
     function tooltip.SetInventoryItem(self, unit, slot)
+        insideHook = true
         local hasItem, hasCooldown, repairCost = original_SetInventoryItem(self, unit, slot)
+        insideHook = false
         local _, _, id = strfind(GetInventoryItemLink(unit, slot) or "", "item:(%d+)")
         self.itemID = tonumber(id)
         ExtendTooltip(self)
@@ -239,21 +249,27 @@ local function HookTooltip(tooltip)
     end
 
     function tooltip.SetCraftItem(self, skill, slot)
+        insideHook = true
         original_SetCraftItem(self, skill, slot)
+        insideHook = false
         local _, _, id = strfind(GetCraftReagentItemLink(skill, slot) or "", "item:(%d+)")
         self.itemID = tonumber(id)
         ExtendTooltip(self)
     end
 
     function tooltip.SetCraftSpell(self, slot)
+        insideHook = true
         original_SetCraftSpell(self, slot)
+        insideHook = false
         local _, _, id = strfind(GetCraftItemLink(slot) or "", "item:(%d+)")
         self.itemID = tonumber(id)
         ExtendTooltip(self)
     end
 
     function tooltip.SetTradeSkillItem(self, skillIndex, reagentIndex)
+        insideHook = true
         original_SetTradeSkillItem(self, skillIndex, reagentIndex)
+        insideHook = false
         if reagentIndex then
             local _, _, id = strfind(GetTradeSkillReagentItemLink(skillIndex, reagentIndex) or "", "item:(%d+)")
             self.itemID = tonumber(id)
@@ -265,28 +281,36 @@ local function HookTooltip(tooltip)
     end
 
     function tooltip.SetAuctionItem(self, atype, index)
+        insideHook = true
         original_SetAuctionItem(self, atype, index)
+        insideHook = false
         local itemName = GetAuctionItemInfo(atype, index)
         self.itemID = GetItemIDByName(itemName)
         ExtendTooltip(self)
     end
 
     function tooltip.SetAuctionSellItem(self)
+        insideHook = true
         original_SetAuctionSellItem(self)
+        insideHook = false
         local itemName = GetAuctionSellItemInfo()
         self.itemID = GetItemIDByName(itemName)
         ExtendTooltip(self)
     end
 
     function tooltip.SetTradePlayerItem(self, index)
+        insideHook = true
         original_SetTradePlayerItem(self, index)
+        insideHook = false
         local _, _, id = strfind(GetTradePlayerItemLink(index) or "", "item:(%d+)")
         self.itemID = tonumber(id)
         ExtendTooltip(self)
     end
 
     function tooltip.SetTradeTargetItem(self, index)
+        insideHook = true
         original_SetTradeTargetItem(self, index)
+        insideHook = false
         local _, _, id = strfind(GetTradeTargetItemLink(index) or "", "item:(%d+)")
         self.itemID = tonumber(id)
         ExtendTooltip(self)
@@ -294,7 +318,22 @@ local function HookTooltip(tooltip)
 end
 
 HookTooltip(GameTooltip)
-HookTooltip(ItemRefTooltip)
+
+local original_SetItemRef = SetItemRef
+function SetItemRef(link, text, button)
+    local item, _, id = string.find(link, "item:(%d+)")
+    ItemRefTooltip.itemID = id
+    original_SetItemRef(link, text, button)
+    if not IsShiftKeyDown() and not IsControlKeyDown() and item then
+        ExtendTooltip(ItemRefTooltip)
+    end
+end
+
+local original_OnHide = ItemRefTooltip:GetScript("OnHide")
+ItemRefTooltip:SetScript("OnHide", function()
+    original_OnHide()
+    ItemRefTooltip.itemID = nil
+end)
 
 AtlasLootTip:SetScript("OnShow", function()
     if aux_frame and aux_frame:IsVisible() then
@@ -5242,10 +5281,10 @@ AtlasLoot_Data["AtlasLootSources"] = {
     [41346] = AL["Jewelcrafting"].." ("..AL["Skill:"].." 210+)",
     [41347] = AL["Jewelcrafting"].." ("..AL["Skill:"].." 220+)",
     [41349] = AL["Jewelcrafting"].." ("..AL["Skill:"].." 220+)",
-    [41373] = AL["Upper Karazhan Halls"].." - "..AL["Ley-Watcher Incantagos"],
+    [41373] = AL["Upper Karazhan Halls"].." - "..AL["Ley-Watcher Incantagos"].." (100%)",
     [41403] = AL["Upper Karazhan Halls"].." - "..AL["Ley-Watcher Incantagos"].." (100%)",
-    [41412] = AL["Upper Karazhan Halls"].." - "..AL["Anomalus"],
-    [41414] = AL["Upper Karazhan Halls"].." - "..AL["Echo of Medivh"],
+    [41412] = AL["Upper Karazhan Halls"].." - "..AL["Anomalus"].." (100%)",
+    [41414] = AL["Upper Karazhan Halls"].." - "..AL["Echo of Medivh"].." (100%)",
     [41485] = AL["Upper Karazhan Halls"].." - "..AL["Mephistroth"].." (100%)",
     [47000] = AL["Molten Core"].." - "..AL["Tier 1"].." "..AL["Set"],
     [47001] = AL["Molten Core"].." - "..AL["Tier 1"].." "..AL["Set"],
@@ -5911,12 +5950,12 @@ AtlasLoot_Data["AtlasLootSources"] = {
     [55339] = AL["Jewelcrafting"].." ("..AL["Skill:"].." 200+)",
     [55340] = AL["Jewelcrafting"].." ("..AL["Skill:"].." 85+)",
     [55341] = AL["Jewelcrafting"].." ("..AL["Skill:"].." 135+)",
-    [55346] = AL["Upper Karazhan Halls"].." - "..AL["Mephistroth"],
-    [55347] = AL["Upper Karazhan Halls"].." - "..AL["Mephistroth"],
-    [55351] = AL["Upper Karazhan Halls"].." - "..AL["Mephistroth"],
-    [55353] = AL["Upper Karazhan Halls"].." - "..AL["Mephistroth"],
-    [55356] = AL["Upper Karazhan Halls"].." - "..AL["Mephistroth"],
-    [55357] = AL["Upper Karazhan Halls"].." - "..AL["Mephistroth"],
+    [55346] = AL["Upper Karazhan Halls"].." - "..AL["Mephistroth"].." (8%)",
+    [55347] = AL["Upper Karazhan Halls"].." - "..AL["Mephistroth"].." (8%)",
+    [55351] = AL["Upper Karazhan Halls"].." - "..AL["Mephistroth"].." (19%)",
+    [55353] = AL["Upper Karazhan Halls"].." - "..AL["Mephistroth"].." (19%)",
+    [55356] = AL["Upper Karazhan Halls"].." - "..AL["Mephistroth"].." (19%)",
+    [55357] = AL["Upper Karazhan Halls"].." - "..AL["Mephistroth"].." (8%)",
     [55359] = AL["Jewelcrafting"]..": "..AL["Goldsmithing"].." ("..AL["Skill:"].." 300)",
     [55360] = AL["Jewelcrafting"]..": "..AL["Goldsmithing"].." ("..AL["Skill:"].." 290+)",
     [55361] = AL["Jewelcrafting"]..": "..AL["Goldsmithing"].." ("..AL["Skill:"].." 300)",
@@ -5955,31 +5994,31 @@ AtlasLoot_Data["AtlasLootSources"] = {
     [55476] = AL["Scarlet Monastery (Armory)"].." - "..AL["Armory Quartermaster Daghelm"].." (25%)",
     [55477] = AL["Scarlet Monastery (Armory)"].." - "..AL["Armory Quartermaster Daghelm"].." (25%)",
     [55482] = AL["Upper Karazhan Halls"].." - "..AL["Mephistroth"].." (10%)",
-    [55483] = AL["Upper Karazhan Halls"].." - "..AL["King (Chess fight)"].." (50%, 25%)",
-    [55484] = AL["Upper Karazhan Halls"].." - "..AL["King (Chess fight)"].." (50%, 25%)",
-    [55485] = AL["Upper Karazhan Halls"].." - "..AL["Sanv Tas'dal"].." (50%, 25%)",
-    [55486] = AL["Upper Karazhan Halls"].." - "..AL["Sanv Tas'dal"].." (50%, 25%)",
-    [55489] = AL["Upper Karazhan Halls"].." - "..AL["Kruul"].." (50%, 25%)",
-    [55490] = AL["Upper Karazhan Halls"].." - "..AL["Kruul"].." (50%, 25%)",
-    [55491] = AL["Upper Karazhan Halls"].." - "..AL["Mephistroth"].." (50%, 25%)",
-    [55492] = AL["Upper Karazhan Halls"].." - "..AL["Mephistroth"].." (50%, 25%)",
-    [55494] = AL["Azshara"].." - "..AL["Cla'ckora"],
-    [55495] = AL["Azshara"].." - "..AL["Cla'ckora"],
-    [55496] = AL["Azshara"].." - "..AL["Cla'ckora"],
-    [55497] = AL["Azshara"].." - "..AL["Cla'ckora"],
-    [55498] = AL["Azshara"].." - "..AL["Cla'ckora"],
-    [55499] = AL["Azshara"].." - "..AL["Cla'ckora"],
-    [55500] = AL["Azshara"].." - "..AL["Cla'ckora"],
-    [55501] = AL["Azshara"].." - "..AL["Cla'ckora"],
-    [55502] = AL["Azshara"].." - "..AL["Cla'ckora"],
-    [55503] = AL["Azshara"].." - "..AL["Cla'ckora"],
-    [55504] = AL["Azshara"].." - "..AL["Cla'ckora"],
+    [55483] = AL["Upper Karazhan Halls"].." - "..AL["King (Chess fight)"].." (50%)",
+    [55484] = AL["Upper Karazhan Halls"].." - "..AL["King (Chess fight)"].." (50%)",
+    [55485] = AL["Upper Karazhan Halls"].." - "..AL["Sanv Tas'dal"].." (50%)",
+    [55486] = AL["Upper Karazhan Halls"].." - "..AL["Sanv Tas'dal"].." (50%)",
+    [55489] = AL["Upper Karazhan Halls"].." - "..AL["Kruul"].." (50%)",
+    [55490] = AL["Upper Karazhan Halls"].." - "..AL["Kruul"].." (50%)",
+    [55491] = AL["Upper Karazhan Halls"].." - "..AL["Mephistroth"].." (50%)",
+    [55492] = AL["Upper Karazhan Halls"].." - "..AL["Mephistroth"].." (50%)",
+    [55494] = AL["Azshara"].." - "..AL["Cla'ckora"].." (20%)",
+    [55495] = AL["Azshara"].." - "..AL["Cla'ckora"].." (20%)",
+    [55496] = AL["Azshara"].." - "..AL["Cla'ckora"].." (17%)",
+    [55497] = AL["Azshara"].." - "..AL["Cla'ckora"].." (17%)",
+    [55498] = AL["Azshara"].." - "..AL["Cla'ckora"].." (20%)",
+    [55499] = AL["Azshara"].." - "..AL["Cla'ckora"].." (17%)",
+    [55500] = AL["Azshara"].." - "..AL["Cla'ckora"].." (17%)",
+    [55501] = AL["Azshara"].." - "..AL["Cla'ckora"].." (20%)",
+    [55502] = AL["Azshara"].." - "..AL["Cla'ckora"].." (17%)",
+    [55503] = AL["Azshara"].." - "..AL["Cla'ckora"].." (17%)",
+    [55504] = AL["Azshara"].." - "..AL["Cla'ckora"].." (20%)",
     [55506] = AL["Upper Karazhan Halls"].." - "..AL["Kruul"].." (11.1%)",
     [55507] = AL["Upper Karazhan Halls"].." - "..AL["Ley-Watcher Incantagos"].." (25%)",
     [55508] = AL["Upper Karazhan Halls"].." - "..AL["Trash Mobs"].." (0.25%)",
     [55510] = AL["Upper Karazhan Halls"].." - "..AL["Kruul"].." (11.1%)",
     [55511] = AL["Upper Karazhan Halls"].." - "..AL["Kruul"].." (11.1%)",
-    [55513] = AL["Upper Karazhan Halls"].." - "..AL["Mephistroth"],
+    [55513] = AL["Upper Karazhan Halls"].." - "..AL["Mephistroth"].." (19%)",
     [55515] = AL["Upper Karazhan Halls"].." - "..AL["Mephistroth"],
     [55516] = AL["Upper Karazhan Halls"].." - "..AL["Mephistroth"],
     [55517] = AL["Upper Karazhan Halls"].." - "..AL["Mephistroth"],
@@ -7193,6 +7232,7 @@ AtlasLoot_Data["AtlasLootSources"] = {
     [92006] = AL["Lower Karazhan Halls"].." - "..AL["Enchants"],
     [92007] = AL["Lower Karazhan Halls"].." - "..AL["Enchants"],
     [92008] = AL["Lower Karazhan Halls"].." - "..AL["Enchants"],
+    [92020] = AL["Azshara"].." - "..AL["Cla'ckora"].." (5%)",
     [92080] = AL["Molten Core"].." - "..AL["Ragnaros"],
     [92082] = AL["Upper Karazhan Halls"].." - "..AL["Mephistroth"].." (100%)",
 }

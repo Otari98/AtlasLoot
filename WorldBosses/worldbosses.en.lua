@@ -230,6 +230,8 @@ AtlasLoot_Data["AtlasLootWBItems"] = {
 		{ 55503, "INV_Jewelry_Ring_38", "=q4=Loop of Unceasing Frost", "=ds=#s13#" },
 		{ 55501, "INV_Ore_Arcanite_02", "=q4=Sphere of the Endless Gulch", "=ds=#s14#" },
 		{ 55497, "INV_QirajIdol_Night", "=q4=Idol of Ebb and Flow", "=ds=#e16# =q13=#c1#" },
+        { 0, "", "", "", "" },
+        { 92020, "INV_Misc_Birdbeck_02", "=q3=Spawn of Cla'ckora", "=ds=#e15#", "5%" },
 	 };
 	KKazzak = {
 		{ 18546, "INV_Helmet_18", "=q4=Infernal Headcage", "=ds=#s1#, #a3#", "20%" },

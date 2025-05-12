@@ -8110,12 +8110,12 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 55081, "INV_Boots_05", "=q4=Manadrenched Feather Slippers", "=ds=#s12#, #a1#", "25%" },
 		{ 55285, "INV_Gauntlets_05", "=q4=Crite's Holy Hands", "=ds=#s9#, #a1#", "25%" },
 		{ 0, "", "", "" },
-		{ 55079, "INV_Chest_Leather_04", "=q4=Ravenkeeper’s Frenzied Embrace", "=ds=#s5#, #a2#", "25%" },
+		{ 55079, "INV_Chest_Leather_04", "=q4=Ravenkeeper's Frenzied Embrace", "=ds=#s5#, #a2#", "25%" },
 		{ 55080, "INV_Bloodmoon", "=q4=Bloodmoon, Sickle of the Murderous Flight", "=ds=#h1#, #w1#", "25%" },
 		{ 55082, "INV_QirajIdol_War", "=q4=Idol of Laceration", "=ds=#s16#, #e16# =q13=#c1#", "25%" },
 		{ 55083, "inv_helmet_24", "=q4=Crown of the Wildpack", "=ds=#s1#, #a3#", "25%" },
 		{ 0, "", "", "" },
-		{ 41485, "INV_Misc_Gem_Diamond_01", "=q3=Pristine Lay Crytstal", "=ds=", "3.25%" },
+		{ 41485, "INV_Misc_Gem_Diamond_01", "=q3=Pristine Ley Crystal", "=ds=#e12#", "3.25%" },
 	};
 	UKHIncantagos = {
 		{ 55086, "INV_Belt_22", "=q4=Magehunter Belt", "=ds=#s10#, #a3# ", "25%" },
@@ -8138,8 +8138,8 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 55134, "Inv_Wand_05", "=q4=Rod of Permafrost", "=q1=#m4# =ds=#w12#" },
 		{ 55135, "Inv_misc_monsterscales_09", "=q4=Shard of Leyflow", "=q1=#m4# =ds=#s14#" },
 		{ 0, "", "", "" },
-		{ 41485, "INV_Misc_Gem_Diamond_01", "=q3=Pristine Lay Crytstal", "=ds=", "3.25%" },
-		{ 41373, "INV_Misc_EngGizmos_08", "=q4=Draconic Focus", "=ds=#m3#" },
+		{ 41485, "INV_Misc_Gem_Diamond_01", "=q3=Pristine Ley Crystal", "=ds=#e12#", "3.25%" },
+		{ 41373, "INV_Misc_EngGizmos_08", "=q1=Draconic Focus", "=ds=#m3#", "100%", },
 	};
 	UKHAnomalus = {
 		{ 55092, "INV_Boots_Plate_06", "=q4=Manahide Slippers", "=ds=#s12#, #a2#", "25%" },
@@ -8152,8 +8152,8 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 55097, "INV_Jewelry_Necklace_08", "=q4=Choker of Chromatic Power", "=ds=#s2#", "25%" },
 		{ 55098, "INV_Gauntlets_05", "=q4=Gloves of Nourishment", "=ds=#s9#, #a2#", "25%" },
 		{ 0, "", "", "" },
-		{ 41485, "INV_Misc_Gem_Diamond_01", "=q3=Pristine Lay Crytstal", "=ds=", "3.25%" },
-		{ 41412, "INV_Enchant_DustSoul", "=q4=Cosmic Residue", "=ds=#m3#" },
+		{ 41485, "INV_Misc_Gem_Diamond_01", "=q3=Pristine Ley Crystal", "=ds=#e12#", "3.25%" },
+		{ 41412, "INV_Enchant_DustSoul", "=q1=Cosmic Residue", "=ds=#m3#", "100%", },
 	};
 	UKHEcho = {
 		{ 55108, "INV_DemonhornShoulders", "=q4=Dreadslayer Shoulderblades", "=ds=#s3#, #a4#", "25%" },
@@ -8166,8 +8166,8 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 55112, "INV_Jewelry_Talisman_Health", "=q4=Pendant of Forgiven Mistakes", "=ds=#s2#", "25%" },
 		{ 55094, "INV_Jewelry_Ring_Jade", "=q4=Medivh's Hindsight", "=ds=#s13#", "25%" },
 		{ 0, "", "", "" },
-		{ 41485, "INV_Misc_Gem_Diamond_01", "=q3=Pristine Lay Crytstal", "=ds=", "3.25%" },
-		{ 41414, "INV_Enchant_EssenceMysticalSmall", "=q1=Anima of the Guardian", "=ds=#m3#" },
+		{ 41485, "INV_Misc_Gem_Diamond_01", "=q3=Pristine Ley Crystal", "=ds=#e12#", "3.25%" },
+		{ 41414, "INV_Enchant_EssenceMysticalSmall", "=q1=Anima of the Guardian", "=ds=#m3#", "100%", },
 	};
 	UKHKing = {
 		{ 55088, "INV_Gauntlets_05", "=q4=Dragonclaw Gauntlets", "=ds=#s9#, #a4#", "12.5%" },
@@ -8181,18 +8181,18 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 0, "", "", "" },
         { 20739, "Ability_Mount_RidingHorse", "=q4=Mechanical Horse", "=ds=#e7#", "3%" },
 		{ 0, "", "", "" },
-		{ 41485, "INV_Misc_Gem_Diamond_01", "=q3=Pristine Lay Crytstal", "=ds=", "3.25%" },
+		{ 41485, "INV_Misc_Gem_Diamond_01", "=q3=Pristine Ley Crystal", "=ds=#e12#", "3.25%" },
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
-		{ 55483, "INV_Boots_Cloth_01", "=q4=Ethereal Boots of Conquest", "=q17=#c9#=ds=, =q9=#c5#=ds=, =q11=#c8#, =q13=#c1#", "50%, 25%", "", "", "", "", "", "", "", "", "", "", {
+		{ 55483, "INV_Boots_Cloth_01", "=q4=Ethereal Boots of Conquest", "=q17=#c9#=ds=, =q9=#c5#=ds=, =q11=#c8#, =q13=#c1#", "50%", "", "", "", "", "", "", "", "", "", "", {
 			{ { 47274, "=ds=#s12#, #a4#" }, }, -- war
 			{ { 47232, "=ds=#s12#, #a1#" }, { 47238, "=ds=#s12#, #a1#" }, }, -- priest
 			{ { 47310, "=ds=#s12#, #a1#" }, { 47316, "=ds=#s12#, #a1#" }, }, -- lock
 			{ { 47394, "=ds=#s12#, #a2#" }, { 47400, "=ds=#s12#, #a2#" }, { 47406, "=ds=#s3#, #a2#" } }, -- druid
 		},
 		},
-		{ 55484, "INV_Boots_Cloth_01", "=q4=Ethereal Boots of Ascendancy", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q12=#c6#, =q15=#c7#=ds=, =q10=#c3#=ds=", "50%, 25%", "", "", "", "", "", "", "", "", "", "", {
+		{ 55484, "INV_Boots_Cloth_01", "=q4=Ethereal Boots of Ascendancy", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q12=#c6#, =q15=#c7#=ds=, =q10=#c3#=ds=", "50%", "", "", "", "", "", "", "", "", "", "", {
 			{ { 47064, "=ds=#s12#, #a4#" }, { 47070, "=ds=#s12#, #a4#" }, { 47076, "=ds=#s12#, #a4#" }, }, -- paladin
 			{ { 47322, "=ds=#s12#, #a3#" }, }, -- hunter
 			{ { 47328, "=ds=#s12#, #a2#" }, }, -- rogue
@@ -8201,7 +8201,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		},
 		},
 		{ 0, "", "", "" },
-		{ 55482, "INV_Jewelry_Necklace_29", "=q4=Ephemeral Pendant", "=ds=T3.5 Neck", "10%", "", "", "", "", "", "", "", "", "", "", {
+		{ 55482, "INV_Jewelry_Necklace_29", "=q4=Ephemeral Pendant", "=ds=#s2#", "10%", "", "", "", "", "", "", "", "", "", "", {
 			{ { 47275, "=ds=#s3#, #a4#" }, }, -- war
 			{ { 47233, "=ds=#s3#, #a1#" }, { 47239, "=ds=#s3#, #a1#" }, }, -- priest
 			{ { 47311, "=ds=#s3#, #a1#" }, { 47317, "=ds=#s3#, #a1#" }, }, -- lock
@@ -8223,21 +8223,21 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 55118, "INV_Misc_Cape_06", "=q4=Kum'isha's Tattered Drape", "=ds=#s4#", "14.3%" },
 		{ 55119, "inv_helmet_24", "=q4=Forgotten Hide Helm", "=ds=#s1#, #a2#", "14.3%" },
 		{ 0, "", "", "" },
-		{ 41485, "INV_Misc_Gem_Diamond_01", "=q3=Pristine Lay Crytstal", "=ds=", "3.25%" },
+		{ 41485, "INV_Misc_Gem_Diamond_01", "=q3=Pristine Ley Crystal", "=ds=#e12#", "3.25%" },
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
-		{ 55485, "INV_Shoulder_17", "=q4=Shifting Mantle of Conquest", "=q17=#c9#=ds=, =q9=#c5#=ds=, =q11=#c8#, =q13=#c1#", "50%, 25%", "", "", "", "", "", "", "", "", "", "", {
+		{ 55485, "INV_Shoulder_17", "=q4=Shifting Mantle of Conquest", "=q17=#c9#=ds=, =q9=#c5#=ds=, =q11=#c8#, =q13=#c1#", "50%", "", "", "", "", "", "", "", "", "", "", {
 			{ { 47271, "=ds=#s3#, #a4#" }, }, -- war
 			{ { 47229, "=ds=#s3#, #a1#" }, { 47235, "=ds=#s3#, #a1#" }, }, -- priest
 			{ { 47307, "=ds=#s3#, #a1#" }, { 47313, "=ds=#s3#, #a1#" }, }, -- lock
 			{ { 47391, "=ds=#s3#, #a2#" }, { 47397, "=ds=#s3#, #a2#" }, { 47403, "=ds=#s3#, #a2#" } }, -- druid
 		},
 		},
-		{ 55486, "INV_Shoulder_17", "=q4=Shifting Mantle of Ascendancy", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q12=#c6#, =q15=#c7#=ds=, =q10=#c3#=ds=", "50%, 25%", "", "", "", "", "", "", "", "", "", "", {
+		{ 55486, "INV_Shoulder_17", "=q4=Shifting Mantle of Ascendancy", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q12=#c6#, =q15=#c7#=ds=, =q10=#c3#=ds=", "50%", "", "", "", "", "", "", "", "", "", "", {
 			{ { 47061, "=ds=#s3#, #a4#" }, { 47067, "=ds=#s3#, #a4#" }, { 47073, "=ds=#s3#, #a4#" }, }, -- paladin
 			{ { 47319, "=ds=#s3#, #a3#" }, }, -- hunter
 			{ { 47325, "=ds=#s3#, #a2#" }, }, -- rogue
@@ -8246,7 +8246,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		},
 		},
 		{ 0, "", "", "" },
-		{ 55482, "INV_Jewelry_Necklace_29", "=q4=Ephemeral Pendant", "=ds=T3.5 Neck", "10%", "", "", "", "", "", "", "", "", "", "", {
+		{ 55482, "INV_Jewelry_Necklace_29", "=q4=Ephemeral Pendant", "=ds=#s2#", "10%", "", "", "", "", "", "", "", "", "", "", {
 			{ { 47275, "=ds=#s3#, #a4#" }, }, -- war
 			{ { 47233, "=ds=#s3#, #a1#" }, { 47239, "=ds=#s3#, #a1#" }, }, -- priest
 			{ { 47311, "=ds=#s3#, #a1#" }, { 47317, "=ds=#s3#, #a1#" }, }, -- lock
@@ -8270,19 +8270,19 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 55510, "inv_stone_10", "=q4=Fragments of Aldrach", "=ds=#w11#", "11.1%" },
 		{ 55511, "Inv_Wand_06", "=q4=Hellflame", "=ds=#w12#", "11.1%" },
 		{ 0, "", "", "" },
-		{ 41485, "INV_Misc_Gem_Diamond_01", "=q3=Pristine Lay Crytstal", "=ds=", "3.25%" },
+		{ 41485, "INV_Misc_Gem_Diamond_01", "=q3=Pristine Ley Crystal", "=ds=#e12#", "3.25%" },
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
-		{ 55489, "INV_Pants_Plate_11", "=q4=Brutal Leggings of Conquest", "=q17=#c9#=ds=, =q9=#c5#=ds=, =q11=#c8#, =q13=#c1#", "50%, 25%", "", "", "", "", "", "", "", "", "", "", {
+		{ 55489, "INV_Pants_Plate_11", "=q4=Brutal Leggings of Conquest", "=q17=#c9#=ds=, =q9=#c5#=ds=, =q11=#c8#, =q13=#c1#", "50%", "", "", "", "", "", "", "", "", "", "", {
 			{ { 47273, "=ds=#s11#, #a4#" }, }, -- war
 			{ { 47231, "=ds=#s11#, #a1#" }, { 47237, "=ds=#s11#, #a1#" }, }, -- priest
 			{ { 47309, "=ds=#s11#, #a1#" }, { 47315, "=ds=#s11#, #a1#" }, }, -- lock
 			{ { 47393, "=ds=#s11#, #a2#" }, { 47399, "=ds=#s11#, #a2#" }, { 47405, "=ds=#s11#, #a2#" } }, -- druid
 		},
 		},
-		{ 55490, "INV_Pants_Plate_11", "=q4=Brutal Leggings of Ascendancy", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q12=#c6#, =q15=#c7#=ds=, =q10=#c3#=ds=", "50%, 25%", "", "", "", "", "", "", "", "", "", "", {
+		{ 55490, "INV_Pants_Plate_11", "=q4=Brutal Leggings of Ascendancy", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q12=#c6#, =q15=#c7#=ds=, =q10=#c3#=ds=", "50%", "", "", "", "", "", "", "", "", "", "", {
 			{ { 47063, "=ds=#s11#, #a4#" }, { 47069, "=ds=#s11#, #a4#" }, { 47075, "=ds=#s11#, #a4#" }, }, -- paladin
 			{ { 47321, "=ds=#s11#, #a3#" }, }, -- hunter
 			{ { 47327, "=ds=#s11#, #a2#" }, }, -- rogue
@@ -8291,7 +8291,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		},
 		},
 		{ 0, "", "", "" },
-		{ 55482, "INV_Jewelry_Necklace_29", "=q4=Ephemeral Pendant", "=ds=T3.5 Neck", "10%", "", "", "", "", "", "", "", "", "", "", {
+		{ 55482, "INV_Jewelry_Necklace_29", "=q4=Ephemeral Pendant", "=ds=#s2#", "10%", "", "", "", "", "", "", "", "", "", "", {
 			{ { 47275, "=ds=#s3#, #a4#" }, }, -- war
 			{ { 47233, "=ds=#s3#, #a1#" }, { 47239, "=ds=#s3#, #a1#" }, }, -- priest
 			{ { 47311, "=ds=#s3#, #a1#" }, { 47317, "=ds=#s3#, #a1#" }, }, -- lock
@@ -8313,21 +8313,21 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 55125, "INV_Gauntlets_05", "=q4=Handwraps of Dead Winds", "=ds=#s9#, #a2#", "14.3%" },
 		{ 55126, "inv_shoulder_14", "=q4=Mantle of the Drifting Stars", "=ds=#s3#, #a2#", "14.3%" },
 		{ 0, "", "", "" },
-		{ 41485, "INV_Misc_Gem_Diamond_01", "=q3=Pristine Lay Crytstal", "=ds=", "3.25%" },
+		{ 41485, "INV_Misc_Gem_Diamond_01", "=q3=Pristine Ley Crystal", "=ds=#e12#", "3.25%" },
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
-		{ 55489, "INV_Helmet_57", "=q4=Fractured Crown of Conquest", "=q17=#c9#=ds=, =q9=#c5#=ds=, =q11=#c8#, =q13=#c1#", "50%, 25%", "", "", "", "", "", "", "", "", "", "", {
+		{ 55489, "INV_Helmet_57", "=q4=Fractured Crown of Conquest", "=q17=#c9#=ds=, =q9=#c5#=ds=, =q11=#c8#, =q13=#c1#", "50%", "", "", "", "", "", "", "", "", "", "", {
 			{ { 47270, "=ds=#s11#, #a4#" }, }, -- war
 			{ { 47228, "=ds=#s11#, #a1#" }, { 47234, "=ds=#s11#, #a1#" }, }, -- priest
 			{ { 47306, "=ds=#s11#, #a1#" }, { 47312, "=ds=#s11#, #a1#" }, }, -- lock
 			{ { 47390, "=ds=#s11#, #a2#" }, { 47396, "=ds=#s11#, #a2#" }, { 47402, "=ds=#s11#, #a2#" } }, -- druid
 		},
 		},
-		{ 55490, "INV_Helmet_57", "=q4=Fractured Crown of Ascendancy", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q12=#c6#, =q15=#c7#=ds=, =q10=#c3#=ds=", "50%, 25%", "", "", "", "", "", "", "", "", "", "", {
+		{ 55490, "INV_Helmet_57", "=q4=Fractured Crown of Ascendancy", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q12=#c6#, =q15=#c7#=ds=, =q10=#c3#=ds=", "50%", "", "", "", "", "", "", "", "", "", "", {
 			{ { 47060, "=ds=#s11#, #a4#" }, { 47066, "=ds=#s11#, #a4#" }, { 47072, "=ds=#s11#, #a4#" }, }, -- paladin
 			{ { 47318, "=ds=#s11#, #a3#" }, }, -- hunter
 			{ { 47324, "=ds=#s11#, #a2#" }, }, -- rogue
@@ -8336,7 +8336,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		},
 		},
 		{ 0, "", "", "" },
-		{ 55482, "INV_Jewelry_Necklace_29", "=q4=Ephemeral Pendant", "=ds=T3.5 Neck", "10%", "", "", "", "", "", "", "", "", "", "", {
+		{ 55482, "INV_Jewelry_Necklace_29", "=q4=Ephemeral Pendant", "=ds=#s2#", "10%", "", "", "", "", "", "", "", "", "", "", {
 			{ { 47275, "=ds=#s3#, #a4#" }, }, -- war
 			{ { 47233, "=ds=#s3#, #a1#" }, { 47239, "=ds=#s3#, #a1#" }, }, -- priest
 			{ { 47311, "=ds=#s3#, #a1#" }, { 47317, "=ds=#s3#, #a1#" }, }, -- lock
@@ -8350,13 +8350,13 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		},
 	};
 	UKHMephistroth = {
-		{ 55351, "INV_Belt_22", "=q4=Turalyon's Hope", "=ds=#s10#, #a4#" },
-		{ 55353, "INV_Jewelry_Ring_Nightbreaker", "=q4=Mephistroth's Cunning", "=ds=#s13#" },
-		{ 55356, "INV_Bracer_18", "=q4=Netherwrought Bracers", "=ds=#s8#, #a4#" },
-		{ 55513, "INV_Chest_Chain_07", "=q4=Tunic of Demonic Deception", "=ds=#s5#, #a2#", },
-		{ 55357, "INV_Belt_26", "=q4=Sash of the Grand Betrayal", "=ds=#s10#, #a2#", },
-		{ 55346, "INV_Weapon_BoneBow2", "=q4=Rain of Spiders", "=ds=#w2#" },
-		{ 55347, "INV_Thunderfall", "=q4=Thunderfall, Stormhammer of the Chief Thane", "=ds=#h1#, #w6#" },
+		{ 55351, "INV_Belt_22", "=q4=Turalyon's Hope", "=ds=#s10#, #a4#", "19%", },
+		{ 55353, "INV_Jewelry_Ring_Nightbreaker", "=q4=Mephistroth's Cunning", "=ds=#s13#", "19%", },
+		{ 55356, "INV_Bracer_18", "=q4=Netherwrought Bracers", "=ds=#s8#, #a4#", "19%", },
+		{ 55513, "INV_Chest_Chain_07", "=q4=Tunic of Demonic Deception", "=ds=#s5#, #a2#", "19%", },
+		{ 55357, "INV_Belt_26", "=q4=Sash of the Grand Betrayal", "=ds=#s10#, #a2#", "8%", },
+		{ 55346, "INV_Weapon_BoneBow2", "=q4=Rain of Spiders", "=ds=#w2#", "8%", },
+		{ 55347, "INV_Thunderfall", "=q4=Thunderfall, Stormhammer of the Chief Thane", "=ds=#h1#, #w6#", "8%", },
 		{ 0, "", "", "" },
 		{ 55348, "INV_Kirel", "=q4=Kirel'narak, the Death Sentence", "=ds=#w9#", "" },
 		{ 55512, "inv_shoulder_01", "=q4=Forgotten Hide Pauldrons", "=ds=#s3#, #a2#", "" },
@@ -8366,21 +8366,21 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 55354, "INV_Gauntlets_05", "=q4=Khadgar's Guidance", "=ds=#s9#, #a1#" },
 		{ 55355, "INV_Belt_03", "=q4=Memory of the Last Guardian", "=ds=#s10#, #a1#" },
 		{ 92082, "Spell_Shadow_SummonFelHunter", "=q4=Felforged Dreadhound", "=ds=#e7#", "5%" },
-		{ 41485, "INV_Misc_Gem_Diamond_01", "=q3=Pristine Lay Crytstal", "=ds=", "" },
+		{ 41485, "INV_Misc_Gem_Diamond_01", "=q3=Pristine Ley Crystal", "=ds=#e12#", "100%" },
 		{ 0, "", "", "" },
 		{ 55579, "BTNHeartAmulet", "=q4=Heart of Mephistroth", "=ds=#m3#", "100%" },
 		{ 55515, "INV_Misc_Cape_17", "=q4=Felforged Nathrezan Veil", "=q1=#m4# =ds=#s4#" },
 		{ 55516, "BTNGoldMysticRing", "=q4=Felforged Nathrezan Circlet", "=q1=#m4# =ds=#s13#" },
 		{ 55517, "INV_Jewelry_Ring_Emerald", "=q4=Felforged Nathrezan Aureole", "=q1=#m4# =ds=#s13#" },
 		{ 0, "", "", "" },
-		{ 55491, "INV_Chest_Cloth_45", "=q4=Nathrezim Armor of Treachery", "=q17=#c9#=ds=, =q9=#c5#=ds=, =q11=#c8#, =q13=#c1#", "50%, 25%", "", "", "", "", "", "", "", "", "", "", {
+		{ 55491, "INV_Chest_Cloth_45", "=q4=Nathrezim Armor of Treachery", "=q17=#c9#=ds=, =q9=#c5#=ds=, =q11=#c8#, =q13=#c1#", "50%", "", "", "", "", "", "", "", "", "", "", {
 			{ { 47272, "=ds=#s3#, #a4#" }, }, -- war
 			{ { 47230, "=ds=#s3#, #a1#" }, { 47236, "=ds=#s3#, #a1#" }, }, -- priest
 			{ { 47308, "=ds=#s3#, #a1#" }, { 47314, "=ds=#s3#, #a1#" }, }, -- lock
 			{ { 47392, "=ds=#s3#, #a2#" }, { 47398, "=ds=#s3#, #a2#" }, { 47404, "=ds=#s3#, #a2#" } }, -- druid
 		},
 		},
-		{ 55492, "INV_Shoulder_17", "=q4=Nathrezim Armor of Deceit", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q12=#c6#, =q15=#c7#=ds=, =q10=#c3#=ds=", "50%, 25%", "", "", "", "", "", "", "", "", "", "", {
+		{ 55492, "INV_Shoulder_17", "=q4=Nathrezim Armor of Deceit", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q12=#c6#, =q15=#c7#=ds=, =q10=#c3#=ds=", "50%", "", "", "", "", "", "", "", "", "", "", {
 			{ { 47062, "=ds=#s3#, #a4#" }, { 47068, "=ds=#s3#, #a4#" }, { 47074, "=ds=#s3#, #a4#" }, }, -- paladin
 			{ { 47320, "=ds=#s3#, #a3#" }, }, -- hunter
 			{ { 47326, "=ds=#s3#, #a2#" }, }, -- rogue
@@ -8389,7 +8389,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		},
 		},
 		{ 0, "", "", "" },
-		{ 55482, "INV_Jewelry_Necklace_29", "=q4=Ephemeral Pendant", "=ds=T3.5 Neck", "4%", "", "", "", "", "", "", "", "", "", "", {
+		{ 55482, "INV_Jewelry_Necklace_29", "=q4=Ephemeral Pendant", "=ds=#s2#", "10%", "", "", "", "", "", "", "", "", "", "", {
 			{ { 47275, "=ds=#s3#, #a4#" }, }, -- war
 			{ { 47233, "=ds=#s3#, #a1#" }, { 47239, "=ds=#s3#, #a1#" }, }, -- priest
 			{ { 47311, "=ds=#s3#, #a1#" }, { 47317, "=ds=#s3#, #a1#" }, }, -- lock
