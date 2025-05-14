@@ -97,22 +97,21 @@ end
 
 local lastItemID, lastSourceStr
 local function ExtendTooltip(tooltip)
-    if not AtlasLootCharDB.ShowSource then
-        return
-    end
-    local itemID = tonumber(tooltip.itemID)
-    if itemID and itemID ~= 51217 then -- 51217 Fashion Coin
-        if itemID ~= lastItemID then
-            lastItemID = itemID
-            lastSourceStr = nil
-            local source = AtlasLoot_Data["AtlasLootSources"][itemID]
-            if source then
-                local str = GREY .. source .. "|r"
-                lastSourceStr = str
+    if AtlasLootCharDB.ShowSource then
+        local itemID = tonumber(tooltip.itemID)
+        if itemID and itemID ~= 51217 then -- 51217 Fashion Coin
+            if itemID ~= lastItemID then
+                lastItemID = itemID
+                lastSourceStr = nil
+                local source = AtlasLoot_Data["AtlasLootSources"][itemID]
+                if source then
+                    local str = GREY .. source .. "|r"
+                    lastSourceStr = str
+                end
             end
-        end
-        if lastSourceStr then
-            AddSourceLine(tooltip, lastSourceStr)
+            if lastSourceStr then
+                AddSourceLine(tooltip, lastSourceStr)
+            end
         end
     end
     if tooltipMoney > 0 then
