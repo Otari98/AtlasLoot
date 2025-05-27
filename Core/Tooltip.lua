@@ -111,13 +111,14 @@ local function ExtendTooltip(tooltip)
             end
             if lastSourceStr then
                 AddSourceLine(tooltip, lastSourceStr)
+                tooltip:Show()
             end
         end
     end
     if tooltipMoney > 0 then
         original_SetTooltipMoney(tooltip, tooltipMoney)
+        tooltip:Show()
     end
-    tooltip:Show()
 end
 
 local lastSearchName
