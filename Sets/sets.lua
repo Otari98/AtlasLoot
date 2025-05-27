@@ -2619,7 +2619,7 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 18563, "Spell_Ice_Lament", "=q5=Bindings of the Windseeker", "=ds=#m10# =q1=#m3#", " 3.78%" },
 		{ 17782, "INV_Jewelry_Amulet_04", "=q5=Talisman of Binding Shard", "=ds=#s2#" },
 		{ 0, "", "", "" },
-		{ 61184, "Inv_weapon_shortblade_23", "=q5=The Scythe of Elune", "=ds=#m2#", "0.85%" },
+		{ 61184, "Inv_weapon_shortblade_23", "=q5=The Scythe of Elune", "=ds=#m2#", "2%" },
 		{ 55505, "Inv_weapon_shortblade_23", "=q5=The Scythe of Elune", "=ds=#s14#" },
 		{ 0, "", "", "" },
 		{ "e57518", "inv_misc_gem_pearl_04", "=q5=Eternal Dreamstone Shard", "=q1=Enchanting"},

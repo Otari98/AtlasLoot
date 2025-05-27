@@ -7935,7 +7935,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 61247, "INV_Sword_2H_Blood_C_02", "=q4=Shadowbringer", "=ds=#h2#, #w10#", "20%" },
 		{ 61443, "INV_Misc_Book_13", "=q4=Libram of the Faithful", "=ds=#s16#, #e18#", "20%" },
 		{ 0, "", "", "" },
-		{ 61184, "Inv_weapon_shortblade_23", "=q5=The Scythe of Elune", "=ds=#m2#", "0.85%" },
+		{ 61184, "Inv_weapon_shortblade_23", "=q5=The Scythe of Elune", "=ds=#m2#", "2%" },
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
 		{ 61739, "INV_Misc_Note_01", "=q3=Formula: Enchant Boots - Vampirism", "=ds=#p4# #m14#", "1.3%" },
