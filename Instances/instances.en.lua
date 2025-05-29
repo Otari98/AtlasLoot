@@ -958,6 +958,20 @@ AtlasLootBossButtons = {
 		"LKHTrash";
 		"LKHEnchants";
 	};
+    UpperKara = {
+        "";
+		"";
+		"UKHGnarlmoon";
+		"UKHIncantagos";
+		"UKHAnomalus";
+		"UKHEcho";
+		"UKHKing";
+		"UKHSanvTasdal";
+		"UKHRupturan";
+		"UKHKruul";
+		"UKHMephistroth";
+		"UKHTrash";
+    };
 	EmeraldSanctum = {
 		"ESErennius";
 		"ESSolnius1";
