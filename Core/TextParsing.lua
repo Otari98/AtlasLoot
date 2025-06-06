@@ -669,5 +669,6 @@ function AtlasLoot_FixText(text)
 	text = gsub(text, "#ccenarius#", "Interface\\Icons\\INV_Jewelry_Necklace_12");
 	text = gsub(text, "#zandalar#", "Interface\\Icons\\INV_Misc_Coin_08");
 	
+    text = gsub(text, "#lvl1#", AL["Level 1 challenge"]);
 	return text;
 end

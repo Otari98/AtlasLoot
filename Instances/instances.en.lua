@@ -4534,8 +4534,8 @@ AtlasLoot_Data["AtlasLootItems"] = {
 	DMRhahkZor = {
 		{ 872, "INV_ThrowingAxe_01", "=q2=Rockslicer", "=ds=#h2#, #w1#", "5%" },
 		{ 5187, "INV_Hammer_09", "=q1=Rhahk'Zor's Hammer", "=ds=#h2#, #w6#", "95%" },
-		{ 0, "", "", "" },
 		{ 80706, "INV_Gauntlets_04", "=q2=Ogremight Gauntlets", "=ds=#s9#, #a3#", "50%" },
+		{ 9496, "INV_Misc_Cape_12", "=q2=Defias Mage Drape", "=ds=#lvl1#" },
 	};
 	DMMinerJohnson = {
 		{ 5443, "INV_Shield_02", "=q3=Gold-plated Buckler", "=ds=#w8#", "35%" },
@@ -4544,8 +4544,8 @@ AtlasLoot_Data["AtlasLootItems"] = {
 	DMSneed = {
 		{ 5194, "INV_ThrowingAxe_06", "=q3=Taskmaster Axe", "=ds=#h2#, #w1#", "35%" },
 		{ 5195, "INV_Gauntlets_23", "=q2=Gold-flecked Gloves", "=ds=#s9#, #a1#", "65%" },
-		{ 0, "", "", "" },
 		{ 80707, "INV_Boots_03", "=q2=Operator Boots", "=ds=#s12#, #a2#", "60%" },
+		{ 50256, "INV_Sword_06", "=q2=Fractured Sword", "=ds=#lvl1#" },
 	};
 	DMSneedsShredder = {
 		{ 1937, "INV_Sword_24", "=q2=Buzz Saw", "=ds=#h1#, #w10#", "10%" },
@@ -4579,8 +4579,8 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 5202, "INV_Shirt_08", "=q3=Corsair's Overshirt", "=ds=#s5#, #a1#", "30%" },
 		{ 10399, "INV_Chest_Leather_08", "=q3=Blackened Defias Armor", "=ds=#s5#, #a2#", "20%" },
 		{ 5191, "INV_Sword_24", "=q3=Cruel Barb", "=ds=#h1#, #w10#", "20%" },
-		{ 0, "", "", "" },
 		{ 81005, "INV_Shoulder_11", "=q3=Spiked Defias Spaulders", "=ds=#s3#, #a3#", "8%" },
+		{ 29980, "INV_Jewelry_Ring_22", "=q2=Broken Stonemason's Guild Signet", "=ds=#lvl1#" },
 		{ 0, "", "", "" },
 		{ 2874, "INV_Letter_15", "=q1=An Unsent Letter", "=ds=#m2#" },
 		{ 0, "", "", "" },
@@ -4589,10 +4589,10 @@ AtlasLoot_Data["AtlasLootItems"] = {
 	DMCookie = {
 		{ 5198, "INV_Staff_02", "=q3=Cookie's Stirring Rod", "=ds=#w12#", "35%" },
 		{ 5197, "INV_Fabric_Silk_02", "=q2=Cookie's Tenderizer", "=ds=#h1#, #w6#", "65%" },
+		{ 80708, "INV_Chest_Cloth_04", "=q2=Cookie's Apron", "=ds=#s5#, #a1#", "60%" },
+		{ 9338, "INV_Misc_Eye_01", "=q2=Murloc Eye on a String", "=ds=#lvl1#" },
 		{ 0, "", "", "" },
 		{ 8490, "INV_Box_PetCarrier_01", "=q1=Cat Carrier (Siamese)", "=ds=#e15#", "15%" },
-		{ 0, "", "", "" },
-		{ 80708, "INV_Chest_Cloth_04", "=q2=Cookie's Apron", "=ds=#s5#, #a1#", "60%" },
 	};
 	DMTrash = {
 		{ 8492, "Spell_Nature_ForceOfNature", "=q1=Parrot Cage (Green Wing Macaw)", "=ds=#e15# =q7=#x40#", "4%" },
@@ -5671,23 +5671,30 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 14149, "INV_Misc_Cape_18", "=q2=Subterranean Cape", "=ds=#s4#", "33.33%" },
 		{ 14148, "INV_Bracer_13", "=q2=Crystalline Cuffs", "=ds=#s8#, #a1#", "33.33%" },
 		{ 14145, "INV_Weapon_ShortBlade_12", "=q2=Cursed Felblade", "=ds=#h3#, #w10#", "33.33%" },
+		{ 64,    "INV_Helmet_48", "=q2=Fiery Cloak", "=ds=#lvl1#" },
 	};
 	RFCOggleflint = {
 		{ 80700, "INV_MISC_BONE_01", "=q2=Tribal Trogg Club", "=ds=#h3#, #w6#", "35%" },
 		{ 80701, "INV_PANTS_02", "=q2=Dusty Leather Pants", "=ds=#s11#, #a2#", "35%" },
 		{ 80702, "INV_SHIRT_05", "=q2=Stitched Cloth Vest", "=ds=#s5#, #a1#", "30%" },
+		{ 17041, "INV_Mace_01", "=q2=The Blazing Pan Cloth Vest", "=ds=#lvl1#" },
 	};
 	RFCJergosh = {
 		{ 14150, "INV_Chest_Cloth_24", "=q2=Robe of Evocation", "=ds=#s5#, #a1#", "33.33%" },
 		{ 14147, "INV_Bracer_07", "=q2=Cavedweller Bracers", "=ds=#s8#, #a3#", "33.33%" },
 		{ 14151, "INV_Weapon_ShortBlade_25", "=q2=Chanting Blade", "=ds=#h1#, #w4#", "33.33%" },
+		{ 80111, "INV_Shirt_07", "=q2=Ash-Covered Tunic", "=ds=#lvl1#" },
 	};
 	RFCBazzalan = {
 		{ 80705, "INV_SPEAR_08", "=q2=Satyr Poker", "=ds=#h2#, #w7#", "30%" },
 		{ 80704, "INV_CHEST_CHAIN", "=q2=Lavadrenched Chainmail", "=ds=#s5#, #a3#", "30%" },
 		{ 80703, "INV_BELT_24", "=q2=Heated Leather Belt", "=ds=#s10#, #a2#", "30%" },
+		{ 5235,  "INV_Staff_02", "=q2=Cultist's Firestick", "=ds=#lvl1#" },
 		{ 0, "", "", "" },
-		{ 51217, "INV_misc_ribbon_01", "=q2=Fashion Coin", "=ds=#e27#", "1%" },
+        { 51217, "INV_misc_ribbon_01", "=q2=Fashion Coin", "=ds=#e27#", "1%" },
+		{ 0, "", "", "" },
+        { 0, "INV_Box_01", "=q6=Searing Blade Warlock (Trash)", "" },
+        { 12862, "INV_Misc_Book_09", "=q2=Burning Blade Grimoire", "=ds=#lvl1#" },
 	};
 	SFKRethilgore = {
 		{ 5254, "INV_Shoulder_08", "=q1=Rugged Spaulders", "=ds=#s3#, #a2#", "100%" },
