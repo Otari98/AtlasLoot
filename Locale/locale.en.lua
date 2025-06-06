@@ -817,7 +817,7 @@ AL:RegisterTranslations("enUS", function() return {
     ["Letashaz"] = true,
     ["Lethon"] = true,
     ["Lethtendris"] = true,
-    ["Level 1 challenge"] = true,
+    ["Level One Lunatic Challenge"] = true,
     ["Level 10-19 Rewards"] = true,
     ["Level 20-29 Rewards"] = true,
     ["Level 30-39"] = true,
