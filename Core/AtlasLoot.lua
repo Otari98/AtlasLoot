@@ -252,6 +252,12 @@ function AtlasLoot_OnVariablesLoaded()
 	--	AtlasLootCharDB.AutoQuery = false;
 	-- 	AtlasLootOptions_Init();
 	-- end
+    for k, v in pairs(AtlasLootCharDB["WishList"]) do
+        if type(v[2]) == "table" then
+            v[2] = v[2][3] or "INV_Misc_QuestionMark"
+            break
+        end
+    end
 	--Adds an AtlasLoot button to the Feature Frame in Cosmos
 	if(EarthFeature_AddButton) then
 		EarthFeature_AddButton(
@@ -2139,34 +2145,34 @@ function AtlasLootMinimapButton_SetPosition(v)
 	AtlasLootMinimapButton_UpdatePosition();
 end
 
-function AtlasLoot_Strsplit(delim, str, maxNb, onlyLast)
-	-- Eliminate bad cases...
-	if string.find(str, delim) == nil then
-		return { str }
-	end
-	if maxNb == nil or maxNb < 1 then
-		maxNb = 0
-	end
-	local result = {}
-	local pat = "(.-)" .. delim .. "()"
-	local nb = 0
-	local lastPos
-	for part, pos in string.gfind(str, pat) do
-		nb = nb + 1
-		result[nb] = part
-		lastPos = pos
-		if nb == maxNb then break end
-	end
-	-- Handle the last field
-	if nb ~= maxNb then
-		result[nb+1] = string.sub(str, lastPos)
-	end
-	if onlyLast then
-		return result[nb+1]
-	else
-		return result[1], result[2]
-	end
-end
+-- function AtlasLoot_Strsplit(delim, str, maxNb, onlyLast)
+-- 	-- Eliminate bad cases...
+-- 	if string.find(str, delim) == nil then
+-- 		return { str }
+-- 	end
+-- 	if maxNb == nil or maxNb < 1 then
+-- 		maxNb = 0
+-- 	end
+-- 	local result = {}
+-- 	local pat = "(.-)" .. delim .. "()"
+-- 	local nb = 0
+-- 	local lastPos
+-- 	for part, pos in string.gfind(str, pat) do
+-- 		nb = nb + 1
+-- 		result[nb] = part
+-- 		lastPos = pos
+-- 		if nb == maxNb then break end
+-- 	end
+-- 	-- Handle the last field
+-- 	if nb ~= maxNb then
+-- 		result[nb+1] = string.sub(str, lastPos)
+-- 	end
+-- 	if onlyLast then
+-- 		return result[nb+1]
+-- 	else
+-- 		return result[1], result[2]
+-- 	end
+-- end
 
 --This is a multi-layer table defining the main loot listing.
 --Entries have the text to display, loot table or sub table to link to and if the link is to a loot table or sub table
@@ -3113,7 +3119,8 @@ function AtlasLootItem_OnClick(arg1)
 	local color = strsub(getglobal("AtlasLootItem_"..this:GetID().."_Name"):GetText(), 1, 10);
 	local id = this:GetID();
 	local name = strsub(getglobal("AtlasLootItem_"..this:GetID().."_Name"):GetText(), 11);
-	local texture = AtlasLoot_Strsplit("\\", getglobal("AtlasLootItem_"..this:GetID().."_Icon"):GetTexture(), 0, true)
+	local _, _, texture = strfind(getglobal("AtlasLootItem_"..this:GetID().."_Icon"):GetTexture() or "", ".+\\(.+)$")
+    texture = texture or "INV_Misc_QuestionMark"
 	local dataID = AtlasLootItemsFrame.refresh[1]
 	local dataSource = AtlasLootItemsFrame.refresh[2]
 	local bossName = AtlasLootItemsFrame.refresh[3]

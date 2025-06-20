@@ -201,6 +201,7 @@ function AtlasLoot_GetWishListSubheadingBoss(dataID)
 end
 
 function GetLootTableParent(dataID)
+    if not dataID then return end
 	local parentID ;
 	for i, v in pairs(AtlasLoot_TableNamesBoss) do
 		for j,k in pairs(v) do
@@ -224,7 +225,7 @@ function AtlasLoot_CategorizeWishList(wlTable)
 
 	for _, v in pairs(wlTable) do
 		if v[5] and v[5] ~= "" then
-			local dataID = AtlasLoot_Strsplit("|", v[5]);
+			local _, _, dataID = strfind(v[5], "^(.+)|.+");
 			-- Build subheading table
 			if not subheadings[dataID] then
 				subheadings[dataID] = AtlasLoot_GetWishListSubheadingBoss(dataID);
@@ -252,7 +253,8 @@ function AtlasLoot_CategorizeWishList(wlTable)
 		-- some debug code that I've used to fix WishList errors before due to people adding drops to AtlasLoot incorrectly.
 		local box = k or "Unknown"
 		local cat = categories[k][1][5] or "Unknown"
-		local parent = GetLootTableParent(AtlasLoot_Strsplit("|", cat)) or "Unknown"
+        _, _, cat = strfind(cat, "^(.+)|.+")
+		local parent = GetLootTableParent(cat) or "Unknown"
 		--print("box: "..box.." - cat: "..cat)
 		table.insert(result, { 0, "INV_Box_01", "=q6="..box, "=q0="..parent });
 		
