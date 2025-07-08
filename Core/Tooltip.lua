@@ -284,8 +284,8 @@ local function HookTooltip(tooltip)
         insideHook = true
         original_SetAuctionItem(self, atype, index)
         insideHook = false
-        local itemName = GetAuctionItemInfo(atype, index)
-        self.itemID = GetItemIDByName(itemName)
+        local _, _, id = strfind(GetAuctionItemLink(atype, index) or "", "item:(%d+)")
+        self.itemID = tonumber(id)
         ExtendTooltip(self)
     end
 
@@ -293,8 +293,8 @@ local function HookTooltip(tooltip)
         insideHook = true
         original_SetAuctionSellItem(self)
         insideHook = false
-        local itemName = GetAuctionSellItemInfo()
-        self.itemID = GetItemIDByName(itemName)
+        local _, _, id = strfind(GetAuctionSellItemLink() or "", "item:(%d+)")
+        self.itemID = tonumber(id)
         ExtendTooltip(self)
     end
 
