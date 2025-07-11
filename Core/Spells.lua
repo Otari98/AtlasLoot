@@ -654,35 +654,35 @@ GetSpellInfoAtlasLootDB = {
 			["name"] = "Eternal Dreamstone Shard",
 			["icon"] = "Interface\\Icons\\inv_misc_gem_pearl_04",
 		},
-		[57127] = { 
+		[57127] = {
 			["name"] = "Enchant Boots - Superior Stamina",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
-		[57148] = { 
+		[57148] = {
 			["name"] = "Enchant Boots - Vampirism",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
-		[57144] = { 
+		[57144] = {
 			["name"] = "Enchant Bracer - Greater Deflection",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
-		[57119] = { 
+		[57119] = {
 			["name"] = "Enchant Chest - Mighty Mana",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
-		[57117] = { 
+		[57117] = {
 			["name"] = "Enchant Cloak - Greater Arcane Resistance",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
-		[46601] = { 
+		[46601] = {
 			["name"] = "Enchant Gloves - Arcane Power",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
-		[46602] = { 
+		[46602] = {
 			["name"] = "Enchant Gloves - Nature Power",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
-		[46086] = { 
+		[46086] = {
 			["name"] = "Enchant Gloves - Major Strength",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
@@ -6224,7 +6224,7 @@ GetSpellInfoAtlasLootDB = {
 				[3] = {7910, 2},
 				[4] = {14341, 2},
 			},
-		},		
+		},
 		[57024] = {
 			["name"] = "Tailoring: Windbinder Gloves",
 			["requires"] = "",
@@ -12504,7 +12504,7 @@ GetSpellInfoAtlasLootDB = {
 			["reagents"] = {
 				[1] = {2841, 4},
 			},
-		},		
+		},
 		[3491] = {
 			["name"] = "Blacksmithing: Big Bronze Knife",
 			["requires"] = AL["Anvil"],
@@ -13299,128 +13299,128 @@ GetSpellInfoAtlasLootDB = {
 				[4] = {12810, 2},
 			},
 		},
-        [55526] = {
+        [57617] = {
 			["name"] = "Blacksmithing: Otherworldly Coif",
 			["requires"] = AL["Anvil"],
 			["tools"] = {5956},
-			["castTime"] = 60,
+			["castTime"] = 5.125,
 			["text"] = "",
 			["craftItem"] = 55526,
 			["craftQuantityMin"] = "",
 			["craftQuantityMax"] = "",
 			["reagents"] = {
-				[1] = {12359, 6},
-				[2] = {12655, 1},
-				[3] = {12360, 1},
+				[1] = {15407, 1},
+				[2] = {12360, 1},
+				[3] = {61673, 6},
 				[4] = {12607, 1},
 			},
 		},
-		[55527] = {
+		[57619] = {
 			["name"] = "Blacksmithing: Otherworldly Spaulders",
 			["requires"] = AL["Anvil"],
 			["tools"] = {5956},
-			["castTime"] = 60,
+			["castTime"] = 5.125,
 			["text"] = "",
 			["craftItem"] = 55527,
 			["craftQuantityMin"] = "",
 			["craftQuantityMax"] = "",
 			["reagents"] = {
-				[1] = {12359, 5},
-				[2] = {12655, 1},
-				[3] = {12360, 1},
+				[1] = {15407, 1},
+				[2] = {12360, 1},
+				[3] = {61673, 6},
 				[4] = {12607, 3},
 			},
 		},
-		[55528] = {
+		[57621] = {
 			["name"] = "Blacksmithing: Otherworldly Breastplate",
 			["requires"] = AL["Anvil"],
 			["tools"] = {5956},
-			["castTime"] = 60,
+			["castTime"] = 5.125,
 			["text"] = "",
 			["craftItem"] = 55528,
 			["craftQuantityMin"] = "",
 			["craftQuantityMax"] = "",
 			["reagents"] = {
-				[1] = {12359, 6},
-				[2] = {12655, 1},
-				[3] = {12360, 2},
+				[1] = {15407, 2},
+				[2] = {12360, 1},
+				[3] = {61673, 6},
 				[4] = {12607, 2},
 			},
 		},
-		[55529] = {
+		[57623] = {
 			["name"] = "Blacksmithing: Otherworldly Leggings",
 			["requires"] = AL["Anvil"],
 			["tools"] = {5956},
-			["castTime"] = 60,
+			["castTime"] = 5.125,
 			["text"] = "",
 			["craftItem"] = 55529,
 			["craftQuantityMin"] = "",
 			["craftQuantityMax"] = "",
 			["reagents"] = {
-				[1] = {12359, 7},
-				[2] = {12655, 1},
-				[3] = {12360, 2},
+				[1] = {15407, 2},
+				[2] = {12360, 1},
+				[3] = {61673, 7},
 				[4] = {12607, 2},
 			},
 		},
-		[55530] = {
+		[57625] = {
 			["name"] = "Blacksmithing: Reflective Helmet",
 			["requires"] = AL["Anvil"],
 			["tools"] = {5956},
-			["castTime"] = 60,
+			["castTime"] = 5.125,
 			["text"] = "",
 			["craftItem"] = 55530,
 			["craftQuantityMin"] = "",
 			["craftQuantityMax"] = "",
 			["reagents"] = {
-				[1] = {12359, 6},
-				[2] = {12360, 2},
-				[3] = {12655, 7},
+				[1] = {12360, 2},
+				[2] = {12655, 7},
+				[3] = {61673, 6},
 			},
 		},
-		[55531] = {
+		[57627] = {
 			["name"] = "Blacksmithing: Reflective Pauldrons",
 			["requires"] = AL["Anvil"],
 			["tools"] = {5956},
-			["castTime"] = 60,
+			["castTime"] = 5.125,
 			["text"] = "",
 			["craftItem"] = 55531,
 			["craftQuantityMin"] = "",
 			["craftQuantityMax"] = "",
 			["reagents"] = {
-				[1] = {12359, 7},
-				[2] = {12360, 2},
-				[3] = {12655, 9},
+				[1] = {12360, 2},
+				[2] = {12655, 9},
+				[3] = {61673, 7},
 			},
 		},
-		[55532] = {
+		[57629] = {
 			["name"] = "Blacksmithing: Reflective Breastplate",
 			["requires"] = AL["Anvil"],
 			["tools"] = {5956},
-			["castTime"] = 60,
+			["castTime"] = 5.125,
 			["text"] = "",
 			["craftItem"] = 55532,
 			["craftQuantityMin"] = "",
 			["craftQuantityMax"] = "",
 			["reagents"] = {
-				[1] = {12359, 5},
-				[2] = {12360, 2},
-				[3] = {12655, 10},
+				[1] = {12360, 2},
+				[2] = {12655, 10},
+				[3] = {61673, 5},
 			},
 		},
-		[55533] = {
+		[57631] = {
 			["name"] = "Blacksmithing: Reflective Leggings",
 			["requires"] = AL["Anvil"],
 			["tools"] = {5956},
-			["castTime"] = 60,
+			["castTime"] = 5.125,
 			["text"] = "",
 			["craftItem"] = 55533,
 			["craftQuantityMin"] = "",
 			["craftQuantityMax"] = "",
 			["reagents"] = {
-				[1] = {12359, 7},
-				[2] = {12360, 2},
-				[3] = {12655, 12},
+				[1] = {12360, 2},
+				[2] = {12655, 12},
+				[3] = {61673, 7},
 			},
 		},
 		[15296] = {
@@ -15488,7 +15488,7 @@ GetSpellInfoAtlasLootDB = {
 				[5] = {12644, 8},
 				[6] = {12800, 2},
 			},
-		},		
+		},
 		[16654] = {
 			["name"] = "Blacksmithing: Radiant Gloves",
 			["requires"] = AL["Anvil"],
@@ -18982,7 +18982,7 @@ GetSpellInfoAtlasLootDB = {
 				[3] = {7082, 2},
 				[4] = {7076},
 			},
-		},		
+		},
 		[24850] = {
 			["name"] = "Leatherworking: Sandstalker Gauntlets",
 			["requires"] = "",
@@ -19046,11 +19046,11 @@ GetSpellInfoAtlasLootDB = {
 				[4] = {15407},
 			},
 		},
-        [55522] = {
-			["name"] = "Leatherworking: Etheral Helmet",
+        [57609] = {
+			["name"] = "Leatherworking: Ethereal Helmet",
 			["requires"] = "",
 			["tools"] = "",
-			["castTime"] = 60,
+			["castTime"] = 5.125,
 			["text"] = "",
 			["craftItem"] = 55522,
 			["craftQuantityMin"] = "",
@@ -19062,11 +19062,11 @@ GetSpellInfoAtlasLootDB = {
 				[4] = {14227, 1},
 			},
 		},
-		[55523] = {
-			["name"] = "Leatherworking: Etheral Shoulder Pads",
+		[57611] = {
+			["name"] = "Leatherworking: Ethereal Shoulder Pads",
 			["requires"] = "",
 			["tools"] = "",
-			["castTime"] = 60,
+			["castTime"] = 5.125,
 			["text"] = "",
 			["craftItem"] = 55523,
 			["craftQuantityMin"] = "",
@@ -19078,11 +19078,11 @@ GetSpellInfoAtlasLootDB = {
 				[4] = {14227, 2},
 			},
 		},
-		[55524] = {
-			["name"] = "Leatherworking: Etheral Tunic",
+		[57613] = {
+			["name"] = "Leatherworking: Ethereal Tunic",
 			["requires"] = "",
 			["tools"] = "",
-			["castTime"] = 60,
+			["castTime"] = 5.125,
 			["text"] = "",
 			["craftItem"] = 55524,
 			["craftQuantityMin"] = "",
@@ -19094,11 +19094,11 @@ GetSpellInfoAtlasLootDB = {
 				[4] = {14227, 1},
 			},
 		},
-		[55525] = {
-			["name"] = "Leatherworking: Etheral Leggings",
+		[57615] = {
+			["name"] = "Leatherworking: Ethereal Leggings",
 			["requires"] = "",
 			["tools"] = "",
-			["castTime"] = 60,
+			["castTime"] = 5.125,
 			["text"] = "",
 			["craftItem"] = 55525,
 			["craftQuantityMin"] = "",

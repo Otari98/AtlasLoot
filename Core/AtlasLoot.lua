@@ -1377,7 +1377,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 					if droprate and string.find(droprate, "%%") then itemButton.droprate = droprate end
 				end
 				itemButton:Show();
-				if MouseIsOver(itemButton) then
+				if GetMouseFocus() == itemButton then
 					itemButton:Hide()
 					itemButton:Show()
 				end
@@ -1852,7 +1852,7 @@ function AtlasLoot_NavButton_OnClick()
 			AtlasLootCharDB.LastBoss = this.lootpage;
 			AtlasLootCharDB.LastBossText = this.title;
 			AtlasLoot_ShowItemsFrame(this.lootpage, AtlasLootItemsFrame.refresh[2], this.title, AtlasLoot_AnchorPoint);
-			if AtlasLootDefaultFrame_SelectedTable:GetText()~=nil then 
+			if AtlasLootDefaultFrame_SelectedTable:GetText()~=nil then
 				AtlasLootDefaultFrame_SelectedTable:SetText(AtlasLoot_BossName:GetText())
 			else
 				AtlasLootDefaultFrame_SelectedCategory:SetText(AtlasLoot_BossName:GetText())
@@ -2991,7 +2991,8 @@ function AtlasLootItem_OnEnter()
 			end
 		elseif isEnchant then
 			local spellID = tonumber(string.sub(this.itemID, 2));
-			AtlasLootTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 24);
+			AtlasLootTooltip:SetOwner(this, "ANCHOR_NONE");
+			AtlasLootTooltip:SetPoint("BOTTOMLEFT", this, "TOPRIGHT", -(this:GetWidth() / 2), 24)
 			AtlasLootTooltip:ClearLines();
 			if SetAutoloot == nil or (SUPERWOW_VERSION and (tonumber(SUPERWOW_VERSION)) >= 1.2) then
 				AtlasLootTooltip:SetHyperlink("enchant:"..spellID)
@@ -3007,7 +3008,8 @@ function AtlasLootItem_OnEnter()
 			end
 			AtlasLootTooltip:Show();
 			if GetSpellInfoAtlasLootDB["enchants"][spellID]["item"] and GetSpellInfoAtlasLootDB["enchants"][spellID]["item"] ~= nil and GetSpellInfoAtlasLootDB["enchants"][spellID]["item"] ~= "" then
-				AtlasLootTooltip2:SetOwner(AtlasLootTooltip, "ANCHOR_BOTTOMRIGHT", -(AtlasLootTooltip:GetWidth()), 0);
+				AtlasLootTooltip2:SetOwner(this, "ANCHOR_NONE");
+				AtlasLootTooltip2:SetPoint("TOPLEFT", AtlasLootTooltip, "BOTTOMLEFT", 0, 0)
 				AtlasLootTooltip2:ClearLines();
 				AtlasLootTooltip2:SetHyperlink("item:"..GetSpellInfoAtlasLootDB["enchants"][spellID]["item"]..":0:0:0");
 				if GetSpellInfoAtlasLootDB["enchants"][spellID]["extra"] and GetSpellInfoAtlasLootDB["enchants"][spellID]["extra"] ~= nil and GetSpellInfoAtlasLootDB["enchants"][spellID]["extra"] ~= "" then
@@ -3017,6 +3019,13 @@ function AtlasLootItem_OnEnter()
 					AtlasLootTooltip2:AddLine(AL["ItemID:"].." "..GetSpellInfoAtlasLootDB["enchants"][spellID]["item"], nil, nil, nil, 1);
 				end
 				AtlasLootTooltip2:Show();
+				-- Reposition if tooltips overlap
+				if AtlasLootTooltip:GetBottom() < AtlasLootTooltip2:GetTop() then
+					AtlasLootTooltip2:ClearAllPoints()
+					AtlasLootTooltip2:SetPoint("TOPLEFT", this, "TOPRIGHT", -(this:GetWidth() / 2), 24)
+					AtlasLootTooltip:ClearAllPoints()
+					AtlasLootTooltip:SetPoint("BOTTOMLEFT", AtlasLootTooltip2, "TOPLEFT", 0, 0)
+				end
 			end
 		elseif isSpell then
 			local spellID = tonumber(string.sub(this.itemID, 2));
@@ -3035,7 +3044,8 @@ function AtlasLootItem_OnEnter()
 				end
 				TooltipReagents = string.sub(TooltipReagents, 1, -3)
 			end
-			AtlasLootTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 24);
+			AtlasLootTooltip:SetOwner(this, "ANCHOR_NONE");
+			AtlasLootTooltip:SetPoint("BOTTOMLEFT", this, "TOPRIGHT", -(this:GetWidth() / 2), 24)
 			AtlasLootTooltip:ClearLines();
 			AtlasLootTooltip:AddLine(GetSpellInfoAtlasLootDB["craftspells"][spellID]["name"]);
 			AtlasLootTooltip:AddLine(WHITE..GetSpellInfoAtlasLootDB["craftspells"][spellID]["castTime"].." sec cast");
@@ -3068,7 +3078,8 @@ function AtlasLootItem_OnEnter()
 			AtlasLootTooltip:Show();
 			local craftitem2 = GetSpellInfoAtlasLootDB["craftspells"][spellID]["craftItem"]
 			if craftitem2 ~= nil and craftitem2 ~= "" then
-				AtlasLootTooltip2:SetOwner(AtlasLootTooltip, "ANCHOR_BOTTOMRIGHT", -(AtlasLootTooltip:GetWidth()), 0);
+				AtlasLootTooltip2:SetOwner(this, "ANCHOR_NONE");
+				AtlasLootTooltip2:SetPoint("TOPLEFT", AtlasLootTooltip, "BOTTOMLEFT", 0, 0)
 				AtlasLootTooltip2:ClearLines();
 				AtlasLootTooltip2:SetHyperlink("item:"..GetSpellInfoAtlasLootDB["craftspells"][spellID]["craftItem"]..":0:0:0");
 				if GetSpellInfoAtlasLootDB["craftspells"][spellID]["extra"] and GetSpellInfoAtlasLootDB["craftspells"][spellID]["extra"] ~= nil then
@@ -3078,6 +3089,13 @@ function AtlasLootItem_OnEnter()
 					AtlasLootTooltip2:AddLine(AL["ItemID:"].." "..GetSpellInfoAtlasLootDB["craftspells"][spellID]["craftItem"], nil, nil, nil, 1);
 				end
 				AtlasLootTooltip2:Show();
+				-- Reposition if tooltips overlap
+				if AtlasLootTooltip:GetBottom() < AtlasLootTooltip2:GetTop() then
+					AtlasLootTooltip2:ClearAllPoints()
+					AtlasLootTooltip2:SetPoint("TOPLEFT", this, "TOPRIGHT", -(this:GetWidth() / 2), 24)
+					AtlasLootTooltip:ClearAllPoints()
+					AtlasLootTooltip:SetPoint("BOTTOMLEFT", AtlasLootTooltip2, "TOPLEFT", 0, 0)
+				end
 			end
 		end
 	end
@@ -3088,26 +3106,31 @@ end
 -- Called when the mouse cursor leaves a loot item
 --------------------------------------------------------------------------------
 function AtlasLootItem_OnLeave()
-	--Hide the necessary tooltips
-	if( AtlasLootCharDB.LootlinkTT ) then
-		AtlasLootTooltip:Hide();
-			AtlasLootTooltip2:Hide();
-	elseif( AtlasLootCharDB.ItemSyncTT ) then
-		if(GameTooltip:IsVisible()) then
-			GameTooltip:Hide();
-			AtlasLootTooltip2:Hide();
-		end
-	else
-		if(this.itemID ~= nil) then
-			AtlasLootTooltip:Hide();
-			GameTooltip:Hide();
-			AtlasLootTooltip2:Hide();
-		end
-	end
-	if ( ShoppingTooltip2:IsVisible() or ShoppingTooltip1.IsVisible) then
-		ShoppingTooltip2:Hide();
-		ShoppingTooltip1:Hide();
-	end
+	-- --Hide the necessary tooltips
+	-- if( AtlasLootCharDB.LootlinkTT ) then
+	-- 	AtlasLootTooltip:Hide();
+	-- 		AtlasLootTooltip2:Hide();
+	-- elseif( AtlasLootCharDB.ItemSyncTT ) then
+	-- 	if(GameTooltip:IsVisible()) then
+	-- 		GameTooltip:Hide();
+	-- 		AtlasLootTooltip2:Hide();
+	-- 	end
+	-- else
+	-- 	if(this.itemID ~= nil) then
+	-- 		AtlasLootTooltip:Hide();
+	-- 		GameTooltip:Hide();
+	-- 		AtlasLootTooltip2:Hide();
+	-- 	end
+	-- end
+	-- if ( ShoppingTooltip2:IsVisible() or ShoppingTooltip1.IsVisible) then
+	-- 	ShoppingTooltip2:Hide();
+	-- 	ShoppingTooltip1:Hide();
+	-- end
+	AtlasLootTooltip:Hide();
+	AtlasLootTooltip2:Hide();
+	GameTooltip:Hide();
+	ShoppingTooltip1:Hide();
+	ShoppingTooltip2:Hide();
 end
 
 --------------------------------------------------------------------------------
@@ -3414,7 +3437,7 @@ function AtlasLoot_AddContainerItemTooltip(frame ,itemID)
         local numLines = AtlasLootTooltip:NumLines()
 		if AtlasLootCharDB.ItemIDs then
 			if numLines and numLines > 0 then
-				local lastLine = getglobal("AtlasLootTooltipTextLeft"..numLines)  
+				local lastLine = getglobal("AtlasLootTooltipTextLeft"..numLines)
 				if lastLine:GetText() then
 					lastLine:SetText(lastLine:GetText().."\n\n"..DEFAULT..AL["ItemID:"].." "..itemID)
 				end
