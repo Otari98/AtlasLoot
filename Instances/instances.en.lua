@@ -2136,9 +2136,9 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 18404, "INV_Jewelry_Necklace_09", "=q4=Onyxia Tooth Pendant", "=q1=#m4# =ds=#s2#" },
 		{ 18403, "INV_Jewelry_Ring_27", "=q4=Dragonslayer's Signet", "=q1=#m4# =ds=#s13#" },
 		{ 18406, "Spell_Shadow_LifeDrain", "=q4=Onyxia Blood Talisman", "=q1=#m4# =ds=#s14#" },
-		{ 18705, "Spell_Holy_DispelMagic", "=q4=Mature Black Dragon Sinew", "=ds=#m3# =q14=#c2#", "	40%%" },
+		{ 18705, "Spell_Holy_DispelMagic", "=q4=Mature Black Dragon Sinew", "=ds=#m3# =q14=#c2#", "40%" },
 		{ 18713, "INV_Weapon_Bow_01", "=q4=Rhok'delar, Longbow of the Ancient Keepers", "=q1=#m4# =ds=#w2# =q14=#c2#" },
-		{ 0,"","","" },
+
 		{ 18205, "INV_Belt_12", "=q4=Eskhandar's Collar", "=ds=#s2#", "25%" },
 		{ 17078, "INV_Misc_Cape_16", "=q4=Sapphiron Drape", "=ds=#s4#", "25%" },
 		{ 18813, "INV_Jewelry_Ring_13", "=q4=Ring of Binding", "=ds=#s13#", "25%" },
@@ -2149,6 +2149,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 0,"","","" },
 		{ 17966,"INV_Misc_Bag_22","=q2=Onyxia Hide Backpack","=ds=#m12# #e10#", "100%" },
 		{ 17962,"INV_Misc_Bag_10_Blue","=q2=Blue Sack of Gems","=ds=#m23# =q2=#e33#", "100%" },
+		{ 16253, "INV_Misc_Note_01", "=q2=Formula: Enchant Chest - Greater Stats", "=ds=#p4# #m14#", "1%" },
 		{ 15410, "INV_Misc_MonsterScales_07","=q3=Scale of Onyxia", "=ds=#e12# =q5=Skinning (315)" },
 		{ 15138,"INV_Misc_Cape_05","=q3=Onyxia Scale Cloak","=q1=#m4# =ds=#s4# =q5=LW #m14#" },
 	};
