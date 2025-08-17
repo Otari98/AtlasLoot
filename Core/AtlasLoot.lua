@@ -3310,32 +3310,6 @@ function AtlasLootItem_OnClick(arg1)
 	end
 end
 
-function AtlasLoot_IDFromLink(link)
-	if not link then
-        return nil
-    end
-
-	local strsplit = function(str, delimiter)
-		local result = {}
-		local from = 1
-		local delim_from, delim_to = string.find(str, delimiter, from, true)
-		while delim_from do
-			table.insert(result, string.sub(str, from, delim_from - 1))
-			from = delim_to + 1
-			delim_from, delim_to = string.find(str, delimiter, from, true)
-		end
-		table.insert(result, string.sub(str, from))
-		return result
-	end
-    local itemSplit = strsplit(link, ":")
-
-    if itemSplit[2] and tonumber(itemSplit[2]) then
-        return tonumber(itemSplit[2])
-    end
-
-    return nil
-end
-
 function AtlasLoot_CacheItem(linkOrID)
     if not linkOrID or linkOrID == 0 then
         return false
@@ -3353,9 +3327,9 @@ function AtlasLoot_CacheItem(linkOrID)
             return false
         end
         if string.find(linkOrID, "|", 1, true) then
-            local _, _, itemLink = string.find(linkOrID, "(item:%d+:%d+:%d+:%d+)")
-            linkOrID = itemLink
-            if GetItemInfo(AtlasLoot_IDFromLink(linkOrID)) then
+			local _, _, id = string.find(linkOrID or "", "item:(%d+)")
+            linkOrID = tonumber(id)
+            if GetItemInfo(linkOrID) then
                 return true
             end
         end

@@ -1,9 +1,9 @@
 ## Interface: 11200
 ## Title: AtlasLoot |cff7fff7f TurtleWOW|r
 ## Notes: Shows possible loot from dungeon bosses and other sources.
-## Author: Shagu (pfUI update code), Lexie (Turtle WoW fixes/updates), Otari (overhaul/revamp, menu changes, bugfixes/updates)
+## Author: Otari (overhaul/revamp, menu changes, bugfixes/updates), Lexie (Turtle WoW fixes/updates), Pepopo, MarcelineVQ (Kara40 loot)
 ## LegacyAuthor: Daviesh, Pompa (Turtle WoW World Bosses), Xerron (Turtle WoW World Bosses), Gurky (Turtle WoW 1.16/1.16.1 Dungeons)
-## Version: 3.1.8
+## Version: 3.1.9
 ## SavedVariablesPerCharacter: AtlasLootCharDB
 ## OptionalDeps: Alphamap, AtlasLoader, LootLink, ItemSync, HewdropLib, Ace2, EquipCompare, EQCompare
 
