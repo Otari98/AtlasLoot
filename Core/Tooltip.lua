@@ -6122,6 +6122,7 @@ AtlasLoot_Data["AtlasLootSources"] = {
     [56094] = AL["Jewelcrafting"]..": "..AL["Goldsmithing"].." ("..AL["Skill:"].." 285+)",
     [56095] = AL["Jewelcrafting"].." ("..AL["Skill:"].." 230+)",
     [56096] = AL["Jewelcrafting"].." ("..AL["Skill:"].." 300)",
+	[58401] = AL["Lower Karazhan Halls"].." - "..AL["Lord Blackwald II"].." (1.2%)",
     [60001] = AL["Survival"].." ("..AL["Skill:"].." 50+)",
     [60003] = AL["Temple of Ahn'Qiraj"].." - "..AL["C'Thun"].." (8%)",
     [60004] = AL["Blood Ring"].." - "..AL["Exalted"],

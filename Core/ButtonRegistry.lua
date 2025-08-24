@@ -1,14 +1,5 @@
 ﻿local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
 
--- Colours stored for code readability
-local GREY = "|cff999999";
-local RED = "|cffff0000";
-local WHITE = "|cffFFFFFF";
-local GREEN = "|cff1eff00";
-local PURPLE = "|cff9F3FFF";
-local BLUE = "|cff0070dd";
-local ORANGE = "|cffFF8400";
-
 AtlasLoot_ButtonRegistry = {
 	--WoW Instances
 	["DUNGEONSMENU1"] = {
@@ -20,6 +11,178 @@ AtlasLoot_ButtonRegistry = {
 		Title = AL["Dungeons & Raids"];
 		Prev_Page = "DUNGEONSMENU1";
 		Prev_Title = AL["Dungeons & Raids"];
+	};
+	["DMRGowlfang"] = {
+		Title = AL["Gowlfang"],
+		Next_Page = "DMRBroodmother",
+		Next_Title = AL["Cavernweb Broodmother"],
+		Back_Page = "DUNGEONSMENU1",
+		Back_Title = AL["Dungeons & Raids"],
+	};
+	["DMRBroodmother"] = {
+		Title = AL["Cavernweb Broodmother"],
+		Prev_Page = "DMRGowlfang",
+		Prev_Title = AL["Gowlfang"],
+		Next_Page = "DMRWebMaster",
+		Next_Title = AL["Web Master Torkon"],
+		Back_Page = "DUNGEONSMENU1",
+		Back_Title = AL["Dungeons & Raids"],
+	};
+	["DMRWebMaster"] = {
+		Title = AL["Web Master Torkon"],
+		Prev_Page = "DMRBroodmother",
+		Prev_Title = AL["Cavernweb Broodmother"],
+		Next_Page = "DMRGarlok",
+		Next_Title = AL["Garlok Flamekeeper"],
+		Back_Page = "DUNGEONSMENU1",
+		Back_Title = AL["Dungeons & Raids"],
+	};
+	["DMRGarlok"] = {
+		Title = AL["Garlok Flamekeeper"],
+		Prev_Page = "DMRWebMaster",
+		Prev_Title = AL["Web Master Torkon"],
+		Next_Page = "DMRHalgan",
+		Next_Title = AL["Halgan Redbrand"],
+		Back_Page = "DUNGEONSMENU1",
+		Back_Title = AL["Dungeons & Raids"],
+	};
+	["DMRHalgan"] = {
+		Title = AL["Halgan Redbrand"],
+		Prev_Page = "DMRGarlok",
+		Prev_Title = AL["Garlok Flamekeeper"],
+		Next_Page = "DMRElderHollowblood",
+		Next_Title = AL["Elder Hollowblood"],
+		Back_Page = "DUNGEONSMENU1",
+		Back_Title = AL["Dungeons & Raids"],
+	};
+	["DMRElderHollowblood"] = {
+		Title = AL["Elder Hollowblood"],
+		Prev_Page = "DMRHalgan",
+		Prev_Title = AL["Halgan Redbrand"],
+		Next_Page = "DMRSearistrasz",
+		Next_Title = AL["Searistrasz"],
+		Back_Page = "DUNGEONSMENU1",
+		Back_Title = AL["Dungeons & Raids"],
+	};
+	["DMRSearistrasz"] = {
+		Title = AL["Searistrasz"],
+		Prev_Page = "DMRElderHollowblood",
+		Prev_Title = AL["Elder Hollowblood"],
+		Next_Page = "DMRZuluhed",
+		Next_Title = AL["Zuluhed the Whacked"],
+		Back_Page = "DUNGEONSMENU1",
+		Back_Title = AL["Dungeons & Raids"],
+	};
+	["DMRZuluhed"] = {
+		Title = AL["Zuluhed the Whacked"],
+		Prev_Page = "DMRSearistrasz",
+		Prev_Title = AL["Searistrasz"],
+		Back_Page = "DUNGEONSMENU1",
+		Back_Title = AL["Dungeons & Raids"],
+	};
+	["SWROronok"] = {
+		Title = AL["Oronok Torn-Heart"],
+		Next_Page = "SWRDagar",
+		Next_Title = AL["Dagar the Glutton"],
+		Back_Page = "DUNGEONSMENU1",
+		Back_Title = AL["Dungeons & Raids"],
+	};
+	["SWRDagar"] = {
+		Title = AL["Dagar the Glutton"],
+		Prev_Page = "SWROronok",
+		Prev_Title = AL["Oronok Torn-Heart"],
+		Next_Page = "SWRDukeBalor",
+		Next_Title = AL["Duke Balor the IV"],
+		Back_Page = "DUNGEONSMENU1",
+		Back_Title = AL["Dungeons & Raids"],
+	};
+	["SWRDukeBalor"] = {
+		Title = AL["Duke Balor the IV"],
+		Prev_Page = "SWRDagar",
+		Prev_Title = AL["Dagar the Glutton"],
+		Next_Page = "SWRLibrarian",
+		Next_Title = AL["Librarian Theodorus"],
+		Back_Page = "DUNGEONSMENU1",
+		Back_Title = AL["Dungeons & Raids"],
+	};
+	["SWRLibrarian"] = {
+		Title = AL["Librarian Theodorus"],
+		Prev_Page = "SWRDukeBalor",
+		Prev_Title = AL["Duke Balor the IV"],
+		Next_Page = "SWRChieftain",
+		Next_Title = AL["Chieftain Stormsong"],
+		Back_Page = "DUNGEONSMENU1",
+		Back_Title = AL["Dungeons & Raids"],
+	};
+	["SWRChieftain"] = {
+		Title = AL["Chieftain Stormsong"],
+		Prev_Page = "SWRLibrarian",
+		Prev_Title = AL["Librarian Theodorus"],
+		Next_Page = "SWRDeathlord",
+		Next_Title = AL["Deathlord Tidebane"],
+		Back_Page = "DUNGEONSMENU1",
+		Back_Title = AL["Dungeons & Raids"],
+	};
+	["SWRDeathlord"] = {
+		Title = AL["Deathlord Tidebane"],
+		Prev_Page = "SWRChieftain",
+		Prev_Title = AL["Chieftain Stormsong"],
+		Next_Page = "SWRSubjugator",
+		Next_Title = AL["Subjugator Halthas Shadecrest"],
+		Back_Page = "DUNGEONSMENU1",
+		Back_Title = AL["Dungeons & Raids"],
+	};
+	["SWRSubjugator"] = {
+		Title = AL["Subjugator Halthas Shadecrest"],
+		Prev_Page = "SWRDeathlord",
+		Prev_Title = AL["Deathlord Tidebane"],
+		Next_Page = "SWRMycellakos",
+		Next_Title = AL["Mycellakos"],
+		Back_Page = "DUNGEONSMENU1",
+		Back_Title = AL["Dungeons & Raids"],
+	};
+	["SWRMycellakos"] = {
+		Title = AL["Mycellakos"],
+		Prev_Page = "SWRSubjugator",
+		Prev_Title = AL["Subjugator Halthas Shadecrest"],
+		Next_Page = "SWREldermaw",
+		Next_Title = AL["Eldermaw the Primordial"],
+		Back_Page = "DUNGEONSMENU1",
+		Back_Title = AL["Dungeons & Raids"],
+	};
+	["SWREldermaw"] = {
+		Title = AL["Eldermaw the Primordial"],
+		Prev_Page = "SWRMycellakos",
+		Prev_Title = AL["Mycellakos"],
+		Next_Page = "SWRLadyDrazare",
+		Next_Title = AL["Lady Drazare"],
+		Back_Page = "DUNGEONSMENU1",
+		Back_Title = AL["Dungeons & Raids"],
+	};
+	["SWRLadyDrazare"] = {
+		Title = AL["Lady Drazare"],
+		Prev_Page = "SWREldermaw",
+		Prev_Title = AL["Eldermaw the Primordial"],
+		Next_Page = "SWRRemains",
+		Next_Title = AL["Remains of the Innocent"],
+		Back_Page = "DUNGEONSMENU1",
+		Back_Title = AL["Dungeons & Raids"],
+	};
+	["SWRRemains"] = {
+		Title = AL["Remains of the Innocent"],
+		Prev_Page = "SWRLadyDrazare",
+		Prev_Title = AL["Lady Drazare"],
+		Next_Page = "SWRMergothid",
+		Next_Title = AL["Mergothid"],
+		Back_Page = "DUNGEONSMENU1",
+		Back_Title = AL["Dungeons & Raids"],
+	};
+	["SWRMergothid"] = {
+		Title = AL["Mergothid"],
+		Prev_Page = "SWRRemains",
+		Prev_Title = AL["Remains of the Innocent"],
+		Back_Page = "DUNGEONSMENU1",
+		Back_Title = AL["Dungeons & Raids"],
 	};
 	["HQHighForemanBargulBlackhammer"] = {
 		Title = AL["High Foreman Bargul Blackhammer"];
@@ -1062,37 +1225,46 @@ AtlasLoot_ButtonRegistry = {
 		Back_Page = "DUNGEONSMENU1";
 		Back_Title = AL["Dungeons & Raids"];
 	};
+	["MCIncindis"] = {
+		Title = AL["Incindis"];
+		Next_Page = "MCLucifron";
+		Next_Title = AL["Lucifron"];
+		Back_Page = "DUNGEONSMENU2";
+		Back_Title = AL["Dungeons & Raids"];
+	};
 	["MCLucifron"] = {
 		Title = AL["Lucifron"];
 		Next_Page = "MCMagmadar";
 		Next_Title = AL["Magmadar"];
+		Prev_Page = "MCIncindis";
+		Prev_Title = AL["Incindis"];
 		Back_Page = "DUNGEONSMENU2";
 		Back_Title = AL["Dungeons & Raids"];
 	};
 	["MCMagmadar"] = {
 		Title = AL["Magmadar"];
-		Next_Page = "MCGehennas";
-		Next_Title = AL["Gehennas"];
+		Next_Page = "MCGarr";
+		Next_Title = AL["Garr"];
 		Prev_Page = "MCLucifron";
 		Prev_Title = AL["Lucifron"];
 		Back_Page = "DUNGEONSMENU2";
 		Back_Title = AL["Dungeons & Raids"];
 	};
-	["MCGehennas"] = {
-		Title = AL["Gehennas"];
-		Next_Page = "MCGarr";
-		Next_Title = AL["Garr"];
-		Prev_Page = "MCMagmadar";
-		Prev_Title = AL["Magmadar"];
-		Back_Page = "DUNGEONSMENU2";
-		Back_Title = AL["Dungeons & Raids"];
-	};
+	-- ["MCGehennas"] = {
+	-- 	Title = AL["Gehennas"];
+	-- 	Next_Page = "MCGarr";
+	-- 	Next_Title = AL["Garr"];
+	-- 	Prev_Page = "MCMagmadar";
+	-- 	Prev_Title = AL["Magmadar"];
+	-- 	Back_Page = "DUNGEONSMENU2";
+	-- 	Back_Title = AL["Dungeons & Raids"];
+	-- };
 	["MCGarr"] = {
 		Title = AL["Garr"];
 		Next_Page = "MCShazzrah";
 		Next_Title = AL["Shazzrah"];
-		Prev_Page = "MCGehennas";
-		Prev_Title = AL["Gehennas"];
+		Prev_Page = "MCMagmadar";
+		Prev_Title = AL["Magmadar"];
 		Back_Page = "DUNGEONSMENU2";
 		Back_Title = AL["Dungeons & Raids"];
 	};
@@ -1116,10 +1288,28 @@ AtlasLoot_ButtonRegistry = {
 	};
 	["MCGolemagg"] = {
 		Title = AL["Golemagg the Incinerator"];
-		Next_Page = "MCSulfuron";
-		Next_Title = AL["Sulfuron Harbinger"];
+		Next_Page = "MCTwins";
+		Next_Title = AL["Basalthar & Smoldaris"];
 		Prev_Page = "MCGeddon";
 		Prev_Title = AL["Baron Geddon"];
+		Back_Page = "DUNGEONSMENU2";
+		Back_Title = AL["Dungeons & Raids"];
+	};
+	["MCTwins"] = {
+		Title = AL["Basalthar & Smoldaris"];
+		Next_Page = "MCThaurissan";
+		Next_Title =AL["Sorcerer-Thane Thaurissan"];
+		Prev_Page = "MCGolemagg";
+		Prev_Title = AL["Golemagg the Incinerator"];
+		Back_Page = "DUNGEONSMENU2";
+		Back_Title = AL["Dungeons & Raids"];
+	};
+	["MCThaurissan"] = {
+		Title = AL["Sorcerer-Thane Thaurissan"];
+		Next_Page = "MCSulfuron";
+		Next_Title = AL["Sulfuron Harbinger"];
+		Prev_Page = "MCTwins";
+		Prev_Title = AL["Basalthar & Smoldaris"];
 		Back_Page = "DUNGEONSMENU2";
 		Back_Title = AL["Dungeons & Raids"];
 	};
@@ -1127,8 +1317,8 @@ AtlasLoot_ButtonRegistry = {
 		Title = AL["Sulfuron Harbinger"];
 		Next_Page = "MCMajordomo";
 		Next_Title = AL["Majordomo Executus"];
-		Prev_Page = "MCGolemagg";
-		Prev_Title = AL["Golemagg the Incinerator"];
+		Prev_Page = "MCThaurissan";
+		Prev_Title = AL["Sorcerer-Thane Thaurissan"];
 		Back_Page = "DUNGEONSMENU2";
 		Back_Title = AL["Dungeons & Raids"];
 	};

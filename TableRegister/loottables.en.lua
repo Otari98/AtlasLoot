@@ -184,6 +184,7 @@ AtlasLoot_TableNames = {
 	["MaraPrincessTheradras"] = { AL["Maraudon"].." - "..AL["Princess Theradras"], "AtlasLootItems" },
 	["MaraTrash"] = { AL["Maraudon"].." - "..AL["Trash Mobs"], "AtlasLootItems" },
 	--Molten Core
+	["MCIncindis"] = { AL["Molten Core"].." - "..AL["Incindis"], "AtlasLootItems" },
 	["MCLucifron"] = { AL["Molten Core"].." - "..AL["Lucifron"], "AtlasLootItems" },
 	["MCMagmadar"] = { AL["Molten Core"].." - "..AL["Magmadar"], "AtlasLootItems" },
 	["MCGehennas"] = { AL["Molten Core"].." - "..AL["Gehennas"], "AtlasLootItems" },
@@ -191,6 +192,8 @@ AtlasLoot_TableNames = {
 	["MCShazzrah"] = { AL["Molten Core"].." - "..AL["Shazzrah"], "AtlasLootItems" },
 	["MCGeddon"] = { AL["Molten Core"].." - "..AL["Baron Geddon"], "AtlasLootItems" },
 	["MCGolemagg"] = { AL["Molten Core"].." - "..AL["Golemagg the Incinerator"], "AtlasLootItems" },
+	["MCTwins"] = { AL["Molten Core"].." - "..AL["Basalthar & Smoldaris"],"AtlasLootItems" },
+	["MCThaurissan"] = { AL["Molten Core"].." - "..AL["Sorcerer-Thane Thaurissan"], "AtlasLootItems" },
 	["MCSulfuron"] = { AL["Molten Core"].." - "..AL["Sulfuron Harbinger"], "AtlasLootItems" },
 	["MCMajordomo"] = { AL["Molten Core"].." - "..AL["Majordomo Executus"], "AtlasLootItems" },
 	["MCRagnaros"] = { AL["Molten Core"].." - "..AL["Ragnaros"], "AtlasLootItems" },
@@ -524,6 +527,28 @@ AtlasLoot_TableNames = {
 	["UKHRupturan"] = { AL["Upper Karazhan Halls"].." - "..AL["Rupturan the Broken"], "AtlasLootItems" },
 	["UKHMephistroth"] = { AL["Upper Karazhan Halls"].." - "..AL["Mephistroth"], "AtlasLootItems" },
 	["UKHTrash"] = { AL["Upper Karazhan Halls"].." - "..AL["Trash Mobs"], "AtlasLootItems" },
+	-- Dragonmaw Retreat
+	["DMRGowlfang"] = { AL["Dragonmaw Retreat"].." - "..AL["Gowlfang"], "AtlasLootItems"},
+	["DMRBroodmother"] = { AL["Dragonmaw Retreat"].." - "..AL["Cavernweb Broodmother"], "AtlasLootItems"},
+	["DMRWebMaster"] = { AL["Dragonmaw Retreat"].." - "..AL["Web Master Torkon"], "AtlasLootItems"},
+	["DMRGarlok"] = { AL["Dragonmaw Retreat"].." - "..AL["Garlok Flamekeeper"], "AtlasLootItems"},
+	["DMRHalgan"] = { AL["Dragonmaw Retreat"].." - "..AL["Halgan Redbrand"], "AtlasLootItems"},
+	["DMRElderHollowblood"] = { AL["Dragonmaw Retreat"].." - "..AL["Elder Hollowblood"], "AtlasLootItems"},
+	["DMRSearistrasz"] = { AL["Dragonmaw Retreat"].." - "..AL["Searistrasz"], "AtlasLootItems"},
+	["DMRZuluhed"] = { AL["Dragonmaw Retreat"].." - "..AL["Zuluhed the Whacked"], "AtlasLootItems"},
+	-- Stormwrought Ruins
+	["SWROronok"] = { AL["Stormwrought Ruins"].." - "..AL["Oronok Torn-Heart"], "AtlasLootItems"},
+	["SWRDagar"] = { AL["Stormwrought Ruins"].." - "..AL["Dagar the Glutton"], "AtlasLootItems"},
+	["SWRDukeBalor"] = { AL["Stormwrought Ruins"].." - "..AL["Duke Balor the IV"], "AtlasLootItems"},
+	["SWRLibrarian"] = { AL["Stormwrought Ruins"].." - "..AL["Librarian Theodorus"], "AtlasLootItems"},
+	["SWRChieftain"] = { AL["Stormwrought Ruins"].." - "..AL["Chieftain Stormsong"], "AtlasLootItems"},
+	["SWRDeathlord"] = { AL["Stormwrought Ruins"].." - "..AL["Deathlord Tidebane"], "AtlasLootItems"},
+	["SWRSubjugator"] = { AL["Stormwrought Ruins"].." - "..AL["Subjugator Halthas Shadecrest"], "AtlasLootItems"},
+	["SWRMycellakos"] = { AL["Stormwrought Ruins"].." - "..AL["Mycellakos"], "AtlasLootItems"},
+	["SWREldermaw"] = { AL["Stormwrought Ruins"].." - "..AL["Eldermaw the Primordial"], "AtlasLootItems"},
+	["SWRLadyDrazare"] = { AL["Stormwrought Ruins"].." - "..AL["Lady Drazare"], "AtlasLootItems"},
+	["SWRMergothid"] = { AL["Stormwrought Ruins"].." - "..AL["Mergothid"], "AtlasLootItems"},
+	["SWRRemains"] = { AL["Stormwrought Ruins"].." - "..AL["Remains of the Innocent"], "AtlasLootItems"},
 	------------
 	--- Sets ---
 	------------
@@ -1306,6 +1331,7 @@ AtlasLoot_TableNamesBoss = {
 		["MaraTrash"] = { AL["Trash Mobs"], "AtlasLootItems" },
 	},
 	["Molten Core"] = {
+		["MCIncindis"] = { AL["Incindis"], "AtlasLootItems" },
 		["MCLucifron"] = { AL["Lucifron"], "AtlasLootItems" },
 		["MCMagmadar"] = { AL["Magmadar"], "AtlasLootItems" },
 		["MCGehennas"] = { AL["Gehennas"], "AtlasLootItems" },
@@ -1313,6 +1339,8 @@ AtlasLoot_TableNamesBoss = {
 		["MCShazzrah"] = { AL["Shazzrah"], "AtlasLootItems" },
 		["MCGeddon"] = { AL["Baron Geddon"], "AtlasLootItems" },
 		["MCGolemagg"] = { AL["Golemagg the Incinerator"], "AtlasLootItems" },
+		["MCTwins"] = { AL["Basalthar & Smoldaris"],"AtlasLootItems" },
+		["MCThaurissan"] = { AL["Sorcerer-Thane Thaurissan"], "AtlasLootItems" },
 		["MCSulfuron"] = { AL["Sulfuron Harbinger"], "AtlasLootItems" },
 		["MCMajordomo"] = { AL["Majordomo Executus"], "AtlasLootItems" },
 		["MCRagnaros"] = { AL["Ragnaros"], "AtlasLootItems" },
@@ -1635,6 +1663,30 @@ AtlasLoot_TableNamesBoss = {
         ["UKHMephistroth"] = { AL["Mephistroth"], "AtlasLootItems" },
         ["UKHTrash"] = { AL["Trash Mobs"], "AtlasLootItems" },
     },
+	["Dragonmaw Retreat"] = {
+		["DMRGowlfang"] = { AL["Gowlfang"], "AtlasLootItems"},
+		["DMRBroodmother"] = { AL["Cavernweb Broodmother"], "AtlasLootItems"},
+		["DMRWebMaster"] = { AL["Web Master Torkon"], "AtlasLootItems"},
+		["DMRGarlok"] = { AL["Garlok Flamekeeper"], "AtlasLootItems"},
+		["DMRHalgan"] = { AL["Halgan Redbrand"], "AtlasLootItems"},
+		["DMRElderHollowblood"] = { AL["Elder Hollowblood"], "AtlasLootItems"},
+		["DMRSearistrasz"] = { AL["Searistrasz"], "AtlasLootItems"},
+		["DMRZuluhed"] = { AL["Zuluhed the Whacked"], "AtlasLootItems"},
+	},
+	["Stormwrought Ruins"] = {
+		["SWROronok"] = { AL["Oronok Torn-Heart"], "AtlasLootItems"},
+		["SWRDagar"] = { AL["Dagar the Glutton"], "AtlasLootItems"},
+		["SWRDukeBalor"] = { AL["Duke Balor the IV"], "AtlasLootItems"},
+		["SWRLibrarian"] = { AL["Librarian Theodorus"], "AtlasLootItems"},
+		["SWRChieftain"] = { AL["Chieftain Stormsong"], "AtlasLootItems"},
+		["SWRDeathlord"] = { AL["Deathlord Tidebane"], "AtlasLootItems"},
+		["SWRSubjugator"] = { AL["Subjugator Halthas Shadecrest"], "AtlasLootItems"},
+		["SWRMycellakos"] = { AL["Mycellakos"], "AtlasLootItems"},
+		["SWREldermaw"] = { AL["Eldermaw the Primordial"], "AtlasLootItems"},
+		["SWRLadyDrazare"] = { AL["Lady Drazare"], "AtlasLootItems"},
+		["SWRRemains"] = { AL["Remains of the Innocent"], "AtlasLootItems"},
+		["SWRMergothid"] = { AL["Mergothid"], "AtlasLootItems"},
+	},
 	------------
 	--- Sets ---
 	------------
