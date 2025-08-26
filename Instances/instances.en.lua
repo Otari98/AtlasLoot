@@ -13,8 +13,9 @@ AtlasLootBossButtons = {
 		"BFDGelihast";
 		"";
 		"";
-		"";
 		"BFDBaronAquanis";
+		"";
+		"BFDVelthelaxx",
 		"BFDTwilightLordKelris";
 		"BFDOldSerrakis";
 		"BFDAkumai";
@@ -367,14 +368,17 @@ AtlasLootBossButtons = {
 		"VanillaKeys";
 		"VanillaKeys";
 		"";
+		"MCIncindis";
 		"MCLucifron";
 		"MCMagmadar";
-		"MCGehennas";
+		-- "MCGehennas";
 		"MCGarr";
-		"MCShazzrah";
 		"MCGeddon";
-		"MCGolemagg";
+		"MCShazzrah";
 		"MCSulfuron";
+		"MCGolemagg";
+		"MCTwins";
+		"MCThaurissan";
 		"MCMajordomo";
 		"MCRagnaros";
 		"";
@@ -443,6 +447,7 @@ AtlasLootBossButtons = {
 		"RFDMordreshFireEye";
 		"RFDGlutton";
 		"RFDRagglesnout";
+		"RFDDeathProphet",
 		"RFDAmnennar";
 		"RFDPlaguemaw";
 		"";
@@ -461,6 +466,7 @@ AtlasLootBossButtons = {
 		"";
 		"";
 		"RFKEarthcallerHalmgar";
+		"RFKRotthorn",
 		"";
 		"RFKTrash";
 	};
@@ -885,6 +891,7 @@ AtlasLootBossButtons = {
 	ZulFarrak = {
 		"VanillaKeys";
 		"";
+		"ZFZerillis";
 		"ZFAntusul";
 		"ZFThekatheMartyr";
 		"ZFWitchDoctorZumrah";
@@ -898,12 +905,13 @@ AtlasLootBossButtons = {
 		"";
 		"";
 		"ZFSandfury";
+		"ZFChiefUkorzSandscalp";
+		"";
 		"ZFHydromancerVelratha";
 		"ZFGahzrilla";
 		"LunarFestival1";
-		"ZFChiefUkorzSandscalp";
-		"";
-		"ZFZerillis";
+		"ZFZeljeb",
+		"ZFChampion";
 		"";
 		"";
 		"ZFTrash";
@@ -975,12 +983,16 @@ AtlasLootBossButtons = {
 		"UKHTrash";
     };
 	EmeraldSanctum = {
+		"",
 		"ESErennius";
 		"ESSolnius1";
 		"ESHardMode";
+		"",
 		"ESTrash";
 	};
 	DragonmawRetreat = {
+		"",
+		"",
 		"DMRGowlfang",
 		"DMRBroodmother",
 		"DMRWebMaster",
@@ -991,6 +1003,8 @@ AtlasLootBossButtons = {
 		"DMRZuluhed",
 	};
 	StormwroughtRuins = {
+		"",
+		"",
 		"SWROronok",
 		"SWRDagar",
 		"SWRDukeBalor",
@@ -1001,8 +1015,8 @@ AtlasLootBossButtons = {
 		"SWRMycellakos",
 		"SWREldermaw",
 		"SWRLadyDrazare",
-		"SWRMergothid",
 		"SWRRemains",
+		"SWRMergothid",
 	};
 };
 --------------------------------------------------------------------------------
@@ -3543,6 +3557,13 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 16886, "INV_Sword_33", "=q3=Outlaw Sabre", "=q1=#m4# =ds=#h1#, #w10#" },
 		{ 16887, "INV_Wand_12", "=q3=Witch's Finger", "=q1=#m4# =ds=#s15#" },
 	};
+	-- Velthelaxx the Defiler 62530
+	BFDVelthelaxx = {
+		{ 58123, "INV_Boots_03", "=q3=Felhoof Sabatons", "#s12#, #a2#", "25%" },
+		{ 58121, "INV_QirajIdol_Life", "=q3=Totem of the Corrupted Current", "#s16#, #e17# =q15=#c7#", "25%" },
+		{ 58122, "INV_Bracer_07", "=q3=Bracers of Sinister Rites", "#s8#, #a1#", "25%" },
+		{ 58120, "INV_Helmet_27", "=q3=Cowl of Whispering Shadows", "#s1#, #a1#", "25%" },
+	};
 	BFDTwilightLordKelris = {
 		{ 1155, "INV_Staff_06", "=q3=Rod of the Sleepwalker", "=ds=#w9#", "50%" },
 		{ 6903, "INV_Pants_02", "=q2=Gaze Dreamer Pants", "=ds=#s11#, #a1#", "50%" },
@@ -4558,6 +4579,20 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 0, "", "", "" },
 		{ 51217, "INV_misc_ribbon_01", "=q2=Fashion Coin", "=ds=#e27#", "5%" },
 	};
+	-- Zel'jeb the Ancient 62495
+	ZFZeljeb = {
+		{ 58116, "INV_Weapon_ShortBlade_24", "=q3=Bloodstained Fangblade", "#h1#, #w4#", "25%" },
+		{ 58117, "INV_Staff_25", "=q3=Staff of the Bloodbound", "#h2#, #w9#", "25%" },
+		{ 58119, "INV_Bracer_02", "=q3=Bracers of the Bloodbound", "#s8#, #a3#", "25%" },
+		{ 58118, "INV_Belt_15", "=q3=Sash of Ritual Scars", "#s10#, #a2#", "25%" },
+	};
+	-- Champion Razjal the Quick 62498
+	ZFChampion = {
+		{ 58092, "INV_Helmet_22", "=q3=Champion's Sandhelm", "#s1#, #a4#", "25%" },
+		{ 58093, "INV_Relics_LibramofTruth", "=q3=Libram of the Farraki Zealot", "#s16#, #e18# =q16=#c4#", "25%" },
+		{ 58094, "INV_Sword_39", "=q3=Gilded Blade of Razjal", "#h2#, #w10#", "25%" },
+		{ 58095, "INV_Jewelry_Necklace_01", "=q3=Talisman of the Sandborn", "#s2#", "25%" },
+	};
 	ZFTrash = {
 		{ 9512, "INV_Misc_Cape_05", "=q3=Blackmetal Cape", "=ds=#s4#", "0.02%" },
 		{ 9484, "INV_Pants_08", "=q3=Spellshock Leggings", "=ds=#s11#, #a1#", "0.02%" },
@@ -4585,7 +4620,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 23177, "INV_Wand_12", "=q3=Lady Falther'ess' Finger", "=ds=#w12#", "50%" },
 	};
 	RFDPlaguemaw = {
-		{ 10766, "INV_Wand_03", "=q3=Plaguerot Sprig", "=ds=#w12# =q10=#c3#", "50%" },
+		{ 10766, "INV_Wand_03", "=q3=Plaguerot Sprig", "=ds=#w12#", "50%" },
 		{ 10760, "INV_Gauntlets_23", "=q2=Swine Fists", "=ds=#s9#, #a2#", "50%" },
 		{ 0,"","","" },
 		{ 80744, "inv_staff_26", "=q3=Plaguerot Staff", "=ds=#w9#", "35%" },
@@ -4606,6 +4641,13 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 80745, "inv_weapon_crossbow_04", "=q3=Abomination Crossbow", "=ds=#w3#", "50%" },
 		{ 0, "", "", "" },
 		{ 51217, "INV_misc_ribbon_01", "=q2=Fashion Coin", "=ds=#e27#", "1%" },
+	};
+	-- Death Prophet Rakameg 62679
+	RFDDeathProphet = {
+		{ 58173, "INV_Gauntlets_17", "=q3=Thorngorged Fleshgloves", "#s9#, #a2#", "25%" },
+		{ 58174, "INV_QirajIdol_Death", "=q3=Totem of the Rotten Roots", "#s16#, #e17# =q15=#c7#", "25%" },
+		{ 58172, "INV_Weapon_ShortBlade_18", "=q3=Thornspine", "#h3#, #w4#", "25%" },
+		{ 58175, "INV_Misc_AhnQirajTrinket_03", "=q3=Blood-etched Fetish", "#s14#", "25%" },
 	};
 	RFDRagglesnout = {
 		{ 10768, "INV_Belt_11", "=q3=Boar Champion's Belt", "=ds=#s10#, #a3#", "33%" },
@@ -4994,6 +5036,15 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 6689, "INV_Staff_01", "=q3=Wind Spirit Staff", "=ds=#w9#", "50%" },
 		{ 0, "", "", "" },
 		{ 6688, "INV_Helmet_17", "=q2=Whisperwind Headdress", "=ds=#s1#, #a2#", "50%" },
+	};
+	-- Rotthorn 62503
+	RFKRotthorn = {
+		{ 58089, "INV_Staff_02", "=q3=Thornlash Branch", "#w12#", "25%" },
+		{ 58090, "INV_Misc_Root_02", "=q3=Seed of Writhing Growth", "#s14#", "25%" },
+		{ 58091, "Spell_Nature_NatureTouchDecay", "=q3=Idol of the Thorned Grove", "#s16#, #e16# =q13=#c1#", "25%" },
+		{ 50800, "INV_Belt_17", "=q3=Bramblethorn Girdle", "#s10#, #a2#", "25%" },
+		{ 0, "", "", "" },
+		{ 41853, "INV_Misc_Organ_01", "=q1=Tainted Brambleheart", "#m3#", "100%" },
 	};
 	RFKTrash = {
 		{ 80789, "inv_helmet_46", "=q3=Sharpsight Eyepatch", "=ds=#s1#, #a2#", "0.02%" },
@@ -7539,7 +7590,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 61278, "INV_Weapon_ShortBlade_25", "=q3=Vampiric Kris", "=ds=#h1#, #w4#", "14%" },
 		{ 61816, "INV_Shield_21", "=q3=Araxxna's Husk", "=ds=#s14#", "14%" },
 		{ 0, "", "", "" },
-		{ 58401, "INV_Scroll_06", "=q3=Schematic: Giga-Charged Arcane Reflector", "=ds=#p5# #m18#" },
+		{ 58401, "INV_Scroll_06", "=q3=Schematic: Giga-Charged Arcane Reflector", "=ds=#p5# #m18#", "1.2%" },
 		{ 61180, "INV_Misc_Note_01", "=q3=Formula: Enchant Cloak - Greater Arcane Resistance", "=ds=#p4# #m14#", "1.2%" },
 		{ 70001, "INV_Misc_Note_01", "=q3=Formula: Enchant Gloves - Arcane Power", "=ds=#p4# #m14#", "0.9%" },
 		{ 61178, "INV_Scroll_05", "=q3=Plans: Thorium Spurs", "=ds=#p2# #m14#", "1.2%" },
@@ -7571,7 +7622,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 61298, "inv_gauntlets_21", "=q3=Overgrown Gloves", "=ds=#s9#, #a1#", "14%" },
 		{ 61450, "INV_Misc_Key_09", "=q3=The Mind's Key", "=ds=#s14#", "14%" },
 		{ 0, "", "", "" },
-		{ 58401, "INV_Scroll_06", "=q3=Schematic: Giga-Charged Arcane Reflector", "=ds=#p5# #m18#" },
+		{ 58401, "INV_Scroll_06", "=q3=Schematic: Giga-Charged Arcane Reflector", "=ds=#p5# #m18#", "1.2%" },
 		{ 61180, "INV_Misc_Note_01", "=q3=Formula: Enchant Cloak - Greater Arcane Resistance", "=ds=#p4# #m14#", "1.2%" },
 		{ 70001, "INV_Misc_Note_01", "=q3=Formula: Enchant Gloves - Arcane Power", "=ds=#p4# #m14#", "0.9%" },
 		{ 61178, "INV_Scroll_05", "=q3=Plans: Thorium Spurs", "=ds=#p2# #m14#", "1.2%" },
@@ -7603,7 +7654,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 61263, "INV_Misc_MonsterFang_01", "=q3=Tooth of the Packlord", "=ds=#s14#", "14%" },
 		{ 61451, "INV_Enchant_EssenceEternalSmall", "=q3=Sliver of Hope", "=ds=#s14#", "14%" },
 		{ 0, "", "", "" },
-		{ 58401, "INV_Scroll_06", "=q3=Schematic: Giga-Charged Arcane Reflector", "=ds=#p5# #m18#" },
+		{ 58401, "INV_Scroll_06", "=q3=Schematic: Giga-Charged Arcane Reflector", "=ds=#p5# #m18#", "1.2%" },
 		{ 61180, "INV_Misc_Note_01", "=q3=Formula: Enchant Cloak - Greater Arcane Resistance", "=ds=#p4# #m14#", "1.2%" },
 		{ 70001, "INV_Misc_Note_01", "=q3=Formula: Enchant Gloves - Arcane Power", "=ds=#p4# #m14#", "0.9%" },
 		{ 61178, "INV_Scroll_05", "=q3=Plans: Thorium Spurs", "=ds=#p2# #m14#", "1.2%" },
@@ -7635,7 +7686,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 61255, "INV_Knife_1H_Draenei_A_03", "=q3=Tuning Fork of Charged Lightning", "=ds=#h3#, #w4#", "14%" },
 		{ 61286, "INV_Wand_01", "=q3=Bloodfang Effigy", "=ds=#w12#", "14%" },
 		{ 0, "", "", "" },
-		{ 58401, "INV_Scroll_06", "=q3=Schematic: Giga-Charged Arcane Reflector", "=ds=#p5# #m18#" },
+		{ 58401, "INV_Scroll_06", "=q3=Schematic: Giga-Charged Arcane Reflector", "=ds=#p5# #m18#", "1.2%" },
 		{ 61180, "INV_Misc_Note_01", "=q3=Formula: Enchant Cloak - Greater Arcane Resistance", "=ds=#p4# #m14#", "1.2%" },
 		{ 70001, "INV_Misc_Note_01", "=q3=Formula: Enchant Gloves - Arcane Power", "=ds=#p4# #m14#", "0.9%" },
 		{ 61178, "INV_Scroll_05", "=q3=Plans: Thorium Spurs", "=ds=#p2# #m14#", "1.2%" },
@@ -7667,7 +7718,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 0, "", "", "" },
 		{ 61231, "INV_Misc_Key_09", "=q1=Key to the Upper Chambers", "=ds=#m3#", "100%" },
 		{ 0, "", "", "" },
-		{ 58401, "INV_Scroll_06", "=q3=Schematic: Giga-Charged Arcane Reflector", "=ds=#p5# #m18#" },
+		{ 58401, "INV_Scroll_06", "=q3=Schematic: Giga-Charged Arcane Reflector", "=ds=#p5# #m18#", "1.2%" },
 		{ 61180, "INV_Misc_Note_01", "=q3=Formula: Enchant Cloak - Greater Arcane Resistance", "=ds=#p4# #m14#", "1.2%" },
 		{ 70001, "INV_Misc_Note_01", "=q3=Formula: Enchant Gloves - Arcane Power", "=ds=#p4# #m14#", "2%" },
 		{ 61178, "INV_Scroll_05", "=q3=Plans: Thorium Spurs", "=ds=#p2# #m14#", "1.2%" },
@@ -7694,7 +7745,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 61177, "INV_Scroll_05", "=q3=Recipe: Potion of Quickness", "=ds=#p1# #m14#", "0.03%" },
 		{ 61178, "INV_Scroll_05", "=q3=Plans: Thorium Spurs", "=ds=#p2# #m14#", "0.03%" },
 		{ 61180, "INV_Misc_Note_01", "=q3=Formula: Enchant Cloak - Greater Arcane Resistance", "=ds=#p4# #m14#", "0.03%" },
-		{ 58401, "INV_Scroll_06", "=q3=Schematic: Giga-Charged Arcane Reflector", "=ds=#p5# #m18#" },
+		{ 58401, "INV_Scroll_06", "=q3=Schematic: Giga-Charged Arcane Reflector", "=ds=#p5# #m18#", "1.2%" },
 	};
 	LKHEnchants = {
 		{ 92005, "Ability_Creature_Cursed_01", "=q3=Invocation of Shattering", "=ds=#s1#/#s11# #e11#" },
@@ -8100,6 +8151,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 55286, "INV_Jewelry_Ring_33", "=q4=Ring of Holy Light", "=ds=#s13#", "0.25%" },
 		{ 55508, "INV_Jewelry_Necklace_27", "=q4=Brand of Karazhan", "=ds=#s13#", "0.25%" },
 	};
+	-- Dragonmaw Retreat
 	DMRGowlfang = {
 		{ 41571, "INV_Axe_03", "=q3=Snickerclaw", "#h3#, #w1#", "20%" },
 		{ 41572, "INV_Jewelry_Necklace_22", "=q3=Gowlfang's Collar", "#s2#", "20%" },
@@ -8165,6 +8217,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 41981, "INV_Letter_15", "=q1=Letter from Korlag Doomsong", "#m2#", "100%" },
 		{ 41711, "INV_Letter_15", "=q1=Letter from Korlag Doomsong", "#m2#", "100%" },
 	};
+	-- Stormwrought Ruins
 	SWROronok = {
 		{ 58135, "INV_Weapon_ShortBlade_15", "=q3=Dagger of Whispered Madness", "#h1#, #w4#", "25%" },
 		{ 58137, "INV_Staff_17", "=q3=Netherbranch", "#w12#", "25%" },
@@ -8210,6 +8263,9 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 58151, "INV_Misc_PocketWatch_02", "=q3=Salt-encrusted Compass", "#s14#", "25%" },
 		{ 58152, "INV_Misc_Cape_07", "=q3=Cloak of Black Fortitude", "#s4#", "25%" },
 		{ 58153, "INV_Jewelry_Ring_31", "=q3=Shattered Soul Ring", "#s13#", "25%" },
+		{ 58276, "INV_Shield_16", "=q4=Hull of Forlorn Souls", "#h4#, #w8#", "1%" },
+		{ 0, "", "", "" },
+		{ 950, "Ability_Mount_Undeadhorse", "=q4=Stormwrought Deathsteed", "#e7#", "0.2%" },
 		{ 0, "", "", "" },
 		{ 24, "INV_Misc_Note_01", "=q3=Formula: Enchant Bracer - Agility", "#e11#ing #m26#", "6%" },
 		{ 70, "INV_Scroll_06", "=q2=Plans: Steel Belt Buckle", "#p2# #m29#", "6%" },

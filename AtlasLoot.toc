@@ -1,7 +1,7 @@
 ## Interface: 11200
 ## Title: AtlasLoot |cff7fff7f TurtleWOW|r
 ## Notes: Shows possible loot from dungeon bosses and other sources.
-## Author: Otari (overhaul/revamp, menu changes, bugfixes/updates), Lexie (Turtle WoW fixes/updates), Pepopo, MarcelineVQ (Kara40 loot)
+## Author: Otari (overhaul/revamp, menu changes, bugfixes/updates), Lexie (Turtle WoW fixes/updates), Pepopo, MarcelineVQ (Kara40 loot), Shagu
 ## LegacyAuthor: Daviesh, Pompa (Turtle WoW World Bosses), Xerron (Turtle WoW World Bosses), Gurky (Turtle WoW 1.16/1.16.1 Dungeons)
 ## Version: 3.1.9
 ## SavedVariablesPerCharacter: AtlasLootCharDB

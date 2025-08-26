@@ -1406,17 +1406,23 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 			if tablebase.Next_Page then
 				AtlasLootItemsFrame_NEXT:Show();
 				AtlasLootItemsFrame_NEXT.lootpage = tablebase.Next_Page;
-				AtlasLootItemsFrame_NEXT.title = tablebase.Next_Title;
+				if AtlasLoot_ButtonRegistry[tablebase.Next_Page] then
+					AtlasLootItemsFrame_NEXT.title = AtlasLoot_ButtonRegistry[tablebase.Next_Page].Title;
+				end
 			end
 			if tablebase.Prev_Page then
 				AtlasLootItemsFrame_PREV:Show();
 				AtlasLootItemsFrame_PREV.lootpage = tablebase.Prev_Page;
-				AtlasLootItemsFrame_PREV.title = tablebase.Prev_Title;
+				if AtlasLoot_ButtonRegistry[tablebase.Prev_Page] then
+					AtlasLootItemsFrame_PREV.title = AtlasLoot_ButtonRegistry[tablebase.Prev_Page].Title;
+				end
 			end
 			if tablebase.Back_Page then
 				AtlasLootItemsFrame_BACK:Show();
 				AtlasLootItemsFrame_BACK.lootpage = tablebase.Back_Page;
-				AtlasLootItemsFrame_BACK.title = tablebase.Back_Title;
+				if AtlasLoot_ButtonRegistry[tablebase.Back_Page] then
+					AtlasLootItemsFrame_BACK.title = AtlasLoot_ButtonRegistry[tablebase.Back_Page].Title;
+				end
 				--Hide navigation buttons if we click Quicklooks in Atlas
 				if AtlasFrame and AtlasFrame:IsVisible() then
 					if this.sourcePage then
@@ -2679,6 +2685,7 @@ AtlasLoot_HewdropDown_SubTables = {
 		{ AL["Lady Sarevess"], "BFDLadySarevess" },
 		{ AL["Gelihast"], "BFDGelihast" },
 		{ AL["Baron Aquanis"], "BFDBaronAquanis" },
+		{ AL["Velthelaxx the Defiler"], "BFDVelthelaxx"},
 		{ AL["Twilight Lord Kelris"], "BFDTwilightLordKelris" },
 		{ AL["Old Serra'kis"], "BFDOldSerrakis" },
 		{ AL["Aku'mai"], "BFDAkumai" },
@@ -2747,6 +2754,7 @@ AtlasLoot_HewdropDown_SubTables = {
 		{ AL["Plaguemaw the Rotting"], "RFDPlaguemaw" },
 		{ AL["Mordresh Fire Eye"], "RFDMordreshFireEye" },
 		{ AL["Glutton"], "RFDGlutton" },
+		{ AL["Death Prophet Rakameg"], "RFDDeathProphet" },
 		{ AL["Ragglesnout"].." ("..AL["Rare"]..")", "RFDRagglesnout" },
 		{ AL["Amnennar the Coldbringer"], "RFDAmnennar" },
 		{ AL["Trash Mobs"], "RFDTrash" },
@@ -2760,12 +2768,13 @@ AtlasLoot_HewdropDown_SubTables = {
 		{ AL["Blind Hunter"].." ("..AL["Rare"]..")", "RFKBlindHunter" },
 		{ AL["Charlga Razorflank"], "RFKCharlgaRazorflank" },
 		{ AL["Earthcaller Halmgar"].." ("..AL["Rare"]..")", "RFKEarthcallerHalmgar" },
+		{ AL["Rotthorn"], "RFKRotthorn" },
 		{ AL["Trash Mobs"], "RFKTrash" },
 	},
 	["RuinsofAQ"] = {
 		{ AL["Kurinnaxx"], "AQ20Kurinnaxx" },
 		{ AL["Lieutenant General Andorov"], "AQ20Andorov" },
-		{ AtlasLoot_TableNames["AQ20CAPTAIN"][1], "AQ20CAPTAIN" },
+		{ AL["Rajaxx's Captains"], "AQ20CAPTAIN" },
 		{ AL["General Rajaxx"], "AQ20Rajaxx" },
 		{ AL["Moam"], "AQ20Moam" },
 		{ AL["Buru the Gorger"], "AQ20Buru" },
@@ -2786,6 +2795,7 @@ AtlasLoot_HewdropDown_SubTables = {
 		{ AL["Ouro"], "AQ40Ouro" },
 		{ AL["C'Thun"], "AQ40CThun" },
 		{ AL["Trash Mobs"], "AQ40Trash1" },
+		{ AL["Trash Mobs"], "AQ40Trash2" },
 		{ AL["AQ Enchants"], "AQEnchants" },
 		{ AL["AQ Opening Quest Chain"], "AQOpening" },
 	},
@@ -2811,6 +2821,8 @@ AtlasLoot_HewdropDown_SubTables = {
 		{ AL["Zerillis"].." ("..AL["Rare"]..")", "ZFZerillis" },
 		{ AL["Gahz'rilla"], "ZFGahzrilla" },
 		{ AL["Chief Ukorz Sandscalp"], "ZFChiefUkorzSandscalp" },
+		{ AL["Zel'jeb the Ancient"], "ZFZeljeb" },
+		{ AL["Champion Razjal the Quick"], "ZFChampion" },
 		{ AL["Trash Mobs"], "ZFTrash" },
 	},
 	["EmeraldSanctum"] = {
