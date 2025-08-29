@@ -2869,6 +2869,8 @@ AtlasLoot_Data["AtlasLootItems"] = {
 				{{21392,"=q4=#x24#=ds=, #r5#"},{21395,"=q4=#x24#=ds=, #r5#"},{21401,"=q4=#x24#=ds=, #r5#"},{21404,"=q4=#x24#=ds=, #r5#"},{21398,"=q4=#x24#=ds=, #r5#"},},
 			},
 		},
+		{ 0,"","","" },
+		{ 132, "INV_Scroll_06", "=q3=Plans: Obsidian Belt Buckle", "#p2# (300)", "6%" },
 	};
 	AQ20Andorov = {
 		{ 22221, "INV_Scroll_03", "=q1=Plans: Obsidian Mail Tunic", "=ds=#p2# #m14#" },
@@ -8173,9 +8175,9 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 58041, "INV_Misc_Bone_03", "=q2=Fangmother Essence", "#s14#", "20%" },
 		{ 58040, "INV_Bracer_06", "=q2=Cavernweb Cuffs", "#s8#, #a3#", "20%" },
 		{ 0, "", "", "" },
-		{ 41834, "INV_Misc_Organ_02", "=q1=Broodmother's Sac", "#m3#", "100%" },
-		{ 0, "", "", "" },
 		{ 37009, "INV_Misc_MonsterSpiderCarapace_01", "=q2=Cavernweb Hatchling", "#e15#", "10%" },
+		{ 0, "", "", "" },
+		{ 41834, "INV_Misc_Organ_02", "=q1=Broodmother's Sac", "#m3#", "100%" },
 	};
 	DMRWebMaster = {
 		{ 41566, "INV_Jewelry_Ring_22", "=q3=Webmaster's Ring", "#s13#", "20%" },
@@ -8184,9 +8186,9 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 41569, "INV_Misc_Cape_07", "=q2=Tattered Orcish Shawl", "#s4#", "20%" },
 		{ 41570, "INV_Misc_Orb_01", "=q2=Idol of Nethalakk", "#s15#", "20%" },
 		{ 0, "", "", "" },
-		{ 41874, "INV_Misc_StoneTablet_02", "=q2=Fragment of Algoron", "", "100%" },
-		{ 0, "", "", "" },
 		{ 30040, "Ability_Hunter_Pet_Turtle", "=q3=Admiral Grumbleshell", "#e7#", "2.5%" },
+		{ 0, "", "", "" },
+		{ 41874, "INV_Misc_StoneTablet_02", "=q2=Fragment of Algoron", "", "100%" },
 	};
 	DMRGarlok = {
 		{ 41578, "INV_Chest_Cloth_25", "=q3=Flamekeeper's Robe", "#s5#, #a1#", "25%" },
@@ -8196,11 +8198,31 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 0, "", "", "" },
 		{ 30040, "Ability_Hunter_Pet_Turtle", "=q3=Admiral Grumbleshell", "#e7#", "2.5%" },
 	};
+	DMROverlord = {
+		{ 41726, "INV_Gauntlets_15", "=q3=Slaver's Gauntlets", "#s9#, #a3#", "25%" },
+		{ 41725, "GenBow_twow3F", "=q3=Dragonmaw Battle Bow", "#w2#", "25%" },
+		{ 41724, "INV_Shoulder_24", "=q3=Dragonmaw Shoulders", "#s3#, #a2#", "25%" },
+		{ 41727, "INV_Chest_Leather_02", "=q2=Blackheart Armor", "#s5#, #a3#", "25%" },
+		{ 0, "", "", "" },
+		{ 74, "INV_Scroll_05", "=q3=Pattern: Dragonmaw Gloves", "#p7# (170)", "6%" },
+		{ 0, "", "", "" },
+		{ 30040, "Ability_Hunter_Pet_Turtle", "=q3=Admiral Grumbleshell", "#e7#", "2.5%" },
+		{ 0, "", "", "" },
+		{ 41841, "INV_Misc_Head_Orc_01", "=q1=Blackheart's Head", "#m3#", "100%" },
+	};
 	DMRHalgan = {
 		{ 58044, "INV_Staff_28", "=q3=Ceremonial Dwarven Staff", "#h2#, #w9#", "25%" },
 		{ 58046, "INV_Shield_03", "=q3=Shield of Galoraz", "#h4#, #w8#", "25%" },
 		{ 58047, "INV_Wand_12", "=q3=Grasp of Ancestors", "#w12#", "25%" },
 		{ 58045, "INV_Pants_04", "=q3=Ancient Legplates", "#s11#, #a3#", "25%" },
+		{ 0, "", "", "" },
+		{ 30040, "Ability_Hunter_Pet_Turtle", "=q3=Admiral Grumbleshell", "#e7#", "2.5%" },
+	};
+	DMRSlagfist = {
+		{ 41560, "INV_Misc_StoneTablet_01", "=q3=Shalestone Amulet", "#s2#", "25%" },
+		{ 41719, "INV_Pants_03", "=q2=Stonelink Leggings", "#s11#, #a3#", "25%" },
+		{ 41558, "INV_Staff_11", "=q2=The Slagbinder", "#h2#, #w9#", "25%" },
+		{ 41559, "INV_Axe_12", "=q2=Rock Carver", "#h3#, #w1#", "25%" },
 		{ 0, "", "", "" },
 		{ 30040, "Ability_Hunter_Pet_Turtle", "=q3=Admiral Grumbleshell", "#e7#", "2.5%" },
 	};
@@ -8233,6 +8255,34 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 0, "", "", "" },
 		{ 41981, "INV_Letter_15", "=q1=Letter from Korlag Doomsong", "#m2#", "100%" },
 		{ 41711, "INV_Letter_15", "=q1=Letter from Korlag Doomsong", "#m2#", "100%" },
+	};
+	DMRTrash = {
+		{ 58103, "INV_Belt_13", "=q3=Drakeflame Girdle", "#s10#, #a3#", "0.01%" },
+		{ 58106, "INV_Chest_Leather_08", "=q3=Coal-Dusted Worker's Vest", "#s5#, #a2#", "0.01%" },
+		{ 58107, "INV_Crown_01", "=q3=Ancestor's Wisdom", "#s1#, #a1#", "0.01%" },
+		{ 58102, "gnahs_skullshield_1", "=q3=Dragonmaw Bulwark", "#h4#, #w8#", "0.01%" },
+		{ 58104, "INV_Misc_Cape_18", "=q3=Magmascarred Cloak", "#s4#", "0.01%" },
+		{ 58108, "INV_Gauntlets_26", "=q3=Drakeskin Gloves", "#s9#, #a2#", "0.01%" },
+		{ 58109, "INV_Jewelry_Ring_04", "=q3=Kindling Signet", "#s13#", "0.01%" },
+		{ 58110, "INV_Helmet_18", "=q3=Lantern-Helm of the Deep", "#s1#, #a2#", "0.01%" },
+		{ 58105, "INV_Bracer_07", "=q3=Bindings of the Forebearer", "#s8#, #a2#", "0.01%" },
+		{ 0, "", "", "" },
+		{ 58111, "INV_Chest_Chain_15", "=q2=Dragonmaw Hauberk", "#s5#, #a2#", "0.11%" },
+		{ 58115, "INV_Boots_Cloth_05", "=q2=Dragonmaw Greaves", "#s12#, #a2#", "0.11%" },
+		{ 58114, "INV_Pants_Leather_07", "=q2=Dragonmaw Leggings", "#s11#, #a2#", "0.11%" },
+		{ 58113, "INV_Bracer_02", "=q2=Dragonmaw Bracers", "#s8#, #a2#", "0.11%" },
+		{ 0, "", "", "" },
+		{ 70104, "INV_Misc_Note_01", "=q3=Plans: Gemmed Citrine Pendant", "#p18# (160)", "0.02%" },
+		{ 70153, "INV_Misc_Note_01", "=q3=Plans: Farraki Ceremony Totem", "#p18# (140)", "0.02%" },
+		{ 70186, "INV_Misc_Note_01", "=q3=Plans: Blackrock Ironclamps", "#p18# (140)", "0.02%" },
+		{ 0, "", "", "" },
+		{ 30040, "Ability_Hunter_Pet_Turtle", "=q3=Admiral Grumbleshell", "#e7#", "2.5%" },
+		{ 30011, "Ability_Hunter_Pet_Crab", "=q3=Diamond Crustacean", "#e7#", "0.5%" },
+		{ 30012, "ability_hunter_pet_thunder_lizard", "=q3=Black Thunder Lizard", "#e7#", "0.01%" },
+		{ 30013, "ability_hunter_pet_thunder_lizard", "=q3=Azure Thunder Lizard", "#e7#", "0.05%" },
+		{ 30014, "ability_hunter_pet_thunder_lizard", "=q3=Green Thunder Lizard", "#e7#", "0.01%" },
+		{ 30015, "ability_hunter_pet_thunder_lizard", "=q3=Pale Thunder Lizard", "#e7#", "0.5%" },
+		{ 30016, "ability_hunter_pet_thunder_lizard", "=q3=Red Thunder Lizard", "#e7#", "0.01%" },
 	};
 	-- Stormwrought Ruins
 	SWROronok = {
@@ -8336,4 +8386,32 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 0, "INV_Box_01", "=q6="..AL["Ighal'for"], ""},
 		{ 41939, "INV_Jewelry_Necklace_05", "=q1=Broken Bloodstone Pendant", "#m2#", "100%" },
 	},
+	SWRTrash = {
+		{ 1992, "INV_Misc_Bone_OrcSkull_01", "=q3=Swampchill Fetish", "#s15#", "0.02%" },
+		{ 2262, "INV_Jewelry_Ring_15", "=q3=Mark of Kern", "#s13#", "0.02%" },
+		{ 5756, "INV_Weapon_ShortBlade_24", "=q3=Sliverblade", "#h1#, #w4#", "0.02%" },
+		{ 5819, "INV_Helmet_03", "=q3=Sunblaze Coif", "#s1#, #a3#", "0.02%" },
+		{ 7727, "INV_Shoulder_23", "=q3=Watchman Pauldrons", "#s3#, #a2#", "0.02%" },
+		{ 7728, "INV_Chest_Cloth_25", "=q3=Beguiler Robes", "#s5#, #a1#", "0.04%" },
+		{ 7729, "INV_Weapon_Rifle_06", "=q3=Chesterfall Musket", "#w5#", "0.02%" },
+		{ 7730, "INV_Hammer_04", "=q3=Cobalt Crusher", "#h2#, #w6#", "0.02%" },
+		{ 7736, "INV_Mace_11", "=q3=Fight Club", "#h1#, #w6#", "0.02%" },
+		{ 7752, "INV_Hammer_17", "=q3=Dreamslayer", "#h3#, #w6#", "0.02%" },
+		{ 7753, "INV_Axe_10", "=q3=Bloodspiller", "#h2#, #w1#", "0.02%" },
+		{ 7754, "INV_Boots_05", "=q3=Harbinger Boots", "#s12#, #a2#", "0.01%" },
+		{ 7755, "INV_Shoulder_13", "=q3=Flintrock Shoulders", "#s3#, #a2#", "0.02%" },
+		{ 7757, "INV_Wand_07", "=q3=Windweaver Staff", "#h2#, #w9#", "0.02%" },
+		{ 7759, "INV_Chest_Chain_11", "=q3=Archon Chestpiece", "#s5#, #a3#", "0.02%" },
+		{ 7760, "INV_Pants_06", "=q3=Warchief Kilt", "#s11#, #a2#", "0.02%" },
+		{ 7761, "INV_Axe_06", "=q3=Steelclaw Reaver", "#h3#, #w1#", "0.02%" },
+		{ 7786, "INV_Axe_14", "=q3=Headsplitter", "#h1#, #w1#", "0.02%" },
+		{ 7787, "INV_Shield_02", "=q3=Resplendent Guardian", "#h4#, #w8#", "0.02%" },
+		{ 8225, "INV_Sword_30", "=q3=Tainted Pierce", "#h1#, #w10#", "0.02%" },
+		{ 8226, "INV_Sword_18", "=q3=The Butcher", "#h3#, #w10#", "0.02%" },
+		{ 58131, "INV_Belt_12", "=q2=Stormreaver Belt", "#s10#, #a1#", "0.11%" },
+		{ 58178, "INV_Boots_05", "=q2=Stormreaver Boots", "#s12#, #a1#", "0.11%" },
+		{ 0, "", "", "" },
+		{ 30025, "Ability_Hunter_Pet_Scorpid", "=q3=Silver Riding Scorpid", "#e7#", "1%" },
+		{ 30040, "Ability_Hunter_Pet_Turtle", "=q3=Admiral Grumbleshell", "#e7#", "5%" },
+	};
 };

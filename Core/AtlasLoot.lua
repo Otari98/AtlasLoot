@@ -2912,9 +2912,12 @@ AtlasLoot_HewdropDown_SubTables = {
 		{ AL["Web Master Torkon"], "DMRWebMaster" },
 		{ AL["Garlok Flamekeeper"], "DMRGarlok" },
 		{ AL["Halgan Redbrand"], "DMRHalgan" },
+		{ AL["Slagfist Destroyer"],"DMRSlagfist" },
+		{ AL["Overlord Blackheart"], "DMROverlord" },
 		{ AL["Elder Hollowblood"], "DMRElderHollowblood" },
 		{ AL["Searistrasz"], "DMRSearistrasz" },
 		{ AL["Zuluhed the Whacked"], "DMRZuluhed" },
+		{ AL["Trash Mobs"], "DMRTrash" },
 	},
 	["StormwroughtRuins"] = {
 		{ AL["Oronok Torn-Heart"], "SWROronok" },
@@ -2929,6 +2932,7 @@ AtlasLoot_HewdropDown_SubTables = {
 		{ AL["Lady Drazare"], "SWRLadyDrazare" },
 		{ AL["Remains of the Innocent"], "SWRRemains" },
 		{ AL["Mergothid"], "SWRMergothid" },
+		{ AL["Trash Mobs"], "SWRTrash" },
 	},
 };
 

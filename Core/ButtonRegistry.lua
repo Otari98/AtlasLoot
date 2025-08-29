@@ -37,12 +37,24 @@ AtlasLoot_ButtonRegistry = {
 	["DMRHalgan"] = {
 		Title = AL["Halgan Redbrand"],
 		Prev_Page = "DMRGarlok",
+		Next_Page = "DMRSlagfist",
+		Back_Page = "DUNGEONSMENU1",
+	};
+	["DMRSlagfist"] = {
+		Title = AL["Slagfist Destroyer"],
+		Prev_Page = "DMRHalgan",
+		Next_Page = "DMROverlord",
+		Back_Page = "DUNGEONSMENU1",
+	};
+	["DMROverlord"] = {
+		Title = AL["Overlord Blackheart"],
+		Prev_Page = "DMRSlagfist",
 		Next_Page = "DMRElderHollowblood",
 		Back_Page = "DUNGEONSMENU1",
 	};
 	["DMRElderHollowblood"] = {
 		Title = AL["Elder Hollowblood"],
-		Prev_Page = "DMRHalgan",
+		Prev_Page = "DMROverlord",
 		Next_Page = "DMRSearistrasz",
 		Back_Page = "DUNGEONSMENU1",
 	};
@@ -55,6 +67,12 @@ AtlasLoot_ButtonRegistry = {
 	["DMRZuluhed"] = {
 		Title = AL["Zuluhed the Whacked"],
 		Prev_Page = "DMRSearistrasz",
+		Next_Page = "DMRTrash",
+		Back_Page = "DUNGEONSMENU1",
+	};
+	["DMRTrash"] = {
+		Title = AL["Trash Mobs"],
+		Prev_Page = "DMRZuluhed",
 		Back_Page = "DUNGEONSMENU1",
 	};
 	-- Stormwrought Ruins
@@ -126,6 +144,12 @@ AtlasLoot_ButtonRegistry = {
 	["SWRMergothid"] = {
 		Title = AL["Mergothid"],
 		Prev_Page = "SWRRemains",
+		Next_Page = "SWRTrash",
+		Back_Page = "DUNGEONSMENU1",
+	};
+	["SWRTrash"] = {
+		Title = AL["Trash Mobs"],
+		Prev_Page = "SWRMergothid",
 		Back_Page = "DUNGEONSMENU1",
 	};
 	-- Hateforge Quarry
