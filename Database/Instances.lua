@@ -1443,6 +1443,8 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 19147, "INV_Jewelry_Ring_38", "=q4=Ring of Spell Power", "=ds=#s13#", "5%" },
 		{ 17077, "INV_Staff_13", "=q4=Crimson Shocker", "=ds=#w12#", "5%" },
 		{ 18878, "INV_Weapon_ShortBlade_07", "=q4=Sorcerous Dagger", "=ds=#h3#, #w4#", "5%" },
+		{ 0, "", "", "" },
+		{ 41988, "INV_Misc_MonsterScales_15", "=q1=Molten Scale", "#m3#", "100%" },
 	};
 	MCLucifron = { --https://database.turtle-wow.org/?npc=12118
 		{ 16800, "INV_Boots_07", "=q4=Arcanist Boots", "=ds=#s12#, #a1# =q10=#c3#", "20%", "", "", "", "", "", "", "", "", "", "", {
@@ -7234,6 +7236,9 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 22954, "INV_Trinket_Naxxramas04", "=q4=Kiss of the Spider", "=ds=#s14#", "20%" },
 		{ 22807, "INV_Sword_11", "=q4=Wraith Blade", "=ds=#h1#, #w10#", "20%" },
 		{ 22804, "INV_knife_1h_stratholme_d_01", "=q4=Maexxna's Fang", "=ds=#h1#, #w4#", "20%" },
+		{ 0, "", "", "" },
+		{ 37012, "INV_Misc_MonsterSpiderCarapace_01", "=q2=Maexxna's Hatchling", "#e15#", "30%" },
+
 	};
 	NAXInstructorRazuvious = {
 		{ 22726, "INV_Qiraj_JewelBlessed", "=q5=Splinter of Atiesh", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#=ds=, =q13=#c1#", "30%" },
@@ -8169,6 +8174,8 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 58040, "INV_Bracer_06", "=q2=Cavernweb Cuffs", "#s8#, #a3#", "20%" },
 		{ 0, "", "", "" },
 		{ 41834, "INV_Misc_Organ_02", "=q1=Broodmother's Sac", "#m3#", "100%" },
+		{ 0, "", "", "" },
+		{ 37009, "INV_Misc_MonsterSpiderCarapace_01", "=q2=Cavernweb Hatchling", "#e15#", "10%" },
 	};
 	DMRWebMaster = {
 		{ 41566, "INV_Jewelry_Ring_22", "=q3=Webmaster's Ring", "#s13#", "20%" },
@@ -8176,24 +8183,34 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 41567, "INV_Boots_01", "=q2=Cavernrock Stompers", "#s12#, #a3#", "20%" },
 		{ 41569, "INV_Misc_Cape_07", "=q2=Tattered Orcish Shawl", "#s4#", "20%" },
 		{ 41570, "INV_Misc_Orb_01", "=q2=Idol of Nethalakk", "#s15#", "20%" },
+		{ 0, "", "", "" },
+		{ 41874, "INV_Misc_StoneTablet_02", "=q2=Fragment of Algoron", "", "100%" },
+		{ 0, "", "", "" },
+		{ 30040, "Ability_Hunter_Pet_Turtle", "=q3=Admiral Grumbleshell", "#e7#", "2.5%" },
 	};
 	DMRGarlok = {
 		{ 41578, "INV_Chest_Cloth_25", "=q3=Flamekeeper's Robe", "#s5#, #a1#", "25%" },
 		{ 41579, "INV_Belt_02", "=q3=Sash of Flamebinding", "#s10#, #a1#", "25%" },
 		{ 41580, "INV_Jewelry_Amulet_06", "=q3=Udor's Pendant", "#s2#", "25%" },
 		{ 41581, "INV_Sword_07", "=q3=The Bane of Althazz", "#h3#, #w10#", "25%" },
+		{ 0, "", "", "" },
+		{ 30040, "Ability_Hunter_Pet_Turtle", "=q3=Admiral Grumbleshell", "#e7#", "2.5%" },
 	};
 	DMRHalgan = {
 		{ 58044, "INV_Staff_28", "=q3=Ceremonial Dwarven Staff", "#h2#, #w9#", "25%" },
 		{ 58046, "INV_Shield_03", "=q3=Shield of Galoraz", "#h4#, #w8#", "25%" },
 		{ 58047, "INV_Wand_12", "=q3=Grasp of Ancestors", "#w12#", "25%" },
 		{ 58045, "INV_Pants_04", "=q3=Ancient Legplates", "#s11#, #a3#", "25%" },
+		{ 0, "", "", "" },
+		{ 30040, "Ability_Hunter_Pet_Turtle", "=q3=Admiral Grumbleshell", "#e7#", "2.5%" },
 	};
 	DMRElderHollowblood = {
 		{ 41721, "GenShield_1F", "=q3=Bulwark of the Old Horde", "#h4#, #w8#", "25%" },
 		{ 41722, "INV_Bracer_08", "=q3=Rockspeaker Bracers", "#s8#, #a1#", "25%" },
 		{ 41720, "INV_Pants_13", "=q3=Earthweaver Kilt", "#s11#, #a2#", "25%" },
 		{ 41723, "INV_Hammer_08", "=q2=Cudgel of Binding", "#h3#, #w6#", "25%" },
+		{ 0, "", "", "" },
+		{ 31, "INV_Misc_Note_01", "=q2=Formula: Enchant Boots - Lesser Intellect", "#p4# (170)", "6%" },
 	};
 	DMRSearistrasz = {
 		{ 41561, "Spell_Fire_Fire", "=q3=Flame of Eternal Searing", "#s14#", "20%" },
@@ -8314,6 +8331,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 58204, "INV_Boots_08", "=q3=Treads of Forgotten Empathy", "#s12#, #a1#", "20%" },
 		{ 58202, "INV_Misc_Gem_Amethyst_02", "=q3=Twisted Demon Crystal", "#s14#", "20%" },
 		{ 58201, "INV_Misc_Cape_22", "=q3=Mantle of the Disciple", "#s4#", "20%" },
+		{ 58199, "inv_weirdogreheadstick_3", "=q4=Spine of Dentarg", "#h2#, #w9#", "1%" },
 		{ 0, "", "", "" },
 		{ 0, "INV_Box_01", "=q6="..AL["Ighal'for"], ""},
 		{ 41939, "INV_Jewelry_Necklace_05", "=q1=Broken Bloodstone Pendant", "#m2#", "100%" },
