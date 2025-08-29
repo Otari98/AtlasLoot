@@ -998,9 +998,13 @@ AtlasLootBossButtons = {
 		"DMRWebMaster",
 		"DMRGarlok",
 		"DMRHalgan",
+		"DMRSlagfist",
+		"DMROverlord",
 		"DMRElderHollowblood",
 		"DMRSearistrasz",
 		"DMRZuluhed",
+		"",
+		"DMRTrash",
 	};
 	StormwroughtRuins = {
 		"",
@@ -1017,6 +1021,9 @@ AtlasLootBossButtons = {
 		"SWRLadyDrazare",
 		"SWRRemains",
 		"SWRMergothid",
+		"",
+		"",
+		"SWRTrash",
 	};
 };
 --------------------------------------------------------------------------------
