@@ -44,6 +44,9 @@ AtlasLoot_Data["AtlasLootRepItems"] = {
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
 		{ 0, "INV_Jewelry_Talisman_08", "=q6=#r3#", "" },
+		{ 58227, "INV_Jewelry_Ring_25", "=q3=Band of Vitality", "=ds=#s13#" },
+		{ 58225, "INV_Sword_25", "=q3=Blade of Purity", "=ds=#h3#, #w10#" },
+		{ 58226, "INV_Helmet_33", "=q3=Cowl of Resolve", "=ds=#s1#, #a1#" },
 		{ 13482, "INV_Scroll_06", "=q2=Recipe: Transmute Air to Fire", "=ds=#p1# (275)" },
 		{ 19216, "INV_Scroll_03", "=q1=Pattern: Argent Boots", "=ds=#p8# (290)" },
 		{ 19328, "INV_Scroll_03", "=q1=Pattern: Dawn Treaders", "=ds=#p7# (290)" },
@@ -52,8 +55,10 @@ AtlasLoot_Data["AtlasLootRepItems"] = {
 		{ 19446, "INV_Misc_Note_01", "=q1=Formula: Enchant Bracer - Mana Regeneration", "=ds=#p4# (290)" },
 	};
 	Argent3 = {
-		{ 0, "", "", "" },
 		{ 0, "INV_Jewelry_Talisman_08", "=q6=#r4#", "" },
+		{ 58230, "INV_Boots_07", "=q3=Plaguewalker Boots", "=ds=#s12#, #a2#" },
+		{ 58228, "INV_Pants_04", "=q3=Leggings of the Redeemer", "=ds=#s11#, #a4#" },
+		{ 58229, "INV_Gauntlets_05", "=q3=Hierophant Gloves", "=ds=#s9#, #a1#" },
 		{ 18171, "Spell_Holy_WordFortitude", "=q2=Arcane Mantle of the Dawn", "=ds=#s3# #e11#" },
 		{ 18169, "Spell_Fire_FlameShock", "=q2=Flame Mantle of the Dawn", "=ds=#s3# #e11#" },
 		{ 18170, "Spell_Frost_FrostShock", "=q2=Frost Mantle of the Dawn", "=ds=#s3# #e11#" },
@@ -65,10 +70,10 @@ AtlasLoot_Data["AtlasLootRepItems"] = {
 		{ 19447, "INV_Scroll_03", "=q1=Formula: Enchant Bracer - Healing", "=ds=#p4# #m14#" },
 		{ 13810, "INV_Misc_Food_41", "=q1=Blessed Sunfruit", "=ds=#e2#" },
 		{ 13813, "INV_Drink_16", "=q1=Blessed Sunfruit Juice", "=ds=#e3#" },
-		{ 0, "", "", "" },
-		{ 0, "", "", "" },
-		{ 0, "", "", "" },
 		{ 0, "INV_Jewelry_Talisman_08", "=q6=#r5#", "" },
+		{ 58233, "INV_Shield_05", "=q4=Bulwark of Holy Resolve", "=ds=#w8#" },
+		{ 58232, "INV_Sword_08", "=q4=Demonbane", "=ds=#h2#, #w10#" },
+		{ 58231, "INV_Staff_05", "=q4=Penchant of Humility", "=ds=#s14#" },
 		{ 18182, "INV_Misc_Gem_Variety_02", "=q2=Chromatic Mantle of the Dawn", "=ds=#s3# #e11#" },
 	};
 	AQBroodRings = {
