@@ -59,11 +59,11 @@ function AtlasLootRepMenu()
 	AtlasLootMenuItem_19.lootpage="MagramClan1";
 	AtlasLootMenuItem_19:Show();
 	--Wildhammer Clan
-	AtlasLootMenuItem_7_Name:SetText(AL["Wildhammer Clan"]);
-	AtlasLootMenuItem_7_Extra:SetText("|cff2773ff"..AL["Alliance"]);
-	AtlasLootMenuItem_7_Icon:SetTexture("Interface\\Icons\\Ability_Hunter_EagleEye");
-	AtlasLootMenuItem_7.lootpage="Wildhammer";
-	AtlasLootMenuItem_7:Show();
+	AtlasLootMenuItem_8_Name:SetText(AL["Wildhammer Clan"]);
+	AtlasLootMenuItem_8_Extra:SetText("|cff2773ff"..AL["Alliance"]);
+	AtlasLootMenuItem_8_Icon:SetTexture("Interface\\Icons\\Ability_Hunter_EagleEye");
+	AtlasLootMenuItem_8.lootpage="Wildhammer";
+	AtlasLootMenuItem_8:Show();
 	--Stormpike Guard
 	AtlasLootMenuItem_9_Name:SetText(AL["Stormpike Guard"]);
 	AtlasLootMenuItem_9_Extra:SetText("|cff2773ff"..AL["Alliance"]);
@@ -88,12 +88,18 @@ function AtlasLootRepMenu()
 	AtlasLootMenuItem_20_Icon:SetTexture("Interface\\Icons\\INV_Misc_Horn_01");
 	AtlasLootMenuItem_20.lootpage="Timbermaw";
 	AtlasLootMenuItem_20:Show();
-	--The Wintersaber Trainers
-	AtlasLootMenuItem_6_Name:SetText(AL["Wintersaber Trainers"]);
-	AtlasLootMenuItem_6_Extra:SetText("|cff2773ff"..AL["Alliance"]);
-	AtlasLootMenuItem_6_Icon:SetTexture("Interface\\Icons\\Ability_Mount_PinkTiger");
-	AtlasLootMenuItem_6.lootpage="Wintersaber1";
+	-- Shen'dralar
+	AtlasLootMenuItem_6_Name:SetText(AL["Shen'dralar"]);
+	AtlasLootMenuItem_6_Extra:SetText("");
+	AtlasLootMenuItem_6_Icon:SetTexture("Interface\\Icons\\INV_Misc_Book_04");
+	AtlasLootMenuItem_6.lootpage="Shendralar";
 	AtlasLootMenuItem_6:Show();
+	--The Wintersaber Trainers
+	AtlasLootMenuItem_7_Name:SetText(AL["Wintersaber Trainers"]);
+	AtlasLootMenuItem_7_Extra:SetText("|cff2773ff"..AL["Alliance"]);
+	AtlasLootMenuItem_7_Icon:SetTexture("Interface\\Icons\\Ability_Mount_PinkTiger");
+	AtlasLootMenuItem_7.lootpage="Wintersaber1";
+	AtlasLootMenuItem_7:Show();
 	--Zandalar Tribe
 	AtlasLootMenuItem_21_Name:SetText(AL["Zandalar Tribe"]);
 	AtlasLootMenuItem_21_Extra:SetText("");

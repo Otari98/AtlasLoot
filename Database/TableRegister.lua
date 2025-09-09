@@ -823,6 +823,7 @@ AtlasLoot_TableNames = {
 	["ThunderBluff"] = { AL["Thunder Bluff"], "AtlasLootRepItems" },
 	["Dalaran"] = { AL["Dalaran"], "AtlasLootRepItems" },
 	["Wildhammer"] = { AL["Wildhammer Clan"], "AtlasLootRepItems" },
+	["Shendralar"] = { AL["Shen'dralar"], "AtlasLootRepItems" },
 	--------------
 	--- Trades ---
 	--------------
@@ -2002,6 +2003,7 @@ AtlasLoot_TableNamesBoss = {
 		["ThunderBluff"] = { AL["Thunder Bluff"], "AtlasLootRepItems" },
 		["Dalaran"] = { AL["Dalaran"], "AtlasLootRepItems" },
 		["Wildhammer"] = { AL["Wildhammer Clan"], "AtlasLootRepItems" },
+		["Shendralar"] = { AL["Shen'dralar"], "AtlasLootRepItems" },
 	},
 	--------------
 	--- Trades ---

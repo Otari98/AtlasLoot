@@ -3077,6 +3077,10 @@ AtlasLoot_ButtonRegistry = {
 		Title = AL["Wildhammer Clan"];
 		Back_Page = "REPMENU";
 	};
+	["Shendralar"] = {
+		Title = AL["Shen'dralar"];
+		Back_Page = "REPMENU";
+	};
 	["Wintersaber1"] = {
 		Title = AL["Wintersaber Trainers"];
 		Back_Page = "REPMENU";

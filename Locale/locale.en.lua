@@ -1272,6 +1272,7 @@ AL:RegisterTranslations("enUS", function() return {
     ["Shattered Hand Centurion"] = true,
     ["Shattrath City"] = true,
     ["Shazzrah"] = true,
+	["Shen'dralar"] = true,
     ["Shen'dralar Provisioner"] = true,
     ["Shield"] = true,
     ["Shirt"] = true,
