@@ -1320,7 +1320,23 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 							end
 						end
 					end
+
+					if wishDataSource == "AtlasLootItems" then
+						-- Set boss
+						if wishDataID and AtlasLoot_IsLootTableAvailable(wishDataID) then
+							for _, v in ipairs(AtlasLoot_Data[wishDataSource][wishDataID]) do
+								if dataSource[dataID][i][1] == v[1] then
+									local boss = AtlasLoot_GetWishListSubheadingBoss(wishDataID)
+
+									if boss then
+										extraFrame:SetText(extra .. " - "..boss)
+									end
+								end
+							end
+						end
+					end
 				end
+
 				--For convenience, we store information about the objects in the objects so that it can be easily accessed later
 				itemButton.itemID = dataSource[dataID][i][1];
 				itemButton.itemIDName = dataSource[dataID][i][3];

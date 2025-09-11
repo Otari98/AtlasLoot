@@ -214,6 +214,21 @@ function GetLootTableParent(dataID)
 	return parentID;
 end
 
+local function GetWishListSubheadingDungeon(dataID)
+	if not AtlasLoot_TableNames then return end
+	local zoneID ;
+	for i, v in pairs(AtlasLoot_TableNamesBoss) do
+		for j,k in pairs(v) do
+			if dataID == j then
+				zoneID = i
+				break;
+			end
+		end
+	end
+
+	return zoneID;
+end
+
 --[[
 AtlasLoot_CategorizeWishList(wlTable):
 Group items with zone/event name etc, and format them by adding subheadings and empty lines
@@ -228,7 +243,7 @@ function AtlasLoot_CategorizeWishList(wlTable)
 			local _, _, dataID = strfind(v[5], "^(.+)|.+");
 			-- Build subheading table
 			if not subheadings[dataID] then
-				subheadings[dataID] = AtlasLoot_GetWishListSubheadingBoss(dataID);
+				subheadings[dataID] = GetWishListSubheadingDungeon(dataID); -- AtlasLoot_GetWishListSubheadingBoss(dataID);
 				-- If search failed, replace ID like "Aldor2" to "Aldor1" and try again
 				if not subheadings[dataID] and string.find(dataID, "^%a+%d?$") then
 					subheadings[dataID] = AtlasLoot_GetWishListSubheading(string.sub(dataID, 1, string.len(dataID) - 1).."1");
