@@ -820,11 +820,30 @@ AtlasLoot_Data["AtlasLootRepItems"] = {
 		{ 81289, "INV_Shirt_GuildTabard_01", "=q4=Dalaran Tabard", "=ds=#s7#" },
 	};
 	Wildhammer = {
+		{ 0, "Ability_Hunter_EagleEye", "=q6=Friendly", "" },
+		{ 55034, "INV_Shoulder_16", "=q2=Grim Batol Mountaineer Pauldrons", "#s3#, #a4#" },
+		{ 55035, "INV_Jewelry_Necklace_02", "=q2=Derelict Family Clan Totem", "#s2#" },
+		{ 55033, "INV_Helmet_04", "=q2=Mystic's Feather Headdress", "#s1#, #a2#" },
+		{ 0, "", "", "" },
+		{ 0, "Ability_Hunter_EagleEye", "=q6=Honored", "" },
+		{ 55037, "INV_Staff_18", "=q3=Gryphon Tamer Longstaff", "#h2#, #w9#" },
+		{ 55036, "INV_Bracer_09", "=q3=Lorekeeper Cuffs", "#s8#, #a1#" },
+		{ 0, "", "", "" },
+		{ 0, "Ability_Hunter_EagleEye", "=q6=Revered", "" },
+		{ 55038, "INV_Misc_Book_01", "=q3=Fallen Heroes' Hymnal", "#s15#" },
+		{ 55039, "INV_Boots_Chain_10", "=q3=Sharpshooter's Boots", "#s12#, #a3#" },
+		{ 0, "", "", "" },
+		{ 0, "", "", "" },
+		{ 0, "", "", "" },
 		{ 0, "Ability_Hunter_EagleEye", "=q6=Exalted", "" },
-		{ 81185, "Ability_Mount_Gryphon_01", "=q3=Aerie Peak Gryphon", "=ds=#e7#" },
-		{ 81186, "Ability_Mount_Gryphon_01", "=q3=Armored Aerie Peak Gryphon", "=ds=#e7#" },
-		{ 81243, "inv_misc_birdbeck_01", "=q1=Beaky", "=ds=#e15#" },
+		{ 81185, "Ability_Mount_Gryphon_01", "=q4=Wildhammer Gryphon", "=ds=#e7#" },
+		{ 81186, "Ability_Mount_Gryphon_01", "=q4=Armored Wildhammer Gryphon", "=ds=#e7#" },
+		{ 55040, "INV_Misc_Cape_20", "=q4=Skyfall Mantle", "#s4#" },
+		{ 55041, "INV_Hammer_17", "=q4=Wildhammer Stormcaller", "#h1#, #w6#" },
+		{ 16, "INV_Scroll_03", "=q4=Pattern: Harness of the High Thane", "#p7# #m14#" },
 		{ 80312, "inv_misc_tabard_wildhammerclan", "=q1=Wildhammer Tabard", "=ds=#s7#" },
+		{ 81243, "inv_misc_birdbeck_01", "=q1=Beaky", "=ds=#e15#" },
+
 	};
 	Shendralar = {
 		{ 0, "INV_Misc_Book_04", "=q6=Friendly", "" },
