@@ -341,6 +341,7 @@ function AtlasLootOptions_Init()
 	AtlasLootOptionsFrameLootlinkTT:SetChecked(AtlasLootCharDB.LootlinkTT);
 	AtlasLootOptionsFrameItemSyncTT:SetChecked(AtlasLootCharDB.ItemSyncTT);
 	AtlasLootOptionsFrameShowSource:SetChecked(AtlasLootCharDB.ShowSource);
+	AtlasLootOptionsFrameWishlistGroupedByDungeon:SetChecked(AtlasLootCharDB.WishlistGroupedByDungeon);
 	AtlasLootOptionsFrameEquipCompare:SetChecked(AtlasLootCharDB.EquipCompare);
 	AtlasLootOptionsFrameOpaque:SetChecked(AtlasLootCharDB.Opaque);
 	AtlasLootOptionsFrameItemID:SetChecked(AtlasLootCharDB.ItemIDs);
@@ -369,6 +370,7 @@ function AtlasLootOptions_Fresh()
 	AtlasLootCharDB.LootlinkTT = false;
 	AtlasLootCharDB.ItemSyncTT = false;
 	AtlasLootCharDB.ShowSource = true;
+	AtlasLootCharDB.WishlistGroupedByDungeon = true;
 	AtlasLootCharDB.EquipCompare = false;
 	AtlasLootCharDB.Opaque = false;
 	AtlasLootCharDB.ItemIDs = false;
@@ -880,6 +882,21 @@ function AtlasLootOptions_ShowSourceToggle()
 	AtlasLootOptions_Init();
 end
 
+function AtlasLootOptions_WishlistGroupedByDungeonToggle()
+	if(AtlasLootCharDB.WishlistGroupedByDungeon) then
+		AtlasLootCharDB.WishlistGroupedByDungeon = false;
+	else
+		AtlasLootCharDB.WishlistGroupedByDungeon = true;
+	end
+	AtlasLootOptions_Init();
+	AtlasLoot_WishList = AtlasLoot_CategorizeWishList(AtlasLootCharDB["WishList"]);
+	local dataID = AtlasLootItemsFrame.refresh[1];
+
+	if (dataID == 'WishList') then
+		AtlasLoot_ShowWishList();
+	end
+end
+
 --[[
 AtlasLootOptions_EquipCompareToggle:
 Toggles EquipCompare. Adds a tooltip with the equipped item (if it's the case) next to the default one.
@@ -1320,7 +1337,23 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 							end
 						end
 					end
+
+					if wishDataSource == "AtlasLootItems" and AtlasLootCharDB.WishlistGroupedByDungeon then
+						-- Set boss
+						if wishDataID and AtlasLoot_IsLootTableAvailable(wishDataID) then
+							for _, v in ipairs(AtlasLoot_Data[wishDataSource][wishDataID]) do
+								if dataSource[dataID][i][1] == v[1] then
+									local boss = AtlasLoot_GetWishListSubheadingBoss(wishDataID)
+
+									if boss then
+										extraFrame:SetText(extra .. " - "..boss)
+									end
+								end
+							end
+						end
+					end
 				end
+
 				--For convenience, we store information about the objects in the objects so that it can be easily accessed later
 				itemButton.itemID = dataSource[dataID][i][1];
 				itemButton.itemIDName = dataSource[dataID][i][3];
