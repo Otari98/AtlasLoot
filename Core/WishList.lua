@@ -243,7 +243,11 @@ function AtlasLoot_CategorizeWishList(wlTable)
 			local _, _, dataID = strfind(v[5], "^(.+)|.+");
 			-- Build subheading table
 			if not subheadings[dataID] then
-				subheadings[dataID] = GetWishListSubheadingDungeon(dataID); -- AtlasLoot_GetWishListSubheadingBoss(dataID);
+				if AtlasLootCharDB.WishlistGroupedByDungeon then
+					subheadings[dataID] = GetWishListSubheadingDungeon(dataID);
+				else
+					subheadings[dataID] = AtlasLoot_GetWishListSubheadingBoss(dataID);
+				end
 				-- If search failed, replace ID like "Aldor2" to "Aldor1" and try again
 				if not subheadings[dataID] and string.find(dataID, "^%a+%d?$") then
 					subheadings[dataID] = AtlasLoot_GetWishListSubheading(string.sub(dataID, 1, string.len(dataID) - 1).."1");

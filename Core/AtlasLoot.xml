@@ -1366,7 +1366,7 @@
 
 	<Frame name="AtlasLootOptionsFrame" toplevel="true" frameStrata="DIALOG" movable="true" enableMouse="true" hidden="true" parent="UIParent" enableKeyboard="true">
 		<Size>
-			<AbsDimension x="650" y="370"/>
+			<AbsDimension x="650" y="400"/>
 		</Size>
 		<Anchors>
 			<Anchor point="CENTER"/>
@@ -1516,11 +1516,29 @@
 					</OnClick>
 				</Scripts>
 			</CheckButton>
-			<CheckButton name="$parentEquipCompare" inherits="OptionsCheckButtonTemplate">
+			<CheckButton name="$parentWishlistGroupedByDungeon" inherits="OptionsCheckButtonTemplate">
 				<Anchors>
 					<Anchor point="TOPLEFT">
 						<Offset>
 							<AbsDimension x="20" y="-250"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
+						getglobal(this:GetName().."Text"):SetText("Group wishlist by dungeon");
+					</OnLoad>
+					<OnClick>
+						AtlasLootOptions_WishlistGroupedByDungeonToggle();
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="$parentEquipCompare" inherits="OptionsCheckButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="20" y="-280"/>
 						</Offset>
 					</Anchor>
 				</Anchors>
@@ -1538,7 +1556,7 @@
 				<Anchors>
 					<Anchor point="TOPLEFT">
 						<Offset>
-							<AbsDimension x="20" y="-280"/>
+							<AbsDimension x="20" y="-310"/>
 						</Offset>
 					</Anchor>
 				</Anchors>
