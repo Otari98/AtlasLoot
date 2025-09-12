@@ -2033,10 +2033,10 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 17068, "INV_Axe_09", "=q4=Deathbringer", "=ds=#h1#, #w1#", "8%" },
 		{ 17075, "INV_Sword_18", "=q4=Vis'kag the Bloodletter", "=ds=#h1#, #w10#", "8%" },
 		{ 0,"","","" },
-		{ 17966,"INV_Misc_Bag_22","=q2=Onyxia Hide Backpack","=ds=#m12# #e10#", "100%" },
-		{ 17962,"INV_Misc_Bag_10_Blue","=q2=Blue Sack of Gems","=ds=#m23# =q2=#e33#", "100%" },
+		{ 17966, "INV_Misc_Bag_22","=q2=Onyxia Hide Backpack","=ds=#m12# #e10#", "100%" },
+		{ 30017, "INV_Misc_Head_Dragon_01","=q4=Onyxian Drake","=ds=#e7#", },
 		{ 15410, "INV_Misc_MonsterScales_07","=q3=Scale of Onyxia", "=ds=#e12# =q5=Skinning (315)" },
-		{ 15138,"INV_Misc_Cape_05","=q3=Onyxia Scale Cloak","=q1=#m4# =ds=#s4# =q5=LW #m14#" },
+		{ 15138, "INV_Misc_Cape_05","=q3=Onyxia Scale Cloak","=q1=#m4# =ds=#s4# =q5=LW #m14#" },
 	};
 	ZGJeklik = { --https://database.turtle-wow.org/?npc=14517
 		{ 19721, "INV_Shoulder_19", "=q4=Primal Hakkari Shawl", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q10=#c3#", "11%","", "", "", "", "", "", "", "", "", "", {
@@ -7823,8 +7823,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 61428, "INV_Scroll_05", "=q4=Pattern: Dreamhide Mantle", "=ds=#p7# #m14#", "4%" },
 		{ 61432, "INV_Scroll_05", "=q4=Pattern: Dreamthread Mantle", "=ds=#p7# #m14#", "4%" },
 		{ 61424, "INV_Scroll_05", "=q4=Plans: Dreamsteel Mantle", "=ds=#p2# #m14#", "4%" },
-		{ 17962,"INV_Misc_Bag_10_Blue","=q2=Blue Sack of Gems","=ds=#m23# =q2=#e33#", "100%" },
-
+		{ 30018, "INV_Misc_Head_Dragon_Green","=q4=Emerald Drake","=ds=#e7#", },
 	};
 	ESHardMode = {
 		{ 61524, "INV_Chest_Plate07", "=q4=Naturecaller's Tunic", "=ds=#s5#, #a2#", "17%" },
