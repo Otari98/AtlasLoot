@@ -847,20 +847,12 @@ AtlasLoot_Data["AtlasLootRepItems"] = {
 
 	};
 	Shendralar = {
-		{ 0, "INV_Misc_Book_04", "=q6=#r2#", "" },
-		{ 55044, "INV_Misc_Note_01", "=q3=Formula: Enchant Boots - Major Intellect", "#e11#ing #m14#" },
-		{ 55045, "INV_Scroll_05", "=q3=Recipe: Elixir of Greater Frost Power", "#p1# #m14#" },
-		{ 0, "", "", "" },
 		{ 0, "INV_Misc_Book_04", "=q6=#r3#", "" },
 		{ 55047, "INV_Scroll_05", "=q3=Recipe: Elixir of Greater Arcane Power", "#p1# #m14#" },
 		{ 55049, "INV_Scroll_03", "=q3=Pattern: Essence Infused Leather Gloves", "#p7# #m14#" },
 		{ 58253, "INV_Wand_07", "=q3=Lector's Baton", "#w12#" },
 		{ 58252, "INV_Boots_01", "=q3=Coalescing Sabatons", "#s12#, #a3#" },
 		{ 58251, "INV_Bracer_08", "=q3=Wristbands of Excellency", "#s8#, #a2#" },
-		{ 0, "", "", "" },
-		{ 0, "", "", "" },
-		{ 0, "", "", "" },
-		{ 0, "", "", "" },
 		{ 0, "", "", "" },
 		{ 0, "INV_Misc_Book_04", "=q6=#r4#", "" },
 		{ 55051, "INV_Scroll_05", "=q3=Pattern: Astronomer Raiments", "#p8# #m14#" },
@@ -869,6 +861,11 @@ AtlasLoot_Data["AtlasLootRepItems"] = {
 		{ 58256, "INV_Jewelry_Ring_24", "=q3=Band of Eldretharr", "#s13#" },
 		{ 58254, "INV_Misc_Orb_01", "=q3=Miniature Astrolabium", "#s14#" },
 		{ 0, "", "", "" },
+		{ 0, "", "", "" },
+		{ 0, "INV_Misc_Book_04", "=q6=#r2#", "" },
+		{ 55044, "INV_Misc_Note_01", "=q3=Formula: Enchant Boots - Major Intellect", "#e11#ing #m14#" },
+		{ 55045, "INV_Scroll_05", "=q3=Recipe: Elixir of Greater Frost Power", "#p1# #m14#" },
+		{ 0, "", "", "" },
 		{ 0, "INV_Misc_Book_04", "=q6=#r5#", "" },
 		{ 80006, "Spell_Arcane_Blink", "=q1=Arcane Elemental", "#e15#" },
 		{ 55055, "INV_Scroll_05", "=q4=Pattern: Spellwoven Nobility Drape", "#p8# #m14#" },
@@ -876,5 +873,6 @@ AtlasLoot_Data["AtlasLootRepItems"] = {
 		{ 55059, "INV_Scroll_05", "=q4=Plans: Grandstaff of the Shen'dralar Elder", "#p18# #m14#" },
 		{ 58257, "INV_Weapon_ShortBlade_01", "=q4=Noble's Letter Opener", "#h3#, #w4#" },
 		{ 58258, "INV_Misc_Cape_21", "=q4=Royal Guard Chain Cloak", "#s4#" },
+		{ 58259, "INV_Pants_13", "=q4=Advisor's Trousers of the Eldreth", "#s11#, #a1#" }
 	},
 };
