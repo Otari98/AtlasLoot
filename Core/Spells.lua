@@ -3,6 +3,10 @@ local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
 
 GetSpellInfoAtlasLootDB = {
 	["enchants"] = {
+        [44] = {
+			["name"] = "Enchant Bracer - Agility",
+			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
+		},
 		[41758] = {
 			["name"] = "Enchanted Gemstone Oil",
 			["icon"] = "Interface\\Icons\\INV_Potion_14",
