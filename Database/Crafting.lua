@@ -749,6 +749,7 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "e57142", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Greater Spirit", "=ds=#sr# =so1=300 =so2=300 =so3=300 =so4=300" },
 		{ "e57127", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Superior Stamina", "=ds=#sr# =so1=300 =so2=300 =so3=300 =so4=300" },
 		{ "e57148", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Vampirism", "=ds=#sr# =so1=300 =so2=300 =so3=300 =so4=300" },
+		{ "e56543", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Major Intellect", "=ds=#sr# =so1=300 =so2=300 =so3=300 =so4=300" },
 		{ "e57144", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracer - Greater Deflection", "=ds=#sr# =so1=300 =so2=300 =so3=300 =so4=300" },
 		{ "e57119", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Mighty Mana", "=ds=#sr# =so1=300 =so2=300 =so3=300 =so4=300" },
 		{ "e57117", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Greater Arcane Resistance", "=ds=#sr# =so1=300 =so2=300 =so3=300 =so4=300" },

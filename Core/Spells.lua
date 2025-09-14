@@ -686,6 +686,10 @@ GetSpellInfoAtlasLootDB = {
 			["name"] = "Enchant Gloves - Major Strength",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
+        [56543] = {
+			["name"] = "Enchant Boots - Major Intellect",
+			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
+		},
 		[57146] = {
 			["name"] = "Enchant Bracer - Vampirism",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
