@@ -820,6 +820,7 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "e13846", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracer - Greater Spirit", "=ds=#sr# =so1=220 =so2=240 =so3=260 =so4=280" },
 		{ "e13822", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracer - Intellect", "=ds=#sr# =so1=210 =so2=230 =so3=250 =so4=270" },
 		{ "e57146", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracer - Vampirism", "=ds=#sr# =so1=185 =so2=205 =so3=225 =so4=245" },
+		{ "e00044", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracer - Agility", "=ds=#sr# =so1=185 =so2=205 =so3=225 =so4=245" },
 		{ "e13661", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracer - Strength", "=ds=#sr# =so1=180 =so2=200 =so3=220 =so4=240" },
 		{ "e13648", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracer - Stamina", "=ds=#sr# =so1=170 =so2=190 =so3=210 =so4=230" },
 		{ "e13646", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracer - Lesser Deflection", "=ds=#sr# =so1=170 =so2=190 =so3=210 =so4=230" },
@@ -861,6 +862,7 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 	};
 
 	EnchantingBoots1 = {
+		{ "e56543", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Major Intellect", "=ds=#sr# =so1=300 =so2=300 =so3=300 =so4=300" },
 		{ "e57148", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Vampirism", "=ds=#sr# =so1=300 =so2=300 =so3=300 =so4=300" },
 		{ "e57127", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Superior Stamina", "=ds=#sr# =so1=300 =so2=300 =so3=300 =so4=300" },
 		{ "e57142", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Greater Spirit", "=ds=#sr# =so1=300 =so2=300 =so3=300 =so4=300" },
