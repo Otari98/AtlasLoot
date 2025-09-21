@@ -14644,6 +14644,69 @@ GetSpellInfoAtlasLootDB = {
 				[3] = {3466, 2},
 			},
 		},
-
+		[12063] = {
+			["name"] = "Tailoring: Stormcloth Gloves",
+			["craftItem"] = 10011,
+			["reagents"] = {
+				[1] = {4339, 3},
+				[2] = {7079, 2},
+				[3] = {8343, 2},
+			},
+		},
+		[12062] = {
+			["name"] = "Tailoring: Stormcloth Pants",
+			["craftItem"] = 10010,
+			["reagents"] = {
+				[1] = {4339, 4},
+				[2] = {7079, 2},
+				[3] = {8343, 2},
+			},
+		},
+		[12068] = {
+			["name"] = "Tailoring: Stormcloth Vest",
+			["craftItem"] = 10020,
+			["reagents"] = {
+				[1] = {4339, 5},
+				[2] = {7079, 3},
+				[3] = {8343, 2},
+			},
+		},
+		[12083] = {
+			["name"] = "Tailoring: Stormcloth Headband",
+			["craftItem"] = 10032,
+			["reagents"] = {
+				[1] = {4339, 4},
+				[2] = {7079, 4},
+				[3] = {8343, 2},
+			},
+		},
+		[12087] = {
+			["name"] = "Tailoring: Stormcloth Shoulders",
+			["craftItem"] = 10038,
+			["reagents"] = {
+				[1] = {4339, 6},
+				[2] = {7079, 6},
+				[3] = {8343, 3},
+			},
+		},
+		[12090] = {
+			["name"] = "Tailoring: Stormcloth Boots",
+			["craftItem"] = 10039,
+			["reagents"] = {
+				[1] = {4339, 6},
+				[2] = {7079, 6},
+				[3] = {8343, 3},
+				[4] = {4304, 2},
+			},
+		},
+		[36913] = {
+			["name"] = "Tailoring: Astronomer Raiments",
+			["craftItem"] = 55052,
+			["reagents"] = {
+				[1] = {4339, 4},
+				[2] = {7079, 2},
+				[3] = {8343, 2},
+			},
+		},
 	},
 }
