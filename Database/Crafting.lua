@@ -2927,15 +2927,16 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s3944", "inv_gizmo_01", "=q1=Flame Deflector", "=ds=#sr# =so1=125 =so2=125 =so3=150 =so4=175" },
 		{ "s3942", "inv_gizmo_02", "=q1=Whirring Bronze Gizmo", "=ds=#sr# =so1=125 =so2=125 =so3=150 =so4=175" },
 		{ "s9269", "inv_misc_pocketwatch_01", "=q2=Gnomish Universal Remote", "=ds=#sr# =so1=125 =so2=150 =so3=162 =so4=175" },
+		{ "s41073", "INV_Misc_Spyglass_03", "=q1=Jewelry Lens", "=ds=#sr# =so1=125 =so2=140 =so3=147 =so4=155" },
 		{ "s3949", "inv_weapon_rifle_07", "=q2=Silver-plated Shotgun", "=ds=#sr# =so1=130 =so2=155 =so3=167 =so4=180" },
 		{ "s6458", "inv_misc_spyglass_01", "=q1=Ornate Spyglass", "=ds=#sr# =so1=135 =so2=160 =so3=172 =so4=185" },
 		{ "s3950", "inv_misc_bomb_05", "=q1=Big Bronze Bomb", "=ds=#sr# =so1=140 =so2=140 =so3=165 =so4=190" },
 		{ "s3952", "inv_gizmo_07", "=q2=Minor Recombobulator", "=ds=#sr# =so1=140 =so2=165 =so3=177 =so4=190" },
 		{ "s3953", "inv_gizmo_bronzeframework_01", "=q1=Bronze Framework", "=ds=#sr# =so1=145 =so2=145 =so3=170 =so4=195" },
-		{ "s3954", "inv_weapon_rifle_06", "=q2=Moonsight Rifle", "=ds=#sr# =so1=145 =so2=170 =so3=182 =so4=195" },
 	};
-
+	
 	EngineeringJourneyman2 = {
+		{ "s3954", "inv_weapon_rifle_06", "=q2=Moonsight Rifle", "=ds=#sr# =so1=145 =so2=170 =so3=182 =so4=195" },
 		{ "s9271", "inv_misc_food_26", "=q1=Aquadynamic Fish Attractor", "=ds=#sr# =so1=150 =so2=150 =so3=160 =so4=170" },
 		{ "s23067", "spell_ice_magicdamage", "=q1=Blue Firework", "=ds=#sr# =so1=150 =so2=150 =so3=162 =so4=175" },
 		{ "s23068", "spell_nature_abolishmagic", "=q1=Green Firework", "=ds=#sr# =so1=150 =so2=150 =so3=162 =so4=175" },
@@ -2961,6 +2962,7 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s12590", "inv_misc_screwdriver_02", "=q1=Gyromatic Micro-Adjustor", "=ds=#sr# =so1=175 =so2=175 =so3=195 =so4=215" },
 		{ "s3962", "inv_misc_bomb_08", "=q1=Iron Grenade", "=ds=#sr# =so1=175 =so2=175 =so3=195 =so4=215" },
 		{ "s12587", "inv_helmet_47", "=q2=Bright-Eye Goggles", "=ds=#sr# =so1=175 =so2=195 =so3=205 =so4=215" },
+		{ "s41077", "INV_Box_01", "=q1=Precision Jewelry Kit", "=ds=#sr# =so1=175 =so2=185 =so3=190 =so4=195" },
 		{ "s3979", "inv_misc_spyglass_02", "=q1=Accurate Scope", "=ds=#sr# =so1=180 =so2=200 =so3=210 =so4=220" },
 		{ "s3965", "inv_crate_05", "=q1=Advanced Target Dummy", "=ds=#sr# =so1=185 =so2=185 =so3=205 =so4=225" },
 		{ "s8243", "inv_misc_ammo_bullet_01", "=q1=Flash Bomb", "=ds=#sr# =so1=185 =so2=185 =so3=205 =so4=225" },
@@ -2975,10 +2977,10 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s12591", "inv_battery_01", "=q1=Unstable Trigger", "=ds=#sr# =so1=200 =so2=200 =so3=220 =so4=240" },
 		{ "s3971", "inv_gizmo_01", "=q1=Gnomish Cloaking Device", "=ds=#sr# =so1=200 =so2=220 =so3=230 =so4=240" },
 		{ "s3969", "inv_misc_head_dragon_01", "=q1=Mechanical Dragonling", "=ds=#sr# =so1=200 =so2=220 =so3=230 =so4=240" },
-		{ "s12594", "inv_helmet_47", "=q2=Fire Goggles", "=ds=#sr# =so1=205 =so2=225 =so3=235 =so4=245" },
 	};
-
+	
 	EngineeringExpert2 = {
+		{ "s12594", "inv_helmet_47", "=q2=Fire Goggles", "=ds=#sr# =so1=205 =so2=225 =so3=235 =so4=245" },
 		{ "s12595", "inv_weapon_rifle_07", "=q2=Mithril Blunderbuss", "=ds=#sr# =so1=205 =so2=225 =so3=235 =so4=245" },
 		{ "s12596", "inv_ammo_bullet_01", "=q2=Hi-Impact Mithril Slugs", "=ds=#sr# =so1=210 =so2=210 =so3=230 =so4=250" },
 		{ "s12597", "inv_misc_spyglass_02", "=q1=Deadly Scope", "=ds=#sr# =so1=210 =so2=230 =so3=240 =so4=250" },
@@ -2992,6 +2994,8 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s26442", "inv_musket_04", "=q1=Firework Launcher", "=ds=#sr# =so1=225 =so2=245 =so3=255 =so4=265" },
 		{ "s12616", "inv_misc_cape_11", "=q2=Parachute Cloak", "=ds=#sr# =so1=225 =so2=245 =so3=255 =so4=265" },
 		{ "s12615", "inv_helmet_47", "=q2=Spellpower Goggles Xtreme", "=ds=#sr# =so1=225 =so2=245 =so3=255 =so4=265" },
+		{ "s41075", "INV_Misc_Spyglass_02", "=q1=Jewelry Scope", "=ds=#sr# =so1=225 =so2=140 =so3=147 =so4=155" },
+		{ "s12722", "INV_Gizmo_GoblinBoomBox_01", "=q3=Goblin Radio", "=ds=#sr# =so1=225 =so2=240 =so3=250 =so4=260" },
 	};
 
 	EngineeringArtisan1 = {
@@ -3008,6 +3012,7 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s19567", "inv_egg_05", "=q1=Salt Shaker", "=ds=#sr# =so1=250 =so2=270 =so3=280 =so4=290" },
 		{ "s12624", "inv_misc_head_dragon_01", "=q1=Mithril Mechanical Dragonling", "=ds=#sr# =so1=250 =so2=270 =so3=280 =so4=290" },
 		{ "s26011", "ability_hunter_pet_gorilla", "=q1=Tranquil Mechanical Yeti", "=ds=#sr# =so1=250 =so2=320 =so3=330 =so4=340" },
+		{ "s46608", "INV_Misc_EngGizmos_04", "=q3=Hypertech Battery Pack", "=ds=#sr# =so1=250 =so2=250 =so3=260 =so4=270" },
 		{ "s23071", "inv_staff_18", "=q1=Truesilver Transformer", "=ds=#sr# =so1=260 =so2=270 =so3=275 =so4=280" },
 		{ "s19790", "inv_misc_bomb_08", "=q1=Thorium Grenade", "=ds=#sr# =so1=260 =so2=280 =so3=290 =so4=300" },
 		{ "s19791", "inv_gizmo_04", "=q1=Thorium Widget", "=ds=#sr# =so1=260 =so2=280 =so3=290 =so4=300" },
@@ -3023,11 +3028,11 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s19814", "inv_crate_02", "=q1=Masterwork Target Dummy", "=ds=#sr# =so1=275 =so2=295 =so3=305 =so4=315" },
 		{ "s19795", "inv_gizmo_pipe_04", "=q1=Thorium Tube", "=ds=#sr# =so1=275 =so2=295 =so3=305 =so4=315" },
 		{ "s19796", "inv_weapon_rifle_08", "=q3=Dark Iron Rifle", "=ds=#sr# =so1=275 =so2=295 =so3=305 =so4=315" },
+		{ "s26443", "INV_Misc_EngGizmos_03", "=q1=Firework Cluster Launcher", "=ds=#sr# =so1=275 =so2=295 =so3=305 =so4=315" },
+	};
+	EngineeringArtisan2 = {
 		{ "s19799", "inv_misc_bomb_05", "=q1=Dark Iron Bomb", "=ds=#sr# =so1=285 =so2=305 =so3=315 =so4=325" },
 		{ "s19815", "inv_gizmo_07", "=q1=Delicate Arcanite Converter", "=ds=#sr# =so1=285 =so2=305 =so3=315 =so4=325" },
-	};
-
-	EngineeringArtisan2 = {
 		{ "s19800", "inv_ammo_bullet_03", "=q2=Thorium Shells", "=ds=#sr# =so1=285 =so2=305 =so3=315 =so4=325" },
 		{ "s19825", "inv_helmet_47", "=q2=Master Engineer's Goggles", "=ds=#sr# =so1=290 =so2=310 =so3=320 =so4=330" },
 		{ "s19819", "inv_jewelry_amulet_07", "=q2=Voice Amplification Modulator", "=ds=#sr# =so1=290 =so2=310 =so3=320 =so4=330" },
@@ -3043,6 +3048,8 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s22795", "inv_weapon_rifle_05", "=q4=Core Marksman Rifle", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
 		{ "s22797", "spell_arcane_portaldarnassus", "=q4=Force Reactive Disk", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
 		{ "s45481", "inv_helmet_44", "=q4=Intricate Gyroscope Goggles", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
+		{ "s52747", "INV_Misc_EngGizmos_06", "=q3=Voltage-Neutralizing Nature Reflector", "=ds=#sr# =so1=290 =so2=310 =so3=320 =so4=330" },
+		{ "s52749", "INV_Misc_EngGizmos_06", "=q3=Giga-Charged Arcane Reflector", "=ds=#sr# =so1=290 =so2=310 =so3=320 =so4=330" },
 	};
 
 	Gnomish1 = {
@@ -3132,6 +3139,8 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s12908", "spell_fire_flamebolt", "=q1=Goblin Dragon Gun", "=ds=#sr# =so1=240 =so2=260 =so3=270 =so4=280" },
 		{ "s23486", "inv_misc_enggizmos_07", "=q2=Dimensional Ripper - Everlook", "=ds=#sr# =so1=260 =so2=285 =so3=295 =so4=305" },
 		{ "s23078", "inv_misc_enggizmos_11", "=q1=Goblin Jumper Cables XL", "=ds=#sr# =so1=265 =so2=285 =so3=295 =so4=305" },
+		{ "s52747", "INV_Misc_EngGizmos_06", "=q3=Voltage-Neutralizing Nature Reflector", "=ds=#sr# =so1=290 =so2=310 =so3=320 =so4=330" },
+		{ "s52749", "INV_Misc_EngGizmos_06", "=q3=Giga-Charged Arcane Reflector", "=ds=#sr# =so1=290 =so2=310 =so3=320 =so4=330" },
 	},
 	EngineeringExplosives1 = {
 		{ "s3919", "inv_misc_bomb_06", "=q1=Rough Dynamite", "=ds=#sr# =so1=1 =so2=30 =so3=45 =so4=60" },
@@ -3245,9 +3254,16 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s23129", "inv_misc_enggizmos_08", "=q2=World Enlarger", "=ds=#sr# =so1=260 =so2=260 =so3=265 =so4=270" },
 		{ "s21940", "spell_frost_windwalkon", "=q1=Snowmaster 9000", "=ds=#sr# =so1=190 =so2=190 =so3=210 =so4=230" },
 		{ "s26442", "inv_musket_04", "=q1=Firework Launcher", "=ds=#sr# =so1=225 =so2=245 =so3=255 =so4=265" },
-		{ 0, "", "", "" },
+		{ "s26443", "INV_Misc_EngGizmos_03", "=q1=Firework Cluster Launcher", "=ds=#sr# =so1=275 =so2=295 =so3=305 =so4=315" },
 		{ "s12715", "inv_scroll_03", "=q1=Goblin Rocket Fuel Recipe", "=ds=#sr# =so1=205 =so2=205 =so3=205 =so4=205" },
 		{ "s12895", "inv_scroll_05", "=q1=Inlaid Mithril Cylinder Plans", "=ds=#sr# =so1=205 =so2=205 =so3=205 =so4=205" },
+		{ 0, "", "", "" },
+		{ "s41077", "INV_Box_01", "=q1=Precision Jewelry Kit", "=ds=#sr# =so1=175 =so2=185 =so3=190 =so4=195" },
+		{ "s41073", "INV_Misc_Spyglass_03", "=q1=Jewelry Lens", "=ds=#sr# =so1=125 =so2=140 =so3=147 =so4=155" },
+		{ "s41075", "INV_Misc_Spyglass_02", "=q1=Jewelry Scope", "=ds=#sr# =so1=225 =so2=140 =so3=147 =so4=155" },
+		{ 0, "", "", "" },
+		{ "s12722", "INV_Gizmo_GoblinBoomBox_01", "=q3=Goblin Radio", "=ds=#sr# =so1=225 =so2=240 =so3=250 =so4=260" },
+		{ "s46608", "INV_Misc_EngGizmos_04", "=q3=Hypertech Battery Pack", "=ds=#sr# =so1=250 =so2=250 =so3=260 =so4=270" },
 	},
 	EngineeringMisc3 = {
 		{ "s26416", "inv_misc_missilesmall_blue", "=q1=Small Blue Rocket", "=ds=#sr# =so1=125 =so2=125 =so3=137 =so4=150" },

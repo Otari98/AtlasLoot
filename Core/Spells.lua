@@ -5749,6 +5749,90 @@ GetSpellInfoAtlasLootDB = {
 				[4] = {18567, 3},
 			},
 		},
+		[41077] = {
+			["name"] = "Engineering: Precision Jewelry Kit",
+			["craftItem"] = 41328,
+			["reagents"] = {
+				[1] = {4389},
+				[2] = {4387},
+				[3] = {4382, 3},
+				[4] = {4375, 3},
+				[5] = {55155},
+			},
+		},
+		[41073] = {
+			["name"] = "Engineering: Jewelry Lens",
+			["craftItem"] = 41326,
+			["reagents"] = {
+				[1] = {2841, 2},
+				[2] = {4371, 2},
+				[3] = {2319},
+				[4] = {4404},
+				[5] = {1705},
+			},
+		},
+		[41075] = {
+			["name"] = "Engineering: Jewelry Scope",
+			["craftItem"] = 41327,
+			["reagents"] = {
+				[1] = {10559, 2},
+				[2] = {4389},
+				[3] = {10561, 4},
+				[4] = {3864},
+				[5] = {7191},
+			},
+		},
+		[12722] = {
+			["name"] = "Engineering: Goblin Radio",
+			["craftItem"] = 10585,
+			["reagents"] = {
+				[1] = {10561},
+				[2] = {3860, 2},
+				[3] = {4389},
+				[4] = {10560},
+			},
+		},
+		[52747] = {
+			["name"] = "Engineering: Voltage-Neutralizing Nature Reflector",
+			["craftItem"] = 58304,
+			["reagents"] = {
+				[1] = {11371, 8},
+				[2] = {18631, 4},
+				[3] = {61673, 3},
+				[4] = {12364, 4},
+				[5] = {12800, 2},
+			},
+		},
+		[52749] = {
+			["name"] = "Engineering: Giga-Charged Arcane Reflector",
+			["craftItem"] = 58305,
+			["reagents"] = {
+				[1] = {11371, 8},
+				[2] = {18631, 4},
+				[3] = {7910, 4},
+				[4] = {12803, 6},
+				[5] = {12363, 2},
+				[6] = {7076, 4},
+			},
+		},
+		[26443] = {
+			["name"] = "Engineering: Firework Cluster Launcher",
+			["craftItem"] = 21570,
+			["reagents"] = {
+				[1] = {9060, 4},
+				[2] = {9061, 4},
+				[3] = {18631, 2},
+				[4] = {10561},
+			},
+		},
+		[46608] = {
+			["name"] = "Engineering: Hypertech Battery Pack",
+			["craftItem"] = 60098,
+			["reagents"] = {
+				[1] = {10558},
+				[2] = {10561},
+				[3] = {4404},
+			},
 		},
 		[3918] = {
 			["name"] = "Engineering: Rough Blasting Powder",
