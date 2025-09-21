@@ -5,6 +5,8 @@ Loot browser associating loot with instance bosses
 Can be integrated with Atlas (http://www.atlasmod.com)
 ]]
 
+local _G = _G or getfenv(0)
+
 --Bindings
 BINDING_HEADER_ATLASLOOT_TITLE = "AtlasLoot Bindings"
 BINDING_NAME_ATLASLOOT_TOGGLE = "Toggle AtlasLoot"
@@ -1116,7 +1118,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 		--Iterate through each item object and set its properties
 		for i = 1, 30, 1 do
 			--Check for a valid object (that it exists, and that it has a name)
-			if(dataSource[dataID][i] ~= nil and dataSource[dataID][i][3] ~= "") then
+			if (dataSource[dataID][i] ~= nil and dataSource[dataID][i][3] ~= "") then
 				if string.sub(dataSource[dataID][i][1], 1, 1) == "s" then
 					isItem = false;
 					isEnchant = false;
@@ -1132,10 +1134,11 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 				end
 				local quantityFrame
 				if isItem then
-					local itemName, _, itemQuality = GetItemInfo(dataSource[dataID][i][1]);
+					local itemID = dataSource[dataID][i][1]
+					local itemName, _, itemQuality = GetItemInfo(itemID);
 					--If the client has the name of the item in cache, use that instead.
 					--This is poor man's localisation, English is replaced be whatever is needed
-					if(GetItemInfo(dataSource[dataID][i][1])) then
+					if (GetItemInfo(itemID)) then
 						local _, _, _, itemColor = GetItemQualityColor(itemQuality);
 						text = itemColor..itemName;
 					else
@@ -1145,7 +1148,8 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 					quantityFrame = getglobal("AtlasLootItem_"..i.."_Quantity");
 					quantityFrame:SetText("")
 				elseif isEnchant then
-					spellName = GetSpellInfoAtlasLootDB["enchants"][tonumber(string.sub(dataSource[dataID][i][1], 2))]["name"]
+					local spellID = tonumber(string.sub(dataSource[dataID][i][1], 2))
+					spellName = GetSpellInfoAtlasLootDB["enchants"][spellID]["name"]
 					spellIcon = dataSource[dataID][i][2]
 					text = AtlasLoot_FixText(string.sub(dataSource[dataID][i][3], 1, 4)..spellName)
 					quantityFrame = getglobal("AtlasLootItem_"..i.."_Quantity");
@@ -1153,9 +1157,10 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 				elseif isSpell then
 					spellName = dataSource[dataID][i][3]
 					spellIcon = dataSource[dataID][i][2]
+					local spellID = tonumber(string.sub(dataSource[dataID][i][1], 2))
 					text = AtlasLoot_FixText(spellName)
-					local qtyMin = GetSpellInfoAtlasLootDB["craftspells"][tonumber(string.sub(dataSource[dataID][i][1], 2))]["craftQuantityMin"];
-					local qtyMax = GetSpellInfoAtlasLootDB["craftspells"][tonumber(string.sub(dataSource[dataID][i][1], 2))]["craftQuantityMax"];
+					local qtyMin = GetSpellInfoAtlasLootDB["craftspells"][spellID]["craftQuantityMin"];
+					local qtyMax = GetSpellInfoAtlasLootDB["craftspells"][spellID]["craftQuantityMax"];
 					if qtyMin and qtyMin ~= "" then
 						if qtyMax and qtyMax ~= "" then
 							quantityFrame = getglobal("AtlasLootItem_"..i.."_Quantity");
@@ -1359,45 +1364,49 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 				itemButton.itemIDName = dataSource[dataID][i][3];
 				itemButton.itemIDExtra = dataSource[dataID][i][4];
 				itemButton.container = dataSource[dataID][i][16]
-				border:Hide()
 				if itemButton.container then
 					border:Show()
+				else
+					border:Hide()
 				end
 				local spellID
 				if isItem then
 					itemButton.dressingroomID = dataSource[dataID][i][1];
 				elseif isEnchant then
 					spellID = tonumber(string.sub(dataSource[dataID][i][1], 2));
-					if GetSpellInfoAtlasLootDB["enchants"][spellID]["item"] and GetSpellInfoAtlasLootDB["enchants"][spellID]["item"] ~= nil and GetSpellInfoAtlasLootDB["enchants"][spellID]["item"] ~= "" then
-						itemButton.dressingroomID = GetSpellInfoAtlasLootDB["enchants"][spellID]["item"];
+					local craftItem = GetSpellInfoAtlasLootDB["enchants"][spellID]["item"]
+					if craftItem and craftItem ~= "" then
+						itemButton.dressingroomID = craftItem;
+						if not GetItemInfo(craftItem) then
+							GameTooltip:SetHyperlink("item:"..craftItem..":0:0:0");
+						end
 					else
 						itemButton.dressingroomID = spellID;
 					end
-					if GetSpellInfoAtlasLootDB["enchants"][spellID]["item"] ~= nil and GetSpellInfoAtlasLootDB["enchants"][spellID]["item"] ~= "" then
-						if not GetItemInfo(GetSpellInfoAtlasLootDB["enchants"][spellID]["item"]) then
-							GameTooltip:SetHyperlink("item:"..GetSpellInfoAtlasLootDB["enchants"][spellID]["item"]..":0:0:0");
-						end
-					end
 				elseif isSpell then
 					spellID = tonumber(string.sub(dataSource[dataID][i][1], 2));
-					itemButton.dressingroomID = GetSpellInfoAtlasLootDB["craftspells"][spellID]["craftItem"];
-					if GetSpellInfoAtlasLootDB["craftspells"][spellID]["craftItem"] ~= "" then
-						if not GetItemInfo(GetSpellInfoAtlasLootDB["craftspells"][spellID]["craftItem"]) then
-							GameTooltip:SetHyperlink("item:"..GetSpellInfoAtlasLootDB["craftspells"][spellID]["craftItem"]..":0:0:0");
+					local craftItem = GetSpellInfoAtlasLootDB["craftspells"][spellID]["craftItem"]
+					itemButton.dressingroomID = craftItem;
+					if craftItem and craftItem ~= "" then
+						if not GetItemInfo(craftItem) then
+							GameTooltip:SetHyperlink("item:"..craftItem..":0:0:0");
 						end
 					end
-					if GetSpellInfoAtlasLootDB["craftspells"][spellID]["reagents"] ~= "" then
-						for i = 1, table.getn(GetSpellInfoAtlasLootDB["craftspells"][spellID]["reagents"]) do
-							local reagent = GetSpellInfoAtlasLootDB["craftspells"][spellID]["reagents"][i]
+					local reagents = GetSpellInfoAtlasLootDB["craftspells"][spellID]["reagents"]
+					if type(reagents) == "table" then
+						for j = 1, table.getn(reagents) do
+							local reagent = GetSpellInfoAtlasLootDB["craftspells"][spellID]["reagents"][j]
 							if not GetItemInfo(reagent[1]) then
 								GameTooltip:SetHyperlink("item:"..reagent[1]..":0:0:0");
 							end
 						end
 					end
-					if GetSpellInfoAtlasLootDB["craftspells"][spellID]["tools"] ~= "" then
-						for i = 1, table.getn(GetSpellInfoAtlasLootDB["craftspells"][spellID]["tools"]) do
-							if not GetItemInfo(GetSpellInfoAtlasLootDB["craftspells"][spellID]["tools"][i]) then
-								GameTooltip:SetHyperlink("item:"..GetSpellInfoAtlasLootDB["craftspells"][spellID]["tools"][i]..":0:0:0");
+					local tools = GetSpellInfoAtlasLootDB["craftspells"][spellID]["tools"]
+					if type(tools) == "table" then
+						for j = 1, table.getn(tools) do
+							local tool = GetSpellInfoAtlasLootDB["craftspells"][spellID]["tools"][j]
+							if not GetItemInfo(tool) then
+								GameTooltip:SetHyperlink("item:"..tool..":0:0:0");
 							end
 						end
 					end
@@ -1407,7 +1416,9 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 					itemButton.sourcePage = dataSource[dataID][i][5];
 				else
 					local droprate = dataSource[dataID][i][5];
-					if droprate and string.find(droprate, "%%") then itemButton.droprate = droprate end
+					if droprate and string.find(droprate, "%%") then
+						itemButton.droprate = droprate
+					end
 				end
 				itemButton:Show();
 				if GetMouseFocus() == itemButton then
@@ -2976,7 +2987,7 @@ AtlasLoot_HewdropDown_SubTables = {
 local messageShown = false
 function AtlasLootItem_OnEnter()
 	local isItem, isEnchant, isSpell;
-	local id = this:GetID()
+	local buttonID = this:GetID()
 	AtlasLootTooltip:ClearLines();
 	for i=1, 30, 1 do
 		if (getglobal("AtlasLootTooltipTextRight"..i) ~= nil) then
@@ -2998,12 +3009,12 @@ function AtlasLootItem_OnEnter()
 			isSpell = false;
 		end
 		if isItem then
-			local color = strsub(getglobal("AtlasLootItem_"..this:GetID().."_Name"):GetText(), 3, 10);
-			local name = strsub(getglobal("AtlasLootItem_"..this:GetID().."_Name"):GetText(), 11);
+			local color = strsub(getglobal("AtlasLootItem_"..buttonID.."_Name"):GetText(), 3, 10);
+			local name = strsub(getglobal("AtlasLootItem_"..buttonID.."_Name"):GetText(), 11);
 			--Lootlink tooltips
-			if( AtlasLootCharDB.LootlinkTT ) then
+			if ( AtlasLootCharDB.LootlinkTT ) then
 				--If we have seen the item, use the game tooltip to minimise same name item problems
-				if(GetItemInfo(this.itemID) ~= nil) then
+				if (GetItemInfo(this.itemID) ~= nil) then
 					getglobal(this:GetName().."_Unsafe"):Hide();
 					AtlasLootTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 24);
 					AtlasLootTooltip:SetHyperlink("item:"..this.itemID..":0:0:0");
@@ -3022,7 +3033,7 @@ function AtlasLootItem_OnEnter()
 					if (LootLink_Database and LootLink_Database[this.itemID]) then
 						LootLink_SetTooltip(AtlasLootTooltip, LootLink_Database[this.itemID][1], 1);
 					else
-						LootLink_SetTooltip(AtlasLootTooltip,strsub(getglobal("AtlasLootItem_"..this:GetID().."_Name"):GetText(), 11), 1);
+						LootLink_SetTooltip(AtlasLootTooltip,strsub(getglobal("AtlasLootItem_"..buttonID.."_Name"):GetText(), 11), 1);
 					end
 					if ( AtlasLootCharDB.ItemIDs ) then
 						AtlasLootTooltip:AddLine(AL["ItemID:"].." "..this.itemID, nil, nil, nil, 1);
@@ -3035,21 +3046,21 @@ function AtlasLootItem_OnEnter()
 					AtlasLootTooltip:Show();
 				end
 			--Item Sync tooltips
-			elseif( AtlasLootCharDB.ItemSyncTT ) then
-				if(GetItemInfo(this.itemID) ~= nil) then
+			elseif ( AtlasLootCharDB.ItemSyncTT ) then
+				if (GetItemInfo(this.itemID) ~= nil) then
 					getglobal(this:GetName().."_Unsafe"):Hide();
 				end
 				ItemSync:ButtonEnter();
 				if ( AtlasLootCharDB.ItemIDs ) then
 					GameTooltip:AddLine(AL["ItemID:"].." "..this.itemID, nil, nil, nil, 1);
 				end
-				if( this.droprate ~= nil) then
+				if ( this.droprate ~= nil) then
 					GameTooltip:AddLine(AL["Drop Rate: "]..this.droprate, 1, 1, 0);
 				end
 				GameTooltip:Show();
 			--Default game tooltips
 			else
-				if(this.itemID ~= nil) then
+				if (this.itemID ~= nil) then
 					if(GetItemInfo(this.itemID) ~= nil) then
 						getglobal(this:GetName().."_Unsafe"):Hide();
 						AtlasLootTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 24);
@@ -3057,12 +3068,12 @@ function AtlasLootItem_OnEnter()
 						if ( AtlasLootCharDB.ItemIDs ) then
 							AtlasLootTooltip:AddLine(AL["ItemID:"].." "..this.itemID, nil, nil, nil, 1);
 						end
-						if( this.droprate ~= nil) then
+						if ( this.droprate ~= nil) then
 							AtlasLootTooltip:AddLine(AL["Drop Rate: "]..this.droprate, 1, 1, 0);
 						end
 					else
 						AtlasLoot_QueryLootPage()
-						getglobal("AtlasLootItem_"..id.."_Unsafe"):Hide();
+						getglobal("AtlasLootItem_"..buttonID.."_Unsafe"):Hide();
 					end
 					AtlasLootTooltip:Show();
 				end
@@ -3081,24 +3092,38 @@ function AtlasLootItem_OnEnter()
 					messageShown = true
 				end
 			end
+			local _, _, longCooldown = strfind(AtlasLootTooltipTextRight2:GetText() or "", gsub(SPELL_RECAST_TIME_MIN, "%%%.3g", "(.+)"))
+			if longCooldown and strfind(longCooldown, "e%+") then
+				longCooldown = tonumber(longCooldown) / 60 / 24
+				if longCooldown > 1 then
+					longCooldown = format(AL.DAYS_COOLDOWN, longCooldown)
+				else
+					longCooldown = format(AL.DAYS_COOLDOWN_1, longCooldown)
+				end
+				AtlasLootTooltipTextRight2:SetText(longCooldown)
+			end
 			if ( AtlasLootCharDB.ItemIDs ) then
 				AtlasLootTooltip:AddLine(AL["SpellID:"].." "..spellID, nil, nil, nil, 1);
 			end
 			AtlasLootTooltip:Show();
-			if GetSpellInfoAtlasLootDB["enchants"][spellID]["item"] and GetSpellInfoAtlasLootDB["enchants"][spellID]["item"] ~= nil and GetSpellInfoAtlasLootDB["enchants"][spellID]["item"] ~= "" then
+			local item = GetSpellInfoAtlasLootDB["enchants"][spellID]["item"]
+			local extra = GetSpellInfoAtlasLootDB["enchants"][spellID]["extra"]
+			if item and item ~= "" then
 				AtlasLootTooltip2:SetOwner(this, "ANCHOR_NONE");
 				AtlasLootTooltip2:SetPoint("TOPLEFT", AtlasLootTooltip, "BOTTOMLEFT", 0, 0)
 				AtlasLootTooltip2:ClearLines();
-				AtlasLootTooltip2:SetHyperlink("item:"..GetSpellInfoAtlasLootDB["enchants"][spellID]["item"]..":0:0:0");
-				if GetSpellInfoAtlasLootDB["enchants"][spellID]["extra"] and GetSpellInfoAtlasLootDB["enchants"][spellID]["extra"] ~= nil and GetSpellInfoAtlasLootDB["enchants"][spellID]["extra"] ~= "" then
-					AtlasLootTooltip2:AddLine(GetSpellInfoAtlasLootDB["enchants"][spellID]["extra"], nil, nil, nil, 1);
+				AtlasLootTooltip2:SetHyperlink("item:"..item..":0:0:0");
+				if extra and extra ~= "" then
+					AtlasLootTooltip2:AddLine(extra, nil, nil, nil, 1);
 				end
 				if ( AtlasLootCharDB.ItemIDs ) then
-					AtlasLootTooltip2:AddLine(AL["ItemID:"].." "..GetSpellInfoAtlasLootDB["enchants"][spellID]["item"], nil, nil, nil, 1);
+					AtlasLootTooltip2:AddLine(AL["ItemID:"].." "..item, nil, nil, nil, 1);
 				end
 				AtlasLootTooltip2:Show();
 				-- Reposition if tooltips overlap
-				if AtlasLootTooltip:GetBottom() < AtlasLootTooltip2:GetTop() then
+				local bottom = AtlasLootTooltip:GetBottom()
+				local top = AtlasLootTooltip2:GetTop()
+				if (top and bottom) and (bottom < top) then
 					AtlasLootTooltip2:ClearAllPoints()
 					AtlasLootTooltip2:SetPoint("TOPLEFT", this, "TOPRIGHT", -(this:GetWidth() / 2), 24)
 					AtlasLootTooltip:ClearAllPoints()
@@ -3107,68 +3132,44 @@ function AtlasLootItem_OnEnter()
 			end
 		elseif isSpell then
 			local spellID = tonumber(string.sub(this.itemID, 2));
-			local TooltipTools, TooltipReagents = "", "";
-			if GetSpellInfoAtlasLootDB["craftspells"][spellID]["tools"] ~= "" then
-				for i = 1, table.getn(GetSpellInfoAtlasLootDB["craftspells"][spellID]["tools"]) do
-					AtlasLoot_CheckBagsForItems(GetSpellInfoAtlasLootDB["craftspells"][spellID]["tools"][i])
-					TooltipTools = TooltipTools..AtlasLoot_CheckBagsForItems(GetSpellInfoAtlasLootDB["craftspells"][spellID]["tools"][i])..WHITE..", "
-				end
-				TooltipTools = string.sub(TooltipTools, 1, -3)
-			end
-			if GetSpellInfoAtlasLootDB["craftspells"][spellID]["reagents"] ~= "" then
-				for i = 1, table.getn(GetSpellInfoAtlasLootDB["craftspells"][spellID]["reagents"]) do
-					local reagent = GetSpellInfoAtlasLootDB["craftspells"][spellID]["reagents"][i]
-					TooltipReagents = TooltipReagents..AtlasLoot_CheckBagsForItems(reagent[1], reagent[2])..WHITE..", "
-				end
-				TooltipReagents = string.sub(TooltipReagents, 1, -3)
-			end
 			AtlasLootTooltip:SetOwner(this, "ANCHOR_NONE");
 			AtlasLootTooltip:SetPoint("BOTTOMLEFT", this, "TOPRIGHT", -(this:GetWidth() / 2), 24)
 			AtlasLootTooltip:ClearLines();
-			AtlasLootTooltip:AddLine(GetSpellInfoAtlasLootDB["craftspells"][spellID]["name"]);
-			AtlasLootTooltip:AddLine(WHITE..GetSpellInfoAtlasLootDB["craftspells"][spellID]["castTime"].." sec cast");
-			if GetSpellInfoAtlasLootDB["craftspells"][spellID]["requires"] ~= "" then
-				AtlasLootTooltip:AddLine(WHITE.."Requires: "..GetSpellInfoAtlasLootDB["craftspells"][spellID]["requires"]);
-			end
-			if TooltipTools ~= "" then
-				AtlasLootTooltip:AddLine(WHITE.."Tools: "..TooltipTools, nil, nil, nil, 1);
-			end
-			if TooltipReagents ~= "" then
-				AtlasLootTooltip:AddLine(WHITE.."Reagents: "..TooltipReagents, nil, nil, nil, 1);
-			end
-			if GetSpellInfoAtlasLootDB["craftspells"][spellID]["text"] ~= "" then
-				AtlasLootTooltip:AddLine(GetSpellInfoAtlasLootDB["craftspells"][spellID]["text"], nil, nil, nil, 1);
-			end
-			if ( AtlasLootCharDB.ItemIDs ) then
-				if spellID < 100000 then
-					AtlasLootTooltip:AddLine(AL["SpellID:"].." "..spellID, nil, nil, nil, 1);
-				-- Mining spells HACK
-				elseif spellID >= 100000 and spellID <= 100005 then
-					AtlasLootTooltip:AddLine(AL["SpellID:"].." 2575", nil, nil, nil, 1);
-				elseif spellID >= 100006 and spellID <= 100007 then
-					AtlasLootTooltip:AddLine(AL["SpellID:"].." 2576", nil, nil, nil, 1);
-				elseif spellID >= 100008 and spellID <= 100011 then
-					AtlasLootTooltip:AddLine(AL["SpellID:"].." 3564", nil, nil, nil, 1);
-				elseif spellID >= 100012 and spellID <= 100024 then
-					AtlasLootTooltip:AddLine(AL["SpellID:"].." 10248", nil, nil, nil, 1);
+			if spellID < 100000 then
+				AtlasLootTooltip:SetHyperlink("enchant:"..spellID)
+				local _, _, longCooldown = strfind(AtlasLootTooltipTextRight2:GetText() or "", gsub(SPELL_RECAST_TIME_MIN, "%%%.3g", "(.+)"))
+				if longCooldown and strfind(longCooldown, "e%+") then
+					longCooldown = tonumber(longCooldown) / 60 / 24
+					if longCooldown > 1 then
+						longCooldown = format(AL.DAYS_COOLDOWN, longCooldown)
+					else
+						longCooldown = format(AL.DAYS_COOLDOWN_1, longCooldown)
+					end
+					AtlasLootTooltipTextRight2:SetText(longCooldown)
 				end
 			end
+			if ( AtlasLootCharDB.ItemIDs ) then
+				AtlasLootTooltip:AddLine(AL["SpellID:"].." "..spellID, nil, nil, nil, 1);
+			end
 			AtlasLootTooltip:Show();
-			local craftitem2 = GetSpellInfoAtlasLootDB["craftspells"][spellID]["craftItem"]
-			if craftitem2 ~= nil and craftitem2 ~= "" then
+			local craftItem = GetSpellInfoAtlasLootDB["craftspells"][spellID]["craftItem"]
+			local extra = GetSpellInfoAtlasLootDB["craftspells"][spellID]["extra"]
+			if craftItem and craftItem ~= "" then
 				AtlasLootTooltip2:SetOwner(this, "ANCHOR_NONE");
 				AtlasLootTooltip2:SetPoint("TOPLEFT", AtlasLootTooltip, "BOTTOMLEFT", 0, 0)
 				AtlasLootTooltip2:ClearLines();
-				AtlasLootTooltip2:SetHyperlink("item:"..GetSpellInfoAtlasLootDB["craftspells"][spellID]["craftItem"]..":0:0:0");
-				if GetSpellInfoAtlasLootDB["craftspells"][spellID]["extra"] and GetSpellInfoAtlasLootDB["craftspells"][spellID]["extra"] ~= nil then
-					AtlasLootTooltip2:AddLine(GetSpellInfoAtlasLootDB["craftspells"][spellID]["extra"], nil, nil, nil, 1);
+				AtlasLootTooltip2:SetHyperlink("item:"..craftItem);
+				if extra then
+					AtlasLootTooltip2:AddLine(extra, nil, nil, nil, 1);
 				end
 				if ( AtlasLootCharDB.ItemIDs ) then
-					AtlasLootTooltip2:AddLine(AL["ItemID:"].." "..GetSpellInfoAtlasLootDB["craftspells"][spellID]["craftItem"], nil, nil, nil, 1);
+					AtlasLootTooltip2:AddLine(AL["ItemID:"].." "..craftItem, nil, nil, nil, 1);
 				end
 				AtlasLootTooltip2:Show();
 				-- Reposition if tooltips overlap
-				if (AtlasLootTooltip:GetBottom() and AtlasLootTooltip2:GetTop()) and (AtlasLootTooltip:GetBottom() < AtlasLootTooltip2:GetTop()) then
+				local bottom = AtlasLootTooltip:GetBottom()
+				local top = AtlasLootTooltip2:GetTop()
+				if (bottom and top) and (bottom < top) then
 					AtlasLootTooltip2:ClearAllPoints()
 					AtlasLootTooltip2:SetPoint("TOPLEFT", this, "TOPRIGHT", -(this:GetWidth() / 2), 24)
 					AtlasLootTooltip:ClearAllPoints()
@@ -3324,19 +3325,18 @@ function AtlasLootItem_OnClick(arg1)
 		end
 	elseif isSpell then
 		if IsShiftKeyDown() then
-			if tonumber(string.sub(this.itemID, 2)) < 100000 then
+			local spellID = tonumber(string.sub(this.itemID, 2))
+			local craftitem = GetSpellInfoAtlasLootDB["craftspells"][spellID]["craftItem"]
+			local craftname = GetItemInfo(craftitem or 0)
+			if spellID < 100000 then
 				if WIM_EditBoxInFocus then
-					local craftitem = GetSpellInfoAtlasLootDB["craftspells"][tonumber(string.sub(this.itemID, 2))]["craftItem"]
-					if craftitem ~= nil and craftitem ~= "" then
-						local craftname = GetItemInfo(craftitem)
+					if craftitem and craftitem ~= "" then
 						WIM_EditBoxInFocus:Insert("|"..string.sub(color, 2).."|Hitem:"..craftitem.."|h["..craftname.."]|h|r");
 					else
 						WIM_EditBoxInFocus:Insert(name);
 					end
 				elseif ChatFrameEditBox:IsVisible() then
-					local craftitem = GetSpellInfoAtlasLootDB["craftspells"][tonumber(string.sub(this.itemID, 2))]["craftItem"]
-					if craftitem ~= nil and craftitem ~= "" then
-						local craftname = GetItemInfo(craftitem)
+					if craftitem and craftitem ~= "" then
 						ChatFrameEditBox:Insert("|"..string.sub(color, 2).."|Hitem:"..craftitem..":0:0:0|h["..craftname.."]|h|r"); -- Fix for Gurky's discord chat bot
 					else
 						ChatFrameEditBox:Insert(name);
@@ -3346,16 +3346,14 @@ function AtlasLootItem_OnClick(arg1)
 				end
 			else
 				if WIM_EditBoxInFocus then
-					local craftitem = GetSpellInfoAtlasLootDB["craftspells"][tonumber(string.sub(this.itemID, 2))]["craftItem"]
-					if craftitem ~= nil and craftitem ~= "" then
-						WIM_EditBoxInFocus:Insert(AtlasLoot_GetChatLink(GetSpellInfoAtlasLootDB["craftspells"][tonumber(string.sub(this.itemID, 2))]["craftItem"]));
+					if craftitem and craftitem ~= "" then
+						WIM_EditBoxInFocus:Insert(AtlasLoot_GetChatLink(craftItem));
 					else
 						WIM_EditBoxInFocus:Insert(name);
 					end
 				elseif ChatFrameEditBox:IsVisible() then
-					local craftitem = GetSpellInfoAtlasLootDB["craftspells"][tonumber(string.sub(this.itemID, 2))]["craftItem"]
-					if craftitem ~= nil and craftitem ~= "" then
-						ChatFrameEditBox:Insert(AtlasLoot_GetChatLink(GetSpellInfoAtlasLootDB["craftspells"][tonumber(string.sub(this.itemID, 2))]["craftItem"]));
+					if craftitem and craftitem ~= "" then
+						ChatFrameEditBox:Insert(AtlasLoot_GetChatLink(craftItem));
 					else
 						ChatFrameEditBox:Insert(name);
 					end
@@ -3366,10 +3364,10 @@ function AtlasLootItem_OnClick(arg1)
 					elseif channel == "CHANNEL" then
 						chatnumber = ChatFrameEditBox.channelTarget
 					end
-					SendChatMessage(AtlasLoot_GetChatLink(GetSpellInfoAtlasLootDB["craftspells"][tonumber(string.sub(this.itemID, 2))]["craftItem"]),channel,nil,chatnumber);
+					SendChatMessage(AtlasLoot_GetChatLink(craftItem), channel, nil, chatnumber);
 				end
 			end
-		elseif(IsAltKeyDown() and (this.itemID ~= 0)) then
+		elseif (IsAltKeyDown() and (this.itemID ~= 0)) then
 			if dataID == "WishList" then
 				AtlasLoot_DeleteFromWishList(this.itemID);
 			elseif dataID == "SearchResult" then
@@ -3377,11 +3375,11 @@ function AtlasLootItem_OnClick(arg1)
 			else
 				AtlasLoot_AddToWishlist(this.itemID, texture, this.itemIDName, this.itemIDExtra, dataID.."|"..dataSource);
 			end
-		elseif(IsControlKeyDown()) then
+		elseif (IsControlKeyDown()) then
 			DressUpItemLink("item:"..this.dressingroomID..":0:0:0");
-		elseif((dataID == "SearchResult" or dataID == "WishList") and this.sourcePage) then
+		elseif ((dataID == "SearchResult" or dataID == "WishList") and this.sourcePage) then
 			local _, _, dataID, dataSource = strfind(this.sourcePage, "(.+)|(.+)");
-			if(dataID and dataSource and AtlasLoot_IsLootTableAvailable(dataID)) then
+			if (dataID and dataSource and AtlasLoot_IsLootTableAvailable(dataID)) then
 				AtlasLoot_ShowItemsFrame(dataID, dataSource, bossName, framePoint);
 			end
 		end
@@ -3633,13 +3631,13 @@ function AtlasLoot_SayItemReagents(id, color, name, safe)
 			chatnumber = ChatFrameEditBox.channelTarget
 		end
 	end
-	if string.sub( id, 1, 1 ) == "s" then
-		local spellid = string.sub( id, 2 )
-		local craftitem = GetSpellInfoAtlasLootDB["craftspells"][tonumber(spellid)]["craftItem"]
-		if craftitem ~= nil and craftitem ~= "" then
+	if string.sub(id, 1, 1) == "s" then
+		local spellID = tonumber(string.sub(id, 2))
+		local craftItem = GetSpellInfoAtlasLootDB["craftspells"][spellID]["craftItem"]
+		if craftItem and craftItem ~= "" then
 			local craftnumber = "";
-			local qtyMin = GetSpellInfoAtlasLootDB["craftspells"][tonumber(spellid)]["craftQuantityMin"];
-			local qtyMax = GetSpellInfoAtlasLootDB["craftspells"][tonumber(spellid)]["craftQuantityMax"];
+			local qtyMin = GetSpellInfoAtlasLootDB["craftspells"][spellID]["craftQuantityMin"];
+			local qtyMax = GetSpellInfoAtlasLootDB["craftspells"][spellID]["craftQuantityMax"];
 			if qtyMin and qtyMin ~= "" then
 				if qtyMax and qtyMax ~= "" then
 					craftnumber = craftnumber..qtyMin.. "-"..qtyMax.."x"
@@ -3647,63 +3645,70 @@ function AtlasLoot_SayItemReagents(id, color, name, safe)
 					craftnumber = craftnumber..qtyMin.."x"
 				end
 			end
-			SendChatMessage(AL["To craft "]..craftnumber..AtlasLoot_GetChatLink(craftitem)..AL[" the following reagents are needed:"],channel,nil,chatnumber);
-			for j = 1, table.getn(GetSpellInfoAtlasLootDB["craftspells"][tonumber(spellid)]["reagents"]) do
-				local tempnumber = GetSpellInfoAtlasLootDB["craftspells"][tonumber(spellid)]["reagents"][j][2]
-				if not tempnumber or tempnumber == nil or tempnumber == "" then
-					tempnumber = 1;
-				end
-				chatline = chatline..tempnumber.."x"..AtlasLoot_GetChatLink(GetSpellInfoAtlasLootDB["craftspells"][tonumber(spellid)]["reagents"][j][1]).." ";
-				itemCount = itemCount + 1;
-				if itemCount == 4 then
-					SendChatMessage(chatline, channel, nil, chatnumber);
-					chatline = "";
-					itemCount = 0;
+			SendChatMessage(AL["To craft "]..craftnumber..AtlasLoot_GetChatLink(craftItem)..AL[" the following reagents are needed:"], channel, nil, chatnumber);
+			local reagents = GetSpellInfoAtlasLootDB["craftspells"][spellID]["reagents"]
+			if type(reagents) == "table" then
+				for j = 1, table.getn(reagents) do
+					local tempnumber = reagents[j][2]
+					if not tempnumber or tempnumber == nil or tempnumber == "" then
+						tempnumber = 1;
+					end
+					chatline = chatline..tempnumber.."x"..AtlasLoot_GetChatLink(reagents[j][1]).." ";
+					itemCount = itemCount + 1;
+					if itemCount == 4 then
+						SendChatMessage(chatline, channel, nil, chatnumber);
+						chatline = "";
+						itemCount = 0;
+					end
 				end
 			end
 			if itemCount > 0 then
 				SendChatMessage(chatline, channel, nil, chatnumber);
 			end
 		else
-			SendChatMessage(AL["To cast "]..GetSpellInfoAtlasLootDB["craftspells"][tonumber(spellid)]["name"]..AL[" the following items are needed:"],channel,nil,chatnumber);
-			for j = 1, table.getn(GetSpellInfoAtlasLootDB["craftspells"][tonumber(spellid)]["reagents"]) do
-				local tempnumber = GetSpellInfoAtlasLootDB["craftspells"][tonumber(spellid)]["reagents"][j][2]
-				if not tempnumber or tempnumber == nil or tempnumber == "" then
-					tempnumber = 1;
-				end
-				chatline = chatline..tempnumber.."x"..AtlasLoot_GetChatLink(GetSpellInfoAtlasLootDB["craftspells"][tonumber(spellid)]["reagents"][j][1]).." ";
-				itemCount = itemCount + 1;
-				if itemCount == 4 then
-					SendChatMessage(chatline, channel, nil, chatnumber);
-					chatline = "";
-					itemCount = 0;
+			local name = GetSpellInfoAtlasLootDB["craftspells"][spellID]["name"]
+			local reagents = GetSpellInfoAtlasLootDB["craftspells"][spellID]["reagents"]
+			SendChatMessage(AL["To cast "]..name..AL[" the following items are needed:"], channel, nil, chatnumber);
+			if type(reagents) == "table" then
+				for j = 1, table.getn(reagents) do
+					local tempnumber = reagents[j][2]
+					if not tempnumber or tempnumber == nil or tempnumber == "" then
+						tempnumber = 1;
+					end
+					chatline = chatline..tempnumber.."x"..AtlasLoot_GetChatLink(reagents[j][1]).." ";
+					itemCount = itemCount + 1;
+					if itemCount == 4 then
+						SendChatMessage(chatline, channel, nil, chatnumber);
+						chatline = "";
+						itemCount = 0;
+					end
 				end
 			end
 			if itemCount > 0 then
 				SendChatMessage(chatline, channel, nil, chatnumber);
 			end
 		end
-	elseif string.sub( id,1 ,1 ) == "e" then
-		local spellid = string.sub( id, 2 )
-		local name = GetSpellInfoAtlasLootDB["enchants"][tonumber(spellid)]["name"]
+	elseif string.sub(id, 1, 1) == "e" then
+		local spellID = tonumber(string.sub(id, 2))
+		local name = GetSpellInfoAtlasLootDB["enchants"][spellID]["name"]
+		local item = GetSpellInfoAtlasLootDB["enchants"][spellID]["item"]
 		if tListActivity[1] and WIM_Windows[tListActivity[1]].is_visible then
-			if not GetSpellInfoAtlasLootDB["enchants"][tonumber(spellid)]["item"] then
-				SendChatMessage("|cffFFd200|Henchant:"..spellid..":0:0:0|h["..name.."]|h|r", channel, nil, chatnumber);
+			if not item then
+				SendChatMessage("|cffFFd200|Henchant:"..spellID..":0:0:0|h["..name.."]|h|r", channel, nil, chatnumber);
 			else
-				SendChatMessage(AL["To craft "]..AtlasLoot_GetChatLink(GetSpellInfoAtlasLootDB["enchants"][tonumber(spellid)]["item"])..AL[" you need this: "].."|cffFFd200|Henchant:"..spellid..":0:0:0|h["..name.."]|h|r",channel,nil,chatnumber);
+				SendChatMessage(AL["To craft "]..AtlasLoot_GetChatLink(item)..AL[" you need this: "].."|cffFFd200|Henchant:"..spellID..":0:0:0|h["..name.."]|h|r", channel, nil, chatnumber);
 			end
-
 		elseif ChatFrameEditBox:IsVisible() then
-			if not GetSpellInfoAtlasLootDB["enchants"][tonumber(spellid)]["item"] then
-				ChatFrameEditBox:Insert("|cffFFd200|Henchant:"..spellid..":0:0:0|h["..name.."]|h|r", channel, nil, chatnumber);
+			if not item then
+				ChatFrameEditBox:Insert("|cffFFd200|Henchant:"..spellID..":0:0:0|h["..name.."]|h|r", channel, nil, chatnumber);
 			else
-				ChatFrameEditBox:Insert(AL["To craft "]..AtlasLoot_GetChatLink(GetSpellInfoAtlasLootDB["enchants"][tonumber(spellid)]["item"])..AL[" you need this: "].."|cffFFd200|Henchant:"..spellid..":0:0:0|h["..name.."]|h|r",channel,nil,chatnumber);
+				ChatFrameEditBox:Insert(AL["To craft "]..AtlasLoot_GetChatLink(item)..AL[" you need this: "].."|cffFFd200|Henchant:"..spellID..":0:0:0|h["..name.."]|h|r", channel, nil, chatnumber);
 			end
 		else
-			if not GetSpellInfoAtlasLootDB["enchants"][tonumber(spellid)]["item"] then
-				SendChatMessage("|cffFFd200|Henchant:"..spellid..":0:0:0|h["..name.."]|h|r", channel, nil, chatnumber);
+			if not item then
+				SendChatMessage("|cffFFd200|Henchant:"..spellID..":0:0:0|h["..name.."]|h|r", channel, nil, chatnumber);
 			else
-				SendChatMessage(AL["To craft "]..AtlasLoot_GetChatLink(GetSpellInfoAtlasLootDB["enchants"][tonumber(spellid)]["item"])..AL[" you need this: "].."|cffFFd200|Henchant:"..spellid..":0:0:0|h["..name.."]|h|r",channel,nil,chatnumber);
+				SendChatMessage(AL["To craft "]..AtlasLoot_GetChatLink(item)..AL[" you need this: "].."|cffFFd200|Henchant:"..spellID..":0:0:0|h["..name.."]|h|r", channel, nil, chatnumber);
 			end
 		end
 	else

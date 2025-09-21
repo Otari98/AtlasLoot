@@ -26,6 +26,10 @@ local ORANGE = "|cffFF8400";
 local DEFAULT = "|cffFFd200";
 
 AL:RegisterTranslations("enUS", function() return {
+	DAYS_COOLDOWN = "%d days cooldown",
+	DAYS_COOLDOWN_1 = "%d day cooldown",
+	CHARGES = "%d Charges",
+	CHARGES_1 = "%d Charge",
 	[" added to the WishList."] = true,
     [" already in the WishList!"] = true,
     [" could not be accessed, the following module may be out of date: "] = true,
