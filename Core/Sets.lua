@@ -1,4 +1,5 @@
 local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
+local _G = _G or getfenv(0)
 
 local ORANGE = "|cffFF8400";
 local data = AtlasLoot_Data["AtlasLootSetItems"]
@@ -21,17 +22,17 @@ end
 
 function AtlasLoot_PrepMenu(backPage, title)
 	for i = 1, 30, 1 do
-		getglobal("AtlasLootItem_" .. i):Hide();
-		getglobal("AtlasLootItem_" .. i.."Border"):Hide()
+		_G["AtlasLootItem_" .. i]:Hide();
+		_G["AtlasLootItem_" .. i.."Border"]:Hide()
 	end
 	for i = 1, 30, 1 do
-		local button = getglobal("AtlasLootMenuItem_" .. i)
-		getglobal("AtlasLootMenuItem_" .. i.."Border"):Hide()
+		local button = _G["AtlasLootMenuItem_" .. i]
+		_G["AtlasLootMenuItem_" .. i.."Border"]:Hide()
 		button:Hide();
 		button.isheader = false;
 		button.container = nil
 		button.dataSource = nil
-		getglobal("AtlasLootMenuItem_" .. i .. "_Icon"):SetTexCoord(0, 1, 0, 1)
+		_G["AtlasLootMenuItem_" .. i .. "_Icon"]:SetTexCoord(0, 1, 0, 1)
 	end
 	if backPage then
 		AtlasLootItemsFrame_BACK:Show();
@@ -43,7 +44,7 @@ function AtlasLoot_PrepMenu(backPage, title)
 	AtlasLootItemsFrame_PREV:Hide();
 	AtlasLootServerQueryButton:Hide();
 	for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_" .. i .. "_Extra"):Show();
+		_G["AtlasLootMenuItem_" .. i .. "_Extra"]:Show();
 	end
 	AtlasLoot_BossName:SetText("|cffFFFFFF" .. title);
 	-- AtlasLoot_SetItemInfoFrame(AtlasLoot_AnchorPoint);
@@ -138,8 +139,8 @@ function AtlasLootSetMenu()
 	AtlasLootMenuItem_20.lootpage = "T3SET";
 	AtlasLootMenuItem_20:Show();
 	for i = 1, 30 do
-		if getglobal("AtlasLootMenuItem_"..i).container then
-			getglobal("AtlasLootMenuItem_"..i.."Border"):Show()
+		if _G["AtlasLootMenuItem_"..i].container then
+			_G["AtlasLootMenuItem_"..i.."Border"]:Show()
 		end
 	end
 end
@@ -274,10 +275,10 @@ function AtlasLootPRE60SetMenu()
 	AtlasLootMenuItem_23.container = data.SpiritofEskhandarC
 	AtlasLootMenuItem_23:Show();
 	for i = 1, 30 do
-		local button = getglobal("AtlasLootMenuItem_" .. i)
+		local button = _G["AtlasLootMenuItem_" .. i]
 		button.dataSource = AtlasLoot_GetDataSource(button.lootpage)
 		if button.container then
-			getglobal("AtlasLootMenuItem_"..i.."Border"):Show()
+			_G["AtlasLootMenuItem_"..i.."Border"]:Show()
 		end
 	end
 end
@@ -369,10 +370,10 @@ function AtlasLootZGSetMenu()
 	AtlasLootMenuItem_25.container = data.HakkariBladesC
 	AtlasLootMenuItem_25:Show();
 	for i = 1, 30 do
-		local button = getglobal("AtlasLootMenuItem_" .. i)
+		local button = _G["AtlasLootMenuItem_" .. i]
 		button.dataSource = AtlasLoot_GetDataSource(button.lootpage)
 		if button.container then
-			getglobal("AtlasLootMenuItem_"..i.."Border"):Show()
+			_G["AtlasLootMenuItem_"..i.."Border"]:Show()
 		end
 	end
 end
@@ -443,10 +444,10 @@ function AtlasLootAQ40SetMenu()
 	AtlasLootMenuItem_21.container = data.AQ40WarriorC
 	AtlasLootMenuItem_21:Show();
 	for i = 1, 30 do
-		local button = getglobal("AtlasLootMenuItem_" .. i)
+		local button = _G["AtlasLootMenuItem_" .. i]
 		button.dataSource = AtlasLoot_GetDataSource(button.lootpage)
 		if button.container then
-			getglobal("AtlasLootMenuItem_"..i.."Border"):Show()
+			_G["AtlasLootMenuItem_"..i.."Border"]:Show()
 		end
 	end
 end
@@ -517,10 +518,10 @@ function AtlasLootAQ20SetMenu()
 	AtlasLootMenuItem_21.container = data.AQ20WarriorC
 	AtlasLootMenuItem_21:Show();
 	for i = 1, 30 do
-		local button = getglobal("AtlasLootMenuItem_" .. i)
+		local button = _G["AtlasLootMenuItem_" .. i]
 		button.dataSource = AtlasLoot_GetDataSource(button.lootpage)
 		if button.container then
-			getglobal("AtlasLootMenuItem_"..i.."Border"):Show()
+			_G["AtlasLootMenuItem_"..i.."Border"]:Show()
 		end
 	end
 end
@@ -591,10 +592,10 @@ function AtlasLootT0SetMenu()
 	AtlasLootMenuItem_21.container = data.T0WarriorC
 	AtlasLootMenuItem_21:Show();
 	for i = 1, 30 do
-		local button = getglobal("AtlasLootMenuItem_" .. i)
+		local button = _G["AtlasLootMenuItem_" .. i]
 		button.dataSource = AtlasLoot_GetDataSource(button.lootpage)
 		if button.container then
-			getglobal("AtlasLootMenuItem_"..i.."Border"):Show()
+			_G["AtlasLootMenuItem_"..i.."Border"]:Show()
 		end
 	end
 end
@@ -665,10 +666,10 @@ function AtlasLootT1SetMenu()
 	AtlasLootMenuItem_21.container = data.T1WarriorC
 	AtlasLootMenuItem_21:Show();
 	for i = 1, 30 do
-		local button = getglobal("AtlasLootMenuItem_" .. i)
+		local button = _G["AtlasLootMenuItem_" .. i]
 		button.dataSource = AtlasLoot_GetDataSource(button.lootpage)
 		if button.container then
-			getglobal("AtlasLootMenuItem_"..i.."Border"):Show()
+			_G["AtlasLootMenuItem_"..i.."Border"]:Show()
 		end
 	end
 end
@@ -739,10 +740,10 @@ function AtlasLootT2SetMenu()
 	AtlasLootMenuItem_21.container = data.T2WarriorC
 	AtlasLootMenuItem_21:Show();
 	for i = 1, 30 do
-		local button = getglobal("AtlasLootMenuItem_" .. i)
+		local button = _G["AtlasLootMenuItem_" .. i]
 		button.dataSource = AtlasLoot_GetDataSource(button.lootpage)
 		if button.container then
-			getglobal("AtlasLootMenuItem_"..i.."Border"):Show()
+			_G["AtlasLootMenuItem_"..i.."Border"]:Show()
 		end
 	end
 end
@@ -813,10 +814,10 @@ function AtlasLootT3SetMenu()
 	AtlasLootMenuItem_21.container = data.T3WarriorC
 	AtlasLootMenuItem_21:Show();
 	for i = 1, 30 do
-		local button = getglobal("AtlasLootMenuItem_" .. i)
+		local button = _G["AtlasLootMenuItem_" .. i]
 		button.dataSource = AtlasLoot_GetDataSource(button.lootpage)
 		if button.container then
-			getglobal("AtlasLootMenuItem_"..i.."Border"):Show()
+			_G["AtlasLootMenuItem_"..i.."Border"]:Show()
 		end
 	end
 end
@@ -887,10 +888,10 @@ function AtlasLoot_Kara40SetMenu()
 	AtlasLootMenuItem_21.container = data.T35WarriorC
 	AtlasLootMenuItem_21:Show();
 	for i = 1, 30 do
-		local button = getglobal("AtlasLootMenuItem_" .. i)
+		local button = _G["AtlasLootMenuItem_" .. i]
 		button.dataSource = AtlasLoot_GetDataSource(button.lootpage)
 		if button.container then
-			getglobal("AtlasLootMenuItem_"..i.."Border"):Show()
+			_G["AtlasLootMenuItem_"..i.."Border"]:Show()
 		end
 	end
 end

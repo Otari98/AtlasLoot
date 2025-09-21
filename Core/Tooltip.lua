@@ -3,6 +3,7 @@ local AtlasLootTip = CreateFrame("Frame", "AtlasLootTip", GameTooltip)
 local strfind = string.find
 local GetItemInfo = GetItemInfo
 local GREY = "|cff999999"
+local _G = _G or getfenv(0)
 
 local insideHook = false
 local tooltipMoney = 0
@@ -46,8 +47,8 @@ local function AddSourceLine(tooltip, sourceStr)
 	end
 
 	for i = 1, numLines do
-		left = getglobal(name .. "TextLeft" .. i)
-		right = getglobal(name .. "TextRight" .. i)
+		left = _G[name .. "TextLeft" .. i]
+		right = _G[name .. "TextRight" .. i]
 		leftText = left:GetText()
 		rightText = right:IsShown() and right:GetText()
 		leftR, leftG, leftB = left:GetTextColor()
@@ -348,7 +349,7 @@ AtlasLootTip.HookAddonOrVariable = function(addon, func)
 	lurker:RegisterEvent("VARIABLES_LOADED")
 	lurker:RegisterEvent("PLAYER_ENTERING_WORLD")
 	lurker:SetScript("OnEvent", function()
-		if IsAddOnLoaded(addon) or getglobal(addon) then
+		if IsAddOnLoaded(addon) or _G[addon] then
 			this:func()
 			this:UnregisterAllEvents()
 		end
