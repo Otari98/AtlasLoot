@@ -4561,6 +4561,80 @@ GetSpellInfoAtlasLootDB = {
 				[1] = {7075},
 			},
 		},
+		[36903] = {
+			["name"] = "Alchemy: Elixir of Greater Arcane Power",
+			["craftItem"] = 55048,
+			["reagents"] = {
+				[1] = {8831, 3},
+				[2] = {8925},
+			},
+		},
+		[36901] = {
+			["name"] = "Alchemy: Elixir of Greater Frost Power",
+			["craftItem"] = 55046,
+			["reagents"] = {
+				[1] = {13467, 3},
+				[2] = {8925},
+			},
+		},
+		[36935] = {
+			["name"] = "Alchemy: Concoction of the Dreamwater",
+			["craftItem"] = 47414,
+			["reagents"] = {
+				[1] = {12820},
+				[2] = {61423},
+				[3] = {18256},
+			},
+		},
+		[36929] = {
+			["name"] = "Alchemy: Concoction of the Emerald Mongoose",
+			["craftItem"] = 47410,
+			["reagents"] = {
+				[1] = {13452},
+				[2] = {61224},
+				[3] = {18256},
+			},
+		},
+		[36932] = {
+			["name"] = "Alchemy: Concoction of the Arcane Giant",
+			["craftItem"] = 47412,
+			["reagents"] = {
+				[1] = {9206},
+				[2] = {13454},
+				[3] = {18256},
+			},
+		},
+		[17632] = {
+			["name"] = "Alchemy: Alchemist's Stone",
+			["craftItem"] = 13503,
+			["reagents"] = {
+				[1] = {7078, 8},
+				[2] = {7076, 8},
+				[3] = {7082, 8},
+				[4] = {7080, 8},
+				[5] = {12803, 8},
+				[6] = {9262, 2},
+				[7] = {13468, 4},
+			},
+		},
+		[115] = {
+			["name"] = "Alchemy: Elixir of Rapid Growth",
+			["craftItem"] = 56113,
+			["reagents"] = {
+				[1] = {4625},
+				[2] = {7068},
+				[3] = {3372},
+			},
+		},
+		[17579] = {
+			["name"] = "Alchemy: Greater Holy Protection Potion",
+			["craftItem"] = 13460,
+			["reagents"] = {
+				[1] = {7069},
+				[2] = {13464},
+				[3] = {8925},
+			},
+		},
 		[2329] = {
 			["name"] = "Alchemy: Elixir of Lion's Strength",
 			["craftItem"] = 2454,

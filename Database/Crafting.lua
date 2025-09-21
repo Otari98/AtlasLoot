@@ -332,6 +332,7 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s12609", "inv_potion_36", "=q1=Catseye Elixir", "=ds=#sr# =so1=200 =so2=220 =so3=240 =so4=260" },
 		{ "s3454", "inv_potion_20", "=q1=Frost Oil", "=ds=#sr# =so1=200 =so2=220 =so3=240 =so4=260" },
 		{ "s11459", "inv_misc_orb_01", "=q1=Philosopher's Stone", "=ds=#sr# =so1=200 =so2=240 =so3=260 =so4=280" },
+		{ "s115", "inv_elixir_of_rapid_growth_1", "=q1=Elixir of Rapid Growth", "=ds=#sr# =so1=200 =so2=200 =so3=212 =so4=225" },
 		{ "s11448", "inv_potion_73", "=q1=Greater Mana Potion", "=ds=#sr# =so1=205 =so2=220 =so3=240 =so4=260" },
 		{ "s11451", "inv_potion_11", "=q1=Oil of Immolation", "=ds=#sr# =so1=205 =so2=220 =so3=240 =so4=260" },
 		{ "s11456", "inv_cask_02", "=q1=Goblin Rocket Fuel", "=ds=#sr# =so1=210 =so2=225 =so3=245 =so4=265" },
@@ -392,6 +393,7 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s17575", "inv_potion_20", "=q1=Greater Frost Protection Potion", "=ds=#sr# =so1=290 =so2=305 =so3=325 =so4=345" },
 		{ "s17576", "inv_potion_22", "=q1=Greater Nature Protection Potion", "=ds=#sr# =so1=290 =so2=305 =so3=325 =so4=345" },
 		{ "s17578", "inv_potion_23", "=q1=Greater Shadow Protection Potion", "=ds=#sr# =so1=290 =so2=305 =so3=325 =so4=345" },
+		{ "s17579", "inv_potion_09", "=q1=Greater Holy Protection Potion", "=ds=#sr# =so1=290 =so2=305 =so3=325 =so4=345" },
 		{ "s24368", "inv_potion_80", "=q1=Major Troll's Blood Potion", "=ds=#sr# =so1=290 =so2=305 =so3=325 =so4=345" },
 		{ "s17580", "inv_potion_76", "=q1=Major Mana Potion", "=ds=#sr# =so1=295 =so2=310 =so3=330 =so4=350" },
 		{ "s25146", "spell_fire_fire", "=q1=Transmute: Elemental Fire", "=ds=#sr# =so1=300 =so2=301 =so3=305 =so4=310" },
@@ -409,6 +411,14 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s45989", "inv_potion_22", "=q1=Elixir of Greater Nature Power", "=ds=#sr# =so1=300 =so2=315 =so3=322 =so4=330" },
 		{ "s57111", "inv_potion_08", "=q1=Potion of Quickness", "=ds=#sr# =so1=300 =so2=315 =so3=322 =so4=330" },
 	};
+	AlchemyArtisan3 = {
+		{ "s36903", "INV_Potion_81", "=q1=Elixir of Greater Arcane Power", "=ds=#sr# =so1=300 =so2=300 =so3=315 =so4=330" },
+		{ "s36901", "INV_Potion_13", "=q1=Elixir of Greater Frost Power", "=ds=#sr# =so1=300 =so2=300 =so3=315 =so4=330" },
+		{ "s36932", "inv_yellow_purple_elixir_2", "=q1=Concoction of the Arcane Giant", "=ds=#sr# =so1=300 =so2=310 =so3=330 =so4=350" },
+		{ "s36929", "inv_blue_gold_elixir_2", "=q1=Concoction of the Emerald Mongoose", "=ds=#sr# =so1=300 =so2=310 =so3=330 =so4=350" },
+		{ "s36935", "inv_green_pink_elixir_1", "=q1=Concoction of the Dreamwater", "=ds=#sr# =so1=300 =so2=310 =so3=330 =so4=350" },
+		{ "s17632", "INV_Misc_Orb_02", "=q4=Alchemist's Stone", "=ds=#sr# =so1=300 =so2=315 =so3=322 =so4=330" },
+	},
 	AlchemyFlasks1 = {
 		{ "s17638", "inv_potion_48", "=q1=Flask of Chromatic Resistance", "=ds=#sr# =so1=300 =so2=315 =so3=322 =so4=330" },
 		{ "s17634", "inv_potion_26", "=q1=Flask of Petrification", "=ds=#sr# =so1=300 =so2=315 =so3=322 =so4=330" },
@@ -429,6 +439,7 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s17575", "inv_potion_20", "=q1=Greater Frost Protection Potion", "=ds=#sr# =so1=290 =so2=305 =so3=325 =so4=345" },
 		{ "s17576", "inv_potion_22", "=q1=Greater Nature Protection Potion", "=ds=#sr# =so1=290 =so2=305 =so3=325 =so4=345" },
 		{ "s17578", "inv_potion_23", "=q1=Greater Shadow Protection Potion", "=ds=#sr# =so1=290 =so2=305 =so3=325 =so4=345" },
+		{ "s17579", "inv_potion_09", "=q1=Greater Holy Protection Potion", "=ds=#sr# =so1=290 =so2=305 =so3=325 =so4=345" }
 	};
 	AlchemyHealingAndMana1 = {
 		{ "s2330", "inv_potion_49", "=q1=Minor Healing Potion", "=ds=#sr# =so1=1 =so2=55 =so3=75 =so4=95" },
@@ -524,16 +535,24 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s11476", "inv_potion_46", "=q1=Elixir of Shadow Power", "=ds=#sr# =so1=250 =so2=265 =so3=285 =so4=305" },
 		{ "s17573", "inv_potion_25", "=q1=Greater Arcane Elixir", "=ds=#sr# =so1=285 =so2=300 =so3=320 =so4=340" },
 		{ "s45989", "inv_potion_22", "=q1=Elixir of Greater Nature Power", "=ds=#sr# =so1=300 =so2=315 =so3=322 =so4=330" },
+		{ "s36903", "INV_Potion_81", "=q1=Elixir of Greater Arcane Power", "=ds=#sr# =so1=300 =so2=300 =so3=315 =so4=330" },
+		{ "s36901", "INV_Potion_13", "=q1=Elixir of Greater Frost Power", "=ds=#sr# =so1=300 =so2=300 =so3=315 =so4=330" },
 		{ "s57131", "INV_Potion_12", "=q1=Dreamshard Elixir", "=ds=#sr# =so1=300 =so2=315 =so3=322 =so4=330" },
 		{ "", "", "", "" },
+		{ "s36932", "inv_yellow_purple_elixir_2", "=q1=Concoction of the Arcane Giant", "=ds=#sr# =so1=300 =so2=310 =so3=330 =so4=350" },
+		{ "s36929", "inv_blue_gold_elixir_2", "=q1=Concoction of the Emerald Mongoose", "=ds=#sr# =so1=300 =so2=310 =so3=330 =so4=350" },
+		{ "s36935", "inv_green_pink_elixir_1", "=q1=Concoction of the Dreamwater", "=ds=#sr# =so1=300 =so2=310 =so3=330 =so4=350" },
+	};
+	AlchemyOffensive2 = {
 		{ "s3171", "inv_potion_06", "=q1=Elixir of Wisdom", "=ds=#sr# =so1=90 =so2=120 =so3=140 =so4=160" },
 		{ "s11465", "inv_potion_10", "=q1=Elixir of Greater Intellect", "=ds=#sr# =so1=235 =so2=250 =so3=270 =so4=290" },
 		{ "s17555", "inv_potion_29", "=q1=Elixir of the Sages", "=ds=#sr# =so1=265 =so2=280 =so3=300 =so4=320" },
 		{ "", "", "", "" },
 		{ "s11477", "inv_potion_27", "=q1=Elixir of Demonslaying", "=ds=#sr# =so1=250 =so2=265 =so3=285 =so4=305" },
 		{ "s57111", "inv_potion_08", "=q1=Potion of Quickness", "=ds=#sr# =so1=300 =so2=315 =so3=322 =so4=330" },
+		{ "s115", "inv_elixir_of_rapid_growth_1", "=q1=Elixir of Rapid Growth", "=ds=#sr# =so1=200 =so2=200 =so3=212 =so4=225" },
 	};
-	AlchemyOther1 = {
+	AlchemyMisc1 = {
 		{ "s7836", "inv_drink_12", "=q1=Blackmouth Oil", "=ds=#sr# =so1=80 =so2=80 =so3=90 =so4=100" },
 		{ "s7837", "inv_potion_38", "=q1=Fire Oil", "=ds=#sr# =so1=130 =so2=150 =so3=160 =so4=170" },
 		{ "s17551", "inv_potion_68", "=q1=Stonescale Oil", "=ds=#sr# =so1=250 =so2=250 =so3=255 =so4=260" },
@@ -563,6 +582,7 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s11456", "inv_cask_02", "=q1=Goblin Rocket Fuel", "=ds=#sr# =so1=210 =so2=225 =so3=245 =so4=265" },
 		{ "s11473", "inv_poison_mindnumbing", "=q1=Ghost Dye", "=ds=#sr# =so1=245 =so2=260 =so3=280 =so4=300" },
 		{ "s24266", "inv_poison_mindnumbing", "=q3=Gurubashi Mojo Madness", "=ds=#sr# =so1=300 =so2=315 =so3=322 =so4=330" },
+		{ "s17632", "INV_Misc_Orb_02", "=q4=Alchemist's Stone", "=ds=#sr# =so1=300 =so2=315 =so3=322 =so4=330" }
 	},
 
 ----------------

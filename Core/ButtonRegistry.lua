@@ -3968,13 +3968,19 @@ AtlasLoot_ButtonRegistry = {
 		Title = AL["Alchemy"] .. ": " .. AL["Artisan"];
 		Back_Page = "ALCHEMYMENU";
 		Prev_Page = "AlchemyArtisan1";
+		Next_Page = "AlchemyArtisan3";
+	};
+	["AlchemyArtisan3"] = {
+		Title = AL["Alchemy"] .. ": " .. AL["Artisan"];
+		Back_Page = "ALCHEMYMENU";
+		Prev_Page = "AlchemyArtisan2";
 		Next_Page = "AlchemyFlasks1";
 	};
 	["AlchemyFlasks1"] = {
 		Title = AL["Flasks"];
 		Back_Page = "ALCHEMYMENU";
 		Next_Page = "AlchemyProtectionPots1";
-		Prev_Page = "AlchemyArtisan2";
+		Prev_Page = "AlchemyArtisan3";
 	},
 	["AlchemyProtectionPots1"] = {
 		Title = AL["Protection Potions"];
@@ -3983,7 +3989,7 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "AlchemyFlasks1";
 	},
 	["AlchemyHealingAndMana1"] = {
-		Title = AL["Healing and Mana Potions"];
+		Title = AL["Health and Mana Potions"];
 		Back_Page = "ALCHEMYMENU";
 		Next_Page = "AlchemyTransmutes1";
 		Prev_Page = "AlchemyProtectionPots1";
@@ -4003,13 +4009,19 @@ AtlasLoot_ButtonRegistry = {
 	["AlchemyOffensive1"] = {
 		Title = AL["Offensive Potions and Elixirs"];
 		Back_Page = "ALCHEMYMENU";
-		Next_Page = "AlchemyOther1";
+		Next_Page = "AlchemyOffensive2";
 		Prev_Page = "AlchemyDefensive1";
 	},
-	["AlchemyOther1"] = {
-		Title = AL["Other"];
+	["AlchemyOffensive2"] = {
+		Title = AL["Offensive Potions and Elixirs"];
 		Back_Page = "ALCHEMYMENU";
+		Next_Page = "AlchemyMisc1";
 		Prev_Page = "AlchemyOffensive1";
+	},
+	["AlchemyMisc1"] = {
+		Title = AL["Miscellaneous"];
+		Back_Page = "ALCHEMYMENU";
+		Prev_Page = "AlchemyOffensive2";
 	},
 	["SmithingApprentice1"] = {
 		Title = AL["Blacksmithing"] .. ": " .. AL["Apprentice"];

@@ -312,7 +312,7 @@ function AtlasLoot_AlchemyMenu()
 	AtlasLootMenuItem_8.lootpage="AlchemyProtectionPots1";
 	AtlasLootMenuItem_8:Show();
 	--Healing and Mana
-	AtlasLootMenuItem_9_Name:SetText(AL["Healing and Mana Potions"]);
+	AtlasLootMenuItem_9_Name:SetText(AL["Health and Mana Potions"]);
 	AtlasLootMenuItem_9_Extra:SetText("");
 	AtlasLootMenuItem_9_Icon:SetTexture("Interface\\Icons\\Trade_Alchemy");
 	AtlasLootMenuItem_9.lootpage="AlchemyHealingAndMana1";
@@ -336,10 +336,10 @@ function AtlasLoot_AlchemyMenu()
 	AtlasLootMenuItem_12.lootpage="AlchemyOffensive1";
 	AtlasLootMenuItem_12:Show();
 	--Other
-	AtlasLootMenuItem_13_Name:SetText(AL["Other"]);
+	AtlasLootMenuItem_13_Name:SetText(AL["Miscellaneous"]);
 	AtlasLootMenuItem_13_Extra:SetText("");
 	AtlasLootMenuItem_13_Icon:SetTexture("Interface\\Icons\\Trade_Alchemy");
-	AtlasLootMenuItem_13.lootpage="AlchemyOther1";
+	AtlasLootMenuItem_13.lootpage="AlchemyMisc1";
 	AtlasLootMenuItem_13:Show();
 end
 
