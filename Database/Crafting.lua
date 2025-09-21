@@ -1017,11 +1017,12 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s7408", "inv_hammer_18", "=q1=Heavy Copper Maul", "=ds=#sr# =so1=65 =so2=105 =so3=125 =so4=145" },
 		{ "s2666", "inv_belt_03", "=q2=Runed Copper Belt", "=ds=#sr# =so1=70 =so2=110 =so3=130 =so4=150" },
 		{ "s3294", "inv_throwingaxe_01", "=q2=Thick War Axe", "=ds=#sr# =so1=70 =so2=110 =so3=130 =so4=150" },
+		{ "s8366", "INV_Chest_Chain", "=q2=Ironforge Chain", "=ds=#sr# =so1=70 =so2=110 =so3=130 =so4=150" },
 		{ "s3326", "inv_stone_grindingstone_02", "=q1=Coarse Grinding Stone", "=ds=#sr# =so1=75 =so2=75 =so3=87 =so4=100" },
 		{ "s46664", "inv_misc_monsterclaw_01", "=q2=Sharpened Claw", "=ds=#sr# =so1=75 =so2=90 =so3=95 =so4=100" },
 	};
-
 	SmithingJourneyman1 = {
+		{ "s45063", "INV_Shield_09", "=q2=Blast Shield", "=ds=#sr# =so1=75 =so2=100 =so3=120 =so4=140" },
 		{ "s2667", "inv_chest_plate03", "=q2=Runed Copper Breastplate", "=ds=#sr# =so1=80 =so2=120 =so3=140 =so4=160" },
 		{ "s57166", "INV_Misc_Buckle_02", "=q2=Bronze Belt Buckle", "=ds=#sr# =so1=90 =so2=115 =so3=127 =so4=140" },
 		{ "s2664", "inv_bracer_03", "=q2=Runed Copper Bracers", "=ds=#sr# =so1=90 =so2=115 =so3=127 =so4=140" },
@@ -1031,6 +1032,7 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s19666", "inv_misc_key_03", "=q2=Silver Skeleton Key", "=ds=#sr# =so1=100 =so2=100 =so3=110 =so4=120" },
 		{ "s8367", "inv_chest_plate05", "=q2=Ironforge Breastplate", "=ds=#sr# =so1=100 =so2=140 =so3=160 =so4=180" },
 		{ "s2671", "inv_bracer_05", "=q2=Rough Bronze Bracers", "=ds=#sr# =so1=100 =so2=140 =so3=160 =so4=180" },
+		{ "s46600", "INV_Chest_Plate05", "=q2=Lordaeron Breastplate", "=ds=#sr# =so1=100 =so2=275 =so3=295 =so4=310" },
 		{ "s3491", "inv_weapon_shortblade_04", "=q2=Big Bronze Knife", "=ds=#sr# =so1=105 =so2=135 =so3=150 =so4=165" },
 		{ "s2670", "inv_chest_chain_08", "=q2=Rough Bronze Cuirass", "=ds=#sr# =so1=105 =so2=145 =so3=160 =so4=175" },
 		{ "s2668", "inv_pants_03", "=q2=Rough Bronze Leggings", "=ds=#sr# =so1=105 =so2=145 =so3=160 =so4=175" },
@@ -1050,11 +1052,10 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s9986", "inv_sword_20", "=q1=Bronze Greatsword", "=ds=#sr# =so1=130 =so2=160 =so3=175 =so4=190" },
 		{ "s3296", "inv_mace_08", "=q2=Heavy Bronze Mace", "=ds=#sr# =so1=130 =so2=160 =so3=175 =so4=190" },
 		{ "s3331", "inv_boots_01", "=q2=Silvered Bronze Boots", "=ds=#sr# =so1=130 =so2=160 =so3=175 =so4=190" },
+	};
+	SmithingJourneyman2 = {
 		{ "s2673", "inv_chest_chain_09", "=q2=Silvered Bronze Breastplate", "=ds=#sr# =so1=130 =so2=160 =so3=175 =so4=190" },
 		{ "s9987", "inv_axe_21", "=q1=Bronze Battle Axe", "=ds=#sr# =so1=135 =so2=165 =so3=180 =so4=195" },
-	};
-
-	SmithingJourneyman2 = {
 		{ "s3333", "inv_gauntlets_05", "=q2=Silvered Bronze Gauntlets", "=ds=#sr# =so1=135 =so2=165 =so3=180 =so4=195" },
 		{ "s57169", "INV_Misc_Buckle_03", "=q2=Iron Belt Buckle", "=ds=#sr# =so1=140 =so2=170 =so3=185 =so4=200" },
 		{ "s6518", "inv_hammer_05", "=q2=Iridescent Hammer", "=ds=#sr# =so1=140 =so2=170 =so3=185 =so4=200" },
@@ -1067,9 +1068,9 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s7221", "inv_misc_armorkit_01", "=q1=Iron Shield Spike", "=ds=#sr# =so1=150 =so2=180 =so3=195 =so4=210" },
 		{ "s3336", "inv_gauntlets_05", "=q2=Green Iron Gauntlets", "=ds=#sr# =so1=150 =so2=180 =so3=195 =so4=210" },
 	};
-
 	SmithingExpert1 = {
 		{ "s3506", "inv_pants_05", "=q2=Green Iron Leggings", "=ds=#sr# =so1=155 =so2=180 =so3=192 =so4=205" },
+		{ "s46666", "spell_nature_ravenform", "=q3=Frostbound Slasher", "=ds=#sr# =so1=180 =so2=190 =so3=195 =so4=200" },
 		{ "s12259", "inv_pants_04", "=q2=Silvered Bronze Leggings", "=ds=#sr# =so1=155 =so2=180 =so3=192 =so4=205" },
 		{ "s3494", "inv_hammer_07", "=q2=Solid Iron Maul", "=ds=#sr# =so1=155 =so2=180 =so3=192 =so4=205" },
 		{ "s9813", "inv_chest_chain_14", "=q2=Barbaric Iron Breastplate", "=ds=#sr# =so1=160 =so2=185 =so3=197 =so4=210" },
@@ -1081,6 +1082,7 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s3495", "inv_hammer_04", "=q2=Golden Iron Destroyer", "=ds=#sr# =so1=170 =so2=195 =so3=207 =so4=220" },
 		{ "s3507", "inv_pants_04", "=q2=Golden Scale Leggings", "=ds=#sr# =so1=170 =so2=195 =so3=207 =so4=220" },
 		{ "s3502", "inv_helmet_03", "=q2=Green Iron Helm", "=ds=#sr# =so1=170 =so2=195 =so3=207 =so4=220" },
+		{ "s69", "inv_gold_buckle", "=q2=Gold Belt Buckle", "=ds=#sr# =so1=175 =so2=175 =so3=180 =so4=185" },
 		{ "s9814", "inv_helmet_25", "=q2=Barbaric Iron Helm", "=ds=#sr# =so1=175 =so2=200 =so3=212 =so4=225" },
 		{ "s3505", "inv_shoulder_09", "=q3=Golden Scale Shoulders", "=ds=#sr# =so1=175 =so2=200 =so3=212 =so4=225" },
 		{ "s3493", "inv_sword_36", "=q2=Jade Serpentblade", "=ds=#sr# =so1=175 =so2=200 =so3=212 =so4=225" },
@@ -1097,11 +1099,11 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s21913", "inv_axe_06", "=q2=Edge of Winter", "=ds=#sr# =so1=190 =so2=215 =so3=227 =so4=240" },
 		{ "s3503", "inv_helmet_36", "=q2=Golden Scale Coif", "=ds=#sr# =so1=190 =so2=215 =so3=227 =so4=240" },
 		{ "s15973", "inv_weapon_shortblade_05", "=q2=Searing Golden Blade", "=ds=#sr# =so1=190 =so2=215 =so3=227 =so4=240" },
-		{ "s3511", "inv_chest_chain_06", "=q2=Golden Scale Cuirass", "=ds=#sr# =so1=195 =so2=220 =so3=232 =so4=245" },
-		{ "s9920", "inv_stone_grindingstone_04", "=q1=Solid Grinding Stone", "=ds=#sr# =so1=200 =so2=200 =so3=205 =so4=210" },
 	};
-
 	SmithingExpert2 = {
+		{ "s3511", "inv_chest_chain_06", "=q2=Golden Scale Cuirass", "=ds=#sr# =so1=195 =so2=220 =so3=232 =so4=245" },
+		{ "s57", "inv_steel_buckle", "=q2=Steel Belt Buckle", "=ds=#sr# =so1=200 =so2=195 =so3=200 =so4=205" },
+		{ "s9920", "inv_stone_grindingstone_04", "=q1=Solid Grinding Stone", "=ds=#sr# =so1=200 =so2=200 =so3=205 =so4=210" },
 		{ "s9918", "inv_stone_sharpeningstone_04", "=q1=Solid Sharpening Stone", "=ds=#sr# =so1=200 =so2=200 =so3=205 =so4=210" },
 		{ "s9921", "inv_stone_weightstone_04", "=q1=Solid Weightstone", "=ds=#sr# =so1=200 =so2=200 =so3=205 =so4=210" },
 		{ "s19668", "inv_misc_key_11", "=q2=Truesilver Skeleton Key", "=ds=#sr# =so1=200 =so2=200 =so3=210 =so4=220" },
@@ -1129,22 +1131,24 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s9995", "inv_axe_03", "=q2=Blue Glittering Axe", "=ds=#sr# =so1=220 =so2=245 =so3=257 =so4=270" },
 		{ "s46626", "inv_boots_plate_01", "=q2=Steel Plate Boots", "=ds=#sr# =so1=220 =so2=220 =so3=220 =so4=220" },
 		{ "s46627", "inv_gauntlets_31", "=q2=Steel Plate Gauntlets", "=ds=#sr# =so1=220 =so2=220 =so3=220 =so4=220" },
+	};
+	SmithingExpert3 = {
 		{ "s9942", "inv_gauntlets_31", "=q2=Mithril Scale Gloves", "=ds=#sr# =so1=220 =so2=240 =so3=250 =so4=260" },
 		{ "s9952", "inv_shoulder_09", "=q2=Ornate Mithril Shoulders", "=ds=#sr# =so1=225 =so2=245 =so3=255 =so4=265" },
+		{ "s46651", "INV_Sword_12", "=q2=Bloodstone Warblade", "=ds=#sr# =so1=225 =so2=260 =so3=267 =so4=275" },
 		{ "s9997", "inv_sword_10", "=q2=Wicked Mithril Blade", "=ds=#sr# =so1=225 =so2=250 =so3=262 =so4=275" },
-	};
-
-	SmithingExpert3 = {
 		{ "s46629", "inv_chest_chain_10", "=q2=Steel Plate Armor", "=ds=#sr# =so1=225 =so2=225 =so3=225 =so4=225" },
 		{ "s46628", "inv_pants_04", "=q2=Steel Plate Legguards", "=ds=#sr# =so1=225 =so2=225 =so3=225 =so4=225" },
+		{ "s90", "inv_truesilver_buckle", "=q2=Truesilver Belt Buckle", "=ds=#sr# =so1=225 =so2=225 =so3=230 =so4=235" },
+		
 	};
-
 	SmithingArtisan1 = {
 		{ "s46631", "inv_helmet_25", "=q3=Steel Plate Barbute", "=ds=#sr# =so1=230 =so2=230 =so3=230 =so4=230" },
 		{ "s46630", "inv_shoulder_16", "=q2=Steel Plate Pauldrons", "=ds=#sr# =so1=230 =so2=230 =so3=230 =so4=230" },
 		{ "s9959", "inv_chest_plate10", "=q2=Heavy Mithril Breastplate", "=ds=#sr# =so1=230 =so2=250 =so3=260 =so4=270" },
 		{ "s9961", "inv_helmet_35", "=q2=Mithril Coif", "=ds=#sr# =so1=230 =so2=250 =so3=260 =so4=270" },
 		{ "s10001", "inv_mace_15", "=q2=Big Black Mace", "=ds=#sr# =so1=230 =so2=255 =so3=267 =so4=280" },
+		{ "s74", "inv_dragonscale_buckle", "=q2=Dragonscale Belt Buckle", "=ds=#sr# =so1=235 =so2=235 =so3=240 =so4=245" },
 		{ "s9968", "inv_boots_plate_01", "=q2=Heavy Mithril Boots", "=ds=#sr# =so1=235 =so2=255 =so3=265 =so4=275" },
 		{ "s9966", "inv_shoulder_12", "=q3=Mithril Scale Shoulders", "=ds=#sr# =so1=235 =so2=255 =so3=265 =so4=275" },
 		{ "s9964", "ability_rogue_sprint", "=q2=Mithril Spurs", "=ds=#sr# =so1=235 =so2=255 =so3=265 =so4=275" },
@@ -1160,23 +1164,28 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s16644", "inv_bracer_13", "=q2=Thorium Bracers", "=ds=#sr# =so1=255 =so2=275 =so3=285 =so4=295" },
 		{ "s10013", "inv_weapon_shortblade_14", "=q2=Ebon Shiv", "=ds=#sr# =so1=255 =so2=280 =so3=292 =so4=305" },
 		{ "s16645", "inv_belt_11", "=q2=Radiant Belt", "=ds=#sr# =so1=260 =so2=280 =so3=290 =so4=300" },
+		{ "s16960", "inv_sword_22", "=q2=Thorium Greatsword", "=ds=#sr# =so1=260 =so2=285 =so3=297 =so4=310" },
 		{ "s16647", "inv_belt_01", "=q2=Imperial Plate Belt", "=ds=#sr# =so1=265 =so2=285 =so3=295 =so4=305" },
 		{ "s16646", "inv_shoulder_02", "=q2=Imperial Plate Shoulders", "=ds=#sr# =so1=265 =so2=285 =so3=295 =so4=305" },
 		{ "s15293", "inv_chest_chain_16", "=q2=Dark Iron Mail", "=ds=#sr# =so1=270 =so2=290 =so3=300 =so4=310" },
 		{ "s16649", "inv_bracer_19", "=q2=Imperial Plate Bracers", "=ds=#sr# =so1=270 =so2=290 =so3=300 =so4=310" },
 		{ "s16648", "inv_chest_plate16", "=q2=Radiant Breastplate", "=ds=#sr# =so1=270 =so2=290 =so3=300 =so4=310" },
+		{ "s46660", "INV_Gauntlets_30", "=q2=Imperial Plate Gauntlets", "=ds=#sr# =so1=270 =so2=280 =so3=285 =so4=290" },
+		{ "s16967", "INV_Hammer_09", "=q2=Inlaid Thorium Hammer", "=ds=#sr# =so1=270 =so2=295 =so3=307 =so4=320" },
 		{ "s20201", "inv_staff_19", "=q1=Arcanite Rod", "=ds=#sr# =so1=275 =so2=275 =so3=280 =so4=285" },
+	};
+	SmithingArtisan2 = {
 		{ "s19669", "inv_misc_key_08", "=q2=Arcanite Skeleton Key", "=ds=#sr# =so1=275 =so2=275 =so3=280 =so4=285" },
 		{ "s16651", "inv_misc_armorkit_20", "=q2=Thorium Shield Spike", "=ds=#sr# =so1=275 =so2=295 =so3=305 =so4=315" },
+		{ "s85", "inv_darkiron_buckle", "=q2=Dark Iron Belt Buckle", "=ds=#sr# =so1=275 =so2=275 =so3=280 =so4=285" },
 		{ "s16969", "inv_axe_12", "=q2=Ornate Thorium Handaxe", "=ds=#sr# =so1=275 =so2=300 =so3=312 =so4=325" },
+		{ "s95", "inv_enchantedthorium_buckle", "=q2=Enchanted Thorium Belt Buckle", "=ds=#sr# =so1=285 =so2=285 =so3=297 =so4=310" },
 		{ "s47032", "inv_belt_04", "=q3=Hateforge Belt", "=ds=#sr# =so1=275 =so2=300 =so3=312 =so4=325" },
-	};
-
-	SmithingArtisan2 = {
 		{ "s47034", "inv_boots_01", "=q3=Hateforge Boots", "=ds=#sr# =so1=275 =so2=300 =so3=310 =so4=320" },
 		{ "s57113", "inv_boots_plate_05", "=q2=Thorium Spurs",  "=ds=#sr# =so1=275 =so2=300 =so3=310 =so4=320" },
 		{ "s15295", "inv_shoulder_09", "=q2=Dark Iron Shoulders", "=ds=#sr# =so1=280 =so2=300 =so3=310 =so4=320" },
 		{ "s16652", "inv_boots_plate_08", "=q2=Thorium Boots", "=ds=#sr# =so1=280 =so2=300 =so3=310 =so4=320" },
+		{ "s16980", "INV_Axe_17", "=q2=Rune Edge", "=ds=#sr# =so1=285 =so2=310 =so3=322 =so4=335" },
 		{ "s16653", "inv_helmet_23", "=q2=Thorium Helm", "=ds=#sr# =so1=280 =so2=300 =so3=310 =so4=320" },
 		{ "s16971", "inv_weapon_halberd_11", "=q2=Huge Thorium Battleaxe", "=ds=#sr# =so1=280 =so2=305 =so3=317 =so4=330" },
 		{ "s47033", "inv_gauntlets_04", "=q4=Hateforge Grips", "=ds=#sr# =so1=285 =so2=300 =so3=310 =so4=320" },
@@ -1196,6 +1205,8 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s22757", "inv_stone_02", "=q2=Elemental Sharpening Stone", "=ds=#sr# =so1=300 =so2=300 =so3=310 =so4=320" },
 		{ "s16663", "inv_chest_plate10", "=q2=Imperial Plate Chest", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
 		{ "s16730", "inv_pants_04", "=q2=Imperial Plate Leggings", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
+	};
+	SmithingArtisan3 = {
 		{ "s16725", "inv_pants_03", "=q2=Radiant Leggings", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
 		{ "s16731", "inv_chest_plate11", "=q2=Runic Breastplate", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
 		{ "s16665", "inv_boots_plate_01", "=q2=Runic Plate Boots", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
@@ -1203,9 +1214,6 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s16732", "inv_pants_04", "=q2=Runic Plate Leggings", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
 		{ "s16664", "inv_shoulder_23", "=q2=Runic Plate Shoulders", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
 		{ "s16662", "inv_pants_04", "=q2=Thorium Leggings", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
-	};
-
-	SmithingArtisan3 = {
 		{ "s24136", "inv_chest_chain_14", "=q3=Bloodsoul Breastplate", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
 		{ "s24138", "inv_gauntlets_31", "=q3=Bloodsoul Gauntlets", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
 		{ "s24137", "inv_shoulder_15", "=q3=Bloodsoul Shoulders", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
@@ -1229,6 +1237,8 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s47024", "inv_helmet_06", "=q3=Rune-Etched Crown", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
 		{ "s47025", "INV_Shoulder_11", "=q3=Rune-Etched Mantle", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
 		{ "s47026", "INV_Gauntlets_09", "=q3=Rune-Etched Grips", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
+	};
+	SmithingArtisan4 = {
 		{ "s27589", "inv_gauntlets_31", "=q4=Black Grasp of the Destroyer", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
 		{ "s28244", "inv_bracer_07", "=q4=Icebane Bracers", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
 		{ "s28242", "inv_chest_chain_11", "=q4=Icebane Breastplate", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
@@ -1236,9 +1246,6 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s27586", "inv_shield_22", "=q4=Jagged Obsidian Shield", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
 		{ "s27590", "inv_chest_chain_17", "=q4=Obsidian Mail Tunic", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
 		{ "s27587", "inv_chest_chain_17", "=q4=Thick Obsidian Breastplate", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
-	};
-
-	SmithingArtisan4 = {
 		{ "s21161", "inv_hammer_unique_sulfuras", "=q4=Sulfuron Hammer", "=ds=#sr# =so1=300 =so2=325 =so3=337 =so4=350" },
 		{ "s54009", "inv_chest_plate16", "=q4=Fiery Chain Breastplate", "=ds=#sr# =so1=300 =so2=325 =so3=337 =so4=350" },
 		{ "s57196", "INV_Misc_Buckle_08", "=q3=Bloody Belt Buckle", "=ds=#sr# =so1=300 =so2=325 =so3=337 =so4=350" },
@@ -1254,8 +1261,10 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s45471", "INV_Boots_01", "=q4=Dreamsteel Boots", "=ds=#sr# =so1=300 =so2=325 =so3=337 =so4=350" },
 		{ "s45469", "INV_Bracer_03", "=q4=Dreamsteel Bracers", "=ds=#sr# =so1=300 =so2=325 =so3=337 =so4=350" },
 		{ "s45467", "INV_Pants_03", "=q4=Dreamsteel Leggings", "=ds=#sr# =so1=300 =so2=325 =so3=337 =so4=350" },
+		{ "s102", "inv_obsidian_buckle", "=q3=Obsidian Belt Buckle", "=ds=#sr# =so1=300 =so2=300 =so3=310 =so4=320" },
+		{ "s46667", "INV_Shoulder_01", "=q4=Pauldron of Deflection", "=ds=#sr# =so1=300 =so2=315 =so3=322 =so4=330" },
+		{ "s36907", "INV_Pants_Plate_05", "=q4=Rune-Inscribed Plate Leggings", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
 	};
-
 	Armorsmith1 = {
 		{ "s9954", "inv_gauntlets_29", "=q3=Truesilver Gauntlets", "=ds=#sr# =so1=225 =so2=245 =so3=255 =so4=265" },
 		{ "s9974", "inv_chest_plate04", "=q3=Truesilver Breastplate", "=ds=#sr# =so1=245 =so2=265 =so3=275 =so4=285" },
@@ -1285,8 +1294,9 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s57189", "inv_chest_chain_09", "=q4=Towerforge Breastplate", "=ds=#sr# =so1=300 =so2=325 =so3=337 =so4=350" },
 		{ "s57187", "inv_helmet_37", "=q4=Towerforge Crown", "=ds=#sr# =so1=300 =so2=325 =so3=337 =so4=350" },
 		{ "s57191", "inv_shoulder_26", "=q4=Towerforge Pauldrons", "=ds=#sr# =so1=300 =so2=325 =so3=337 =so4=350" },
+		{ "s46667", "INV_Shoulder_01", "=q4=Pauldron of Deflection", "=ds=#sr# =so1=300 =so2=315 =so3=322 =so4=330" },
+		{ "s36907", "INV_Pants_Plate_05", "=q4=Rune-Inscribed Plate Leggings", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
 	};
-
 	Weaponsmith1 = {
 		{ "s10003", "inv_hammer_18", "=q3=The Shatterer", "=ds=#sr# =so1=235 =so2=260 =so3=272 =so4=285" },
 		{ "s10007", "inv_sword_40", "=q3=Phantom Blade", "=ds=#sr# =so1=245 =so2=270 =so3=282 =so4=295" },
@@ -1302,7 +1312,6 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s23639", "inv_spear_08", "=q4=Blackfury", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
 		{ "s46657", "inv-sword_53", "=q4=Ornate Bloodstone Dagger", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
 	};
-
 	Axesmith1 = {
 		{ "s16970", "inv_axe_05", "=q3=Dawn's Edge", "=ds=#sr# =so1=275 =so2=300 =so3=312 =so4=325" },
 		{ "s16991", "inv_axe_12", "=q3=Annihilator", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
@@ -1310,7 +1319,6 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s20897", "inv_axe_12", "=q4=Dark Iron Destroyer", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
 		{ "s23653", "inv_axe_12", "=q4=Nightfall", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
 	};
-
 	Hammersmith1 = {
 		{ "s16973", "inv_hammer_05", "=q3=Enchanted Battlehammer", "=ds=#sr# =so1=280 =so2=305 =so3=317 =so4=330" },
 		{ "s16983", "inv_mace_02", "=q3=Serenity", "=ds=#sr# =so1=285 =so2=310 =so3=322 =so4=335" },
@@ -1321,7 +1329,6 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s57193", "INV_Hammer_19", "=q4=Towerforge Demolisher", "=ds=#sr# =so1=300 =so2=325 =so3=337 =so4=350" },
 		{ "s45487", "inv_mace_14", "=q4=Dawnstone Hammer", "=ds=#sr# =so1=300 =so2=325 =so3=337 =so4=350" },
 	};
-
 	Swordsmith1 = {
 		{ "s16978", "inv_sword_30", "=q3=Blazing Rapier", "=ds=#sr# =so1=280 =so2=305 =so3=317 =so4=330" },
 		{ "s16985", "inv_sword_07", "=q3=Corruption", "=ds=#sr# =so1=290 =so2=315 =so3=327 =so4=340" },
@@ -1380,10 +1387,12 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s57619", "INV_Shoulder_14", "=q3=Otherworldly Spaulders", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
 		{ "s57627", "INV_Shoulder_16", "=q3=Reflective Pauldrons", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
 		{ "s57191", "inv_shoulder_26", "=q4=Towerforge Pauldrons", "=ds=#sr# =so1=300 =so2=325 =so3=337 =so4=350" },
+		{ "s46667", "INV_Shoulder_01", "=q4=Pauldron of Deflection", "=ds=#sr# =so1=300 =so2=315 =so3=322 =so4=330" },
 	},
 	SmithingChest1 = {
 		{ "s12260", "inv_chest_chain", "=q1=Rough Copper Vest", "=ds=#sr# =so1=1 =so2=15 =so3=35 =so4=55" },
 		{ "s3321", "inv_chest_chain", "=q2=Copper Chain Vest", "=ds=#sr# =so1=35 =so2=75 =so3=95 =so4=115" },
+		{ "s8366", "INV_Chest_Chain", "=q2=Ironforge Chain", "=ds=#sr# =so1=70 =so2=110 =so3=130 =so4=150" },
 		{ "s2667", "inv_chest_plate03", "=q2=Runed Copper Breastplate", "=ds=#sr# =so1=80 =so2=120 =so3=140 =so4=160" },
 		{ "s8367", "inv_chest_plate05", "=q2=Ironforge Breastplate", "=ds=#sr# =so1=100 =so2=140 =so3=160 =so4=180" },
 		{ "s2670", "inv_chest_chain_08", "=q2=Rough Bronze Cuirass", "=ds=#sr# =so1=105 =so2=145 =so3=160 =so4=175" },
@@ -1401,6 +1410,7 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s15293", "inv_chest_chain_16", "=q2=Dark Iron Mail", "=ds=#sr# =so1=270 =so2=290 =so3=300 =so4=310" },
 		{ "s16648", "inv_chest_plate16", "=q2=Radiant Breastplate", "=ds=#sr# =so1=270 =so2=290 =so3=300 =so4=310" },
 		{ "s16650", "inv_chest_chain_12", "=q3=Wildthorn Mail", "=ds=#sr# =so1=270 =so2=290 =so3=300 =so4=310" },
+		{ "s46600", "INV_Chest_Plate05", "=q2=Lordaeron Breastplate", "=ds=#sr# =so1=100 =so2=275 =so3=295 =so4=310" },
 		{ "s16667", "inv_chest_plate06", "=q3=Demon Forged Breastplate", "=ds=#sr# =so1=285 =so2=305 =so3=315 =so4=325" },
 		{ "s15296", "inv_chest_plate08", "=q3=Dark Iron Plate", "=ds=#sr# =so1=285 =so2=305 =so3=315 =so4=325" },
 		{ "s47030", "inv_chest_chain_09", "=q3=Hateforge Cuirass", "=ds=#sr# =so1=290 =so2=300 =so3=310 =so4=320" },
@@ -1410,10 +1420,10 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s24136", "inv_chest_chain_14", "=q3=Bloodsoul Breastplate", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
 		{ "s24914", "inv_chest_plate06", "=q3=Darkrune Breastplate", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
 		{ "s24139", "inv_chest_plate08", "=q3=Darksoul Breastplate", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
-		{ "s28461", "inv_chest_plate07", "=q3=Ironvine Breastplate", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
-		{ "s47023", "inv_chest_plate08", "=q3=Rune-Etched Breastplate", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
 	},
 	SmithingChest2 = {
+		{ "s28461", "inv_chest_plate07", "=q3=Ironvine Breastplate", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
+		{ "s47023", "inv_chest_plate08", "=q3=Rune-Etched Breastplate", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
 		{ "s57621", "INV_Chest_Chain_11", "=q3=Otherworldly Breastplate", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
 		{ "s57629", "INV_Chest_Chain_11", "=q3=Reflective Breastplate", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
 		{ "s28242", "inv_chest_chain_11", "=q4=Icebane Breastplate", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
@@ -1449,6 +1459,7 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s46627", "inv_gauntlets_31", "=q2=Steel Plate Gauntlets", "=ds=#sr# =so1=220 =so2=220 =so3=220 =so4=220" },
 		{ "s9942", "inv_gauntlets_31", "=q2=Mithril Scale Gloves", "=ds=#sr# =so1=220 =so2=240 =so3=250 =so4=260" },
 		{ "s9954", "inv_gauntlets_29", "=q3=Truesilver Gauntlets", "=ds=#sr# =so1=225 =so2=245 =so3=255 =so4=265" },
+		{ "s46660", "INV_Gauntlets_30", "=q2=Imperial Plate Gauntlets", "=ds=#sr# =so1=270 =so2=280 =so3=285 =so4=290" },
 		{ "s47033", "inv_gauntlets_04", "=q4=Hateforge Grips", "=ds=#sr# =so1=285 =so2=300 =so3=310 =so4=320" },
 		{ "s16654", "inv_gauntlets_26", "=q2=Radiant Gloves", "=ds=#sr# =so1=285 =so2=305 =so3=315 =so4=325" },
 		{ "s16655", "inv_gauntlets_03", "=q3=Fiery Plate Gauntlets", "=ds=#sr# =so1=290 =so2=310 =so3=320 =so4=330" },
@@ -1503,6 +1514,7 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s45467", "INV_Pants_03", "=q4=Dreamsteel Leggings", "=ds=#sr# =so1=300 =so2=325 =so3=337 =so4=350" },
 		{ "s20876", "inv_pants_04", "=q4=Dark Iron Leggings", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
 		{ "s27829", "inv_pants_04", "=q4=Titanic Leggings", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
+		{ "s36907", "INV_Pants_Plate_05", "=q4=Rune-Inscribed Plate Leggings", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
 	},
 	SmithingBoots1 = {
 		{ "s3319", "inv_boots_01", "=q1=Copper Chain Boots", "=ds=#sr# =so1=20 =so2=60 =so3=80 =so4=100" },
@@ -1534,9 +1546,9 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s9995", "inv_axe_03", "=q2=Blue Glittering Axe", "=ds=#sr# =so1=220 =so2=245 =so3=257 =so4=270" },
 		{ "s16969", "inv_axe_12", "=q2=Ornate Thorium Handaxe", "=ds=#sr# =so1=275 =so2=300 =so3=312 =so4=325" },
 		{ "s16970", "inv_axe_05", "=q3=Dawn's Edge", "=ds=#sr# =so1=275 =so2=300 =so3=312 =so4=325" },
+		{ "s16980", "INV_Axe_17", "=q2=Rune Edge", "=ds=#sr# =so1=285 =so2=310 =so3=322 =so4=335" },
 		{ "s16991", "inv_axe_12", "=q3=Annihilator", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
 		{ "s20897", "inv_axe_12", "=q4=Dark Iron Destroyer", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
-		{ "", "", "" },
 		{ "", "", "" },
 		{ "", "", "" },
 		{ "", "", "" },
@@ -1571,7 +1583,9 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s9986", "inv_sword_20", "=q1=Bronze Greatsword", "=ds=#sr# =so1=130 =so2=160 =so3=175 =so4=190" },
 		{ "s3496", "inv_sword_25", "=q2=Moonsteel Broadsword", "=ds=#sr# =so1=180 =so2=205 =so3=217 =so4=230" },
 		{ "s3497", "inv_sword_05", "=q2=Frost Tiger Blade", "=ds=#sr# =so1=200 =so2=225 =so3=237 =so4=250" },
+		{ "s46651", "INV_Sword_12", "=q2=Bloodstone Warblade", "=ds=#sr# =so1=225 =so2=260 =so3=267 =so4=275" },
 		{ "s10015", "inv_sword_19", "=q3=Truesilver Champion", "=ds=#sr# =so1=260 =so2=285 =so3=297 =so4=310" },
+		{ "s16960", "inv_sword_22", "=q2=Thorium Greatsword", "=ds=#sr# =so1=260 =so2=285 =so3=297 =so4=310" },
 		{ "s16985", "inv_sword_07", "=q3=Corruption", "=ds=#sr# =so1=290 =so2=315 =so3=327 =so4=340" },
 		{ "s16990", "inv_sword_39", "=q3=Arcanite Champion", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
 		{ "s46652", "INV_Sword_17", "=q3=Untempered Runeblade", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
@@ -1597,6 +1611,7 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s3494", "inv_hammer_07", "=q2=Solid Iron Maul", "=ds=#sr# =so1=155 =so2=180 =so3=192 =so4=205" },
 		{ "s3495", "inv_hammer_04", "=q2=Golden Iron Destroyer", "=ds=#sr# =so1=170 =so2=195 =so3=207 =so4=220" },
 		{ "s15292", "inv_hammer_09", "=q3=Dark Iron Pulverizer", "=ds=#sr# =so1=265 =so2=285 =so3=295 =so4=305" },
+		{ "s16967", "INV_Hammer_09", "=q2=Inlaid Thorium Hammer", "=ds=#sr# =so1=270 =so2=295 =so3=307 =so4=320" },
 		{ "s16973", "inv_hammer_05", "=q3=Enchanted Battlehammer", "=ds=#sr# =so1=280 =so2=305 =so3=317 =so4=330" },
 		{ "s16988", "inv_hammer_09", "=q3=Hammer of the Titans", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
 		{ "s57193", "INV_Hammer_19", "=q4=Towerforge Demolisher", "=ds=#sr# =so1=300 =so2=325 =so3=337 =so4=350" },
@@ -1607,6 +1622,7 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s46663", "inv_gauntlets_11", "=q1=Copper Knuckles", "=ds=#sr# =so1=30 =so2=60 =so3=62 =so4=65" },
 		{ "s46664", "inv_misc_monsterclaw_01", "=q2=Sharpened Claw", "=ds=#sr# =so1=75 =so2=90 =so3=95 =so4=100" },
 		{ "s46665", "inv_gauntlets_11", "=q2=Bronze Bruiser", "=ds=#sr# =so1=120 =so2=140 =so3=145 =so4=150" },
+		{ "s46666", "spell_nature_ravenform", "=q3=Frostbound Slasher", "=ds=#sr# =so1=180 =so2=190 =so3=195 =so4=200" },
 		{ "s16986", "inv_weapon_shortblade_27", "=q3=Blood Talon", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
 	},
 	SmithingDaggers1 = {
@@ -1625,11 +1641,18 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s57163", "INV_Misc_Buckle_01", "=q2=Copper Belt Buckle", "=ds=#sr# =so1=25 =so2=65 =so3=85 =so4=105" },
 		{ "s57166", "INV_Misc_Buckle_02", "=q2=Bronze Belt Buckle", "=ds=#sr# =so1=90 =so2=115 =so3=127 =so4=140" },
 		{ "s57169", "INV_Misc_Buckle_03", "=q2=Iron Belt Buckle", "=ds=#sr# =so1=140 =so2=170 =so3=185 =so4=200" },
+		{ "s69", "inv_gold_buckle", "=q2=Gold Belt Buckle", "=ds=#sr# =so1=175 =so2=175 =so3=180 =so4=185" },
 		{ "s57172", "INV_Misc_Buckle_04", "=q2=Mithril Belt Buckle", "=ds=#sr# =so1=185 =so2=210 =so3=222 =so4=235" },
+		{ "s57", "inv_steel_buckle", "=q2=Steel Belt Buckle", "=ds=#sr# =so1=200 =so2=195 =so3=200 =so4=205" },
+		{ "s90", "inv_truesilver_buckle", "=q2=Truesilver Belt Buckle", "=ds=#sr# =so1=225 =so2=225 =so3=230 =so4=235" },
+		{ "s74", "inv_dragonscale_buckle", "=q2=Dragonscale Belt Buckle", "=ds=#sr# =so1=235 =so2=235 =so3=240 =so4=245" },
 		{ "s57175", "INV_Misc_Buckle_05", "=q2=Thorium Belt Buckle", "=ds=#sr# =so1=240 =so2=265 =so3=277 =so4=290" },
+		{ "s85", "inv_darkiron_buckle", "=q2=Dark Iron Belt Buckle", "=ds=#sr# =so1=275 =so2=275 =so3=280 =so4=285" },
+		{ "s95", "inv_enchantedthorium_buckle", "=q2=Enchanted Thorium Belt Buckle", "=ds=#sr# =so1=285 =so2=285 =so3=297 =so4=310" },
 		{ "s57178", "INV_Misc_Buckle_06", "=q2=Arcanite Belt Buckle", "=ds=#sr# =so1=300 =so2=325 =so3=337 =so4=350" },
 		{ "s57196", "INV_Misc_Buckle_08", "=q3=Bloody Belt Buckle", "=ds=#sr# =so1=300 =so2=325 =so3=337 =so4=350" },
 		{ "s57181", "INV_Misc_Buckle_07", "=q3=Dreamsteel Belt Buckle", "=ds=#sr# =so1=300 =so2=325 =so3=337 =so4=350" },
+		{ "s102", "inv_obsidian_buckle", "=q3=Obsidian Belt Buckle", "=ds=#sr# =so1=300 =so2=300 =so3=310 =so4=320" },
 	},
 	SmithingMisc1 = {
 		{ "s2660", "inv_stone_sharpeningstone_01", "=q1=Rough Sharpening Stone", "=ds=#sr# =so1=1 =so2=15 =so3=35 =so4=55" },
@@ -1654,6 +1677,7 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s9939", "inv_misc_armorkit_02", "=q2=Mithril Shield Spike", "=ds=#sr# =so1=215 =so2=235 =so3=245 =so4=255" },
 		{ "s16651", "inv_misc_armorkit_20", "=q2=Thorium Shield Spike", "=ds=#sr# =so1=275 =so2=295 =so3=305 =so4=315" },
 		{ "", "", "" },
+		{ "s45063", "INV_Shield_09", "=q2=Blast Shield", "=ds=#sr# =so1=75 =so2=100 =so3=120 =so4=140" },
 		{ "s27586", "inv_shield_22", "=q4=Jagged Obsidian Shield", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
 		{ "", "", "" },
 		{ "s7222", "inv_misc_orb_01", "=q1=Iron Counterweight", "=ds=#sr# =so1=165 =so2=190 =so3=202 =so4=215" },
@@ -1682,6 +1706,7 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s14380", "inv_staff_11", "=q1=Truesilver Rod", "=ds=#sr# =so1=200 =so2=205 =so3=207 =so4=210" },
 		{ "s20201", "inv_staff_19", "=q1=Arcanite Rod", "=ds=#sr# =so1=275 =so2=275 =so3=280 =so4=285" },
 	},
+
 --------------------
 -- Leatherworking --
 --------------------

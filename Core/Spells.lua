@@ -7458,6 +7458,193 @@ GetSpellInfoAtlasLootDB = {
 				[6] = {12800},
 			},
 		},
+		[46660] = {
+			["name"] = "Blacksmithing: Imperial Plate Gauntlets",
+			["craftItem"] = 65007,
+			["reagents"] = {
+				[1] = {12359, 24},
+				[2] = {7910},
+				[3] = {8170, 4},
+			},
+		},
+		[8366] = {
+			["name"] = "Blacksmithing: Ironforge Chain",
+			["craftItem"] = 6730,
+			["reagents"] = {
+				[1] = {2840, 12},
+				[2] = {774, 2},
+				[3] = {3470, 2},
+			},
+		},
+		[8368] = {
+			["name"] = "Blacksmithing: Ironforge Gauntlets",
+			["craftItem"] = 6733,
+			["reagents"] = {
+				[1] = {2841, 8},
+				[2] = {1210, 3},
+				[3] = {3478, 4},
+			},
+		},
+		[57] = {
+			["name"] = "Blacksmithing: Steel Belt Buckle",
+			["craftItem"] = 131,
+			["reagents"] = {
+				[1] = {3859, 8},
+				[2] = {7071},
+				[3] = {7966},
+			},
+		},
+		[69] = {
+			["name"] = "Blacksmithing: Gold Belt Buckle",
+			["craftItem"] = 66,
+			["reagents"] = {
+				[1] = {3577, 8},
+				[2] = {7071},
+				[3] = {3486, 2},
+			},
+		},
+		[85] = {
+			["name"] = "Blacksmithing: Dark Iron Belt Buckle",
+			["craftItem"] = 82,
+			["reagents"] = {
+				[1] = {11371, 2},
+				[2] = {7071},
+				[3] = {7078},
+				[4] = {12644, 2},
+			},
+		},
+		[74] = {
+			["name"] = "Blacksmithing: Dragonscale Belt Buckle",
+			["craftItem"] = 67,
+			["reagents"] = {
+				[1] = {12359, 4},
+				[2] = {7071},
+				[3] = {8165, 14},
+				[4] = {7966},
+			},
+		},
+		[95] = {
+			["name"] = "Blacksmithing: Enchanted Thorium Belt Buckle",
+			["craftItem"] = 87,
+			["reagents"] = {
+				[1] = {12655, 2},
+				[2] = {7071},
+				[3] = {61673, 2},
+				[4] = {12644},
+			},
+		},
+		[102] = {
+			["name"] = "Blacksmithing: Obsidian Belt Buckle",
+			["craftItem"] = 103,
+			["reagents"] = {
+				[1] = {22203, 2},
+				[2] = {7071},
+				[3] = {7076},
+				[4] = {7082},
+				[5] = {12644, 2},
+			},
+		},
+		[90] = {
+			["name"] = "Blacksmithing: Truesilver Belt Buckle",
+			["craftItem"] = 151,
+			["reagents"] = {
+				[1] = {6037, 8},
+				[2] = {7071},
+				[3] = {7966, 2},
+			},
+		},
+		[16967] = {
+			["name"] = "Blacksmithing: Inlaid Thorium Hammer",
+			["craftItem"] = 12772,
+			["reagents"] = {
+				[1] = {12359, 30},
+				[2] = {3577, 4},
+				[3] = {6037, 2},
+				[4] = {12361, 2},
+				[5] = {8170, 4},
+			},
+		},
+		[16980] = {
+			["name"] = "Blacksmithing: Rune Edge",
+			["craftItem"] = 12779,
+			["reagents"] = {
+				[1] = {12359, 30},
+				[2] = {12799, 2},
+				[3] = {12644, 2},
+				[4] = {8170, 4},
+			},
+		},
+		[46600] = {
+			["name"] = "Blacksmithing: Lordaeron Breastplate",
+			["craftItem"] = 46600,
+			["reagents"] = {
+				[1] = {2840, 16},
+				[2] = {818, 2},
+				[3] = {3470, 3},
+			},
+		},
+		[46666] = {
+			["name"] = "Blacksmithing: Frostbound Slasher",
+			["craftItem"] = 65013,
+			["reagents"] = {
+				[1] = {3859, 10},
+				[2] = {3486, 4},
+				[3] = {3466, 4},
+				[4] = {3829, 2},
+				[5] = {7070, 4},
+			},
+		},
+		[45063] = {
+			["name"] = "Blacksmithing: Blast Shield",
+			["craftItem"] = 51264,
+			["reagents"] = {
+				[1] = {2840, 12},
+				[2] = {3470, 2},
+				[3] = {818, 2},
+			},
+		},
+		[46667] = {
+			["name"] = "Blacksmithing: Pauldron of Deflection",
+			["craftItem"] = 65014,
+			["reagents"] = {
+				[1] = {11371, 10},
+				[2] = {12360, 10},
+				[3] = {12809, 8},
+				[4] = {22203, 4},
+				[5] = {7076, 6},
+			},
+		},
+		[36907] = {
+			["name"] = "Blacksmithing: Rune-Inscribed Plate Leggings",
+			["craftItem"] = 55058,
+			["reagents"] = {
+				[1] = {12360, 3},
+				[2] = {12655, 12},
+				[3] = {12799, 4},
+				[4] = {13926, 4},
+				[5] = {14341, 8},
+				[6] = {7080, 6},
+			},
+		},
+		[16960] = {
+			["name"] = "Blacksmithing: Thorium Greatsword",
+			["craftItem"] = 12764,
+			["reagents"] = {
+				[1] = {12359, 16},
+				[2] = {12644, 2},
+				[3] = {8170, 4},
+			},
+		},
+		[46651] = {
+			["name"] = "Blacksmithing: Bloodstone Warblade",
+			["craftItem"] = 60294,
+			["reagents"] = {
+				[1] = {3860, 14},
+				[2] = {4278, 10},
+				[3] = {7966, 4},
+				[4] = {3864, 2},
+			},
+		},
 		[16978] = {
 			["name"] = "Blacksmithing: Blazing Rapier",
 			["craftItem"] = 12777,
