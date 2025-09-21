@@ -1092,6 +1092,33 @@ GetSpellInfoAtlasLootDB = {
 				[6] = {10558, 2},
 			},
 		},
+		[46068] = {
+			["name"] = "Survival: Cleaning Cloth",
+			["craftItem"] = 60001,
+			["craftQuantityMin"] = 2,
+			["reagents"] = {
+				[1] = {4306, 2},
+				[2] = {9260},
+			},
+		},
+		[47103] = {
+			["name"] = "Survival: Driftwood Fishing Pole",
+			["craftItem"] = 7010,
+			["reagents"] = {
+				[1] = {2320, 2},
+				[2] = {7011},
+				[3] = {4470, 2},
+			},
+		},
+		[47101] = {
+			["name"] = "Survival: Survivalist's Skinning Knife",
+			["craftItem"] = 7009,
+			["reagents"] = {
+				[1] = {2835, 2},
+				[2] = {2320},
+				[3] = {2318},
+			},
+		},
 		[7752] = {
 			["name"] = "Cooking: Slitherskin Mackerel",
 			["craftItem"] = 787,
