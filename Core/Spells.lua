@@ -1126,6 +1126,24 @@ GetSpellInfoAtlasLootDB = {
 				[1] = {6303},
 			},
 		},
+		[58044] = {
+			["name"] = "Cooking: Ambersap Glazed Boar Ribs",
+			["craftItem"] = 41674,
+			["reagents"] = {
+				[1] = {41675},
+				[2] = {2677},
+				[3] = {2692},
+			},
+		},
+		[49551] = {
+			["name"] = "Cooking: Empowering Herbal Salad",
+			["craftItem"] = 83309,
+			["reagents"] = {
+				[1] = {8838},
+				[2] = {22529},
+				[3] = {51714, 2},
+			},
+		},
 		[2538] = {
 			["name"] = "Cooking: Charred Wolf Meat",
 			["craftItem"] = 2679,

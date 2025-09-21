@@ -3412,6 +3412,7 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 	};
 
 	CookingExpert1 = {
+		{ "s58044", "INV_Misc_Food_48", "=q1=Ambersap Glazed Boar Ribs", "=ds=#sr# =so1=175 =so2=215 =so3=235 =so4=255" },
 		{ "s13028", "inv_drink_15", "=q1=Goldthorn Tea", "=ds=#sr# =so1=175 =so2=175 =so3=190 =so4=205" },
 		{ "s7828", "inv_misc_fish_04", "=q1=Rockscale Cod", "=ds=#sr# =so1=175 =so2=190 =so3=210 =so4=230" },
 		{ "s4094", "inv_misc_food_18", "=q1=Barbecued Buzzard Wing", "=ds=#sr# =so1=175 =so2=215 =so3=235 =so4=255" },
@@ -3453,6 +3454,7 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s57049", "inv_drink_17", "=q1=Danonzo's Tel'Abim Delight", "=ds=#sr# =so1=300 =so2=300 =so3=300 =so4=300" },
 		{ "s46085", "inv_misc_food_64", "=q1=Gurubashi Gumbo", "=ds=#sr# =so1=300 =so2=300 =so3=300 =so4=300" },
 		{ "s45625", "INV_Misc_Fishe_Au_Chocolate", "=q1=Le Fishe Au Chocolat", "=ds=#sr# =so1=300 =so2=300 =so3=300 =so4=300" },
+		{ "s49551", "INV_Misc_Food_Salad", "=q1=Empowering Herbal Salad", "=ds=#sr# =so1=300 =so2=325 =so3=345 =so4=365" }
 	};
 
 --------------
