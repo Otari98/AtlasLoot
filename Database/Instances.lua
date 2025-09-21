@@ -6820,8 +6820,6 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 23200, "INV_Relics_TotemofLife", "=q3=Totem of Sustaining", "=ds=#s16#, #e17# =q15=#c7#", "4%" },
 		{ 18680, "INV_Weapon_Bow_08", "=q3=Ancient Bone Bow", "=ds=#w2#", "4%" },
 		{ 18683, "INV_Hammer_13", "=q3=Hammer of the Vesper", "=ds=#h1#, #w6#", "4%" },
-		{ 0, "", "", "", "" },
-		{ 51217, "INV_misc_ribbon_01", "=q2=Fashion Coin", "=ds=#e27#", "5%" },
 	};
 	SCHOLOLorekeeperPolkelt ={
 		{ 16705, "INV_Gauntlets_32", "=q3=Dreadmist Wraps", "=ds=#s9#, #a1# (D1, =q11=#c8#=ds=)", "17%" },
