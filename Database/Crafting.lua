@@ -584,6 +584,7 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "e7748", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Lesser Health", "=ds=#sr# =so1=60 =so2=105 =so3=125 =so4=145" },
 		{ "e7771", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Minor Protection", "=ds=#sr# =so1=70 =so2=110 =so3=130 =so4=150" },
 		{ "e14807", "INV_Staff_07", "=q2=Greater Magic Wand", "=ds=#sr# =so1=70 =so2=110 =so3=130 =so4=150" },
+		{ "e45071", "Spell_Holy_GreaterHeal", "=ds=Enchant 2H Weapon - Minor Intellect", "=ds=#sr# =so1=75 =so2=130 =so3=150 =so4=170" },
 	};
 
 	EnchantingJourneyman1 = {
@@ -635,6 +636,7 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "e13644", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Lesser Stamina", "=ds=#sr# =so1=170 =so2=190 =so3=210 =so4=230" },
 		{ "e13646", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracer - Lesser Deflection", "=ds=#sr# =so1=170 =so2=190 =so3=210 =so4=230" },
 		{ "e13648", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracer - Stamina", "=ds=#sr# =so1=170 =so2=190 =so3=210 =so4=230" },
+		{ "e48", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Lesser Intellect", "=ds=#sr# =so1=170 =so2=170 =so3=182 =so4=195" },
 		{ "e13657", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Fire Resistance", "=ds=#sr# =so1=175 =so2=195 =so3=215 =so4=235" },
 		{ "e13653", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Lesser Beastslayer", "=ds=#sr# =so1=175 =so2=195 =so3=215 =so4=235" },
 		{ "e13655", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Lesser Elemental Slayer", "=ds=#sr# =so1=175 =so2=195 =so3=215 =so4=235" },
@@ -655,10 +657,10 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "e13698", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Skinning", "=ds=#sr# =so1=200 =so2=220 =so3=240 =so4=260" },
 		{ "e13746", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Greater Defense", "=ds=#sr# =so1=205 =so2=225 =so3=245 =so4=265" },
 		{ "e13794", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Resistance", "=ds=#sr# =so1=205 =so2=225 =so3=245 =so4=265" },
-		{ "e13822", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracer - Intellect", "=ds=#sr# =so1=210 =so2=230 =so3=250 =so4=270" },
 	};
-
+	
 	EnchantingExpert2 = {
+		{ "e13822", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracer - Intellect", "=ds=#sr# =so1=210 =so2=230 =so3=250 =so4=270" },
 		{ "e13815", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Agility", "=ds=#sr# =so1=210 =so2=230 =so3=250 =so4=270" },
 		{ "e13817", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Stamina", "=ds=#sr# =so1=210 =so2=230 =so3=250 =so4=270" },
 		{ "e13836", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Stamina", "=ds=#sr# =so1=215 =so2=235 =so3=255 =so4=275" },
@@ -873,6 +875,7 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "e13890", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Minor Speed", "=ds=#sr# =so1=225 =so2=245 =so3=265 =so4=285" },
 		{ "e13836", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Stamina", "=ds=#sr# =so1=215 =so2=235 =so3=255 =so4=275" },
 		{ "e13687", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Lesser Spirit", "=ds=#sr# =so1=190 =so2=210 =so3=230 =so4=250" },
+		{ "e48", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Lesser Intellect", "=ds=#sr# =so1=170 =so2=170 =so3=182 =so4=195" },
 		{ "e13644", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Lesser Stamina", "=ds=#sr# =so1=170 =so2=190 =so3=210 =so4=230" },
 		{ "e13637", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Lesser Agility", "=ds=#sr# =so1=160 =so2=180 =so3=200 =so4=220" },
 		{ "e7863", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Minor Stamina", "=ds=#sr# =so1=125 =so2=150 =so3=170 =so4=190" },
@@ -890,6 +893,7 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "e13380", "Spell_Holy_GreaterHeal", "=ds=Enchant 2H Weapon - Lesser Spirit", "=ds=#sr# =so1=110 =so2=135 =so3=155 =so4=175" },
 		{ "e7745", "Spell_Holy_GreaterHeal", "=ds=Enchant 2H Weapon - Minor Impact", "=ds=#sr# =so1=100 =so2=130 =so3=150 =so4=170" },
 		{ "e7793", "Spell_Holy_GreaterHeal", "=ds=Enchant 2H Weapon - Lesser Intellect", "=ds=#sr# =so1=100 =so2=130 =so3=150 =so4=170" },
+		{ "e45071", "Spell_Holy_GreaterHeal", "=ds=Enchant 2H Weapon - Minor Intellect", "=ds=#sr# =so1=75 =so2=130 =so3=150 =so4=170" },
 	};
 
 	EnchantingWeapon1 = {

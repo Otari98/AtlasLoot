@@ -3,6 +3,14 @@ local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
 
 GetSpellInfoAtlasLootDB = {
 	["enchants"] = {
+		[48] = {
+			["name"] = "Enchant Boots - Lesser Intellect",
+			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
+		},
+		[45071] = {
+			["name"] = "Enchant 2H Weapon - Minor Intellect",
+			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
+		},
         [44] = {
 			["name"] = "Enchant Bracer - Agility",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
