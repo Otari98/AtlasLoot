@@ -4458,12 +4458,18 @@ AtlasLoot_ButtonRegistry = {
 		Title = AL["Leatherworking"] .. ": " .. AL["Artisan"];
 		Back_Page = "LEATHERWORKINGMENU";
 		Prev_Page = "LeatherArtisan2";
+		Next_Page = "LeatherArtisan4";
+	};
+	["LeatherArtisan4"] = {
+		Title = AL["Leatherworking"] .. ": " .. AL["Artisan"];
+		Back_Page = "LEATHERWORKINGMENU";
+		Prev_Page = "LeatherArtisan3";
 		Next_Page = "LeatherHelm1";
 	};
 	["LeatherHelm1"] = {
 		Title = AL["Leatherworking"] .. ": " .. AL["Helm"];
 		Back_Page = "LEATHERWORKINGMENU";
-		Prev_Page = "LeatherArtisan3";
+		Prev_Page = "LeatherArtisan4";
 		Next_Page = "LeatherShoulders1";
 	};
 	["LeatherShoulders1"] = {
