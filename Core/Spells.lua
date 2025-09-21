@@ -665,6 +665,7 @@ GetSpellInfoAtlasLootDB = {
 		[57518] = {
 			["name"] = "Eternal Dreamstone Shard",
 			["icon"] = "Interface\\Icons\\inv_misc_gem_pearl_04",
+			["item"] = 61732,
 		},
 		[57127] = {
 			["name"] = "Enchant Boots - Superior Stamina",
