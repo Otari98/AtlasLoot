@@ -12537,6 +12537,87 @@ GetSpellInfoAtlasLootDB = {
 				[8] = {4278, 10},
 			},
 		},
+		[41354] = {
+			["name"] = "Jewelcrafting: Skyfire Jewel",
+			["craftItem"] = 55255,
+			["reagents"] = {
+				[1] = {41321},
+				[2] = {55251, 3},
+				[3] = {7069, 3},
+			},
+		},
+		[41335] = {
+			["name"] = "Jewelcrafting: Shining Copper Cuffs",
+			["craftItem"] = 56044,
+			["reagents"] = {
+				[1] = {2840, 6},
+				[2] = {818},
+				[3] = {55246},
+			},
+		},
+		[93] = {
+			["name"] = "Jewelcrafting: Refined Dwarven Necklace",
+			["craftItem"] = 156,
+			["reagents"] = {
+				[1] = {3860, 12},
+				[2] = {55249, 3},
+				[3] = {6371, 3},
+				[4] = {3466, 2},
+				[5] = {55152, 2},
+			},
+		},
+		[41247] = {
+			["name"] = "Jewelcrafting: Small Pearl Ring",
+			["craftItem"] = 55169,
+			["reagents"] = {
+				[1] = {55156},
+				[2] = {5498},
+				[3] = {55150, 2},
+				[4] = {55245},
+			},
+		},
+		[41794] = {
+			["name"] = "Jewelcrafting: Orb of Clairvoyance",
+			["craftItem"] = 55362,
+			["reagents"] = {
+				[1] = {12359, 16},
+				[2] = {5116, 12},
+				[3] = {12361, 6},
+				[4] = {12799, 6},
+				[5] = {55247, 2},
+			},
+		},
+		[36905] = {
+			["name"] = "Jewelcrafting: Grandstaff of the Shen'dralar Elder",
+			["craftItem"] = 55060,
+			["reagents"] = {
+				[1] = {55252, 4},
+				[2] = {12360, 2},
+				[3] = {12655, 16},
+				[4] = {20725, 4},
+				[5] = {12800, 6},
+				[6] = {55248, 4},
+			},
+		},
+		[104] = {
+			["name"] = "Jewelcrafting: Ancient Dwarven Gemstone",
+			["craftItem"] = 56112,
+			["reagents"] = {
+				[1] = {3860},
+				[2] = {55249},
+				[3] = {55247},
+			},
+		},
+		[41591] = {
+			["name"] = "Jewelcrafting: Specter's Shade Ring",
+			["craftItem"] = 55324,
+			["reagents"] = {
+				[1] = {41332},
+				[2] = {11135},
+				[3] = {55152},
+				[4] = {3577, 2},
+			},
+		},
 		[29728] = {
 			["name"] = "Jewelcrafting: Rough Gritted Paper",
 			["craftItem"] = 55150,
