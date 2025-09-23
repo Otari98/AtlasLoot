@@ -947,7 +947,7 @@ function AtlasLoot_JewelcraftingMenu()
 	AtlasLootMenuItem_11.lootpage="JewelcraftingBracers1";
 	AtlasLootMenuItem_11:Show();
 	--Offhands
-	AtlasLootMenuItem_12_Name:SetText(AL["Jewelcrafting"]..": "..AL["Off-hand"]);
+	AtlasLootMenuItem_12_Name:SetText(AL["Jewelcrafting"]..": "..AL["Off Hand"]);
 	AtlasLootMenuItem_12_Extra:SetText("");
 	AtlasLootMenuItem_12_Icon:SetTexture("Interface\\Icons\\INV_Jewelry_Necklace_01");
 	AtlasLootMenuItem_12.lootpage="JewelcraftingOffHands1";

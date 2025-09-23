@@ -4651,7 +4651,7 @@ AtlasLoot_ButtonRegistry = {
 		Next_Page = "JewelcraftingOffHands1";
 	};
 	["JewelcraftingOffHands1"] = {
-		Title = AL["Jewelcrafting"] .. ": " .. AL["Off-hand"];
+		Title = AL["Jewelcrafting"] .. ": " .. AL["Off Hand"];
 		Back_Page = "JEWELCRAFTMENU";
 		Prev_Page = "JewelcraftingBracers1";
 		Next_Page = "JewelcraftingStaves1";

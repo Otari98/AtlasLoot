@@ -277,8 +277,13 @@ function AtlasLootPRE60SetMenu()
 	for i = 1, 30 do
 		local button = _G["AtlasLootMenuItem_" .. i]
 		button.dataSource = AtlasLoot_GetDataSource(button.lootpage)
-		if button.container then
+		if ( type(button.container) == "table" ) then
 			_G["AtlasLootMenuItem_"..i.."Border"]:Show()
+			for row = 1, getn(button.container) do
+				for item = 1, getn(button.container[row]) do
+					AtlasLoot_CacheItem(button.container[row][item][1])
+				end
+			end
 		end
 	end
 end
@@ -372,8 +377,13 @@ function AtlasLootZGSetMenu()
 	for i = 1, 30 do
 		local button = _G["AtlasLootMenuItem_" .. i]
 		button.dataSource = AtlasLoot_GetDataSource(button.lootpage)
-		if button.container then
+		if ( type(button.container) == "table" ) then
 			_G["AtlasLootMenuItem_"..i.."Border"]:Show()
+			for row = 1, getn(button.container) do
+				for item = 1, getn(button.container[row]) do
+					AtlasLoot_CacheItem(button.container[row][item][1])
+				end
+			end
 		end
 	end
 end
@@ -446,8 +456,13 @@ function AtlasLootAQ40SetMenu()
 	for i = 1, 30 do
 		local button = _G["AtlasLootMenuItem_" .. i]
 		button.dataSource = AtlasLoot_GetDataSource(button.lootpage)
-		if button.container then
+		if ( type(button.container) == "table" ) then
 			_G["AtlasLootMenuItem_"..i.."Border"]:Show()
+			for row = 1, getn(button.container) do
+				for item = 1, getn(button.container[row]) do
+					AtlasLoot_CacheItem(button.container[row][item][1])
+				end
+			end
 		end
 	end
 end
@@ -520,8 +535,13 @@ function AtlasLootAQ20SetMenu()
 	for i = 1, 30 do
 		local button = _G["AtlasLootMenuItem_" .. i]
 		button.dataSource = AtlasLoot_GetDataSource(button.lootpage)
-		if button.container then
+		if ( type(button.container) == "table" ) then
 			_G["AtlasLootMenuItem_"..i.."Border"]:Show()
+			for row = 1, getn(button.container) do
+				for item = 1, getn(button.container[row]) do
+					AtlasLoot_CacheItem(button.container[row][item][1])
+				end
+			end
 		end
 	end
 end
@@ -594,8 +614,13 @@ function AtlasLootT0SetMenu()
 	for i = 1, 30 do
 		local button = _G["AtlasLootMenuItem_" .. i]
 		button.dataSource = AtlasLoot_GetDataSource(button.lootpage)
-		if button.container then
+		if ( type(button.container) == "table" ) then
 			_G["AtlasLootMenuItem_"..i.."Border"]:Show()
+			for row = 1, getn(button.container) do
+				for item = 1, getn(button.container[row]) do
+					AtlasLoot_CacheItem(button.container[row][item][1])
+				end
+			end
 		end
 	end
 end
@@ -668,8 +693,13 @@ function AtlasLootT1SetMenu()
 	for i = 1, 30 do
 		local button = _G["AtlasLootMenuItem_" .. i]
 		button.dataSource = AtlasLoot_GetDataSource(button.lootpage)
-		if button.container then
+		if ( type(button.container) == "table" ) then
 			_G["AtlasLootMenuItem_"..i.."Border"]:Show()
+			for row = 1, getn(button.container) do
+				for item = 1, getn(button.container[row]) do
+					AtlasLoot_CacheItem(button.container[row][item][1])
+				end
+			end
 		end
 	end
 end
@@ -742,8 +772,13 @@ function AtlasLootT2SetMenu()
 	for i = 1, 30 do
 		local button = _G["AtlasLootMenuItem_" .. i]
 		button.dataSource = AtlasLoot_GetDataSource(button.lootpage)
-		if button.container then
+		if ( type(button.container) == "table" ) then
 			_G["AtlasLootMenuItem_"..i.."Border"]:Show()
+			for row = 1, getn(button.container) do
+				for item = 1, getn(button.container[row]) do
+					AtlasLoot_CacheItem(button.container[row][item][1])
+				end
+			end
 		end
 	end
 end
@@ -816,8 +851,13 @@ function AtlasLootT3SetMenu()
 	for i = 1, 30 do
 		local button = _G["AtlasLootMenuItem_" .. i]
 		button.dataSource = AtlasLoot_GetDataSource(button.lootpage)
-		if button.container then
+		if ( type(button.container) == "table" ) then
 			_G["AtlasLootMenuItem_"..i.."Border"]:Show()
+			for row = 1, getn(button.container) do
+				for item = 1, getn(button.container[row]) do
+					AtlasLoot_CacheItem(button.container[row][item][1])
+				end
+			end
 		end
 	end
 end
@@ -890,8 +930,13 @@ function AtlasLoot_Kara40SetMenu()
 	for i = 1, 30 do
 		local button = _G["AtlasLootMenuItem_" .. i]
 		button.dataSource = AtlasLoot_GetDataSource(button.lootpage)
-		if button.container then
+		if ( type(button.container) == "table" ) then
 			_G["AtlasLootMenuItem_"..i.."Border"]:Show()
+			for row = 1, getn(button.container) do
+				for item = 1, getn(button.container[row]) do
+					AtlasLoot_CacheItem(button.container[row][item][1])
+				end
+			end
 		end
 	end
 end

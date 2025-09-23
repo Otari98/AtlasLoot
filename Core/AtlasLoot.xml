@@ -1,20 +1,5 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/">
 
-	<Script file="ButtonRegistry.lua"/>
-	<Script file="TextParsing.lua"/>
-	<Script file="Spells.lua"/>
-	<Script file="Sets.lua"/>
-	<Script file="Factions.lua"/>
-	<Script file="WorldEvents.lua"/>
-	<Script file="PvP.lua"/>
-	<Script file="Crafting.lua"/>
-	<Script file="AtlasLoot.lua"/>
-	<Script file="WishList.lua"/>
-	<Script file="Search.lua"/>
-	<Script file="WorldBoss.lua"/>
-	<Script file="Dungeons.lua"/>
-	<Script file="Tooltip.lua"/>
-
 	<Button name="AtlasLootContainerItemTemplate" virtual="true">
 		<Size x="40" y="40"/>
 		<Backdrop name="$parentBackdrop" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
@@ -1354,6 +1339,9 @@
 			<OnEvent>
 				AtlasLoot_OnEvent();
 			</OnEvent>
+			<OnUpdate>
+				AtlasLootItemsFrame_OnUpdate()
+			</OnUpdate>
 			<OnMouseWheel>
 				if arg1 == 1 and AtlasLootItemsFrame_NEXT:IsVisible() then
 					AtlasLootItemsFrame_NEXT:Click()
