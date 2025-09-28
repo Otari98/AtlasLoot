@@ -191,101 +191,101 @@ AtlasLoot_ButtonRegistry = {
 	["KCMarrowspike"] = {
 		Title = AL["Marrowspike"];
 		Next_Page = "KCHivaxxis";
-		Back_Page = "DUNGEONSMENU1";
+		Back_Page = "DUNGEONSMENU2";
 	};
 	["KCHivaxxis"] = {
 		Title = AL["Hivaxxis"];
 		Next_Page = "KCCorpsemuncher";
 		Prev_Page = "KCMarrowspike";
-		Back_Page = "DUNGEONSMENU1";
+		Back_Page = "DUNGEONSMENU2";
 	};
 	["KCCorpsemuncher"] = {
 		Title = AL["Corpsemuncher"];
 		Next_Page = "KCGuardCaptainGort";
 		Prev_Page = "KCHivaxxis";
-		Back_Page = "DUNGEONSMENU1";
+		Back_Page = "DUNGEONSMENU2";
 	};
 	["KCGuardCaptainGort"] = {
 		Title = AL["Guard Captain Gort"];
 		Next_Page = "KCArchlichEnkhraz";
 		Prev_Page = "KCCorpsemuncher";
-		Back_Page = "DUNGEONSMENU1";
+		Back_Page = "DUNGEONSMENU2";
 	};
 	["KCArchlichEnkhraz"] = {
 		Title = AL["Archlich Enkhraz"];
 		Next_Page = "KCCommanderAndreon";
 		Prev_Page = "KCGuardCaptainGort";
-		Back_Page = "DUNGEONSMENU1";
+		Back_Page = "DUNGEONSMENU2";
 	};
 	["KCCommanderAndreon"] = {
 		Title = AL["Commander Andreon"];
 		Next_Page = "KCAlarus";
 		Prev_Page = "KCArchlichEnkhraz";
-		Back_Page = "DUNGEONSMENU1";
+		Back_Page = "DUNGEONSMENU2";
 	};
 	["KCAlarus"] = {
 		Title = AL["Alarus"];
 		Next_Page = "KCTreasure";
 		Prev_Page = "KCCommanderAndreon";
-		Back_Page = "DUNGEONSMENU1";
+		Back_Page = "DUNGEONSMENU2";
 	};
 	["KCTreasure"] = {
 		Title = AL["Half-Buried Treasure Chest"];
 		Prev_Page = "KCAlarus";
 		Next_Page = "KCTrash";
-		Back_Page = "DUNGEONSMENU1";
+		Back_Page = "DUNGEONSMENU2";
 	};
 	["KCTrash"] = {
 		Title = AL["Trash Mobs"];
 		Prev_Page = "KCTreasure";
-		Back_Page = "DUNGEONSMENU1";
+		Back_Page = "DUNGEONSMENU2";
 	};
 	-- Caverns of Time: Black Morass
 	["COTBMChronar"] = {
 		Title = AL["Chronar"];
 		Next_Page = "COTBMEpidamu";
-		Back_Page = "DUNGEONSMENU1";
+		Back_Page = "DUNGEONSMENU2";
 	};
 	["COTBMEpidamu"] = {
 		Title = AL["Epidamu"];
 		Next_Page = "COTBMDriftingAvatar";
 		Prev_Page = "COTBMChronar";
-		Back_Page = "DUNGEONSMENU1";
+		Back_Page = "DUNGEONSMENU2";
 	};
 	["COTBMDriftingAvatar"] = {
 		Title = AL["Drifting Avatar of Sand"];
 		Next_Page = "COTBMTimeLordEpochronos";
 		Prev_Page = "COTBMEpidamu";
-		Back_Page = "DUNGEONSMENU1";
+		Back_Page = "DUNGEONSMENU2";
 	};
 	["COTBMTimeLordEpochronos"] = {
 		Title = AL["Time-Lord Epochronos"];
 		Next_Page = "COTBMMossheart";
 		Prev_Page = "COTBMDriftingAvatar";
-		Back_Page = "DUNGEONSMENU1";
+		Back_Page = "DUNGEONSMENU2";
 	};
 	["COTBMMossheart"] = {
 		Title = AL["Mossheart"];
 		Next_Page = "COTBMRotmaw";
 		Prev_Page = "COTBMTimeLordEpochronos";
-		Back_Page = "DUNGEONSMENU1";
+		Back_Page = "DUNGEONSMENU2";
 	};
 	["COTBMRotmaw"] = {
 		Title = AL["Rotmaw"];
 		Next_Page = "COTBMAntnormi";
 		Prev_Page = "COTBMMossheart";
-		Back_Page = "DUNGEONSMENU1";
+		Back_Page = "DUNGEONSMENU2";
 	};
 	["COTBMAntnormi"] = {
 		Title = AL["Antnormi"];
 		Next_Page = "COTTrash";
 		Prev_Page = "COTBMRotmaw";
-		Back_Page = "DUNGEONSMENU1";
+		Back_Page = "DUNGEONSMENU2";
 	};
 	["COTTrash"] = {
 		Title = AL["Trash Mobs"];
 		Prev_Page = "COTBMAntnormi";
-		Back_Page = "DUNGEONSMENU1";
+		Back_Page = "DUNGEONSMENU2";
 	};
 	-- Stormwind Vault
 	["SWVAszoshGrimflame"] = {
