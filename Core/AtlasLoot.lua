@@ -1230,23 +1230,23 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 				local border = _G["AtlasLootItem_"..i.."Border"]
 				local iconData = dataSource[dataID][i][2]
 				-- If there is no data on the texture an item should have, show a big red question mark
-				if ( iconData == "?" ) then
-					iconFrame:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark");
-				elseif ( iconData == "" ) then
-					local _, _, _, _, _, _, _, _, itemTexture1 = GetItemInfo(dataSource[dataID][i][1])
-					iconFrame:SetTexture(itemTexture1);
+				if ( strsub(iconData, 1, 5) == "CLASS" ) then
+					iconFrame:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\"..strsub(iconData, 6))
+				elseif ( isItem and type(dataSource[dataID][i][1]) == "number" ) then
+					local _, _, _, _, _, _, _, _, texture = GetItemInfo(dataSource[dataID][i][1])
+					if ( not texture and type(iconData) == "string" ) then
+						texture = "Interface\\Icons\\"..iconData
+					end
+					iconFrame:SetTexture(texture);
 				elseif ( not isItem and spellIcon ) then
 					if ( type(iconData) == "number" ) then
-						local _, _, _, _, _, _, _, _, itemTexture2 = GetItemInfo(iconData)
-						iconFrame:SetTexture(itemTexture2);
+						local _, _, _, _, _, _, _, _, texture = GetItemInfo(iconData)
+						iconFrame:SetTexture(texture);
 					elseif ( type(iconData) == "string" ) then
 						iconFrame:SetTexture("Interface\\Icons\\"..iconData);
 					else
 						iconFrame:SetTexture(spellIcon);
 					end
-				elseif ( strfind(iconData, "^CLASS") ) then
-					local class = gsub(iconData, "CLASS", "")
-					iconFrame:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\"..class)
 				else
 					iconFrame:SetTexture("Interface\\Icons\\"..iconData);
 				end
