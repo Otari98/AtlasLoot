@@ -27,7 +27,7 @@
 						</Anchor>
 					</Anchors>
 				</Texture>
-				<FontString name="$parent_Quantity" font="Fonts\ARIALN.TTF" outline="NORMAL" justifyH="RIGHT" hidden="false">
+				<FontString name="$parent_Quantity" font="Fonts\ARIALN.TTF" outline="NORMAL" justifyH="RIGHT">
 					<Size>
 						<AbsDimension x="25" y="0"/>
 					</Size>
@@ -631,7 +631,7 @@
 		</Size>
 	</Button>
 
-	<Button name="AtlasLootItem_ParentTemplate" virtual="true" hidden="false">
+	<Button name="AtlasLootItem_ParentTemplate" virtual="true">
 		<Size>
 			<AbsDimension x="236" y="28"/>
 		</Size>
@@ -650,9 +650,9 @@
 						</Anchor>
 					</Anchors>
 				</Texture>
-				<FontString name="$parent_Quantity" font="Fonts\ARIALN.TTF" outline="NORMAL" justifyH="RIGHT" hidden="false">
+				<FontString name="$parent_Quantity" font="Fonts\ARIALN.TTF" outline="NORMAL" justifyH="RIGHT">
 					<Size>
-						<AbsDimension x="25" y="0"/>
+						<AbsDimension x="25" y="14"/>
 					</Size>
 					<FontHeight>
 						<AbsValue val="12"/>
@@ -667,7 +667,7 @@
 				</FontString>
 				<FontString name="$parent_Name" inherits="GameFontNormal" justifyH="LEFT">
 					<Size>
-						<AbsDimension x="205" y="12"/>
+						<AbsDimension x="205" y="14"/>
 					</Size>
 					<Anchors>
 						<Anchor point="TOPLEFT" relativeTo="$parent_Icon" relativePoint="TOPRIGHT">
@@ -679,7 +679,7 @@
 				</FontString>
 				<FontString name="$parent_Extra" inherits="GameFontNormalSmall" justifyH="LEFT" hidden="true">
 					<Size>
-						<AbsDimension x="205" y="10"/>
+						<AbsDimension x="205" y="12"/>
 					</Size>
 					<Anchors>
 						<Anchor point="TOPLEFT" relativeTo="$parent_Name" relativePoint="BOTTOMLEFT">
@@ -691,7 +691,7 @@
 				</FontString>
 				<FontString name="$parent_PriceText1" inherits="GameFontNormalSmall" justifyH="RIGHT" hidden="true" text="333333">
 					<Size>
-						<AbsDimension x="60" y="10"/>
+						<AbsDimension x="60" y="12"/>
 					</Size>
 					<Anchors>
 						<Anchor point="TOPLEFT" relativeTo="$parent_Name" relativePoint="BOTTOMLEFT">
@@ -711,7 +711,7 @@
 				</Texture>
 				<FontString name="$parent_PriceText2" inherits="GameFontNormalSmall" justifyH="RIGHT" hidden="true" text="120">
 					<Size>
-						<AbsDimension x="20" y="10"/>
+						<AbsDimension x="20" y="12"/>
 					</Size>
 					<Anchors>
 						<Anchor point="TOPLEFT" relativeTo="$parent_PriceIcon1" relativePoint="TOPRIGHT"/>
@@ -727,7 +727,7 @@
 				</Texture>
 				<FontString name="$parent_PriceText3" inherits="GameFontNormalSmall" justifyH="RIGHT" hidden="true" text="120">
 					<Size>
-						<AbsDimension x="20" y="10"/>
+						<AbsDimension x="20" y="12"/>
 					</Size>
 					<Anchors>
 						<Anchor point="TOPLEFT" relativeTo="$parent_PriceIcon2" relativePoint="TOPRIGHT"/>
@@ -743,7 +743,7 @@
 				</Texture>
 				<FontString name="$parent_PriceText4" inherits="GameFontNormalSmall" justifyH="RIGHT" hidden="true" text="120">
 					<Size>
-						<AbsDimension x="20" y="10"/>
+						<AbsDimension x="20" y="12"/>
 					</Size>
 					<Anchors>
 						<Anchor point="TOPLEFT" relativeTo="$parent_PriceIcon3" relativePoint="TOPRIGHT"/>
@@ -759,7 +759,7 @@
 				</Texture>
 				<FontString name="$parent_PriceText5" inherits="GameFontNormalSmall" justifyH="RIGHT" hidden="true" text="120">
 					<Size>
-						<AbsDimension x="20" y="10"/>
+						<AbsDimension x="20" y="12"/>
 					</Size>
 					<Anchors>
 						<Anchor point="TOPLEFT" relativeTo="$parent_PriceIcon4" relativePoint="TOPRIGHT"/>
@@ -800,7 +800,7 @@
 		</Layers>
 	</Button>
 
-	<Button name="AtlasLootItem_Template" inherits="AtlasLootItem_ParentTemplate" virtual="true" hidden="false">
+	<Button name="AtlasLootItem_Template" inherits="AtlasLootItem_ParentTemplate" virtual="true">
 		<Scripts>
 			<OnLoad>
 				this:RegisterForClicks("LeftButtonDown", "RightButtonDown");
@@ -821,7 +821,7 @@
 		</Scripts>
 	</Button>
 
-	<Button name="AtlasLootMenuItem_Template" inherits="AtlasLootItem_ParentTemplate" virtual="true" hidden="false">
+	<Button name="AtlasLootMenuItem_Template" inherits="AtlasLootItem_ParentTemplate" virtual="true">
 		<Scripts>
 			<OnLoad>
 				this:RegisterForClicks("LeftButtonDown", "RightButtonDown");
@@ -835,7 +835,7 @@
 		</Scripts>
 	</Button>
 
-	<Frame name="AtlasLootInfo" hidden="false">
+	<Frame name="AtlasLootInfo">
 		<Size>
 			<AbsDimension x="128" y="75"/>
 		</Size>
@@ -907,7 +907,7 @@
 			<Layer level="OVERLAY">
 				<FontString name="$parent_Text1" inherits="GameFontNormalSmall" text="ATLASLOOT_VERSION" justifyH="LEFT">
 					<Size>
-						<AbsDimension x="180" y="10"/>
+						<AbsDimension x="180" y="12"/>
 					</Size>
 					<Anchor point="TOPLEFT" relativeTo="$parent" relativePoint="TOPLEFT">
 						<Offset>
@@ -917,7 +917,7 @@
 				</FontString>
 				<FontString name="$parent_Text2" inherits="GameFontNormalSmall" justifyH="LEFT">
 					<Size>
-						<AbsDimension x="180" y="10"/>
+						<AbsDimension x="180" y="12"/>
 					</Size>
 					<Anchors>
 						<Anchor point="TOPLEFT" relativeTo="$parent_Text1" relativePoint="BOTTOMLEFT">
@@ -1309,7 +1309,7 @@
 			<Layer level="OVERLAY">
 				<FontString name="AtlasLoot_BossName" inherits="GameFontHighlightLarge" justifyH="CENTER">
 					<Size>
-						<AbsDimension x="512" y="30"/>
+						<AbsDimension x="512" y="34"/>
 					</Size>
 					<Anchors>
 						<Anchor point="TOP" relativeTo="$parent" relativePoint="TOP"/>
