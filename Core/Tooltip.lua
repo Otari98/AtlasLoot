@@ -121,22 +121,25 @@ local function ExtendTooltip(tooltip)
 	end
 end
 
-local lastSearchName
-local lastSearchID
+local IDCache = {}
 
 local function GetItemIDByName(name)
 	if not name then return nil end
-	if name ~= lastSearchName then
-		for itemID = 1, 99999 do
-			local itemName = GetItemInfo(itemID)
-			if itemName and itemName == name then
-				lastSearchID = itemID
-				break
-			end
+	if IDCache[name] then return IDCache[name] ~= 0 and IDCache[name] or nil end
+	for itemID = 1, 99999 do
+		if GetItemInfo(itemID) == name then
+			IDCache[name] = itemID
+			return itemID
 		end
-		lastSearchName = name
 	end
-	return lastSearchID
+	IDCache[name] = 0
+	return nil
+end
+
+local function IDFromLink(link)
+	if not link then return nil end
+	local _, _, id = strfind(link, "item:(%d+)")
+	return tonumber(id)
 end
 
 local function HookTooltip(tooltip)
@@ -169,8 +172,7 @@ local function HookTooltip(tooltip)
 		insideHook = true
 		original_SetLootRollItem(self, rollID)
 		insideHook = false
-		local _, _, id = strfind(GetLootRollItemLink(rollID) or "", "item:(%d+)")
-		self.itemID = tonumber(id)
+		self.itemID = IDFromLink(GetLootRollItemLink(rollID))
 		ExtendTooltip(self)
 	end
 
@@ -178,8 +180,7 @@ local function HookTooltip(tooltip)
 		insideHook = true
 		original_SetLootItem(self, slot)
 		insideHook = false
-		local _, _, id = strfind(GetLootSlotLink(slot) or "", "item:(%d+)")
-		self.itemID = tonumber(id)
+		self.itemID = IDFromLink(GetLootSlotLink(slot))
 		ExtendTooltip(self)
 	end
 
@@ -187,8 +188,7 @@ local function HookTooltip(tooltip)
 		insideHook = true
 		original_SetMerchantItem(self, merchantIndex)
 		insideHook = false
-		local _, _, id = strfind(GetMerchantItemLink(merchantIndex) or "", "item:(%d+)")
-		self.itemID = tonumber(id)
+		self.itemID = IDFromLink(GetMerchantItemLink(merchantIndex))
 		ExtendTooltip(self)
 	end
 
@@ -196,8 +196,7 @@ local function HookTooltip(tooltip)
 		insideHook = true
 		original_SetQuestLogItem(self, itemType, index)
 		insideHook = false
-		local _, _, id = strfind(GetQuestLogItemLink(itemType, index) or "", "item:(%d+)")
-		self.itemID = tonumber(id)
+		self.itemID = IDFromLink(GetQuestLogItemLink(itemType, index))
 		ExtendTooltip(self)
 	end
 
@@ -205,8 +204,7 @@ local function HookTooltip(tooltip)
 		insideHook = true
 		original_SetQuestItem(self, itemType, index)
 		insideHook = false
-		local _, _, id = strfind(GetQuestItemLink(itemType, index) or "", "item:(%d+)")
-		self.itemID = tonumber(id)
+		self.itemID = IDFromLink(GetQuestItemLink(itemType, index))
 		ExtendTooltip(self)
 	end
 
@@ -214,8 +212,7 @@ local function HookTooltip(tooltip)
 		insideHook = true
 		original_SetHyperlink(self, arg1)
 		insideHook = false
-		local _, _, id = strfind(arg1 or "", "item:(%d+)")
-		self.itemID = tonumber(id)
+		self.itemID = IDFromLink(arg1)
 		ExtendTooltip(self)
 	end
 
@@ -223,8 +220,7 @@ local function HookTooltip(tooltip)
 		insideHook = true
 		local hasCooldown, repairCost = original_SetBagItem(self, container, slot)
 		insideHook = false
-		local _, _, id = strfind(GetContainerItemLink(container, slot) or "", "item:(%d+)")
-		self.itemID = tonumber(id)
+		self.itemID = IDFromLink(GetContainerItemLink(container, slot))
 		ExtendTooltip(self)
 		return hasCooldown, repairCost
 	end
@@ -233,8 +229,7 @@ local function HookTooltip(tooltip)
 		insideHook = true
 		original_SetInboxItem(self, mailID, attachmentIndex)
 		insideHook = false
-		local itemName = GetInboxItem(mailID)
-		self.itemID = GetItemIDByName(itemName)
+		self.itemID = GetItemIDByName(GetInboxItem(mailID))
 		ExtendTooltip(self)
 	end
 
@@ -242,8 +237,7 @@ local function HookTooltip(tooltip)
 		insideHook = true
 		local hasItem, hasCooldown, repairCost = original_SetInventoryItem(self, unit, slot)
 		insideHook = false
-		local _, _, id = strfind(GetInventoryItemLink(unit, slot) or "", "item:(%d+)")
-		self.itemID = tonumber(id)
+		self.itemID = IDFromLink(GetInventoryItemLink(unit, slot))
 		ExtendTooltip(self)
 		return hasItem, hasCooldown, repairCost
 	end
@@ -252,8 +246,7 @@ local function HookTooltip(tooltip)
 		insideHook = true
 		original_SetCraftItem(self, skill, slot)
 		insideHook = false
-		local _, _, id = strfind(GetCraftReagentItemLink(skill, slot) or "", "item:(%d+)")
-		self.itemID = tonumber(id)
+		self.itemID = IDFromLink(GetCraftReagentItemLink(skill, slot))
 		ExtendTooltip(self)
 	end
 
@@ -261,8 +254,7 @@ local function HookTooltip(tooltip)
 		insideHook = true
 		original_SetCraftSpell(self, slot)
 		insideHook = false
-		local _, _, id = strfind(GetCraftItemLink(slot) or "", "item:(%d+)")
-		self.itemID = tonumber(id)
+		self.itemID = IDFromLink(GetCraftItemLink(slot))
 		ExtendTooltip(self)
 	end
 
@@ -271,11 +263,9 @@ local function HookTooltip(tooltip)
 		original_SetTradeSkillItem(self, skillIndex, reagentIndex)
 		insideHook = false
 		if reagentIndex then
-			local _, _, id = strfind(GetTradeSkillReagentItemLink(skillIndex, reagentIndex) or "", "item:(%d+)")
-			self.itemID = tonumber(id)
+			self.itemID = IDFromLink(GetTradeSkillReagentItemLink(skillIndex, reagentIndex))
 		else
-			local _, _, id = strfind(GetTradeSkillItemLink(skillIndex) or "", "item:(%d+)")
-			self.itemID = tonumber(id)
+			self.itemID = IDFromLink(GetTradeSkillItemLink(skillIndex))
 		end
 		ExtendTooltip(self)
 	end
@@ -284,8 +274,7 @@ local function HookTooltip(tooltip)
 		insideHook = true
 		original_SetAuctionItem(self, atype, index)
 		insideHook = false
-		local _, _, id = strfind(GetAuctionItemLink(atype, index) or "", "item:(%d+)")
-		self.itemID = tonumber(id)
+		self.itemID = IDFromLink(GetAuctionItemLink(atype, index))
 		ExtendTooltip(self)
 	end
 
@@ -301,8 +290,7 @@ local function HookTooltip(tooltip)
 		insideHook = true
 		original_SetTradePlayerItem(self, index)
 		insideHook = false
-		local _, _, id = strfind(GetTradePlayerItemLink(index) or "", "item:(%d+)")
-		self.itemID = tonumber(id)
+		self.itemID = IDFromLink(GetTradePlayerItemLink(index))
 		ExtendTooltip(self)
 	end
 
@@ -310,35 +298,19 @@ local function HookTooltip(tooltip)
 		insideHook = true
 		original_SetTradeTargetItem(self, index)
 		insideHook = false
-		local _, _, id = strfind(GetTradeTargetItemLink(index) or "", "item:(%d+)")
-		self.itemID = tonumber(id)
+		self.itemID = IDFromLink(GetTradeTargetItemLink(index))
 		ExtendTooltip(self)
 	end
 end
 
-local original_SetItemRef = SetItemRef
-function SetItemRef(link, text, button)
-	local item, _, id = string.find(link, "item:(%d+)")
-	ItemRefTooltip.itemID = id
-	original_SetItemRef(link, text, button)
-	if not IsShiftKeyDown() and not IsControlKeyDown() and item then
-		ExtendTooltip(ItemRefTooltip)
-	end
-end
-
-local original_OnHide = ItemRefTooltip:GetScript("OnHide")
-ItemRefTooltip:SetScript("OnHide", function()
-	original_OnHide()
-	ItemRefTooltip.itemID = nil
-end)
-
 AtlasLootTip:SetScript("OnShow", function()
-	if aux_frame and aux_frame:IsShown() then
-		if GetMouseFocus() and GetMouseFocus():GetParent() and GetMouseFocus():GetParent().row and GetMouseFocus():GetParent().row.record then
-			GameTooltip.itemID = GetMouseFocus():GetParent().row.record.item_id
-			ExtendTooltip(GameTooltip)
-		end
-	end
+	if not (aux_frame and aux_frame:IsShown()) then return end
+	local focus = GetMouseFocus()
+	if not focus then return end
+	local parent = focus:GetParent()
+	if not (parent and parent.row and parent.row.record) then return end
+	GameTooltip.itemID = tonumber(parent.row.record.item_id)
+	ExtendTooltip(GameTooltip)
 end)
 
 -- adapted from http://shagu.org/ShaguTweaks/
@@ -361,3 +333,4 @@ AtlasLootTip.HookAddonOrVariable("Tmog", function()
 end)
 
 HookTooltip(GameTooltip)
+HookTooltip(ItemRefTooltip)
