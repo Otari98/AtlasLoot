@@ -1,15 +1,16 @@
 ﻿local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
 
 AtlasLoot_ButtonRegistry = {
-	--WoW Instances
+	-- Dungeons & Raids
 	["DUNGEONSMENU1"] = {
 		Title = AL["Dungeons & Raids"];
-		Next_Page = "DUNGEONSMENU1";
+		Next_Page = "DUNGEONSMENU2";
 	};
 	["DUNGEONSMENU2"] = {
 		Title = AL["Dungeons & Raids"];
 		Prev_Page = "DUNGEONSMENU1";
 	};
+
 	-- Dragonmaw Retreat
 	["DMRGowlfang"] = {
 		Title = AL["Gowlfang"],
@@ -75,6 +76,7 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "DMRZuluhed",
 		Back_Page = "DUNGEONSMENU1",
 	};
+
 	-- Stormwrought Ruins
 	["SWROronok"] = {
 		Title = AL["Oronok Torn-Heart"],
@@ -152,6 +154,7 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "SWRMergothid",
 		Back_Page = "DUNGEONSMENU1",
 	};
+
 	-- Hateforge Quarry
 	["HQHighForemanBargulBlackhammer"] = {
 		Title = AL["High Foreman Bargul Blackhammer"];
@@ -187,6 +190,7 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "HQHargeshDoomcaller";
 		Back_Page = "DUNGEONSMENU1";
 	};
+
 	-- Karazhan Crypt
 	["KCMarrowspike"] = {
 		Title = AL["Marrowspike"];
@@ -240,6 +244,7 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "KCTreasure";
 		Back_Page = "DUNGEONSMENU2";
 	};
+
 	-- Caverns of Time: Black Morass
 	["COTBMChronar"] = {
 		Title = AL["Chronar"];
@@ -287,6 +292,7 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "COTBMAntnormi";
 		Back_Page = "DUNGEONSMENU2";
 	};
+
 	-- Stormwind Vault
 	["SWVAszoshGrimflame"] = {
 		Title = AL["Aszosh Grimflame"];
@@ -328,6 +334,7 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "SWVVaultArmoryEquipment";
 		Back_Page = "DUNGEONSMENU2";
 	};
+
 	-- The Crescent Grove
 	["TCGGrovetenderEngryss"] = {
 		Title = AL["Grovetender Engryss"];
@@ -363,6 +370,7 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "TCGMasterRaxxieth";
 		Back_Page = "DUNGEONSMENU1";
 	};
+
 	-- Upper Karazhan Halls
     ["UKHGnarlmoon"] = {
 		Title = AL["Keeper Gnarlmoon"];
@@ -422,6 +430,7 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "UKHMephistroth";
 		Back_Page = "DUNGEONSMENU2";
 	};
+
 	-- Gilneas City
 	["GCMatthiasHoltz"] = {
 		Title = AL["Matthias Holtz"];
@@ -475,6 +484,7 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "GCGennGreymane";
 		Back_Page = "DUNGEONSMENU1";
 	};
+
 	-- Blackrock Depths
 	["BRDLordRoccor"] = {
 		Title = AL["Lord Roccor"];
@@ -636,6 +646,7 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "BRDEmperorDagranThaurissan";
 		Back_Page = "DUNGEONSMENU1";
 	};
+
 	-- Lower Blackrock Spire
 	["LBRSSpirestoneButcher"] = {
 		Title = AL["Spirestone Butcher"].." ("..AL["Rare"]..")";
@@ -743,6 +754,7 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "LBRSWyrmthalak";
 		Back_Page = "DUNGEONSMENU1";
 	};
+
 	-- Upper Blackrock Spire
 	["UBRSEmberseer"] = {
 		Title = AL["Pyroguard Emberseer"];
@@ -808,6 +820,7 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "UBRSDrakkisath";
 		Back_Page = "DUNGEONSMENU1";
 	};
+
 	-- Blackwing Lair
 	["BWLRazorgore"] = {
 		Title = AL["Razorgore the Untamed"];
@@ -861,6 +874,7 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "BWLNefarian";
 		Back_Page = "DUNGEONSMENU2";
 	};
+
 	-- The Deadmines
     ["DMJaredVoss"] = {
 		Title = AL["Jared Voss"];
@@ -932,6 +946,7 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "DMVanCleef";
 		Back_Page = "DUNGEONSMENU1";
 	};
+
 	-- Gnomeregan
 	["GnGrubbis"] = {
 		Title = AL["Grubbis"];
@@ -973,6 +988,7 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "GnMekgineerThermaplugg";
 		Back_Page = "DUNGEONSMENU1";
 	};
+
 	-- Molten Core
 	["MCIncindis"] = {
 		Title = AL["Incindis"];
@@ -991,6 +1007,7 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "MCLucifron";
 		Back_Page = "DUNGEONSMENU2";
 	};
+
 	-- ["MCGehennas"] = {
 	-- 	Title = AL["Gehennas"];
 	-- 	Next_Page = "MCGarr";
@@ -1063,6 +1080,7 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "MCTrashMobs";
 		Back_Page = "DUNGEONSMENU2";
 	};
+
 	-- Naxxramas
 	["NAXPatchwerk"] = {
 		Title = AL["Patchwerk"];
@@ -1158,6 +1176,7 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "NAXKelThuzard";
 		Back_Page = "DUNGEONSMENU2";
 	};
+
 	-- Scarlet Monastery
 	["SMVishas"] = {
 		Title = AL["Interrogator Vishas"];
@@ -1265,6 +1284,7 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "SMWhitemane";
 		Back_Page = "DUNGEONSMENU1";
 	};
+
 	-- Scholomance
 	["SCHOLOBlood"] = {
 		Title = AL["Blood Steward of Kirtonos"];
@@ -1372,6 +1392,7 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "SCHOLODarkmasterGandling";
 		Back_Page = "DUNGEONSMENU1";
 	};
+
 	-- Shadowfang Keep
 	["SFKRethilgore"] = {
 		Title = AL["Rethilgore"];
@@ -1455,6 +1476,7 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "SFKPrelate";
 		Back_Page = "DUNGEONSMENU1";
 	};
+
 	-- The Stockade
 	["SWStTargorr"] = {
 		Title = AL["Targorr the Dread"];
@@ -1496,6 +1518,7 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "SWStBruegalIronknuckle";
 		Back_Page = "DUNGEONSMENU1";
 	};
+
 	-- Stratholme
 	["STRATSkull"] = {
 		Title = AL["Skul"].." ("..AL["Rare"]..")";
@@ -1645,6 +1668,7 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "STRATBaronRivendare";
 		Back_Page = "DUNGEONSMENU1";
 	};
+
 	-- Sunken Temple
 	["STBalconyMinibosses"] = {
 		Title = AL["Balcony Minibosses"];
@@ -1716,6 +1740,7 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "STEranikus";
 		Back_Page = "DUNGEONSMENU1";
 	};
+
 	-- Uldaman
 	["UldBaelog"] = {
 		Title = AL["Baelog"];
@@ -1775,6 +1800,7 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "UldArchaedas";
 		Back_Page = "DUNGEONSMENU1";
 	};
+
 	-- Zul'Gurub
 	["ZGJeklik"] = {
 		Title = AL["High Priestess Jeklik"];
@@ -1877,6 +1903,7 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "ZGTrash2";
 		Back_Page = "DUNGEONSMENU2";
 	};
+
 	-- Blackfathom Deeps
 	["BFDGhamoora"] = {
 		Title = AL["Ghamoo-ra"];
@@ -1930,6 +1957,7 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "BFDAkumai";
 		Back_Page = "DUNGEONSMENU1";
 	};
+
 	-- Dire Maul East
 	["DMEPusillin"] = {
 		Title = AL["Pusillin"];
@@ -1983,6 +2011,7 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "DMETrash";
 		Back_Page = "DUNGEONSMENU1";
 	};
+
 	-- Dire Maul West
 	["DMWTendrisWarpwood"] = {
 		Title = AL["Tendris Warpwood"];
@@ -2042,6 +2071,7 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "DMWTrash";
 		Back_Page = "DUNGEONSMENU1";
 	};
+
 	-- Dire Maul North
 	["DMNGuardMoldar"] = {
 		Title = AL["Guard Mol'dar"];
@@ -2107,6 +2137,7 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "DMNTrash";
 		Back_Page = "DUNGEONSMENU1";
 	};
+
 	-- Maraudon
 	["MaraNoxxion"] = {
 		Title = AL["Noxxion"];
@@ -2166,6 +2197,7 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "MaraPrincessTheradras";
 		Back_Page = "DUNGEONSMENU1";
 	};
+
 	-- Ragefire Chasm
 	["RFCTaragaman"] = {
 		Title = AL["Taragaman the Hungerer"];
@@ -2189,6 +2221,7 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "RFCJergosh";
 		Back_Page = "DUNGEONSMENU1";
 	};
+
 	-- Razorfen Downs
 	["RFDTutenkash"] = {
 		Title = AL["Tuten'kash"];
@@ -2242,6 +2275,7 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "RFDAmnennar";
 		Back_Page = "DUNGEONSMENU1";
 	};
+
 	-- Razorfen Kraul
 	["RFKAggem"] = {
 		Title = AL["Aggem Thorncurse"];
@@ -2301,6 +2335,7 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "RFKRotthorn";
 		Back_Page = "DUNGEONSMENU1";
 	};
+
 	-- Ruins of Ahn'Qiraj
 	["AQ20Kurinnaxx"] = {
 		Title = AL["Kurinnaxx"];
@@ -2366,6 +2401,7 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "AQ20ClassBooks";
 		Back_Page = "DUNGEONSMENU2";
 	};
+
 	-- Temple of Ahn'Qiraj
 	["AQ40Skeram"] = {
 		Title = AL["The Prophet Skeram"];
@@ -2443,6 +2479,7 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "AQEnchants";
 		Back_Page = "DUNGEONSMENU2";
 	};
+
 	-- Wailing Caverns
 	["WCLordCobrahn"] = {
 		Title = AL["Lord Cobrahn"];
@@ -2514,6 +2551,7 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "WCMutanus";
 		Back_Page = "DUNGEONSMENU1";
 	};
+
 	-- Zul'Farrak
 	["ZFAntusul"] = {
 		Title = AL["Antu'sul"];
@@ -2573,6 +2611,7 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "ZFChampion";
 		Back_Page = "DUNGEONSMENU1";
 	};
+
 	-- Emerald Sanctum
 	["ESErennius"] = {
 		Title = AL["Erennius"];
@@ -2596,6 +2635,7 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "ESHardMode";
 		Back_Page = "DUNGEONSMENU2";
 	};
+
 	-- Lower Karazhan Halls
 	["LKHRolfen"] = {
 		Title = AL["Master Blacksmith Rolfen"];
@@ -2643,11 +2683,13 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "LKHTrash";
 		Back_Page = "DUNGEONSMENU2";
 	};
+
 	-- Onyxia's Lair
 	["Onyxia"] = {
 		Title = AL["Onyxia's Lair"];
 		Back_Page = "DUNGEONSMENU2";
 	};
+
 	-- World Bosses
 	["AAzuregos"] = {
 		Title = AL["Azuregos"];
@@ -2719,6 +2761,7 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "CowKing";
 		Back_Page = "WORLDBOSSMENU",
 	};
+
 	-- Rare Spawns
 	["EarthcallerRezengal"] = {
 		Title = AL["Earthcaller Rezengal"];
@@ -2855,7 +2898,7 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "HighvaleSilverback";
 	};
 	["Kargron"] = {
-		Title = AL["Blademaster Kargron"];
+	Title = AL["Blademaster Kargron"];
 		Next_Page = "AdmiralBareanWestwind";
 		Prev_Page = "Mallon";
 	};
@@ -2898,6 +2941,7 @@ AtlasLoot_ButtonRegistry = {
 		Title = AL["M-0L1Y"];
 		Prev_Page = "WidowoftheWoods";
 	};
+
 	-- Factions
 	["Argent1"] = {
 		Title = AL["Argent Dawn"] .. ": " .. AL["Token Hand-Ins"];
@@ -3941,6 +3985,8 @@ AtlasLoot_ButtonRegistry = {
 		Back_Page = "WORLDEVENTMENU";
 		Prev_Page = "AbyssalDukes";
 	};
+
+	-- Alchemy
 	["AlchemyApprentice1"] = {
 		Title = AL["Alchemy"] .. ": " .. AL["Apprentice"];
 		Back_Page = "ALCHEMYMENU";
@@ -4023,6 +4069,8 @@ AtlasLoot_ButtonRegistry = {
 		Back_Page = "ALCHEMYMENU";
 		Prev_Page = "AlchemyOffensive2";
 	},
+
+	-- Blacksmithing
 	["SmithingApprentice1"] = {
 		Title = AL["Blacksmithing"] .. ": " .. AL["Apprentice"];
 		Back_Page = "SMITHINGMENU";
@@ -4213,6 +4261,8 @@ AtlasLoot_ButtonRegistry = {
 		Back_Page = "SMITHINGMENU";
 		Prev_Page = "Hammersmith1";
 	};
+
+	-- Enchanting
 	["EnchantingApprentice1"] = {
 		Title = AL["Enchanting"] .. ": " .. AL["Apprentice"];
 		Back_Page = "ENCHANTINGMENU";
@@ -4313,6 +4363,8 @@ AtlasLoot_ButtonRegistry = {
 		Back_Page = "ENCHANTINGMENU";
 		Prev_Page = "EnchantingShield1";
 	};
+
+	-- Engineering
 	["EngineeringApprentice1"] = {
 		Title = AL["Engineering"] .. ": " .. AL["Apprentice"];
 		Back_Page = "ENGINEERINGMENU";
@@ -4413,6 +4465,8 @@ AtlasLoot_ButtonRegistry = {
 		Back_Page = "ENGINEERINGMENU";
 		Prev_Page = "Gnomish1";
 	};
+
+	-- Leatherworking
 	["LeatherApprentice1"] = {
 		Title = AL["Leatherworking"] .. ": " .. AL["Apprentice"];
 		Back_Page = "LEATHERWORKINGMENU";
@@ -4567,6 +4621,8 @@ AtlasLoot_ButtonRegistry = {
 		Back_Page = "LEATHERWORKINGMENU";
 		Prev_Page = "Elemental1";
 	};
+
+	-- Jewelcrafting
 	["JewelcraftingApprentice1"] = {
 		Title = AL["Jewelcrafting"] .. ": " .. AL["Apprentice"];
 		Back_Page = "JEWELCRAFTMENU";
@@ -4685,6 +4741,8 @@ AtlasLoot_ButtonRegistry = {
 		Back_Page = "JEWELCRAFTMENU";
 		Prev_Page = "JewelcraftingGemology1";
 	};
+
+	-- Herbalism
 	["Herbalism1"] = {
 		Title = AL["Herbalism"];
 		Back_Page = "CRAFTINGMENU";
@@ -4695,6 +4753,8 @@ AtlasLoot_ButtonRegistry = {
 		Back_Page = "CRAFTINGMENU";
 		Prev_Page = "Herbalism1";
 	};
+
+	-- Mining
 	["Mining1"] = {
 		Title = AL["Mining"];
 		Back_Page = "CRAFTINGMENU";
@@ -4705,6 +4765,8 @@ AtlasLoot_ButtonRegistry = {
 		Back_Page = "CRAFTINGMENU";
 		Prev_Page = "Mining1";
 	};
+
+	-- Tailoring
 	["TailoringApprentice1"] = {
 		Title = AL["Tailoring"] .. ": " .. AL["Apprentice"];
 		Back_Page = "TAILORINGMENU";
@@ -4859,40 +4921,50 @@ AtlasLoot_ButtonRegistry = {
 		Back_Page = "TAILORINGMENU";
 		Prev_Page = "TailoringBags1";
 	};
+
+	-- Cooking
 	["CookingApprentice1"] = {
 		Title = AL["Cooking"] .. ": " .. AL["Apprentice"];
-		Back_Page = "COOKINGMENU";
+		Back_Page = "CRAFTINGMENU";
 		Next_Page = "CookingJourneyman1";
 	};
 	["CookingJourneyman1"] = {
 		Title = AL["Cooking"] .. ": " .. AL["Journeyman"];
-		Back_Page = "COOKINGMENU";
+		Back_Page = "CRAFTINGMENU";
 		Prev_Page = "CookingApprentice1";
 		Next_Page = "CookingExpert1";
 	};
 	["CookingExpert1"] = {
 		Title = AL["Cooking"] .. ": " .. AL["Expert"];
-		Back_Page = "COOKINGMENU";
+		Back_Page = "CRAFTINGMENU";
 		Prev_Page = "CookingJourneyman1";
 		Next_Page = "CookingArtisan1";
 	};
 	["CookingArtisan1"] = {
 		Title = AL["Cooking"] .. ": " .. AL["Artisan"];
-		Back_Page = "COOKINGMENU";
+		Back_Page = "CRAFTINGMENU";
 		Prev_Page = "CookingExpert1";
 	};
+
+	-- First Aid
 	["FirstAid1"] = {
 		Title = AL["First Aid"];
 		Back_Page = "CRAFTINGMENU";
 	};
+
+	-- Survival
 	["Survival1"] = {
 		Title = AL["Survival"];
 		Back_Page = "CRAFTINGMENU";
 	};
+
+	-- Gardening
 	["Survival2"] = {
 		Title = AL["Gardening"];
 		Back_Page = "CRAFTINGMENU";
 	};
+
+	-- Poisons
 	["Poisons1"] = {
 		Title = AL["Poisons"];
 		Back_Page = "CRAFTINGMENU";

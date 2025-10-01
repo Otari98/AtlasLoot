@@ -80,37 +80,36 @@ AtlasLoot_Data["AtlasLootFallback"] = {
 };
 
 AtlasLoot_MenuList = {
-	"DUNGEONSMENU1",
-	"DUNGEONSMENU2",
-	"PVPMENU",
-	"ABRepMenu",
-	"AVRepMenu",
-	"WSGRepMenu",
-	"BRRepMenu",
-	"PVPSET",
-	"SETMENU",
-	"AQ20SET",
-	"AQ40SET",
-	"KARASET",
-	"PRE60SET",
-	"ZGSET",
-	"T3SET",
-	"T2SET",
-	"T1SET",
-	"T0SET",
-	"REPMENU",
-	"WORLDEVENTMENU",
-	"ALCHEMYMENU",
-	"CRAFTINGMENU",
-	"SMITHINGMENU",
-	"ENCHANTINGMENU",
-	"ENGINEERINGMENU",
-	"LEATHERWORKINGMENU",
-	"TAILORINGMENU",
-	"CRAFTSET",
-	"COOKINGMENU",
-	"WORLDBOSSMENU",
-	"JEWELCRAFTMENU"
+	["DUNGEONSMENU1"] = "AtlasLoot_DungeonsMenu1",
+	["DUNGEONSMENU2"] = "AtlasLoot_DungeonsMenu2",
+	["PVPMENU"] = "AtlasLootPvPMenu",
+	["ABRepMenu"] = "AtlasLootABRepMenu",
+	["AVRepMenu"] = "AtlasLootAVRepMenu",
+	["WSGRepMenu"] = "AtlasLootWSGRepMenu",
+	["BRRepMenu"] = "AtlasLootBRRepMenu",
+	["PVPSET"] = "AtlasLootPVPSetMenu",
+	["SETMENU"] = "AtlasLootSetMenu",
+	["AQ20SET"] = "AtlasLootAQ20SetMenu",
+	["AQ40SET"] = "AtlasLootAQ40SetMenu",
+	["KARASET"] = "AtlasLoot_Kara40SetMenu",
+	["PRE60SET"] = "AtlasLootPRE60SetMenu",
+	["ZGSET"] = "AtlasLootZGSetMenu",
+	["T3SET"] = "AtlasLootT3SetMenu",
+	["T2SET"] = "AtlasLootT2SetMenu",
+	["T1SET"] = "AtlasLootT1SetMenu",
+	["T0SET"] = "AtlasLootT0SetMenu",
+	["REPMENU"] = "AtlasLootRepMenu",
+	["WORLDEVENTMENU"] = "AtlasLootWorldEventMenu",
+	["ALCHEMYMENU"] = "AtlasLoot_AlchemyMenu",
+	["CRAFTINGMENU"] = "AtlasLoot_CraftingMenu",
+	["SMITHINGMENU"] = "AtlasLoot_SmithingMenu",
+	["ENCHANTINGMENU"] = "AtlasLoot_EnchantingMenu",
+	["ENGINEERINGMENU"] = "AtlasLoot_EngineeringMenu",
+	["LEATHERWORKINGMENU"] = "AtlasLoot_LeatherworkingMenu",
+	["TAILORINGMENU"] = "AtlasLoot_TailoringMenu",
+	["JEWELCRAFTMENU"] = "AtlasLoot_JewelcraftingMenu",
+	["CRAFTSET"] = "AtlasLootCraftedSetMenu",
+	["WORLDBOSSMENU"] = "AtlasLoot_WorldBossMenu",
 };
 
 --[[
@@ -1040,70 +1039,9 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 	AtlasLootItemsFrame.refresh = { dataID, dataSource_backup, boss, pFrame };
 	-- Escape out of this function if creating a menu, this function only handles loot tables.
 	-- Inserting escapes in this way allows consistant calling of data whether it is a loot table or a menu.
-	if ( dataID == "PRE60SET" ) then
-		AtlasLootPRE60SetMenu();
-	elseif ( dataID == "ZGSET" ) then
-		AtlasLootZGSetMenu();
-	elseif ( dataID == "AQ40SET" ) then
-		AtlasLootAQ40SetMenu();
-	elseif ( dataID == "AQ20SET" ) then
-		AtlasLootAQ20SetMenu();
-	elseif ( dataID == "KARASET" ) then
-		AtlasLoot_Kara40SetMenu();
-	elseif ( dataID == "T3SET" ) then
-		AtlasLootT3SetMenu();
-	elseif ( dataID == "T2SET" ) then
-		AtlasLootT2SetMenu();
-	elseif ( dataID == "T1SET" ) then
-		AtlasLootT1SetMenu();
-	elseif ( dataID == "T0SET" ) then
-		AtlasLootT0SetMenu();
-	elseif ( dataID == "PVPMENU" ) then
-		AtlasLootPvPMenu();
-	elseif ( dataID == "BRRepMenu" ) then
-		AtlasLootBRRepMenu();
-	elseif ( dataID == "WSGRepMenu" ) then
-		AtlasLootWSGRepMenu();
-	elseif ( dataID == "ABRepMenu" ) then
-		AtlasLootABRepMenu();
-	elseif ( dataID == "AVRepMenu" ) then
-		AtlasLootAVRepMenu();
-	elseif ( dataID == "PVPSET" ) then
-		AtlasLootPVPSetMenu();
-	elseif ( dataID == "REPMENU" ) then
-		AtlasLootRepMenu();
-	elseif ( dataID == "SETMENU" ) then
-		AtlasLootSetMenu();
-	elseif ( dataID == "WORLDEVENTMENU" ) then
-		AtlasLootWorldEventMenu();
-	elseif ( dataID == "CRAFTINGMENU" ) then
-		AtlasLoot_CraftingMenu();
-	elseif ( dataID == "CRAFTSET" ) then
-		AtlasLootCraftedSetMenu();
-	elseif ( dataID == "ALCHEMYMENU" ) then
-		AtlasLoot_AlchemyMenu();
-	elseif ( dataID == "SMITHINGMENU" ) then
-		AtlasLoot_SmithingMenu();
-	elseif ( dataID == "ENCHANTINGMENU" ) then
-		AtlasLoot_EnchantingMenu();
-	elseif ( dataID == "ENGINEERINGMENU" ) then
-		AtlasLoot_EngineeringMenu();
-	elseif ( dataID == "LEATHERWORKINGMENU" ) then
-		AtlasLoot_LeatherworkingMenu();
-	elseif ( dataID == "TAILORINGMENU" ) then
-		AtlasLoot_TailoringMenu();
-	elseif ( dataID == "COOKINGMENU" ) then
-		AtlasLoot_CookingMenu();
-	elseif ( dataID == "WORLDBOSSMENU" ) then
-		AtlasLoot_WorldBossMenu();
-	elseif ( dataID == "DUNGEONSMENU1" ) then
-		AtlasLoot_DungeonsMenu1();
-	elseif ( dataID == "DUNGEONSMENU2" ) then
-		AtlasLoot_DungeonsMenu2();
-	elseif ( dataID == "JEWELCRAFTMENU" ) then
-		AtlasLoot_JewelcraftingMenu();
+	if ( AtlasLoot_MenuList[dataID] ) then
+		_G[AtlasLoot_MenuList[dataID]]()
 	else
-		-- AtlasLoot_QueryLootPage()
 		-- Iterate through each item object and set its properties
 		for i = 1, 30, 1 do
 			-- Check for a valid object (that it exists, and that it has a name)
@@ -1859,8 +1797,8 @@ function AtlasLoot_NavButton_OnClick()
 		-- Fallback for if the requested loot page is a menu and does not have a .refresh instance
 		AtlasLoot_ShowItemsFrame(this.lootpage, "dummy", this.title, AtlasLoot_AnchorPoint);
 	end
-	for k,v in pairs(AtlasLoot_MenuList) do
-		if ( this.lootpage == v ) then
+	for k in pairs(AtlasLoot_MenuList) do
+		if ( this.lootpage == k ) then
 			AtlasLootDefaultFrame_SubMenu:Disable();
 			AtlasLootDefaultFrame_SelectedCategory:SetText(AtlasLootCharDB.LastBossText)
 			AtlasLootDefaultFrame_SelectedTable:SetText()
@@ -1878,8 +1816,8 @@ function AtlasLoot_IsLootTableAvailable(dataID)
 
 	local menu_check = false;
 
-	for k,v in pairs(AtlasLoot_MenuList) do
-		if ( v == dataID ) then
+	for k in pairs(AtlasLoot_MenuList) do
+		if ( k == dataID ) then
 			menu_check = true;
 		end
 	end
@@ -2285,19 +2223,19 @@ AtlasLoot_HewdropDown = {
 		},
 	{[AL["Crafting"]] = {
 			{ { AL["Alchemy"], "ALCHEMYMENU", "Table" }, },
-			{ { (AL["Blacksmithing"]), "SMITHINGMENU", "Table" }, },
-			{ { (AL["Enchanting"]), "ENCHANTINGMENU", "Table" }, },
-			{ { (AL["Engineering"]), "ENGINEERINGMENU", "Table" }, },
-			{ { (AL["Herbalism"]), "Herbalism1", "Table" }, },
-			{ { (AL["Leatherworking"]), "LEATHERWORKINGMENU", "Table" }, },
-			{ { (AL["Jewelcrafting"]), "JEWELCRAFTMENU", "Table" }, },
-			{ { (AL["Mining"]), "Mining1", "Table" }, },
-			{ { (AL["Tailoring"]), "TAILORINGMENU", "Table" }, },
-			{ { (AL["Cooking"]), "COOKINGMENU", "Table" }, },
-			{ { (AL["First Aid"]), "FirstAid1", "Table" }, },
-			{ { (AL["Survival"]), "Survival1", "Table" }, },
-			{ { (AL["Gardening"]), "Survival2", "Table" }, },
-			{ { (AL["Poisons"]), "Poisons1", "Table" }, },
+			{ { AL["Blacksmithing"], "SMITHINGMENU", "Table" }, },
+			{ { AL["Enchanting"], "ENCHANTINGMENU", "Table" }, },
+			{ { AL["Engineering"], "ENGINEERINGMENU", "Table" }, },
+			{ { AL["Herbalism"], "Herbalism1", "Table" }, },
+			{ { AL["Leatherworking"], "LEATHERWORKINGMENU", "Table" }, },
+			{ { AL["Jewelcrafting"], "JEWELCRAFTMENU", "Table" }, },
+			{ { AL["Mining"], "Mining1", "Table" }, },
+			{ { AL["Tailoring"], "TAILORINGMENU", "Table" }, },
+			{ { AL["Cooking"], "CookingApprentice1", "Table" }, },
+			{ { AL["First Aid"], "FirstAid1", "Table" }, },
+			{ { AL["Survival"], "Survival1", "Table" }, },
+			{ { AL["Gardening"], "Survival2", "Table" }, },
+			{ { AL["Poisons"], "Poisons1", "Table" }, },
 			{ { AL["Crafted Sets"], "CRAFTSET", "Table" },},
 			{ { AL["Crafted Epic Weapons"], "CraftedWeapons1", "Table" }, },
 		},

@@ -1094,7 +1094,6 @@ AtlasLoot_TableNames = {
 	["ENGINEERINGMENU"] = { "dummy", "dummy" },
 	["LEATHERWORKINGMENU"] = { "dummy", "dummy" },
 	["TAILORINGMENU"] = { "dummy", "dummy" },
-	["COOKINGMENU"] = { "dummy", "dummy" },
 	["FIRSTAIDMENU"] = { "dummy", "dummy" },
 	["WORLDBOSSMENU"] = { "dummy", "dummy" },
 	["JEWELCRAFTMENU"] = { "dummy", "dummy" },
