@@ -186,15 +186,15 @@ function AtlasLoot_OnVariablesLoaded()
 	Hooked_AtlasScrollBar_Update = AtlasScrollBar_Update;
 	AtlasScrollBar_Update = AtlasLoot_AtlasScrollBar_Update;
 	-- Disable options that don't have the supporting mods
-	if (  not LootLink_SetTooltip and (AtlasLootCharDB.LootlinkTT == true ) ) then
+	if ( not LootLink_SetTooltip and (AtlasLootCharDB.LootlinkTT == true ) ) then
 		AtlasLootCharDB.LootlinkTT = false;
 		AtlasLootCharDB.DefaultTT = true;
 	end
-	if (  not ItemSync and (AtlasLootCharDB.ItemSyncTT == true) ) then
+	if ( not ItemSync and (AtlasLootCharDB.ItemSyncTT == true) ) then
 		AtlasLootCharDB.ItemSyncTT = false;
 		AtlasLootCharDB.DefaultTT = true;
 	end
-	if (  (not IsAddOnLoaded("EQCompare") and not IsAddOnLoaded("EquipCompare")) and (AtlasLootCharDB.EquipCompare == true) ) then
+	if ( (not IsAddOnLoaded("EQCompare") and not IsAddOnLoaded("EquipCompare")) and (AtlasLootCharDB.EquipCompare == true) ) then
 		AtlasLootCharDB.EquipCompare = false;
 	end
 	-- If using an opaque items frame, change the alpha value of the backing texture
@@ -538,7 +538,7 @@ function AtlasLoot_Refresh()
 	end
 	-- Setup info panel above boss listing
 	local tName = base.ZoneName[1];
-	if (  AtlasOptions.AtlasAcronyms and base.Acronym ) then
+	if ( AtlasOptions.AtlasAcronyms and base.Acronym ) then
 		local _RED = "|cffcc6666";
 		tName = tName.._RED.." ["..base.Acronym.."]";
 	end
