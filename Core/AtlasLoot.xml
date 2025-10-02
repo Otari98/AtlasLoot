@@ -37,7 +37,7 @@
 		<Size x="105" y="20"/>
 	</Button>
 
-	<Frame name="AtlasLootDefaultFrame" toplevel="true" frameStrata="HIGH" movable="true" enableMouseClicks="true" hidden="true" parent="UIParent" enableKeyboard="true">
+	<Frame name="AtlasLootDefaultFrame" toplevel="true" frameStrata="HIGH" movable="true" enableMouse="true" hidden="true" parent="UIParent">
 		<Size x="600" y="690"/>
 		<Anchors>
 			<Anchor point="CENTER"/>
@@ -50,22 +50,14 @@
 		<Frames>
 			<Button name="$parent_CloseButton" inherits="UIPanelCloseButton">
 				<Anchors>
-					<Anchor point="TOPRIGHT" relativeTo="AtlasLootDefaultFrame" relativePoint="TOPRIGHT">
+					<Anchor point="TOPRIGHT">
 						<Offset x="-10" y="-10"/>
 					</Anchor>
 				</Anchors>
-				<Scripts>
-					<OnClick>
-						AtlasLootDefaultFrame:Hide();
-					</OnClick>
-					<OnShow>
-						this:SetFrameLevel((this:GetParent()):GetFrameLevel() + 1);
-					</OnShow>
-				</Scripts>
 			</Button>
 			<Button name="$parent_Atlas" inherits="AtlasLootDefaultFrameButtonTemplate">
 				<Anchors>
-					<Anchor point="TOPRIGHT" relativeTo="$parent" relativePoint="TOPRIGHT">
+					<Anchor point="TOPRIGHT">
 						<Offset x="-38" y="-15"/>
 					</Anchor>
 				</Anchors>
@@ -81,7 +73,6 @@
 					<OnShow>
 						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
 						this:SetText(AL["Atlas"]);
-						this:SetFrameLevel((this:GetParent()):GetFrameLevel() + 1);
 						if IsAddOnLoaded("Atlas") then
 							this:Enable();
 						else
@@ -452,6 +443,14 @@
 	<GameTooltip name="AtlasLootTooltip" inherits="GameTooltipTemplate" parent="UIParent" hidden="true"/>
 	
 	<GameTooltip name="AtlasLootTooltip2" inherits="GameTooltipTemplate" parent="UIParent" hidden="true"/>
+
+	<GameTooltip name="AtlasLootCacheTooltip" inherits="GameTooltipTemplate" parent="UIParent" hidden="true">
+		<Scripts>
+			<OnLoad>
+				this:SetOwner(WorldFrame, "ANCHOR_NONE")
+			</OnLoad>
+		</Scripts>
+	</GameTooltip>
 	
 	<Button name="AtlasLootNewBossLineTemplate" virtual="true" hidden="true">
 		<Size x="336" y="15"/>

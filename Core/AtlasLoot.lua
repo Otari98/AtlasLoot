@@ -1069,7 +1069,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 						text = itemColor..itemName;
 					else
 						if ( itemID and itemID ~= 0 ) then
-							GameTooltip:SetHyperlink("item:"..itemID)
+							AtlasLootCacheTooltip:SetHyperlink("item:"..itemID)
 							AtlasLootItemsFrame.refreshTime = refreshTimeout
 							AtlasLootItemsFrame.queue[itemID] = true
 						end
@@ -1083,10 +1083,8 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 						spellName = SpellInfo(spellID)
 					else
 						if ( spellID and spellID ~= 0 ) then
-							GameTooltip:SetOwner(WorldFrame, "ANCHOR_NONE")
-							GameTooltip:SetHyperlink("enchant:"..spellID)
-							spellName = GameTooltipTextLeft1:GetText()
-							GameTooltip:Hide()
+							AtlasLootCacheTooltip:SetHyperlink("enchant:"..spellID)
+							spellName = AtlasLootCacheTooltipTextLeft1:GetText()
 						end
 						if ( not (spellName and spellName ~= "") ) then
 							spellName = GetSpellInfoAtlasLootDB["enchants"][spellID]["name"]
@@ -1098,7 +1096,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 						text, _, quality = GetItemInfo(craftItem)
 						if ( not text ) then
 							if ( craftItem and craftItem ~= 0 ) then
-								GameTooltip:SetHyperlink("item:"..craftItem)
+								AtlasLootCacheTooltip:SetHyperlink("item:"..craftItem)
 								AtlasLootItemsFrame.refreshTime = refreshTimeout
 								AtlasLootItemsFrame.queue[craftItem] = true
 							end
@@ -1126,7 +1124,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 						text, _, quality = GetItemInfo(craftItem)
 						if ( not text ) then
 							if ( craftItem ~= 0 ) then
-								GameTooltip:SetHyperlink("item:"..craftItem)
+								AtlasLootCacheTooltip:SetHyperlink("item:"..craftItem)
 								text = AtlasLoot_FixText(spellName);
 								AtlasLootItemsFrame.refreshTime = refreshTimeout
 								AtlasLootItemsFrame.queue[craftItem] = true
@@ -1287,7 +1285,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 						for j = 1, table.getn(reagents) do
 							local reagent = GetSpellInfoAtlasLootDB["craftspells"][spellID]["reagents"][j]
 							if ( not GetItemInfo(reagent[1]) ) then
-								GameTooltip:SetHyperlink("item:"..reagent[1]);
+								AtlasLootCacheTooltip:SetHyperlink("item:"..reagent[1]);
 							end
 						end
 					end
@@ -3284,7 +3282,7 @@ function AtlasLoot_CacheItem(linkOrID)
 		if GetItemInfo(linkOrID) then
 			return true
 		else
-			GameTooltip:SetHyperlink("item:"..linkOrID)
+			AtlasLootCacheTooltip:SetHyperlink("item:"..linkOrID)
 			return false
 		end
 	else
@@ -3296,7 +3294,7 @@ function AtlasLoot_CacheItem(linkOrID)
 			if ( GetItemInfo(item) ) then
 				return true
 			else
-				GameTooltip:SetHyperlink(item)
+				AtlasLootCacheTooltip:SetHyperlink(item)
 				return false
 			end
 		end
@@ -3448,7 +3446,7 @@ function AtlasLoot_QueryLootPage()
 		if ( (queryitem) and (queryitem ~= "") and (queryitem ~= 0) and
 			(string.sub(queryitem, 1, 1) ~= "s") and (string.sub(queryitem, 1, 1) ~= "e") ) then
 			if ( not GetItemInfo(queryitem) ) then
-				GameTooltip:SetHyperlink("item:"..queryitem..":0:0:0");
+				AtlasLootCacheTooltip:SetHyperlink("item:"..queryitem..":0:0:0");
 			end
 		end
 	end
