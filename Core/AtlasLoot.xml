@@ -528,7 +528,7 @@
 		<Layers>
 			<Layer level="ARTWORK">
 				<Texture name="$parent_Icon">
-					<Size x="25" y="25"/>
+					<Size x="27" y="27"/>
 					<Anchors>
 						<Anchor point="TOPLEFT">
 							<Offset x="1" y="-1"/>
@@ -571,8 +571,11 @@
 				<Texture name="$parent_PriceIcon1" hidden="true">
 					<Size x="12" y="12"/>
 					<Anchors>
-						<Anchor point="TOPLEFT" relativeTo="$parent_PriceText1" relativePoint="TOPRIGHT"/>
+						<Anchor point="TOPLEFT" relativeTo="$parent_PriceText1" relativePoint="TOPRIGHT">
+							<Offset x="1" y="0"/>
+						</Anchor>
 					</Anchors>
+					<TexCoords left="0.078125" right="0.90625" top="0.078125" bottom="0.90625"/>
 				</Texture>
 				<FontString name="$parent_PriceText2" inherits="GameFontNormalSmall" justifyH="RIGHT" hidden="true" text="120">
 					<Size x="20" y="12"/>
@@ -583,8 +586,11 @@
 				<Texture name="$parent_PriceIcon2" hidden="true">
 					<Size x="12" y="12"/>
 					<Anchors>
-						<Anchor point="TOPLEFT" relativeTo="$parent_PriceText2" relativePoint="TOPRIGHT"/>
+						<Anchor point="TOPLEFT" relativeTo="$parent_PriceText2" relativePoint="TOPRIGHT">
+							<Offset x="1" y="0"/>
+						</Anchor>
 					</Anchors>
+					<TexCoords left="0.078125" right="0.90625" top="0.078125" bottom="0.90625"/>
 				</Texture>
 				<FontString name="$parent_PriceText3" inherits="GameFontNormalSmall" justifyH="RIGHT" hidden="true" text="120">
 					<Size x="20" y="12"/>
@@ -595,8 +601,11 @@
 				<Texture name="$parent_PriceIcon3" hidden="true">
 					<Size x="12" y="12"/>
 					<Anchors>
-						<Anchor point="TOPLEFT" relativeTo="$parent_PriceText3" relativePoint="TOPRIGHT"/>
+						<Anchor point="TOPLEFT" relativeTo="$parent_PriceText3" relativePoint="TOPRIGHT">
+							<Offset x="1" y="0"/>
+						</Anchor>
 					</Anchors>
+					<TexCoords left="0.078125" right="0.90625" top="0.078125" bottom="0.90625"/>
 				</Texture>
 				<FontString name="$parent_PriceText4" inherits="GameFontNormalSmall" justifyH="RIGHT" hidden="true" text="120">
 					<Size x="20" y="12"/>
@@ -607,8 +616,11 @@
 				<Texture name="$parent_PriceIcon4" hidden="true">
 					<Size x="12" y="12"/>
 					<Anchors>
-						<Anchor point="TOPLEFT" relativeTo="$parent_PriceText4" relativePoint="TOPRIGHT"/>
+						<Anchor point="TOPLEFT" relativeTo="$parent_PriceText4" relativePoint="TOPRIGHT">
+							<Offset x="1" y="0"/>
+						</Anchor>
 					</Anchors>
+					<TexCoords left="0.078125" right="0.90625" top="0.078125" bottom="0.90625"/>
 				</Texture>
 				<FontString name="$parent_PriceText5" inherits="GameFontNormalSmall" justifyH="RIGHT" hidden="true" text="120">
 					<Size x="20" y="12"/>
@@ -619,8 +631,11 @@
 				<Texture name="$parent_PriceIcon5" hidden="true">
 					<Size x="12" y="12"/>
 					<Anchors>
-						<Anchor point="TOPLEFT" relativeTo="$parent_PriceText5" relativePoint="TOPRIGHT"/>
+						<Anchor point="TOPLEFT" relativeTo="$parent_PriceText5" relativePoint="TOPRIGHT">
+							<Offset x="1" y="0"/>
+						</Anchor>
 					</Anchors>
+					<TexCoords left="0.078125" right="0.90625" top="0.078125" bottom="0.90625"/>
 				</Texture>
 			</Layer>
 			<Layer level="BACKGROUND">
@@ -631,16 +646,20 @@
 					</Anchors>
 					<Color r="1" g="0" b="0" a="1"/>
 				</Texture>
-				<Texture name="$parentBorder" file="Interface\Buttons\UI-Quickslot-Depress" hidden="true">
-					<Size x="29" y="29"/>
-					<Anchors>
-						<Anchor point="TOPLEFT">
-							<Offset x="-1" y="1"/>
-						</Anchor>
-					</Anchors>
-				</Texture>
 			</Layer>
 		</Layers>
+		<Frames>
+			<Frame name="$parent_IconBorder" frameLevel="20">
+				<Size x="33" y="33"/>
+				<Anchors>
+					<Anchor point="CENTER" relativeTo="$parent_Icon"/>
+				</Anchors>
+				<Backdrop edgeFile="Interface\Tooltips\UI-Tooltip-Border">
+					<EdgeSize val="16"/>
+					<BorderColor r="1" g="1" b="1" a="1"/>
+				</Backdrop>
+			</Frame>
+		</Frames>
 	</Button>
 
 	<Button name="AtlasLootItem_Template" inherits="AtlasLootItem_ParentTemplate" virtual="true">

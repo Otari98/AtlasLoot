@@ -268,7 +268,7 @@ function AtlasLoot_OnVariablesLoaded()
 	AtlasLootDefaultFrame_SelectedCategory:SetPoint("TOP", "AtlasLootDefaultFrame_Menu", "BOTTOM", 0, -4);
 	AtlasLootDefaultFrame_SelectedTable:SetPoint("TOP", "AtlasLootDefaultFrame_SubMenu", "BOTTOM", 0, -4);
 	AtlasLootDefaultFrame_SelectedCategory:SetText(AtlasLootCharDB.LastBossText);
-	AtlasLootDefaultFrame_SelectedTable:SetText("");
+	AtlasLootDefaultFrame_SelectedTable:SetText();
 	AtlasLootDefaultFrame_SelectedCategory:Show();
 	AtlasLootDefaultFrame_SelectedTable:Show();
 	AtlasLootDefaultFrame_SubMenu:Disable();
@@ -592,7 +592,7 @@ function AtlasLoot_Refresh()
 	end
 	-- populate the scroll frame entries list, the update func will do the rest
 	Atlas_Search("");
-	AtlasSearchEditBox:SetText("");
+	AtlasSearchEditBox:SetText();
 	AtlasSearchEditBox:ClearFocus();
 	-- create and align any new entry buttons that we need
 	for i = 1,ATLAS_CUR_LINES do
@@ -1025,27 +1025,39 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 	end
 	-- Get AtlasQuest out of the way
 	if ( AtlasQuestInsideFrame ) then
-		HideUIPanel(AtlasQuestInsideFrame);
-	end
-	-- Ditch the Quicklook selector
-	AtlasLoot_QuickLooks:Hide();
-	AtlasLootQuickLooksButton:Hide();
-	AtlasLootServerQueryButton:Hide();
-	-- Hide the menu objects.  These are not required for a loot table
-	for i = 1, 30, 1 do
-		_G["AtlasLootMenuItem_"..i]:Hide();
+		AtlasQuestInsideFrame:Hide();
 	end
 	-- Store data about the state of the items frame to allow minor tweaks or a recall of the current loot page
 	AtlasLootItemsFrame.refresh = { dataID, dataSource_backup, boss, pFrame };
 	-- Escape out of this function if creating a menu, this function only handles loot tables.
 	-- Inserting escapes in this way allows consistant calling of data whether it is a loot table or a menu.
 	if ( AtlasLoot_MenuList[dataID] ) then
+		-- Ditch the Quicklook selector
+		AtlasLoot_QuickLooks:Hide();
+		AtlasLootQuickLooksButton:Hide();
+		AtlasLootServerQueryButton:Hide();
 		_G[AtlasLoot_MenuList[dataID]]()
 	else
+		-- This is a valid QuickLook, so show the UI objects
+		if ( dataID ~= "SearchResult" and dataID ~= "WishList" ) then
+			AtlasLoot_QuickLooks:Show();
+			AtlasLootQuickLooksButton:Show();
+			AtlasLootServerQueryButton:Hide();
+		end
 		-- Iterate through each item object and set its properties
 		for i = 1, 30, 1 do
+			-- Hide the menu objects.  These are not required for a loot table
+			_G["AtlasLootMenuItem_"..i]:Hide();
 			-- Check for a valid object (that it exists, and that it has a name)
 			if ( dataSource[dataID][i] and dataSource[dataID][i][3] ~= "" ) then
+				-- Use shortcuts for easier reference to parts of the item button
+				itemButton = _G["AtlasLootItem_"..i];
+				iconFrame  = _G["AtlasLootItem_"..i.."_Icon"];
+				nameFrame  = _G["AtlasLootItem_"..i.."_Name"];
+				extraFrame = _G["AtlasLootItem_"..i.."_Extra"];
+				local quantity = _G["AtlasLootItem_"..i.."_Quantity"]
+				local iconBorder = _G["AtlasLootItem_"..i.."_IconBorder"]
+				iconBorder:SetBackdropBorderColor(1, 1, 1)
 				if ( string.sub(dataSource[dataID][i][1], 1, 1) == "s" ) then
 					isItem = false;
 					isEnchant = false;
@@ -1065,17 +1077,20 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 					-- If the client has the name of the item in cache, use that instead.
 					-- This is poor man's localisation, English is replaced be whatever is needed
 					if ( itemName ) then
-						local _, _, _, itemColor = GetItemQualityColor(itemQuality);
+						local r, g, b, itemColor = GetItemQualityColor(itemQuality);
 						text = itemColor..itemName;
+						iconBorder:SetBackdropBorderColor(r, g, b)
 					else
 						if ( itemID and itemID ~= 0 ) then
 							AtlasLootCacheTooltip:SetHyperlink("item:"..itemID)
 							AtlasLootItemsFrame.refreshTime = refreshTimeout
 							AtlasLootItemsFrame.queue[itemID] = true
+							iconBorder:SetBackdropBorderColor(1, 0, 0)
 						end
 						text = AtlasLoot_FixText(dataSource[dataID][i][3]);
 					end
-					_G["AtlasLootItem_"..i.."_Quantity"]:SetText("")
+					quantity:SetText()
+					itemButton.dressingroomID = dataSource[dataID][i][1];
 				elseif ( isEnchant ) then
 					local spellID = tonumber(string.sub(dataSource[dataID][i][1], 2))
 					local craftItem = tonumber(GetSpellInfoAtlasLootDB["enchants"][spellID]["item"])
@@ -1092,7 +1107,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 					end
 					spellIcon = dataSource[dataID][i][2]
 					if ( craftItem ) then
-						local color, quality
+						local r, g, b, color, quality
 						text, _, quality = GetItemInfo(craftItem)
 						if ( not text ) then
 							if ( craftItem and craftItem ~= 0 ) then
@@ -1103,16 +1118,28 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 							text = AtlasLoot_FixText(spellName);
 						end
 						if ( quality ) then
-							_, _, _, color = GetItemQualityColor(quality)
+							r, g, b, color = GetItemQualityColor(quality)
 							text = color..(text or "")
+							iconBorder:SetBackdropBorderColor(r, g, b)
 						end
+						itemButton.dressingroomID = craftItem;
 					else
 						text = spellName
+						itemButton.dressingroomID = nil;
 					end
-					_G["AtlasLootItem_"..i.."_Quantity"]:SetText("")
+					quantity:SetText()
 				elseif ( isSpell ) then
 					local spellID = tonumber(string.sub(dataSource[dataID][i][1], 2))
 					local craftItem = tonumber(GetSpellInfoAtlasLootDB["craftspells"][spellID]["craftItem"])
+					local reagents = GetSpellInfoAtlasLootDB["craftspells"][spellID]["reagents"]
+					if ( type(reagents) == "table" ) then
+						for j = 1, table.getn(reagents) do
+							local reagent = GetSpellInfoAtlasLootDB["craftspells"][spellID]["reagents"][j]
+							if ( not GetItemInfo(reagent[1]) ) then
+								AtlasLootCacheTooltip:SetHyperlink("item:"..reagent[1]);
+							end
+						end
+					end
 					if ( SpellInfo ) then
 						spellName = SpellInfo(spellID)
 					else
@@ -1120,7 +1147,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 					end
 					spellIcon = dataSource[dataID][i][2]
 					if ( craftItem ) then
-						local color, quality
+						local r, g, b, color, quality
 						text, _, quality = GetItemInfo(craftItem)
 						if ( not text ) then
 							if ( craftItem ~= 0 ) then
@@ -1131,39 +1158,29 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 							end
 						end
 						if ( quality ) then
-							_, _, _, color = GetItemQualityColor(quality)
+							r, g, b, color = GetItemQualityColor(quality)
 							text = color..(text or "")
+							iconBorder:SetBackdropBorderColor(r, g, b)
 						end
+						itemButton.dressingroomID = craftItem;
 					else
 						text = spellName
+						itemButton.dressingroomID = nil
 					end
 					local qtyMin = GetSpellInfoAtlasLootDB["craftspells"][spellID]["craftQuantityMin"];
 					local qtyMax = GetSpellInfoAtlasLootDB["craftspells"][spellID]["craftQuantityMax"];
-					if ( qtyMin and qtyMin ~= "" ) then
-						if ( qtyMax and qtyMax ~= "" ) then
-							_G["AtlasLootItem_"..i.."_Quantity"]:SetText(qtyMin.. "-"..qtyMax)
+					if ( qtyMin ) then
+						if ( qtyMax ) then
+							quantity:SetText(qtyMin.. "-"..qtyMax)
 						else
-							_G["AtlasLootItem_"..i.."_Quantity"]:SetText(qtyMin)
+							quantity:SetText(qtyMin)
 						end
 					else
-						_G["AtlasLootItem_"..i.."_Quantity"]:SetText("")
+						quantity:SetText()
 					end
 				end
-				-- This is a valid QuickLook, so show the UI objects
-				if ( dataID ~= "SearchResult" and dataID ~= "WishList" ) then
-					AtlasLoot_QuickLooks:Show();
-					AtlasLootQuickLooksButton:Show();
-					AtlasLootServerQueryButton:Hide();
-				end
 				-- Insert the item description
-				extra = dataSource[dataID][i][4];
-				extra = AtlasLoot_FixText(extra);
-				-- Use shortcuts for easier reference to parts of the item button
-				itemButton = _G["AtlasLootItem_"..i];
-				iconFrame  = _G["AtlasLootItem_"..i.."_Icon"];
-				nameFrame  = _G["AtlasLootItem_"..i.."_Name"];
-				extraFrame = _G["AtlasLootItem_"..i.."_Extra"];
-				local border = _G["AtlasLootItem_"..i.."Border"]
+				extra = AtlasLoot_FixText(dataSource[dataID][i][4]);
 				local iconData = dataSource[dataID][i][2]
 				-- If there is no data on the texture an item should have, show a big red question mark
 				if ( strsub(iconData, 1, 5) == "CLASS" ) then
@@ -1193,6 +1210,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 				nameFrame:SetText(text);
 				extraFrame:SetText(extra);
 				extraFrame:Show();
+				-- Set prices for items, up to 5 different currencies can be used in combination
 				for j = 1, 5 do
 					_G["AtlasLootItem_"..i.."_PriceText"..j]:Hide();
 					_G["AtlasLootItem_"..i.."_PriceIcon"..j]:Hide();
@@ -1209,7 +1227,6 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 					end
 					index = index + 1
 				end
-				-- Set prices for items, up to 5 different currencies can be used in combination
 				if ( (dataID == "SearchResult" or dataID == "WishList") and dataSource[dataID][i][5] ) then
 					local _, _, wishDataID, wishDataSource = strfind(dataSource[dataID][i][5], "(.+)|(.+)")
 					if ( wishDataSource == "AtlasLootRepItems" ) then
@@ -1233,14 +1250,12 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 							end
 						end
 					end
-
 					if ( wishDataSource == "AtlasLootItems" and AtlasLootCharDB.WishlistGroupedByDungeon ) then
 						-- Set boss
 						if ( wishDataID and AtlasLoot_IsLootTableAvailable(wishDataID) ) then
 							for _, v in ipairs(AtlasLoot_Data[wishDataSource][wishDataID]) do
 								if ( dataSource[dataID][i][1] == v[1] ) then
 									local boss = AtlasLoot_GetWishListSubheadingBoss(wishDataID)
-
 									if ( boss ) then
 										extraFrame:SetText(extra .. " - "..boss)
 									end
@@ -1249,44 +1264,16 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 						end
 					end
 				end
-
 				-- For convenience, we store information about the objects in the objects so that it can be easily accessed later
 				itemButton.itemID = dataSource[dataID][i][1];
 				itemButton.itemIDName = dataSource[dataID][i][3];
 				itemButton.itemIDExtra = dataSource[dataID][i][4];
 				itemButton.container = dataSource[dataID][i][16]
 				if ( type(itemButton.container) == "table" ) then
-					border:Show()
+					iconBorder:SetBackdropBorderColor(1, 0.82, 0)
 					for row = 1, getn(itemButton.container) do
 						for item = 1, getn(itemButton.container[row]) do
 							AtlasLoot_CacheItem(itemButton.container[row][item][1])
-						end
-					end
-				else
-					border:Hide()
-				end
-
-				if ( isItem ) then
-					itemButton.dressingroomID = dataSource[dataID][i][1];
-				elseif ( isEnchant ) then
-					local spellID = tonumber(string.sub(dataSource[dataID][i][1], 2));
-					local craftItem = GetSpellInfoAtlasLootDB["enchants"][spellID]["item"]
-					if ( craftItem and craftItem ~= "" ) then
-						itemButton.dressingroomID = craftItem;
-					else
-						itemButton.dressingroomID = spellID;
-					end
-				elseif ( isSpell ) then
-					local spellID = tonumber(string.sub(dataSource[dataID][i][1], 2));
-					local craftItem = GetSpellInfoAtlasLootDB["craftspells"][spellID]["craftItem"]
-					itemButton.dressingroomID = craftItem;
-					local reagents = GetSpellInfoAtlasLootDB["craftspells"][spellID]["reagents"]
-					if ( type(reagents) == "table" ) then
-						for j = 1, table.getn(reagents) do
-							local reagent = GetSpellInfoAtlasLootDB["craftspells"][spellID]["reagents"][j]
-							if ( not GetItemInfo(reagent[1]) ) then
-								AtlasLootCacheTooltip:SetHyperlink("item:"..reagent[1]);
-							end
 						end
 					end
 				end
@@ -1444,7 +1431,7 @@ function AtlasLoot_HewdropClick(tablename, text, tabletype)
 		AtlasLootCharDB.LastBossText = text;
 		-- Purge the text label for the submenu and disable the submenu
 		AtlasLootDefaultFrame_SubMenu:Disable();
-		AtlasLootDefaultFrame_SelectedTable:SetText("");
+		AtlasLootDefaultFrame_SelectedTable:SetText();
 		AtlasLootDefaultFrame_SelectedTable:Show();
 	-- If the button links to a sub menu definition
 	else
@@ -1673,7 +1660,7 @@ function AtlasLoot_OpenMenu(menuName)
 	AtlasLootServerQueryButton:Hide();
 	AtlasLootDefaultFrame_SelectedCategory:SetText(menuName)
 	AtlasLootDefaultFrame_SubMenu:Disable();
-	AtlasLootDefaultFrame_SelectedTable:SetText("");
+	AtlasLootDefaultFrame_SelectedTable:SetText();
 	AtlasLootDefaultFrame_SelectedTable:Show();
 	AtlasLootCharDB.LastBoss = this.lootpage;
 	AtlasLootCharDB.LastBossText = menuName;
@@ -2844,7 +2831,7 @@ function AtlasLootItem_OnEnter()
 	AtlasLootTooltip:ClearLines();
 	for i = 1, 30, 1 do
 		if ( _G["AtlasLootTooltipTextRight"..i] ) then
-			_G["AtlasLootTooltipTextRight"..i]:SetText("");
+			_G["AtlasLootTooltipTextRight"..i]:SetText();
 		end
 	end
 	if ( not ( this.itemID and this.itemID ~= 0 ) ) then
@@ -3518,8 +3505,8 @@ function AtlasLoot_SayItemReagents(id, color, name, safe)
 			local craftnumber = "";
 			local qtyMin = GetSpellInfoAtlasLootDB["craftspells"][spellID]["craftQuantityMin"];
 			local qtyMax = GetSpellInfoAtlasLootDB["craftspells"][spellID]["craftQuantityMax"];
-			if ( qtyMin and qtyMin ~= "" ) then
-				if ( qtyMax and qtyMax ~= "" ) then
+			if ( qtyMin ) then
+				if ( qtyMax ) then
 					craftnumber = craftnumber..qtyMin.. "-"..qtyMax.."x"
 				else
 					craftnumber = craftnumber..qtyMin.."x"
