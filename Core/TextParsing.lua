@@ -155,23 +155,12 @@ local TextMap = {
 	["#m11#"] = AL["28 Slot Soul"],
 	["#m12#"] = AL["18 Slot"],
 	["#m13#"] = AL["10 Slot"],
-	["#m14#"] = AL["(300)"],
-	["#m15#"] = AL["(295)"],
-	["#m16#"] = AL["(275)"],
-	["#m17#"] = AL["(265)"],
-	["#m18#"] = AL["(290)"],
 	["#m19#"] = AL["Set"],
-	["#m20#"] = AL["(285)"],
 	["#m21#"] = AL["16 Slot"],
 	["#m22#"] = AL["Schematic: Field Repair Bot 74A"],
 	["#m23#"] = AL["Container"],
 	["#m24#"] = AL["Blacksmithing Plans"],
 	["#m25#"] = AL["Consumable"],
-	["#m26#"] = AL["(185)"],
-	["#m27#"] = AL["(160)"],
-	["#m28#"] = AL["(125)"],
-	["#m29#"] = AL["(200)"],
-	["#m30#"] = AL["(1)"],
 	["#m31#"] = AL["Reagent"],
 	["#m32#"] = AL["Binds when picked up"],
 	["#m33#"] = AL["Misc"],
@@ -182,7 +171,6 @@ local TextMap = {
 	["#m38#"] = AL["Coin"],
 	["#m39#"] = AL["Bijou"],
 	["#m40#"] = AL["Doll"],
-	["#m41#"] = AL["(250)"],
 	-- Random names
 	["#x1#"] = AL["Lord Cobrahn"],
 	["#x2#"] = AL["Lady Anacondra"],
@@ -611,18 +599,25 @@ local TextMap = {
 }
 
 local gsub = string.gsub
+local SortedTextMap = {}
+for k, v in pairs(TextMap) do
+	tinsert(SortedTextMap, { key = k, value = v })
+end
+table.sort(SortedTextMap, function(a,b) return strlen(a.value) > strlen(b.value) end)
 
 function AtlasLoot_FixText(text)
-	for k, v in pairs(TextMap) do
-		text = gsub(text, k, v)
+	if not text then return nil end
+	for k, v in ipairs(SortedTextMap) do
+		text = gsub(text, v.key, v.value)
 	end
 	return text
 end
 
 function AtlasLoot_CompressText(text)
-	for k, v in pairs(TextMap) do
-		local _v = gsub(v, "([%(%)%-%+%*%%%?%.%$%^])", "%%%1")
-		text = gsub(text, _v, k)
+	if not text then return nil end
+	for k, v in ipairs(SortedTextMap) do
+		local _v = gsub(v.value, "([%(%)%-%+%*%%%?%.%$%^])", "%%%1")
+		text = gsub(text, _v, v.key)
 	end
 	return text
 end

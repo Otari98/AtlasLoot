@@ -288,10 +288,10 @@ AtlasLoot_Data["AtlasLootBGItems"] = {
 		{ 60006, "INV_Jewelry_Ring_23", "=q4=Ring of Blood", "=ds=#s13#" },
 	};
 	BRRepTokens = {
-		{ 53017, "INV_Misc_Note_01", "=q3=Formula: Enchant Gloves - Major Strength", "=ds=#p4# #m14#" },
-		{ 61803, "INV_Scroll_05", "=q3=Plans: Bloody Belt Buckle", "=ds=#p2# #m14#" },
-		{ 61799, "INV_Scroll_04", "=q4=Plans: Ornate Bloodstone Dagger", "=ds=#p2# #m14#" },
-		{ 53016, "INV_Scroll_03", "=q3=Recipe: Gurubashi Gumbo", "=ds=#p3# #m14#" },
+		{ 53017, "INV_Misc_Note_01", "=q3=Formula: Enchant Gloves - Major Strength", "=ds=#p4# (300)" },
+		{ 61803, "INV_Scroll_05", "=q3=Plans: Bloody Belt Buckle", "=ds=#p2# (300)" },
+		{ 61799, "INV_Scroll_04", "=q4=Plans: Ornate Bloodstone Dagger", "=ds=#p2# (300)" },
+		{ 53016, "INV_Scroll_03", "=q3=Recipe: Gurubashi Gumbo", "=ds=#p3# (300)" },
 	};
 	AVRepFriendly = {
 		{ 0, "INV_BannerPVP_02", "=q8=#m7#", "=q7=#b1#" },

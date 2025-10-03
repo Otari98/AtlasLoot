@@ -2,13 +2,10 @@
 
 AL:RegisterTranslations("koKR", function() return {
     [" is safe."] = " 은 이제 안전합니다.",
-    ["(has random enchantment)"] = "(렌덤 마법부여)",
-    [").  Depending on changes, there may be the occasional error, so please visit http://www.atlasmod.com as soon as possible to update."] = ").  버전 일치가 안되서 에러가 있을지도 모릅니다.가능한 빨리 http://www.atlasmod.com를 방문해서 최신 버전으로 업데이트를 해주시기 바랍니다.",
     [".  Right click on any other item to refresh the loot page."] = "에 대한 정보를 요청합니다.  다른 아이템을 우클릭하면 페이지가 수정됩니다.",
     ["10 Slot"] = "10칸",
     ["16 Slot"] = "16칸",
     ["18 Slot"] = "18칸",
-    ["28 Slot Soul Shard"] = "28 칸 영혼",
     ["AQ Enchants"] = "안퀴라즈 마법부여",
     ["AQ Opening Quest Chain"] = "안퀴라즈 열기 연퀘",
     ["AQ20 Class Sets"] = "안퀴라즈 폐허 직업 세트",

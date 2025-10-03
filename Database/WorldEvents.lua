@@ -110,7 +110,7 @@ AtlasLoot_Data["AtlasLootWorldEvents"] = {
 		{ 80843, "INV_Boots_Cloth_03", "=q3=Tideturner Boots", "=ds=#s12#, #a1#", "15%" },
 		{ 18679, "INV_Jewelry_Ring_29", "=q2=Frigid Ring", "=ds=#s13#", "50%" },
 		{ 80844, "INV_Misc_Gem_Sapphire_01", "=q2=Tempestria's Frozen Heart", "=ds=#s15#", "15%" },
-		{ 21548, "INV_Scroll_03", "=q3=Pattern: Stormshroud Gloves", "=ds=#p7# #m14#", "20%" },
+		{ 21548, "INV_Scroll_03", "=q3=Pattern: Stormshroud Gloves", "=ds=#p7# (300)", "20%" },
 		{ 0,"","","" },
 		{ 0, "Spell_Fire_Elemental_Totem", "=q6=#x93#", "=q1=#j17#, Azshara" },
 		{ 83551, "INV_Stone_14", "=q4=Evershifting Stone", "=ds=#m33#", "100%" },
@@ -125,7 +125,7 @@ AtlasLoot_Data["AtlasLootWorldEvents"] = {
 		{ 80853, "INV_Jewelry_Necklace_07", "=q3=Thunderstruck Talisman", "=ds=#s2#", "15%" },
 		{ 18677, "INV_Misc_Cape_13", "=q2=Zephyr Cloak", "=ds=#s4#", "58%" },
 		{ 80854, "INV_Misc_Gem_Pearl_06", "=q2=Wind Kissed Crystal", "=ds=#s15#", "15%" },
-		{ 21548, "INV_Scroll_03", "=q3=Pattern: Stormshroud Gloves", "=ds=#p7# #m14#", "31%" },
+		{ 21548, "INV_Scroll_03", "=q3=Pattern: Stormshroud Gloves", "=ds=#p7# (300)", "31%" },
 	};
 	GurubashiArena = {
 		{ 0,"","","" },
