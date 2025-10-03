@@ -3213,7 +3213,7 @@ function AtlasLootItem_OnClick(arg1)
 			else
 				AtlasLoot_AddToWishlist(this.itemID, texture, this.itemIDName, this.itemIDExtra, dataID.."|"..dataSource);
 			end
-		elseif ( IsControlKeyDown() ) then
+		elseif ( IsControlKeyDown() and this.dressingroomID ) then
 			DressUpItemLink("item:"..this.dressingroomID..":0:0:0");
 		elseif ( (dataID == "SearchResult" or dataID == "WishList") and this.sourcePage ) then
 			local _, _, dataID, dataSource = strfind(this.sourcePage, "(.+)|(.+)");
@@ -3249,7 +3249,7 @@ function AtlasLootItem_OnClick(arg1)
 			else
 				AtlasLoot_AddToWishlist(this.itemID, texture, this.itemIDName, this.itemIDExtra, dataID.."|"..dataSource);
 			end
-		elseif ( IsControlKeyDown() ) then
+		elseif ( IsControlKeyDown() and this.dressingroomID ) then
 			DressUpItemLink("item:"..this.dressingroomID..":0:0:0");
 		elseif ( (dataID == "SearchResult" or dataID == "WishList") and this.sourcePage ) then
 			local _, _, dataID, dataSource = strfind(this.sourcePage, "(.+)|(.+)");
