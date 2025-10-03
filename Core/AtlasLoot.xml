@@ -649,7 +649,7 @@
 			</Layer>
 		</Layers>
 		<Frames>
-			<Frame name="$parent_IconBorder" frameLevel="20">
+			<Frame name="$parent_IconBorder" frameLevel="30">
 				<Size x="33" y="33"/>
 				<Anchors>
 					<Anchor point="CENTER" relativeTo="$parent_Icon"/>
