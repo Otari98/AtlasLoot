@@ -19,7 +19,7 @@ AtlasLoot_ShowWishList()
 Displays the WishList
 ]]
 function AtlasLoot_ShowWishList()
-	AtlasLoot_ShowItemsFrame("WishList", "WishListPage"..currentPage, AL["WishList"], AtlasLoot_AnchorPoint);
+	AtlasLoot_ShowItemsFrame("WishList", "WishListPage"..currentPage, AL["WishList"]);
     CloseDropDownMenus();
     AtlasLootDefaultFrame_SubMenu:Disable()
     AtlasLootDefaultFrame_SelectedTable:Hide()
@@ -58,7 +58,7 @@ function AtlasLoot_DeleteFromWishList(itemID)
 	end
 	AtlasLoot_WishList = AtlasLoot_CategorizeWishList(AtlasLootCharDB["WishList"]);
 	AtlasLootItemsFrame:Hide();
-	AtlasLoot_ShowItemsFrame("WishList", "WishListPage"..currentPage, AL["WishList"], AtlasLoot_AnchorPoint);
+	AtlasLoot_ShowItemsFrame("WishList", "WishListPage"..currentPage, AL["WishList"]);
 end
 
 --[[

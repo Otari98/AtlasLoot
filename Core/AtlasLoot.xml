@@ -143,25 +143,6 @@
 					</OnShow>
 				</Scripts>
 			</Button>
-			<Frame name="$parent_LootBackground">
-				<Size x="515" y="515"/>
-				<Anchors>
-					<Anchor point="BOTTOM">
-						<Offset x="0" y="90"/>
-					</Anchor>
-				</Anchors>
-				<Layers>
-					<Layer level="BACKGROUND">
-						<Texture name="$parent_Back">
-							<Anchors>
-								<Anchor point="TOPLEFT"/>
-								<Anchor point="BOTTOMRIGHT"/>
-							</Anchors>
-							<Color r="0" g="0" b="0" a="0"/>
-						</Texture>
-					</Layer>
-				</Layers>
-			</Frame>
 			<Button name="$parent_Preset1" inherits="AtlasLootDefaultFrameButtonTemplate">
 				<Anchors>
 					<Anchor point="BOTTOMLEFT" relativeTo="$parent" relativePoint="BOTTOMLEFT">
@@ -490,39 +471,11 @@
 		</Scripts>
 	</Button>
 
-	<Button name="AtlasLootNextButtonTemplate" virtual="true" hidden="true" frameStrata="MEDIUM">
-		<Size x="32" y="32"/>
-		<NormalTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Up"/>
-		<PushedTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Down"/>
-		<DisabledTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Disabled"/>
-		<HighlightTexture file="Interface\Buttons\UI-Common-MouseHilight" alphaMode="ADD"/>
-	</Button>
-
-	<Button name="AtlasLootPrevButtonTemplate" virtual="true" hidden="true" frameStrata="MEDIUM">
-		<Size x="32" y="32"/>
-		<NormalTexture file="Interface\Buttons\UI-SpellbookIcon-PrevPage-Up"/>
-		<PushedTexture file="Interface\Buttons\UI-SpellbookIcon-PrevPage-Down"/>
-		<DisabledTexture file="Interface\Buttons\UI-SpellbookIcon-PrevPage-Disabled"/>
-		<HighlightTexture file="Interface\Buttons\UI-Common-MouseHilight" alphaMode="ADD"/>
-	</Button>
-
-	<Button name="AtlasLootClassButtonTemplate" inherits="OptionsButtonTemplate" virtual="true" hidden="true">
-		<Scripts>
-			<OnClick>
-				AtlasLoot_NavButton_OnClick();
-				CloseDropDownMenus();
-			</OnClick>
-			<OnShow>
-				this:SetFrameLevel((this:GetParent()):GetFrameLevel() + 1);
-			</OnShow>
-		</Scripts>
-	</Button>
-
 	<Button name="AtlasLootPanelButtonTemplate" inherits="OptionsButtonTemplate" virtual="true">
 		<Size x="120" y="20"/>
 	</Button>
 
-	<Button name="AtlasLootItem_ParentTemplate" virtual="true">
+	<Button name="AtlasLootItem_ParentTemplate" toplevel="true" virtual="true">
 		<Size x="236" y="28"/>
 		<HighlightTexture file="Interface\QuestFrame\UI-QuestTitleHighlight" alphaMode="ADD"/>
 		<Layers>
@@ -647,19 +600,16 @@
 					<Color r="1" g="0" b="0" a="1"/>
 				</Texture>
 			</Layer>
+			<Layer level="OVERLAY">
+				<Texture name="$parent_IconBorder" file="Interface\AddOns\AtlasLoot\Images\border">
+					<Size x="33" y="33"/>
+					<Anchors>
+						<Anchor point="CENTER" relativeTo="$parent_Icon"/>
+					</Anchors>
+					<Color r="1" g="1" b="1" a="1"/>
+				</Texture>
+			</Layer>
 		</Layers>
-		<Frames>
-			<Frame name="$parent_IconBorder" frameLevel="30">
-				<Size x="33" y="33"/>
-				<Anchors>
-					<Anchor point="CENTER" relativeTo="$parent_Icon"/>
-				</Anchors>
-				<Backdrop edgeFile="Interface\Tooltips\UI-Tooltip-Border">
-					<EdgeSize val="16"/>
-					<BorderColor r="1" g="1" b="1" a="1"/>
-				</Backdrop>
-			</Frame>
-		</Frames>
 	</Button>
 
 	<Button name="AtlasLootItem_Template" inherits="AtlasLootItem_ParentTemplate" virtual="true">
@@ -677,9 +627,6 @@
 				AtlasLootItem_OnClick(arg1);
 				CloseDropDownMenus();
 			</OnClick>
-			<OnShow>
-				this:SetFrameLevel((this:GetParent()):GetFrameLevel() + 1);
-			</OnShow>
 		</Scripts>
 	</Button>
 
@@ -1100,14 +1047,43 @@
 					<Anchor point="TOPLEFT" relativeTo="AtlasLootItem_29" relativePoint="BOTTOMLEFT"/>
 				</Anchors>
 			</Button>
-			<Button name="$parent_BACK" inherits="AtlasLootClassButtonTemplate" hidden="true">
+			<Button name="$parent_BACK" toplevel="true" inherits="OptionsButtonTemplate" hidden="true">
 				<Anchors>
 					<Anchor point="BOTTOM">
 						<Offset x="0" y="8"/>
 					</Anchor>
 				</Anchors>
+				<Scripts>
+					<OnClick>
+						AtlasLoot_NavButton_OnClick();
+						CloseDropDownMenus();
+					</OnClick>
+				</Scripts>
 			</Button>
-			<Button name="$parent_NEXT" inherits="AtlasLootNextButtonTemplate">
+			<Button name="$parent_PREV" toplevel="true" inherits="AtlasLootPrevButtonTemplate">
+				<Size x="32" y="32"/>
+				<NormalTexture file="Interface\Buttons\UI-SpellbookIcon-PrevPage-Up"/>
+				<PushedTexture file="Interface\Buttons\UI-SpellbookIcon-PrevPage-Down"/>
+				<DisabledTexture file="Interface\Buttons\UI-SpellbookIcon-PrevPage-Disabled"/>
+				<HighlightTexture file="Interface\Buttons\UI-Common-MouseHilight" alphaMode="ADD"/>
+				<Anchors>
+					<Anchor point="BOTTOMLEFT" relativeTo="$parent" relativePoint="BOTTOMLEFT">
+						<Offset x="12" y="8"/>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						AtlasLoot_NavButton_OnClick();
+						CloseDropDownMenus();
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="$parent_NEXT" toplevel="true" inherits="AtlasLootNextButtonTemplate">
+				<Size x="32" y="32"/>
+				<NormalTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Up"/>
+				<PushedTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Down"/>
+				<DisabledTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Disabled"/>
+				<HighlightTexture file="Interface\Buttons\UI-Common-MouseHilight" alphaMode="ADD"/>
 				<Anchors>
 					<Anchor point="BOTTOMRIGHT">
 						<Offset x="-5" y="5"/>
@@ -1180,22 +1156,6 @@
 					<OnClick>
 						AtlasLoot_ShowQuickLooks(this);
 					</OnClick>
-				</Scripts>
-			</Button>
-			<Button name="$parent_PREV" inherits="AtlasLootPrevButtonTemplate">
-				<Anchors>
-					<Anchor point="BOTTOMLEFT" relativeTo="$parent" relativePoint="BOTTOMLEFT">
-						<Offset x="12" y="8"/>
-					</Anchor>
-				</Anchors>
-				<Scripts>
-					<OnClick>
-						AtlasLoot_NavButton_OnClick();
-						CloseDropDownMenus();
-					</OnClick>
-					<OnShow>
-						this:SetFrameLevel((this:GetParent()):GetFrameLevel() + 1);
-					</OnShow>
 				</Scripts>
 			</Button>
 			<Frame name="$parentContainer" enableMouse="true" frameStrata="TOOLTIP" hidden="true" toplevel="true" movable="true" clampedToScreen="true">

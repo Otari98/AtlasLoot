@@ -11,7 +11,7 @@ local currentPage = 1;
 local SearchResult = nil;
 
 function AtlasLoot:ShowSearchResult()
-	AtlasLoot_ShowItemsFrame("SearchResult", "SearchResultPage"..currentPage, string.format((AL["Search Result: %s"]), AtlasLootCharDB.LastSearchedText or ""), AtlasLoot_AnchorPoint);
+	AtlasLoot_ShowItemsFrame("SearchResult", "SearchResultPage"..currentPage, string.format((AL["Search Result: %s"]), AtlasLootCharDB.LastSearchedText or ""));
 end
 
 local function strtrim(s)
@@ -101,7 +101,7 @@ function AtlasLoot:Search(Text)
 	else
 		currentPage = 1;
 		SearchResult = AtlasLoot_CategorizeWishList(AtlasLootCharDB["SearchResult"]);
-		AtlasLoot_ShowItemsFrame("SearchResult", "SearchResultPage1", string.format((AL["Search Result: %s"]), AtlasLootCharDB.LastSearchedText or ""), AtlasLoot_AnchorPoint);
+		AtlasLoot_ShowItemsFrame("SearchResult", "SearchResultPage1", string.format((AL["Search Result: %s"]), AtlasLootCharDB.LastSearchedText or ""));
 	end
 end
 
