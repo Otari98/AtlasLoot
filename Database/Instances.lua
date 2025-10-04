@@ -3613,11 +3613,13 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 6465, "INV_Chest_Cloth_36", "=q2=Robe of the Moccasin", "=ds=#s5#, #a1#", "33%" },
 	};
 	WCLadyAnacondra = {
-		{ 10412, "INV_Belt_30", "=q2=Belt of the Fang", "=ds=#s10#, #a2#", "25%" },
 		{  5404, "INV_Shoulder_08", "=q1=Serpent's Shoulders", "=ds=#s3#, #a2#", "25%" },
-		{  6446, "INV_Misc_Bag_12", "=q1=Snakeskin Bag", "=ds=#m13# #e10#", "25%" },
-		{	 0, "", "", "" },
 		{ 80709, "INV_STAFF_28", "=q3=Guardian Staff", "=ds=#h2#, #w9#", "25%" },
+		{ 10412, "INV_Belt_30", "=q2=Belt of the Fang", "=ds=#s10#, #a2#", "25%" },
+		{  6446, "INV_Misc_Bag_12", "=q1=Snakeskin Bag", "=ds=#m13# #e10#", "25%" },
+		{ 0, "", "", "" },
+		{ 2190, "INV_Chest_Cloth_20", "=q2=Snakeswarm Robe", "=ds=#lvl1#" },
+		{ 2189, "INV_Shirt_17", "=q2=Serpent Scale Mantle", "=ds=#lvl1#" },
 	};
 	WCKresh = {
 		{ 13245, "INV_Shield_18", "=q3=Kresh's Back", "=ds=#w8#", "33%" },
