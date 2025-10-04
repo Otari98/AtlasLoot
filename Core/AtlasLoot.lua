@@ -268,7 +268,7 @@ function AtlasLoot_OnVariablesLoaded()
 	AtlasLootDefaultFrame_SelectedCategory:SetPoint("TOP", "AtlasLootDefaultFrame_Menu", "BOTTOM", 0, -4);
 	AtlasLootDefaultFrame_SelectedTable:SetPoint("TOP", "AtlasLootDefaultFrame_SubMenu", "BOTTOM", 0, -4);
 	AtlasLootDefaultFrame_SelectedCategory:SetText(AtlasLootCharDB.LastBossText);
-	AtlasLootDefaultFrame_SelectedTable:SetText();
+	AtlasLootDefaultFrame_SelectedTable:SetText("");
 	AtlasLootDefaultFrame_SelectedCategory:Show();
 	AtlasLootDefaultFrame_SelectedTable:Show();
 	AtlasLootDefaultFrame_SubMenu:Disable();
@@ -592,7 +592,7 @@ function AtlasLoot_Refresh()
 	end
 	-- populate the scroll frame entries list, the update func will do the rest
 	Atlas_Search("");
-	AtlasSearchEditBox:SetText();
+	AtlasSearchEditBox:SetText("");
 	AtlasSearchEditBox:ClearFocus();
 	-- create and align any new entry buttons that we need
 	for i = 1,ATLAS_CUR_LINES do
@@ -1089,7 +1089,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 						end
 						text = AtlasLoot_FixText(dataSource[dataID][i][3]);
 					end
-					quantity:SetText()
+					quantity:SetText("")
 					itemButton.dressingroomID = dataSource[dataID][i][1];
 				elseif ( isEnchant ) then
 					local spellID = tonumber(string.sub(dataSource[dataID][i][1], 2))
@@ -1127,7 +1127,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 						text = spellName
 						itemButton.dressingroomID = nil;
 					end
-					quantity:SetText()
+					quantity:SetText("")
 				elseif ( isSpell ) then
 					local spellID = tonumber(string.sub(dataSource[dataID][i][1], 2))
 					local craftItem = tonumber(GetSpellInfoAtlasLootDB["craftspells"][spellID]["craftItem"])
@@ -1176,7 +1176,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 							quantity:SetText(qtyMin)
 						end
 					else
-						quantity:SetText()
+						quantity:SetText("")
 					end
 				end
 				-- Insert the item description
@@ -1431,7 +1431,7 @@ function AtlasLoot_HewdropClick(tablename, text, tabletype)
 		AtlasLootCharDB.LastBossText = text;
 		-- Purge the text label for the submenu and disable the submenu
 		AtlasLootDefaultFrame_SubMenu:Disable();
-		AtlasLootDefaultFrame_SelectedTable:SetText();
+		AtlasLootDefaultFrame_SelectedTable:SetText("");
 		AtlasLootDefaultFrame_SelectedTable:Show();
 	-- If the button links to a sub menu definition
 	else
@@ -1660,7 +1660,7 @@ function AtlasLoot_OpenMenu(menuName)
 	AtlasLootServerQueryButton:Hide();
 	AtlasLootDefaultFrame_SelectedCategory:SetText(menuName)
 	AtlasLootDefaultFrame_SubMenu:Disable();
-	AtlasLootDefaultFrame_SelectedTable:SetText();
+	AtlasLootDefaultFrame_SelectedTable:SetText("");
 	AtlasLootDefaultFrame_SelectedTable:Show();
 	AtlasLootCharDB.LastBoss = this.lootpage;
 	AtlasLootCharDB.LastBossText = menuName;
@@ -1786,7 +1786,7 @@ function AtlasLoot_NavButton_OnClick()
 		if ( this.lootpage == k ) then
 			AtlasLootDefaultFrame_SubMenu:Disable();
 			AtlasLootDefaultFrame_SelectedCategory:SetText(AtlasLootCharDB.LastBossText)
-			AtlasLootDefaultFrame_SelectedTable:SetText()
+			AtlasLootDefaultFrame_SelectedTable:SetText("")
 		end
 	end
 end
@@ -2831,7 +2831,7 @@ function AtlasLootItem_OnEnter()
 	AtlasLootTooltip:ClearLines();
 	for i = 1, 30, 1 do
 		if ( _G["AtlasLootTooltipTextRight"..i] ) then
-			_G["AtlasLootTooltipTextRight"..i]:SetText();
+			_G["AtlasLootTooltipTextRight"..i]:SetText("");
 		end
 	end
 	if ( not ( this.itemID and this.itemID ~= 0 ) ) then
