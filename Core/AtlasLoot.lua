@@ -1039,14 +1039,12 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss)
 		-- Ditch the Quicklook selector
 		AtlasLoot_QuickLooks:Hide();
 		AtlasLootQuickLooksButton:Hide();
-		AtlasLootServerQueryButton:Hide();
 		_G[AtlasLoot_MenuList[dataID]]()
 	else
 		-- This is a valid QuickLook, so show the UI objects
 		if ( dataID ~= "SearchResult" and dataID ~= "WishList" ) then
 			AtlasLoot_QuickLooks:Show();
 			AtlasLootQuickLooksButton:Show();
-			AtlasLootServerQueryButton:Hide();
 		end
 		-- Iterate through each item object and set its properties
 		for i = 1, 30, 1 do
@@ -1643,7 +1641,6 @@ end
 function AtlasLoot_OpenMenu(menuName)
 	AtlasLoot_QuickLooks:Hide();
 	AtlasLootQuickLooksButton:Hide();
-	AtlasLootServerQueryButton:Hide();
 	AtlasLootDefaultFrame_SelectedCategory:SetText(menuName)
 	AtlasLootDefaultFrame_SubMenu:Disable();
 	AtlasLootDefaultFrame_SelectedTable:SetText("");

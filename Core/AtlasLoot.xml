@@ -1099,7 +1099,7 @@
 					</OnShow>
 				</Scripts>
 			</Button>
-			<Button name="AtlasLootServerQueryButton" inherits="OptionsButtonTemplate">
+			<Button name="AtlasLootServerQueryButton" inherits="OptionsButtonTemplate" hidden="true">
 				<Size x="100" y="23"/>
 				<Anchors>
 					<Anchor point="BOTTOM">
