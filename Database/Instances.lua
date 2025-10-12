@@ -8393,7 +8393,6 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 41939, "INV_Jewelry_Necklace_05", "=q1=Broken Bloodstone Pendant", "#m2#", "100%" },
 	},
 	SWRTrash = {
-		{ 1992, "INV_Misc_Bone_OrcSkull_01", "=q3=Swampchill Fetish", "#s15#", "0.02%" },
 		{ 2262, "INV_Jewelry_Ring_15", "=q3=Mark of Kern", "#s13#", "0.02%" },
 		{ 5756, "INV_Weapon_ShortBlade_24", "=q3=Sliverblade", "#h1#, #w4#", "0.02%" },
 		{ 5819, "INV_Helmet_03", "=q3=Sunblaze Coif", "#s1#, #a3#", "0.02%" },
@@ -8414,10 +8413,15 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 7787, "INV_Shield_02", "=q3=Resplendent Guardian", "#h4#, #w8#", "0.02%" },
 		{ 8225, "INV_Sword_30", "=q3=Tainted Pierce", "#h1#, #w10#", "0.02%" },
 		{ 8226, "INV_Sword_18", "=q3=The Butcher", "#h3#, #w10#", "0.02%" },
+		{ 58294, "INV_Gauntlets_23", "=q3=Sporeblight Talons", "#s9#, #a2#", "0.0125%" },
+		{ 58295, "INV_Helmet_11", "=q3=Fel-Touched Crown", "#s1#, #a3#", "0.0125%" },
+		{ 58296, "INV_Boots_01", "=q3=Boots of the Slime Path", "#s12#, #a3#", "0.0125%" },
+		{ 58297, "INV_Belt_11", "=q3=Mindburrow Girdle", "#s10#, #a1#", "0.0125%" },
+		{ 58298, "INV_Misc_Eye_01", "=q3=Eye of the Forgotten Depths", "#s14#", "0.0125%" },
+		{ 58299, "INV_Shoulder_05", "=q3=Invoker's Hollow Mantle", "#s3#, #a1#", "0.0125%" },
+		{ 58300, "INV_Jewelry_Ring_13", "=q3=Whispershard Ring", "#s13#", "0.0125%" },
+		{ 58301, "Spell_Shadow_AntiShadow", "=q3=Shadowbind Sigil", "#s14#", "0.0125%" },
 		{ 58131, "INV_Belt_12", "=q2=Stormreaver Belt", "#s10#, #a1#", "0.11%" },
 		{ 58178, "INV_Boots_05", "=q2=Stormreaver Boots", "#s12#, #a1#", "0.11%" },
-		{ 0, "", "", "" },
-		{ 30025, "Ability_Hunter_Pet_Scorpid", "=q3=Silver Riding Scorpid", "#e7#", "1%" },
-		{ 30040, "Ability_Hunter_Pet_Turtle", "=q3=Admiral Grumbleshell", "#e7#", "5%" },
 	};
 };
