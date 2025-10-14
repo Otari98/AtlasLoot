@@ -661,23 +661,13 @@
 						this:SetText(AL["AL Panel"]);
 					</OnShow>
 					<OnClick>
-						if AtlasLootCharDB.HidePanel then
-							AtlasLootCharDB.HidePanel = false;
-							if (AtlasFrame) then
-								if AtlasFrame:IsVisible() then
-									AtlasLootPanel:Show();
-								end
-							end
+						if AtlasLootPanel:IsShown() then
+							AtlasLootPanel:Hide()
 						else
-							AtlasLootCharDB.HidePanel = true;
-							if (AtlasFrame) then
-								if AtlasFrame:IsVisible() then
-									AtlasLootPanel:Hide();
-								end
-							end
+							AtlasLootPanel:Show()
 						end
+						AtlasLootCharDB.HidePanel = not AtlasLootPanel:IsShown()
 						AtlasLootOptionsFrameHidePanel:SetChecked(AtlasLootCharDB.HidePanel);
-						AtlasLoot_SetupForAtlas();
 					</OnClick>
 				</Scripts>
 			</Button>
