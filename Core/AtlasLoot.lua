@@ -112,6 +112,762 @@ AtlasLoot_MenuList = {
 	["WORLDBOSSMENU"] = "AtlasLoot_WorldBossMenu",
 };
 
+-- This is a multi-layer table defining the main loot listing.
+-- Entries have the text to display, loot table or sub table to link to and if the link is to a loot table or sub table
+AtlasLoot_HewdropDown = {
+	{[AL["Dungeons & Raids"]] = {
+			{{ AL["[13-18] Ragefire Chasm"], "RagefireChasm", "Submenu" },},
+			{{ AL["[17-24] Wailing Caverns"], "WailingCaverns", "Submenu" },},
+			{{ AL["[17-24] The Deadmines"], "Deadmines", "Submenu" },},
+			{{ AL["[22-30] Shadowfang Keep"], "ShadowfangKeep", "Submenu" },},
+			{{ AL["[23-32] Blackfathom Deeps"], "BlackfathomDeeps", "Submenu" },},
+			{{ AL["[22-30] The Stockade"], "TheStockade", "Submenu" },},
+			{{ AL["[26-35] Dragonmaw Retreat"], "DragonmawRetreat", "Submenu" },},
+			{{ AL["[29-38] Gnomeregan"], "Gnomeregan", "Submenu" },},
+			{{ AL["[29-38] Razorfen Kraul"], "RazorfenKraul", "Submenu" },},
+			{{ AL["[32-38] The Crescent Grove"], "TheCrescentGrove", "Submenu" },},
+			{[ AL["[27-45] Scarlet Monastery"]] = {
+					{ AL["[27-36] Scarlet Monastery (Graveyard)"], "SMGraveyard", "Submenu" },
+					{ AL["[28-39] Scarlet Monastery (Library)"], "SMLibrary", "Submenu" },
+					{ AL["[32-41] Scarlet Monastery (Armory)"], "SMArmory", "Submenu" },
+					{ AL["[35-45] Scarlet Monastery (Cathedral)"], "SMCathedral", "Submenu" },
+				},},
+			{{ AL["[32-44] Stormwrought Ruins"], "StormwroughtRuins", "Submenu" },},
+			{{ AL["[36-46] Razorfen Downs"], "RazorfenDowns", "Submenu" },},
+			{{ AL["[40-51] Uldaman"], "Uldaman", "Submenu" },},
+			{{ AL["[42-50] Gilneas City"], "GilneasCity", "Submenu" },},
+			{{ AL["[45-55] Maraudon"], "Maraudon", "Submenu" },},
+			{{ AL["[44-54] Zul'Farrak"], "ZulFarrak", "Submenu" },},
+			{{ AL["[50-60] The Sunken Temple"], "SunkenTemple", "Submenu" },},
+			{{ AL["[50-60] Hateforge Quarry"], "HateforgeQuarry", "Submenu" },},
+			{{ AL["[52-60] Blackrock Depths"], "BlackrockDepths", "Submenu" },},
+			{[AL["[55-60] Dire Maul"]] = {
+					{ AL["[55-60] Dire Maul (East)"], "DireMaulEast", "Submenu" },
+					{ AL["[57-60] Dire Maul (West)"], "DireMaulWest", "Submenu" },
+					{ AL["[57-60] Dire Maul (North)"], "DireMaulNorth", "Submenu" },
+				},},
+			{{ AL["[58-60] Scholomance"], "Scholomance", "Submenu" },},
+			{{ AL["[58-60] Stratholme"], "Stratholme", "Submenu" },},
+			{{ AL["[55-60] Lower Blackrock Spire"], "LowerBlackrock", "Submenu" },},
+			{{ AL["[58-60] Upper Blackrock Spire"], "UpperBlackrock", "Submenu" },},
+			{{ AL["[58-60] Karazhan Crypt"], "KarazhanCrypt", "Submenu" },},
+			{{ AL["[60] Caverns of Time: Black Morass"], "CavernsOfTimeBlackMorass", "Submenu" },},
+			{{ AL["[60] Stormwind Vault"], "StormwindVault", "Submenu" },},
+			{{ AL["[RAID] Zul'Gurub"], "ZulGurub", "Submenu" },},
+			{{ AL["[RAID] Ruins of Ahn'Qiraj"], "RuinsofAQ", "Submenu" },},
+			{{ AL["[RAID] Molten Core"], "MoltenCore", "Submenu" },},
+			{{ AL["[RAID] Onyxia's Lair"], "Onyxia", "Submenu" },},
+			{{ AL["[RAID] Lower Karazhan Halls"], "LowerKara", "Submenu" },},
+			{{ AL["[RAID] Blackwing Lair"], "BlackwingLair", "Submenu" },},
+			{{ AL["[RAID] Emerald Sanctum"], "EmeraldSanctum", "Submenu" },},
+			{{ AL["[RAID] Temple of Ahn'Qiraj"], "TempleofAQ", "Submenu" },},
+			{{ AL["[RAID] Naxxramas"], "Naxxramas", "Submenu" },},
+            {{ AL["[RAID] Upper Karazhan Halls"], "UpperKara", "Submenu" },},
+		},
+	},
+	{[AL["World Bosses"]] = {
+		{{AL["Azuregos"], "AAzuregos", "Table" },},
+		{{AL["Emeriss"], "DEmeriss", "Table" },},
+		{{AL["Lethon"], "DLethon", "Table" },},
+		{{AL["Taerar"], "DTaerar", "Table" },},
+		{{AL["Ysondre"], "DYsondre", "Table" },},
+		{{AL["Lord Kazzak"], "KKazzak", "Table" },},
+		{{AL["Nerubian Overseer"], "Nerubian", "Table" },},
+		{{AL["Dark Reaver of Karazhan"], "Reaver", "Table" },},
+		{{AL["Ostarius"], "Ostarius", "Table" },},
+		{{AL["Concavius"], "Concavius", "Table" },},
+		{{AL["Moo"], "CowKing", "Table" },},
+		{{AL["Cla'ckora"], "Clackora", "Table"},},
+		},
+	},
+	{[AL["PvP Rewards"]] = {
+		{{ AL["PvP Armor Sets"], "PVPSET", "Table" },},
+		{{ AL["PvP Accessories"], "PvP60Accessories1", "Table" },},
+		{{ AL["Rank 14 Weapons"], "PVPWeapons1", "Table" },},
+		{{ AL["PvP Mounts"], "PvPMountsPvP", "Table" },},
+		{{ AL["Blood Ring"], "BRRepMenu", "Table" },},
+		{{ AL["Alterac Valley"], "AVRepMenu", "Table" },},
+		{{ AL["Arathi Basin"], "ABRepMenu", "Table" },},
+		{{ AL["Warsong Gulch"], "WSGRepMenu", "Table" },},
+		},
+	},
+	{[AL["Collections"]] = {
+			{{ AL["Sets"], "PRE60SET", "Table" },},
+			{{ AL["Zul'Gurub Sets"], "ZGSET", "Table" },},
+			{{ AL["Ruins of Ahn'Qiraj Sets"], "AQ20SET", "Table" },},
+			{{ AL["Temple of Ahn'Qiraj Sets"], "AQ40SET", "Table" },},
+			{{ AL["Karazhan Sets"], "KARASET", "Table" },},
+			{{ AL["Dungeon 1/2 Sets"], "T0SET", "Table" },},
+			{{ AL["Tier 1 Sets"], "T1SET", "Table" },},
+			{{ AL["Tier 2 Sets"], "T2SET", "Table" },},
+			{{ AL["Tier 3 Sets"], "T3SET", "Table" },},
+			{{ AL["Legendary Items"], "Legendaries", "Table" },},
+			{{ AL["World Epics"], "WorldEpics1", "Table" },},
+			{{ AL["Rare Pets"], "RarePets1", "Table" },},
+			{{ AL["Rare Mounts"], "RareMounts", "Table" },},
+			{{ AL["Tabards"], "Tabards", "Table" },},
+			},
+		},
+	{[AL["Factions"]] = {
+			{{ AL["Argent Dawn"], "Argent1" , "Table" },},
+			{{ AL["Bloodsail Buccaneers"], "Bloodsail1", "Table" },},
+			{{ AL["Brood of Nozdormu"], "AQBroodRings", "Table" },},
+			{{ AL["Cenarion Circle"], "Cenarion1", "Table" }},
+			{{ AL["Dalaran"], "Dalaran", "Table" },},
+			{{ AL["Darkmoon Faire"], "Darkmoon", "Table" },},
+			{{ AL["Darkspear Trolls"], "DarkspearTrolls", "Table" },},
+			{{ AL["Darnassus"], "Darnassus", "Table" },},
+			{{ AL["Durotar Labor Union"], "DurotarLaborUnion", "Table" },},
+			{{ AL["Frostwolf Clan"], "Frostwolf1", "Table" },},
+			{{ AL["Gelkis Clan Centaur"], "GelkisClan1", "Table" },},
+			{{ AL["Gnomeregan Exiles"], "GnomereganExiles", "Table" },},
+			{{ AL["Hydraxian Waterlords"], "WaterLords1", "Table" },},
+			{{ AL["Ironforge"], "Ironforge", "Table" },},
+			{{ AL["Magram Clan Centaur"], "MagramClan1", "Table" },},
+			{{ AL["Orgrimmar"], "Orgrimmar", "Table" },},
+			{{ AL["Revantusk Trolls"], "Revantusk", "Table" },},
+			{{ AL["Silvermoon Remnant"], "Helf", "Table" },},
+			{{ AL["Stormpike Guard"], "Stormpike1", "Table" },},
+			{{ AL["Stormwind"], "Stormwind", "Table" },},
+			{{ AL["Thorium Brotherhood"], "Thorium1", "Table" },},
+			{{ AL["Thunder Bluff"], "ThunderBluff", "Table" },},
+			{{ AL["Timbermaw Hold"], "Timbermaw", "Table" },},
+			{{ AL["Undercity"], "Undercity", "Table" },},
+			{{ AL["Wardens of Time"], "Wardens1", "Table" },},
+			{{ AL["Wildhammer Clan"], "Wildhammer", "Table" },},
+			{{ AL["Wintersaber Trainers"], "Wintersaber1", "Table" },},
+			{{ AL["Zandalar Tribe"], "Zandalar1", "Table" },},
+		 	},
+		},
+	{[AL["World Events"]] = {
+			{{ AL["Abyssal Council"], "AbyssalTemplars", "Table" },},
+			{{ AL["Children's Week"], "ChildrensWeek", "Table" },},
+			{{ AL["Elemental Invasion"], "ElementalInvasion", "Table" },},
+			{{ AL["Feast of Winter Veil"], "Winterviel1", "Table" },},
+			{{ AL["Gurubashi Arena"], "GurubashiArena", "Table" },},
+			{{ AL["Hallow's End"], "Halloween1", "Table" },},
+			{{ AL["Harvest Festival"], "HarvestFestival", "Table" },},
+			{{ AL["Love is in the Air"], "Valentineday", "Table" },},
+			{{ AL["Lunar Festival"], "LunarFestival1", "Table" },},
+			{{ AL["Midsummer Fire Festival"], "MidsummerFestival", "Table" },},
+			{{ AL["Noblegarden"], "Noblegarden", "Table" },},
+			{{ AL["Scourge Invasion"], "ScourgeInvasionEvent1", "Table" },},
+			{{ AL["Stranglethorn Fishing Extravaganza"], "FishingExtravaganza", "Table" },},
+			},
+		},
+	{[AL["Crafting"]] = {
+			{ { AL["Alchemy"], "ALCHEMYMENU", "Table" }, },
+			{ { AL["Blacksmithing"], "SMITHINGMENU", "Table" }, },
+			{ { AL["Enchanting"], "ENCHANTINGMENU", "Table" }, },
+			{ { AL["Engineering"], "ENGINEERINGMENU", "Table" }, },
+			{ { AL["Herbalism"], "Herbalism1", "Table" }, },
+			{ { AL["Leatherworking"], "LEATHERWORKINGMENU", "Table" }, },
+			{ { AL["Jewelcrafting"], "JEWELCRAFTMENU", "Table" }, },
+			{ { AL["Mining"], "Mining1", "Table" }, },
+			{ { AL["Tailoring"], "TAILORINGMENU", "Table" }, },
+			{ { AL["Cooking"], "CookingApprentice1", "Table" }, },
+			{ { AL["First Aid"], "FirstAid1", "Table" }, },
+			{ { AL["Survival"], "Survival1", "Table" }, },
+			{ { AL["Gardening"], "Survival2", "Table" }, },
+			{ { AL["Poisons"], "Poisons1", "Table" }, },
+			{ { AL["Crafted Sets"], "CRAFTSET", "Table" },},
+			{ { AL["Crafted Epic Weapons"], "CraftedWeapons1", "Table" }, },
+		},
+	},
+	{{ "Rare Spawns", "RareSpawns", "Submenu" },},
+};
+
+-- This table defines all the subtables needed for the full menu
+-- Each sub table entry contains the text entry and the loot table that goes wih it
+AtlasLoot_HewdropDown_SubTables = {
+	["HateforgeQuarry"] = {
+		{ AL["High Foreman Bargul Blackhammer"], "HQHighForemanBargulBlackhammer" },
+		{ AL["Engineer Figgles"], "HQEngineerFiggles" },
+		{ AL["Corrosis"], "HQCorrosis" },
+		{ AL["Hatereaver Annihilator"], "HQHatereaverAnnihilator" },
+		{ AL["Har'gesh Doomcaller"], "HQHargeshDoomcaller" },
+		{ AL["Trash Mobs"], "HQTrash" },
+	},
+	["BlackrockDepths"] = {
+		{ AL["Lord Roccor"], "BRDLordRoccor" },
+		{ AL["High Interrogator Gerstahn"], "BRDHighInterrogatorGerstahn" },
+		{ AL["Anub'shiah"], "BRDAnubshiah" },
+		{ AL["Eviscerator"], "BRDEviscerator" },
+		{ AL["Gorosh the Dervish"], "BRDGorosh" },
+		{ AL["Grizzle"], "BRDGrizzle" },
+		{ AL["Hedrum the Creeper"], "BRDHedrum" },
+		{ AL["Ok'thor the Breaker"], "BRDOkthor" },
+		{ AL["Theldren"], "BRDTheldren" },
+		{ AL["Houndmaster Grebmar"], "BRDHoundmaster" },
+		{ AL["Pyromancer Loregrain"].." ("..AL["Rare"]..")", "BRDPyromancerLoregrain" },
+		{ AL["The Vault"], "BRDTheVault" },
+		{ AL["Warder Stilgiss"].." ("..AL["Rare"]..")", "BRDWarderStilgiss" },
+		{ AL["Verek"].." ("..AL["Rare"]..")", "BRDVerek" },
+		{ AL["Fineous Darkvire"], "BRDFineousDarkvire" },
+		{ AL["Lord Incendius"], "BRDLordIncendius" },
+		{ AL["Bael'Gar"], "BRDBaelGar" },
+		{ AL["General Angerforge"], "BRDGeneralAngerforge" },
+		{ AL["Golem Lord Argelmach"], "BRDGolemLordArgelmach" },
+		{ AL["The Grim Guzzler"], "BRDGuzzler" },
+		{ AL["Ambassador Flamelash"], "BRDFlamelash" },
+		{ AL["Panzor the Invincible"].." ("..AL["Rare"]..")", "BRDPanzor" },
+		{ AL["Summoner's Tomb"], "BRDTomb" },
+		{ AL["Magmus"], "BRDMagmus" },
+		{ AL["Princess Moira Bronzebeard"], "BRDPrincess" },
+		{ AL["Emperor Dagran Thaurissan"], "BRDEmperorDagranThaurissan" },
+		{ AL["Trash Mobs"], "BRDTrash" },
+	},
+	["LowerBlackrock"] = {
+		{ AL["Spirestone Butcher"].." ("..AL["Rare"]..")", "LBRSSpirestoneButcher" },
+		{ AL["Spirestone Battle Lord"].." ("..AL["Rare"]..")", "LBRSSpirestoneBattleLord" },
+		{ AL["Spirestone Lord Magus"].." ("..AL["Rare"]..")", "LBRSSpirestoneLordMagus" },
+		{ AL["Highlord Omokk"], "LBRSOmokk" },
+		{ AL["Shadow Hunter Vosh'gajin"], "LBRSVosh" },
+		{ AL["War Master Voone"], "LBRSVoone" },
+		{ AL["Burning Felguard"].." ("..AL["Rare"]..")", "LBRSFelguard" },
+		{ AL["Mor Grayhoof"], "LBRSGrayhoof" },
+		{ AL["Bannok Grimaxe"].." ("..AL["Rare"]..")", "LBRSGrimaxe" },
+		{ AL["Mother Smolderweb"], "LBRSSmolderweb" },
+		{ AL["Crystal Fang"].." ("..AL["Rare"]..")", "LBRSCrystalFang" },
+		{ AL["Urok Doomhowl"], "LBRSDoomhowl" },
+		{ AL["Quartermaster Zigris"], "LBRSZigris" },
+		{ AL["Halycon"], "LBRSHalycon" },
+		{ AL["Gizrul the Slavener"], "LBRSSlavener" },
+		{ AL["Ghok Bashguud"].." ("..AL["Rare"]..")", "LBRSBashguud" },
+		{ AL["Overlord Wyrmthalak"], "LBRSWyrmthalak" },
+		{ AL["Trash Mobs"], "LBRSTrash" },
+	},
+	["UpperBlackrock"] = {
+		{ AL["Pyroguard Emberseer"], "UBRSEmberseer" },
+		{ AL["Solakar Flamewreath"], "UBRSSolakar" },
+		{ AL["Father Flame"], "UBRSFlame" },
+		{ AL["Jed Runewatcher"].." ("..AL["Rare"]..")", "UBRSRunewatcher" },
+		{ AL["Goraluk Anvilcrack"].." ("..AL["Rare"]..")", "UBRSAnvilcrack" },
+		{ AL["Warchief Rend Blackhand"], "UBRSRend" },
+		{ AL["Gyth"], "UBRSGyth" },
+		{ AL["The Beast"], "UBRSBeast" },
+		{ AL["Lord Valthalak"], "UBRSValthalak" },
+		{ AL["General Drakkisath"], "UBRSDrakkisath" },
+		{ AL["Trash Mobs"], "UBRSTrash" },
+	},
+	["KarazhanCrypt"] = {
+		{ AL["Marrowspike"], "KCMarrowspike" },
+		{ AL["Hivaxxis"], "KCHivaxxis" },
+		{ AL["Corpsemuncher"], "KCCorpsemuncher" },
+		{ AL["Guard Captain Gort"], "KCGuardCaptainGort" },
+		{ AL["Archlich Enkhraz"], "KCArchlichEnkhraz" },
+		{ AL["Commander Andreon"], "KCCommanderAndreon" },
+		{ AL["Alarus"], "KCAlarus" },
+		{ AL["Half-Buried Treasure Chest"], "KCTreasure" },
+		{ AL["Trash Mobs"], "KCTrash" },
+	},
+	["CavernsOfTimeBlackMorass"] = {
+		{ AL["Chronar"], "COTBMChronar" },
+		{ AL["Epidamu"], "COTBMEpidamu" },
+		{ AL["Drifting Avatar of Sand"], "COTBMDriftingAvatar" },
+		{ AL["Time-Lord Epochronos"], "COTBMTimeLordEpochronos" },
+		{ AL["Mossheart"], "COTBMMossheart" },
+		{ AL["Rotmaw"], "COTBMRotmaw" },
+		{ AL["Antnormi"], "COTBMAntnormi" },
+		{ AL["Trash Mobs"], "COTTrash" },
+		-- { AL["Infinite Chromie"], "COTBMInfiniteChromie" },
+	},
+	["StormwindVault"] = {
+		{ AL["Aszosh Grimflame"], "SWVAszoshGrimflame" },
+		{ AL["Tham'Grarr"], "SWVThamGrarr" },
+		{ AL["Black Bride"], "SWVBlackBride" },
+		{ AL["Damian"], "SWVDamian" },
+		{ AL["Volkan Cruelblade"], "SWVVolkanCruelblade" },
+		{ AL["Arc'tiras"], "SWVVaultArmoryEquipment" },
+		{ AL["Trash Mobs"], "SWVTrash" },
+	},
+	["BlackwingLair"] = {
+		{ AL["Razorgore the Untamed"], "BWLRazorgore" },
+		{ AL["Vaelastrasz the Corrupt"], "BWLVaelastrasz" },
+		{ AL["Broodlord Lashlayer"], "BWLLashlayer" },
+		{ AL["Firemaw"], "BWLFiremaw" },
+		{ AL["Ebonroc"], "BWLEbonroc" },
+		{ AL["Flamegor"], "BWLFlamegor" },
+		{ AL["Chromaggus"], "BWLChromaggus" },
+		{ AL["Nefarian"], "BWLNefarian" },
+		{ AL["Trash Mobs"], "BWLTrashMobs" },
+	},
+	["Deadmines"] = {
+        { AL["Jared Voss"], "DMJaredVoss" },
+		{ AL["Rhahk'Zor"], "DMRhahkZor" },
+		{ AL["Miner Johnson"].." ("..AL["Rare"]..")", "DMMinerJohnson" },
+		{ AL["Sneed"], "DMSneed" },
+		{ AL["Sneed's Shredder"], "DMSneedsShredder" },
+		{ AL["Gilnid"], "DMGilnid" },
+        { AL["Masterpiece Harvester"], "DMHarvester" },
+		{ AL["Mr. Smite"], "DMMrSmite" },
+		{ AL["Cookie"], "DMCookie" },
+		{ AL["Captain Greenskin"], "DMCaptainGreenskin" },
+		{ AL["Edwin VanCleef"], "DMVanCleef" },
+		{ AL["Trash Mobs"], "DMTrash" },
+	},
+	["TheCrescentGrove"] = {
+		{ AL["Grovetender Engryss"], "TCGGrovetenderEngryss" },
+		{ AL["Keeper Ranathos"], "TCGKeeperRanathos" },
+		{ AL["High Priestess A'lathea"], "TCGHighPriestessAlathea" },
+		{ AL["Fenektis the Deceiver"], "TCGFenektistheDeceiver" },
+		{ AL["Master Raxxieth"], "TCGMasterRaxxieth" },
+		{ AL["Trash Mobs"], "TCGTrash" },
+	},
+	["Gnomeregan"] = {
+		{ AL["Grubbis"], "GnGrubbis" },
+		{ AL["Viscous Fallout"], "GnViscousFallout" },
+		{ AL["Electrocutioner 6000"], "GnElectrocutioner6000" },
+		{ AL["Crowd Pummeler 9-60"], "GnCrowdPummeler960" },
+		{ AL["Dark Iron Ambassador"], "GnDIAmbassador" },
+		{ AL["Mekgineer Thermaplugg"], "GnMekgineerThermaplugg" },
+		{ AL["Trash Mobs"], "GnTrash" },
+	},
+	["MoltenCore"] = {
+		{ AL["Incindis"], "MCIncindis" },
+		{ AL["Lucifron"], "MCLucifron" },
+		{ AL["Magmadar"], "MCMagmadar" },
+		-- { AL["Gehennas"], "MCGehennas" },
+		{ AL["Garr"], "MCGarr" },
+		{ AL["Shazzrah"], "MCShazzrah" },
+		{ AL["Baron Geddon"], "MCGeddon" },
+		{ AL["Golemagg the Incinerator"], "MCGolemagg" },
+		{ AL["Basalthar & Smoldaris"], "MCTwins" },
+		{ AL["Sorcerer-Thane Thaurissan"], "MCThaurissan" },
+		{ AL["Sulfuron Harbinger"], "MCSulfuron" },
+		{ AL["Majordomo Executus"], "MCMajordomo" },
+		{ AL["Ragnaros"], "MCRagnaros" },
+		{ AL["Trash Mobs"], "MCTrashMobs" },
+		{ AL["Random Boss Loot"], "MCRANDOMBOSSDROPS" },
+	},
+	["Naxxramas"] = {
+		{ AL["Patchwerk"], "NAXPatchwerk" },
+		{ AL["Grobbulus"], "NAXGrobbulus" },
+		{ AL["Gluth"], "NAXGluth" },
+		{ AL["Thaddius"], "NAXThaddius" },
+		{ AL["Anub'Rekhan"], "NAXAnubRekhan" },
+		{ AL["Grand Widow Faerlina"], "NAXGrandWidowFaerlina" },
+		{ AL["Maexxna"], "NAXMaexxna" },
+		{ AL["Noth the Plaguebringer"], "NAXNoththePlaguebringer" },
+		{ AL["Heigan the Unclean"], "NAXHeigantheUnclean" },
+		{ AL["Loatheb"], "NAXLoatheb" },
+		{ AL["Instructor Razuvious"], "NAXInstructorRazuvious" },
+		{ AL["Gothik the Harvester"], "NAXGothiktheHarvester" },
+		{ AL["The Four Horsemen"], "NAXTheFourHorsemen" },
+		{ AL["Sapphiron"], "NAXSapphiron" },
+		{ AL["Kel'Thuzad"], "NAXKelThuzard" },
+		{ AL["Trash Mobs"], "NAXTrash" },
+	},
+	["SMGraveyard"] = {
+		{ AL["Interrogator Vishas"], "SMVishas" },
+        { AL["Duke Dreadmoore"], "SMDukeDreadmoore" },
+		{ AL["Scorn"].." ("..AL["Scourge Invasion"]..")", "SMScorn" },
+		{ AL["Ironspine"].." ("..AL["Rare"]..")", "SMIronspine" },
+		{ AL["Azshir the Sleepless"].." ("..AL["Rare"]..")", "SMAzshir" },
+		{ AL["Fallen Champion"].." ("..AL["Rare"]..")", "SMFallenChampion" },
+		{ AL["Bloodmage Thalnos"], "SMBloodmageThalnos" },
+		{ AL["Trash Mobs"], "SMGTrash" },
+	},
+	["SMLibrary"] = {
+		{ AL["Houndmaster Loksey"], "SMHoundmasterLoksey" },
+        { AL["Brother Wystan"], "SMBrotherWystan" },
+		{ AL["Arcanist Doan"], "SMDoan" },
+		{ AL["Trash Mobs"], "SMLTrash" },
+	},
+	["SMArmory"] = {
+		{ AL["Herod"], "SMHerod" },
+        { AL["Armory Quartermaster Daghelm"], "SMQuartermaster" },
+		{ AL["Trash Mobs"], "SMATrash" },
+	},
+	["SMCathedral"] = {
+		{ AL["High Inquisitor Fairbanks"], "SMFairbanks" },
+		{ AL["Scarlet Commander Mograine"], "SMMograine" },
+		{ AL["High Inquisitor Whitemane"], "SMWhitemane" },
+		{ AL["Trash Mobs"], "SMCTrash" },
+	},
+	["Scholomance"] = {
+		-- { AL["Blood Steward of Kirtonos"], "SCHOLOBlood" },
+		{ AL["Kirtonos the Herald"], "SCHOLOKirtonostheHerald" },
+		{ AL["Jandice Barov"], "SCHOLOJandiceBarov" },
+		{ AL["Lord Blackwood"].." ("..AL["Scourge Invasion"]..")", "SCHOLOLordBlackwood" },
+		{ AL["Rattlegore"], "SCHOLORattlegore" },
+		{ AL["Death Knight Darkreaver"], "SCHOLODeathKnight" },
+		{ AL["Marduk Blackpool"], "SCHOLOMarduk" },
+		{ AL["Vectus"], "SCHOLOVectus" },
+		{ AL["Ras Frostwhisper"], "SCHOLORasFrostwhisper" },
+		{ AL["Kormok"], "SCHOLOKormok" },
+		{ AL["Instructor Malicia"], "SCHOLOInstructorMalicia" },
+		{ AL["Doctor Theolen Krastinov"], "SCHOLODoctorTheolenKrastinov" },
+		{ AL["Lorekeeper Polkelt"], "SCHOLOLorekeeperPolkelt" },
+		{ AL["The Ravenian"], "SCHOLOTheRavenian" },
+		{ AL["Lord Alexei Barov"], "SCHOLOLordAlexeiBarov" },
+		{ AL["Lady Illucia Barov"], "SCHOLOLadyIlluciaBarov" },
+		{ AL["Darkmaster Gandling"], "SCHOLODarkmasterGandling" },
+		{ AL["Trash Mobs"], "SCHOLOTrash" },
+	},
+	["ShadowfangKeep"] = {
+		{ AL["Rethilgore"], "SFKRethilgore" },
+		{ AL["Fel Steed"], "SFKFelSteed" },
+		{ AL["Razorclaw the Butcher"], "SFKRazorclawtheButcher" },
+		{ AL["Baron Silverlaine"], "SFKSilverlaine" },
+		{ AL["Commander Springvale"], "SFKSpringvale" },
+		{ AL["Sever"].." ("..AL["Scourge Invasion"]..")", "SFKSever" },
+		{ AL["Odo the Blindwatcher"], "SFKOdotheBlindwatcher" },
+		{ AL["Deathsworn Captain"].." ("..AL["Rare"]..")", "SFKDeathswornCaptain" },
+		{ AL["Fenrus the Devourer"], "SFKFenrustheDevourer" },
+		{ AL["Arugal's Voidwalker"], "SFKArugalsVoidwalker" },
+		{ AL["Wolf Master Nandos"], "SFKWolfMasterNandos" },
+		{ AL["Archmage Arugal"], "SFKArchmageArugal" },
+        { AL["Prelate Ironmane"], "SFKPrelate"},
+		{ AL["Trash Mobs"], "SFKTrash" },
+	},
+	["TheStockade"] = {
+		{ AL["Targorr the Dread"], "SWStTargorr" },
+		{ AL["Kam Deepfury"], "SWStKamDeepfury" },
+		{ AL["Hamhock"], "SWStHamhock" },
+		{ AL["Dextren Ward"], "SWStDextren" },
+		{ AL["Bazil Thredd"], "SWStBazil" },
+		{ AL["Bruegal Ironknuckle"].." ("..AL["Rare"]..")", "SWStBruegalIronknuckle" },
+		{ AL["Trash Mobs"], "SWStTrash" },
+	},
+	["Stratholme"] = {
+		{ AL["Skul"].." ("..AL["Rare"]..")", "STRATSkull" },
+		{ AL["Stratholme Courier"], "STRATStratholmeCourier" },
+		{ AL["Postmaster Malown"], "STRATPostmaster" },
+		{ AL["Fras Siabi"], "STRATFrasSiabi" },
+		{ AL["Atiesh"], "STRATAtiesh" },
+		{ AL["Balzaphon"].." ("..AL["Scourge Invasion"]..")", "STRATBalzaphon" },
+		{ AL["Hearthsinger Forresten"].." ("..AL["Rare"]..")", "STRATHearthsingerForresten" },
+		{ AL["The Unforgiven"], "STRATTheUnforgiven" },
+		{ AL["Timmy the Cruel"], "STRATTimmytheCruel" },
+		{ AL["Malor the Zealous"], "STRATMalor" },
+		{ AL["Malor's Strongbox"], "STRATMalorsStrongbox" },
+		{ AL["Crimson Hammersmith"], "STRATCrimsonHammersmith" },
+		{ AL["Cannon Master Willey"], "STRATCannonMasterWilley" },
+		{ AL["Archivist Galford"], "STRATArchivistGalford" },
+		{ AL["Balnazzar"], "STRATBalnazzar" },
+		{ AL["Sothos"].." & "..AL["Jarien"], "STRATSothosJarien" },
+		{ AL["Stonespine"].." ("..AL["Rare"]..")", "STRATStonespine" },
+		{ AL["Baroness Anastari"], "STRATBaronessAnastari" },
+		{ AL["Black Guard Swordsmith"], "STRATBlackGuardSwordsmith" },
+		{ AL["Nerub'enkan"], "STRATNerubenkan" },
+		{ AL["Maleki the Pallid"], "STRATMalekithePallid" },
+		{ AL["Magistrate Barthilas"], "STRATMagistrateBarthilas" },
+		{ AL["Ramstein the Gorger"], "STRATRamsteintheGorger" },
+		{ AL["Baron Rivendare"], "STRATBaronRivendare" },
+		{ AL["Trash Mobs"], "STRATTrash" },
+	},
+	["SunkenTemple"] = {
+		{ AL["Balcony Minibosses"], "STBalconyMinibosses" },
+		{ AL["Atal'alarion"], "STAtalalarion" },
+		{ AL["Spawn of Hakkar"], "STSpawnOfHakkar" },
+		{ AL["Avatar of Hakkar"], "STAvatarofHakkar" },
+		{ AL["Jammal'an the Prophet"], "STJammalan" },
+		{ AL["Ogom the Wretched"], "STOgom" },
+		{ AL["Dreamscythe"], "STDreamscythe" },
+		{ AL["Weaver"], "STWeaver"},
+		{ AL["Morphaz"], "STMorphaz" },
+		{ AL["Hazzas"], "STHazzas" },
+		{ AL["Shade of Eranikus"], "STEranikus" },
+		{ AL["Trash Mobs"], "STTrash" },
+	},
+	["Uldaman"] = {
+		{ AL["Baelog"], "UldBaelog" },
+		{ AL["Olaf"], "UldOlaf" },
+		{ AL["Eric 'The Swift'"], "UldEric" },
+		{ AL["Revelosh"], "UldRevelosh" },
+		{ AL["Ironaya"], "UldIronaya" },
+		{ AL["Ancient Stone Keeper"], "UldAncientStoneKeeper" },
+		{ AL["Galgann Firehammer"], "UldGalgannFirehammer" },
+		{ AL["Grimlok"], "UldGrimlok" },
+		{ AL["Archaedas"], "UldArchaedas" },
+		{ AL["Trash Mobs"], "UldTrash" },
+	},
+	["GilneasCity"] = {
+		{ AL["Matthias Holtz"], "GCMatthiasHoltz" },
+		{ AL["Packmaster Ragetooth"], "GCPackmasterRagetooth" },
+		{ AL["Judge Sutherland"], "GCJudgeSutherland" },
+		{ AL["Dustivan Blackcowl"], "GCDustivanBlackcowl" },
+		{ AL["Marshal Magnus Greystone"], "GCMarshalMagnusGreystone" },
+		{ AL["Horsemaster Levvin"], "GCHorsemasterLevvin" },
+		{ AL["Harlow Family Chest"], "GCHarlowFamilyChest" },
+		{ AL["Genn Greymane"], "GCGennGreymane" },
+		{ AL["Trash Mobs"], "GCTrash" },
+	},
+	["ZulGurub"] = {
+		{ AL["High Priestess Jeklik"], "ZGJeklik" },
+		{ AL["High Priest Venoxis"], "ZGVenoxis" },
+		{ AL["High Priestess Mar'li"], "ZGMarli" },
+		{ AL["Bloodlord Mandokir"], "ZGMandokir" },
+		{ AL["Gri'lek"], "ZGGrilek" },
+		{ AL["Hazza'rah"], "ZGHazzarah" },
+		{ AL["Renataki"], "ZGRenataki" },
+		{ AL["Wushoolay"], "ZGWushoolay" },
+		{ AL["Gahz'ranka"], "ZGGahzranka" },
+		{ AL["High Priest Thekal"], "ZGThekal" },
+		{ AL["High Priestess Arlokk"], "ZGArlokk" },
+		{ AL["Jin'do the Hexxer"], "ZGJindo" },
+		{ AL["Hakkar"], "ZGHakkar" },
+		{ AL["Random Boss Loot"], "ZGShared" },
+		{ AL["Trash Mobs"], "ZGTrash1" },
+		{ AL["ZG Enchants"], "ZGEnchants" },
+	},
+	["BlackfathomDeeps"] = {
+		{ AL["Ghamoo-ra"], "BFDGhamoora" },
+		{ AL["Lady Sarevess"], "BFDLadySarevess" },
+		{ AL["Gelihast"], "BFDGelihast" },
+		{ AL["Baron Aquanis"], "BFDBaronAquanis" },
+		{ AL["Velthelaxx the Defiler"], "BFDVelthelaxx"},
+		{ AL["Twilight Lord Kelris"], "BFDTwilightLordKelris" },
+		{ AL["Old Serra'kis"], "BFDOldSerrakis" },
+		{ AL["Aku'mai"], "BFDAkumai" },
+		{ AL["Trash Mobs"], "BFDTrash" },
+	},
+	["DireMaulEast"] = {
+		{ AL["Pusillin"], "DMEPusillin" },
+		{ AL["Zevrim Thornhoof"], "DMEZevrimThornhoof" },
+		{ AL["Hydrospawn"], "DMEHydro" },
+		{ AL["Lethtendris"], "DMELethtendris" },
+		{ AL["Pimgib"], "DMEPimgib" },
+		{ AL["Isalien"], "DMEIsalien" },
+		{ AL["Alzzin the Wildshaper"], "DMEAlzzin" },
+		{ AL["Trash Mobs"], "DMETrash" },
+		{ AL["Dire Maul Books"], "DMEBooks" },
+	},
+	["DireMaulWest"] = {
+		{ AL["Tendris Warpwood"], "DMWTendrisWarpwood" },
+		{ AL["Illyanna Ravenoak"], "DMWIllyannaRavenoak" },
+		{ AL["Magister Kalendris"], "DMWMagisterKalendris" },
+		{ AL["Tsu'zee"].." ("..AL["Rare"]..")", "DMWTsuzee" },
+		{ AL["Revanchion"].." ("..AL["Scourge Invasion"]..")", "DMWRevanchion" },
+		{ AL["Immol'thar"], "DMWImmolthar" },
+		{ AL["Lord Hel'nurath"].." ("..AL["Rare"]..")", "DMWHelnurath" },
+		{ AL["Prince Tortheldrin"], "DMWPrinceTortheldrin" },
+		{ AL["Trash Mobs"], "DMWTrash" },
+		{ AL["Dire Maul Books"], "DMWBooks" },
+	},
+	["DireMaulNorth"] = {
+		{ AL["Guard Mol'dar"], "DMNGuardMoldar" },
+		{ AL["Stomper Kreeg"], "DMNStomperKreeg" },
+		{ AL["Guard Fengus"], "DMNGuardFengus" },
+		{ AL["Knot Thimblejack"], "DMNThimblejack" },
+		{ AL["Guard Slip'kik"], "DMNGuardSlipkik" },
+		{ AL["Captain Kromcrush"], "DMNCaptainKromcrush" },
+		{ AL["Cho'Rush the Observer"], "DMNChoRush" },
+		{ AL["King Gordok"], "DMNKingGordok" },
+		{ AL["Tribute Run"], "DMNTRIBUTERUN" },
+		{ AL["Trash Mobs"], "DMNTrash" },
+		{ AL["Dire Maul Books"], "DMNBooks" },
+	},
+	["Maraudon"] = {
+		{ AL["Noxxion"], "MaraNoxxion" },
+		{ AL["Razorlash"], "MaraRazorlash" },
+		{ AL["Lord Vyletongue"], "MaraLordVyletongue" },
+		{ AL["Meshlok the Harvester"].." ("..AL["Rare"]..")", "MaraMeshlok" },
+		{ AL["Celebras the Cursed"], "MaraCelebras" },
+		{ AL["Landslide"], "MaraLandslide" },
+		{ AL["Tinkerer Gizlock"], "MaraTinkererGizlock" },
+		{ AL["Rotgrip"], "MaraRotgrip" },
+		{ AL["Princess Theradras"], "MaraPrincessTheradras" },
+		{ AL["Trash Mobs"], "MaraTrash" },
+	},
+	["Onyxia"] = {
+		{ AL["Onyxia"], "Onyxia" },
+	},
+	["RagefireChasm"] = {
+		{ AL["Taragaman the Hungerer"], "RFCTaragaman" },
+		{ AL["Oggleflint"], "RFCOggleflint" },
+		{ AL["Jergosh the Invoker"], "RFCJergosh" },
+		{ AL["Bazzalan"], "RFCBazzalan" },
+	},
+	["RazorfenDowns"] = {
+		{ AL["Tuten'kash"], "RFDTutenkash" },
+		{ AL["Lady Falther'ess"].." ("..AL["Scourge Invasion"]..")", "RFDLadyF" },
+		{ AL["Plaguemaw the Rotting"], "RFDPlaguemaw" },
+		{ AL["Mordresh Fire Eye"], "RFDMordreshFireEye" },
+		{ AL["Glutton"], "RFDGlutton" },
+		{ AL["Death Prophet Rakameg"], "RFDDeathProphet" },
+		{ AL["Ragglesnout"].." ("..AL["Rare"]..")", "RFDRagglesnout" },
+		{ AL["Amnennar the Coldbringer"], "RFDAmnennar" },
+		{ AL["Trash Mobs"], "RFDTrash" },
+	},
+	["RazorfenKraul"] = {
+		{ AL["Aggem Thorncurse"], "RFKAggem" },
+		{ AL["Death Speaker Jargba"], "RFKDeathSpeakerJargba" },
+		{ AL["Overlord Ramtusk"], "RFKOverlordRamtusk" },
+		{ AL["Razorfen Spearhide"].." ("..AL["Rare"]..")", "RFKRazorfenSpearhide" },
+		{ AL["Agathelos the Raging"], "RFKAgathelos" },
+		{ AL["Blind Hunter"].." ("..AL["Rare"]..")", "RFKBlindHunter" },
+		{ AL["Charlga Razorflank"], "RFKCharlgaRazorflank" },
+		{ AL["Earthcaller Halmgar"].." ("..AL["Rare"]..")", "RFKEarthcallerHalmgar" },
+		{ AL["Rotthorn"], "RFKRotthorn" },
+		{ AL["Trash Mobs"], "RFKTrash" },
+	},
+	["RuinsofAQ"] = {
+		{ AL["Kurinnaxx"], "AQ20Kurinnaxx" },
+		{ AL["Lieutenant General Andorov"], "AQ20Andorov" },
+		{ AL["Rajaxx's Captains"], "AQ20CAPTAIN" },
+		{ AL["General Rajaxx"], "AQ20Rajaxx" },
+		{ AL["Moam"], "AQ20Moam" },
+		{ AL["Buru the Gorger"], "AQ20Buru" },
+		{ AL["Ayamiss the Hunter"], "AQ20Ayamiss" },
+		{ AL["Ossirian the Unscarred"], "AQ20Ossirian" },
+		{ AL["Trash Mobs"], "AQ20Trash" },
+		{ AL["Class Books"], "AQ20ClassBooks" },
+		{ AL["AQ Enchants"], "AQ20Enchants" },
+	},
+	["TempleofAQ"] = {
+		{ AL["The Prophet Skeram"], "AQ40Skeram" },
+		{ AL["The Bug Family"], "AQ40Trio" },
+		{ AL["Battleguard Sartura"], "AQ40Sartura" },
+		{ AL["Fankriss the Unyielding"], "AQ40Fankriss" },
+		{ AL["Viscidus"], "AQ40Viscidus" },
+		{ AL["Princess Huhuran"], "AQ40Huhuran" },
+		{ AL["The Twin Emperors"], "AQ40Emperors" },
+		{ AL["Ouro"], "AQ40Ouro" },
+		{ AL["C'Thun"], "AQ40CThun" },
+		{ AL["Trash Mobs"], "AQ40Trash1" },
+		{ AL["Trash Mobs"], "AQ40Trash2" },
+		{ AL["AQ Enchants"], "AQEnchants" },
+		{ AL["AQ Opening Quest Chain"], "AQOpening" },
+	},
+	["WailingCaverns"] = {
+		{ AL["Lord Cobrahn"], "WCLordCobrahn" },
+		{ AL["Lady Anacondra"], "WCLadyAnacondra" },
+		{ AL["Kresh"], "WCKresh" },
+		{ AL["Deviate Faerie Dragon"].." ("..AL["Rare"]..")", "WCDeviateFaerieDragon" },
+        { AL["Zandara Windhoof"], "WCZandara" },
+		{ AL["Lord Pythas"], "WCLordPythas" },
+		{ AL["Skum"], "WCSkum" },
+        { AL["Vangros"], "WCVangros" },
+		{ AL["Lord Serpentis"], "WCLordSerpentis" },
+		{ AL["Verdan the Everliving"], "WCVerdan" },
+		{ AL["Mutanus the Devourer"], "WCMutanus" },
+		{ AL["Trash Mobs"], "WCTrash" },
+	},
+	["ZulFarrak"] = {
+		{ AL["Antu'sul"], "ZFAntusul" },
+		{ AL["Witch Doctor Zum'rah"], "ZFWitchDoctorZumrah" },
+		{ AL["Shadowpriest Sezz'ziz"], "ZFSezzziz" },
+		{ AL["Dustwraith"].." ("..AL["Rare"]..")", "ZFDustwraith" },
+		{ AL["Zerillis"].." ("..AL["Rare"]..")", "ZFZerillis" },
+		{ AL["Gahz'rilla"], "ZFGahzrilla" },
+		{ AL["Chief Ukorz Sandscalp"], "ZFChiefUkorzSandscalp" },
+		{ AL["Zel'jeb the Ancient"], "ZFZeljeb" },
+		{ AL["Champion Razjal the Quick"], "ZFChampion" },
+		{ AL["Trash Mobs"], "ZFTrash" },
+	},
+	["EmeraldSanctum"] = {
+		{ AL["Erennius"], "ESErennius" },
+		{ AL["Solnius the Awakener"], "ESSolnius1" },
+		{ AL["Favor of Erennius (ES Hard Mode)"], "ESHardMode" },
+		{ AL["Trash Mobs"], "ESTrash" },
+	},
+	["LowerKara"] = {
+		{ AL["Master Blacksmith Rolfen"], "LKHRolfen" },
+		{ AL["Brood Queen Araxxna"], "LKHBroodQueenAraxxna" },
+		{ AL["Grizikil"], "LKHGrizikil" },
+		{ AL["Clawlord Howlfang"], "LKHClawlordHowlfang" },
+		{ AL["Lord Blackwald II"], "LKHLordBlackwaldII" },
+		{ AL["Moroes"], "LKHMoroes" },
+		{ AL["Trash Mobs"], "LKHTrash" },
+		{ AL["LKH Enchants"], "LKHEnchants" },
+	},
+    ["UpperKara"] = {
+		{ AL["Keeper Gnarlmoon"], "UKHGnarlmoon" },
+		{ AL["Ley-Watcher Incantagos"], "UKHIncantagos" },
+		{ AL["Anomalus"], "UKHAnomalus" },
+		{ AL["Echo of Medivh"], "UKHEcho" },
+		{ AL["King (Chess fight)"], "UKHKing" },
+		{ AL["Sanv Tas'dal"], "UKHSanvTasdal" },
+		{ AL["Kruul"], "UKHKruul" },
+		{ AL["Rupturan the Broken"], "UKHRupturan" },
+		{ AL["Mephistroth"], "UKHMephistroth" },
+		{ AL["Trash Mobs"], "UKHTrash" },
+	},
+	["WorldBosses"] = {
+		{ AL["Azuregos"], "AAzuregos" },
+		{ AL["Emeriss"], "DEmeriss" },
+		{ AL["Lethon"], "DLethon"},
+		{ AL["Taerar"], "DTaerar" },
+		{ AL["Ysondre"], "DYsondre" },
+		{ AL["Lord Kazzak"], "KKazzak"},
+		{ AL["Nerubian Overseer"], "Nerubian" },
+		{ AL["Dark Reaver of Karazhan"], "Reaver" },
+		{ AL["Ostarius"], "Ostarius" },
+		{ AL["Concavius"], "Concavius" },
+		{ AL["Moo"], "CowKing" },
+		{ AL["Cla'ckora"], "Clackora" },
+	},
+	["RareSpawns"] = {
+        { WHITE.."[17]"..DEFAULT.." "..AL["Earthcaller Rezengal"]   .." "..WHITE.."("..AL["Stonetalon Mountains"]..")", "EarthcallerRezengal" },
+        { WHITE.."[17]"..DEFAULT.." "..AL["Shade Mage"]             .." "..WHITE.."("..AL["Tirisfal Glades"]     ..")", "ShadeMage" },
+        { WHITE.."[18]"..DEFAULT.." "..AL["Graypaw Alpha"]          .." "..WHITE.."("..AL["Tirisfal Glades"]     ..")", "GraypawAlpha" },
+        { WHITE.."[24]"..DEFAULT.." "..AL["Blazespark"]             .." "..WHITE.."("..AL["Stonetalon Mountains"]..")", "Blazespark" },
+        { WHITE.."[35]"..DEFAULT.." "..AL["Witch Doctor Tan'zo"]    .." "..WHITE.."("..AL["Arathi Highlands"]    ..")", "WitchDoctorTanzo" },
+        { WHITE.."[40]"..DEFAULT.." "..AL["Widow of the Woods"]     .." "..WHITE.."("..AL["Gilneas"]             ..")", "WidowoftheWoods" },
+        { WHITE.."[40]"..DEFAULT.." "..AL["Dawnhowl"]               .." "..WHITE.."("..AL["Gilneas"]             ..")", "Dawnhowl" },
+        { WHITE.."[43]"..DEFAULT.." "..AL["Maltimor's Prototype"]   .." "..WHITE.."("..AL["Gilneas"]             ..")", "MaltimorsPrototype" },
+        { WHITE.."[44]"..DEFAULT.." "..AL["Bonecruncher"]           .." "..WHITE.."("..AL["Gilneas"]             ..")", "Bonecruncher" },
+        { WHITE.."[44]"..DEFAULT.." "..AL["Duskskitter"]            .." "..WHITE.."("..AL["Gilneas"]             ..")", "Duskskitter" },
+        { WHITE.."[45]"..DEFAULT.." "..AL["Baron Perenolde"]        .." "..WHITE.."("..AL["Gilneas"]             ..")", "BaronPerenolde" },
+        { WHITE.."[45]"..DEFAULT.." "..AL["Kin'Tozo"]               .." "..WHITE.."("..AL["Stranglethorn Vale"]  ..")", "KinTozo" },
+        { WHITE.."[47]"..DEFAULT.." "..AL["Grug'thok the Seer"]     .." "..WHITE.."("..AL["Feralas"]             ..")", "Grugthok" },
+        { WHITE.."[47]"..DEFAULT.." "..AL["M-0L1Y"]                 .." "..WHITE.."("..AL["Dun Morogh"]          ..")", "M0L1Y" },
+        { WHITE.."[49]"..DEFAULT.." "..AL["Explorer Ashbeard"]      .." "..WHITE.."("..AL["Searing Gorge"]       ..")", "Ashbeard" },
+        { WHITE.."[50]"..DEFAULT.." "..AL["Jal'akar"]               .." "..WHITE.."("..AL["Hinterlands"]         ..")", "Jalakar" },
+        { WHITE.."[51]"..DEFAULT.." "..AL["Embereye"]               .." "..WHITE.."("..AL["Gilijim Isle"]        ..")", "Embereye" },
+        { WHITE.."[51]"..DEFAULT.." "..AL["Ruk'thok the Pyromancer"].." "..WHITE.."("..AL["Lapidis Isle"]        ..")", "Rukthok" },
+        { WHITE.."[51]"..DEFAULT.." "..AL["Tarangos"]               .." "..WHITE.."("..AL["Azshara"]             ..")", "Tarangos" },
+        { WHITE.."[51]"..DEFAULT.." "..AL["Ripjaw"]                 .." "..WHITE.."("..AL["Lapidis Isle"]        ..")", "Ripjaw" },
+        { WHITE.."[53]"..DEFAULT.." "..AL["Xalvic Blackclaw"]       .." "..WHITE.."("..AL["Felwood"]             ..")", "Xalvic" },
+        { WHITE.."[54]"..DEFAULT.." "..AL["Aquitus"]                .." "..WHITE.."("..AL["Gilijim Isle"]        ..")", "Aquitus" },
+        { WHITE.."[55]"..DEFAULT.." "..AL["Firstborn of Arugal"]    .." "..WHITE.."("..AL["Gilneas"]             ..")", "FirstbornofArugal" },
+        { WHITE.."[55]"..DEFAULT.." "..AL["Letashaz"]               .." "..WHITE.."("..AL["Gilijim Isle"]        ..")", "Letashaz" },
+        { WHITE.."[55]"..DEFAULT.." "..AL["Margon the Mighty"]      .." "..WHITE.."("..AL["Lapidis Isle"]        ..")", "MargontheMighty" },
+        { WHITE.."[55]"..DEFAULT.." "..AL["The Wandering Knight"]   .." "..WHITE.."("..AL["Western Plaguelands"] ..")", "WanderingKnight" },
+        { WHITE.."[56]"..DEFAULT.." "..AL["Stoneshell"]             .." "..WHITE.."("..AL["Tel'abim"]            ..")", "Stoneshell" },
+        { WHITE.."[57]"..DEFAULT.." "..AL["Zareth Terrorblade"]     .." "..WHITE.."("..AL["Blasted Lands"]       ..")", "Zareth" },
+        { WHITE.."[58]"..DEFAULT.." "..AL["Highvale Silverback"]    .." "..WHITE.."("..AL["Tel'abim"]            ..")", "HighvaleSilverback" },
+        { WHITE.."[58]"..DEFAULT.." "..AL["Mallon The Moontouched"] .." "..WHITE.."("..AL["Winterspring"]        ..")", "Mallon" },
+        { WHITE.."[59]"..DEFAULT.." "..AL["Blademaster Kargron"]    .." "..WHITE.."("..AL["Burning Steppes"]     ..")", "Kargron" },
+        { WHITE.."[59]"..DEFAULT.." "..AL["Professor Lysander"]     .." "..WHITE.."("..AL["Eastern Plaguelands"] ..")", "ProfessorLysander" },
+        { WHITE.."[60]"..DEFAULT.." "..AL["Admiral Barean Westwind"].." "..WHITE.."("..AL["Scarlet Enclave"]     ..")", "AdmiralBareanWestwind" },
+        { WHITE.."[60]"..DEFAULT.." "..AL["Azurebeak"]              .." "..WHITE.."("..AL["Hyjal"]               ..")", "Azurebeak" },
+        { WHITE.."[60]"..DEFAULT.." "..AL["Barkskin Fisher"]        .." "..WHITE.."("..AL["Hyjal"]               ..")", "BarkskinFisher" },
+        { WHITE.."[61]"..DEFAULT.." "..AL["Crusader Larsarius"]     .." "..WHITE.."("..AL["Eastern Plaguelands"] ..")", "CrusaderLarsarius" },
+        { WHITE.."[61]"..DEFAULT.." "..AL["Shadeflayer Goliath"]    .." "..WHITE.."("..AL["Hyjal"]               ..")", "ShadeflayerGoliath" },
+	},
+	["DragonmawRetreat"] = {
+		{ AL["Gowlfang"], "DMRGowlfang" },
+		{ AL["Cavernweb Broodmother"], "DMRBroodmother" },
+		{ AL["Web Master Torkon"], "DMRWebMaster" },
+		{ AL["Garlok Flamekeeper"], "DMRGarlok" },
+		{ AL["Halgan Redbrand"], "DMRHalgan" },
+		{ AL["Slagfist Destroyer"],"DMRSlagfist" },
+		{ AL["Overlord Blackheart"], "DMROverlord" },
+		{ AL["Elder Hollowblood"], "DMRElderHollowblood" },
+		{ AL["Searistrasz"], "DMRSearistrasz" },
+		{ AL["Zuluhed the Whacked"], "DMRZuluhed" },
+		{ AL["Trash Mobs"], "DMRTrash" },
+	},
+	["StormwroughtRuins"] = {
+		{ AL["Oronok Torn-Heart"], "SWROronok" },
+		{ AL["Dagar the Glutton"], "SWRDagar" },
+		{ AL["Duke Balor the IV"], "SWRDukeBalor" },
+		{ AL["Librarian Theodorus"], "SWRLibrarian" },
+		{ AL["Chieftain Stormsong"], "SWRChieftain" },
+		{ AL["Deathlord Tidebane"], "SWRDeathlord" },
+		{ AL["Subjugator Halthas Shadecrest"], "SWRSubjugator" },
+		{ AL["Mycellakos"], "SWRMycellakos" },
+		{ AL["Eldermaw the Primordial"], "SWREldermaw" },
+		{ AL["Lady Drazare"], "SWRLadyDrazare" },
+		{ AL["Remains of the Innocent"], "SWRRemains" },
+		{ AL["Mergothid"], "SWRMergothid" },
+		{ AL["Trash Mobs"], "SWRTrash" },
+	},
+};
+
 --[[
 AtlasLootDefaultFrame_OnShow:
 Called whenever the loot browser is shown and sets up buttons and loot tables
@@ -212,8 +968,8 @@ function AtlasLoot_OnVariablesLoaded()
 		end
 		-- If an older version
 		if ( AtlasLootCharDB.FirstTime == nil and version < 40500 ) then
-			AtlasLootCharDB.SafeLinks = true;
-			AtlasLootCharDB.AllLinks = false;
+			-- AtlasLootCharDB.SafeLinks = true;
+			-- AtlasLootCharDB.AllLinks = false;
 			StaticPopup_Show ("ATLASLOOT_SETUP");
 			AtlasLootCharDB.FirstTime = false;
 		end
@@ -306,8 +1062,8 @@ function AtlasLootOptions_Init()
 		AtlasLootOptions_Fresh();
 	end
 	-- Initialise all the check boxes on the options frame
-	AtlasLootOptionsFrameSafeLinks:SetChecked(AtlasLootCharDB.SafeLinks);
-	AtlasLootOptionsFrameAllLinks:SetChecked(AtlasLootCharDB.AllLinks);
+	-- AtlasLootOptionsFrameSafeLinks:SetChecked(AtlasLootCharDB.SafeLinks);
+	-- AtlasLootOptionsFrameAllLinks:SetChecked(AtlasLootCharDB.AllLinks);
 	AtlasLootOptionsFrameDefaultTT:SetChecked(AtlasLootCharDB.DefaultTT);
 	AtlasLootOptionsFrameLootlinkTT:SetChecked(AtlasLootCharDB.LootlinkTT);
 	AtlasLootOptionsFrameItemSyncTT:SetChecked(AtlasLootCharDB.ItemSyncTT);
@@ -316,7 +1072,7 @@ function AtlasLootOptions_Init()
 	AtlasLootOptionsFrameEquipCompare:SetChecked(AtlasLootCharDB.EquipCompare);
 	AtlasLootOptionsFrameOpaque:SetChecked(AtlasLootCharDB.Opaque);
 	AtlasLootOptionsFrameItemID:SetChecked(AtlasLootCharDB.ItemIDs);
-	AtlasLootOptionsFrameItemSpam:SetChecked(AtlasLootCharDB.ItemSpam);
+	-- AtlasLootOptionsFrameItemSpam:SetChecked(AtlasLootCharDB.ItemSpam);
 	AtlasLootOptionsFrameHidePanel:SetChecked(AtlasLootCharDB.HidePanel);
 	AtlasLootOptionsFrameMinimap:SetChecked(AtlasLootCharDB.MinimapButton);
 	AtlasLootOptionsFrameSliderButtonPos:SetValue(AtlasLootCharDB.MinimapButtonPosition);
@@ -335,8 +1091,8 @@ Atlas_FreshOptions:
 Sets default options on a fresh start.
 ]]
 function AtlasLootOptions_Fresh()
-	AtlasLootCharDB.SafeLinks = false;
-	AtlasLootCharDB.AllLinks = true;
+	-- AtlasLootCharDB.SafeLinks = false;
+	-- AtlasLootCharDB.AllLinks = true;
 	AtlasLootCharDB.DefaultTT = true;
 	AtlasLootCharDB.LootlinkTT = false;
 	AtlasLootCharDB.ItemSyncTT = false;
@@ -346,7 +1102,7 @@ function AtlasLootOptions_Fresh()
 	AtlasLootCharDB.Opaque = false;
 	AtlasLootCharDB.ItemIDs = false;
 	AtlasLootCharDB.FirstTime = true;
-	AtlasLootCharDB.ItemSpam = true;
+	-- AtlasLootCharDB.ItemSpam = true;
 	AtlasLootCharDB.MinimapButton = true;
 	AtlasLootCharDB.MinimapButtonPosition = 315;
 	AtlasLootCharDB.MinimapButtonRadius = 78;
@@ -426,37 +1182,6 @@ function AtlasLoot_SetupForAtlas()
     AtlasLoot_AnchorPoint = Anchor_Atlas
 	AtlasLootItemsFrame:Hide();
 end
-
---[[
-AtlasLoot_SetItemInfoFrame(pFrame):
-pFrame - Data structure with anchor info.  Format: {Anchor Point, Relative Frame, Relative Point, X Offset, Y Offset }
-This function anchors the item frame where appropriate.  The main Atlas frame can be passed instead of a custom pFrame.
-If no pFrame is specified, the Atlas Frame is used if Atlas is installed.
-]]
--- function AtlasLoot_SetItemInfoFrame(pFrame)
--- 	if ( pFrame ) then
--- 		-- If a pFrame is specified, use it
--- 		if ( pFrame == AtlasFrame and AtlasFrame ) then
--- 			AtlasLootItemsFrame:ClearAllPoints();
--- 			AtlasLootItemsFrame:SetParent(AtlasFrame);
--- 			AtlasLootItemsFrame:SetPoint("TOPLEFT", "AtlasFrame", "TOPLEFT", 18, -84);
--- 		else
--- 			AtlasLootItemsFrame:ClearAllPoints();
--- 			AtlasLootItemsFrame:SetParent(pFrame[2]);
--- 			AtlasLootItemsFrame:SetPoint(pFrame[1], pFrame[2], pFrame[3], pFrame[4], pFrame[5]);
--- 		end
--- 	elseif ( AtlasFrame ) then
--- 		-- If no pFrame is specified and Atlas is installed, anchor in Atlas
--- 		AtlasLootItemsFrame:ClearAllPoints();
--- 		AtlasLootItemsFrame:SetParent(AtlasFrame);
--- 		AtlasLootItemsFrame:SetPoint("TOPLEFT", "AtlasFrame", "TOPLEFT", 18, -84);
--- 	elseif ( AtlasLootDefaultFrame ) then
--- 		AtlasLootItemsFrame:ClearAllPoints();
--- 		AtlasLootItemsFrame:SetParent(AtlasLootDefaultFrame);
--- 		AtlasLootItemsFrame:SetPoint("TOPLEFT", "AtlasLootDefaultFrame", "TOPLEFT", 0, 0);
--- 	end
--- 	AtlasLootItemsFrame:Show();
--- end
 
 --[[
 AtlasLoot_AtlasScrollBar_Update:
@@ -784,29 +1509,29 @@ end
 AtlasLootOptions_SafeLinksToggle:
 Toggles SafeLinks. Items uncached will be linked as their names.
 ]]
-function AtlasLootOptions_SafeLinksToggle()
-	if ( AtlasLootCharDB.SafeLinks ) then
-		AtlasLootCharDB.SafeLinks = false;
-	else
-		AtlasLootCharDB.SafeLinks = true;
-		AtlasLootCharDB.AllLinks = false;
-	end
-	AtlasLootOptions_Init();
-end
+-- function AtlasLootOptions_SafeLinksToggle()
+-- 	if ( AtlasLootCharDB.SafeLinks ) then
+-- 		AtlasLootCharDB.SafeLinks = false;
+-- 	else
+-- 		AtlasLootCharDB.SafeLinks = true;
+-- 		AtlasLootCharDB.AllLinks = false;
+-- 	end
+-- 	AtlasLootOptions_Init();
+-- end
 
 --[[
 AtlasLootOptions_AllLinksToggle:
 Toggles AllLinks. All items will be linked.
 ]]
-function AtlasLootOptions_AllLinksToggle()
-	if ( AtlasLootCharDB.AllLinks ) then
-		AtlasLootCharDB.AllLinks = false;
-	else
-		AtlasLootCharDB.AllLinks = true;
-		AtlasLootCharDB.SafeLinks = false;
-	end
-	AtlasLootOptions_Init();
-end
+-- function AtlasLootOptions_AllLinksToggle()
+-- 	if ( AtlasLootCharDB.AllLinks ) then
+-- 		AtlasLootCharDB.AllLinks = false;
+-- 	else
+-- 		AtlasLootCharDB.AllLinks = true;
+-- 		AtlasLootCharDB.SafeLinks = false;
+-- 	end
+-- 	AtlasLootOptions_Init();
+-- end
 
 --[[
 AtlasLootOptions_DefaultTTToggle:
@@ -925,14 +1650,14 @@ end
 AtlasLootOptions_ItemSpam:
 Toggles item query spam.
 ]]
-function AtlasLootOptions_ItemSpam()
-	if ( AtlasLootCharDB.ItemSpam ) then
-		AtlasLootCharDB.ItemSpam = false;
-	else
-		AtlasLootCharDB.ItemSpam = true;
-	end
-	AtlasLootOptions_Init();
-end
+-- function AtlasLootOptions_ItemSpam()
+-- 	if ( AtlasLootCharDB.ItemSpam ) then
+-- 		AtlasLootCharDB.ItemSpam = false;
+-- 	else
+-- 		AtlasLootCharDB.ItemSpam = true;
+-- 	end
+-- 	AtlasLootOptions_Init();
+-- end
 
 --[[
 AtlasLootOptions_Toggle:
@@ -1995,8 +2720,8 @@ function AtlasLootOptions_ResetPosition()
 end
 
 function AtlasLootOptions_DefaultSettings()
-	AtlasLootCharDB.SafeLinks = false;
-	AtlasLootCharDB.AllLinks = true;
+	-- AtlasLootCharDB.SafeLinks = false;
+	-- AtlasLootCharDB.AllLinks = true;
 	AtlasLootCharDB.DefaultTT = true;
 	AtlasLootCharDB.LootlinkTT = false;
 	AtlasLootCharDB.ItemSyncTT = false;
@@ -2004,7 +2729,7 @@ function AtlasLootOptions_DefaultSettings()
 	AtlasLootCharDB.EquipCompare = false;
 	AtlasLootCharDB.Opaque = false;
 	AtlasLootCharDB.ItemIDs = false;
-	AtlasLootCharDB.ItemSpam = true;
+	-- AtlasLootCharDB.ItemSpam = true;
 	AtlasLootCharDB.MinimapButton = true;
 	AtlasLootCharDB.HidePanel = false;
 	-- AtlasLootCharDB.AutoQuery = false;
@@ -2046,762 +2771,6 @@ function AtlasLootMinimapButton_SetPosition(v)
 	AtlasLootMinimapButton_UpdatePosition();
 end
 
--- This is a multi-layer table defining the main loot listing.
--- Entries have the text to display, loot table or sub table to link to and if the link is to a loot table or sub table
-AtlasLoot_HewdropDown = {
-	{[AL["Dungeons & Raids"]] = {
-			{{ AL["[13-18] Ragefire Chasm"], "RagefireChasm", "Submenu" },},
-			{{ AL["[17-24] Wailing Caverns"], "WailingCaverns", "Submenu" },},
-			{{ AL["[17-24] The Deadmines"], "Deadmines", "Submenu" },},
-			{{ AL["[22-30] Shadowfang Keep"], "ShadowfangKeep", "Submenu" },},
-			{{ AL["[23-32] Blackfathom Deeps"], "BlackfathomDeeps", "Submenu" },},
-			{{ AL["[22-30] The Stockade"], "TheStockade", "Submenu" },},
-			{{ AL["[26-35] Dragonmaw Retreat"], "DragonmawRetreat", "Submenu" },},
-			{{ AL["[29-38] Gnomeregan"], "Gnomeregan", "Submenu" },},
-			{{ AL["[29-38] Razorfen Kraul"], "RazorfenKraul", "Submenu" },},
-			{{ AL["[32-38] The Crescent Grove"], "TheCrescentGrove", "Submenu" },},
-			{[ AL["[27-45] Scarlet Monastery"]] = {
-					{ AL["[27-36] Scarlet Monastery (Graveyard)"], "SMGraveyard", "Submenu" },
-					{ AL["[28-39] Scarlet Monastery (Library)"], "SMLibrary", "Submenu" },
-					{ AL["[32-41] Scarlet Monastery (Armory)"], "SMArmory", "Submenu" },
-					{ AL["[35-45] Scarlet Monastery (Cathedral)"], "SMCathedral", "Submenu" },
-				},},
-			{{ AL["[32-44] Stormwrought Ruins"], "StormwroughtRuins", "Submenu" },},
-			{{ AL["[36-46] Razorfen Downs"], "RazorfenDowns", "Submenu" },},
-			{{ AL["[40-51] Uldaman"], "Uldaman", "Submenu" },},
-			{{ AL["[42-50] Gilneas City"], "GilneasCity", "Submenu" },},
-			{{ AL["[45-55] Maraudon"], "Maraudon", "Submenu" },},
-			{{ AL["[44-54] Zul'Farrak"], "ZulFarrak", "Submenu" },},
-			{{ AL["[50-60] The Sunken Temple"], "SunkenTemple", "Submenu" },},
-			{{ AL["[50-60] Hateforge Quarry"], "HateforgeQuarry", "Submenu" },},
-			{{ AL["[52-60] Blackrock Depths"], "BlackrockDepths", "Submenu" },},
-			{[AL["[55-60] Dire Maul"]] = {
-					{ AL["[55-60] Dire Maul (East)"], "DireMaulEast", "Submenu" },
-					{ AL["[57-60] Dire Maul (West)"], "DireMaulWest", "Submenu" },
-					{ AL["[57-60] Dire Maul (North)"], "DireMaulNorth", "Submenu" },
-				},},
-			{{ AL["[58-60] Scholomance"], "Scholomance", "Submenu" },},
-			{{ AL["[58-60] Stratholme"], "Stratholme", "Submenu" },},
-			{{ AL["[55-60] Lower Blackrock Spire"], "LowerBlackrock", "Submenu" },},
-			{{ AL["[58-60] Upper Blackrock Spire"], "UpperBlackrock", "Submenu" },},
-			{{ AL["[58-60] Karazhan Crypt"], "KarazhanCrypt", "Submenu" },},
-			{{ AL["[60] Caverns of Time: Black Morass"], "CavernsOfTimeBlackMorass", "Submenu" },},
-			{{ AL["[60] Stormwind Vault"], "StormwindVault", "Submenu" },},
-			{{ AL["[RAID] Zul'Gurub"], "ZulGurub", "Submenu" },},
-			{{ AL["[RAID] Ruins of Ahn'Qiraj"], "RuinsofAQ", "Submenu" },},
-			{{ AL["[RAID] Molten Core"], "MoltenCore", "Submenu" },},
-			{{ AL["[RAID] Onyxia's Lair"], "Onyxia", "Submenu" },},
-			{{ AL["[RAID] Lower Karazhan Halls"], "LowerKara", "Submenu" },},
-			{{ AL["[RAID] Blackwing Lair"], "BlackwingLair", "Submenu" },},
-			{{ AL["[RAID] Emerald Sanctum"], "EmeraldSanctum", "Submenu" },},
-			{{ AL["[RAID] Temple of Ahn'Qiraj"], "TempleofAQ", "Submenu" },},
-			{{ AL["[RAID] Naxxramas"], "Naxxramas", "Submenu" },},
-            {{ AL["[RAID] Upper Karazhan Halls"], "UpperKara", "Submenu" },},
-		},
-	},
-	{[AL["World Bosses"]] = {
-		{{AL["Azuregos"], "AAzuregos", "Table" },},
-		{{AL["Emeriss"], "DEmeriss", "Table" },},
-		{{AL["Lethon"], "DLethon", "Table" },},
-		{{AL["Taerar"], "DTaerar", "Table" },},
-		{{AL["Ysondre"], "DYsondre", "Table" },},
-		{{AL["Lord Kazzak"], "KKazzak", "Table" },},
-		{{AL["Nerubian Overseer"], "Nerubian", "Table" },},
-		{{AL["Dark Reaver of Karazhan"], "Reaver", "Table" },},
-		{{AL["Ostarius"], "Ostarius", "Table" },},
-		{{AL["Concavius"], "Concavius", "Table" },},
-		{{AL["Moo"], "CowKing", "Table" },},
-		{{AL["Cla'ckora"], "Clackora", "Table"},},
-		},
-	},
-	{[AL["PvP Rewards"]] = {
-		{{ AL["PvP Armor Sets"], "PVPSET", "Table" },},
-		{{ AL["PvP Accessories"], "PvP60Accessories1", "Table" },},
-		{{ AL["Rank 14 Weapons"], "PVPWeapons1", "Table" },},
-		{{ AL["PvP Mounts"], "PvPMountsPvP", "Table" },},
-		{{ AL["Blood Ring"], "BRRepMenu", "Table" },},
-		{{ AL["Alterac Valley"], "AVRepMenu", "Table" },},
-		{{ AL["Arathi Basin"], "ABRepMenu", "Table" },},
-		{{ AL["Warsong Gulch"], "WSGRepMenu", "Table" },},
-		},
-	},
-	{[AL["Collections"]] = {
-			{{ AL["Sets"], "PRE60SET", "Table" },},
-			{{ AL["Zul'Gurub Sets"], "ZGSET", "Table" },},
-			{{ AL["Ruins of Ahn'Qiraj Sets"], "AQ20SET", "Table" },},
-			{{ AL["Temple of Ahn'Qiraj Sets"], "AQ40SET", "Table" },},
-			{{ AL["Karazhan Sets"], "KARASET", "Table" },},
-			{{ AL["Dungeon 1/2 Sets"], "T0SET", "Table" },},
-			{{ AL["Tier 1 Sets"], "T1SET", "Table" },},
-			{{ AL["Tier 2 Sets"], "T2SET", "Table" },},
-			{{ AL["Tier 3 Sets"], "T3SET", "Table" },},
-			{{ AL["Legendary Items"], "Legendaries", "Table" },},
-			{{ AL["World Epics"], "WorldEpics1", "Table" },},
-			{{ AL["Rare Pets"], "RarePets1", "Table" },},
-			{{ AL["Rare Mounts"], "RareMounts", "Table" },},
-			{{ AL["Tabards"], "Tabards", "Table" },},
-			},
-		},
-	{[AL["Factions"]] = {
-			{{ AL["Argent Dawn"], "Argent1" , "Table" },},
-			{{ AL["Bloodsail Buccaneers"], "Bloodsail1", "Table" },},
-			{{ AL["Brood of Nozdormu"], "AQBroodRings", "Table" },},
-			{{ AL["Cenarion Circle"], "Cenarion1", "Table" }},
-			{{ AL["Dalaran"], "Dalaran", "Table" },},
-			{{ AL["Darkmoon Faire"], "Darkmoon", "Table" },},
-			{{ AL["Darkspear Trolls"], "DarkspearTrolls", "Table" },},
-			{{ AL["Darnassus"], "Darnassus", "Table" },},
-			{{ AL["Durotar Labor Union"], "DurotarLaborUnion", "Table" },},
-			{{ AL["Frostwolf Clan"], "Frostwolf1", "Table" },},
-			{{ AL["Gelkis Clan Centaur"], "GelkisClan1", "Table" },},
-			{{ AL["Gnomeregan Exiles"], "GnomereganExiles", "Table" },},
-			{{ AL["Hydraxian Waterlords"], "WaterLords1", "Table" },},
-			{{ AL["Ironforge"], "Ironforge", "Table" },},
-			{{ AL["Magram Clan Centaur"], "MagramClan1", "Table" },},
-			{{ AL["Orgrimmar"], "Orgrimmar", "Table" },},
-			{{ AL["Revantusk Trolls"], "Revantusk", "Table" },},
-			{{ AL["Silvermoon Remnant"], "Helf", "Table" },},
-			{{ AL["Stormpike Guard"], "Stormpike1", "Table" },},
-			{{ AL["Stormwind"], "Stormwind", "Table" },},
-			{{ AL["Thorium Brotherhood"], "Thorium1", "Table" },},
-			{{ AL["Thunder Bluff"], "ThunderBluff", "Table" },},
-			{{ AL["Timbermaw Hold"], "Timbermaw", "Table" },},
-			{{ AL["Undercity"], "Undercity", "Table" },},
-			{{ AL["Wardens of Time"], "Wardens1", "Table" },},
-			{{ AL["Wildhammer Clan"], "Wildhammer", "Table" },},
-			{{ AL["Wintersaber Trainers"], "Wintersaber1", "Table" },},
-			{{ AL["Zandalar Tribe"], "Zandalar1", "Table" },},
-		 	},
-		},
-	{[AL["World Events"]] = {
-			{{ AL["Abyssal Council"], "AbyssalTemplars", "Table" },},
-			{{ AL["Children's Week"], "ChildrensWeek", "Table" },},
-			{{ AL["Elemental Invasion"], "ElementalInvasion", "Table" },},
-			{{ AL["Feast of Winter Veil"], "Winterviel1", "Table" },},
-			{{ AL["Gurubashi Arena"], "GurubashiArena", "Table" },},
-			{{ AL["Hallow's End"], "Halloween1", "Table" },},
-			{{ AL["Harvest Festival"], "HarvestFestival", "Table" },},
-			{{ AL["Love is in the Air"], "Valentineday", "Table" },},
-			{{ AL["Lunar Festival"], "LunarFestival1", "Table" },},
-			{{ AL["Midsummer Fire Festival"], "MidsummerFestival", "Table" },},
-			{{ AL["Noblegarden"], "Noblegarden", "Table" },},
-			{{ AL["Scourge Invasion"], "ScourgeInvasionEvent1", "Table" },},
-			{{ AL["Stranglethorn Fishing Extravaganza"], "FishingExtravaganza", "Table" },},
-			},
-		},
-	{[AL["Crafting"]] = {
-			{ { AL["Alchemy"], "ALCHEMYMENU", "Table" }, },
-			{ { AL["Blacksmithing"], "SMITHINGMENU", "Table" }, },
-			{ { AL["Enchanting"], "ENCHANTINGMENU", "Table" }, },
-			{ { AL["Engineering"], "ENGINEERINGMENU", "Table" }, },
-			{ { AL["Herbalism"], "Herbalism1", "Table" }, },
-			{ { AL["Leatherworking"], "LEATHERWORKINGMENU", "Table" }, },
-			{ { AL["Jewelcrafting"], "JEWELCRAFTMENU", "Table" }, },
-			{ { AL["Mining"], "Mining1", "Table" }, },
-			{ { AL["Tailoring"], "TAILORINGMENU", "Table" }, },
-			{ { AL["Cooking"], "CookingApprentice1", "Table" }, },
-			{ { AL["First Aid"], "FirstAid1", "Table" }, },
-			{ { AL["Survival"], "Survival1", "Table" }, },
-			{ { AL["Gardening"], "Survival2", "Table" }, },
-			{ { AL["Poisons"], "Poisons1", "Table" }, },
-			{ { AL["Crafted Sets"], "CRAFTSET", "Table" },},
-			{ { AL["Crafted Epic Weapons"], "CraftedWeapons1", "Table" }, },
-		},
-	},
-	{{ "Rare Spawns", "RareSpawns", "Submenu" },},
-};
-
--- This table defines all the subtables needed for the full menu
--- Each sub table entry contains the text entry and the loot table that goes wih it
-AtlasLoot_HewdropDown_SubTables = {
-	["HateforgeQuarry"] = {
-		{ AL["High Foreman Bargul Blackhammer"], "HQHighForemanBargulBlackhammer" },
-		{ AL["Engineer Figgles"], "HQEngineerFiggles" },
-		{ AL["Corrosis"], "HQCorrosis" },
-		{ AL["Hatereaver Annihilator"], "HQHatereaverAnnihilator" },
-		{ AL["Har'gesh Doomcaller"], "HQHargeshDoomcaller" },
-		{ AL["Trash Mobs"], "HQTrash" },
-	},
-	["BlackrockDepths"] = {
-		{ AL["Lord Roccor"], "BRDLordRoccor" },
-		{ AL["High Interrogator Gerstahn"], "BRDHighInterrogatorGerstahn" },
-		{ AL["Anub'shiah"], "BRDAnubshiah" },
-		{ AL["Eviscerator"], "BRDEviscerator" },
-		{ AL["Gorosh the Dervish"], "BRDGorosh" },
-		{ AL["Grizzle"], "BRDGrizzle" },
-		{ AL["Hedrum the Creeper"], "BRDHedrum" },
-		{ AL["Ok'thor the Breaker"], "BRDOkthor" },
-		{ AL["Theldren"], "BRDTheldren" },
-		{ AL["Houndmaster Grebmar"], "BRDHoundmaster" },
-		{ AL["Pyromancer Loregrain"].." ("..AL["Rare"]..")", "BRDPyromancerLoregrain" },
-		{ AL["The Vault"], "BRDTheVault" },
-		{ AL["Warder Stilgiss"].." ("..AL["Rare"]..")", "BRDWarderStilgiss" },
-		{ AL["Verek"].." ("..AL["Rare"]..")", "BRDVerek" },
-		{ AL["Fineous Darkvire"], "BRDFineousDarkvire" },
-		{ AL["Lord Incendius"], "BRDLordIncendius" },
-		{ AL["Bael'Gar"], "BRDBaelGar" },
-		{ AL["General Angerforge"], "BRDGeneralAngerforge" },
-		{ AL["Golem Lord Argelmach"], "BRDGolemLordArgelmach" },
-		{ AL["The Grim Guzzler"], "BRDGuzzler" },
-		{ AL["Ambassador Flamelash"], "BRDFlamelash" },
-		{ AL["Panzor the Invincible"].." ("..AL["Rare"]..")", "BRDPanzor" },
-		{ AL["Summoner's Tomb"], "BRDTomb" },
-		{ AL["Magmus"], "BRDMagmus" },
-		{ AL["Princess Moira Bronzebeard"], "BRDPrincess" },
-		{ AL["Emperor Dagran Thaurissan"], "BRDEmperorDagranThaurissan" },
-		{ AL["Trash Mobs"], "BRDTrash" },
-	},
-	["LowerBlackrock"] = {
-		{ AL["Spirestone Butcher"].." ("..AL["Rare"]..")", "LBRSSpirestoneButcher" },
-		{ AL["Spirestone Battle Lord"].." ("..AL["Rare"]..")", "LBRSSpirestoneBattleLord" },
-		{ AL["Spirestone Lord Magus"].." ("..AL["Rare"]..")", "LBRSSpirestoneLordMagus" },
-		{ AL["Highlord Omokk"], "LBRSOmokk" },
-		{ AL["Shadow Hunter Vosh'gajin"], "LBRSVosh" },
-		{ AL["War Master Voone"], "LBRSVoone" },
-		{ AL["Burning Felguard"].." ("..AL["Rare"]..")", "LBRSFelguard" },
-		{ AL["Mor Grayhoof"], "LBRSGrayhoof" },
-		{ AL["Bannok Grimaxe"].." ("..AL["Rare"]..")", "LBRSGrimaxe" },
-		{ AL["Mother Smolderweb"], "LBRSSmolderweb" },
-		{ AL["Crystal Fang"].." ("..AL["Rare"]..")", "LBRSCrystalFang" },
-		{ AL["Urok Doomhowl"], "LBRSDoomhowl" },
-		{ AL["Quartermaster Zigris"], "LBRSZigris" },
-		{ AL["Halycon"], "LBRSHalycon" },
-		{ AL["Gizrul the Slavener"], "LBRSSlavener" },
-		{ AL["Ghok Bashguud"].." ("..AL["Rare"]..")", "LBRSBashguud" },
-		{ AL["Overlord Wyrmthalak"], "LBRSWyrmthalak" },
-		{ AL["Trash Mobs"], "LBRSTrash" },
-	},
-	["UpperBlackrock"] = {
-		{ AL["Pyroguard Emberseer"], "UBRSEmberseer" },
-		{ AL["Solakar Flamewreath"], "UBRSSolakar" },
-		{ AL["Father Flame"], "UBRSFlame" },
-		{ AL["Jed Runewatcher"].." ("..AL["Rare"]..")", "UBRSRunewatcher" },
-		{ AL["Goraluk Anvilcrack"].." ("..AL["Rare"]..")", "UBRSAnvilcrack" },
-		{ AL["Warchief Rend Blackhand"], "UBRSRend" },
-		{ AL["Gyth"], "UBRSGyth" },
-		{ AL["The Beast"], "UBRSBeast" },
-		{ AL["Lord Valthalak"], "UBRSValthalak" },
-		{ AL["General Drakkisath"], "UBRSDrakkisath" },
-		{ AL["Trash Mobs"], "UBRSTrash" },
-	},
-	["KarazhanCrypt"] = {
-		{ AL["Marrowspike"], "KCMarrowspike" },
-		{ AL["Hivaxxis"], "KCHivaxxis" },
-		{ AL["Corpsemuncher"], "KCCorpsemuncher" },
-		{ AL["Guard Captain Gort"], "KCGuardCaptainGort" },
-		{ AL["Archlich Enkhraz"], "KCArchlichEnkhraz" },
-		{ AL["Commander Andreon"], "KCCommanderAndreon" },
-		{ AL["Alarus"], "KCAlarus" },
-		{ AL["Half-Buried Treasure Chest"], "KCTreasure" },
-		{ AL["Trash Mobs"], "KCTrash" },
-	},
-	["CavernsOfTimeBlackMorass"] = {
-		{ AL["Chronar"], "COTBMChronar" },
-		{ AL["Epidamu"], "COTBMEpidamu" },
-		{ AL["Drifting Avatar of Sand"], "COTBMDriftingAvatar" },
-		{ AL["Time-Lord Epochronos"], "COTBMTimeLordEpochronos" },
-		{ AL["Mossheart"], "COTBMMossheart" },
-		{ AL["Rotmaw"], "COTBMRotmaw" },
-		{ AL["Antnormi"], "COTBMAntnormi" },
-		{ AL["Trash Mobs"], "COTTrash" },
-		-- { AL["Infinite Chromie"], "COTBMInfiniteChromie" },
-	},
-	["StormwindVault"] = {
-		{ AL["Aszosh Grimflame"], "SWVAszoshGrimflame" },
-		{ AL["Tham'Grarr"], "SWVThamGrarr" },
-		{ AL["Black Bride"], "SWVBlackBride" },
-		{ AL["Damian"], "SWVDamian" },
-		{ AL["Volkan Cruelblade"], "SWVVolkanCruelblade" },
-		{ AL["Arc'tiras"], "SWVVaultArmoryEquipment" },
-		{ AL["Trash Mobs"], "SWVTrash" },
-	},
-	["BlackwingLair"] = {
-		{ AL["Razorgore the Untamed"], "BWLRazorgore" },
-		{ AL["Vaelastrasz the Corrupt"], "BWLVaelastrasz" },
-		{ AL["Broodlord Lashlayer"], "BWLLashlayer" },
-		{ AL["Firemaw"], "BWLFiremaw" },
-		{ AL["Ebonroc"], "BWLEbonroc" },
-		{ AL["Flamegor"], "BWLFlamegor" },
-		{ AL["Chromaggus"], "BWLChromaggus" },
-		{ AL["Nefarian"], "BWLNefarian" },
-		{ AL["Trash Mobs"], "BWLTrashMobs" },
-	},
-	["Deadmines"] = {
-        { AL["Jared Voss"], "DMJaredVoss" },
-		{ AL["Rhahk'Zor"], "DMRhahkZor" },
-		{ AL["Miner Johnson"].." ("..AL["Rare"]..")", "DMMinerJohnson" },
-		{ AL["Sneed"], "DMSneed" },
-		{ AL["Sneed's Shredder"], "DMSneedsShredder" },
-		{ AL["Gilnid"], "DMGilnid" },
-        { AL["Masterpiece Harvester"], "DMHarvester" },
-		{ AL["Mr. Smite"], "DMMrSmite" },
-		{ AL["Cookie"], "DMCookie" },
-		{ AL["Captain Greenskin"], "DMCaptainGreenskin" },
-		{ AL["Edwin VanCleef"], "DMVanCleef" },
-		{ AL["Trash Mobs"], "DMTrash" },
-	},
-	["TheCrescentGrove"] = {
-		{ AL["Grovetender Engryss"], "TCGGrovetenderEngryss" },
-		{ AL["Keeper Ranathos"], "TCGKeeperRanathos" },
-		{ AL["High Priestess A'lathea"], "TCGHighPriestessAlathea" },
-		{ AL["Fenektis the Deceiver"], "TCGFenektistheDeceiver" },
-		{ AL["Master Raxxieth"], "TCGMasterRaxxieth" },
-		{ AL["Trash Mobs"], "TCGTrash" },
-	},
-	["Gnomeregan"] = {
-		{ AL["Grubbis"], "GnGrubbis" },
-		{ AL["Viscous Fallout"], "GnViscousFallout" },
-		{ AL["Electrocutioner 6000"], "GnElectrocutioner6000" },
-		{ AL["Crowd Pummeler 9-60"], "GnCrowdPummeler960" },
-		{ AL["Dark Iron Ambassador"], "GnDIAmbassador" },
-		{ AL["Mekgineer Thermaplugg"], "GnMekgineerThermaplugg" },
-		{ AL["Trash Mobs"], "GnTrash" },
-	},
-	["MoltenCore"] = {
-		{ AL["Incindis"], "MCIncindis" },
-		{ AL["Lucifron"], "MCLucifron" },
-		{ AL["Magmadar"], "MCMagmadar" },
-		-- { AL["Gehennas"], "MCGehennas" },
-		{ AL["Garr"], "MCGarr" },
-		{ AL["Shazzrah"], "MCShazzrah" },
-		{ AL["Baron Geddon"], "MCGeddon" },
-		{ AL["Golemagg the Incinerator"], "MCGolemagg" },
-		{ AL["Basalthar & Smoldaris"], "MCTwins" },
-		{ AL["Sorcerer-Thane Thaurissan"], "MCThaurissan" },
-		{ AL["Sulfuron Harbinger"], "MCSulfuron" },
-		{ AL["Majordomo Executus"], "MCMajordomo" },
-		{ AL["Ragnaros"], "MCRagnaros" },
-		{ AL["Trash Mobs"], "MCTrashMobs" },
-		{ AL["Random Boss Loot"], "MCRANDOMBOSSDROPS" },
-	},
-	["Naxxramas"] = {
-		{ AL["Patchwerk"], "NAXPatchwerk" },
-		{ AL["Grobbulus"], "NAXGrobbulus" },
-		{ AL["Gluth"], "NAXGluth" },
-		{ AL["Thaddius"], "NAXThaddius" },
-		{ AL["Anub'Rekhan"], "NAXAnubRekhan" },
-		{ AL["Grand Widow Faerlina"], "NAXGrandWidowFaerlina" },
-		{ AL["Maexxna"], "NAXMaexxna" },
-		{ AL["Noth the Plaguebringer"], "NAXNoththePlaguebringer" },
-		{ AL["Heigan the Unclean"], "NAXHeigantheUnclean" },
-		{ AL["Loatheb"], "NAXLoatheb" },
-		{ AL["Instructor Razuvious"], "NAXInstructorRazuvious" },
-		{ AL["Gothik the Harvester"], "NAXGothiktheHarvester" },
-		{ AL["The Four Horsemen"], "NAXTheFourHorsemen" },
-		{ AL["Sapphiron"], "NAXSapphiron" },
-		{ AL["Kel'Thuzad"], "NAXKelThuzard" },
-		{ AL["Trash Mobs"], "NAXTrash" },
-	},
-	["SMGraveyard"] = {
-		{ AL["Interrogator Vishas"], "SMVishas" },
-        { AL["Duke Dreadmoore"], "SMDukeDreadmoore" },
-		{ AL["Scorn"].." ("..AL["Scourge Invasion"]..")", "SMScorn" },
-		{ AL["Ironspine"].." ("..AL["Rare"]..")", "SMIronspine" },
-		{ AL["Azshir the Sleepless"].." ("..AL["Rare"]..")", "SMAzshir" },
-		{ AL["Fallen Champion"].." ("..AL["Rare"]..")", "SMFallenChampion" },
-		{ AL["Bloodmage Thalnos"], "SMBloodmageThalnos" },
-		{ AL["Trash Mobs"], "SMGTrash" },
-	},
-	["SMLibrary"] = {
-		{ AL["Houndmaster Loksey"], "SMHoundmasterLoksey" },
-        { AL["Brother Wystan"], "SMBrotherWystan" },
-		{ AL["Arcanist Doan"], "SMDoan" },
-		{ AL["Trash Mobs"], "SMLTrash" },
-	},
-	["SMArmory"] = {
-		{ AL["Herod"], "SMHerod" },
-        { AL["Armory Quartermaster Daghelm"], "SMQuartermaster" },
-		{ AL["Trash Mobs"], "SMATrash" },
-	},
-	["SMCathedral"] = {
-		{ AL["High Inquisitor Fairbanks"], "SMFairbanks" },
-		{ AL["Scarlet Commander Mograine"], "SMMograine" },
-		{ AL["High Inquisitor Whitemane"], "SMWhitemane" },
-		{ AL["Trash Mobs"], "SMCTrash" },
-	},
-	["Scholomance"] = {
-		-- { AL["Blood Steward of Kirtonos"], "SCHOLOBlood" },
-		{ AL["Kirtonos the Herald"], "SCHOLOKirtonostheHerald" },
-		{ AL["Jandice Barov"], "SCHOLOJandiceBarov" },
-		{ AL["Lord Blackwood"].." ("..AL["Scourge Invasion"]..")", "SCHOLOLordBlackwood" },
-		{ AL["Rattlegore"], "SCHOLORattlegore" },
-		{ AL["Death Knight Darkreaver"], "SCHOLODeathKnight" },
-		{ AL["Marduk Blackpool"], "SCHOLOMarduk" },
-		{ AL["Vectus"], "SCHOLOVectus" },
-		{ AL["Ras Frostwhisper"], "SCHOLORasFrostwhisper" },
-		{ AL["Kormok"], "SCHOLOKormok" },
-		{ AL["Instructor Malicia"], "SCHOLOInstructorMalicia" },
-		{ AL["Doctor Theolen Krastinov"], "SCHOLODoctorTheolenKrastinov" },
-		{ AL["Lorekeeper Polkelt"], "SCHOLOLorekeeperPolkelt" },
-		{ AL["The Ravenian"], "SCHOLOTheRavenian" },
-		{ AL["Lord Alexei Barov"], "SCHOLOLordAlexeiBarov" },
-		{ AL["Lady Illucia Barov"], "SCHOLOLadyIlluciaBarov" },
-		{ AL["Darkmaster Gandling"], "SCHOLODarkmasterGandling" },
-		{ AL["Trash Mobs"], "SCHOLOTrash" },
-	},
-	["ShadowfangKeep"] = {
-		{ AL["Rethilgore"], "SFKRethilgore" },
-		{ AL["Fel Steed"], "SFKFelSteed" },
-		{ AL["Razorclaw the Butcher"], "SFKRazorclawtheButcher" },
-		{ AL["Baron Silverlaine"], "SFKSilverlaine" },
-		{ AL["Commander Springvale"], "SFKSpringvale" },
-		{ AL["Sever"].." ("..AL["Scourge Invasion"]..")", "SFKSever" },
-		{ AL["Odo the Blindwatcher"], "SFKOdotheBlindwatcher" },
-		{ AL["Deathsworn Captain"].." ("..AL["Rare"]..")", "SFKDeathswornCaptain" },
-		{ AL["Fenrus the Devourer"], "SFKFenrustheDevourer" },
-		{ AL["Arugal's Voidwalker"], "SFKArugalsVoidwalker" },
-		{ AL["Wolf Master Nandos"], "SFKWolfMasterNandos" },
-		{ AL["Archmage Arugal"], "SFKArchmageArugal" },
-        { AL["Prelate Ironmane"], "SFKPrelate"},
-		{ AL["Trash Mobs"], "SFKTrash" },
-	},
-	["TheStockade"] = {
-		{ AL["Targorr the Dread"], "SWStTargorr" },
-		{ AL["Kam Deepfury"], "SWStKamDeepfury" },
-		{ AL["Hamhock"], "SWStHamhock" },
-		{ AL["Dextren Ward"], "SWStDextren" },
-		{ AL["Bazil Thredd"], "SWStBazil" },
-		{ AL["Bruegal Ironknuckle"].." ("..AL["Rare"]..")", "SWStBruegalIronknuckle" },
-		{ AL["Trash Mobs"], "SWStTrash" },
-	},
-	["Stratholme"] = {
-		{ AL["Skul"].." ("..AL["Rare"]..")", "STRATSkull" },
-		{ AL["Stratholme Courier"], "STRATStratholmeCourier" },
-		{ AL["Postmaster Malown"], "STRATPostmaster" },
-		{ AL["Fras Siabi"], "STRATFrasSiabi" },
-		{ AL["Atiesh"], "STRATAtiesh" },
-		{ AL["Balzaphon"].." ("..AL["Scourge Invasion"]..")", "STRATBalzaphon" },
-		{ AL["Hearthsinger Forresten"].." ("..AL["Rare"]..")", "STRATHearthsingerForresten" },
-		{ AL["The Unforgiven"], "STRATTheUnforgiven" },
-		{ AL["Timmy the Cruel"], "STRATTimmytheCruel" },
-		{ AL["Malor the Zealous"], "STRATMalor" },
-		{ AL["Malor's Strongbox"], "STRATMalorsStrongbox" },
-		{ AL["Crimson Hammersmith"], "STRATCrimsonHammersmith" },
-		{ AL["Cannon Master Willey"], "STRATCannonMasterWilley" },
-		{ AL["Archivist Galford"], "STRATArchivistGalford" },
-		{ AL["Balnazzar"], "STRATBalnazzar" },
-		{ AL["Sothos"].." & "..AL["Jarien"], "STRATSothosJarien" },
-		{ AL["Stonespine"].." ("..AL["Rare"]..")", "STRATStonespine" },
-		{ AL["Baroness Anastari"], "STRATBaronessAnastari" },
-		{ AL["Black Guard Swordsmith"], "STRATBlackGuardSwordsmith" },
-		{ AL["Nerub'enkan"], "STRATNerubenkan" },
-		{ AL["Maleki the Pallid"], "STRATMalekithePallid" },
-		{ AL["Magistrate Barthilas"], "STRATMagistrateBarthilas" },
-		{ AL["Ramstein the Gorger"], "STRATRamsteintheGorger" },
-		{ AL["Baron Rivendare"], "STRATBaronRivendare" },
-		{ AL["Trash Mobs"], "STRATTrash" },
-	},
-	["SunkenTemple"] = {
-		{ AL["Balcony Minibosses"], "STBalconyMinibosses" },
-		{ AL["Atal'alarion"], "STAtalalarion" },
-		{ AL["Spawn of Hakkar"], "STSpawnOfHakkar" },
-		{ AL["Avatar of Hakkar"], "STAvatarofHakkar" },
-		{ AL["Jammal'an the Prophet"], "STJammalan" },
-		{ AL["Ogom the Wretched"], "STOgom" },
-		{ AL["Dreamscythe"], "STDreamscythe" },
-		{ AL["Weaver"], "STWeaver"},
-		{ AL["Morphaz"], "STMorphaz" },
-		{ AL["Hazzas"], "STHazzas" },
-		{ AL["Shade of Eranikus"], "STEranikus" },
-		{ AL["Trash Mobs"], "STTrash" },
-	},
-	["Uldaman"] = {
-		{ AL["Baelog"], "UldBaelog" },
-		{ AL["Olaf"], "UldOlaf" },
-		{ AL["Eric 'The Swift'"], "UldEric" },
-		{ AL["Revelosh"], "UldRevelosh" },
-		{ AL["Ironaya"], "UldIronaya" },
-		{ AL["Ancient Stone Keeper"], "UldAncientStoneKeeper" },
-		{ AL["Galgann Firehammer"], "UldGalgannFirehammer" },
-		{ AL["Grimlok"], "UldGrimlok" },
-		{ AL["Archaedas"], "UldArchaedas" },
-		{ AL["Trash Mobs"], "UldTrash" },
-	},
-	["GilneasCity"] = {
-		{ AL["Matthias Holtz"], "GCMatthiasHoltz" },
-		{ AL["Packmaster Ragetooth"], "GCPackmasterRagetooth" },
-		{ AL["Judge Sutherland"], "GCJudgeSutherland" },
-		{ AL["Dustivan Blackcowl"], "GCDustivanBlackcowl" },
-		{ AL["Marshal Magnus Greystone"], "GCMarshalMagnusGreystone" },
-		{ AL["Horsemaster Levvin"], "GCHorsemasterLevvin" },
-		{ AL["Harlow Family Chest"], "GCHarlowFamilyChest" },
-		{ AL["Genn Greymane"], "GCGennGreymane" },
-		{ AL["Trash Mobs"], "GCTrash" },
-	},
-	["ZulGurub"] = {
-		{ AL["High Priestess Jeklik"], "ZGJeklik" },
-		{ AL["High Priest Venoxis"], "ZGVenoxis" },
-		{ AL["High Priestess Mar'li"], "ZGMarli" },
-		{ AL["Bloodlord Mandokir"], "ZGMandokir" },
-		{ AL["Gri'lek"], "ZGGrilek" },
-		{ AL["Hazza'rah"], "ZGHazzarah" },
-		{ AL["Renataki"], "ZGRenataki" },
-		{ AL["Wushoolay"], "ZGWushoolay" },
-		{ AL["Gahz'ranka"], "ZGGahzranka" },
-		{ AL["High Priest Thekal"], "ZGThekal" },
-		{ AL["High Priestess Arlokk"], "ZGArlokk" },
-		{ AL["Jin'do the Hexxer"], "ZGJindo" },
-		{ AL["Hakkar"], "ZGHakkar" },
-		{ AL["Random Boss Loot"], "ZGShared" },
-		{ AL["Trash Mobs"], "ZGTrash1" },
-		{ AL["ZG Enchants"], "ZGEnchants" },
-	},
-	["BlackfathomDeeps"] = {
-		{ AL["Ghamoo-ra"], "BFDGhamoora" },
-		{ AL["Lady Sarevess"], "BFDLadySarevess" },
-		{ AL["Gelihast"], "BFDGelihast" },
-		{ AL["Baron Aquanis"], "BFDBaronAquanis" },
-		{ AL["Velthelaxx the Defiler"], "BFDVelthelaxx"},
-		{ AL["Twilight Lord Kelris"], "BFDTwilightLordKelris" },
-		{ AL["Old Serra'kis"], "BFDOldSerrakis" },
-		{ AL["Aku'mai"], "BFDAkumai" },
-		{ AL["Trash Mobs"], "BFDTrash" },
-	},
-	["DireMaulEast"] = {
-		{ AL["Pusillin"], "DMEPusillin" },
-		{ AL["Zevrim Thornhoof"], "DMEZevrimThornhoof" },
-		{ AL["Hydrospawn"], "DMEHydro" },
-		{ AL["Lethtendris"], "DMELethtendris" },
-		{ AL["Pimgib"], "DMEPimgib" },
-		{ AL["Isalien"], "DMEIsalien" },
-		{ AL["Alzzin the Wildshaper"], "DMEAlzzin" },
-		{ AL["Trash Mobs"], "DMETrash" },
-		{ AL["Dire Maul Books"], "DMEBooks" },
-	},
-	["DireMaulWest"] = {
-		{ AL["Tendris Warpwood"], "DMWTendrisWarpwood" },
-		{ AL["Illyanna Ravenoak"], "DMWIllyannaRavenoak" },
-		{ AL["Magister Kalendris"], "DMWMagisterKalendris" },
-		{ AL["Tsu'zee"].." ("..AL["Rare"]..")", "DMWTsuzee" },
-		{ AL["Revanchion"].." ("..AL["Scourge Invasion"]..")", "DMWRevanchion" },
-		{ AL["Immol'thar"], "DMWImmolthar" },
-		{ AL["Lord Hel'nurath"].." ("..AL["Rare"]..")", "DMWHelnurath" },
-		{ AL["Prince Tortheldrin"], "DMWPrinceTortheldrin" },
-		{ AL["Trash Mobs"], "DMWTrash" },
-		{ AL["Dire Maul Books"], "DMWBooks" },
-	},
-	["DireMaulNorth"] = {
-		{ AL["Guard Mol'dar"], "DMNGuardMoldar" },
-		{ AL["Stomper Kreeg"], "DMNStomperKreeg" },
-		{ AL["Guard Fengus"], "DMNGuardFengus" },
-		{ AL["Knot Thimblejack"], "DMNThimblejack" },
-		{ AL["Guard Slip'kik"], "DMNGuardSlipkik" },
-		{ AL["Captain Kromcrush"], "DMNCaptainKromcrush" },
-		{ AL["Cho'Rush the Observer"], "DMNChoRush" },
-		{ AL["King Gordok"], "DMNKingGordok" },
-		{ AL["Tribute Run"], "DMNTRIBUTERUN" },
-		{ AL["Trash Mobs"], "DMNTrash" },
-		{ AL["Dire Maul Books"], "DMNBooks" },
-	},
-	["Maraudon"] = {
-		{ AL["Noxxion"], "MaraNoxxion" },
-		{ AL["Razorlash"], "MaraRazorlash" },
-		{ AL["Lord Vyletongue"], "MaraLordVyletongue" },
-		{ AL["Meshlok the Harvester"].." ("..AL["Rare"]..")", "MaraMeshlok" },
-		{ AL["Celebras the Cursed"], "MaraCelebras" },
-		{ AL["Landslide"], "MaraLandslide" },
-		{ AL["Tinkerer Gizlock"], "MaraTinkererGizlock" },
-		{ AL["Rotgrip"], "MaraRotgrip" },
-		{ AL["Princess Theradras"], "MaraPrincessTheradras" },
-		{ AL["Trash Mobs"], "MaraTrash" },
-	},
-	["Onyxia"] = {
-		{ AL["Onyxia"], "Onyxia" },
-	},
-	["RagefireChasm"] = {
-		{ AL["Taragaman the Hungerer"], "RFCTaragaman" },
-		{ AL["Oggleflint"], "RFCOggleflint" },
-		{ AL["Jergosh the Invoker"], "RFCJergosh" },
-		{ AL["Bazzalan"], "RFCBazzalan" },
-	},
-	["RazorfenDowns"] = {
-		{ AL["Tuten'kash"], "RFDTutenkash" },
-		{ AL["Lady Falther'ess"].." ("..AL["Scourge Invasion"]..")", "RFDLadyF" },
-		{ AL["Plaguemaw the Rotting"], "RFDPlaguemaw" },
-		{ AL["Mordresh Fire Eye"], "RFDMordreshFireEye" },
-		{ AL["Glutton"], "RFDGlutton" },
-		{ AL["Death Prophet Rakameg"], "RFDDeathProphet" },
-		{ AL["Ragglesnout"].." ("..AL["Rare"]..")", "RFDRagglesnout" },
-		{ AL["Amnennar the Coldbringer"], "RFDAmnennar" },
-		{ AL["Trash Mobs"], "RFDTrash" },
-	},
-	["RazorfenKraul"] = {
-		{ AL["Aggem Thorncurse"], "RFKAggem" },
-		{ AL["Death Speaker Jargba"], "RFKDeathSpeakerJargba" },
-		{ AL["Overlord Ramtusk"], "RFKOverlordRamtusk" },
-		{ AL["Razorfen Spearhide"].." ("..AL["Rare"]..")", "RFKRazorfenSpearhide" },
-		{ AL["Agathelos the Raging"], "RFKAgathelos" },
-		{ AL["Blind Hunter"].." ("..AL["Rare"]..")", "RFKBlindHunter" },
-		{ AL["Charlga Razorflank"], "RFKCharlgaRazorflank" },
-		{ AL["Earthcaller Halmgar"].." ("..AL["Rare"]..")", "RFKEarthcallerHalmgar" },
-		{ AL["Rotthorn"], "RFKRotthorn" },
-		{ AL["Trash Mobs"], "RFKTrash" },
-	},
-	["RuinsofAQ"] = {
-		{ AL["Kurinnaxx"], "AQ20Kurinnaxx" },
-		{ AL["Lieutenant General Andorov"], "AQ20Andorov" },
-		{ AL["Rajaxx's Captains"], "AQ20CAPTAIN" },
-		{ AL["General Rajaxx"], "AQ20Rajaxx" },
-		{ AL["Moam"], "AQ20Moam" },
-		{ AL["Buru the Gorger"], "AQ20Buru" },
-		{ AL["Ayamiss the Hunter"], "AQ20Ayamiss" },
-		{ AL["Ossirian the Unscarred"], "AQ20Ossirian" },
-		{ AL["Trash Mobs"], "AQ20Trash" },
-		{ AL["Class Books"], "AQ20ClassBooks" },
-		{ AL["AQ Enchants"], "AQ20Enchants" },
-	},
-	["TempleofAQ"] = {
-		{ AL["The Prophet Skeram"], "AQ40Skeram" },
-		{ AL["The Bug Family"], "AQ40Trio" },
-		{ AL["Battleguard Sartura"], "AQ40Sartura" },
-		{ AL["Fankriss the Unyielding"], "AQ40Fankriss" },
-		{ AL["Viscidus"], "AQ40Viscidus" },
-		{ AL["Princess Huhuran"], "AQ40Huhuran" },
-		{ AL["The Twin Emperors"], "AQ40Emperors" },
-		{ AL["Ouro"], "AQ40Ouro" },
-		{ AL["C'Thun"], "AQ40CThun" },
-		{ AL["Trash Mobs"], "AQ40Trash1" },
-		{ AL["Trash Mobs"], "AQ40Trash2" },
-		{ AL["AQ Enchants"], "AQEnchants" },
-		{ AL["AQ Opening Quest Chain"], "AQOpening" },
-	},
-	["WailingCaverns"] = {
-		{ AL["Lord Cobrahn"], "WCLordCobrahn" },
-		{ AL["Lady Anacondra"], "WCLadyAnacondra" },
-		{ AL["Kresh"], "WCKresh" },
-		{ AL["Deviate Faerie Dragon"].." ("..AL["Rare"]..")", "WCDeviateFaerieDragon" },
-        { AL["Zandara Windhoof"], "WCZandara" },
-		{ AL["Lord Pythas"], "WCLordPythas" },
-		{ AL["Skum"], "WCSkum" },
-        { AL["Vangros"], "WCVangros" },
-		{ AL["Lord Serpentis"], "WCLordSerpentis" },
-		{ AL["Verdan the Everliving"], "WCVerdan" },
-		{ AL["Mutanus the Devourer"], "WCMutanus" },
-		{ AL["Trash Mobs"], "WCTrash" },
-	},
-	["ZulFarrak"] = {
-		{ AL["Antu'sul"], "ZFAntusul" },
-		{ AL["Witch Doctor Zum'rah"], "ZFWitchDoctorZumrah" },
-		{ AL["Shadowpriest Sezz'ziz"], "ZFSezzziz" },
-		{ AL["Dustwraith"].." ("..AL["Rare"]..")", "ZFDustwraith" },
-		{ AL["Zerillis"].." ("..AL["Rare"]..")", "ZFZerillis" },
-		{ AL["Gahz'rilla"], "ZFGahzrilla" },
-		{ AL["Chief Ukorz Sandscalp"], "ZFChiefUkorzSandscalp" },
-		{ AL["Zel'jeb the Ancient"], "ZFZeljeb" },
-		{ AL["Champion Razjal the Quick"], "ZFChampion" },
-		{ AL["Trash Mobs"], "ZFTrash" },
-	},
-	["EmeraldSanctum"] = {
-		{ AL["Erennius"], "ESErennius" },
-		{ AL["Solnius the Awakener"], "ESSolnius1" },
-		{ AL["Favor of Erennius (ES Hard Mode)"], "ESHardMode" },
-		{ AL["Trash Mobs"], "ESTrash" },
-	},
-	["LowerKara"] = {
-		{ AL["Master Blacksmith Rolfen"], "LKHRolfen" },
-		{ AL["Brood Queen Araxxna"], "LKHBroodQueenAraxxna" },
-		{ AL["Grizikil"], "LKHGrizikil" },
-		{ AL["Clawlord Howlfang"], "LKHClawlordHowlfang" },
-		{ AL["Lord Blackwald II"], "LKHLordBlackwaldII" },
-		{ AL["Moroes"], "LKHMoroes" },
-		{ AL["Trash Mobs"], "LKHTrash" },
-		{ AL["LKH Enchants"], "LKHEnchants" },
-	},
-    ["UpperKara"] = {
-		{ AL["Keeper Gnarlmoon"], "UKHGnarlmoon" },
-		{ AL["Ley-Watcher Incantagos"], "UKHIncantagos" },
-		{ AL["Anomalus"], "UKHAnomalus" },
-		{ AL["Echo of Medivh"], "UKHEcho" },
-		{ AL["King (Chess fight)"], "UKHKing" },
-		{ AL["Sanv Tas'dal"], "UKHSanvTasdal" },
-		{ AL["Kruul"], "UKHKruul" },
-		{ AL["Rupturan the Broken"], "UKHRupturan" },
-		{ AL["Mephistroth"], "UKHMephistroth" },
-		{ AL["Trash Mobs"], "UKHTrash" },
-	},
-	["WorldBosses"] = {
-		{ AL["Azuregos"], "AAzuregos" },
-		{ AL["Emeriss"], "DEmeriss" },
-		{ AL["Lethon"], "DLethon"},
-		{ AL["Taerar"], "DTaerar" },
-		{ AL["Ysondre"], "DYsondre" },
-		{ AL["Lord Kazzak"], "KKazzak"},
-		{ AL["Nerubian Overseer"], "Nerubian" },
-		{ AL["Dark Reaver of Karazhan"], "Reaver" },
-		{ AL["Ostarius"], "Ostarius" },
-		{ AL["Concavius"], "Concavius" },
-		{ AL["Moo"], "CowKing" },
-		{ AL["Cla'ckora"], "Clackora" },
-	},
-	["RareSpawns"] = {
-        { WHITE.."[17]"..DEFAULT.." "..AL["Earthcaller Rezengal"]   .." "..WHITE.."("..AL["Stonetalon Mountains"]..")", "EarthcallerRezengal" },
-        { WHITE.."[17]"..DEFAULT.." "..AL["Shade Mage"]             .." "..WHITE.."("..AL["Tirisfal Glades"]     ..")", "ShadeMage" },
-        { WHITE.."[18]"..DEFAULT.." "..AL["Graypaw Alpha"]          .." "..WHITE.."("..AL["Tirisfal Glades"]     ..")", "GraypawAlpha" },
-        { WHITE.."[24]"..DEFAULT.." "..AL["Blazespark"]             .." "..WHITE.."("..AL["Stonetalon Mountains"]..")", "Blazespark" },
-        { WHITE.."[35]"..DEFAULT.." "..AL["Witch Doctor Tan'zo"]    .." "..WHITE.."("..AL["Arathi Highlands"]    ..")", "WitchDoctorTanzo" },
-        { WHITE.."[40]"..DEFAULT.." "..AL["Widow of the Woods"]     .." "..WHITE.."("..AL["Gilneas"]             ..")", "WidowoftheWoods" },
-        { WHITE.."[40]"..DEFAULT.." "..AL["Dawnhowl"]               .." "..WHITE.."("..AL["Gilneas"]             ..")", "Dawnhowl" },
-        { WHITE.."[43]"..DEFAULT.." "..AL["Maltimor's Prototype"]   .." "..WHITE.."("..AL["Gilneas"]             ..")", "MaltimorsPrototype" },
-        { WHITE.."[44]"..DEFAULT.." "..AL["Bonecruncher"]           .." "..WHITE.."("..AL["Gilneas"]             ..")", "Bonecruncher" },
-        { WHITE.."[44]"..DEFAULT.." "..AL["Duskskitter"]            .." "..WHITE.."("..AL["Gilneas"]             ..")", "Duskskitter" },
-        { WHITE.."[45]"..DEFAULT.." "..AL["Baron Perenolde"]        .." "..WHITE.."("..AL["Gilneas"]             ..")", "BaronPerenolde" },
-        { WHITE.."[45]"..DEFAULT.." "..AL["Kin'Tozo"]               .." "..WHITE.."("..AL["Stranglethorn Vale"]  ..")", "KinTozo" },
-        { WHITE.."[47]"..DEFAULT.." "..AL["Grug'thok the Seer"]     .." "..WHITE.."("..AL["Feralas"]             ..")", "Grugthok" },
-        { WHITE.."[47]"..DEFAULT.." "..AL["M-0L1Y"]                 .." "..WHITE.."("..AL["Dun Morogh"]          ..")", "M0L1Y" },
-        { WHITE.."[49]"..DEFAULT.." "..AL["Explorer Ashbeard"]      .." "..WHITE.."("..AL["Searing Gorge"]       ..")", "Ashbeard" },
-        { WHITE.."[50]"..DEFAULT.." "..AL["Jal'akar"]               .." "..WHITE.."("..AL["Hinterlands"]         ..")", "Jalakar" },
-        { WHITE.."[51]"..DEFAULT.." "..AL["Embereye"]               .." "..WHITE.."("..AL["Gilijim Isle"]        ..")", "Embereye" },
-        { WHITE.."[51]"..DEFAULT.." "..AL["Ruk'thok the Pyromancer"].." "..WHITE.."("..AL["Lapidis Isle"]        ..")", "Rukthok" },
-        { WHITE.."[51]"..DEFAULT.." "..AL["Tarangos"]               .." "..WHITE.."("..AL["Azshara"]             ..")", "Tarangos" },
-        { WHITE.."[51]"..DEFAULT.." "..AL["Ripjaw"]                 .." "..WHITE.."("..AL["Lapidis Isle"]        ..")", "Ripjaw" },
-        { WHITE.."[53]"..DEFAULT.." "..AL["Xalvic Blackclaw"]       .." "..WHITE.."("..AL["Felwood"]             ..")", "Xalvic" },
-        { WHITE.."[54]"..DEFAULT.." "..AL["Aquitus"]                .." "..WHITE.."("..AL["Gilijim Isle"]        ..")", "Aquitus" },
-        { WHITE.."[55]"..DEFAULT.." "..AL["Firstborn of Arugal"]    .." "..WHITE.."("..AL["Gilneas"]             ..")", "FirstbornofArugal" },
-        { WHITE.."[55]"..DEFAULT.." "..AL["Letashaz"]               .." "..WHITE.."("..AL["Gilijim Isle"]        ..")", "Letashaz" },
-        { WHITE.."[55]"..DEFAULT.." "..AL["Margon the Mighty"]      .." "..WHITE.."("..AL["Lapidis Isle"]        ..")", "MargontheMighty" },
-        { WHITE.."[55]"..DEFAULT.." "..AL["The Wandering Knight"]   .." "..WHITE.."("..AL["Western Plaguelands"] ..")", "WanderingKnight" },
-        { WHITE.."[56]"..DEFAULT.." "..AL["Stoneshell"]             .." "..WHITE.."("..AL["Tel'abim"]            ..")", "Stoneshell" },
-        { WHITE.."[57]"..DEFAULT.." "..AL["Zareth Terrorblade"]     .." "..WHITE.."("..AL["Blasted Lands"]       ..")", "Zareth" },
-        { WHITE.."[58]"..DEFAULT.." "..AL["Highvale Silverback"]    .." "..WHITE.."("..AL["Tel'abim"]            ..")", "HighvaleSilverback" },
-        { WHITE.."[58]"..DEFAULT.." "..AL["Mallon The Moontouched"] .." "..WHITE.."("..AL["Winterspring"]        ..")", "Mallon" },
-        { WHITE.."[59]"..DEFAULT.." "..AL["Blademaster Kargron"]    .." "..WHITE.."("..AL["Burning Steppes"]     ..")", "Kargron" },
-        { WHITE.."[59]"..DEFAULT.." "..AL["Professor Lysander"]     .." "..WHITE.."("..AL["Eastern Plaguelands"] ..")", "ProfessorLysander" },
-        { WHITE.."[60]"..DEFAULT.." "..AL["Admiral Barean Westwind"].." "..WHITE.."("..AL["Scarlet Enclave"]     ..")", "AdmiralBareanWestwind" },
-        { WHITE.."[60]"..DEFAULT.." "..AL["Azurebeak"]              .." "..WHITE.."("..AL["Hyjal"]               ..")", "Azurebeak" },
-        { WHITE.."[60]"..DEFAULT.." "..AL["Barkskin Fisher"]        .." "..WHITE.."("..AL["Hyjal"]               ..")", "BarkskinFisher" },
-        { WHITE.."[61]"..DEFAULT.." "..AL["Crusader Larsarius"]     .." "..WHITE.."("..AL["Eastern Plaguelands"] ..")", "CrusaderLarsarius" },
-        { WHITE.."[61]"..DEFAULT.." "..AL["Shadeflayer Goliath"]    .." "..WHITE.."("..AL["Hyjal"]               ..")", "ShadeflayerGoliath" },
-	},
-	["DragonmawRetreat"] = {
-		{ AL["Gowlfang"], "DMRGowlfang" },
-		{ AL["Cavernweb Broodmother"], "DMRBroodmother" },
-		{ AL["Web Master Torkon"], "DMRWebMaster" },
-		{ AL["Garlok Flamekeeper"], "DMRGarlok" },
-		{ AL["Halgan Redbrand"], "DMRHalgan" },
-		{ AL["Slagfist Destroyer"],"DMRSlagfist" },
-		{ AL["Overlord Blackheart"], "DMROverlord" },
-		{ AL["Elder Hollowblood"], "DMRElderHollowblood" },
-		{ AL["Searistrasz"], "DMRSearistrasz" },
-		{ AL["Zuluhed the Whacked"], "DMRZuluhed" },
-		{ AL["Trash Mobs"], "DMRTrash" },
-	},
-	["StormwroughtRuins"] = {
-		{ AL["Oronok Torn-Heart"], "SWROronok" },
-		{ AL["Dagar the Glutton"], "SWRDagar" },
-		{ AL["Duke Balor the IV"], "SWRDukeBalor" },
-		{ AL["Librarian Theodorus"], "SWRLibrarian" },
-		{ AL["Chieftain Stormsong"], "SWRChieftain" },
-		{ AL["Deathlord Tidebane"], "SWRDeathlord" },
-		{ AL["Subjugator Halthas Shadecrest"], "SWRSubjugator" },
-		{ AL["Mycellakos"], "SWRMycellakos" },
-		{ AL["Eldermaw the Primordial"], "SWREldermaw" },
-		{ AL["Lady Drazare"], "SWRLadyDrazare" },
-		{ AL["Remains of the Innocent"], "SWRRemains" },
-		{ AL["Mergothid"], "SWRMergothid" },
-		{ AL["Trash Mobs"], "SWRTrash" },
-	},
-};
-
 --------------------------------------------------------------------------------
 -- Item OnEnter
 -- Called when a loot item is moused over
@@ -2834,17 +2803,18 @@ function AtlasLootItem_OnEnter()
 		isSpell = false;
 	end
 	if ( isItem ) then
-		local color = strsub(_G["AtlasLootItem_"..buttonID.."_Name"]:GetText(), 3, 10);
-		local name = strsub(_G["AtlasLootItem_"..buttonID.."_Name"]:GetText(), 11);
+		local name, link, quality = GetItemInfo(this.itemID)
+		local _, _, _, color = GetItemQualityColor(quality or 1)
+		-- local color = strsub(_G["AtlasLootItem_"..buttonID.."_Name"]:GetText(), 3, 10);
+		-- local name = strsub(_G["AtlasLootItem_"..buttonID.."_Name"]:GetText(), 11);
 		-- Lootlink tooltips
 		if ( AtlasLootCharDB.LootlinkTT ) then
 			-- If we have seen the item, use the game tooltip to minimise same name item problems
-			if ( GetItemInfo(this.itemID) ) then
-				_G[this:GetName().."_Unsafe"]:Hide();
+			if ( name ) then
 				AtlasLootTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 24);
 				AtlasLootTooltip:SetHyperlink("item:"..this.itemID..":0:0:0");
 				if ( AtlasLootCharDB.ItemIDs ) then
-					AtlasLootTooltip:AddLine(AL["ItemID:"].." "..this.itemID, nil, nil, nil, 1);
+					AtlasLootTooltip:AddLine(AL["ItemID:"].." "..this.itemID);
 				end
 				if ( this.droprate ) then
 					AtlasLootTooltip:AddLine(AL["Drop Rate: "]..this.droprate, 1, 1, 0);
@@ -2858,26 +2828,21 @@ function AtlasLootItem_OnEnter()
 				if ( LootLink_Database and LootLink_Database[this.itemID] ) then
 					LootLink_SetTooltip(AtlasLootTooltip, LootLink_Database[this.itemID][1], 1);
 				else
-					LootLink_SetTooltip(AtlasLootTooltip,strsub(_G["AtlasLootItem_"..buttonID.."_Name"]:GetText(), 11), 1);
+					LootLink_SetTooltip(AtlasLootTooltip, name, 1);
 				end
 				if ( AtlasLootCharDB.ItemIDs ) then
-					AtlasLootTooltip:AddLine(AL["ItemID:"].." "..this.itemID, nil, nil, nil, 1);
+					AtlasLootTooltip:AddLine(AL["ItemID:"].." "..this.itemID);
 				end
 				if ( this.droprate ) then
 					AtlasLootTooltip:AddLine(AL["Drop Rate: "]..this.droprate, 1, 1, 0, 1);
 				end
-				AtlasLootTooltip:AddLine(" ");
-				AtlasLootTooltip:AddLine(AL["You can right-click to attempt to query the server.  You may be disconnected."], nil, nil, nil, 1);
 				AtlasLootTooltip:Show();
 			end
 		-- Item Sync tooltips
 		elseif ( AtlasLootCharDB.ItemSyncTT ) then
-			if ( GetItemInfo(this.itemID) ) then
-				_G[this:GetName().."_Unsafe"]:Hide();
-			end
 			ItemSync:ButtonEnter();
 			if ( AtlasLootCharDB.ItemIDs ) then
-				GameTooltip:AddLine(AL["ItemID:"].." "..this.itemID, nil, nil, nil, 1);
+				GameTooltip:AddLine(AL["ItemID:"].." "..this.itemID);
 			end
 			if ( this.droprate ) then
 				GameTooltip:AddLine(AL["Drop Rate: "]..this.droprate, 1, 1, 0);
@@ -2885,20 +2850,14 @@ function AtlasLootItem_OnEnter()
 			GameTooltip:Show();
 		-- Default game tooltips
 		else
-			if ( not this.itemID ) then
-				return
-			end
 			AtlasLootTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 24);
 			if ( GetItemInfo(this.itemID) ) then
-				_G[this:GetName().."_Unsafe"]:Hide();
 				AtlasLootTooltip:SetHyperlink("item:"..this.itemID..":0:0:0");
 			else
-				-- AtlasLoot_QueryLootPage()
 				AtlasLootTooltip:SetText(AL["Retrieving item information"], RED_FONT_COLOR.r, RED_FONT_COLOR.g, RED_FONT_COLOR.b)
-				_G["AtlasLootItem_"..buttonID.."_Unsafe"]:Hide();
 			end
 			if ( AtlasLootCharDB.ItemIDs ) then
-				AtlasLootTooltip:AddLine(AL["ItemID:"].." "..this.itemID, nil, nil, nil, 1);
+				AtlasLootTooltip:AddLine(AL["ItemID:"].." "..this.itemID);
 			end
 			if ( this.droprate ) then
 				AtlasLootTooltip:AddLine(AL["Drop Rate: "]..this.droprate, 1, 1, 0);
@@ -2930,7 +2889,7 @@ function AtlasLootItem_OnEnter()
 			AtlasLootTooltipTextRight2:SetText(longCooldown)
 		end
 		if ( AtlasLootCharDB.ItemIDs ) then
-			AtlasLootTooltip:AddLine(AL["SpellID:"].." "..spellID, nil, nil, nil, 1);
+			AtlasLootTooltip:AddLine(AL["SpellID:"].." "..spellID);
 		end
 		AtlasLootTooltip:Show();
 		local item = tonumber(GetSpellInfoAtlasLootDB["enchants"][spellID]["item"])
@@ -2950,7 +2909,7 @@ function AtlasLootItem_OnEnter()
 			end
 		end
 		if ( AtlasLootCharDB.ItemIDs ) then
-			AtlasLootTooltip2:AddLine(AL["ItemID:"].." "..item, nil, nil, nil, 1);
+			AtlasLootTooltip2:AddLine(AL["ItemID:"].." "..item);
 		end
 		AtlasLootTooltip2:Show();
 		-- Reposition if tooltips overlap
@@ -3045,7 +3004,7 @@ function AtlasLootItem_OnEnter()
 			end
 		end
 		if ( AtlasLootCharDB.ItemIDs ) then
-			AtlasLootTooltip:AddLine(AL["SpellID:"].." "..spellID, nil, nil, nil, 1);
+			AtlasLootTooltip:AddLine(AL["SpellID:"].." "..spellID);
 		end
 		AtlasLootTooltip:Show();
 		local craftItem = tonumber(GetSpellInfoAtlasLootDB["craftspells"][spellID]["craftItem"])
@@ -3065,7 +3024,7 @@ function AtlasLootItem_OnEnter()
 			end
 		end
 		if ( AtlasLootCharDB.ItemIDs ) then
-			AtlasLootTooltip2:AddLine(AL["ItemID:"].." "..craftItem, nil, nil, nil, 1);
+			AtlasLootTooltip2:AddLine(AL["ItemID:"].." "..craftItem);
 		end
 		AtlasLootTooltip2:Show();
 		-- Reposition if tooltips overlap
@@ -3096,12 +3055,14 @@ end
 -- Item OnClick
 -- Called when a loot item is clicked on
 --------------------------------------------------------------------------------
-function AtlasLootItem_OnClick(arg1)
+function AtlasLootItem_OnClick()
 	local isItem, isEnchant, isSpell;
-	local _, _, color = strfind(_G["AtlasLootItem_"..this:GetID().."_Name"]:GetText(), "(|cff%x%x%x%x%x%x)");
-	color = color or NORMAL_FONT_COLOR_CODE
-	local id = this:GetID();
 	local name = _G["AtlasLootItem_"..this:GetID().."_Name"]:GetText();
+	local _, _, color = strfind(name, "(|cff%x%x%x%x%x%x)");
+	color = color or NORMAL_FONT_COLOR_CODE
+	name = gsub(name, "|cff%x%x%x%x%x%x", "")
+	name = gsub(name, "|r", "")
+	local id = this:GetID();
 	local _, _, texture = strfind(_G["AtlasLootItem_"..this:GetID().."_Icon"]:GetTexture() or "", ".+\\(.+)$")
     texture = texture or "INV_Misc_QuestionMark"
 	local dataID = AtlasLootItemsFrame.refresh[1]
@@ -3123,52 +3084,18 @@ function AtlasLootItem_OnClick(arg1)
 	if ( isItem ) then
 		local itemName, itemLink = GetItemInfo(this.itemID);
 		-- If shift-clicked, link in the chat window
-		if ( AtlasFrame and AtlasFrame:IsVisible() and arg1 == "RightButton" ) then
-			_G["AtlasLootItem_"..id.."_Unsafe"]:Hide();
-		elseif ( arg1 == "RightButton" and not itemName and this.itemID ~= 0 ) then
-			AtlasLootTooltip:SetHyperlink("item:"..this.itemID);
-			if ( not AtlasLootCharDB.ItemSpam ) then
-				DEFAULT_CHAT_FRAME:AddMessage(AL["Server queried for "]..color.."["..name.."]".."|r"..AL[".  Right click on any other item to refresh the loot page."]);
-			end
-			AtlasLootItemsFrame:Hide();
-			AtlasLoot_ShowItemsFrame(dataID, dataSource, bossName);
-		elseif ( arg1 == "RightButton" and itemName ) then
-			AtlasLootItemsFrame:Hide();
-			AtlasLoot_ShowItemsFrame(dataID, dataSource, bossName);
-			if ( not AtlasLootCharDB.ItemSpam ) then
-				DEFAULT_CHAT_FRAME:AddMessage(itemName..AL[" is safe."]);
-				DEFAULT_CHAT_FRAME:AddMessage(AtlasLootItemsFrame.activeBoss)
-			end
-		elseif ( IsShiftKeyDown() and not itemName and this.itemID ~= 0 ) then
-			if ( AtlasLootCharDB.SafeLinks ) then
-				if ( WIM_EditBoxInFocus ) then
-					WIM_EditBoxInFocus:Insert("["..name.."]");
-				elseif ( ChatFrameEditBox:IsVisible() ) then
-					ChatFrameEditBox:Insert("["..name.."]");
-				else
-					AtlasLoot_SayItemReagents(this.itemID, nil, name, true)
-				end
-			elseif ( AtlasLootCharDB.AllLinks ) then
-				if ( WIM_EditBoxInFocus ) then
-					WIM_EditBoxInFocus:Insert(color.."|Hitem:"..this.itemID.."|h["..name.."]|h|r");
-				elseif ( ChatFrameEditBox:IsVisible() ) then
-					ChatFrameEditBox:Insert(color.."|Hitem:"..this.itemID.."|h["..name.."]|h|r");
-				else
-					AtlasLoot_SayItemReagents(this.itemID, color, name)
-				end
-			end
-		elseif ( (itemName and IsShiftKeyDown()) and this.itemID ~= 0 ) then
+		if ( itemName and IsShiftKeyDown() and this.itemID ~= 0 ) then
 			if ( WIM_EditBoxInFocus ) then
-				WIM_EditBoxInFocus:Insert(color.."|Hitem:"..this.itemID..":0:0:0|h["..name.."]|h|r");
+				WIM_EditBoxInFocus:Insert(color.."|Hitem:"..this.itemID..":0:0:0|h["..itemName.."]|h|r");
 			elseif ( ChatFrameEditBox:IsVisible() ) then
-				ChatFrameEditBox:Insert(color.."|Hitem:"..this.itemID..":0:0:0|h["..name.."]|h|r");
+				ChatFrameEditBox:Insert(color.."|Hitem:"..this.itemID..":0:0:0|h["..itemName.."]|h|r");
+			else
+				AtlasLoot_SayItemReagents(this.itemID, color, itemName);
 			end
-		elseif ( IsShiftKeyDown() and itemName and this.itemID ~= 0 ) then
-			AtlasLoot_SayItemReagents(this.itemID, color, name);
 		-- If control-clicked, use the dressing room
-		elseif ( IsControlKeyDown() and itemName ) then
+		elseif ( IsControlKeyDown() and itemLink ) then
 			DressUpItemLink(itemLink);
-		elseif ( IsAltKeyDown() and (this.itemID ~= 0) ) then
+		elseif ( IsAltKeyDown() and this.itemID ~= 0 ) then
 			if ( dataID == "WishList" ) then
 				AtlasLoot_DeleteFromWishList(this.itemID);
 			elseif ( dataID == "SearchResult" ) then
@@ -3181,13 +3108,13 @@ function AtlasLootItem_OnClick(arg1)
 			if ( dataID and dataSource and AtlasLoot_IsLootTableAvailable(dataID) ) then
 				AtlasLoot_ShowItemsFrame(dataID, dataSource, AtlasLoot_TableNames[dataID][1]);
 			end
-		elseif ( this.container and arg1 == "LeftButton" ) then
+		elseif ( this.container ) then
 			AtlasLoot_ShowContainerFrame()
 		end
 	elseif ( isEnchant ) then
 		if ( IsShiftKeyDown() ) then
 			AtlasLoot_SayItemReagents(this.itemID, color, name)
-		elseif ( IsAltKeyDown() and (this.itemID ~= 0) ) then
+		elseif ( IsAltKeyDown() and this.itemID ~= 0 ) then
 			if ( dataID == "WishList" ) then
 				AtlasLoot_DeleteFromWishList(this.itemID);
 			elseif ( dataID == "SearchResult" ) then
@@ -3209,21 +3136,21 @@ function AtlasLootItem_OnClick(arg1)
 			local craftitem = tonumber(GetSpellInfoAtlasLootDB["craftspells"][spellID]["craftItem"])
 			local craftname = GetItemInfo(craftitem or 0)
 			if ( WIM_EditBoxInFocus ) then
-				if ( craftitem and craftitem ~= 0 ) then
+				if ( craftitem and craftitem ~= 0 and craftname ) then
 					WIM_EditBoxInFocus:Insert(color.."|Hitem:"..craftitem..":0:0:0|h["..craftname.."]|h|r");
 				else
 					WIM_EditBoxInFocus:Insert(color.."|Henchant:"..spellID.."|h["..name.."]|h|r");
 				end
 			elseif ( ChatFrameEditBox:IsVisible() ) then
-				if ( craftitem and craftitem ~= 0 ) then
-					ChatFrameEditBox:Insert(color.."|Hitem:"..craftitem..":0:0:0|h["..craftname.."]|h|r"); -- Fix for Gurky's discord chat bot
+				if ( craftitem and craftitem ~= 0 and craftname ) then
+					ChatFrameEditBox:Insert(color.."|Hitem:"..craftitem..":0:0:0|h["..craftname.."]|h|r");
 				else
 					ChatFrameEditBox:Insert(color.."|Henchant:"..spellID.."|h["..name.."]|h|r");
 				end
 			else
 				AtlasLoot_SayItemReagents(this.itemID, color, name)
 			end
-		elseif ( IsAltKeyDown() and (this.itemID ~= 0) ) then
+		elseif ( IsAltKeyDown() and this.itemID ~= 0 ) then
 			if ( dataID == "WishList" ) then
 				AtlasLoot_DeleteFromWishList(this.itemID);
 			elseif ( dataID == "SearchResult" ) then
@@ -3321,7 +3248,6 @@ function AtlasLoot_ShowContainerFrame()
 			itemButton:SetID(itemID)
 			itemButton:Show()
 			icon:SetTexture(tex)
-			AtlasLoot_AddContainerItemTooltip(itemButton, itemID)
 			col = col + 1
 			if ( col > maxCols ) then
 				maxCols = col
@@ -3335,40 +3261,46 @@ function AtlasLoot_ShowContainerFrame()
 	AtlasLootItemsFrameContainer:SetHeight(16 + (row * 35))
 end
 
-function AtlasLoot_AddContainerItemTooltip(frame ,itemID)
-	frame:SetScript("OnEnter", function()
-        AtlasLootTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 4), -(this:GetHeight() / 4))
-        AtlasLootTooltip:SetHyperlink("item:"..tostring(itemID))
-        AtlasLootTooltip.itemID = itemID
-        local numLines = AtlasLootTooltip:NumLines()
-		if ( AtlasLootCharDB.ItemIDs ) then
-			if ( numLines and numLines > 0 ) then
-				local lastLine = _G["AtlasLootTooltipTextLeft"..numLines]
-				if ( lastLine:GetText() ) then
-					lastLine:SetText(lastLine:GetText().."\n\n"..DEFAULT..AL["ItemID:"].." "..itemID)
-				end
+function AtlasLoot_ContainerItem_OnEnter()
+	local itemID = this:GetID()
+	if ( not itemID ) then
+		return
+	end
+	AtlasLootTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 4), -(this:GetHeight() / 4))
+	AtlasLootTooltip:SetHyperlink("item:"..tostring(itemID))
+	AtlasLootTooltip.itemID = itemID
+	local numLines = AtlasLootTooltip:NumLines()
+	if ( AtlasLootCharDB.ItemIDs ) then
+		if ( numLines and numLines > 0 ) then
+			local lastLine = _G["AtlasLootTooltipTextLeft"..numLines]
+			if ( lastLine:GetText() ) then
+				lastLine:SetText(lastLine:GetText().."\n\n"..DEFAULT..AL["ItemID:"].." "..itemID)
 			end
 		end
-        AtlasLootTooltip:Show()
-		local icon = _G[this:GetName().."Icon"]
-		if ( icon:GetTexture() == "Interface\\Icons\\INV_Misc_QuestionMark" ) then
-			local _, _, quality, _, _, _, _, _, tex = GetItemInfo(itemID)
-			if ( tex and quality ) then
-				local r, g, b  = GetItemQualityColor(quality)
-				icon:SetTexture(tex)
-				this:SetBackdropBorderColor(r, g, b)
-			end
+	end
+	AtlasLootTooltip:Show()
+	local icon = _G[this:GetName().."Icon"]
+	if ( icon:GetTexture() == "Interface\\Icons\\INV_Misc_QuestionMark" ) then
+		local _, _, quality, _, _, _, _, _, tex = GetItemInfo(itemID)
+		if ( tex and quality ) then
+			local r, g, b  = GetItemQualityColor(quality)
+			icon:SetTexture(tex)
+			this:SetBackdropBorderColor(r, g, b)
 		end
-    end)
-    frame:SetScript("OnLeave", function()
-        AtlasLootTooltip:Hide()
-        AtlasLootTooltip.itemID = nil
-    end)
+	end
+end
+
+function AtlasLoot_ContainerItem_OnLeave()
+	AtlasLootTooltip:Hide()
+	AtlasLootTooltip.itemID = nil
 end
 
 function AtlasLoot_ContainerItem_OnClick(arg1)
 	local itemID = this:GetID()
-	local name, link, quality, _, _, _, _, _, tex = GetItemInfo(itemID)
+	local name, link, quality, _, _, _, _, _, tex = GetItemInfo(itemID or 0)
+	if ( not name ) then
+		return
+	end
 	local _, _, _, color = GetItemQualityColor(quality)
 	tex = string.gsub(tex, "Interface\\Icons\\", "")
 	local extra = this.extraInfo
@@ -3378,17 +3310,15 @@ function AtlasLoot_ContainerItem_OnClick(arg1)
 		dataSource = lastSelectedButton.dataSource
 	end
 	if ( IsShiftKeyDown() and arg1 == "LeftButton" ) then
-		if ( AtlasLootCharDB.AllLinks ) then
-			if ( WIM_EditBoxInFocus ) then
-				WIM_EditBoxInFocus:Insert(color.."|Hitem:"..itemID.."|h["..name.."]|h|r");
-			elseif ( ChatFrameEditBox:IsVisible() ) then
-				ChatFrameEditBox:Insert(color.."|Hitem:"..itemID.."|h["..name.."]|h|r");
-			end
+		if ( WIM_EditBoxInFocus ) then
+			WIM_EditBoxInFocus:Insert(color.."|Hitem:"..itemID..":0:0:0|h["..name.."]|h|r");
+		elseif ( ChatFrameEditBox:IsVisible() ) then
+			ChatFrameEditBox:Insert(color.."|Hitem:"..itemID..":0:0:0|h["..name.."]|h|r");
 		end
-	elseif ( IsControlKeyDown() and name ) then
+	elseif ( IsControlKeyDown() and link ) then
 		DressUpItemLink(link);
 	elseif ( IsAltKeyDown() and itemID ~= 0 ) then
-		if ( lootpage ) then
+		if ( lootpage and dataSource ) then
 			AtlasLoot_AddToWishlist(itemID, tex, name, extra, lootpage.."|"..dataSource)
 		elseif ( AtlasLootItemsFrame.refresh ) then
 			local dataID = AtlasLootItemsFrame.refresh[1]
@@ -3456,6 +3386,7 @@ function AtlasLoot_SayItemReagents(id, color, name, safe)
 	local chatline = "";
 	local itemCount = 0;
 	name = gsub(name, "|cff%x%x%x%x%x%x", "")
+	name = gsub(name, "|r", "")
 	color = color or NORMAL_FONT_COLOR_CODE
 	local tListActivity = {}
 	local tCount = 0

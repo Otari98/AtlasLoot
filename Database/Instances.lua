@@ -8155,7 +8155,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 	UKHTrash = {
 		{ 55275, "INV_Misc_Gem_Amethyst_03", "=q4=Slivers of Nullification", "=ds=#s14#", "0.25%" },
 		{ 55277, "INV_TheEnd", "=q4=The End of All Ambitions", "=ds=#h2#, #w10#", "0.25%" },
-		{ 55278, "INV_Gauntlets_05", "=q4=Ques' Gauntlets of Precision", "=ds=#s10#, #a4#", "0.25%" },
+		{ 55278, "INV_Gauntlets_05", "=q4=Ques' Gauntlets of Precision", "=ds=#s9#, #a3#", "0.25%" },
 		{ 55280, "INV_stormhowl_sabatons", "=q4=Boots of Elemental Fury", "=ds=#s12#, #a3#", "0.25%" },
 		{ 55281, "INV_Gauntlets_05", "=q4=Gauntlets of Elemental Fury", "=ds=#s9#, #a3#", "0.25%" },
 		{ 55282, "INV_lionheart_sabatons", "=q4=Boots of the Grand Crusader", "=ds=#s12#, #a4#", "0.25%" },
@@ -8192,8 +8192,6 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 41569, "INV_Misc_Cape_07", "=q2=Tattered Orcish Shawl", "#s4#", "20%" },
 		{ 41570, "INV_Misc_Orb_01", "=q2=Idol of Nethalakk", "#s15#", "20%" },
 		{ 0, "", "", "" },
-		{ 30040, "Ability_Hunter_Pet_Turtle", "=q3=Admiral Grumbleshell", "#e7#", "2.5%" },
-		{ 0, "", "", "" },
 		{ 41874, "INV_Misc_StoneTablet_02", "=q2=Fragment of Algoron", "", "100%" },
 	};
 	DMRGarlok = {
@@ -8201,8 +8199,6 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 41579, "INV_Belt_02", "=q3=Sash of Flamebinding", "#s10#, #a1#", "25%" },
 		{ 41580, "INV_Jewelry_Amulet_06", "=q3=Udor's Pendant", "#s2#", "25%" },
 		{ 41581, "INV_Sword_07", "=q3=The Bane of Althazz", "#h3#, #w10#", "25%" },
-		{ 0, "", "", "" },
-		{ 30040, "Ability_Hunter_Pet_Turtle", "=q3=Admiral Grumbleshell", "#e7#", "2.5%" },
 	};
 	DMROverlord = {
 		{ 41726, "INV_Gauntlets_15", "=q3=Slaver's Gauntlets", "#s9#, #a3#", "25%" },
@@ -8212,8 +8208,6 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 0, "", "", "" },
 		{ 74, "INV_Scroll_05", "=q3=Pattern: Dragonmaw Gloves", "#p7# (170)", "6%" },
 		{ 0, "", "", "" },
-		{ 30040, "Ability_Hunter_Pet_Turtle", "=q3=Admiral Grumbleshell", "#e7#", "2.5%" },
-		{ 0, "", "", "" },
 		{ 41841, "INV_Misc_Head_Orc_01", "=q1=Blackheart's Head", "#m3#", "100%" },
 	};
 	DMRHalgan = {
@@ -8221,16 +8215,12 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 58046, "INV_Shield_03", "=q3=Shield of Galoraz", "#h4#, #w8#", "25%" },
 		{ 58047, "INV_Wand_12", "=q3=Grasp of Ancestors", "#w12#", "25%" },
 		{ 58045, "INV_Pants_04", "=q3=Ancient Legplates", "#s11#, #a3#", "25%" },
-		{ 0, "", "", "" },
-		{ 30040, "Ability_Hunter_Pet_Turtle", "=q3=Admiral Grumbleshell", "#e7#", "2.5%" },
 	};
 	DMRSlagfist = {
 		{ 41560, "INV_Misc_StoneTablet_01", "=q3=Shalestone Amulet", "#s2#", "25%" },
 		{ 41719, "INV_Pants_03", "=q2=Stonelink Leggings", "#s11#, #a3#", "25%" },
 		{ 41558, "INV_Staff_11", "=q2=The Slagbinder", "#h2#, #w9#", "25%" },
 		{ 41559, "INV_Axe_12", "=q2=Rock Carver", "#h3#, #w1#", "25%" },
-		{ 0, "", "", "" },
-		{ 30040, "Ability_Hunter_Pet_Turtle", "=q3=Admiral Grumbleshell", "#e7#", "2.5%" },
 	};
 	DMRElderHollowblood = {
 		{ 41721, "GenShield_1F", "=q3=Bulwark of the Old Horde", "#h4#, #w8#", "25%" },
@@ -8281,14 +8271,6 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 70104, "INV_Misc_Note_01", "=q3=Plans: Gemmed Citrine Pendant", "#p18# (160)", "0.02%" },
 		{ 70153, "INV_Misc_Note_01", "=q3=Plans: Farraki Ceremony Totem", "#p18# (140)", "0.02%" },
 		{ 70186, "INV_Misc_Note_01", "=q3=Plans: Blackrock Ironclamps", "#p18# (140)", "0.02%" },
-		{ 0, "", "", "" },
-		{ 30040, "Ability_Hunter_Pet_Turtle", "=q3=Admiral Grumbleshell", "#e7#", "2.5%" },
-		{ 30011, "Ability_Hunter_Pet_Crab", "=q3=Diamond Crustacean", "#e7#", "0.5%" },
-		{ 30012, "ability_hunter_pet_thunder_lizard", "=q3=Black Thunder Lizard", "#e7#", "0.01%" },
-		{ 30013, "ability_hunter_pet_thunder_lizard", "=q3=Azure Thunder Lizard", "#e7#", "0.05%" },
-		{ 30014, "ability_hunter_pet_thunder_lizard", "=q3=Green Thunder Lizard", "#e7#", "0.01%" },
-		{ 30015, "ability_hunter_pet_thunder_lizard", "=q3=Pale Thunder Lizard", "#e7#", "0.5%" },
-		{ 30016, "ability_hunter_pet_thunder_lizard", "=q3=Red Thunder Lizard", "#e7#", "0.01%" },
 	};
 	-- Stormwrought Ruins
 	SWROronok = {

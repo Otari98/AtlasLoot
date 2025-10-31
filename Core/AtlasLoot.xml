@@ -30,6 +30,12 @@
 			<OnClick>
 				AtlasLoot_ContainerItem_OnClick(arg1)
 			</OnClick>
+			<OnEnter>
+				AtlasLoot_ContainerItem_OnEnter()
+			</OnEnter>
+			<OnLeave>
+				AtlasLoot_ContainerItem_OnLeave()
+			</OnLeave>
 		</Scripts>
 	</Button>
 
@@ -624,7 +630,7 @@
 				AtlasLootItem_OnLeave();
 			</OnLeave>
 			<OnClick>
-				AtlasLootItem_OnClick(arg1);
+				AtlasLootItem_OnClick();
 				CloseDropDownMenus();
 			</OnClick>
 		</Scripts>
@@ -1213,7 +1219,7 @@
 	</Frame>
 
 	<Frame name="AtlasLootOptionsFrame" toplevel="true" frameStrata="DIALOG" movable="true" enableMouse="true" hidden="true" parent="UIParent" enableKeyboard="true">
-		<Size x="650" y="400"/>
+		<Size x="560" y="350"/>
 		<Anchors>
 			<Anchor point="CENTER"/>
 		</Anchors>
@@ -1240,7 +1246,7 @@
 			</Layer>
 		</Layers>
 		<Frames>
-			<CheckButton name="$parentSafeLinks" inherits="OptionsCheckButtonTemplate" enable="false">
+			<!-- <CheckButton name="$parentSafeLinks" inherits="OptionsCheckButtonTemplate" enable="false">
 				<Anchors>
 					<Anchor point="TOPLEFT">
 						<Offset x="20" y="-40"/>
@@ -1255,8 +1261,8 @@
 						AtlasLootOptions_SafeLinksToggle();
 					</OnClick>
 				</Scripts>
-			</CheckButton>
-			<CheckButton name="$parentAllLinks" inherits="OptionsCheckButtonTemplate">
+			</CheckButton> -->
+			<!-- <CheckButton name="$parentAllLinks" inherits="OptionsCheckButtonTemplate">
 				<Anchors>
 					<Anchor point="TOPLEFT">
 						<Offset x="20" y="-70"/>
@@ -1271,11 +1277,11 @@
 						AtlasLootOptions_AllLinksToggle();
 					</OnClick>
 				</Scripts>
-			</CheckButton>
+			</CheckButton> -->
 			<CheckButton name="$parentDefaultTT" inherits="OptionsCheckButtonTemplate">
 				<Anchors>
 					<Anchor point="TOPLEFT">
-						<Offset x="20" y="-130"/>
+						<Offset x="20" y="-40"/>
 					</Anchor>
 				</Anchors>
 				<Scripts>
@@ -1291,7 +1297,7 @@
 			<CheckButton name="$parentLootlinkTT" inherits="OptionsCheckButtonTemplate">
 				<Anchors>
 					<Anchor point="TOPLEFT">
-						<Offset x="20" y="-160"/>
+						<Offset x="20" y="-70"/>
 					</Anchor>
 				</Anchors>
 				<Scripts>
@@ -1307,7 +1313,7 @@
 			<CheckButton name="$parentItemSyncTT" inherits="OptionsCheckButtonTemplate">
 				<Anchors>
 					<Anchor point="TOPLEFT">
-						<Offset x="20" y="-190"/>
+						<Offset x="20" y="-100"/>
 					</Anchor>
 				</Anchors>
 				<Scripts>
@@ -1323,7 +1329,7 @@
 			<CheckButton name="$parentShowSource" inherits="OptionsCheckButtonTemplate">
 				<Anchors>
 					<Anchor point="TOPLEFT">
-						<Offset x="20" y="-220"/>
+						<Offset x="20" y="-130"/>
 					</Anchor>
 				</Anchors>
 				<Scripts>
@@ -1355,7 +1361,7 @@
 			<CheckButton name="$parentEquipCompare" inherits="OptionsCheckButtonTemplate">
 				<Anchors>
 					<Anchor point="TOPLEFT">
-						<Offset x="20" y="-280"/>
+						<Offset x="20" y="-190"/>
 					</Anchor>
 				</Anchors>
 				<Scripts>
@@ -1371,7 +1377,7 @@
 			<CheckButton name="$parentItemID" inherits="OptionsCheckButtonTemplate">
 				<Anchors>
 					<Anchor point="TOPLEFT">
-						<Offset x="20" y="-310"/>
+						<Offset x="20" y="-160"/>
 					</Anchor>
 				</Anchors>
 				<Scripts>
@@ -1451,7 +1457,7 @@
 					</OnClick>
 				</Scripts>
 			</CheckButton>
-			<CheckButton name="$parentItemSpam" inherits="OptionsCheckButtonTemplate">
+			<!-- <CheckButton name="$parentItemSpam" inherits="OptionsCheckButtonTemplate">
 				<Anchors>
 					<Anchor point="TOP">
 						<Offset x="20" y="-160"/>
@@ -1466,7 +1472,7 @@
 						AtlasLootOptions_ItemSpam();
 					</OnClick>
 				</Scripts>
-			</CheckButton>
+			</CheckButton> -->
 			<Slider name="$ParentSliderButtonRad" inherits="OptionsSliderTemplate">
 				<Size x="240" y="16"/>
 				<Anchors>
