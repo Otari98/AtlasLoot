@@ -8988,7 +8988,7 @@ GetSpellInfoAtlasLootDB = {
 		[17634] = {
 			["craftItem"] = 13506,
 			["name"] = AL["Flask of Petrification"],
-			["castTime"] = 10,
+			["castTime"] = 25,
 			["tools"] = { 9149 },
 			["reagents"] = {
 				{ 13423, 30 },
@@ -9000,9 +9000,9 @@ GetSpellInfoAtlasLootDB = {
 		[17635] = {
 			["craftItem"] = 13510,
 			["name"] = AL["Flask of the Titans"],
-			["castTime"] = 10,
+			["castTime"] = 25,
 			["reagents"] = {
-				{ 8846, 30 },
+				{ 13464, 30 },
 				{ 13423, 10 },
 				{ 13468 },
 				{ 8925 },
@@ -9011,9 +9011,9 @@ GetSpellInfoAtlasLootDB = {
 		[17636] = {
 			["craftItem"] = 13511,
 			["name"] = AL["Flask of Distilled Wisdom"],
-			["castTime"] = 10,
+			["castTime"] = 25,
 			["reagents"] = {
-				{ 13463, 30 },
+				{ 8838, 30 },
 				{ 13467, 10 },
 				{ 13468 },
 				{ 8925 },
@@ -9022,7 +9022,7 @@ GetSpellInfoAtlasLootDB = {
 		[17637] = {
 			["craftItem"] = 13512,
 			["name"] = AL["Flask of Supreme Power"],
-			["castTime"] = 10,
+			["castTime"] = 25,
 			["reagents"] = {
 				{ 13463, 30 },
 				{ 13465, 10 },
@@ -9033,7 +9033,7 @@ GetSpellInfoAtlasLootDB = {
 		[17638] = {
 			["craftItem"] = 13513,
 			["name"] = AL["Flask of Chromatic Resistance"],
-			["castTime"] = 10,
+			["castTime"] = 25,
 			["reagents"] = {
 				{ 13467, 30 },
 				{ 13465, 10 },
