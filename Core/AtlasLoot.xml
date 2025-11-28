@@ -438,44 +438,6 @@
 			</OnLoad>
 		</Scripts>
 	</GameTooltip>
-	
-	<Button name="AtlasLootNewBossLineTemplate" virtual="true" hidden="true">
-		<Size x="336" y="15"/>
-		<HighlightTexture file="Interface\QuestFrame\UI-QuestTitleHighlight" alphaMode="ADD"/>
-		<Layers>
-			<Layer level="ARTWORK">
-				<FontString name="$parent_Text" inherits="GameFontNormal" justifyH="LEFT">
-					<Size x="320" y="15"/>
-					<Anchors>
-						<Anchor point="LEFT" relativeTo="$parent" relativePoint="LEFT"/>
-					</Anchors>
-				</FontString>
-				<Texture name="$parent_Loot" file="Interface\AddOns\AtlasLoot\Images\looticon" hidden="true">
-					<Size x="16" y="16"/>
-					<Anchors>
-						<Anchor point="RIGHT" relativeTo="$parent" relativePoint="RIGHT"/>
-					</Anchors>
-				</Texture>
-				<Texture name="$parent_Selected" file="Interface\AddOns\AtlasLoot\Images\gold" hidden="true">
-					<Size x="16" y="16"/>
-					<Anchors>
-						<Anchor point="RIGHT" relativeTo="$parent" relativePoint="RIGHT"/>
-					</Anchors>
-				</Texture>
-			</Layer>
-		</Layers>
-		<Scripts>
-			<OnLeave>
-				GameTooltip:Hide();
-			</OnLeave>
-			<OnClick>
-				AtlasLootBoss_OnClick(this:GetName());
-			</OnClick>
-			<OnShow>
-				this:SetFrameLevel((this:GetParent()):GetFrameLevel() + 1);
-			</OnShow>
-		</Scripts>
-	</Button>
 
 	<Button name="AtlasLootPanelButtonTemplate" inherits="OptionsButtonTemplate" virtual="true">
 		<Size x="120" y="20"/>
