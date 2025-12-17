@@ -229,6 +229,7 @@ AtlasLoot_HewdropDown = {
 			{{ AL["Silvermoon Remnant"], "Helf", "Table" },},
 			{{ AL["Stormpike Guard"], "Stormpike1", "Table" },},
 			{{ AL["Stormwind"], "Stormwind", "Table" },},
+			{{ AL["Shen'dralar"], "Shendralar", "Table" },},
 			{{ AL["Thorium Brotherhood"], "Thorium1", "Table" },},
 			{{ AL["Thunder Bluff"], "ThunderBluff", "Table" },},
 			{{ AL["Timbermaw Hold"], "Timbermaw", "Table" },},
