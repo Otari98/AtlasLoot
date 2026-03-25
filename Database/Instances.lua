@@ -201,14 +201,13 @@ AtlasLootBossButtons = {
 	BlackwingLair = {
 		"";
 		"";
-		"";
-		"";
 		"BWLRazorgore";
 		"BWLVaelastrasz";
 		"BWLLashlayer";
 		"BWLFiremaw";
 		"BWLEzzel";
 		"BWLEbonroc";
+		"";
 		"BWLFlamegor";
 		"BWLChromaggus";
 		"BWLNefarian";
