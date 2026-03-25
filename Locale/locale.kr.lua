@@ -6,6 +6,8 @@ AL:RegisterTranslations("koKR", function() return {
     ["10 Slot"] = "10칸",
     ["16 Slot"] = "16칸",
     ["18 Slot"] = "18칸",
+    ["20 Slot"] = "20칸",
+    ["22 Slot"] = "22칸",
     ["AQ Enchants"] = "안퀴라즈 마법부여",
     ["AQ Opening Quest Chain"] = "안퀴라즈 열기 연퀘",
     ["AQ20 Class Sets"] = "안퀴라즈 폐허 직업 세트",

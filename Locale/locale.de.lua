@@ -12,6 +12,7 @@ AL:RegisterTranslations("deDE", function() return {
     ["16 Slot"] = "16 Platz",
     ["18 Slot"] = "18 Platz",
     ["20 Slot"] = "20 Platz",
+    ["22 Slot"] = "22 Platz",
     ["AQ Enchants"] = "AQ-Verzauberungen",
     ["AQ Opening Quest Chain"] = "AQ-Öffnungsquestreihe",
     ["AQ20 Class Sets"] = "AQ20-Klassen-Sets",

@@ -12,6 +12,7 @@ AL:RegisterTranslations("ruRU", function() return {
     ["16 Slot"] = "16 ячеек",
     ["18 Slot"] = "18 ячеек",
     ["20 Slot"] = "20 ячеек",
+    ["22 Slot"] = "22 ячеек",
     ["AQ Enchants"] = "Зачарования из АК",
     ["AQ Opening Quest Chain"] = "AQ Opening Quest Chain",
     ["AQ20 Class Sets"] = "Классовые Комплекты АК20",

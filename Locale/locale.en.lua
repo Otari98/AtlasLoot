@@ -51,6 +51,7 @@ AL:RegisterTranslations("enUS", function() return {
     ["16 Slot"] = true,
     ["18 Slot"] = true,
     ["20 Slot"] = true,
+	["22 Slot"] = true,
     ["20-29 Honored Rewards"] = true,
     ["20-29 Revered Rewards"] = true,
     ["24 Slot"] = true,

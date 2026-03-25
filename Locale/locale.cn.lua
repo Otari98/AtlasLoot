@@ -12,6 +12,7 @@ AL:RegisterTranslations("zhCN", function() return {
     ["16 Slot"] = "16格",
     ["18 Slot"] = "18格",
     ["20 Slot"] = "20格",
+    ["22 Slot"] = "22格",
     ["AQ Enchants"] = "安其拉掉落的附魔公式",
     ["AQ Opening Quest Chain"] = "安其拉之门任务奖励",
     ["AQ20 Class Sets"] = "安其拉废墟职业套装",

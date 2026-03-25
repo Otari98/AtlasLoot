@@ -12,6 +12,7 @@ AL:RegisterTranslations("esES", function() return {
     ["16 Slot"] = "16 huecos",
     ["18 Slot"] = "18 huecos",
     ["20 Slot"] = "20 huecos",
+    ["22 Slot"] = "22 huecos",
     ["AQ Enchants"] = "Encantamientos AQ",
     ["AQ Opening Quest Chain"] = "Apertura de la misión de la cadena AQ",
     ["AQ20 Class Sets"] = "Conjuntos por Clase de AQ20",

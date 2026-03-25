@@ -12,6 +12,7 @@ AL:RegisterTranslations("zhTW", function() return {
     ["16 Slot"] = "16 格容器",
     ["18 Slot"] = "18 格容器",
     ["20 Slot"] = "20 格容器",
+    ["22 Slot"] = "22 格容器",
     ["AQ Enchants"] = "AQ 公式",
     ["AQ Opening Quest Chain"] = "安其拉開門系列任務",
     ["AQ20 Class Sets"] = "AQ20 職業套裝",
