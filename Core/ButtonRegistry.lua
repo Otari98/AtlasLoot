@@ -11,6 +11,72 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "DUNGEONSMENU1";
 	};
 
+	-- Frostmane Hollow
+	["FMHTansha"] = {
+		Title = AL["Tan'sha the Sleek"],
+		Next_Page = "FMHKanza",
+		Back_Page = "DUNGEONSMENU1"
+	};
+	["FMHKanza"] = {
+		Title = AL["Kan'za the Seer"],
+		Prev_Page = "FMHTansha",
+		Next_Page = "FMHBattlemaster",
+		Back_Page = "DUNGEONSMENU1"
+	};
+	["FMHBattlemaster"] = {
+		Title = AL["Battlemaster Ubukaz"],
+		Prev_Page = "FMHKanza",
+		Next_Page = "FMHHailar",
+		Back_Page = "DUNGEONSMENU1"
+	};
+	["FMHHailar"] = {
+		Title = AL["Hailar the Frigid"],
+		Prev_Page = "FMHBattlemaster",
+		Back_Page = "DUNGEONSMENU1"
+	};
+
+	-- Windhorn Canyon
+	["WHCPathun"] = {
+		Title = AL["Pathun Duskhide"],
+		Next_Page = "WHCAhgktos",
+		Back_Page = "DUNGEONSMENU1",
+	};
+	["WHCAhgktos"] = {
+		Title = AL["Ahgk'tos the Pure"],
+		Prev_Page = "WHCPathun",
+		Next_Page = "WHCAmbassador",
+		Back_Page = "DUNGEONSMENU1",
+	};
+	["WHCAmbassador"] = {
+		Title = AL["Ambassador Vortalus"],
+		Prev_Page = "WHCAhgktos",
+		Next_Page = "WHCWalgan",
+		Back_Page = "DUNGEONSMENU1",
+	};
+	["WHCWalgan"] = {
+		Title = AL["Walgan Bloodcaller"],
+		Prev_Page = "WHCAmbassador",
+		Next_Page = "WHCBonespeaker",
+		Back_Page = "DUNGEONSMENU1",
+	};
+	["WHCBonespeaker"] = {
+		Title = AL["Bonespeaker Narlgom"],
+		Prev_Page = "WHCWalgan",
+		Next_Page = "WHCProphet",
+		Back_Page = "DUNGEONSMENU1",
+	};
+	["WHCProphet"] = {
+		Title = AL["Prophet Stormhoof"],
+		Prev_Page = "WHCBonespeaker",
+		Next_Page = "WHCChieftan",
+		Back_Page = "DUNGEONSMENU1",
+	};
+	["WHCChieftan"] = {
+		Title = AL["Chieftain Shalk Blackwind"],
+		Prev_Page = "WHCProphet",
+		Back_Page = "DUNGEONSMENU1",
+	};
+
 	-- Dragonmaw Retreat
 	["DMRGowlfang"] = {
 		Title = AL["Gowlfang"],

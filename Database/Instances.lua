@@ -4,6 +4,24 @@
 local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
 
 AtlasLootBossButtons = {
+	FrostmaneHollow = {
+		"",                -- A) Entrance
+		"FMHTansha",       -- 1) Tan'sha the Sleek
+		"",                --    Handler Oboka
+		"FMHKanza",        -- 2) Kan'za the Seer
+		"FMHBattlemaster", -- 3) Battlemaster Ubukaz
+		"FMHHailar",       -- 4) Hailar the Frigid
+	};
+	WindhornCanyon = {
+		"",               -- A) Entrance
+		"WHCPathun",      -- 1) Pathun Duskhide
+		"WHCAhgktos",     -- 2) Ahgk'tos the Pure
+		"WHCAmbassador",  -- 3) Ambassador Vortalus
+		"WHCWalgan",      -- 4) Walgan Bloodcaller
+		"WHCBonespeaker", -- 5) Bonespeaker Narlgom
+		"WHCProphet",     -- 6) Prophet Stormhoof
+		"WHCChieftan",    -- 7) Chieftain Shalk Blackwind
+	};
 	BlackfathomDeeps = {
 		"";
 		"BFDGhamoora";
@@ -1063,7 +1081,81 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 22057, "INV_Misc_EngGizmos_23", "=q1=Brazier of Invocation", "=ds=#m36#" },
 		{ 21986, "INV_BRD_Banner", "=q1=Banner of Provocation", "=ds=#m36#" },
 	};
-	BWLRazorgore = { --https://database.turtle-wow.org/?npc=12435
+	-- Frostmane Hollow
+	FMHTansha = {
+		{ 162, "INV_Misc_Cape_12", "=q2=Frigid Cloak", "#s4#", "33.61%" },
+		{ 184, "INV_ThrowingAxe_01", "=q2=Oboka's Axe", "#h2#, #w1#", "33.66%" },
+		{ 197, "INV_Chest_Leather_09", "=q2=Vest of the Beastkeeper", "#s5#, #a2#", "32.73%" },
+		{ 0, "", "", "" },
+		{ 42300, "INV_Misc_Pelt_06", "=q1=Flawless Leopard Pelt", "#m3#", "100%" },
+	};
+	FMHKanza = {
+		{ 205, "INV_Weapon_ShortBlade_04", "=q2=Frost Seer Dirk", "#h1#, #w4#", "32.62%" },
+		{ 213, "INV_Bracer_13", "=q2=Ice-Stitched Cuffs", "#s8#, #a1#", "33.81%" },
+		{ 241, "INV_Pants_08", "=q2=Windcrest Pants", "#s11#, #a1#", "33.57%" },
+	};
+	FMHBattlemaster = {
+		{ 134, "INV_Boots_01", "=q2=Frostmane Battle Boots", "#s12#, #a3#", "33.08%" },
+		{ 150, "INV_Gauntlets_11", "=q2=Tribal War Gauntlets", "#s9#, #a3#", "33.26%" },
+		{ 157, "INV_Shield_10", "=q2=Snowchilled Crest", "#h4#, #w8#", "33.66%" },
+	};
+	FMHHailar = {
+		{ 110, "INV_Weapon_ShortBlade_07", "=q3=Rak'uhz the Coldbinder", "#h3#, #w10#", "33.31%" },
+		{ 116, "INV_Belt_03", "=q3=Belt of Binding", "#s10#, #a2#", "33.85%" },
+		{ 126, "INV_Jewelry_Ring_28", "=q3=Band of Hailar", "#s13#", "32.84%" },
+	};
+	-- Windhorn Canyon
+	WHCPathun = {
+		{ 33027, "INV_Misc_Horn_01", "=q3=Huntsman's Halfhorn", "#s14#", "25.35%" },
+		{ 33025, "INV_Weapon_Bow_05", "=q2=Blackwind Striker", "#w2#, #w2#", "25.23%" },
+		{ 33026, "INV_Shoulder_04", "=q2=Sacred Windhorn Shoulders", "#s3#, #a1#", "24.26%" },
+		{ 33028, "INV_Axe_01", "=q2=Hatchet of the Long Hunt", "#h1#, #w1#", "25.16%" },
+		{ 0, "", "", "" },
+		{ 70242, "INV_Misc_Note_01", "=q3=Plans: Kodoheart Necklace", "#p18# (125)", "5.88%" },
+	};
+	WHCAhgktos = {
+		{ 33024, "INV_Weapon_ShortBlade_02", "=q3=Tooth of Ahgk'tos", "#h1#, #w4#", "25.37%" },
+		{ 33021, "INV_Gauntlets_18", "=q2=Sacred Windhorn Gloves", "#s9#, #a1#", "25%" },
+		{ 33022, "INV_Chest_Leather_05", "=q2=Windserpent Hauberk", "#s5#, #a3#", "24.95%" },
+		{ 33023, "INV_Jewelry_Ring_22", "=q2=Coilscale Ring", "#s13#", "24.68%" },
+	};
+	WHCAmbassador = {
+		{ 33029, "INV_Boots_Wolf", "=q3=Sacred Windhorn Footwraps", "#s12#, #a1#", "24.99%" },
+		{ 33030, "INV_Gauntlets_04", "=q3=Knuckles of Vortalus", "#s9#, #a3#", "24.95%" },
+		{ 33031, "INV_Axe_21", "=q3=Thunderstrike Pike", "#h2#, #w7#", "25.45%" },
+		{ 33032, "INV_Bracer_06", "=q3=Galvanized Wrists", "#s8#, #a2#", "24.61%" },
+	};
+	WHCWalgan = {
+		{ 33082, "INV_Weapon_Rifle_05", "=q3=Bloodcaller's Decapitator", "#h2#, #w1#", "24.97%" },
+		{ 33033, "INV_Bracer_08", "=q3=Footwraps of Perfect Form", "#s12#, #a2#", "25.32%" },
+		{ 33035, "Inv_pants_wolf", "=q3=Sacred Windhorn Pants", "#s11#, #a1#", "24.76%" },
+		{ 42275, "INV_Gauntlets_25", "=q3=Canyonhide Gloves", "#s9#, #a2#", "24.95%" },
+	};
+	WHCBonespeaker = {
+		{ 33038, "INV_Staff_21", "=q3=Bonespeaker Cane", "#h2#, #w9#", "25.43%" },
+		{ 33037, "INV_Chest_Leather_01", "=q3=Sacred Windhorn Robe", "#s5#, #a1#", "24.44%" },
+		{ 33040, "INV_Misc_Bone_09", "=q3=Reedwoven Epaulets", "#s3#, #a3#", "25.1%" },
+		{ 42276, "INV_Pants_12", "=q3=Cloudrender Pants", "#s11#, #a2#", "25.03%" },
+	};
+	WHCProphet = {
+		{ 33041, "INV_Staff_02", "=q3=Deathtotem Relic", "#s15#", "24.64%" },
+		{ 33042, "INV_Helmet_24", "=q3=Sacred Windhorn Headdress", "#s1#, #a1#", "24.82%" },
+		{ 33043, "INV_Banner_01", "=q3=Blackwind Facemask", "#s1#, #a3#", "25.27%" },
+		{ 33044, "INV_Jewelry_Ring_27", "=q3=Elder Crone's Sigil Ring", "#s13#", "25.27%" },
+		{ 0, "", "", "" },
+		{ 70244, "INV_Scroll_06", "=q2=Plans: Ceremonial Belt Buckle", "#p2# (125)", "5.93%" },
+	};
+	WHCChieftan = {
+		{ 42277, "INV_Helmet_04", "=q4=Hawkfeather Crown", "#s1#, #a2#", "1.31%" },
+		{ 33047, "INV_Axe_05", "=q3=Ar'pora, the Chieftain's Judgement", "#h2#, #w1#", "24.54%" },
+		{ 33045, "ability_smash", "=q3=The Blackwind Pillar", "#h2#, #w6#", "25.26%" },
+		{ 33046, "INV_Shield_06", "=q3=Canyon's Barricade", "#h4#, #w8#", "24.94%" },
+		{ 33048, "INV_Misc_Gem_Pearl_06", "=q3=Heart of Windhorn", "#s14#", "25.26%" },
+		{ 0, "", "", "" },
+		{ 70243, "INV_Scroll_06", "=q3=Pattern: Grimtotem Bracers", "#p7# (125)", "6.05%" },
+	};
+	-- Blackwing Lair
+	BWLRazorgore = {
 		{ 16926, "INV_Bracer_09", "=q4=Bindings of Transcendence", "=ds=#s8#, #a1# =q9=#c5#", "11%", "", "", "", "", "", "", "", "", "", "", {
 			{{47209,"=ds=#s8#, #a1# =q7=#db17#"},},},
 		},

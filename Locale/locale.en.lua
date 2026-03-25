@@ -15,17 +15,24 @@ AL:EnableDebugging();
 -- Allow the language to be changed dynamically for debugging purposes
 AL:EnableDynamicLocales();
 
--- Colours stored for code readability
-local GREY = "|cff999999";
-local RED = "|cffff0000";
-local WHITE = "|cffFFFFFF";
-local GREEN = "|cff1eff00";
-local PURPLE = "|cff9F3FFF";
-local BLUE = "|cff0070dd";
-local ORANGE = "|cffFF8400";
-local DEFAULT = "|cffFFd200";
-
 AL:RegisterTranslations("enUS", function() return {
+	["Frostmane Hollow"] = true,
+	["Tan'sha the Sleek"] = true,
+	["Handler Oboka"] = true,
+	["Kan'za the Seer"] = true,
+	["Battlemaster Ubukaz"] = true,
+	["Hailar the Frigid"] = true,
+
+	["Thousand Needles"] = true,
+	["Windhorn Canyon"] = true,
+	["Pathun Duskhide"] = true,
+	["Ahgk'tos the Pure"] = true,
+	["Ambassador Vortalus"] = true,
+	["Walgan Bloodcaller"] = true,
+	["Bonespeaker Narlgom"] = true,
+	["Prophet Stormhoof"] = true,
+	["Chieftain Shalk Blackwind"] = true,
+
 	DAYS_COOLDOWN = "%d days cooldown",
 	DAYS_COOLDOWN_1 = "%d day cooldown",
 	[" added to the WishList."] = true,
@@ -1608,51 +1615,6 @@ AL:RegisterTranslations("enUS", function() return {
     ["Zul'Gurub Sets"] = true,
     ["Zul'Lor"] = true,
 	["Zuluhed the Whacked"] = true,
-    ["[13-18] Ragefire Chasm"] = WHITE.."[13-18]"..DEFAULT.." Ragefire Chasm",
-    ["[17-24] The Deadmines"] = WHITE.."[17-24]"..DEFAULT.." The Deadmines",
-    ["[17-24] Wailing Caverns"] = WHITE.."[17-24]"..DEFAULT.." Wailing Caverns",
-    ["[22-30] Shadowfang Keep"] = WHITE.."[22-30]"..DEFAULT.." Shadowfang Keep",
-    ["[22-30] The Stockade"] = WHITE.."[22-30]"..DEFAULT.." The Stockade",
-    ["[23-32] Blackfathom Deeps"] = WHITE.."[23-32]"..DEFAULT.." Blackfathom Deeps",
-	["[26-35] Dragonmaw Retreat"] = WHITE.."[26-35]"..DEFAULT.." Dragonmaw Retreat",
-    ["[27-36] Scarlet Monastery (Graveyard)"] = WHITE.."[27-36]"..DEFAULT.." Scarlet Monastery (Graveyard)",
-    ["[27-45] Scarlet Monastery"] = WHITE.."[27-45]"..DEFAULT.." Scarlet Monastery",
-    ["[28-39] Scarlet Monastery (Library)"] = WHITE.."[28-39]"..DEFAULT.." Scarlet Monastery (Library)",
-    ["[29-38] Gnomeregan"] = WHITE.."[29-38]"..DEFAULT.." Gnomeregan",
-    ["[29-38] Razorfen Kraul"] = WHITE.."[29-38]"..DEFAULT.." Razorfen Kraul",
-    ["[32-38] The Crescent Grove"] = WHITE.."[32-38]"..DEFAULT.." The Crescent Grove",
-    ["[32-41] Scarlet Monastery (Armory)"] = WHITE.."[32-41]"..DEFAULT.." Scarlet Monastery (Armory)",
-	["[32-44] Stormwrought Ruins"] = WHITE.."[32-44]"..DEFAULT.." Stormwrought Ruins",
-    ["[35-45] Scarlet Monastery (Cathedral)"] = WHITE.."[35-45]"..DEFAULT.." Scarlet Monastery (Cathedral)",
-    ["[36-46] Razorfen Downs"] = WHITE.."[36-46]"..DEFAULT.." Razorfen Downs",
-    ["[40-51] Uldaman"] = WHITE.."[40-51]"..DEFAULT.." Uldaman",
-    ["[42-50] Gilneas City"] = WHITE.."[42-50]"..DEFAULT.." Gilneas City",
-    ["[44-54] Zul'Farrak"] = WHITE.."[44-54]"..DEFAULT.." Zul'Farrak",
-    ["[45-55] Maraudon"] = WHITE.."[45-55]"..DEFAULT.." Maraudon",
-    ["[50-60] Hateforge Quarry"] = WHITE.."[50-60]"..DEFAULT.." Hateforge Quarry",
-    ["[50-60] The Sunken Temple"] = WHITE.."[50-60]"..DEFAULT.." The Sunken Temple",
-    ["[52-60] Blackrock Depths"] = WHITE.."[52-60]"..DEFAULT.." Blackrock Depths",
-    ["[55-60] Dire Maul"] = WHITE.."[55-60]"..DEFAULT.." Dire Maul",
-    ["[55-60] Dire Maul (East)"] = WHITE.."[55-60]"..DEFAULT.." Dire Maul (East)",
-    ["[55-60] Lower Blackrock Spire"] = WHITE.."[55-60]"..DEFAULT.." Lower Blackrock Spire",
-    ["[57-60] Dire Maul (North)"] = WHITE.."[57-60]"..DEFAULT.." Dire Maul (North)",
-    ["[57-60] Dire Maul (West)"] = WHITE.."[57-60]"..DEFAULT.." Dire Maul (West)",
-    ["[58-60] Karazhan Crypt"] = WHITE.."[58-60]"..DEFAULT.." Karazhan Crypt",
-    ["[58-60] Scholomance"] = WHITE.."[58-60]"..DEFAULT.." Scholomance",
-    ["[58-60] Stratholme"] = WHITE.."[58-60]"..DEFAULT.." Stratholme",
-    ["[58-60] Upper Blackrock Spire"] = WHITE.."[58-60]"..DEFAULT.." Upper Blackrock Spire",
-    ["[60] Caverns of Time: Black Morass"] = WHITE.."[60]"..DEFAULT.." Caverns of Time: Black Morass",
-    ["[60] Stormwind Vault"] = WHITE.."[60]"..DEFAULT.." Stormwind Vault",
-    ["[RAID] Blackwing Lair"] = RED.."[RAID]"..DEFAULT.." Blackwing Lair",
-    ["[RAID] Emerald Sanctum"] = RED.."[RAID]"..DEFAULT.." Emerald Sanctum",
-    ["[RAID] Lower Karazhan Halls"] = RED.."[RAID]"..DEFAULT.." Lower Karazhan Halls",
-    ["[RAID] Molten Core"] = RED.."[RAID]"..DEFAULT.." Molten Core",
-    ["[RAID] Naxxramas"] = RED.."[RAID]"..DEFAULT.." Naxxramas",
-    ["[RAID] Onyxia's Lair"] = RED.."[RAID]"..DEFAULT.." Onyxia's Lair",
-    ["[RAID] Ruins of Ahn'Qiraj"] = RED.."[RAID]"..DEFAULT.." Ruins of Ahn'Qiraj",
-    ["[RAID] Temple of Ahn'Qiraj"] = RED.."[RAID]"..DEFAULT.." Temple of Ahn'Qiraj",
-    ["[RAID] Upper Karazhan Halls"] = RED.."[RAID]"..DEFAULT.." Upper Karazhan Halls",
-    ["[RAID] Zul'Gurub"] = RED.."[RAID]"..DEFAULT.." Zul'Gurub",
     ["default"] = true,
     ["has been reset!"] = true,
     ["on this page. The items will be"] = true,

@@ -12,6 +12,19 @@ local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
 AtlasLoot_TableNames = {
 	--Keys
 	["VanillaKeys"] = { AL["Keys"], "AtlasLootItems" },
+	-- Frostmane Hollow
+	["FMHTansha"] = { AL["Frostmane Hollow"].." - "..AL["Tan'sha the Sleek"], "AtlasLootItems" },
+	["FMHKanza"] = { AL["Frostmane Hollow"].." - "..AL["Kan'za the Seer"], "AtlasLootItems" },
+	["FMHBattlemaster"] = { AL["Frostmane Hollow"].." - "..AL["Battlemaster Ubukaz"], "AtlasLootItems" },
+	["FMHHailar"] = { AL["Frostmane Hollow"].." - "..AL["Hailar the Frigid"], "AtlasLootItems" },
+	-- Windhorn Canyon
+	["WHCPathun"] = { AL["Windhorn Canyon"].." - "..AL["Pathun Duskhide"], "AtlasLootItems"},
+	["WHCAhgktos"] = { AL["Windhorn Canyon"].." - "..AL["Ahgk'tos the Pure"], "AtlasLootItems",},
+	["WHCAmbassador"] = { AL["Windhorn Canyon"].." - "..AL["Ambassador Vortalus"], "AtlasLootItems",},
+	["WHCWalgan"] = { AL["Windhorn Canyon"].." - "..AL["Walgan Bloodcaller"], "AtlasLootItems",},
+	["WHCBonespeaker"] = { AL["Windhorn Canyon"].." - "..AL["Bonespeaker Narlgom"], "AtlasLootItems",},
+	["WHCProphet"] = { AL["Windhorn Canyon"].." - "..AL["Prophet Stormhoof"], "AtlasLootItems",},
+	["WHCChieftan"] = { AL["Windhorn Canyon"].." - "..AL["Chieftain Shalk Blackwind"], "AtlasLootItems"},
 	--Blackfathom Deeps
 	["BFDGhamoora"] = { AL["Blackfathom Deeps"].." - "..AL["Ghamoo-ra"], "AtlasLootItems" },
 	["BFDLadySarevess"] = { AL["Blackfathom Deeps"].." - "..AL["Lady Sarevess"], "AtlasLootItems" },
@@ -1106,6 +1119,21 @@ AtlasLoot_TableNames = {
 AtlasLoot_TableNamesBoss = {
 	["Keys"] = {
 		["VanillaKeys"] = { AL["Keys"], "AtlasLootItems" },
+	},
+	["Frostmane Hollow"] = {
+		["FMHTansha"] = { AL["Tan'sha the Sleek"], "AtlasLootItems" },
+		["FMHKanza"] = { AL["Kan'za the Seer"], "AtlasLootItems" },
+		["FMHBattlemaster"] = { AL["Battlemaster Ubukaz"], "AtlasLootItems" },
+		["FMHHailar"] = { AL["Hailar the Frigid"], "AtlasLootItems" },
+	},
+	["Windhorn Canyon"] = {
+		["WHCPathun"] = { AL["Pathun Duskhide"], "AtlasLootItems"},
+		["WHCAhgktos"] = { AL["Ahgk'tos the Pure"], "AtlasLootItems",},
+		["WHCAmbassador"] = { AL["Ambassador Vortalus"], "AtlasLootItems",},
+		["WHCWalgan"] = { AL["Walgan Bloodcaller"], "AtlasLootItems",},
+		["WHCBonespeaker"] = { AL["Bonespeaker Narlgom"], "AtlasLootItems",},
+		["WHCProphet"] = { AL["Prophet Stormhoof"], "AtlasLootItems",},
+		["WHCChieftan"] = { AL["Chieftain Shalk Blackwind"], "AtlasLootItems"},
 	},
 	["Blackfathom Deeps"] = {
 		["BFDGhamoora"] = { AL["Ghamoo-ra"], "AtlasLootItems" },
