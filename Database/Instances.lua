@@ -654,6 +654,7 @@ AtlasLootBossButtons = {
 		"TCGHighPriestessAlathea";
 		"TCGFenektistheDeceiver";
 		"TCGMasterRaxxieth";
+		"";
 		"TCGTrash";
 	};
 	KarazhanCrypt = {
@@ -666,6 +667,7 @@ AtlasLootBossButtons = {
 		"KCCommanderAndreon";
 		"KCAlarus";
 		"KCTreasure";
+		"";
 		"KCTrash";
 	};
 	CavernsOfTimeBlackMorass = {
@@ -678,6 +680,7 @@ AtlasLootBossButtons = {
 		"COTBMMossheart";
 		"COTBMAntnormi";
 		"COTBMRotmaw";
+		"";
 		"COTTrash";
 	};
 	StormwindVault = {
@@ -690,6 +693,7 @@ AtlasLootBossButtons = {
 		"SWVVolkanCruelblade";
 		"SWVVaultArmoryEquipment";
 		"";
+		"";
 		"SWVTrash";
 	};
 	HateforgeQuarry = {
@@ -700,6 +704,7 @@ AtlasLootBossButtons = {
 		"HQCorrosis";
 		"HQHatereaverAnnihilator";
 		"HQHargeshDoomcaller";
+		"";
 		"HQTrash";
 	};
 	TheDeadmines = {
@@ -870,6 +875,7 @@ AtlasLootBossButtons = {
 		"GCHorsemasterLevvin";
 		"GCHarlowFamilyChest";
 		"GCGennGreymane";
+		"";
 		"GCTrash";
 	};
 	WailingCaverns = {
@@ -981,11 +987,14 @@ AtlasLootBossButtons = {
 		"";
 		"";
 		"LKHMoroes";
+		"";
 		"LKHTrash";
 		"LKHEnchants";
 	};
     UpperKara = {
         "";
+		"";
+		"";
 		"";
 		"UKHGnarlmoon";
 		"UKHIncantagos";
@@ -996,14 +1005,18 @@ AtlasLootBossButtons = {
 		"UKHRupturan";
 		"UKHKruul";
 		"UKHMephistroth";
+		"";
 		"UKHTrash";
+		"KARASET";
     };
 	EmeraldSanctum = {
-		"",
+		"";
+		"";
+		"";
 		"ESErennius";
 		"ESSolnius1";
 		"ESHardMode";
-		"",
+		"";
 		"ESTrash";
 	};
 	DragonmawRetreat = {
