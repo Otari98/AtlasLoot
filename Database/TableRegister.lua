@@ -107,6 +107,7 @@ AtlasLoot_TableNames = {
 	["BWLVaelastrasz"] = { AL["Blackwing Lair"].." - "..AL["Vaelastrasz the Corrupt"], "AtlasLootItems" },
 	["BWLLashlayer"] = { AL["Blackwing Lair"].." - "..AL["Broodlord Lashlayer"], "AtlasLootItems" },
 	["BWLFiremaw"] = { AL["Blackwing Lair"].." - "..AL["Firemaw"], "AtlasLootItems" },
+	["BWLEzzel"] = { AL["Blackwing Lair"].." - "..AL["Ezzel Darkbrewer"], "AtlasLootItems" },
 	["BWLEbonroc"] = { AL["Blackwing Lair"].." - "..AL["Ebonroc"], "AtlasLootItems" },
 	["BWLFlamegor"] = { AL["Blackwing Lair"].." - "..AL["Flamegor"], "AtlasLootItems" },
 	["BWLChromaggus"] = { AL["Blackwing Lair"].." - "..AL["Chromaggus"], "AtlasLootItems" },
@@ -231,6 +232,7 @@ AtlasLoot_TableNames = {
 	["NAXKelThuzard"] = { AL["Naxxramas"].." - "..AL["Kel'Thuzad"], "AtlasLootItems" },
 	["NAXTrash"] = { AL["Naxxramas"].." - "..AL["Trash Mobs"], "AtlasLootItems" },
 	--Onyxia's Lair
+	["Axelus"] = { AL["Onyxia's Lair"].." - "..AL["Broodcommander Axelus"], "AtlasLootItems" },
 	["Onyxia"] = { AL["Onyxia's Lair"].." - "..AL["Onyxia"], "AtlasLootItems" },
 	--Ragefire Chasm
 	["RFCBazzalan"] = { AL["Ragefire Chasm"].." - "..AL["Bazzalan"], "AtlasLootItems" },
@@ -1222,6 +1224,7 @@ AtlasLoot_TableNamesBoss = {
 		["BWLVaelastrasz"] = { AL["Vaelastrasz the Corrupt"], "AtlasLootItems" },
 		["BWLLashlayer"] = { AL["Broodlord Lashlayer"], "AtlasLootItems" },
 		["BWLFiremaw"] = { AL["Firemaw"], "AtlasLootItems" },
+		["BWLEzzel"] = { AL["Ezzel Darkbrewer"], "AtlasLootItems" },
 		["BWLEbonroc"] = { AL["Ebonroc"], "AtlasLootItems" },
 		["BWLFlamegor"] = { AL["Flamegor"], "AtlasLootItems" },
 		["BWLChromaggus"] = { AL["Chromaggus"], "AtlasLootItems" },
@@ -1408,6 +1411,7 @@ AtlasLoot_TableNamesBoss = {
 		["NAXTrash"] = { AL["Trash Mobs"] .. " (" .. AL["Naxxramas"] .. ")", "AtlasLootItems" },
 	},
 	["Onyxia's Lair"] = {
+		["Axelus"] = { AL["Broodcommander Axelus"], "AtlasLootItems" },
 		["Onyxia"] = { AL["Onyxia"], "AtlasLootItems" },
 	},
 	["Ragefire Chasm"] = {

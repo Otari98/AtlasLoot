@@ -207,7 +207,7 @@ AtlasLootBossButtons = {
 		"BWLVaelastrasz";
 		"BWLLashlayer";
 		"BWLFiremaw";
-		"";
+		"BWLEzzel";
 		"BWLEbonroc";
 		"BWLFlamegor";
 		"BWLChromaggus";
@@ -443,8 +443,7 @@ AtlasLootBossButtons = {
 		"";
 		"VanillaKeys";
 		"";
-		"";
-		"";
+		"Axelus";
 		"Onyxia";
 	};
 	RagefireChasm = {
@@ -1193,7 +1192,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 19335, "INV_Mace_06", "=q4=Spineshatter", "=ds=#h3#, #w6#", "10%" },
 		{ 19334, "INV_Sword_50", "=q4=The Untamed Blade", "=ds=#h2#, #w10#", "10%" },
 	};
-	BWLVaelastrasz = { --https://database.turtle-wow.org/?npc=13020
+	BWLVaelastrasz = {
 		{ 16925, "INV_Belt_22", "=q4=Belt of Transcendence", "=ds=#s10#, #a1# =q9=#c5#", "11%", "", "", "", "", "", "", "", "", "", "", {
 			{{47211,"=ds=#s10#, #a1# =q7=#db18#"},},},
 		},
@@ -1231,7 +1230,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 19348, "INV_Shield_20", "=q4=Red Dragonscale Protector", "=ds=#w8#", "10%" },
 		{ 19346, "INV_Weapon_Shortblade_29", "=q4=Dragonfang Blade", "=ds=#h1#, #w4#", "10%" },
 	};
-	BWLLashlayer = { --https://database.turtle-wow.org/?npc=12017
+	BWLLashlayer = {
 		{ 16919, "INV_Boots_07", "=q4=Boots of Transcendence", "=ds=#s12#, #a1# =q9=#c5#", "11%", "", "", "", "", "", "", "", "", "", "", {
 			{{47213,"=ds=#s12#, #a1# =q7=#db19#"},},},
 		},
@@ -1269,7 +1268,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 19350, "INV_Weapon_Bow_09", "=q4=Heartstriker", "=ds=#w2#", "10%" },
 		{ 19351, "INV_Sword_49", "=q4=Maladath, Runed Blade of the Black Flight", "=ds=#h1#, #w10#", "10%" },
 	};
-	BWLFiremaw = { --https://database.turtle-wow.org/?npc=11983
+	BWLFiremaw = {
 		{ 16920, "INV_Gauntlets_14", "=q4=Handguards of Transcendence", "=ds=#s9#, #a1# =q9=#c5#", "7%", "", "", "", "", "", "", "", "", "", "", {
 			{{47210,"=ds=#s10#, #a1# =q7=#db20#=ds=, =q7=#db21#=ds=, =q7=#db22#"},},},
 		},
@@ -1314,7 +1313,23 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 19397, "INV_Jewelry_Ring_43", "=q4=Ring of Blackrock", "=ds=#s13#", "7%" },
 		{ 19395, "INV_Misc_Gem_Topaz_02", "=q4=Rejuvenating Gem", "=ds=#s14#", "7%" },
 	};
-	BWLEbonroc = { --https://database.turtle-wow.org/?npc=14601
+	BWLEzzel = {
+		{ 33077, "INV_Shirt_15", "=q4=Apron of Fuming Protection", "#s5#, #a1#", "17.49%" },
+		{ 33074, "INV_Boots_Chain_09", "=q4=Taut Dragonhide Boots", "#s12#, #a2#", "16.72%" },
+		{ 33073, "Spell_Shadow_GrimWard", "=q4=Philosopher's Barrier", "#h4#, #w8#", "16.74%" },
+		{ 33080, "INV_Bracer_18", "=q4=Wingbone Vambraces", "#s8#, #a4#", "15.96%" },
+		{ 33075, "INV_Potion_11", "=q4=Staff of Cleansing Vapors", "#h2#, #w9#", "15.93%" },
+		{ 33079, "INV_Misc_Orb_03", "=q4=Philosopher's Stone Replica", "#s15#", "16.32%" },
+		{ 33078, "INV_Potion_06", "=q4=Vials of Volatile Acid", "#w11#", "16.97%" },
+		{ 33076, "INV_Staff_23", "=q4=Ichorus", "#w12#", "16.81%" },
+		{ 33081, "INV_Potion_62", "=q4=Flask of Petrified Gold", "#s14#", "16.82%" },
+		{ 33086, "INV_Misc_Book_01", "=q4=Libram of Hallowed Ground", "#s16#, #e18# =q16=#c4#", "16.46%" },
+		{ 33090, "INV_Misc_StoneTablet_06", "=q4=Totem of Distant Tremors", "#s16#, #e17# =q15=#c7#", "17.01%" },
+		{ 33097, "INV_Stone_05", "=q4=Idol of Acidity", "#s16#, #e16# =q13=#c1#", "16.77%" },
+		{ 33085, "over-tinkered_lens_3", "=q4=Over-Tinkered Lens", "#p5# (300)", "25.01%" },
+		{ 42311, "INV_Gizmo_MithrilCasing_01", "=q1=Transmutation Alloy", "#m3#", "100%" },
+	};
+	BWLEbonroc = {
 		{ 16920, "INV_Gauntlets_14", "=q4=Handguards of Transcendence", "=ds=#s9#, #a1# =q9=#c5#", "7%", "", "", "", "", "", "", "", "", "", "", {
 			{{47210,"=ds=#s10#, #a1# =q7=#db20#=ds=, =q7=#db21#=ds=, =q7=#db22#"},},},
 		},
@@ -1358,7 +1373,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 19406, "INV_Misc_Bone_06", "=q4=Drake Fang Talisman", "=ds=#s14#", "17%" },
 		{ 19395, "INV_Misc_Gem_Topaz_02", "=q4=Rejuvenating Gem", "=ds=#s14#", "7%" },
 	};
-	BWLFlamegor = { --https://database.turtle-wow.org/?npc=11981
+	BWLFlamegor = {
 		{ 16920, "INV_Gauntlets_14", "=q4=Handguards of Transcendence", "=ds=#s9#, #a1# =q9=#c5#", "7%", "", "", "", "", "", "", "", "", "", "", {
 			{{47210,"=ds=#s10#, #a1# =q7=#db20#=ds=, =q7=#db21#=ds=, =q7=#db22#"},},},
 		},
@@ -1403,7 +1418,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 19395, "INV_Misc_Gem_Topaz_02", "=q4=Rejuvenating Gem", "=ds=#s14#", "7%" },
 		{ 19431, "INV_Misc_ArmorKit_10", "=q4=Styleen's Impeding Scarab", "=ds=#s14#", "17%" },
 	};
-	BWLChromaggus = { --https://database.turtle-wow.org/?npc=14020
+	BWLChromaggus = {
 		{ 16924, "INV_Shoulder_02", "=q4=Pauldrons of Transcendence", "=ds=#s3#, #a1# =q9=#c5#", "11%", "", "", "", "", "", "", "", "", "", "", {
 			{{47207,"=ds=#s3#, #a1# =q7=#db23#"},},},
 		},
@@ -1448,7 +1463,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 19347, "INV_Weapon_Shortblade_28", "=q4=Claw of Chromaggus", "=ds=#h1#, #w4#", "10%" },
 		{ 19352, "INV_Sword_51", "=q4=Chromatically Tempered Sword", "=ds=#h1#, #w10#", "10%" },
 	};
-	BWLNefarian = { --https://database.turtle-wow.org/?npc=11583
+	BWLNefarian = {
 		{ 16923, "INV_Chest_Cloth_03", "=q4=Robes of Transcendence", "=ds=#s5#, #a1# =q9=#c5#", "11%", "", "", "", "", "", "", "", "", "", "", {
 			{{47208,"=ds=#s5#, #a1# =q7=#db24#"},},},
 		},
@@ -1545,7 +1560,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 0, "", "", "" },
 		{ 41988, "INV_Misc_MonsterScales_15", "=q1=Molten Scale", "#m3#", "100%" },
 	};
-	MCLucifron = { --https://database.turtle-wow.org/?npc=12118
+	MCLucifron = {
 		{ 16800, "INV_Boots_07", "=q4=Arcanist Boots", "=ds=#s12#, #a1# =q10=#c3#", "20%", "", "", "", "", "", "", "", "", "", "", {
 			{{47085,"=ds=#s12#, #a1# =q7=#db25#"},},},
 		},
@@ -1589,7 +1604,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 0,"","","" },
 		{ 16665, "INV_Misc_Book_11", "=q2=Tome of Tranquilizing Shot", "=ds=#e20# =q14=#c2#", "100%" },
 	};
-	MCMagmadar = { --https://database.turtle-wow.org/?npc=11982
+	MCMagmadar = {
 		{ 16814, "INV_Pants_08", "=q4=Pants of Prophecy", "=ds=#s11#, #a1# =q9=#c5#", "20%", "", "", "", "", "", "", "", "", "", "", {
 			{{47204,"=ds=#s11#, #a1# =q7=#db26#"},},},
 		},
@@ -1635,7 +1650,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 17073, "INV_Hammer_04", "=q4=Earthshaker", "=ds=#h2#, #w6#", "20%" },
 		{ 18822, "INV_Sword_28", "=q4=Obsidian Edged Blade", "=ds=#h2#, #w10#", "5%" },
 	};
-	MCGehennas = { --https://database.turtle-wow.org/?npc=12259
+	MCGehennas = {
 		{ 16812, "INV_Gauntlets_14", "=q4=Gloves of Prophecy", "=ds=#s9#, #a1# =q9=#c5#", "25%", "", "", "", "", "", "", "", "", "", "", {
 			{{47202,"=ds=#s9#, #a1# =q7=#db27#"},},},
 		},
@@ -1670,7 +1685,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 17077, "INV_Staff_13", "=q4=Crimson Shocker", "=ds=#w12#", "5%" },
 		{ 18878, "INV_Weapon_ShortBlade_07", "=q4=Sorcerous Dagger", "=ds=#h3#, #w4#", "5%" },
 	};
-	MCGarr = { --https://database.turtle-wow.org/?npc=12057
+	MCGarr = {
 		{ 16813, "INV_Helmet_34", "=q4=Circlet of Prophecy", "=ds=#s1#, #a1# =q9=#c5#", "20%", "", "", "", "", "", "", "", "", "", "", {
 			{{47198,"=ds=#s1#, #a1# =q7=#db28#"},},},
 		},
@@ -1716,7 +1731,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 18832, "INV_Sword_15", "=q4=Brutality Blade", "=ds=#h1#, #w10#", "20%" },
 		{ 18822, "INV_Sword_28", "=q4=Obsidian Edged Blade", "=ds=#h2#, #w10#", "5%" },
 	};
-	MCShazzrah = { --https://database.turtle-wow.org/?npc=12264
+	MCShazzrah = {
 		{ 16811, "INV_Boots_07", "=q4=Boots of Prophecy", "=ds=#s12#, #a1# =q9=#c5#", "25%", "", "", "", "", "", "", "", "", "", "", {
 			{{47205,"=ds=#s12#, #a1# =q7=#db30#"},},},
 		},
@@ -1751,7 +1766,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 17077, "INV_Staff_13", "=q4=Crimson Shocker", "=ds=#w12#", "3%" },
 		{ 18878, "INV_Weapon_ShortBlade_07", "=q4=Sorcerous Dagger", "=ds=#h3#, #w4#", "3%" },
 	};
-	MCGeddon = { --https://database.turtle-wow.org/?npc=12056
+	MCGeddon = {
 		{ 16797, "INV_Shoulder_02", "=q4=Arcanist Mantle", "=ds=#s3#, #a1# =q10=#c3#", "33%", "", "", "", "", "", "", "", "", "", "", {
 			{{47079,"=ds=#s3#, #a1# =q7=#db29#"},},},
 		},
@@ -1790,7 +1805,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 19142, "INV_Misc_Book_09", "=q4=Fire Runed Grimoire", "=ds=#s15#", "4%" },
 		{ 18822, "INV_Sword_28", "=q4=Obsidian Edged Blade", "=ds=#h2#, #w10#", "4%" },
 	};
-	MCGolemagg = { --https://database.turtle-wow.org/?npc=11988
+	MCGolemagg = {
 		{ 16815, "INV_Chest_Cloth_03", "=q4=Robes of Prophecy", "=ds=#s5#, #a1# =q9=#c5#", "25%", "", "", "", "", "", "", "", "", "", "", {
 			{{47200,"=ds=#s5#, #a1# =q7=#db32#"},},},
 		},
@@ -1889,7 +1904,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 0, "", "", "" },
 		{ 41989, "BTNHarbingerRing", "=q1=Signet of Thaurissan", "#m3#", "100%" },
 	};
-	MCSulfuron = { --https://database.turtle-wow.org/?npc=12098
+	MCSulfuron = {
 		{ 16816, "INV_Shoulder_02", "=q4=Mantle of Prophecy", "=ds=#s3#, #a1# =q9=#c5#", "33%", "", "", "", "", "", "", "", "", "", "", {
 			{{47199,"=ds=#s3#, #a1# =q7=#db31#"},},},
 		},
@@ -1922,7 +1937,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 17074, "INV_Spear_08", "=q4=Shadowstrike", "=ds=#w7#", "3%" },
 		{ 17223, "INV_Spear_08", "=q4=Thunderstrike", "=ds=#w7#" },
 	};
-	MCMajordomo = { --https://database.turtle-wow.org/?object=179703
+	MCMajordomo = {
 		{ 19139, "INV_Shoulder_23", "=q4=Fireguard Shoulders", "=ds=#s3#, #a2#", "20%" },
 		{ 18810, "INV_Shoulder_18", "=q4=Wild Growth Spaulders", "=ds=#s3#, #a2#", "20%" },
 		{ 18811, "INV_Misc_Cape_18", "=q4=Fireproof Cloak", "=ds=#s4#", "20%" },
@@ -1947,7 +1962,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 18608, "INV_Staff_30", "=q4=Benediction", "=q1=#m4# =ds=#w9# =q9=#c5#" },
 		{ 18609, "INV_Staff_12", "=q4=Anathema", "=q1=#m4# =ds=#w9# =q9=#c5#" },
 	};
-	MCRagnaros = { --https://database.turtle-wow.org/?npc=11502
+	MCRagnaros = {
 		{ 16922, "INV_Pants_08", "=q4=Leggings of Transcendence", "=ds=#s11#, #a1# =q9=#c5#", "13%", "", "", "", "", "", "", "", "", "", "", {
 			{{47212,"=ds=#s11#, #a1# =q7=#db16#"},},},
 		},
@@ -2084,6 +2099,19 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 0,"","","" },
 		{ 18260, "INV_Misc_Note_01", "=q3=Formula: Enchant Weapon - Healing Power", "=ds=#p4# (300)", "1%" },
 	};
+	Axelus = {
+		{ 33087, "INV_Misc_Book_07", "=q4=Libram of Ardour", "#s16#, #e18# =q16=#c4#", "19.64%" },
+		{ 33098, "Inv_weapon_shortblade_23", "=q4=Idol of Equilibrium", "#s16#, #e16# =q13=#c1#", "9.09%" },
+		{ 33154, "ring_of_burning_talons_2", "=q4=Ring of Burning Talons", "#s13#", "18.86%" },
+		{ 33149, "battle_standard_of_the_broodcommander_2", "=q4=Battle Standard of the Broodcommander", "#s14#", "19.06%" },
+		{ 33151, "onyxia_brood_egg_1", "=q4=Onyxian Brood Egg", "#s14#", "18.71%" },
+		{ 33153, "ignited_obsidian_scale_1", "=q4=Ignited Obsidian Scale", "#s14#", "19.18%" },
+		{ 33150, "yoxtez_black_breath_of_the_dragonflight_2", "=q4=Yoxtez, Black Breath of the Dragonflight", "#h2#, #w7#", "19.42%" },
+		{ 33152, "prestors_rod_of_command_2", "=q4=Prestor's Rod of Command", "#h2#, #w9#", "19.04%" },
+		{ 33155, "INV_Shield_23", "=q4=Scaleshield of Obsidian Flight", "#h4#, #w8#", "18.7%" },
+		{ 33156, "INV_Spear_08", "=q4=Dragonhunter Javelin", "#w11#", "19.11%" },
+		{ 33157, "INV_Sword_01", "=q4=Broodwarden's Bulwarkblade", "#h1#, #w10#", "19.19%" },
+	};
 	Onyxia = {
 		{ 16921, "INV_Helmet_24", "=q4=Halo of Transcendence", "=ds=#s1#, #a1# =q9=#c5#", "13%", "", "", "", "", "", "", "", "", "", "", {
 			{{47206,"=ds=#s1#, #a1# =q7=#db15#"},},},
@@ -2130,7 +2158,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 15410, "INV_Misc_MonsterScales_07","=q3=Scale of Onyxia", "=ds=#e12# =q5=Skinning (315)" },
 		{ 15138, "INV_Misc_Cape_05","=q3=Onyxia Scale Cloak","=q1=#m4# =ds=#s4# =q5=LW (300)" },
 	};
-	ZGJeklik = { --https://database.turtle-wow.org/?npc=14517
+	ZGJeklik = {
 		{ 19721, "INV_Shoulder_19", "=q4=Primal Hakkari Shawl", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q10=#c3#", "11%","", "", "", "", "", "", "", "", "", "", {
 			{{19826,"=q4=#x11#=ds=, #r3#"},{19832,"=q4=#x11#=ds=, #r3#"},{19845,"=q4=#x11#=ds=, #r3#"},},},
 		},
@@ -2173,7 +2201,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 19920, "INV_Jewelry_Ring_47", "=q3=Primalist's Band", "=ds=#s13#", "14%" },
 		{ 19915, "INV_Shield_22", "=q3=Zulian Defender", "=ds=#w8#", "14%" },
 	};
-	ZGVenoxis = { --https://database.turtle-wow.org/?npc=14507
+	ZGVenoxis = {
 		{ 19721, "INV_Shoulder_19", "=q4=Primal Hakkari Shawl", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q10=#c3#", "11%","", "", "", "", "", "", "", "", "", "", {
 			{	{19826,"=q4=#x11#=ds=, #r3#"},{19832,"=q4=#x11#=ds=, #r3#"},{19845,"=q4=#x11#=ds=, #r3#"},
 			},
@@ -2233,7 +2261,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 19905, "INV_Jewelry_Ring_46", "=q3=Zanzil's Band", 	"=ds=#s13#", "17%" },
 		{ 19900, "INV_Axe_34", "=q3=Zulian Stone Axe", "=ds=#h2#, #w1#", "17%" },
 	};
-	ZGMarli = { --https://database.turtle-wow.org/?npc=14510
+	ZGMarli = {
 		{ 19721, "INV_Shoulder_19", "=q4=Primal Hakkari Shawl", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q10=#c3#", "11%","", "", "", "", "", "", "", "", "", "", {
 			{{19826,"=q4=#x11#=ds=, #r3#"},{19832,"=q4=#x11#=ds=, #r3#"},{19845,"=q4=#x11#=ds=, #r3#"},
 		},
@@ -2295,7 +2323,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 0, "", "", "", "" },
 		{ 81003, "inv_misc_monsterclaw_03", "=q3=Ancient Hakkari Flayer", "=ds=#h3#, #w13#", "10%" },
 	};
-	ZGMandokir = { --https://database.turtle-wow.org/?npc=11382
+	ZGMandokir = {
 		{ 19721, "INV_Shoulder_19", "=q4=Primal Hakkari Shawl", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q10=#c3#", "11%","", "", "", "", "", "", "", "", "", "", {
 			{	{19826,"=q4=#x11#=ds=, #r3#"},{19832,"=q4=#x11#=ds=, #r3#"},{19845,"=q4=#x11#=ds=, #r3#"},
 			},
@@ -2366,7 +2394,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 19863, "INV_Jewelry_Ring_47", "=q3=Primalist's Seal", "=ds=#s13#", "8%" },
 		{ 19893, "INV_Jewelry_Ring_46", "=q3=Zanzil's Seal", "=ds=#s13#", "8%" },
 	};
-	ZGGrilek = { --https://database.turtle-wow.org/?npc=15082
+	ZGGrilek = {
 		{ 19961, "INV_Mace_04", "=q3=Gri'lek's Grinder", "=ds=#h1#, #w6#", "43%" },
 		{ 19962, "INV_Axe_24", "=q3=Gri'lek's Carver", "=ds=#h2#, #w1#", "43%" },
 		{ 0,"","","" },
@@ -2375,7 +2403,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 			{19953,"=ds=#s14#"},{19956,"=ds=#s14#"},{19951,"=ds=#s14#"},{19952,"=ds=#s14#"},},},
 		},
 	};
-	ZGHazzarah = { --https://database.turtle-wow.org/?npc=15083
+	ZGHazzarah = {
 		{ 19967, "INV_Wand_05", "=q3=Thoughtblighter", "=ds=#w12#", "45%" },
 		{ 19968, "INV_Sword_01", "=q3=Fiery Retributer", "=ds=#h3#, #w10#", "40%" },
 		{ 0,"","","" },
@@ -2384,7 +2412,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 			{19953,"=ds=#s14#"},{19956,"=ds=#s14#"},{19951,"=ds=#s14#"},{19952,"=ds=#s14#"},},},
 		},
 	};
-	ZGRenataki = { --https://database.turtle-wow.org/?npc=15084
+	ZGRenataki = {
 		{ 19964, "INV_Sword_37", "=q3=Renataki's Soul Conduit", "=ds=#h3#, #w10#", "40%" },
 		{ 19963, "INV_Spear_03", "=q3=Pitchfork of Madness", "=ds=#w7#", "45%" },
 		{ 0,"","","" },
@@ -2394,7 +2422,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		},
 	};
 
-	ZGWushoolay = { --https://database.turtle-wow.org/?npc=15085
+	ZGWushoolay = {
 		{ 19993, "INV_Waepon_Bow_ZulGrub_D_02", "=q3=Hoodoo Hunting Bow", "=ds=#w2#", "45%" },
 		{ 19965, "INV_Sword_37", "=q3=Wushoolay's Poker", "=ds=#h3#, #w4#", "40%" },
 		{ 0,"","","" },
@@ -2403,7 +2431,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 			{19953,"=ds=#s14#"},{19956,"=ds=#s14#"},{19951,"=ds=#s14#"},{19952,"=ds=#s14#"},},},
 		},
 	};
-	ZGGahzranka = { --https://database.turtle-wow.org/?npc=15114
+	ZGGahzranka = {
 		{ 19945, "INV_Helmet_46", "=q4=Foror's Eyepatch", "=ds=#s1#, #a2#", "25%" },
 		{ 19944, "INV_Fishingpole_02", "=q4=Nat Pagle's Fish Terminator", "=ds=#w9#", "25%" },
 		{ 0,"","","" },
@@ -2457,7 +2485,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 19898, "INV_Jewelry_Ring_44", "=q3=Seal of Jin", "=ds=#s13#", "14%" },
 		{ 19901, "INV_Sword_35", "=q3=Zulian Slicer", "=ds=#h1#, #w10#", "14%" },
 	};
-	ZGArlokk = { --https://database.turtle-wow.org/?npc=14515
+	ZGArlokk = {
 		{ 19721, "INV_Shoulder_19", "=q4=Primal Hakkari Shawl", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q10=#c3#", "11%","", "", "", "", "", "", "", "", "", "", {
 			{	{19826,"=q4=#x11#=ds=, #r3#"},{19832,"=q4=#x11#=ds=, #r3#"},{19845,"=q4=#x11#=ds=, #r3#"},
 			},
@@ -2517,7 +2545,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 19922, "INV_Misc_Bone_DwarfSkull_01", "=q3=Arlokk's Hoodoo Stick", "=ds=#s15#", "20%" },
 		{ 19914, "INV_Misc_Bag_14", "=q3=Panther Hide Sack", "=ds=#m12# #e10#", "12%" },
 	};
-	ZGJindo = { --https://database.turtle-wow.org/?npc=11380
+	ZGJindo = {
 		{ 19721, "INV_Shoulder_19", "=q4=Primal Hakkari Shawl", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q10=#c3#", "11%","", "", "", "", "", "", "", "", "", "", {
 			{	{19826,"=q4=#x11#=ds=, #r3#"},{19832,"=q4=#x11#=ds=, #r3#"},{19845,"=q4=#x11#=ds=, #r3#"},
 			},
@@ -2587,7 +2615,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 19887, "INV_Pants_Mail_09", "=q3=Bloodstained Legplates", "=ds=#s11#, #a3#", "8%" },
 		{ 19892, "INV_Boots_Chain_13", "=q3=Animist's Boots", "=ds=#s12#, #a2#", "8%" },
 	};
-	ZGHakkar = { --https://database.turtle-wow.org/?npc=14834
+	ZGHakkar = {
 		{ 19857, "INV_Misc_Cape_22", "=q4=Cloak of Consumption", "=ds=#s4#", "14%" },
 		{ 20257, "INV_Gauntlets_30", "=q4=Seafury Gauntlets", "=ds=#s9#, #a3#", "14%" },
 		{ 20264, "INV_Gauntlets_10", "=q4=Peacekeeper Gauntlets", "=ds=#s9#, #a4#", "14%" },
@@ -2624,7 +2652,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 	ZGMuddyChurningWaters = {
 		{ 19975, "INV_Misc_Fish_05", "=q1=Zulian Mudskunk", "=ds=#m36#" },
 	};
-	ZGJinxedHoodooPile = { --https://database.turtle-wow.org/?object=180229
+	ZGJinxedHoodooPile = {
 		{ 19727, "INV_Weapon_Shortblade_29", "=q3=Blood Scythe", "=ds=#m8#", "26%" },
 		{ 0,"","","" },
 		{ 19820, "INV_Misc_Idol_02", "=q2=Punctured Voodoo Doll", "=ds=#m40# =q9=#c5#", "11%" };
@@ -2712,7 +2740,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 0, "", "", "", "" },
 		{ 22635, "Spell_Nature_SpiritArmor", "=q3=Savage Guard", "=ds=#s1#/#s11# #e11#" },
 	};
-	AQ20Kurinnaxx = { --https://database.turtle-wow.org/?npc=15348
+	AQ20Kurinnaxx = {
 		{ 21499, "INV_Chest_Cloth_17", "=q4=Vestments of the Shifting Sands", "=ds=#s5#, #a1#", "17%" },
 		{ 21498, "INV_Weapon_ShortBlade_12", "=q4=Qiraji Sacrificial Dagger", "=ds=#h1#, #w4#", "17%" },
 		{ 0,"","","" },

@@ -907,14 +907,20 @@ AtlasLoot_ButtonRegistry = {
 	};
 	["BWLFiremaw"] = {
 		Title = AL["Firemaw"];
-		Next_Page = "BWLEbonroc";
+		Next_Page = "BWLEzzel";
 		Prev_Page = "BWLLashlayer";
+		Back_Page = "DUNGEONSMENU2";
+	};
+	["BWLEzzel"] = {
+		Title = AL["Ezzel Darkbrewer"];
+		Next_Page = "BWLEbonroc";
+		Prev_Page = "BWLFiremaw";
 		Back_Page = "DUNGEONSMENU2";
 	};
 	["BWLEbonroc"] = {
 		Title = AL["Ebonroc"];
 		Next_Page = "BWLFlamegor";
-		Prev_Page = "BWLFiremaw";
+		Prev_Page = "BWLEzzel";
 		Back_Page = "DUNGEONSMENU2";
 	};
 	["BWLFlamegor"] = {
@@ -2751,9 +2757,15 @@ AtlasLoot_ButtonRegistry = {
 	};
 
 	-- Onyxia's Lair
+	["Axelus"] = {
+		Title = AL["Broodcommander Axelus"],
+		Next_Page = "Onyxia",
+		Back_Page = "DUNGEONSMENU2",
+	};
 	["Onyxia"] = {
-		Title = AL["Onyxia's Lair"];
-		Back_Page = "DUNGEONSMENU2";
+		Title = AL["Onyxia"],
+		Prev_Page = "Axelus",
+		Back_Page = "DUNGEONSMENU2",
 	};
 
 	-- World Bosses

@@ -404,6 +404,7 @@ AtlasLoot_HewdropDown_SubTables = {
 		{ AL["Vaelastrasz the Corrupt"], "BWLVaelastrasz" },
 		{ AL["Broodlord Lashlayer"], "BWLLashlayer" },
 		{ AL["Firemaw"], "BWLFiremaw" },
+		{ AL["Ezzel Darkbrewer"], "BWLEzzel" },
 		{ AL["Ebonroc"], "BWLEbonroc" },
 		{ AL["Flamegor"], "BWLFlamegor" },
 		{ AL["Chromaggus"], "BWLChromaggus" },
@@ -690,6 +691,7 @@ AtlasLoot_HewdropDown_SubTables = {
 		{ AL["Trash Mobs"], "MaraTrash" },
 	},
 	["Onyxia"] = {
+		{ AL["Broodcommander Axelus"], "Axelus" },
 		{ AL["Onyxia"], "Onyxia" },
 	},
 	["RagefireChasm"] = {
