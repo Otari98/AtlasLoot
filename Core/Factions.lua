@@ -1,181 +1,55 @@
 local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
+local _G = getfenv(0)
+local buttonsPerPage = 30
+local ButtonsInfo1
+local RED = "|cffff0000"
+local BLUE = "|cff0070dd"
 
 function AtlasLootRepMenu()
 	AtlasLoot_PrepMenu(nil, AL["Factions"])
 	AtlasLootCharDB.LastBoss = "REPMENU"
 	AtlasLootCharDB.LastBossText = AL["Factions"]
-	--Argent Dawn
-	AtlasLootMenuItem_1_Name:SetText(AL["Argent Dawn"]);
-	AtlasLootMenuItem_1_Extra:SetText("");
-	AtlasLootMenuItem_1_Icon:SetTexture("Interface\\Icons\\INV_Jewelry_Talisman_08");
-	AtlasLootMenuItem_1.lootpage="Argent1";
-	AtlasLootMenuItem_1:Show();
-	--Bloodsail Pirates
-	AtlasLootMenuItem_16_Name:SetText(AL["Bloodsail Buccaneers"]);
-	AtlasLootMenuItem_16_Extra:SetText("");
-	AtlasLootMenuItem_16_Icon:SetTexture("Interface\\Icons\\INV_Helmet_66");
-	AtlasLootMenuItem_16.lootpage="Bloodsail1";
-	AtlasLootMenuItem_16:Show();
-	--Brood of Nozdormu
-	AtlasLootMenuItem_2_Name:SetText(AL["Brood of Nozdormu"]);
-	AtlasLootMenuItem_2_Extra:SetText("");
-	AtlasLootMenuItem_2_Icon:SetTexture("Interface\\Icons\\INV_Jewelry_Ring_40");
-	AtlasLootMenuItem_2.lootpage="AQBroodRings";
-	AtlasLootMenuItem_2:Show();
-	--Cenarion Hold
-	AtlasLootMenuItem_17_Name:SetText(AL["Cenarion Circle"]);
-	AtlasLootMenuItem_17_Extra:SetText("");
-	AtlasLootMenuItem_17_Icon:SetTexture("Interface\\Icons\\Spell_Nature_HealingTouch");
-	AtlasLootMenuItem_17.lootpage="Cenarion1";
-	AtlasLootMenuItem_17:Show();
-	--Darkmoon Faire
-	AtlasLootMenuItem_3_Name:SetText(AL["Darkmoon Faire"]);
-	AtlasLootMenuItem_3_Extra:SetText("");
-	AtlasLootMenuItem_3_Icon:SetTexture("Interface\\Icons\\INV_Misc_Ticket_Tarot_Maelstrom_01");
-	AtlasLootMenuItem_3.lootpage="Darkmoon";
-	AtlasLootMenuItem_3:Show();
-	--Frostwolf Clan
-	AtlasLootMenuItem_24_Name:SetText(AL["Frostwolf Clan"]);
-	AtlasLootMenuItem_24_Extra:SetText("|cffFF0000"..AL["Horde"]);
-	AtlasLootMenuItem_24_Icon:SetTexture("Interface\\Icons\\INV_Jewelry_FrostwolfTrinket_01");
-	AtlasLootMenuItem_24.lootpage="Frostwolf1";
-	AtlasLootMenuItem_24:Show();
-	--Gelkis Clan Centaur
-	AtlasLootMenuItem_18_Name:SetText(AL["Gelkis Clan Centaur"]);
-	AtlasLootMenuItem_18_Extra:SetText("");
-	AtlasLootMenuItem_18_Icon:SetTexture("Interface\\Icons\\INV_Misc_Head_Centaur_01");
-	AtlasLootMenuItem_18.lootpage="GelkisClan1";
-	AtlasLootMenuItem_18:Show();
-	--Hydraxian Waterlords
-	AtlasLootMenuItem_4_Name:SetText(AL["Hydraxian Waterlords"]);
-	AtlasLootMenuItem_4_Extra:SetText("");
-	AtlasLootMenuItem_4_Icon:SetTexture("Interface\\Icons\\Spell_Frost_SummonWaterElemental_2");
-	AtlasLootMenuItem_4.lootpage="WaterLords1";
-	AtlasLootMenuItem_4:Show();
-	--Magram Clan Centaur
-	AtlasLootMenuItem_19_Name:SetText(AL["Magram Clan Centaur"]);
-	AtlasLootMenuItem_19_Extra:SetText("");
-	AtlasLootMenuItem_19_Icon:SetTexture("Interface\\Icons\\INV_Misc_Head_Centaur_01");
-	AtlasLootMenuItem_19.lootpage="MagramClan1";
-	AtlasLootMenuItem_19:Show();
-	--Wildhammer Clan
-	AtlasLootMenuItem_8_Name:SetText(AL["Wildhammer Clan"]);
-	AtlasLootMenuItem_8_Extra:SetText("|cff2773ff"..AL["Alliance"]);
-	AtlasLootMenuItem_8_Icon:SetTexture("Interface\\Icons\\Ability_Hunter_EagleEye");
-	AtlasLootMenuItem_8.lootpage="Wildhammer";
-	AtlasLootMenuItem_8:Show();
-	--Stormpike Guard
-	AtlasLootMenuItem_9_Name:SetText(AL["Stormpike Guard"]);
-	AtlasLootMenuItem_9_Extra:SetText("|cff2773ff"..AL["Alliance"]);
-	AtlasLootMenuItem_9_Icon:SetTexture("Interface\\Icons\\INV_Jewelry_StormPikeTrinket_01");
-	AtlasLootMenuItem_9.lootpage="Stormpike1";
-	AtlasLootMenuItem_9:Show();
-	--Dalaran
-	AtlasLootMenuItem_10_Name:SetText(AL["Dalaran"]);
-	AtlasLootMenuItem_10_Extra:SetText("|cff2773ff"..AL["Alliance"]);
-	AtlasLootMenuItem_10_Icon:SetTexture("Interface\\Icons\\Spell_Holy_MagicalSentry");
-	AtlasLootMenuItem_10.lootpage="Dalaran";
-	AtlasLootMenuItem_10:Show();
-	--Thorium Brotherhood
-	AtlasLootMenuItem_5_Name:SetText(AL["Thorium Brotherhood"]);
-	AtlasLootMenuItem_5_Extra:SetText("");
-	AtlasLootMenuItem_5_Icon:SetTexture("Interface\\Icons\\INV_Ingot_Mithril");
-	AtlasLootMenuItem_5.lootpage="Thorium1";
-	AtlasLootMenuItem_5:Show();
-	--Timbermaw Hold
-	AtlasLootMenuItem_20_Name:SetText(AL["Timbermaw Hold"]);
-	AtlasLootMenuItem_20_Extra:SetText("");
-	AtlasLootMenuItem_20_Icon:SetTexture("Interface\\Icons\\INV_Misc_Horn_01");
-	AtlasLootMenuItem_20.lootpage="Timbermaw";
-	AtlasLootMenuItem_20:Show();
-	-- Shen'dralar
-	AtlasLootMenuItem_6_Name:SetText(AL["Shen'dralar"]);
-	AtlasLootMenuItem_6_Extra:SetText("");
-	AtlasLootMenuItem_6_Icon:SetTexture("Interface\\Icons\\INV_Misc_Book_04");
-	AtlasLootMenuItem_6.lootpage="Shendralar";
-	AtlasLootMenuItem_6:Show();
-	--The Wintersaber Trainers
-	AtlasLootMenuItem_7_Name:SetText(AL["Wintersaber Trainers"]);
-	AtlasLootMenuItem_7_Extra:SetText("|cff2773ff"..AL["Alliance"]);
-	AtlasLootMenuItem_7_Icon:SetTexture("Interface\\Icons\\Ability_Mount_PinkTiger");
-	AtlasLootMenuItem_7.lootpage="Wintersaber1";
-	AtlasLootMenuItem_7:Show();
-	--Zandalar Tribe
-	AtlasLootMenuItem_21_Name:SetText(AL["Zandalar Tribe"]);
-	AtlasLootMenuItem_21_Extra:SetText("");
-	AtlasLootMenuItem_21_Icon:SetTexture("Interface\\Icons\\INV_Misc_Coin_08");
-	AtlasLootMenuItem_21.lootpage="Zandalar1";
-	AtlasLootMenuItem_21:Show();
-	--Wardens of Time
-	AtlasLootMenuItem_22_Name:SetText(AL["Wardens of Time"]);
-	AtlasLootMenuItem_22_Extra:SetText("");
-	AtlasLootMenuItem_22_Icon:SetTexture("Interface\\Icons\\INV_Misc_Head_Dragon_Bronze");
-	AtlasLootMenuItem_22.lootpage="Wardens1";
-	AtlasLootMenuItem_22:Show();
-	--helf
-	AtlasLootMenuItem_11_Name:SetText(AL["Silvermoon Remnant"]);
-	AtlasLootMenuItem_11_Extra:SetText("|cff2773ff"..AL["Alliance"]);
-	AtlasLootMenuItem_11_Icon:SetTexture("Interface\\Icons\\inv_misc_tournaments_symbol_bloodelf");
-	AtlasLootMenuItem_11.lootpage="Helf";
-	AtlasLootMenuItem_11:Show();
-	--Darkspear Trolls
-	AtlasLootMenuItem_25_Name:SetText(AL["Darkspear Trolls"]);
-	AtlasLootMenuItem_25_Extra:SetText("|cffFF0000"..AL["Horde"]);
-	AtlasLootMenuItem_25_Icon:SetTexture("Interface\\Icons\\Racial_Troll_Berserk");
-	AtlasLootMenuItem_25.lootpage="DarkspearTrolls";
-	AtlasLootMenuItem_25:Show();
-	--raventusk
-	AtlasLootMenuItem_26_Name:SetText(AL["Revantusk Trolls"]);
-	AtlasLootMenuItem_26_Extra:SetText("|cffFF0000"..AL["Horde"]);
-	AtlasLootMenuItem_26_Icon:SetTexture("Interface\\Icons\\INV_Misc_Head_Troll_01");
-	AtlasLootMenuItem_26.lootpage="Revantusk";
-	AtlasLootMenuItem_26:Show();
-	--Ironforge
-	AtlasLootMenuItem_12_Name:SetText(AL["Ironforge"]);
-	AtlasLootMenuItem_12_Extra:SetText("|cff2773ff"..AL["Alliance"]);
-	AtlasLootMenuItem_12_Icon:SetTexture("Interface\\Icons\\Ability_Racial_Avatar");
-	AtlasLootMenuItem_12.lootpage="Ironforge";
-	AtlasLootMenuItem_12:Show();
-		--Darnassus
-	AtlasLootMenuItem_13_Name:SetText(AL["Darnassus"]);
-	AtlasLootMenuItem_13_Extra:SetText("|cff2773ff"..AL["Alliance"]);
-	AtlasLootMenuItem_13_Icon:SetTexture("Interface\\Icons\\Ability_Racial_ShadowMeld");
-	AtlasLootMenuItem_13.lootpage="Darnassus";
-	AtlasLootMenuItem_13:Show();
-		--Stormwind
-	AtlasLootMenuItem_14_Name:SetText(AL["Stormwind"]);
-	AtlasLootMenuItem_14_Extra:SetText("|cff2773ff"..AL["Alliance"]);
-	AtlasLootMenuItem_14_Icon:SetTexture("Interface\\Icons\\INV_BannerPVP_02");
-	AtlasLootMenuItem_14.lootpage="Stormwind";
-	AtlasLootMenuItem_14:Show();
-		--Gnomeregan Exiles
-	AtlasLootMenuItem_15_Name:SetText(AL["Gnomeregan Exiles"]);
-	AtlasLootMenuItem_15_Extra:SetText("|cff2773ff"..AL["Alliance"]);
-	AtlasLootMenuItem_15_Icon:SetTexture("Interface\\Icons\\INV_Gizmo_02");
-	AtlasLootMenuItem_15.lootpage="GnomereganExiles";
-	AtlasLootMenuItem_15:Show();
-		--Durotar Labor Union
-	AtlasLootMenuItem_27_Name:SetText(AL["Durotar Labor Union"]);
-	AtlasLootMenuItem_27_Extra:SetText("|cffFF0000"..AL["Horde"]);
-	AtlasLootMenuItem_27_Icon:SetTexture("Interface\\Icons\\INV_Misc_Coin_01");
-	AtlasLootMenuItem_27.lootpage="DurotarLaborUnion";
-	AtlasLootMenuItem_27:Show();
-		--Undercity
-	AtlasLootMenuItem_28_Name:SetText(AL["Undercity"]);
-	AtlasLootMenuItem_28_Extra:SetText("|cffFF0000"..AL["Horde"]);
-	AtlasLootMenuItem_28_Icon:SetTexture("Interface\\Icons\\Spell_Shadow_RaiseDead");
-	AtlasLootMenuItem_28.lootpage="Undercity";
-	AtlasLootMenuItem_28:Show();
-		--Orgrimmar
-	AtlasLootMenuItem_29_Name:SetText(AL["Orgrimmar"]);
-	AtlasLootMenuItem_29_Extra:SetText("|cffFF0000"..AL["Horde"]);
-	AtlasLootMenuItem_29_Icon:SetTexture("Interface\\Icons\\INV_BannerPVP_01");
-	AtlasLootMenuItem_29.lootpage="Orgrimmar";
-	AtlasLootMenuItem_29:Show();
-		--Thunder Bluff
-	AtlasLootMenuItem_30_Name:SetText(AL["Thunder Bluff"]);
-	AtlasLootMenuItem_30_Extra:SetText("|cffFF0000"..AL["Horde"]);
-	AtlasLootMenuItem_30_Icon:SetTexture("Interface\\Icons\\INV_Misc_Foot_Centaur");
-	AtlasLootMenuItem_30.lootpage="ThunderBluff";
-	AtlasLootMenuItem_30:Show();
+	if not ButtonsInfo1 then
+		ButtonsInfo1 = {
+			{ name = AL["Argent Dawn"], extra = "", lootpage = "Argent1", icon = "Interface\\Icons\\INV_Jewelry_Talisman_08" },
+			{ name = AL["Brood of Nozdormu"], extra = "", lootpage = "AQBroodRings", icon = "Interface\\Icons\\INV_Jewelry_Ring_40" },
+			{ name = AL["Darkmoon Faire"], extra = "", lootpage = "Darkmoon", icon = "Interface\\Icons\\INV_Misc_Ticket_Tarot_Maelstrom_01" },
+			{ name = AL["Hydraxian Waterlords"], extra = "", lootpage = "WaterLords1", icon = "Interface\\Icons\\Spell_Frost_SummonWaterElemental_2" },
+			{ name = AL["Thorium Brotherhood"], extra = "", lootpage = "Thorium1", icon = "Interface\\Icons\\INV_Ingot_Mithril" },
+			{ name = AL["Cenarion Circle"], extra = "", lootpage = "Cenarion1", icon = "Interface\\Icons\\Spell_Nature_HealingTouch" },
+			{ name = AL["Shen'dralar"], extra = "", lootpage = "Shendralar", icon = "Interface\\Icons\\INV_Misc_Book_04" },
+			{ name = AL["Draenei Exiles"], extra = "", lootpage = "DraeneiExiles", icon = "Interface\\Icons\\INV_Enchant_ShardGlowingLarge" },
+			{ name = AL["Bloodsail Buccaneers"], extra = "", lootpage = "Bloodsail1", icon = "Interface\\Icons\\INV_Helmet_66" },
+			{ name = AL["Zandalar Tribe"], extra = "", lootpage = "Zandalar1", icon = "Interface\\Icons\\INV_Misc_Coin_08" },
+			{ name = AL["Timbermaw Hold"], extra = "", lootpage = "Timbermaw", icon = "Interface\\Icons\\INV_Misc_Horn_01" },
+			{ name = AL["Wardens of Time"], extra = "", lootpage = "Wardens1", icon = "Interface\\Icons\\INV_Misc_Head_Dragon_Bronze" },
+			{ name = AL["Gelkis Clan Centaur"], extra = "", lootpage = "GelkisClan1", icon = "Interface\\Icons\\INV_Misc_Head_Centaur_01" },
+			{ name = AL["Magram Clan Centaur"], extra = "", lootpage = "MagramClan1", icon = "Interface\\Icons\\INV_Misc_Head_Centaur_01" },
+			{},
+			{ name = AL["Stormwind"], extra = BLUE..AL["Alliance"], lootpage = "Stormwind", icon = "Interface\\Icons\\race_human"--[[INV_BannerPVP_02]] },
+			{ name = AL["Ironforge"], extra = BLUE..AL["Alliance"], lootpage = "Ironforge", icon = "Interface\\Icons\\race_dwarf"--[[Ability_Racial_Avatar]] },
+			{ name = AL["Gnomeregan Exiles"], extra = BLUE..AL["Alliance"], lootpage = "GnomereganExiles", icon = "Interface\\Icons\\race_gnome"--[[INV_Gizmo_02]] },
+			{ name = AL["Darnassus"], extra = BLUE..AL["Alliance"], lootpage = "Darnassus", icon = "Interface\\Icons\\race_night_elf"--[[Ability_Racial_ShadowMeld]] },
+			{ name = AL["Silvermoon Remnant"], extra = BLUE..AL["Alliance"], lootpage = "Helf", icon = "Interface\\Icons\\race_high_elf"--[[inv_misc_tournaments_symbol_bloodelf]] },
+			{ name = AL["Dalaran"], extra = BLUE..AL["Alliance"], lootpage = "Dalaran", icon = "Interface\\Icons\\Spell_Holy_MagicalSentry" },
+			{ name = AL["Wintersaber Trainers"], extra = BLUE..AL["Alliance"], lootpage = "Wintersaber1", icon = "Interface\\Icons\\Ability_Mount_PinkTiger" },
+			{ name = AL["Wildhammer Clan"], extra = BLUE..AL["Alliance"], lootpage = "Wildhammer", icon = "Interface\\Icons\\Ability_Hunter_EagleEye" },
+			{ name = AL["Orgrimmar"], extra = RED..AL["Horde"], lootpage = "Orgrimmar", icon = "Interface\\Icons\\race_orc"--[[INV_BannerPVP_01]] },
+			{ name = AL["Darkspear Trolls"], extra = RED..AL["Horde"], lootpage = "DarkspearTrolls", icon = "Interface\\Icons\\race_troll"--[[Racial_Troll_Berserk]] },
+			{ name = AL["Thunder Bluff"], extra = RED..AL["Horde"], lootpage = "ThunderBluff", icon = "Interface\\Icons\\race_tauren"--[[INV_Misc_Foot_Centaur]] },
+			{ name = AL["Undercity"], extra = RED..AL["Horde"], lootpage = "Undercity", icon = "Interface\\Icons\\race_forsaken"--[[Spell_Shadow_RaiseDead]] },
+			{ name = AL["Durotar Labor Union"], extra = RED..AL["Horde"], lootpage = "DurotarLaborUnion", icon = "Interface\\Icons\\race_goblin"--[[INV_Misc_Coin_01]] },
+			{ name = AL["Revantusk Trolls"], extra = RED..AL["Horde"], lootpage = "Revantusk", icon = "Interface\\Icons\\INV_Misc_Head_Troll_01" },
+			{ name = AL["Earthen Ring"], extra = RED..AL["Horde"], lootpage = "EarthenRing", icon = "Interface\\Icons\\Spell_Nature_EarthShock" },
+		}
+	end
+	for i = 1, min(buttonsPerPage, getn(ButtonsInfo1)) do
+		if ButtonsInfo1[i].name then
+			_G["AtlasLootMenuItem_"..i.."_Name"]:SetText(ButtonsInfo1[i].name)
+			_G["AtlasLootMenuItem_"..i.."_Extra"]:SetText(ButtonsInfo1[i].extra)
+			_G["AtlasLootMenuItem_"..i.."_Icon"]:SetTexture(ButtonsInfo1[i].icon)
+			_G["AtlasLootMenuItem_"..i].lootpage = ButtonsInfo1[i].lootpage
+			_G["AtlasLootMenuItem_"..i]:Show()
+		end
+	end
 end

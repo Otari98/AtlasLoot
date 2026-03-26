@@ -839,6 +839,8 @@ AtlasLoot_TableNames = {
 	["Dalaran"] = { AL["Dalaran"], "AtlasLootRepItems" },
 	["Wildhammer"] = { AL["Wildhammer Clan"], "AtlasLootRepItems" },
 	["Shendralar"] = { AL["Shen'dralar"], "AtlasLootRepItems" },
+	["EarthenRing"] = { AL["Earthen Ring"], "AtlasLootRepItems" },
+	["DraeneiExiles"] = { AL["Draenei Exiles"], "AtlasLootRepItems" },
 	--------------
 	--- Trades ---
 	--------------
@@ -1979,6 +1981,8 @@ AtlasLoot_TableNamesBoss = {
 	--- Classic Factions ---
 	------------------------
 	["Factions"] = {
+		["EarthenRing"] = { AL["Earthen Ring"], "AtlasLootRepItems" },
+		["DraeneiExiles"] = { AL["Draenei Exiles"], "AtlasLootRepItems" },
 		--Argent Dawn
 		["Argent1"] = { AL["Argent Dawn"] .. ": "..AL["Token Hand-Ins"], "AtlasLootRepItems" },
 		["Argent2"] = { AL["Argent Dawn"], "AtlasLootRepItems" },

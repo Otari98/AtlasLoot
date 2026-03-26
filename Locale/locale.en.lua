@@ -16,6 +16,9 @@ AL:EnableDebugging();
 AL:EnableDynamicLocales();
 
 AL:RegisterTranslations("enUS", function() return {
+	["Earthen Ring"] = true,
+	["Draenei Exiles"] = true,
+
 	["Frostmane Hollow"] = true,
 	["Tan'sha the Sleek"] = true,
 	["Handler Oboka"] = true,

@@ -3021,6 +3021,14 @@ AtlasLoot_ButtonRegistry = {
 	};
 
 	-- Factions
+	["EarthenRing"] = {
+		Title = AL["Earthen Ring"],
+		Back_Page = "REPMENU",
+	};
+	["DraeneiExiles"] = {
+		Title = AL["Draenei Exiles"],
+		Back_Page = "REPMENU",
+	};
 	["Argent1"] = {
 		Title = AL["Argent Dawn"] .. ": " .. AL["Token Hand-Ins"];
 		Next_Page = "Argent2";

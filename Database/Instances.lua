@@ -2113,6 +2113,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 	};
 	Axelus = {
 		{ 33087, "INV_Misc_Book_07", "=q4=Libram of Ardour", "#s16#, #e18# =q16=#c4#", "19.64%" },
+		{ 33089, "INV_Staff_20", "=q4=Totem of Thundercall", "#s16#, #e17# =q15=#c7#", "19.64%" },
 		{ 33098, "Inv_weapon_shortblade_23", "=q4=Idol of Equilibrium", "#s16#, #e16# =q13=#c1#", "9.09%" },
 		{ 33154, "ring_of_burning_talons_2", "=q4=Ring of Burning Talons", "#s13#", "18.86%" },
 		{ 33149, "battle_standard_of_the_broodcommander_2", "=q4=Battle Standard of the Broodcommander", "#s14#", "19.06%" },
