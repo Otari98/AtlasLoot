@@ -5039,13 +5039,31 @@ AtlasLoot_ButtonRegistry = {
 	};
 
 	-- Survival
-	["Survival1"] = {
-		Title = AL["Survival"];
-		Back_Page = "CRAFTINGMENU";
+	["SurvivalApprentice1"] = {
+		Title = AL["Survival"] .. ": " .. AL["Apprentice"],
+		Next_Page = "SurvivalJourneyman1",
+		Back_Page = "CRAFTINGMENU",
+	};
+	["SurvivalJourneyman1"] = {
+		Title = AL["Survival"] .. ": " .. AL["Journeyman"],
+		Prev_Page = "SurvivalApprentice1";
+		Next_Page = "SurvivalExpert1",
+		Back_Page = "CRAFTINGMENU",
+	};
+	["SurvivalExpert1"] = {
+		Title = AL["Survival"] .. ": " .. AL["Expert"],
+		Prev_Page = "SurvivalJourneyman1";
+		Next_Page = "SurvivalArtisan1",
+		Back_Page = "CRAFTINGMENU",
+	};
+	["SurvivalArtisan1"] = {
+		Title = AL["Survival"] .. ": " .. AL["Artisan"],
+		Prev_Page = "SurvivalExpert1";
+		Back_Page = "CRAFTINGMENU",
 	};
 
 	-- Gardening
-	["Survival2"] = {
+	["Gardening1"] = {
 		Title = AL["Gardening"];
 		Back_Page = "CRAFTINGMENU";
 	};

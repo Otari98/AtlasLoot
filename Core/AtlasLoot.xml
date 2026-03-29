@@ -457,7 +457,7 @@
 					</Anchors>
 				</Texture>
 				<FontString name="$parent_Quantity" font="Fonts\ARIALN.TTF" outline="NORMAL" justifyH="RIGHT">
-					<Size x="25" y="14"/>
+					<Size x="30" y="14"/>
 					<FontHeight val="12"/>
 					<Anchors>
 						<Anchor point="BOTTOMRIGHT" relativeTo="$parent_Icon" relativePoint="BOTTOMRIGHT">

@@ -1016,8 +1016,11 @@ AtlasLoot_TableNames = {
 	--FirstAid
 	["FirstAid1"] = { AL["First Aid"], "AtlasLootCrafting" },
 	--Survival
-	["Survival1"] = { AL["Survival"], "AtlasLootCrafting" },
-	["Survival2"] = { AL["Gardening"], "AtlasLootCrafting" },
+	["SurvivalApprentice1"] = { AL["Survival"], "AtlasLootCrafting" },
+	["SurvivalJourneyman1"] = { AL["Survival"], "AtlasLootCrafting" },
+	["SurvivalExpert1"] = { AL["Survival"], "AtlasLootCrafting" },
+	["SurvivalArtisan1"] = { AL["Survival"], "AtlasLootCrafting" },
+	["Gardening1"] = { AL["Gardening"], "AtlasLootCrafting" },
 	--Poisons
 	["Poisons1"] = { AL["Rogue"] .. " - " .. AL["Poisons"], "AtlasLootCrafting" },
 	-----------
@@ -2223,8 +2226,11 @@ AtlasLoot_TableNamesBoss = {
 		--FirstAid
 		["FirstAid1"] = { AL["First Aid"], "AtlasLootCrafting" },
 		--Survival
-		["Survival1"] = { AL["Survival"], "AtlasLootCrafting" },
-		["Survival2"] = { AL["Gardening"], "AtlasLootCrafting" },
+		["SurvivalApprentice1"] = { AL["Survival"], "AtlasLootCrafting" },
+		["SurvivalJourneyman1"] = { AL["Survival"], "AtlasLootCrafting" },
+		["SurvivalExpert1"] = { AL["Survival"], "AtlasLootCrafting" },
+		["SurvivalArtisan1"] = { AL["Survival"], "AtlasLootCrafting" },
+		["Gardening1"] = { AL["Gardening"], "AtlasLootCrafting" },
 		--Poisons
 		["Poisons1"] = { AL["Rogue"] .. ": " .. AL["Poisons"], "AtlasLootCrafting" },
 	},

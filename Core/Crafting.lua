@@ -1,5 +1,8 @@
 local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
-
+local _G = getfenv(0)
+local buttonsPerPage = 30
+local ButtonsInfo1
+local ButtonsInfo2
 local RED = "|cffff0000";
 local ORANGE = "|cffFF8400";
 local WHITE = "|cffFFFFFF";
@@ -8,102 +11,36 @@ function AtlasLoot_CraftingMenu()
 	AtlasLoot_PrepMenu(nil, AL["Crafting"])
 	AtlasLootCharDB.LastBoss = "CRAFTINGMENU"
 	AtlasLootCharDB.LastBossText = AL["Crafting"]
-	--Alchemy
-	AtlasLootMenuItem_1_Name:SetText(AL["Alchemy"]);
-	AtlasLootMenuItem_1_Extra:SetText("");
-	AtlasLootMenuItem_1_Icon:SetTexture("Interface\\Icons\\Trade_Alchemy");
-	AtlasLootMenuItem_1.lootpage="ALCHEMYMENU";
-	AtlasLootMenuItem_1:Show();
-	--Enchanting
-	AtlasLootMenuItem_2_Name:SetText(AL["Enchanting"]);
-	AtlasLootMenuItem_2_Extra:SetText("");
-	AtlasLootMenuItem_2_Icon:SetTexture("Interface\\Icons\\Trade_Engraving");
-	AtlasLootMenuItem_2.lootpage="ENCHANTINGMENU";
-	AtlasLootMenuItem_2:Show();
-	--Engineering
-	AtlasLootMenuItem_3_Name:SetText(AL["Engineering"]);
-	AtlasLootMenuItem_3_Extra:SetText("");
-	AtlasLootMenuItem_3_Icon:SetTexture("Interface\\Icons\\Trade_Engineering");
-	AtlasLootMenuItem_3.lootpage="ENGINEERINGMENU";
-	AtlasLootMenuItem_3:Show();
-	--Leatherworking
-	AtlasLootMenuItem_4_Name:SetText(AL["Leatherworking"]);
-	AtlasLootMenuItem_4_Extra:SetText("");
-	AtlasLootMenuItem_4_Icon:SetTexture("Interface\\Icons\\INV_Misc_ArmorKit_17");
-	AtlasLootMenuItem_4.lootpage="LEATHERWORKINGMENU";
-	AtlasLootMenuItem_4:Show();
-	--Blacksmithing
-	AtlasLootMenuItem_5_Name:SetText(AL["Blacksmithing"]);
-	AtlasLootMenuItem_5_Extra:SetText("");
-	AtlasLootMenuItem_5_Icon:SetTexture("Interface\\Icons\\Trade_BlackSmithing");
-	AtlasLootMenuItem_5.lootpage="SMITHINGMENU";
-	AtlasLootMenuItem_5:Show();
-	--Tailoring
-	AtlasLootMenuItem_6_Name:SetText(AL["Tailoring"]);
-	AtlasLootMenuItem_6_Extra:SetText("");
-	AtlasLootMenuItem_6_Icon:SetTexture("Interface\\Icons\\Trade_Tailoring");
-	AtlasLootMenuItem_6.lootpage="TAILORINGMENU";
-	AtlasLootMenuItem_6:Show();
-	--Jewelcrafting
-	AtlasLootMenuItem_7_Name:SetText(AL["Jewelcrafting"]);
-	AtlasLootMenuItem_7_Extra:SetText("");
-	AtlasLootMenuItem_7_Icon:SetTexture("Interface\\Icons\\INV_Jewelry_Necklace_01");
-	AtlasLootMenuItem_7.lootpage="JEWELCRAFTMENU";
-	AtlasLootMenuItem_7:Show();
-	--Herbalism
-	AtlasLootMenuItem_8_Name:SetText(AL["Herbalism"]);
-	AtlasLootMenuItem_8_Extra:SetText("");
-	AtlasLootMenuItem_8_Icon:SetTexture("Interface\\Icons\\Trade_Herbalism");
-	AtlasLootMenuItem_8.lootpage="Herbalism1";
-	AtlasLootMenuItem_8:Show();
-	--Mining
-	AtlasLootMenuItem_9_Name:SetText(AL["Mining"]);
-	AtlasLootMenuItem_9_Extra:SetText("");
-	AtlasLootMenuItem_9_Icon:SetTexture("Interface\\Icons\\Trade_Mining");
-	AtlasLootMenuItem_9.lootpage="Mining1";
-	AtlasLootMenuItem_9:Show();
-	--Cooking
-	AtlasLootMenuItem_11_Name:SetText(AL["Cooking"]);
-	AtlasLootMenuItem_11_Extra:SetText("");
-	AtlasLootMenuItem_11_Icon:SetTexture("Interface\\Icons\\INV_Misc_Food_15");
-	AtlasLootMenuItem_11.lootpage="CookingApprentice1";
-	AtlasLootMenuItem_11:Show();
-	--First Aid
-	AtlasLootMenuItem_12_Name:SetText(AL["First Aid"]);
-	AtlasLootMenuItem_12_Extra:SetText("");
-	AtlasLootMenuItem_12_Icon:SetTexture("Interface\\Icons\\Spell_Holy_SealOfSacrifice");
-	AtlasLootMenuItem_12.lootpage="FirstAid1";
-	AtlasLootMenuItem_12:Show();
-	--Survival
-	AtlasLootMenuItem_13_Name:SetText(AL["Survival"]);
-	AtlasLootMenuItem_13_Extra:SetText("");
-	AtlasLootMenuItem_13_Icon:SetTexture("Interface\\Icons\\Trade_Survival");
-	AtlasLootMenuItem_13.lootpage="Survival1";
-	AtlasLootMenuItem_13:Show();
-	--Gardening
-	AtlasLootMenuItem_14_Name:SetText(AL["Gardening"]);
-	AtlasLootMenuItem_14_Extra:SetText("");
-	AtlasLootMenuItem_14_Icon:SetTexture("Interface\\Icons\\Trade_Herbalism");
-	AtlasLootMenuItem_14.lootpage="Survival2";
-	AtlasLootMenuItem_14:Show();
-	--Poisons
-	AtlasLootMenuItem_15_Name:SetText(AL["Poisons"]);
-	AtlasLootMenuItem_15_Extra:SetText("|cfffff468"..AL["Rogue"]);
-	AtlasLootMenuItem_15_Icon:SetTexture("Interface\\Icons\\Trade_BrewPoison");
-	AtlasLootMenuItem_15.lootpage="Poisons1";
-	AtlasLootMenuItem_15:Show();
-	--Crafted Armor Sets
-	AtlasLootMenuItem_16_Name:SetText(AL["Crafted Sets"]);
-	AtlasLootMenuItem_16_Extra:SetText("");
-	AtlasLootMenuItem_16_Icon:SetTexture("Interface\\Icons\\INV_Pants_Wolf");
-	AtlasLootMenuItem_16.lootpage="CRAFTSET";
-	AtlasLootMenuItem_16:Show();
-	--Crafted Epic Weapons
-	AtlasLootMenuItem_18_Name:SetText(AL["Crafted Epic Weapons"]);
-	AtlasLootMenuItem_18_Extra:SetText("");
-	AtlasLootMenuItem_18_Icon:SetTexture("Interface\\Icons\\INV_Hammer_Unique_Sulfuras");
-	AtlasLootMenuItem_18.lootpage="CraftedWeapons1";
-	AtlasLootMenuItem_18:Show();
+	if not ButtonsInfo1 then
+		ButtonsInfo1 = {
+			{ name = AL["Alchemy"], lootpage = "ALCHEMYMENU", icon = "Interface\\Icons\\Trade_Alchemy" },
+			{ name = AL["Enchanting"], lootpage = "ENCHANTINGMENU", icon = "Interface\\Icons\\Trade_Engraving" },
+			{ name = AL["Engineering"], lootpage = "ENGINEERINGMENU", icon = "Interface\\Icons\\Trade_Engineering" },
+			{ name = AL["Leatherworking"], lootpage = "LEATHERWORKINGMENU", icon = "Interface\\Icons\\INV_Misc_ArmorKit_17" },
+			{ name = AL["Blacksmithing"], lootpage = "SMITHINGMENU", icon = "Interface\\Icons\\Trade_BlackSmithing" },
+			{ name = AL["Tailoring"], lootpage = "TAILORINGMENU", icon = "Interface\\Icons\\Trade_Tailoring" },
+			{ name = AL["Jewelcrafting"], lootpage = "JEWELCRAFTMENU", icon = "Interface\\Icons\\INV_Jewelry_Necklace_01" },
+			{ name = AL["Herbalism"], lootpage = "Herbalism1", icon = "Interface\\Icons\\Trade_Herbalism" },
+			{ name = AL["Mining"], lootpage = "Mining1", icon = "Interface\\Icons\\Trade_Mining" },
+			{ },
+			{ name = AL["Cooking"], lootpage = "CookingApprentice1", icon = "Interface\\Icons\\INV_Misc_Food_15" },
+			{ name = AL["First Aid"], lootpage = "FirstAid1", icon = "Interface\\Icons\\Spell_Holy_SealOfSacrifice" },
+			{ name = AL["Survival"], lootpage = "SurvivalApprentice1", icon = "Interface\\Icons\\Trade_Survival" },
+			{ name = AL["Gardening"], lootpage = "Gardening1", icon = "Interface\\Icons\\Trade_Herbalism" },
+			{ name = AL["Poisons"], lootpage = "Poisons1", icon = "Interface\\Icons\\Trade_BrewPoison" },
+			{ name = AL["Crafted Sets"], lootpage = "CRAFTSET", icon = "Interface\\Icons\\INV_Pants_Wolf" },
+			{ name = AL["Crafted Epic Weapons"], lootpage = "CraftedWeapons1", icon = "Interface\\Icons\\INV_Hammer_Unique_Sulfuras" },
+		}
+	end
+	for i = 1, min(buttonsPerPage, getn(ButtonsInfo1)) do
+		if ButtonsInfo1[i].name then
+			_G["AtlasLootMenuItem_"..i.."_Name"]:SetText(ButtonsInfo1[i].name)
+			_G["AtlasLootMenuItem_"..i.."_Extra"]:SetText(ButtonsInfo1[i].extra)
+			_G["AtlasLootMenuItem_"..i.."_Icon"]:SetTexture(ButtonsInfo1[i].icon)
+			_G["AtlasLootMenuItem_"..i].lootpage = ButtonsInfo1[i].lootpage
+			_G["AtlasLootMenuItem_"..i]:Show()
+		end
+	end
 end
 
 function AtlasLootCraftedSetMenu()
