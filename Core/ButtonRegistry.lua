@@ -11,6 +11,66 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "DUNGEONSMENU1";
 	};
 
+	-- Timbermaw Hold
+	["TMHKarrsh"] = {
+		Title = AL["Karrsh the Sentinel"],
+		Next_Page = "TMHRotgrowl",
+		Back_Page = "DUNGEONSMENU2"
+	};
+	["TMHRotgrowl"] = {
+		Title = AL["Rotgrowl"],
+		Prev_Page = "TMHKarrsh",
+		Next_Page = "TMHLoktanag",
+		Back_Page = "DUNGEONSMENU2"
+	};
+	["TMHLoktanag"] = {
+		Title = AL["Loktanag the Vile"],
+		Prev_Page = "TMHRotgrowl",
+		Next_Page = "TMHOrmanos",
+		Back_Page = "DUNGEONSMENU2"
+	};
+	["TMHOrmanos"] = {
+		Title = AL["Ormanos the Cracked"],
+		Prev_Page = "TMHLoktanag",
+		Next_Page = "TMHPartath",
+		Back_Page = "DUNGEONSMENU2"
+	};
+	["TMHPartath"] = {
+		Title = AL["Chieftain Partath"],
+		Prev_Page = "TMHOrmanos",
+		Next_Page = "TMHKronn",
+		Back_Page = "DUNGEONSMENU2"
+	};
+	["TMHKronn"] = {
+		Title = AL["Archdruid Kronn"],
+		Prev_Page = "TMHPartath",
+		Next_Page = "TMHSelenaxx",
+		Back_Page = "DUNGEONSMENU2"
+	};
+	["TMHSelenaxx"] = {
+		Title = AL["Selenaxx Foulheart"],
+		Prev_Page = "TMHKronn",
+		Next_Page = "TMHTrioch",
+		Back_Page = "DUNGEONSMENU2"
+	};
+	["TMHTrioch"] = {
+		Title = AL["Trioch the Devourer"],
+		Prev_Page = "TMHSelenaxx",
+		Next_Page = "TMHUrsol",
+		Back_Page = "DUNGEONSMENU2"
+	};
+	["TMHUrsol"] = {
+		Title = AL["Ursol"],
+		Prev_Page = "TMHTrioch",
+		Next_Page = "TMHPerotharn",
+		Back_Page = "DUNGEONSMENU2"
+	};
+	["TMHPerotharn"] = {
+		Title = AL["Peroth'arn"],
+		Prev_Page = "TMHUrsol",
+		Back_Page = "DUNGEONSMENU2"
+	};
+
 	-- Frostmane Hollow
 	["FMHTansha"] = {
 		Title = AL["Tan'sha the Sleek"],

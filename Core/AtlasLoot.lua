@@ -162,6 +162,7 @@ AtlasLoot_HewdropDown = {
 			{{ RED.."[RAID]|r "..AL["Lower Karazhan Halls"], "LowerKara", "Submenu" },},
 			{{ RED.."[RAID]|r "..AL["Blackwing Lair"], "BlackwingLair", "Submenu" },},
 			{{ RED.."[RAID]|r "..AL["Emerald Sanctum"], "EmeraldSanctum", "Submenu" },},
+			{{ RED.."[RAID]|r "..AL["Timbermaw Hold"], "TimbermawHold", "Submenu" },},
 			{{ RED.."[RAID]|r "..AL["Temple of Ahn'Qiraj"], "TempleofAQ", "Submenu" },},
 			{{ RED.."[RAID]|r "..AL["Naxxramas"], "Naxxramas", "Submenu" },},
             {{ RED.."[RAID]|r "..AL["Upper Karazhan Halls"], "UpperKara", "Submenu" },},
@@ -288,6 +289,18 @@ AtlasLoot_HewdropDown_SubTables = {
 		{ AL["Kan'za the Seer"], "FMHKanza" },
 		{ AL["Battlemaster Ubukaz"], "FMHBattlemaster" },
 		{ AL["Hailar the Frigid"], "FMHHailar" },
+	},
+	["TimbermawHold"] = {
+		{ AL["Karrsh the Sentinel"], "TMHKarrsh" },
+		{ AL["Rotgrowl"], "TMHRotgrowl" },
+		{ AL["Loktanag the Vile"], "TMHLoktanag" },
+		{ AL["Ormanos the Cracked"], "TMHOrmanos" },
+		{ AL["Chieftain Partath"], "TMHPartath" },
+		{ AL["Archdruid Kronn"], "TMHKronn" },
+		{ AL["Selenaxx Foulheart"], "TMHSelenaxx" },
+		{ AL["Trioch the Devourer"], "TMHTrioch" },
+		{ AL["Ursol"], "TMHUrsol" },
+		{ AL["Peroth'arn"], "TMHPerotharn" },
 	},
 	["WindhornCanyon"] = {
 		{ AL["Pathun Duskhide"], "WHCPathun" },
@@ -1584,6 +1597,7 @@ function AtlasLootItemsFrame_OnUpdate()
 	for item in pairs(this.queue) do
 		if not GetItemInfo(item) then
 			done = false
+			break
 		end
 	end
 	if ( done or this.refreshTime <= 0 ) then

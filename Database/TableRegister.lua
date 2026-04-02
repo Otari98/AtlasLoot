@@ -12,6 +12,17 @@ local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
 AtlasLoot_TableNames = {
 	--Keys
 	["VanillaKeys"] = { AL["Keys"], "AtlasLootItems" },
+	-- Timbermaw Hold
+	["TMHKarrsh"] = { AL["Timbermaw Hold"].." - "..AL["Karrsh the Sentinel"], "AtlasLootItems" },
+	["TMHRotgrowl"] = { AL["Timbermaw Hold"].." - "..AL["Rotgrowl"], "AtlasLootItems" },
+	["TMHLoktanag"] = { AL["Timbermaw Hold"].." - "..AL["Loktanag the Vile"], "AtlasLootItems" },
+	["TMHOrmanos"] = { AL["Timbermaw Hold"].." - "..AL["Ormanos the Cracked"], "AtlasLootItems" },
+	["TMHPartath"] = { AL["Timbermaw Hold"].." - "..AL["Chieftain Partath"], "AtlasLootItems" },
+	["TMHKronn"] = { AL["Timbermaw Hold"].." - "..AL["Archdruid Kronn"], "AtlasLootItems" },
+	["TMHSelenaxx"] = { AL["Timbermaw Hold"].." - "..AL["Selenaxx Foulheart"], "AtlasLootItems" },
+	["TMHTrioch"] = { AL["Timbermaw Hold"].." - "..AL["Trioch the Devourer"], "AtlasLootItems" },
+	["TMHUrsol"] = { AL["Timbermaw Hold"].." - "..AL["Ursol"], "AtlasLootItems" },
+	["TMHPerotharn"] = { AL["Timbermaw Hold"].." - "..AL["Peroth'arn"], "AtlasLootItems" },
 	-- Frostmane Hollow
 	["FMHTansha"] = { AL["Frostmane Hollow"].." - "..AL["Tan'sha the Sleek"], "AtlasLootItems" },
 	["FMHKanza"] = { AL["Frostmane Hollow"].." - "..AL["Kan'za the Seer"], "AtlasLootItems" },
@@ -1126,6 +1137,18 @@ AtlasLoot_TableNames = {
 AtlasLoot_TableNamesBoss = {
 	["Keys"] = {
 		["VanillaKeys"] = { AL["Keys"], "AtlasLootItems" },
+	},
+	["Timbermaw Hold"] = {
+		["TMHKarrsh"] = { AL["Karrsh the Sentinel"], "AtlasLootItems" },
+		["TMHRotgrowl"] = { AL["Rotgrowl"], "AtlasLootItems" },
+		["TMHLoktanag"] = { AL["Loktanag the Vile"], "AtlasLootItems" },
+		["TMHOrmanos"] = { AL["Ormanos the Cracked"], "AtlasLootItems" },
+		["TMHPartath"] = { AL["Chieftain Partath"], "AtlasLootItems" },
+		["TMHKronn"] = { AL["Archdruid Kronn"], "AtlasLootItems" },
+		["TMHSelenaxx"] = { AL["Selenaxx Foulheart"], "AtlasLootItems" },
+		["TMHTrioch"] = { AL["Trioch the Devourer"], "AtlasLootItems" },
+		["TMHUrsol"] = { AL["Ursol"], "AtlasLootItems" },
+		["TMHPerotharn"] = { AL["Peroth'arn"], "AtlasLootItems" },
 	},
 	["Frostmane Hollow"] = {
 		["FMHTansha"] = { AL["Tan'sha the Sleek"], "AtlasLootItems" },

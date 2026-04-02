@@ -22,6 +22,20 @@ AtlasLootBossButtons = {
 		"WHCProphet",     -- 6) Prophet Stormhoof
 		"WHCChieftan",    -- 7) Chieftain Shalk Blackwind
 	};
+	TimbermawHold = {
+		"",               -- A) Entrance
+		"",               -- B) Entrance
+		"TMHKarrsh",      -- 1) Karrsh the Sentinel
+		"TMHRotgrowl",    -- 2) Rotgrowl
+		"TMHLoktanag",    -- 3) Loktanag the Vile
+		"TMHOrmanos",     -- 4) Ormanos the Cracked
+		"TMHPartath",     -- 5) Chieftain Partath
+		"TMHKronn",       -- 6) Archdruid Kronn
+		"TMHSelenaxx",    -- 7) Selenaxx Foulheart
+		"TMHTrioch",      -- 8) Trioch the Devourer
+		"TMHUrsol",       -- 9) Ursol
+		"TMHPerotharn",   --    Peroth'arn
+	};
 	BlackfathomDeeps = {
 		"";
 		"BFDGhamoora";
@@ -1118,7 +1132,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 	-- Windhorn Canyon
 	WHCPathun = {
 		{ 33027, "INV_Misc_Horn_01", "=q3=Huntsman's Halfhorn", "#s14#", "25.35%" },
-		{ 33025, "INV_Weapon_Bow_05", "=q2=Blackwind Striker", "#w2#, #w2#", "25.23%" },
+		{ 33025, "INV_Weapon_Bow_05", "=q2=Blackwind Striker", "#w2#", "25.23%" },
 		{ 33026, "INV_Shoulder_04", "=q2=Sacred Windhorn Shoulders", "#s3#, #a1#", "24.26%" },
 		{ 33028, "INV_Axe_01", "=q2=Hatchet of the Long Hunt", "#h1#, #w1#", "25.16%" },
 		{ 0, "", "", "" },
@@ -8538,5 +8552,230 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 58301, "Spell_Shadow_AntiShadow", "=q3=Shadowbind Sigil", "#s14#", "0.0125%" },
 		{ 58131, "INV_Belt_12", "=q2=Stormreaver Belt", "#s10#, #a1#", "0.11%" },
 		{ 58178, "INV_Boots_05", "=q2=Stormreaver Boots", "#s12#, #a1#", "0.11%" },
+	};
+	-- Timbermaw Hold
+	TMHKarrsh = {
+		{ 33346, "INV_Helmet_05", "=q4=Ursa's Rampage", "#s1#, #a4#", "12.14%" },
+		{ 33345, "INV_Boots_08", "=q4=Treads of the Pathfinder", "#s12#, #a2#", "12.57%" },
+		{ 33241, "INV_Chest_Plate07", "=q4=Bramblehide Breastplate", "#s5#, #a2#", "15.76%" },
+		{ 33242, "INV_WEAPON_HAND_06", "=q4=Claw of Reckless Abandon", "#h3#, #w13#", "17.57%" },
+		{ 33237, "INV_Boots_05", "=q3=Timbermaw Defenders", "#s12#, #a4#", "16.43%" },
+		{ 33238, "INV_Jewelry_Necklace_04", "=q3=Karrsh's Memento", "#s2#", "16.84%" },
+		{ 33239, "INV_Jewelry_Necklace_04", "=q3=Weaponmaster's Gauntlets", "#s9#, #a3#", "17.16%" },
+		{ 33240, "INV_Gauntlets_05", "=q3=Furbolg Medicine Handwraps", "#s9#, #a1#", "16.24%" },
+		{ 33333, "INV_Bracer_10", "=q3=Furbolg Medicine Wristwraps", "#s8#, #a1#", "12.48%" },
+		{ 33334, "INV_Gauntlets_21", "=q3=Timbermaw Protectors", "#s9#, #a4#", "12.9%" },
+		{ 33341, "INV_Jewelry_Necklace_43", "=q3=Pendant of Relentless Assault", "#s2#", "12.74%" },
+		{ 33342, "INV_Pants_14", "=q3=Legguards of the Den Watcher", "#s11#, #a3#", "11.94%" },
+		{ 33343, "INV_Helmet_04", "=q3=Earth Warder's Visage", "#s1#, #a1#", "12.87%" },
+		{ 33344, "INV_Bracer_12", "=q3=Moonblessed Bracers", "#s8#, #a2#", "12.36%" },
+		{ 0, "", "", "" },
+		{ 42170, "INV_Jewelry_Necklace_19", "=q1=Pendant of the Sentinel", "#m3#", "100%" },
+	};
+	TMHRotgrowl = {
+		{ 33346, "INV_Helmet_05", "=q4=Ursa's Rampage", "#s1#, #a4#", "12.61%" },
+		{ 33345, "INV_Boots_08", "=q4=Treads of the Pathfinder", "#s12#, #a2#", "12.32%" },
+		{ 33247, "INV_Axe_34", "=q4=Denrender, Hatchet of the Subterranean Hunter", "#h1#, #w1#", "16.52%" },
+		{ 33248, "Spell_Nature_AgitatingTotem", "=q4=Fetish of the Endless Bond", "#s14#", "17.02%" },
+		{ 33243, "INV_Bracer_05", "=q3=Relentless Tracker's Wristguards", "#s8#, #a3#", "16.84%" },
+		{ 33244, "INV_Misc_Bandage_15", "=q3=Kodiak's Collar", "#s14#", "16.2%" },
+		{ 33245, "INV_Belt_25", "=q3=Tealeaf Waistwrap", "#s10#, #a2#", "17.13%" },
+		{ 33246, "INV_Wand_05", "=q3=Twig of Untamed Magics", "#w12#", "16.29%" },
+		{ 33333, "INV_Bracer_10", "=q3=Furbolg Medicine Wristwraps", "#s8#, #a1#", "12.17%" },
+		{ 33334, "INV_Gauntlets_21", "=q3=Timbermaw Protectors", "#s9#, #a4#", "12.78%" },
+		{ 33341, "INV_Jewelry_Necklace_43", "=q3=Pendant of Relentless Assault", "#s2#", "12.97%" },
+		{ 33342, "INV_Pants_14", "=q3=Legguards of the Den Watcher", "#s11#, #a3#", "12.09%" },
+		{ 33343, "INV_Helmet_04", "=q3=Earth Warder's Visage", "#s1#, #a1#", "12.49%" },
+		{ 33344, "INV_Bracer_12", "=q3=Moonblessed Bracers", "#s8#, #a2#", "12.57%" },
+		{ 0, "", "", "" },
+		{ 135, "INV_Scroll_04", "=q4=Recipe: Honeycomb Delight", "#p3# (300)", "1.96%" },
+	};
+	TMHLoktanag = {
+		{ 33253, "INV_Misc_Organ_02", "=q4=Heart of Decay", "#s14#", "12.67%" },
+		{ 33254, "spell_shadow_haunting", "=q4=Shield of Wailing Souls", "#h4#, #w8#", "12.19%" },
+		{ 33255, "INV_Pants_11", "=q4=Leggings of Pulsating Pustules", "#s11#, #a1#", "12.46%" },
+		{ 33256, "INV_Axe_57", "=q4=Corrosion", "#h2#, #w1#", "12.77%" },
+		{ 33249, "INV_Misc_Root_01", "=q3=Asphyxiating Root", "#s13#", "12.46%" },
+		{ 33250, "INV_Belt_26", "=q3=Spore-laden Girdle", "#s10#, #a4#", "12.47%" },
+		{ 33251, "INV_Misc_Cape_17", "=q3=Drape of Contagion", "#s4#", "12.83%" },
+		{ 33252, "INV_Boots_06", "=q3=Hazardous Environment Stompers", "#s12#, #a2#", "12.15%" },
+		{ 0, "", "", "" },
+		{ 41987, "inv_misc_token_01", "=q1=Crest of Heroism", "#m3#", "100%" },
+		{ 0, "", "", "" },
+		{ 42289, "INV_Scroll_04", "=q4=Pattern: Deeproot Sash", "#p8# (300)", "1.14%" },
+		{ 42290, "INV_Scroll_03", "=q4=Pattern: Witherhide Gloves", "#p7# (300)", "0.92%" },
+		{ 0, "", "", "" },
+		{ 0, "", "", "" },
+		{ 33340, "INV_Boots_Cloth_04", "=q4=Ritualistic Boots", "#s12#", "100%", "", "", "", "", "", "", "", "", "", "", {
+				{ { 33385, "=ds=#s12#, #a1#" }, { 33391, "=ds=#s12#, #a2#" }, { 33397, "=ds=#s12#, #a3#" }, },
+				{ { 33679, "=ds=#s12#, #a1#" }, { 33403, "=ds=#s12#, #a4#" }, },
+			}
+		},
+	};
+	TMHOrmanos = {
+		{ 33091, "INV_Misc_StoneTablet_04", "=q4=Totem of Ancient Rites", "#s16#, #e17# =q15=#c7#", "12.64%" },
+		{ 33261, "INV_Crown_02", "=q4=Crown of Draenic Corruption", "#s1#, #a1#", "12.82%" },
+		{ 33262, "INV_Shield_39", "=q4=Wall of Earthen Attunement", "#h4#, #w8#", "12.15%" },
+		{ 33263, "INV_Jewelry_Ring_33", "=q4=Promised Salvation", "#s13#", "12.51%" },
+		{ 33257, "INV_Bracer_19", "=q3=Stonebound Wristguards", "#s8#, #a4#", "12.2%" },
+		{ 33258, "INV_Helmet_03", "=q3=Visor of the Mending Cracks", "#s1#, #a3#", "12.47%" },
+		{ 33259, "INV_Jewelry_Ring_Bronze", "=q3=Ormanos' Hollow Finger", "#s13#", "13.44%" },
+		{ 33260, "INV_Misc_Gem_Ruby_03", "=q3=Sliver of Corrupted Draenethyst", "#s15#", "11.77%" },
+		{ 0, "", "", "" },
+		{ 41987, "inv_misc_token_01", "=q1=Crest of Heroism", "#m3#", "100%" },
+		{ 0, "", "", "" },
+		{ 42189, "INV_Misc_Note_01", "=q3=Formula: Enchant 2H Weapon - Nature Damage", "#p4# (300)", "1.17%" },
+		{ 42292, "INV_Scroll_04", "=q4=Plans: Crystalized Topaz Gemstone", "#p18# (300)", "1.24%" },
+		{ 0, "", "", "" },
+		{ 0, "", "", "" },
+		{ 33338, "INV_Gauntlets_07", "=q4=Ritualistic Gloves", "#s9#", "100%", "", "", "", "", "", "", "", "", "", "", {
+				{ { 33383, "=ds=#s9#, #a1#" }, { 33389, "=ds=#s9#, #a2#" }, { 33395, "=ds=#s9#, #a3#" }, },
+				{ { 33677, "=ds=#s9#, #a1#" }, { 33401, "=ds=#s9#, #a4#" }, },
+			}
+		},
+	};
+	TMHPartath = {
+		{ 33275, "INV_Jewelry_Ring_38", "=q4=Signet of Howling Nightmares", "#s13#", "12.52%" },
+		{ 33276, "INV_Misc_Idol_03", "=q4=Unity of the Timbermaw", "#s14#", "13.32%" },
+		{ 33277, "INV_Belt_18", "=q4=Will of the Chieftain", "#s14#", "12.28%" },
+		{ 33278, "INV_Mace_39", "=q4=Maw of Gluttony", "#h2#, #w6#", "12.28%" },
+		{ 33271, "INV_Jewelry_Talisman_10", "=q3=Pendant of the Bountiful", "#s2#", "12.15%" },
+		{ 33272, "INV_Gauntlets_06", "=q3=Earth Warder's Grasp", "#s9#, #a1#", "12.63%" },
+		{ 33273, "INV_Belt_29", "=q3=Sash of the Pathfinder", "#s10#, #a2#", "12.94%" },
+		{ 33274, "INV_Shoulder_01", "=q3=Moonblessed Spaulders", "#s3#, #a2#", "11.88%" },
+		{ 0, "", "", "" },
+		{ 41987, "inv_misc_token_01", "=q1=Crest of Heroism", "#m3#", "100%" },
+		{ 0, "", "", "" },
+		{ 42287, "INV_Misc_Note_01", "=q4=Plans: Ceremonial Furbolg Pendant", "#p18# (300)", "1.09%" },
+		{ 42288, "INV_Scroll_05", "=q4=Plans: Denwatcher", "#p2# (300)", "1.16%" },
+		{ 0, "", "", "" },
+		{ 0, "", "", "" },
+		{ 33335, "INV_Helmet_43", "=q4=Ritualistic Headdress", "#s1#", "100%", "", "", "", "", "", "", "", "", "", "", {
+				{ { 33380, "=ds=#s1#, #a1#" }, { 33386, "=ds=#s1#, #a2#" }, { 33392, "=ds=#s1#, #a3#" }, },
+				{ { 33674, "=ds=#s1#, #a1#" }, { 33398, "=ds=#s1#, #a4#" }, },
+			}
+		},
+	};
+	TMHKronn = {
+		{ 33346, "INV_Helmet_05", "=q4=Ursa's Rampage", "#s1#, #a4#", "12.36%" },
+		{ 33345, "INV_Boots_08", "=q4=Treads of the Pathfinder", "#s12#, #a2#", "12.54%" },
+		{ 33268, "INV_Misc_Lantern_01", "=q4=Beacon of the Emerald Dream", "#h2#, #w9#", "12.6%" },
+		{ 33269, "INV_Jewelry_Ring_39", "=q4=Signet of Screaming Nightmares", "#s13#", "12.53%" },
+		{ 33270, "INV_Misc_Cape_17", "=q4=Slumberweave Cloak", "#s4#", "12.44%" },
+		{ 33084, "pristine_chromatic_scale_1", "=q4=Pristine Chromatic Scale", "#p7# (300)", "13.22%" },
+		{ 33264, "INV_Boots_Wolf", "=q3=Furbolg Medicine Footwraps", "#s12#, #a1#", "12.56%" },
+		{ 33265, "INV_Misc_Cape_20", "=q3=Drape of Bestial Ferocity", "#s4#", "12.03%" },
+		{ 33266, "INV_Misc_MonsterClaw_01", "=q3=Archdruid's Protection", "#s15#", "12.28%" },
+		{ 33267, "INV_Shoulder_10", "=q3=Mantle of the Den Watcher", "#s3#, #a3#", "12.34%" },
+		{ 33333, "INV_Bracer_10", "=q3=Furbolg Medicine Wristwraps", "#s8#, #a1#", "12.13%" },
+		{ 33334, "INV_Gauntlets_21", "=q3=Timbermaw Protectors", "#s9#, #a4#", "12.33%" },
+		{ 33341, "INV_Jewelry_Necklace_43", "=q3=Pendant of Relentless Assault", "#s2#", "12.19%" },
+		{ 33342, "INV_Pants_14", "=q3=Legguards of the Den Watcher", "#s11#, #a3#", "13.07%" },
+		{ 33343, "INV_Helmet_04", "=q3=Earth Warder's Visage", "#s1#, #a1#", "12.89%" },
+		{ 33344, "INV_Bracer_12", "=q3=Moonblessed Bracers", "#s8#, #a2#", "12.49%" },
+		{ 0, "", "", "" },
+		{ 42187, "INV_Misc_Note_01", "=q3=Formula: Enchant Cloak - Agility", "#p4# (300)", "1.28%" },
+		{ 42284, "INV_Misc_Note_01", "=q4=Formula: Timberheart Dreamcatcher", "#p4# (300)", "1.16%" },
+		{ 42285, "INV_Scroll_03", "=q4=Recipe: Mixologist Stone", "#p1# (300)", "1.07%" },
+	};
+	TMHSelenaxx = {
+		{ 33283, "INV_Sword_90", "=q4=Fang of the First Called", "#h3#, #w4#", "12.71%" },
+		{ 33284, "claw_of_the_satyr_2", "=q4=Claw of the Befouler", "#s14#", "12.54%" },
+		{ 33285, "INV_Weapon_Bow_31", "=q4=Recurve of the Last Stand", "#w2#", "12.65%" },
+		{ 33286, "inv_belt_34", "=q4=Crystal Encrusted Girdle", "#s10#, #a3#", "12.21%" },
+		{ 33279, "INV_Shoulder_10", "=q3=Pauldrons of Sinister Intent", "#s3#, #a2#", "12.47%" },
+		{ 33280, "INV_Boots_07", "=q3=Treads of the Blighted Messenger", "#s12#, #a1#", "12.45%" },
+		{ 33281, "INV_Misc_Root_01", "=q3=Foulthorn Ring", "#s13#", "12.62%" },
+		{ 33282, "INV_Staff_07", "=q3=Fluctuating Rod", "#s15#", "12.35%" },
+		{ 0, "", "", "" },
+		{ 41987, "inv_misc_token_01", "=q1=Crest of Heroism", "#m3#", "100%" },
+		{ 42224, "INV_Misc_Gem_Bloodstone_02", "=q1=Geode Shards", "#m3#", "100%" },
+		{ 0, "", "", "" },
+		{ 42188, "INV_Misc_Note_01", "=q3=Formula: Enchant Cloak - Greater Shadow Resistance", "#p4# (300)", "1.26%" },
+		{ 42190, "INV_Misc_Note_01", "=q3=Formula: Enchant 2H Weapon - Shadow Damage", "#p4# (300)", "1.29%" },
+		{ 0, "", "", "" },
+		{ 33336, "inv_shoulder_18", "=q4=Ritualistic Mantle", "#s3#", "100%", "", "", "", "", "", "", "", "", "", "", {
+				{ { 33381, "=ds=#s3#, #a1#" }, { 33387, "=ds=#s3#, #a2#" }, { 33393, "=ds=#s3#, #a3#" }, },
+				{ { 33675, "=ds=#s3#, #a1#" }, { 33399, "=ds=#s3#, #a4#" }, },
+			}
+		},
+	};
+	TMHTrioch = {
+		{ 33088, "INV_Misc_Book_02", "=q4=Libram of the Exorciser", "#s16#, #e18# =q16=#c4#", "12.57%" },
+		{ 33291, "INV_Sword_133", "=q4=Pysan's New Greatsword", "#h2#, #w10#", "12.75%" },
+		{ 33292, "INV_Wand_05", "=q4=Elberetha's Scepter of Agitation", "#w12#", "12.39%" },
+		{ 33293, "INV_Misc_MonsterFang_01", "=q4=Trifang Shredders", "#w11#", "13.01%" },
+		{ 33287, "INV_Jewelry_Ring_44", "=q3=Hydrascale Seal", "#s13#", "12.07%" },
+		{ 33288, "INV_Misc_Cape_06", "=q3=Cloak of the Unfortunate", "#s4#", "11.7%" },
+		{ 33289, "INV_Shoulder_30", "=q3=Digested Slayer's Pauldrons", "#s3#, #a4#", "12.87%" },
+		{ 33290, "INV_Belt_15", "=q3=Igniter's Scorchcloth", "#s10#, #a1#", "12.64%" },
+		{ 0, "", "", "" },
+		{ 41987, "inv_misc_token_01", "=q1=Crest of Heroism", "#m3#", "100%" },
+		{ 0, "", "", "" },
+		{ 42291, "INV_Scroll_05", "=q4=Pattern: Timberclaw Bracers", "#p7# (300)", "1.22%" },
+		{ 0, "", "", "" },
+		{ 0, "", "", "" },
+		{ 0, "", "", "" },
+		{ 33339, "INV_Pants_Leather_01", "=q4=Ritualistic Leggings", "#s11#", "100%", "", "", "", "", "", "", "", "", "", "", {
+				{ { 33384, "=ds=#s11#, #a1#" }, { 33390, "=ds=#s11#, #a2#" }, { 33396, "=ds=#s11#, #a3#" }, },
+				{ { 33678, "=ds=#s11#, #a1#" }, { 33402, "=ds=#s11#, #a4#" }, },
+			}
+		},
+	};
+	TMHUrsol = {
+		{ 33294, "inv_misc_ambersap", "=q4=Droplet of Nordrassil", "#s14#", "18.36%" },
+		{ 33295, "inv_chest_plate08", "=q4=Breastcage of Ironbark", "#s5#, #a4#", "17.4%" },
+		{ 33296, "INV_Enchant_EssenceNetherLarge", "=q4=Shard of Dreams", "#s14#", "17.63%" },
+		{ 33297, "INV_Boots_01", "=q4=Dreamwind Threads", "#s12#, #a3#", "18.28%" },
+		{ 33298, "INV_Bracer_06", "=q4=Cuffs of the Enlightened", "#s8#, #a1#", "17.96%" },
+		{ 33299, "INV_Weapon_Rifle_30", "=q4=Maw of Spewing Malignity", "#w5#", "10.37%" },
+		{ 33300, "INV_Misc_Book_07", "=q4=Cenarius' Teachings", "#s15#", "17.52%" },
+		{ 33301, "INV_Shoulder_10", "=q4=Spaulders of Unresolved Regrets", "#s3#, #a2#", "17.52%" },
+		{ 33302, "BTNEnchantedNecklace", "=q4=Forlorn Hope", "#s2#", "18.91%" },
+		{ 33303, "INV_Gauntlets_30", "=q4=Gloves of Sudden Betrayal", "#s9#, #a1#", "17.82%" },
+		{ 33304, "INV_Misc_Cape_06", "=q4=Ironweave Chaincloak", "#s4#", "17.63%" },
+		{ 33305, "INV_Weapon_ShortBlade_09", "=q4=Vor’ethil, the Broken Shadow", "#h2#, #w9#", "10.6%" },
+		{ 58312, "INV_Misc_Note_05", "=q3=Glyph of the Tainted Wild God", "=q13=#c1#", "8.31%" },
+		{ 0, "", "", "" },
+		{ 0, "", "", "" },
+		{ 33337, "INV_Chest_Plate07", "=q4=Ritualistic Tunic", "#s5#", "100%", "", "", "", "", "", "", "", "", "", "", {
+				{ { 33382, "=ds=#s5#, #a1#" }, { 33388, "=ds=#s5#, #a2#" }, { 33394, "=ds=#s5#, #a3#" }, },
+				{ { 33676, "=ds=#s5#, #a1#" }, { 33400, "=ds=#s5#, #a4#" }, },
+			}
+		},
+		{ 0, "", "", "" },
+		{ 42177, "BTNEmeraldNecklace", "=q4=Pendant of Dreams", "#m2#", "100%", "", "", "", "", "", "", "", "", "", "", {
+				{ { 33327, "=ds=#s15#" }, { 33328, "=ds=#s13#" }, { 33329, "=ds=#s2#" }, },
+			}
+		},
+		{ 42306, "INV_Misc_Pelt_Bear_Ruin_01", "=q4=Corrupted Hide of Ursol", "#m2#", "2%", "", "", "", "", "", "", "", "", "", "", {
+				{ { 33324, "=ds=#s5#, #a4#" }, { 33325, "=ds=#s1#, #a2#" }, { 33326, "=ds=#s11#, #a2#" }, },
+			}
+		},
+	};
+	TMHPerotharn = {
+		{ 33306, "INV_Misc_Cape_01", "=q4=Cloak of Unwavering Will", "#s4#", "17.77%" },
+		{ 33307, "INV_Jewelry_Ring_45", "=q4=Choker of Endless Insomnia", "#s2#", "17.77%" },
+		{ 33308, "INV_Misc_StoneTablet_06", "=q4=Whispering Fragment of Aln", "#s14#", "17.9%" },
+		{ 33309, "INV_Wand_17", "=q4=Var'adel, Twig of the Dreamfountain", "#w12#", "9.89%" },
+		{ 33310, "INV_Misc_Bone_TaurenSkull_01", "=q4=Mantle of the Usurper", "#s3#, #a1#", "18.51%" },
+		{ 33311, "INV_Bracer_17", "=q4=Bindings of Relentless Wrath", "#s8#, #a3#", "18.16%" },
+		{ 33312, "INV_knife_1h_stratholme_d_01", "=q4=The Herald of Nightmares", "#h1#, #w4#", "10.67%" },
+		{ 33313, "INV_Chest_Cloth_18", "=q4=Vestments of Purgatorial Flames", "#s5#, #a1#", "17.75%" },
+		{ 33314, "INV_Misc_Bandana_03", "=q4=Eyes of the Sightless", "#s1#, #a2#", "17.59%" },
+		{ 33315, "INV_Belt_29", "=q4=Girdle of Withered Spirits", "#s10#, #a2#", "17.25%" },
+		{ 33316, "INV_Pants_06", "=q4=Kilt of Futile Sacrifices", "#s11#, #a1#", "18.18%" },
+		{ 33317, "inv_belt_11", "=q4=Royal Highborne Guardbelt", "#s10#, #a4#", "18.56%" },
+		{ 0, "", "", "" },
+		{ 0, "", "", "" },
+		{ 0, "", "", "" },
+		{ 42295, "INV_Misc_Organ_04", "=q4=Mass of Writhing Tentacles", "#m2#", "100%", "", "", "", "", "", "", "", "", "", "", {
+				{ { 33332, "=ds=#h3#, #w10#" }, },
+			}
+		},
+		{ 42307, "INV_Misc_Key_02", "=q4=Runed Elementium Key", "#m2#", "100%", "", "", "", "", "", "", "", "", "", "", {
+				{ { 33330, "=ds=#h3#, #w10#" }, { 33331, "=ds=#h4#, #w10#" } },
+			}
+		},
 	};
 };

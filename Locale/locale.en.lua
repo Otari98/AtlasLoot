@@ -36,6 +36,17 @@ AL:RegisterTranslations("enUS", function() return {
 	["Prophet Stormhoof"] = true,
 	["Chieftain Shalk Blackwind"] = true,
 
+	["Karrsh the Sentinel"] = true,
+	["Rotgrowl"] = true,
+	["Loktanag the Vile"] = true,
+	["Ormanos the Cracked"] = true,
+	["Chieftain Partath"] = true,
+	["Archdruid Kronn"] = true,
+	["Selenaxx Foulheart"] = true,
+	["Trioch the Devourer"] = true,
+	["Ursol"] = true,
+	["Peroth'arn"] = true,
+
 	DAYS_COOLDOWN = "%d days cooldown",
 	DAYS_COOLDOWN_1 = "%d day cooldown",
 	[" added to the WishList."] = true,
