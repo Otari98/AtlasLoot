@@ -404,7 +404,6 @@
 		<Scripts>
 			<OnLoad>
 				this:RegisterForDrag("LeftButton");
-				this:SetMovable(1);
 				this:SetBackdropColor(0.75, 0, 0.75);
 				local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
 				AtlasLootDefaultFrame_Notice:SetText(AL["NoticeFrame"]);
@@ -443,7 +442,7 @@
 		<Size x="120" y="20"/>
 	</Button>
 
-	<Button name="AtlasLootItem_ParentTemplate" toplevel="true" virtual="true">
+	<Button name="AtlasLootItem_ParentTemplate" virtual="true">
 		<Size x="236" y="28"/>
 		<HighlightTexture file="Interface\QuestFrame\UI-QuestTitleHighlight" alphaMode="ADD"/>
 		<Layers>
@@ -595,6 +594,9 @@
 				AtlasLootItem_OnClick();
 				CloseDropDownMenus();
 			</OnClick>
+			<OnShow>
+				this:SetFrameLevel(AtlasLootItemsFrame:GetFrameLevel() + 1);
+			</OnShow>
 		</Scripts>
 	</Button>
 
@@ -607,7 +609,7 @@
 				AtlasLootMenuItem_OnClick();
 			</OnClick>
 			<OnShow>
-				this:SetFrameLevel((this:GetParent()):GetFrameLevel() + 1);
+				this:SetFrameLevel(AtlasLootItemsFrame:GetFrameLevel() + 1);
 			</OnShow>
 		</Scripts>
 	</Button>
@@ -697,7 +699,7 @@
 						AtlasLootItemsFrame_OnCloseButton();
 					</OnClick>
 					<OnShow>
-						this:SetFrameLevel((this:GetParent()):GetFrameLevel() + 1);
+						this:SetFrameLevel(AtlasLootItemsFrame:GetFrameLevel() + 1);
 					</OnShow>
 				</Scripts>
 			</Button>
@@ -1005,7 +1007,7 @@
 					<Anchor point="TOPLEFT" relativeTo="AtlasLootItem_29" relativePoint="BOTTOMLEFT"/>
 				</Anchors>
 			</Button>
-			<Button name="$parent_BACK" toplevel="true" inherits="OptionsButtonTemplate" hidden="true">
+			<Button name="$parent_BACK" inherits="OptionsButtonTemplate" hidden="true">
 				<Anchors>
 					<Anchor point="BOTTOM">
 						<Offset x="0" y="8"/>
@@ -1016,9 +1018,12 @@
 						AtlasLoot_NavButton_OnClick();
 						CloseDropDownMenus();
 					</OnClick>
+					<OnShow>
+						this:SetFrameLevel(AtlasLootItemsFrame:GetFrameLevel() + 1);
+					</OnShow>
 				</Scripts>
 			</Button>
-			<Button name="$parent_PREV" toplevel="true" inherits="AtlasLootPrevButtonTemplate">
+			<Button name="$parent_PREV" inherits="AtlasLootPrevButtonTemplate">
 				<Size x="32" y="32"/>
 				<NormalTexture file="Interface\Buttons\UI-SpellbookIcon-PrevPage-Up"/>
 				<PushedTexture file="Interface\Buttons\UI-SpellbookIcon-PrevPage-Down"/>
@@ -1034,9 +1039,12 @@
 						AtlasLoot_NavButton_OnClick();
 						CloseDropDownMenus();
 					</OnClick>
+					<OnShow>
+						this:SetFrameLevel(AtlasLootItemsFrame:GetFrameLevel() + 1);
+					</OnShow>
 				</Scripts>
 			</Button>
-			<Button name="$parent_NEXT" toplevel="true" inherits="AtlasLootNextButtonTemplate">
+			<Button name="$parent_NEXT" inherits="AtlasLootNextButtonTemplate">
 				<Size x="32" y="32"/>
 				<NormalTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Up"/>
 				<PushedTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Down"/>
@@ -1053,7 +1061,7 @@
 						CloseDropDownMenus();
 					</OnClick>
 					<OnShow>
-						this:SetFrameLevel((this:GetParent()):GetFrameLevel() + 1);
+						this:SetFrameLevel(AtlasLootItemsFrame:GetFrameLevel() + 1);
 					</OnShow>
 				</Scripts>
 			</Button>
@@ -1104,7 +1112,7 @@
 				<HighlightTexture file="Interface\Buttons\UI-Common-MouseHilight" alphaMode="ADD"/>
 				<Scripts>
 					<OnShow>
-						this:SetFrameLevel((this:GetParent()):GetFrameLevel() + 1);
+						this:SetFrameLevel(AtlasLootItemsFrame:GetFrameLevel() + 1);
 						if (AtlasLootItemsFrame.refresh) and ((AtlasLootItemsFrame.refresh[1] == "SearchResult") or (AtlasLootItemsFrame.refresh[1] == "WishList")) then
 							this:Disable();
 						else
