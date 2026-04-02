@@ -1355,7 +1355,7 @@ function AtlasLootBoss_OnClick()
 	else
 		-- If an loot table is associated with the button, show it.  Note multiple tables need to be checked due to the database structure
 		if ( AtlasLootBossButtons[zoneID] and AtlasLootBossButtons[zoneID][id] and AtlasLootBossButtons[zoneID][id] ~= "" ) then
-			if ( AtlasLoot_IsLootTableAvailable(AtlasLootBossButtons[zoneID][id]) ) then
+			-- if ( AtlasLoot_IsLootTableAvailable(AtlasLootBossButtons[zoneID][id]) ) then
 				_G[name.."_Selected"]:Show();
 				_G[name.."_Loot"]:Hide();
 				local _,_,boss = string.find(_G[name.."_Text"]:GetText(), "|c%x%x%x%x%x%x%x%x%s*[%dX']*[%) ]*(.*[^%,])[%,]?$");
@@ -1370,9 +1370,9 @@ function AtlasLootBoss_OnClick()
 					AtlasLootItemsFrame_NEXT:Hide();
 					AtlasLootItemsFrame_PREV:Hide();
 				end
-			end
+			-- end
 		elseif ( AtlasLootWBBossButtons[zoneID] and AtlasLootWBBossButtons[zoneID][id] and AtlasLootWBBossButtons[zoneID][id] ~= "" ) then
-			if ( AtlasLoot_IsLootTableAvailable(AtlasLootWBBossButtons[zoneID][id]) ) then
+			-- if ( AtlasLoot_IsLootTableAvailable(AtlasLootWBBossButtons[zoneID][id]) ) then
 				_G[name.."_Selected"]:Show();
 				_G[name.."_Loot"]:Hide();
 				local _,_,boss = string.find(_G[name.."_Text"]:GetText(), "|c%x%x%x%x%x%x%x%x%s*[%dX]*[%) ]*(.*[^%,])[%,]?$");
@@ -1384,9 +1384,9 @@ function AtlasLootBoss_OnClick()
 				AtlasLootItemsFrame_BACK:Hide();
 				AtlasLootItemsFrame_NEXT:Hide();
 				AtlasLootItemsFrame_PREV:Hide();
-			end
+			-- end
 		elseif ( AtlasLootBattlegrounds[zoneID] and AtlasLootBattlegrounds[zoneID][id] and AtlasLootBattlegrounds[zoneID][id] ~= "" ) then
-			if ( AtlasLoot_IsLootTableAvailable(AtlasLootBattlegrounds[zoneID][id]) ) then
+			-- if ( AtlasLoot_IsLootTableAvailable(AtlasLootBattlegrounds[zoneID][id]) ) then
 				_G[name.."_Selected"]:Show();
 				_G[name.."_Loot"]:Hide();
 				local _,_,boss = string.find(_G[name.."_Text"]:GetText(), "|c%x%x%x%x%x%x%x%x%s*[%wX]*[%) ]*(.*[^%,])[%,]?$");
@@ -1394,7 +1394,7 @@ function AtlasLootBoss_OnClick()
 				AtlasLootItemsFrame.activeBoss = id;
 				AtlasLoot_AtlasScrollBar_Update();
 				AtlasLootCharDB.LastBoss = AtlasLootBattlegrounds[zoneID][id]
-			end
+			-- end
 		end
 	end
 	-- This has been invoked from Atlas, so we remove any claim external mods have on the loot table
@@ -1631,17 +1631,17 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss)
 	local wlPage, wlPageMax = 1, 1;
 	local isItem, isEnchant, isSpell;
 	local spellName, spellIcon;
-	if ( dataID == "SearchResult" and dataID == "WishList" ) then
-		AtlasLoot_IsLootTableAvailable(dataID);
-	end
+	-- if ( dataID == "SearchResult" and dataID == "WishList" ) then
+	-- 	AtlasLoot_IsLootTableAvailable(dataID);
+	-- end
 	-- If the data source has not been passed, throw up a debugging statement
-	if ( dataSource == nil ) then
-		DEFAULT_CHAT_FRAME:AddMessage("No dataSource!");
-	end
+	-- if ( dataSource == nil ) then
+	-- 	DEFAULT_CHAT_FRAME:AddMessage("No dataSource!");
+	-- end
 	-- If the loot table name has not been passed, throw up a debugging statement
-	if ( dataID == nil ) then
-		DEFAULT_CHAT_FRAME:AddMessage("No dataID!");
-	end
+	-- if ( dataID == nil ) then
+	-- 	DEFAULT_CHAT_FRAME:AddMessage("No dataID!");
+	-- end
 	local dataSource_backup = dataSource;
 	if ( dataSource ~= "dummy" ) then
 		if ( dataID == "SearchResult" or dataID == "WishList" ) then
@@ -1866,7 +1866,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss)
 				if ( (dataID == "SearchResult" or dataID == "WishList") and dataSource[dataID][i][5] ) then
 					local _, _, wishDataID, wishDataSource = strfind(dataSource[dataID][i][5], "(.+)|(.+)")
 					if ( wishDataSource == "AtlasLootRepItems" ) then
-						if ( wishDataID and AtlasLoot_IsLootTableAvailable(wishDataID) ) then
+						if ( wishDataID --[[and AtlasLoot_IsLootTableAvailable(wishDataID)]] ) then
 							for _, v in ipairs(AtlasLoot_Data[wishDataSource][wishDataID]) do
 								if ( dataSource[dataID][i][1] == v[1] ) then
 									index = 1
@@ -1888,7 +1888,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss)
 					end
 					if ( wishDataSource == "AtlasLootItems" and AtlasLootCharDB.WishlistGroupedByDungeon ) then
 						-- Set boss
-						if ( wishDataID and AtlasLoot_IsLootTableAvailable(wishDataID) ) then
+						if ( wishDataID --[[and AtlasLoot_IsLootTableAvailable(wishDataID)]] ) then
 							for _, v in ipairs(AtlasLoot_Data[wishDataSource][wishDataID]) do
 								if ( dataSource[dataID][i][1] == v[1] ) then
 									local boss = AtlasLoot_GetWishListSubheadingBoss(wishDataID)
@@ -2538,8 +2538,8 @@ This is the intended API for external mods to use for displaying loot pages.
 This function figures out where the loot table is stored, then sends the relevant info to AtlasLoot_ShowItemsFrame
 ]]
 function AtlasLoot_ShowBossLoot(dataID, boss)
-	local tableavailable = AtlasLoot_IsLootTableAvailable(dataID);
-	if ( tableavailable ) then
+	-- local tableavailable = AtlasLoot_IsLootTableAvailable(dataID);
+	-- if ( tableavailable ) then
 		AtlasLootItemsFrame:Hide();
 		-- If the loot table is already being displayed, it is hidden and the current table selection cancelled
 		if ( dataID == AtlasLootItemsFrame.externalBoss and AtlasLootItemsFrame:GetParent() ~= AtlasFrame and AtlasLootItemsFrame:GetParent() ~= AtlasLootDefaultFrame ) then
@@ -2551,7 +2551,7 @@ function AtlasLoot_ShowBossLoot(dataID, boss)
 			AtlasLootItemsFrame.externalBoss = dataID;
 			AtlasLoot_ShowItemsFrame(dataID, dataSource, boss);
 		end
-	end
+	-- end
 end
 
 function AtlasLootOptions_SetupSlider(text, mymin, mymax, step)
@@ -3013,7 +3013,7 @@ function AtlasLootItem_OnClick()
 			end
 		elseif ( (dataID == "SearchResult" or dataID == "WishList") and this.sourcePage ) then
 			local _, _, dataID, dataSource = strfind(this.sourcePage, "(.+)|(.+)");
-			if ( dataID and dataSource and AtlasLoot_IsLootTableAvailable(dataID) ) then
+			if ( dataID and dataSource --[[and AtlasLoot_IsLootTableAvailable(dataID)]] ) then
 				AtlasLoot_ShowItemsFrame(dataID, dataSource, AtlasLoot_TableNames[dataID][1]);
 			end
 		elseif ( this.container ) then
@@ -3034,7 +3034,7 @@ function AtlasLootItem_OnClick()
 			DressUpItemLink("item:"..this.dressingroomID..":0:0:0");
 		elseif ( (dataID == "SearchResult" or dataID == "WishList") and this.sourcePage ) then
 			local _, _, dataID, dataSource = strfind(this.sourcePage, "(.+)|(.+)");
-			if ( dataID and dataSource and AtlasLoot_IsLootTableAvailable(dataID) ) then
+			if ( dataID and dataSource --[[and AtlasLoot_IsLootTableAvailable(dataID)]] ) then
 				AtlasLoot_ShowItemsFrame(dataID, dataSource, bossName);
 			end
 		end
@@ -3070,7 +3070,7 @@ function AtlasLootItem_OnClick()
 			DressUpItemLink("item:"..this.dressingroomID..":0:0:0");
 		elseif ( (dataID == "SearchResult" or dataID == "WishList") and this.sourcePage ) then
 			local _, _, dataID, dataSource = strfind(this.sourcePage, "(.+)|(.+)");
-			if ( dataID and dataSource and AtlasLoot_IsLootTableAvailable(dataID) ) then
+			if ( dataID and dataSource --[[and AtlasLoot_IsLootTableAvailable(dataID)]] ) then
 				AtlasLoot_ShowItemsFrame(dataID, dataSource, bossName);
 			end
 		end

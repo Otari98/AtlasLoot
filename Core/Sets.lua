@@ -46,7 +46,6 @@ function AtlasLoot_PrepMenu(backPage, title)
 		_G["AtlasLootMenuItem_" .. i .. "_Extra"]:Show();
 	end
 	AtlasLoot_BossName:SetText("|cffFFFFFF" .. title);
-	-- AtlasLoot_SetItemInfoFrame(AtlasLoot_AnchorPoint);
 end
 
 function AtlasLootSetMenu()
