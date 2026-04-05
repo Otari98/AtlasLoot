@@ -2876,8 +2876,8 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 21477, "INV_Jewelry_Ring_AhnQiraj_04", "=q3=Ring of Fury", "=ds=#s13#", "11%" },
 		{ 21473, "INV_Misc_Eye_01", "=q3=Eye of Moam", "=ds=#s14#", "11%" },
         { 0, "", "", "" },
-        { 83005, "INV_Misc_AhnQirajTrinket_04", "=q4=Perfect Obsidian Shard", "=ds=#s1#, #a1#", "100%" }, -- mage orange's quest
-        { 42169, "INV_Misc_QirajiCrystal_05", "=q4=Bursting Mana Shard", "=ds=#s1#, #a1#", "30%" }, -- for world boss concavius
+        { 83005, "INV_Misc_AhnQirajTrinket_04", "=q4=Perfect Obsidian Shard", "=ds=#m3#", "100%" },
+        { 42169, "INV_Misc_QirajiCrystal_05", "=q4=Bursting Mana Shard", "=ds=#m2#", "30%" },
         { 0, "", "", "" },
 		{ 20888, "INV_Qiraj_RingCeremonial", "=q3=Qiraji Ceremonial Ring", "=q14=#c2#=ds=, =q12=#c6#=ds=, =q9=#c5#=ds=, =q11=#c8#", "25%", "", "", "", "", "", "", "", "", "", "",{{
 			{21402,"=q3=#x22#=ds=, #r3#"},
