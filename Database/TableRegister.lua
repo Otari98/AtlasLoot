@@ -1128,6 +1128,7 @@ AtlasLoot_TableNames = {
 	["FIRSTAIDMENU"] = { "dummy", "dummy" },
 	["WORLDBOSSMENU"] = { "dummy", "dummy" },
 	["JEWELCRAFTMENU"] = { "dummy", "dummy" },
+	["TMHSET"] = { "dummy", "dummy" },
 	["WishList"] = { AL["WishList"], "AtlasLootCharDB" },
     ["SearchResult"] = { AL["Search"], "AtlasLootCharDB" },
 	--If all else fails!

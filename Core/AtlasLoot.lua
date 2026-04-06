@@ -110,6 +110,7 @@ AtlasLoot_MenuList = {
 	["JEWELCRAFTMENU"] = "AtlasLoot_JewelcraftingMenu",
 	["CRAFTSET"] = "AtlasLootCraftedSetMenu",
 	["WORLDBOSSMENU"] = "AtlasLoot_WorldBossMenu",
+	["TMHSET"] = "AtlasLootTMHSetMenu",
 };
 
 -- This is a multi-layer table defining the main loot listing.

@@ -47,6 +47,12 @@ AL:RegisterTranslations("enUS", function() return {
 	["Ursol"] = true,
 	["Peroth'arn"] = true,
 
+	["Majesty of the Stag"] = true,
+	["Wisdom of the Deer"] = true,
+	["Rage of the Ursa"] = true,
+	["Might of the Hyppogryph"] = true,
+	["Pride of the Moose"] = true,
+
 	DAYS_COOLDOWN = "%d days cooldown",
 	DAYS_COOLDOWN_1 = "%d day cooldown",
 	[" added to the WishList."] = true,

@@ -52,30 +52,43 @@ function AtlasLootSetMenu()
 	AtlasLoot_PrepMenu(nil, AL["Collections"])
 	AtlasLootCharDB.LastBoss = "SETMENU"
 	AtlasLootCharDB.LastBossText = AL["Collections"]
+	--Sets
+	AtlasLootMenuItem_1_Name:SetText(AL["Sets"]);
+	AtlasLootMenuItem_1_Extra:SetText("");
+	AtlasLootMenuItem_1_Icon:SetTexture("Interface\\Icons\\INV_Sword_43");
+	AtlasLootMenuItem_1.lootpage = "PRE60SET";
+	AtlasLootMenuItem_1:Show();
 	--ZG
-	AtlasLootMenuItem_3_Name:SetText(AL["Zul'Gurub Sets"]);
-	AtlasLootMenuItem_3_Extra:SetText("");
-	AtlasLootMenuItem_3_Icon:SetTexture("Interface\\Icons\\INV_Sword_55");
-	AtlasLootMenuItem_3.lootpage = "ZGSET";
-	AtlasLootMenuItem_3:Show();
+	AtlasLootMenuItem_2_Name:SetText(AL["Zul'Gurub Sets"]);
+	AtlasLootMenuItem_2_Extra:SetText("");
+	AtlasLootMenuItem_2_Icon:SetTexture("Interface\\Icons\\INV_Sword_55");
+	AtlasLootMenuItem_2.lootpage = "ZGSET";
+	AtlasLootMenuItem_2:Show();
 	--AQ20
-	AtlasLootMenuItem_4_Name:SetText(AL["Ruins of Ahn'Qiraj Sets"]);
-	AtlasLootMenuItem_4_Extra:SetText("");
-	AtlasLootMenuItem_4_Icon:SetTexture("Interface\\Icons\\INV_Axe_15");
-	AtlasLootMenuItem_4.lootpage = "AQ20SET";
-	AtlasLootMenuItem_4:Show();
+	AtlasLootMenuItem_3_Name:SetText(AL["Ruins of Ahn'Qiraj Sets"]);
+	AtlasLootMenuItem_3_Extra:SetText("");
+	AtlasLootMenuItem_3_Icon:SetTexture("Interface\\Icons\\INV_Axe_15");
+	AtlasLootMenuItem_3.lootpage = "AQ20SET";
+	AtlasLootMenuItem_3:Show();
 	--AQ40
-	AtlasLootMenuItem_5_Name:SetText(AL["Temple of Ahn'Qiraj Sets"]);
-	AtlasLootMenuItem_5_Extra:SetText("");
-	AtlasLootMenuItem_5_Icon:SetTexture("Interface\\Icons\\INV_Shoulder_35");
-	AtlasLootMenuItem_5.lootpage = "AQ40SET";
-	AtlasLootMenuItem_5:Show();
+	AtlasLootMenuItem_4_Name:SetText(AL["Temple of Ahn'Qiraj Sets"]);
+	AtlasLootMenuItem_4_Extra:SetText("");
+	AtlasLootMenuItem_4_Icon:SetTexture("Interface\\Icons\\INV_Shoulder_35");
+	AtlasLootMenuItem_4.lootpage = "AQ40SET";
+	AtlasLootMenuItem_4:Show();
 	--Karazhan
-	AtlasLootMenuItem_6_Name:SetText(AL["Karazhan"] .. " " .. AL["Sets"]);
+	AtlasLootMenuItem_5_Name:SetText(AL["Karazhan"] .. " " .. AL["Sets"]);
+	AtlasLootMenuItem_5_Extra:SetText("");
+	AtlasLootMenuItem_5_Icon:SetTexture("Interface\\Icons\\INV_Staff_Medivh");
+	AtlasLootMenuItem_5.lootpage = "KARASET";
+	AtlasLootMenuItem_5:Show();
+	-- Timbermaw
+	AtlasLootMenuItem_6_Name:SetText(AL["Timbermaw Hold"] .. " " .. AL["Sets"]);
 	AtlasLootMenuItem_6_Extra:SetText("");
-	AtlasLootMenuItem_6_Icon:SetTexture("Interface\\Icons\\INV_Staff_Medivh");
-	AtlasLootMenuItem_6.lootpage = "KARASET";
+	AtlasLootMenuItem_6_Icon:SetTexture("Interface\\Icons\\INV_Misc_Horn_01");
+	AtlasLootMenuItem_6.lootpage = "TMHSET";
 	AtlasLootMenuItem_6:Show();
+	
 	--Legendaries
 	AtlasLootMenuItem_8_Name:SetText(AL["Legendary Items"]);
 	AtlasLootMenuItem_8_Extra:SetText("");
@@ -94,48 +107,44 @@ function AtlasLootSetMenu()
 	AtlasLootMenuItem_10_Icon:SetTexture("Interface\\Icons\\INV_Misc_QirajiCrystal_05");
 	AtlasLootMenuItem_10.lootpage = "RareMounts";
 	AtlasLootMenuItem_10:Show();
-	--Sets
-	AtlasLootMenuItem_2_Name:SetText(AL["Sets"]);
-	AtlasLootMenuItem_2_Extra:SetText("");
-	AtlasLootMenuItem_2_Icon:SetTexture("Interface\\Icons\\INV_Sword_43");
-	AtlasLootMenuItem_2.lootpage = "PRE60SET";
-	AtlasLootMenuItem_2:Show();
 	--World Epics
-	AtlasLootMenuItem_23_Name:SetText(AL["World Epics"]);
-	AtlasLootMenuItem_23_Extra:SetText("");
-	AtlasLootMenuItem_23_Icon:SetTexture("Interface\\Icons\\INV_Gauntlets_30");
-	AtlasLootMenuItem_23.lootpage = "WorldEpics1";
-	AtlasLootMenuItem_23:Show();
+	AtlasLootMenuItem_11_Name:SetText(AL["World Epics"]);
+	AtlasLootMenuItem_11_Extra:SetText("");
+	AtlasLootMenuItem_11_Icon:SetTexture("Interface\\Icons\\INV_Gauntlets_30");
+	AtlasLootMenuItem_11.lootpage = "WorldEpics1";
+	AtlasLootMenuItem_11:Show();
 	--Tabards
-	AtlasLootMenuItem_24_Name:SetText(AL["Tabards"]);
-	AtlasLootMenuItem_24_Extra:SetText("");
-	AtlasLootMenuItem_24_Icon:SetTexture("Interface\\Icons\\INV_Shirt_GuildTabard_01");
-	AtlasLootMenuItem_24.lootpage = "Tabards";
-	AtlasLootMenuItem_24:Show();
+	AtlasLootMenuItem_12_Name:SetText(AL["Tabards"]);
+	AtlasLootMenuItem_12_Extra:SetText("");
+	AtlasLootMenuItem_12_Icon:SetTexture("Interface\\Icons\\INV_Shirt_GuildTabard_01");
+	AtlasLootMenuItem_12.lootpage = "Tabards";
+	AtlasLootMenuItem_12:Show();
+
 	--Dungeon Set 1/2
-	AtlasLootMenuItem_17_Name:SetText(AL["Dungeon 1/2 Sets"]);
-	AtlasLootMenuItem_17_Extra:SetText("");
-	AtlasLootMenuItem_17_Icon:SetTexture("Interface\\Icons\\INV_Helmet_24");
-	AtlasLootMenuItem_17.lootpage = "T0SET";
-	AtlasLootMenuItem_17:Show();
+	AtlasLootMenuItem_16_Name:SetText(AL["Dungeon 1/2 Sets"]);
+	AtlasLootMenuItem_16_Extra:SetText("");
+	AtlasLootMenuItem_16_Icon:SetTexture("Interface\\Icons\\INV_Helmet_24");
+	AtlasLootMenuItem_16.lootpage = "T0SET";
+	AtlasLootMenuItem_16:Show();
 	--Tier 1
-	AtlasLootMenuItem_18_Name:SetText(AL["Tier 1 Sets"]);
-	AtlasLootMenuItem_18_Extra:SetText("");
-	AtlasLootMenuItem_18_Icon:SetTexture("Interface\\Icons\\INV_Helmet_09");
-	AtlasLootMenuItem_18.lootpage = "T1SET";
-	AtlasLootMenuItem_18:Show();
+	AtlasLootMenuItem_17_Name:SetText(AL["Tier 1 Sets"]);
+	AtlasLootMenuItem_17_Extra:SetText("");
+	AtlasLootMenuItem_17_Icon:SetTexture("Interface\\Icons\\INV_Helmet_09");
+	AtlasLootMenuItem_17.lootpage = "T1SET";
+	AtlasLootMenuItem_17:Show();
 	--Tier 2
-	AtlasLootMenuItem_19_Name:SetText(AL["Tier 2 Sets"]);
-	AtlasLootMenuItem_19_Extra:SetText("");
-	AtlasLootMenuItem_19_Icon:SetTexture("Interface\\Icons\\INV_Helmet_74");
-	AtlasLootMenuItem_19.lootpage = "T2SET";
-	AtlasLootMenuItem_19:Show();
+	AtlasLootMenuItem_18_Name:SetText(AL["Tier 2 Sets"]);
+	AtlasLootMenuItem_18_Extra:SetText("");
+	AtlasLootMenuItem_18_Icon:SetTexture("Interface\\Icons\\INV_Helmet_74");
+	AtlasLootMenuItem_18.lootpage = "T2SET";
+	AtlasLootMenuItem_18:Show();
 	--Tier 3
-	AtlasLootMenuItem_20_Name:SetText(AL["Tier 3 Sets"]);
-	AtlasLootMenuItem_20_Extra:SetText("");
-	AtlasLootMenuItem_20_Icon:SetTexture("Interface\\Icons\\INV_Helmet_58");
-	AtlasLootMenuItem_20.lootpage = "T3SET";
-	AtlasLootMenuItem_20:Show();
+	AtlasLootMenuItem_19_Name:SetText(AL["Tier 3 Sets"]);
+	AtlasLootMenuItem_19_Extra:SetText("");
+	AtlasLootMenuItem_19_Icon:SetTexture("Interface\\Icons\\INV_Helmet_58");
+	AtlasLootMenuItem_19.lootpage = "T3SET";
+	AtlasLootMenuItem_19:Show();
+
 	for i = 1, 30 do
 		if _G["AtlasLootMenuItem_"..i].container then
 			_G["AtlasLootMenuItem_"..i.."_IconBorder"]:SetVertexColor(1, 0.82, 0)
@@ -927,6 +936,53 @@ function AtlasLoot_Kara40SetMenu()
 	AtlasLootMenuItem_21.lootpage = "T35Warrior";
 	AtlasLootMenuItem_21.container = data.T35WarriorC
 	AtlasLootMenuItem_21:Show();
+	for i = 1, 30 do
+		local button = _G["AtlasLootMenuItem_" .. i]
+		button.dataSource = AtlasLoot_GetDataSource(button.lootpage)
+		if ( type(button.container) == "table" ) then
+			_G["AtlasLootMenuItem_"..i.."_IconBorder"]:SetVertexColor(1, 0.82, 0)
+			for row = 1, getn(button.container) do
+				for item = 1, getn(button.container[row]) do
+					AtlasLoot_CacheItem(button.container[row][item][1])
+				end
+			end
+		end
+	end
+end
+
+function AtlasLootTMHSetMenu()
+	AtlasLoot_PrepMenu("SETMENU", AL["Timbermaw Hold"] .. " " .. AL["Sets"])
+	
+	AtlasLootMenuItem_1_Name:SetText(AL["Majesty of the Stag"])
+	AtlasLootMenuItem_1_Extra:SetText(AL["Cloth"])
+	AtlasLootMenuItem_1_Icon:SetTexture("Interface\\Icons\\INV_Chest_Cloth_43")
+	AtlasLootMenuItem_1.container = data.TMHClothHealer
+	AtlasLootMenuItem_1:Show()
+	
+	AtlasLootMenuItem_2_Name:SetText(AL["Wisdom of the Deer"])
+	AtlasLootMenuItem_2_Extra:SetText(AL["Cloth"])
+	AtlasLootMenuItem_2_Icon:SetTexture("Interface\\Icons\\INV_Chest_Cloth_43")
+	AtlasLootMenuItem_2.container = data.TMHClothDps
+	AtlasLootMenuItem_2:Show()
+
+	AtlasLootMenuItem_3_Name:SetText(AL["Rage of the Ursa"])
+	AtlasLootMenuItem_3_Extra:SetText(AL["Leather"])
+	AtlasLootMenuItem_3_Icon:SetTexture("Interface\\Icons\\INV_Chest_Chain_15")
+	AtlasLootMenuItem_3.container = data.TMHLeather
+	AtlasLootMenuItem_3:Show()
+
+	AtlasLootMenuItem_4_Name:SetText(AL["Might of the Hyppogryph"])
+	AtlasLootMenuItem_4_Extra:SetText(AL["Mail"])
+	AtlasLootMenuItem_4_Icon:SetTexture("Interface\\Icons\\INV_Chest_Chain_15")
+	AtlasLootMenuItem_4.container = data.TMHMail
+	AtlasLootMenuItem_4:Show()
+
+	AtlasLootMenuItem_5_Name:SetText(AL["Pride of the Moose"])
+	AtlasLootMenuItem_5_Extra:SetText(AL["Plate"])
+	AtlasLootMenuItem_5_Icon:SetTexture("Interface\\Icons\\INV_Chest_Plate02")
+	AtlasLootMenuItem_5.container = data.TMHPlate
+	AtlasLootMenuItem_5:Show()
+
 	for i = 1, 30 do
 		local button = _G["AtlasLootMenuItem_" .. i]
 		button.dataSource = AtlasLoot_GetDataSource(button.lootpage)
