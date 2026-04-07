@@ -2421,6 +2421,12 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 47216, "INV_Chest_Cloth_10", "=q4=Vestments of the Oracle", "=ds=#s5#, #a1#" },
 		{ 47217, "INV_Pants_Cloth_07", "=q4=Trousers of the Oracle", "=ds=#s11#, #a1#" },
 		{ 47218, "INV_Boots_Cloth_07", "=q4=Treads of the Oracle", "=ds=#s12#, #a1#" },
+		{ 0, "", "", "" },
+		{ 33016, "INV_Crown_01", "=q4=Crown of the Oracle", "=ds=#s1#, #a1#" },
+		{ 33017, "INV_Shoulder_03", "=q4=Shoulderpads of the Oracle", "=ds=#s3#, #a1#" },
+		{ 33018, "INV_Chest_Cloth_10", "=q4=Robes of the Oracle", "=ds=#s5#, #a1#" },
+		{ 33019, "INV_Pants_Cloth_07", "=q4=Leggings of the Oracle", "=ds=#s11#, #a1#" },
+		{ 33020, "INV_Boots_Fabric_01", "=q4=Sandals of the Oracle", "=ds=#s12#, #a1#" },
 	};
 	AQ40PriestC = {{
 			{ 21348, "=q4=#x26#=ds=, #r2#" },
@@ -2434,6 +2440,12 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 			{ 47216, "=ds=#s5#, #a1#" },
 			{ 47217, "=ds=#s11#, #a1#" },
 			{ 47218, "=ds=#s12#, #a1#" },
+		},{
+			{ 33016, "=ds=#s1#, #a1#" },
+			{ 33017, "=ds=#s3#, #a1#" },
+			{ 33018, "=ds=#s5#, #a1#" },
+			{ 33019, "=ds=#s11#, #a1#" },
+			{ 33020, "=ds=#s12#, #a1#" },
 		}
 	},
 	AQ40Warlock = {
