@@ -253,7 +253,7 @@
 				<FontString name="AtlasLootDefaultFrameSearchString" inherits="GameFontNormal"/>
 			</EditBox>
 			<Button name="AtlasLootDefaultFrameSearchButton" inherits="UIPanelButtonTemplate2" parent="AtlasLootDefaultFrameSearchBox">
-				<Size x="69" y="32"/>
+				<Size x="69" y="21"/>
 				<Anchors>
 					<Anchor point="LEFT" relativePoint="RIGHT"/>
 				</Anchors>
@@ -291,7 +291,7 @@
 				</Scripts>
 			</Button>
 			<Button name="AtlasLootDefaultFrameSearchClearButton" inherits="UIPanelButtonTemplate2" parent="AtlasLootDefaultFrameSearchBox">
-				<Size x="58" y="32"/>
+				<Size x="58" y="21"/>
 				<Anchors>
 					<Anchor point="LEFT" relativeTo="AtlasLootDefaultFrameSearchOptionsButton" relativePoint="RIGHT">
 						<Offset x="-2" y="0"/>
@@ -311,7 +311,7 @@
 				</Scripts>
 			</Button>
 			<Button name="AtlasLootDefaultFrameLastResultButton" inherits="UIPanelButtonTemplate2" parent="AtlasLootDefaultFrameSearchBox">
-				<Size x="100" y="32"/>
+				<Size x="100" y="21"/>
 				<Anchors>
 					<Anchor point="LEFT" relativeTo="AtlasLootDefaultFrameSearchClearButton" relativePoint="RIGHT"/>
 				</Anchors>
@@ -328,7 +328,7 @@
 				</Scripts>
 			</Button>
 			<Button name="AtlasLootDefaultFrameWishListButton" inherits="UIPanelButtonTemplate2" parent="AtlasLootDefaultFrame">
-				<Size x="100" y="32"/>
+				<Size x="100" y="21"/>
 				<Anchors>
 					<Anchor point="RIGHT" relativeTo="AtlasLootDefaultFrameSearchBox" relativePoint="LEFT">
 						<Offset x="-7" y="0"/>
@@ -618,7 +618,7 @@
 		<Size x="128" y="75"/>
 		<Frames>
 			<Button name="$parentHidePanel" inherits="UIPanelButtonTemplate2">
-				<Size x="80" y="32"/>
+				<Size x="80" y="21"/>
 				<Anchors>
 					<Anchor point="BOTTOMLEFT" relativeTo="$parent" relativePoint="BOTTOMLEFT">
 						<Offset x="-7" y="-3"/>
@@ -642,7 +642,7 @@
 				</Scripts>
 			</Button>
 			<Button name="$parent_AtlasLoot" inherits="UIPanelButtonTemplate2">
-				<Size x="80" y="32"/>
+				<Size x="80" y="21"/>
 				<Anchors>
 					<Anchor point="BOTTOMLEFT" relativeTo="$parentHidePanel" relativePoint="BOTTOMRIGHT"/>
 				</Anchors>
@@ -1065,40 +1065,6 @@
 					</OnShow>
 				</Scripts>
 			</Button>
-			<Button name="AtlasLootServerQueryButton" inherits="OptionsButtonTemplate" hidden="true">
-				<Size x="100" y="23"/>
-				<Anchors>
-					<Anchor point="BOTTOM">
-						<Offset x="100" y="6"/>
-					</Anchor>
-				</Anchors>
-				<Scripts>
-					<OnShow>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
-						this:SetText(AL["Query Server"]);
-						this:SetFrameLevel((this:GetParent()):GetFrameLevel() + 1);
-					</OnShow>
-					<OnEnter>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
-						GameTooltip:ClearLines();
-						GameTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 5);
-						GameTooltip:AddLine("|cffff0000"..AL["Query Server"]);
-						GameTooltip:AddLine(AL["Queries the server for all items"]);
-						GameTooltip:AddLine(AL["on this page. The items will be"]);
-						GameTooltip:AddLine(AL["refreshed when you next mouse"]);
-						GameTooltip:AddLine(AL["over them."]);
-						GameTooltip:Show();
-					</OnEnter>
-					<OnLeave>
-						GameTooltip:Hide();
-					</OnLeave>
-					<OnClick>
-						GameTooltip:Hide();
-						AtlasLoot_QueryLootPage();
-						CloseDropDownMenus();
-					</OnClick>
-				</Scripts>
-			</Button>
 			<Button name="AtlasLootQuickLooksButton">
 				<Size x="25" y="25"/>
 				<Anchors>
@@ -1484,7 +1450,7 @@
 				</Scripts>
 			</Slider>
 			<Button name="$parentDone" inherits="UIPanelButtonTemplate2">
-				<Size x="80" y="20"/>
+				<Size x="80" y="21"/>
 				<Anchors>
 					<Anchor point="BOTTOM">
 						<Offset x="0" y="20"/>
@@ -1501,7 +1467,7 @@
 				</Scripts>
 			</Button>
 			<Button name="$ParentResetPosition" inherits="UIPanelButtonTemplate2">
-				<Size x="160" y="20"/>
+				<Size x="160" y="21"/>
 				<Anchors>
 					<Anchor point="BOTTOM">
 						<Offset x="168" y="20"/>
@@ -1518,7 +1484,7 @@
 				</Scripts>
 			</Button>
 			<Button name="$ParentDefaultSettings" inherits="UIPanelButtonTemplate2">
-				<Size x="160" y="20"/>
+				<Size x="160" y="21"/>
 				<Anchors>
 					<Anchor point="BOTTOM">
 						<Offset x="-168" y="20"/>
@@ -1813,7 +1779,7 @@
 				<FontString inherits="GameFontNormal"/>
 			</EditBox>
 			<Button name="AtlasLootSearchButton" inherits="UIPanelButtonTemplate2" parent="AtlasLootSearchBox">
-				<Size x="69" y="32"/>
+				<Size x="69" y="21"/>
 				<Anchors>
 					<Anchor point="LEFT" relativePoint="RIGHT"/>
 				</Anchors>
@@ -1850,7 +1816,7 @@
 				</Scripts>
 			</Button>
 			<Button name="AtlasLootSearchClearButton" inherits="UIPanelButtonTemplate2" parent="AtlasLootSearchBox">
-				<Size x="58" y="32"/>
+				<Size x="58" y="21"/>
 				<Anchors>
 					<Anchor point="LEFT" relativeTo="AtlasLootSearchOptionsButton" relativePoint="RIGHT">
 						<Offset x="-2" y="0"/>

@@ -3243,23 +3243,6 @@ function AtlasLoot_ContainerItem_OnClick(arg1)
 	end
 end
 
---[[
-AtlasLoot_QueryLootPage()
-Querys all valid items on the current loot page.
-]]
-function AtlasLoot_QueryLootPage()
-	for i = 1, 30 do
-		local button = _G["AtlasLootItem_"..i];
-		local queryitem = button.itemID;
-		if ( (queryitem) and (queryitem ~= "") and (queryitem ~= 0) and
-			(string.sub(queryitem, 1, 1) ~= "s") and (string.sub(queryitem, 1, 1) ~= "e") ) then
-			if ( not GetItemInfo(queryitem) ) then
-				AtlasLootCacheTooltip:SetHyperlink("item:"..queryitem..":0:0:0");
-			end
-		end
-	end
-end
-
 local function idFromLink(itemlink)
 	if ( itemlink ) then
 		local _,_,id = string.find(itemlink, "|Hitem:([^:]+)%:")
