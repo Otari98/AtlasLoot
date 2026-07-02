@@ -1,4 +1,4 @@
-local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
+local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
 
 GetSpellInfoAtlasLootDB = {
 	["enchants"] = {
@@ -18502,7 +18502,5 @@ GetSpellInfoAtlasLootDB = {
 				{ 14341, 6 },
 			},
 		},
-		
-		
 	},
 }

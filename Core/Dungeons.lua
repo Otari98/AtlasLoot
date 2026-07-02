@@ -1,4 +1,4 @@
-local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
+local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
 local _G = getfenv(0)
 local buttonsPerPage = 30
 local ButtonsInfo1

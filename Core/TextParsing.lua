@@ -1,4 +1,4 @@
-local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
+local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
 
 --------------------------------------------------------------------------------
 -- Text replacement function
@@ -82,13 +82,13 @@ local TextMap = {
 	["#e33#"] = AL["random colour"],
 	["#e34#"] = AL["Toy"],
 	-- Classes
-	["#c1#"] = AL["Druid"],   -- =q13=#c1#
-	["#c2#"] = AL["Hunter"],  -- =q14=#c2#
-	["#c3#"] = AL["Mage"],    -- =q10=#c3#
+	["#c1#"] = AL["Druid"], -- =q13=#c1#
+	["#c2#"] = AL["Hunter"], -- =q14=#c2#
+	["#c3#"] = AL["Mage"], -- =q10=#c3#
 	["#c4#"] = AL["Paladin"], -- =q16=#c4#
-	["#c5#"] = AL["Priest"],  -- =q9=#c5#
-	["#c6#"] = AL["Rogue"],   -- =q12=#c6#
-	["#c7#"] = AL["Shaman"],  -- =q15=#c7#
+	["#c5#"] = AL["Priest"], -- =q9=#c5#
+	["#c6#"] = AL["Rogue"], -- =q12=#c6#
+	["#c7#"] = AL["Shaman"], -- =q15=#c7#
 	["#c8#"] = AL["Warlock"], -- =q11=#c8#
 	["#c9#"] = AL["Warrior"], -- =q17=#c9#
 	-- Skill
@@ -407,15 +407,15 @@ local TextMap = {
 	["#t05s8#"] = AL["Deathmist Raiment"],
 	["#t05s9#"] = AL["Battlegear of Heroism"],
 	-- T1 Sets
-	["#t1s1#"] =  AL["Cenarion Raiment"],
-	["#t1s2#"] =  AL["Giantstalker Armor"],
-	["#t1s3#"] =  AL["Arcanist Regalia"],
-	["#t1s4#"] =  AL["Lawbringer Armor"],
-	["#t1s5#"] =  AL["Vestments of Prophecy"],
-	["#t1s6#"] =  AL["Nightslayer Armor"],
-	["#t1s7#"] =  AL["The Earthfury"],
-	["#t1s8#"] =  AL["Felheart Raiment"],
-	["#t1s9#"] =  AL["Battlegear of Might"],
+	["#t1s1#"] = AL["Cenarion Raiment"],
+	["#t1s2#"] = AL["Giantstalker Armor"],
+	["#t1s3#"] = AL["Arcanist Regalia"],
+	["#t1s4#"] = AL["Lawbringer Armor"],
+	["#t1s5#"] = AL["Vestments of Prophecy"],
+	["#t1s6#"] = AL["Nightslayer Armor"],
+	["#t1s7#"] = AL["The Earthfury"],
+	["#t1s8#"] = AL["Felheart Raiment"],
+	["#t1s9#"] = AL["Battlegear of Might"],
 	-- T2 Sets
 	["#t2s1#"] = AL["Stormrage Raiment"],
 	["#t2s2#"] = AL["Dragonstalker Armor"],
@@ -494,16 +494,16 @@ local TextMap = {
 	["#pvps1#"] = AL["Epic Set"],
 	["#pvps2#"] = AL["Rare Set"],
 	-- Text colouring
-	["=q0="] = "|cff9d9d9d",  -- poor
-	["=q1="] = "|cffFFFFFF",  -- common
-	["=q2="] = "|cff1eff00",  -- uncommon
-	["=q3="] = "|cff0070dd",  -- rare
-	["=q4="] = "|cffa335ee",  -- epic
-	["=q5="] = "|cffFF8000",  -- legendary
-	["=q6="] = "|cffFF0000",  -- red
-	["=q7="] = "|cff03c0f6",  -- "dropped by" colour
-	["=q8="] = "|cff2773ff",  -- alliance colour, alliance rank colour
-	["=q9="] = "|cffffffff",  -- priest colour
+	["=q0="] = "|cff9d9d9d", -- poor
+	["=q1="] = "|cffFFFFFF", -- common
+	["=q2="] = "|cff1eff00", -- uncommon
+	["=q3="] = "|cff0070dd", -- rare
+	["=q4="] = "|cffa335ee", -- epic
+	["=q5="] = "|cffFF8000", -- legendary
+	["=q6="] = "|cffFF0000", -- red
+	["=q7="] = "|cff03c0f6", -- "dropped by" colour
+	["=q8="] = "|cff2773ff", -- alliance colour, alliance rank colour
+	["=q9="] = "|cffffffff", -- priest colour
 	["=q10="] = "|cff68ccef", -- mage colour
 	["=q11="] = "|cff9382c9", -- warlock colour
 	["=q12="] = "|cfffff468", -- rogue colour
@@ -597,7 +597,7 @@ local TextMap = {
 	["#ccenarius#"] = "Interface\\Icons\\INV_Jewelry_Necklace_12",
 	["#zandalar#"] = "Interface\\Icons\\INV_Misc_Coin_08",
 	-- Challenges
-    ["#lvl1#"] = AL["Level One Lunatic Challenge"],
+	["#lvl1#"] = AL["Level One Lunatic Challenge"],
 }
 
 local gsub = string.gsub
@@ -605,7 +605,7 @@ local SortedTextMap = {}
 for k, v in pairs(TextMap) do
 	tinsert(SortedTextMap, { key = k, value = v })
 end
-table.sort(SortedTextMap, function(a,b) return strlen(a.value) > strlen(b.value) end)
+table.sort(SortedTextMap, function(a, b) return strlen(a.value) > strlen(b.value) end)
 
 function AtlasLoot_FixText(text)
 	if not text then return nil end

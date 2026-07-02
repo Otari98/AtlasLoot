@@ -47,8 +47,8 @@ local function AddSourceLine(tooltip, sourceStr)
 	end
 
 	for i = 1, numLines do
-		left = _G[name .. "TextLeft" .. i]
-		right = _G[name .. "TextRight" .. i]
+		left = _G[name.."TextLeft"..i]
+		right = _G[name.."TextRight"..i]
 		leftText = left:GetText()
 		rightText = right:IsShown() and right:GetText()
 		leftR, leftG, leftB = left:GetTextColor()
@@ -72,7 +72,7 @@ local function AddSourceLine(tooltip, sourceStr)
 	if numLines < 28 then
 		tooltip:AddLine(sourceStr)
 	elseif lines[2][1] then
-		lines[2][1] = sourceStr .. "\n" .. lines[2][1]
+		lines[2][1] = sourceStr.."\n"..lines[2][1]
 	end
 
 	for i = 2, getn(lines) do
@@ -105,7 +105,7 @@ local function ExtendTooltip(tooltip)
 				lastSourceStr = nil
 				local source = AtlasLoot_Data["AtlasLootSources"][itemID]
 				if source then
-					local str = GREY .. source .. "|r"
+					local str = GREY..source.."|r"
 					lastSourceStr = str
 				end
 			end

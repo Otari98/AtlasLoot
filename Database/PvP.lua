@@ -11,232 +11,232 @@ The English file also contains the loot tables for the battleground loot tables.
 ------------
 AtlasLootBattlegrounds = {
 	BloodRing = {
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"BRRepFriendly1";
-		"BRRepHonored1";
-		"BRRepRevered1";
-		"BRRepExalted1";
-		"BRRepTokens1";
-	};
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"BRRepFriendly1",
+		"BRRepHonored1",
+		"BRRepRevered1",
+		"BRRepExalted1",
+		"BRRepTokens1",
+	},
 	AlteracValleyNorth = {
-		"Stormpike1";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"AVRepFriendly";
-		"AVRepHonored";
-		"AVRepRevered";
-		"AVRepExalted";
-	};
+		"Stormpike1",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"AVRepFriendly",
+		"AVRepHonored",
+		"AVRepRevered",
+		"AVRepExalted",
+	},
 	AlteracValleySouth = {
-		"Frostwolf1";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"AVRepFriendly";
-		"AVRepHonored";
-		"AVRepRevered";
-		"AVRepExalted";
-	};
+		"Frostwolf1",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"AVRepFriendly",
+		"AVRepHonored",
+		"AVRepRevered",
+		"AVRepExalted",
+	},
 	ArathiBasin = {
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"";
-		"ABRepFriendly";
-		"ABRepHonored5059";
-		"ABRepRevered5059";
-		"ABRepExalted";
-	};
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"ABRepFriendly",
+		"ABRepHonored5059",
+		"ABRepRevered5059",
+		"ABRepExalted",
+	},
 	WarsongGulch = {
-		"";
-		"";
-		"";
-		"";
-		"";
-		"WSGRepFriendly";
-		"WSGRepHonored5059";
-		"WSGRepRevered5059";
-		"WSGRepExalted60";
-	};
-};
+		"",
+		"",
+		"",
+		"",
+		"",
+		"WSGRepFriendly",
+		"WSGRepHonored5059",
+		"WSGRepRevered5059",
+		"WSGRepExalted60",
+	},
+}
 
 ----------------------
 -- Loot tables --
 ----------------------
 AtlasLoot_Data["AtlasLootBGItems"] = {
-	EmptyInstance = {};
+	EmptyInstance = {},
 	BRRepFriendly = {
 		{ 60366, "INV_Jewelry_Ring_39", "=q3=Gore Ring of the Gladiator", "=ds=#s13#" },
 		{ 60368, "INV_Jewelry_Ring_30", "=q3=Loop of Field Medicine", "=ds=#s13#" },
 		{ 60367, "INV_Jewelry_Ring_15", "=q3=Auspicious Ring of the Seer", "=ds=#s13#" },
-	};
+	},
 	BRRepHonored = {
 		{ 83421, "INV_Gauntlets_05", "=q3=Bloody Gladiator's Handwraps", "=ds=#a1#, #s9#" },
 		{ 83420, "INV_Belt_04", "=q3=Bloody Gladiator's Sash", "=ds=#a1#, #s10#" },
@@ -249,7 +249,7 @@ AtlasLoot_Data["AtlasLootBGItems"] = {
 		{ 0, "", "", "" },
 		{ 60359, "INV_Gauntlets_31", "=q3=Bloody Gladiator's Gauntlets", "=ds=#a4#, #s9#" },
 		{ 60358, "INV_Belt_12", "=q3=Bloody Gladiator's Girdle", "=ds=#a4#, #s10#" },
-	};
+	},
 	BRRepRevered = {
 		{ 83425, "INV_Bracer_07", "=q3=Bloody Gladiator's Wraps", "=ds=#a1#, #s8#" },
 		{ 83423, "INV_Pants_01", "=q3=Bloody Gladiator's Britches", "=ds=#a1#, #s11#" },
@@ -266,7 +266,7 @@ AtlasLoot_Data["AtlasLootBGItems"] = {
 		{ 60362, "INV_Bracer_07", "=q3=Bloody Gladiator's Bracers", "=ds=#a4#, #s8#" },
 		{ 60360, "INV_Pants_Plate_20", "=q3=Bloody Gladiator's Legguards", "=ds=#a4#, #s11#" },
 		{ 60361, "INV_Boots_Plate_04", "=q3=Bloody Gladiator's Greaves", "=ds=#a4#, #s12#" },
-	};
+	},
 	BRRepExalted = {
 		{ 83428, "INV_Belt_26", "=q4=Bloody Gladiator's Circlet", "=ds=#a1#, #s1#" },
 		{ 83427, "INV_Shoulder_05", "=q4=Bloody Gladiator's Amice", "=ds=#a1#, #s3#" },
@@ -286,13 +286,13 @@ AtlasLoot_Data["AtlasLootBGItems"] = {
 		{ 60004, "INV_Jewelry_Ring_12", "=q4=Loop of Triage", "=ds=#s13#" },
 		{ 60005, "INV_Jewelry_Ring_09", "=q4=Signet of the Battlecaster", "=ds=#s13#" },
 		{ 60006, "INV_Jewelry_Ring_23", "=q4=Ring of Blood", "=ds=#s13#" },
-	};
+	},
 	BRRepTokens = {
 		{ 53017, "INV_Misc_Note_01", "=q3=Formula: Enchant Gloves - Major Strength", "=ds=#p4# (300)" },
 		{ 61803, "INV_Scroll_05", "=q3=Plans: Bloody Belt Buckle", "=ds=#p2# (300)" },
 		{ 61799, "INV_Scroll_04", "=q4=Plans: Ornate Bloodstone Dagger", "=ds=#p2# (300)" },
 		{ 53016, "INV_Scroll_03", "=q3=Recipe: Gurubashi Gumbo", "=ds=#p3# (300)" },
-	};
+	},
 	AVRepFriendly = {
 		{ 0, "INV_BannerPVP_02", "=q8=#m7#", "=q7=#b1#" },
 		{ 0, "", "", "" },
@@ -317,7 +317,7 @@ AtlasLoot_Data["AtlasLootBGItems"] = {
 		{ 17352, "INV_Potion_81", "=q1=Superior Mana Draught", "=ds=#e1#" },
 		{ 0, "", "", "" },
 		{ 19031, "INV_Shirt_GuildTabard_01", "=q1=Frostwolf Battle Tabard", "=ds=#s7#" },
-	};
+	},
 	AVRepHonored = {
 		{ 0, "INV_BannerPVP_02", "=q8=#m7#", "=q7=#b1#" },
 		{ 0, "", "", "" },
@@ -349,7 +349,7 @@ AtlasLoot_Data["AtlasLootBGItems"] = {
 		{ 19301, "INV_Misc_Food_33", "=q1=Alterac Manna Biscuit", "=ds=#e2#" },
 		{ 17348, "INV_Potion_38", "=q1=Major Healing Draught", "=ds=#e1#" },
 		{ 17351, "INV_Potion_80", "=q1=Major Mana Draught", "=ds=#e1#" },
-	};
+	},
 	AVRepRevered = {
 		{ 0, "INV_BannerPVP_02", "=q8=#m7#", "=q7=#b1#" },
 		{ 0, "", "", "" },
@@ -374,7 +374,7 @@ AtlasLoot_Data["AtlasLootBGItems"] = {
 		{ 19099, "INV_Weapon_ShortBlade_06", "=q3=Glacial Blade", "=ds=#h1#, #w4#" },
 		{ 19103, "INV_Axe_22", "=q3=Frostbite", "=ds=#h1#, #w1#" },
 		{ 19101, "INV_Staff_30", "=q3=Whiteout Staff", "=ds=#w9#" },
-	};
+	},
 	AVRepExalted = {
 		{ 0, "INV_BannerPVP_02", "=q8=#m7#", "=q7=#b1#" },
 		{ 0, "", "", "" },
@@ -406,7 +406,7 @@ AtlasLoot_Data["AtlasLootBGItems"] = {
 		{ 19321, "Spell_Frost_ChillingArmor", "=q4=The Immovable Object", "=ds=#w8#" },
 		{ 19324, "INV_Sword_29", "=q4=The Lobotomizer", "=ds=#h1#, #w4#" },
 		{ 19323, "INV_Hammer_13", "=q4=The Unstoppable Force", "=ds=#h2#, #w6#" },
-	};
+	},
 	AVKorrak = {
 		{ 13080, "INV_Chest_Cloth_02", "=q3=Widow's Clutch", "=ds=#s5#, #a1#", "20%" },
 		{ 12970, "INV_Chest_Plate10", "=q3=General's Ceremonial Plate", "=ds=#s5#, #a4#", "20%" },
@@ -415,7 +415,7 @@ AtlasLoot_Data["AtlasLootBGItems"] = {
 		{ 21135, "INV_ThrowingAxe_06", "=q3=Assassin's Throwing Axe", "=ds=#w11#, 100", "20%" },
 		{ 0, "", "", "" },
 		{ 17108, "INV_Jewelry_Ring_22", "=q4=Mark of Deflection", "=ds=#s13#", "20%" },
-	};
+	},
 	AVLokholarIvus = {
 		{ 19105, "INV_Helmet_61", "=q3=Frost Runed Headdress", "=ds=#s1#, #a1#" },
 		{ 19113, "INV_Bracer_08", "=q3=Yeti Hide Bracers", "=ds=#s8#, #a2#" },
@@ -425,7 +425,7 @@ AtlasLoot_Data["AtlasLootBGItems"] = {
 		{ 19109, "INV_Jewelry_Ring_35", "=q3=Deep Rooted Ring", "=ds=#s13#" },
 		{ 0, "", "", "" },
 		{ 19110, "INV_Sword_47", "=q3=Cold Forged Blade", "=ds=#h1#, #w10#" },
-	};
+	},
 	ABRepFriendly = {
 		{ 0, "INV_BannerPVP_02", "=q8=#m7#", "=q7=#b5#" },
 		{ 0, "", "", "" },
@@ -457,7 +457,7 @@ AtlasLoot_Data["AtlasLootBGItems"] = {
 		{ 20234, "INV_Misc_Bandage_12", "=q1=Defiler's Runecloth Bandage", "=ds=#e4#" },
 		{ 17349, "INV_Potion_39", "=q1=Superior Healing Draught", "=ds=#e1#" },
 		{ 17352, "INV_Potion_81", "=q1=Superior Mana Draught", "=ds=#e1#" },
-	};
+	},
 	ABRepHonored2029 = {
 		{ 0, "", "", "" },
 		{ 0, "INV_BannerPVP_02", "=q8=#m7#", "=q7=#b5#" },
@@ -483,7 +483,7 @@ AtlasLoot_Data["AtlasLootBGItems"] = {
 		{ 20152, "INV_Belt_20", "=q3=Defiler's Chain Girdle", "=ds=#s10#, #a2# =q14=#c2#=ds=, =q15=#c7#" },
 		{ 20197, "INV_Belt_20", "=q3=Defiler's Mail Girdle", "=ds=#s10#, #a2# =q14=#c2#=ds=, =q15=#c7#" },
 		{ 20207, "INV_Belt_14", "=q3=Defiler's Plate Girdle", "=ds=#s10#, #a3# =q17=#c9#" },
-	};
+	},
 	ABRepHonored3039 = {
 		{ 0, "", "", "" },
 		{ 0, "INV_BannerPVP_02", "=q8=#m7#", "=q7=#b5#" },
@@ -506,7 +506,7 @@ AtlasLoot_Data["AtlasLootBGItems"] = {
 		{ 20166, "INV_Belt_17", "=q3=Defiler's Cloth Girdle", "=ds=#s10#, #a1# =q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#" },
 		{ 20192, "INV_Belt_17", "=q3=Defiler's Leather Girdle", "=ds=#s10#, #a2# =q12=#c6#=ds=, =q13=#c1#" },
 		{ 20173, "INV_Belt_17", "=q3=Defiler's Lizardhide Girdle", "=ds=#s10#, #a2# =q12=#c6#=ds=, =q13=#c1#" },
-	};
+	},
 	ABRepHonored4049 = {
 		{ 0, "", "", "" },
 		{ 0, "INV_BannerPVP_02", "=q8=#m7#", "=q7=#b5#" },
@@ -536,7 +536,7 @@ AtlasLoot_Data["AtlasLootBGItems"] = {
 		{ 20153, "INV_Belt_20", "=q3=Defiler's Chain Girdle", "=ds=#s10#, #a3# =q14=#c2#=ds=, =q15=#c7#" },
 		{ 20198, "INV_Belt_20", "=q3=Defiler's Mail Girdle", "=ds=#s10#, #a3# =q14=#c2#=ds=, =q15=#c7#" },
 		{ 20206, "INV_Belt_14", "=q3=Defiler's Plate Girdle", "=ds=#s10#, #a4# =q17=#c9#" },
-	};
+	},
 	ABRepHonored5059 = {
 		{ 0, "", "", "" },
 		{ 0, "INV_BannerPVP_02", "=q8=#m7#", "=q7=#b5#" },
@@ -562,7 +562,7 @@ AtlasLoot_Data["AtlasLootBGItems"] = {
 		{ 20150, "INV_Belt_20", "=q3=Defiler's Chain Girdle", "=ds=#s10#, #a3# =q14=#c2#=ds=, =q15=#c7#" },
 		{ 20195, "INV_Belt_20", "=q3=Defiler's Mail Girdle", "=ds=#s10#, #a3# =q14=#c2#=ds=, =q15=#c7#" },
 		{ 20204, "INV_Belt_14", "=q3=Defiler's Plate Girdle", "=ds=#s10#, #a4# =q17=#c9#" },
-	};
+	},
 	ABRepRevered2029 = {
 		{ 0, "", "", "" },
 		{ 0, "INV_BannerPVP_02", "=q8=#m7#", "=q7=#b5#" },
@@ -588,7 +588,7 @@ AtlasLoot_Data["AtlasLootBGItems"] = {
 		{ 20157, "INV_Boots_Chain_02", "=q3=Defiler's Chain Greaves", "=ds=#s12#, #a2# =q14=#c2#=ds=, =q15=#c7#" },
 		{ 20201, "INV_Boots_Chain_02", "=q3=Defiler's Mail Greaves", "=ds=#s12#, #a2# =q14=#c2#=ds=, =q15=#c7#" },
 		{ 20210, "INV_Boots_Plate_04", "=q3=Defiler's Plate Greaves", "=ds=#s12#, #a3# =q17=#c9#" },
-	};
+	},
 	ABRepRevered3039 = {
 		{ 0, "", "", "" },
 		{ 0, "INV_BannerPVP_02", "=q8=#m7#", "=q7=#b5#" },
@@ -611,7 +611,7 @@ AtlasLoot_Data["AtlasLootBGItems"] = {
 		{ 20161, "INV_Boots_Cloth_07", "=q3=Defiler's Cloth Boots", "=ds=#s12#, #a1# =q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#" },
 		{ 20187, "INV_Boots_Cloth_05", "=q3=Defiler's Leather Boots", "=ds=#s12#, #a2# =q12=#c6#=ds=, =q13=#c1#" },
 		{ 20168, "INV_Boots_Cloth_04", "=q3=Defiler's Lizardhide Boots", "=ds=#s12#, #a2# =q12=#c6#=ds=, =q13=#c1#" },
-	};
+	},
 	ABRepRevered4049 = {
 		{ 0, "", "", "" },
 		{ 0, "INV_BannerPVP_02", "=q8=#m7#", "=q7=#b5#" },
@@ -641,7 +641,7 @@ AtlasLoot_Data["AtlasLootBGItems"] = {
 		{ 20156, "INV_Boots_Chain_02", "=q3=Defiler's Chain Greaves", "=ds=#s12#, #a3# =q14=#c2#=ds=, =q15=#c7#" },
 		{ 20200, "INV_Boots_Chain_02", "=q3=Defiler's Mail Greaves", "=ds=#s12#, #a3# =q14=#c2#=ds=, =q15=#c7#" },
 		{ 20209, "INV_Boots_Plate_04", "=q3=Defiler's Plate Greaves", "=ds=#s12#, #a4# =q17=#c9#" },
-	};
+	},
 	ABRepRevered5059 = {
 		{ 0, "", "", "" },
 		{ 0, "INV_BannerPVP_02", "=q8=#m7#", "=q7=#b5#" },
@@ -667,7 +667,7 @@ AtlasLoot_Data["AtlasLootBGItems"] = {
 		{ 20154, "INV_Boots_Chain_02", "=q3=Defiler's Chain Greaves", "=ds=#s12#, #a3# =q14=#c2#=ds=, =q15=#c7#" },
 		{ 20199, "INV_Boots_Chain_02", "=q3=Defiler's Mail Greaves", "=ds=#s12#, #a3# =q14=#c2#=ds=, =q15=#c7#" },
 		{ 20208, "INV_Boots_Plate_04", "=q3=Defiler's Plate Greaves", "=ds=#s12#, #a4# =q17=#c9#" },
-	};
+	},
 	ABRepExalted = {
 		{ 0, "", "", "" },
 		{ 0, "INV_BannerPVP_02", "=q8=#m7#", "=q7=#b5#" },
@@ -698,7 +698,7 @@ AtlasLoot_Data["AtlasLootBGItems"] = {
 		{ 20220, "INV_Wand_04", "=q4=Ironbark Staff", "=ds=#w9#" },
 		{ 0, "", "", "" },
 		{ 20131, "INV_Shirt_GuildTabard_01", "=q1=Battle Tabard of the Defilers", "=q1=#m4# =ds=#s7#" },
-	};
+	},
 	WSGRepFriendly = {
 		{ 0, "", "", "" },
 		{ 0, "INV_BannerPVP_02", "=q8=#m7#", "=q7=#b3#" },
@@ -730,7 +730,7 @@ AtlasLoot_Data["AtlasLootBGItems"] = {
 		{ 0, "", "", "" },
 		{ 17349, "INV_Potion_39", "=q1=Superior Healing Draught", "=ds=#e1#" },
 		{ 17352, "INV_Potion_81", "=q1=Superior Mana Draught", "=ds=#e1#" },
-	};	
+	},
 	WSGRepFriendly2029 = {
 		{ 0, "", "", "" },
 		{ 0, "INV_BannerPVP_02", "=q8=#m7#", "=q7=#b3#" },
@@ -755,7 +755,7 @@ AtlasLoot_Data["AtlasLootBGItems"] = {
 		{ 0, "", "", "" },
 		{ 19062, "INV_Misc_Food_09", "=q1=Warsong Gulch Field Ration", "=ds=#e2#" },
 		{ 19068, "INV_Misc_Bandage_02", "=q1=Warsong Gulch Silk Bandage", "=ds=#e4#" },
-	};
+	},
 	WSGRepFriendly3039 = {
 		{ 0, "", "", "" },
 		{ 0, "INV_BannerPVP_02", "=q8=#m7#", "=q7=#b3#" },
@@ -782,7 +782,7 @@ AtlasLoot_Data["AtlasLootBGItems"] = {
 		{ 19067, "INV_Misc_Bandage_20", "=q1=Warsong Gulch Mageweave Bandage", "=ds=#e4#" },
 		{ 17349, "INV_Potion_39", "=q1=Superior Healing Draught", "=ds=#e1#" },
 		{ 17352, "INV_Potion_81", "=q1=Superior Mana Draught", "=ds=#e1#" },
-	};
+	},
 	WSGRepFriendly4049 = {
 		{ 0, "", "", "" },
 		{ 0, "INV_BannerPVP_02", "=q8=#m7#", "=q7=#b3#" },
@@ -807,7 +807,7 @@ AtlasLoot_Data["AtlasLootBGItems"] = {
 		{ 0, "", "", "" },
 		{ 19060, "INV_Misc_Food_33", "=q1=Warsong Gulch Enriched Ration", "=ds=#e2#" },
 		{ 19066, "INV_Misc_Bandage_12", "=q1=Warsong Gulch Runecloth Bandage", "=ds=#e4#" },
-	};
+	},
 	WSGRepHonored1019 = {
 		{ 0, "", "", "" },
 		{ 0, "INV_BannerPVP_02", "=q8=#m7#", "=q7=#b3#" },
@@ -831,7 +831,7 @@ AtlasLoot_Data["AtlasLootBGItems"] = {
 		{ 20427, "INV_Misc_Cape_18", "=q3=Battle Healer's Cloak", "=ds=#s4#" },
 		{ 20426, "INV_Jewelry_Ring_20", "=q3=Advisor's Ring", "=ds=#s13#" },
 		{ 20429, "INV_Jewelry_Ring_21", "=q3=Legionnaire's Band", "=ds=#s13#" },
-	};
+	},
 	WSGRepHonored2029 = {
 		{ 0, "", "", "" },
 		{ 0, "INV_BannerPVP_02", "=q8=#m7#", "=q7=#b3#" },
@@ -855,7 +855,7 @@ AtlasLoot_Data["AtlasLootBGItems"] = {
 		{ 19529, "INV_Misc_Cape_18", "=q3=Battle Healer's Cloak", "=ds=#s4#" },
 		{ 19521, "INV_Jewelry_Ring_20", "=q3=Advisor's Ring", "=ds=#s13#" },
 		{ 19513, "INV_Jewelry_Ring_21", "=q3=Legionnaire's Band", "=ds=#s13#" },
-	};
+	},
 	WSGRepHonored3039 = {
 		{ 0, "", "", "" },
 		{ 0, "INV_BannerPVP_02", "=q8=#m7#", "=q7=#b3#" },
@@ -879,7 +879,7 @@ AtlasLoot_Data["AtlasLootBGItems"] = {
 		{ 19528, "INV_Misc_Cape_18", "=q3=Battle Healer's Cloak", "=ds=#s4#" },
 		{ 19520, "INV_Jewelry_Ring_20", "=q3=Advisor's Ring", "=ds=#s13#" },
 		{ 19512, "INV_Jewelry_Ring_21", "=q3=Legionnaire's Band", "=ds=#s13#" },
-	};
+	},
 	WSGRepHonored4049 = {
 		{ 0, "", "", "" },
 		{ 0, "INV_BannerPVP_02", "=q8=#m7#", "=q7=#b3#" },
@@ -906,7 +906,7 @@ AtlasLoot_Data["AtlasLootBGItems"] = {
 		{ 0, "", "", "" },
 		{ 17348, "INV_Potion_38", "=q1=Major Healing Draught", "=ds=#e1#" },
 		{ 17351, "INV_Potion_80", "=q1=Major Mana Draught", "=ds=#e1#" },
-	};
+	},
 	WSGRepHonored5059 = {
 		{ 0, "", "", "" },
 		{ 0, "INV_BannerPVP_02", "=q8=#m7#", "=q7=#b3#" },
@@ -930,7 +930,7 @@ AtlasLoot_Data["AtlasLootBGItems"] = {
 		{ 19526, "INV_Misc_Cape_18", "=q3=Battle Healer's Cloak", "=ds=#s4#" },
 		{ 19518, "INV_Jewelry_Ring_20", "=q3=Advisor's Ring", "=ds=#s13#" },
 		{ 19510, "INV_Jewelry_Ring_21", "=q3=Legionnaire's Band", "=ds=#s13#" },
-	};
+	},
 	WSGRepRevered1019 = {
 		{ 0, "", "", "" },
 		{ 0, "INV_BannerPVP_02", "=q8=#m7#", "=q7=#b3#" },
@@ -954,7 +954,7 @@ AtlasLoot_Data["AtlasLootBGItems"] = {
 		{ 20441, "INV_Weapon_ShortBlade_15", "=q3=Scout's Blade", "=ds=#h1#, #w4#" },
 		{ 20430, "INV_Sword_31", "=q3=Legionnaire's Sword", "=ds=#h1#, #w10#" },
 		{ 20425, "INV_Staff_25", "=q3=Advisor's Gnarled Staff", "=ds=#w9#" },
-	};
+	},
 	WSGRepRevered2029 = {
 		{ 0, "", "", "" },
 		{ 0, "INV_BannerPVP_02", "=q8=#m7#", "=q7=#b3#" },
@@ -978,7 +978,7 @@ AtlasLoot_Data["AtlasLootBGItems"] = {
 		{ 19545, "INV_Weapon_ShortBlade_15", "=q3=Scout's Blade", "=ds=#h1#, #w4#" },
 		{ 19553, "INV_Sword_31", "=q3=Legionnaire's Sword", "=ds=#h1#, #w10#" },
 		{ 19569, "INV_Staff_25", "=q3=Advisor's Gnarled Staff", "=ds=#w9#" },
-	};
+	},
 	WSGRepRevered3039 = {
 		{ 0, "", "", "" },
 		{ 0, "INV_BannerPVP_02", "=q8=#m7#", "=q7=#b3#" },
@@ -1002,7 +1002,7 @@ AtlasLoot_Data["AtlasLootBGItems"] = {
 		{ 19544, "INV_Weapon_ShortBlade_15", "=q3=Scout's Blade", "=ds=#h1#, #w4#" },
 		{ 19552, "INV_Sword_31", "=q3=Legionnaire's Sword", "=ds=#h1#, #w10#" },
 		{ 19568, "INV_Staff_25", "=q3=Advisor's Gnarled Staff", "=ds=#w9#" },
-	};
+	},
 	WSGRepRevered4049 = {
 		{ 0, "", "", "" },
 		{ 0, "INV_BannerPVP_02", "=q8=#m7#", "=q7=#b3#" },
@@ -1026,7 +1026,7 @@ AtlasLoot_Data["AtlasLootBGItems"] = {
 		{ 19543, "INV_Weapon_ShortBlade_15", "=q3=Scout's Blade", "=ds=#h1#, #w4#" },
 		{ 19551, "INV_Sword_31", "=q3=Legionnaire's Sword", "=ds=#h1#, #w10#" },
 		{ 19567, "INV_Staff_25", "=q3=Advisor's Gnarled Staff", "=ds=#w9#" },
-	};
+	},
 	WSGRepRevered5059 = {
 		{ 0, "", "", "" },
 		{ 0, "INV_BannerPVP_02", "=q8=#m7#", "=q7=#b3#" },
@@ -1050,7 +1050,7 @@ AtlasLoot_Data["AtlasLootBGItems"] = {
 		{ 19542, "INV_Weapon_ShortBlade_15", "=q3=Scout's Blade", "=ds=#h1#, #w4#" },
 		{ 19550, "INV_Sword_31", "=q3=Legionnaire's Sword", "=ds=#h1#, #w10#" },
 		{ 19566, "INV_Staff_25", "=q3=Advisor's Gnarled Staff", "=ds=#w9#" },
-	};
+	},
 	WSGRepExalted4049 = {
 		{ 0, "", "", "" },
 		{ 0, "INV_BannerPVP_02", "=q8=#m7#", "=q7=#b3#" },
@@ -1074,7 +1074,7 @@ AtlasLoot_Data["AtlasLootBGItems"] = {
 		{ 19590, "INV_Bracer_12", "=q4=Forest Stalker's Bracers", "=ds=#s8#, #a2#" },
 		{ 19584, "INV_Bracer_03", "=q4=Windtalker's Wristguards", "=ds=#s8#, #a3#" },
 		{ 19581, "INV_Bracer_06", "=q4=Berserker Bracers", "=ds=#s8#, #a4#" },
-	};
+	},
 	WSGRepExalted5059 = {
 		{ 0, "", "", "" },
 		{ 0, "INV_BannerPVP_02", "=q8=#m7#", "=q7=#b3#" },
@@ -1098,7 +1098,7 @@ AtlasLoot_Data["AtlasLootBGItems"] = {
 		{ 19589, "INV_Bracer_12", "=q4=Forest Stalker's Bracers", "=ds=#s8#, #a2#" },
 		{ 19583, "INV_Bracer_03", "=q4=Windtalker's Wristguards", "=ds=#s8#, #a3#" },
 		{ 19580, "INV_Bracer_06", "=q4=Berserker Bracers", "=ds=#s8#, #a4#" },
-	};
+	},
 	WSGRepExalted60 = {
 		{ 0, "", "", "" },
 		{ 0, "INV_BannerPVP_02", "=q8=#m7#", "=q7=#b3#" },
@@ -1130,8 +1130,8 @@ AtlasLoot_Data["AtlasLootBGItems"] = {
 		{ 22651, "INV_Pants_Plate_20", "=q4=Outrider's Plate Legguards", "=ds=#s11#, #a4#" },
 		{ 0, "", "", "" },
 		{ 19505, "INV_Shirt_GuildTabard_01", "=q1=Warsong Battle Tabard", "=ds=#s7#" },
-	};
-};
+	},
+}
 
 AtlasLoot_Data["AtlasLootGeneralPvPItems"] = {
 	PVPWeapons1 = {
@@ -1165,7 +1165,7 @@ AtlasLoot_Data["AtlasLootGeneralPvPItems"] = {
 		{ 16345, "INV_Sword_11", "=q4=High Warlord's Blade", "=ds=#h1#, #w10#" },
 		{ 23467, "INV_Sword_05", "=q4=High Warlord's Quickblade", "=ds=#h1#, #w10#" },
 		{ 18877, "INV_Sword_48", "=q4=High Warlord's Greatsword", "=ds=#h2#, #w10#" },
-	};
+	},
 	PVPWeapons2 = {
 		{ 0, "INV_BannerPVP_02", "=q8=#m7#", "=q7=Rank 14" },
 		{ 0, "", "", "" },
@@ -1192,11 +1192,11 @@ AtlasLoot_Data["AtlasLootGeneralPvPItems"] = {
 		{ 18826, "INV_Shield_19", "=q4=High Warlord's Shield Wall", "=ds=#w8#" },
 		{ 23468, "INV_Misc_Book_15", "=q4=High Warlord's Tome of Destruction", "=ds=#s15#" },
 		{ 23469, "INV_Misc_Book_14", "=q4=High Warlord's Tome of Mending", "=ds=#s15#" },
-	};
+	},
 	PvP60Accessories1 = {
 		{ 0, "", "", "" },
 		{ 0, "INV_BannerPVP_02", "=q8=#m7#", "=q7=Rank 2" },
-		{ 0,"","","" },
+		{ 0, "", "", "" },
 		{ 18862, "INV_Jewelry_TrinketPVP_01", "=q3=Insignia of the Alliance", "=ds=#s14# =q9=#c5#" },
 		{ 18859, "INV_Jewelry_TrinketPVP_01", "=q3=Insignia of the Alliance", "=ds=#s14# =q10=#c3#" },
 		{ 18858, "INV_Jewelry_TrinketPVP_01", "=q3=Insignia of the Alliance", "=ds=#s14# =q11=#c8#" },
@@ -1205,13 +1205,13 @@ AtlasLoot_Data["AtlasLootGeneralPvPItems"] = {
 		{ 18856, "INV_Jewelry_TrinketPVP_01", "=q3=Insignia of the Alliance", "=ds=#s14# =q14=#c2#" },
 		{ 18864, "INV_Jewelry_TrinketPVP_01", "=q3=Insignia of the Alliance", "=ds=#s14# =q16=#c4#" },
 		{ 18854, "INV_Jewelry_TrinketPVP_01", "=q3=Insignia of the Alliance", "=ds=#s14# =q17=#c9#" },
-		{ 0,"","","" },
-		{ 0,"","","" },
-		{ 0,"","","" },
-		{ 0,"","","" },
-		{ 0,"","","" },
+		{ 0, "", "", "" },
+		{ 0, "", "", "" },
+		{ 0, "", "", "" },
+		{ 0, "", "", "" },
+		{ 0, "", "", "" },
 		{ 0, "INV_BannerPVP_01", "=q6=#m6#", "=q18=Rank 2" },
-		{ 0,"","","" },
+		{ 0, "", "", "" },
 		{ 18851, "INV_Jewelry_TrinketPVP_02", "=q3=Insignia of the Horde", "=ds=#s14# =q9=#c5#" },
 		{ 18850, "INV_Jewelry_TrinketPVP_02", "=q3=Insignia of the Horde", "=ds=#s14# =q10=#c3#" },
 		{ 18852, "INV_Jewelry_TrinketPVP_02", "=q3=Insignia of the Horde", "=ds=#s14# =q11=#c8#" },
@@ -1220,69 +1220,69 @@ AtlasLoot_Data["AtlasLootGeneralPvPItems"] = {
 		{ 18846, "INV_Jewelry_TrinketPVP_02", "=q3=Insignia of the Horde", "=ds=#s14# =q14=#c2#" },
 		{ 18845, "INV_Jewelry_TrinketPVP_02", "=q3=Insignia of the Horde", "=ds=#s14# =q15=#c7#" },
 		{ 18834, "INV_Jewelry_TrinketPVP_02", "=q3=Insignia of the Horde", "=ds=#s14# =q17=#c9#" },
-	};
+	},
 	PvP60Accessories2 = {
 		{ 18442, "INV_Misc_MonsterScales_09", "=q3=Master Sergeant's Insignia", "=ds=#s2# =q7=Rank 4" },
 		{ 18444, "INV_Misc_MonsterScales_09", "=q3=Master Sergeant's Insignia", "=ds=#s2# =q7=Rank 4" },
 		{ 18443, "INV_Misc_MonsterScales_09", "=q3=Master Sergeant's Insignia", "=ds=#s2# =q7=Rank 4" },
-		{ 0,"","","" },
+		{ 0, "", "", "" },
 		{ 18440, "INV_Misc_Cape_21", "=q3=Sergeant's Cape", "=ds=#s4# =q7=Rank 3" },
 		{ 18441, "INV_Misc_Cape_21", "=q3=Sergeant's Cape", "=ds=#s4# =q7=Rank 3" },
 		{ 16342, "INV_Misc_Cape_21", "=q3=Sergeant's Cape", "=ds=#s4# =q7=Rank 3" },
-		{ 0,"","","" },
+		{ 0, "", "", "" },
 		{ 15196, "INV_Misc_TabardPVP_01", "=q1=Private's Tabard", "=ds=#s7# =q7=Rank 1" },
 		{ 15198, "INV_Misc_TabardPVP_03", "=q1=Knight's Colors", "=ds=#s7# =q7=Rank 6" },
-		{ 0,"","","" },
+		{ 0, "", "", "" },
 		{ 18606, "INV_BannerPVP_02", "=q1=Alliance Battle Standard", "=ds=#m8# =q7=Rank 9" },
-		{ 0,"","","" },
+		{ 0, "", "", "" },
 		{ 18839, "INV_Potion_39", "=q1=Combat Healing Potion", "=ds=#e2#" },
 		{ 18841, "INV_Potion_81", "=q1=Combat Mana Potion", "=ds=#e2#" },
 		{ 18457, "INV_Bracer_07", "=q3=Sergeant Major's Silk Cuffs", "=ds=#s8#, #a1# =q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8# =q7=Rank 5" },
 		{ 18456, "INV_Bracer_07", "=q3=Sergeant Major's Silk Cuffs", "=ds=#s8#, #a1# =q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8# =q7=Rank 5" },
-		{ 0,"","","" },
+		{ 0, "", "", "" },
 		{ 18455, "INV_Bracer_03", "=q3=Sergeant Major's Dragonhide Armsplints", "=ds=#s8#, #a2# =q13=#c1# =q7=Rank 5" },
 		{ 18454, "INV_Bracer_03", "=q3=Sergeant Major's Dragonhide Armsplints", "=ds=#s8#, #a2# =q13=#c1# =q7=Rank 5" },
-		{ 0,"","","" },
+		{ 0, "", "", "" },
 		{ 18453, "INV_Bracer_07", "=q3=Sergeant Major's Leather Armsplints", "=ds=#s8#, #a2# =q12=#c6# =q7=Rank 5" },
 		{ 18452, "INV_Bracer_07", "=q3=Sergeant Major's Leather Armsplints", "=ds=#s8#, #a2# =q12=#c6# =q7=Rank 5" },
-		{ 0,"","","" },
+		{ 0, "", "", "" },
 		{ 18449, "INV_Bracer_06", "=q3=Sergeant Major's Chain Armguards", "=ds=#s8#, #a3# =q14=#c2# =q7=Rank 5" },
 		{ 18448, "INV_Bracer_06", "=q3=Sergeant Major's Chain Armguards", "=ds=#s8#, #a3# =q14=#c2# =q7=Rank 5" },
-		{ 0,"","","" },
+		{ 0, "", "", "" },
 		{ 18447, "INV_Bracer_18", "=q3=Sergeant Major's Plate Wristguards", "=ds=#s8#, #a4# =q17=#c9#=ds=,  =q16=#c4# =q7=Rank 5" },
 		{ 18445, "INV_Bracer_18", "=q3=Sergeant Major's Plate Wristguards", "=ds=#s8#, #a4# =q17=#c9#=ds=,  =q16=#c4# =q7=Rank 5" },
-	};
+	},
 	PvP60Accessories3 = {
 		{ 15200, "INV_Misc_MonsterScales_15", "=q3=Senior Sergeant's Insignia", "=ds=#s2# =q18=Rank 4" },
 		{ 18428, "INV_Misc_MonsterScales_15", "=q3=Senior Sergeant's Insignia", "=ds=#s2# =q18=Rank 4" },
 		{ 16335, "INV_Misc_MonsterScales_15", "=q3=Senior Sergeant's Insignia", "=ds=#s2# =q18=Rank 4" },
-		{ 0,"","","" },
+		{ 0, "", "", "" },
 		{ 18427, "INV_Misc_Cape_07", "=q3=Sergeant's Cloak", "=ds=#s4# =q18=Rank 3" },
 		{ 16341, "INV_Misc_Cape_07", "=q3=Sergeant's Cloak", "=ds=#s4# =q18=Rank 3" },
 		{ 18461, "INV_Misc_Cape_07", "=q3=Sergeant's Cloak", "=ds=#s4# =q18=Rank 3" },
-		{ 0,"","","" },
+		{ 0, "", "", "" },
 		{ 15197, "INV_Misc_TabardPVP_02", "=q1=Scout's Tabard", "=ds=#s7# =q18=Rank 1" },
 		{ 15199, "INV_Misc_TabardPVP_04", "=q1=Stone Guard's Herald", "=ds=#s7# =q18=Rank 6" },
-		{ 0,"","","" },
+		{ 0, "", "", "" },
 		{ 18607, "INV_BannerPVP_01", "=q1=Horde Battle Standard", "=ds=#m8# =q18=Rank 9" },
-		{ 0,"","","" },
+		{ 0, "", "", "" },
 		{ 18839, "INV_Potion_39", "=q1=Combat Healing Potion", "=ds=#e2#" },
 		{ 18841, "INV_Potion_81", "=q1=Combat Mana Potion", "=ds=#e2#" },
 		{ 18437, "INV_Bracer_07", "=q3=First Sergeant's Silk Cuffs", "=ds=#s8#, #a1# =q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8# =q18=Rank 5" },
 		{ 16486, "INV_Bracer_07", "=q3=First Sergeant's Silk Cuffs", "=ds=#s8#, #a1# =q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8# =q18=Rank 5" },
-		{ 0,"","","" },
+		{ 0, "", "", "" },
 		{ 18436, "INV_Bracer_03", "=q3=First Sergeant's Dragonhide Armguards", "=ds=#s8#, #a2# =q13=#c1# =q18=Rank 5" },
 		{ 18434, "INV_Bracer_03", "=q3=First Sergeant's Dragonhide Armguards", "=ds=#s8#, #a2# =q13=#c1# =q18=Rank 5" },
-		{ 0,"","","" },
+		{ 0, "", "", "" },
 		{ 18435, "INV_Bracer_07", "=q3=First Sergeant's Leather Armguards", "=ds=#s8#, #a2# =q12=#c6# =q18=Rank 5" },
 		{ 16497, "INV_Bracer_07", "=q3=First Sergeant's Leather Armguards", "=ds=#s8#, #a2# =q12=#c6# =q18=Rank 5" },
-		{ 0,"","","" },
+		{ 0, "", "", "" },
 		{ 18432, "INV_Bracer_16", "=q3=First Sergeant's Mail Wristguards", "=ds=#s8#, #a3# =q14=#c2#=ds=, =q15=#c7# =q18=Rank 5" },
 		{ 16532, "INV_Bracer_16", "=q3=First Sergeant's Mail Wristguards", "=ds=#s8#, #a3# =q14=#c2#=ds=, =q15=#c7# =q18=Rank 5" },
-		{ 0,"","","" },
+		{ 0, "", "", "" },
 		{ 18430, "INV_Bracer_19", "=q3=First Sergeant's Plate Bracers", "=ds=#s8#, #a4# =q17=#c9# =q18=Rank 5" },
 		{ 18429, "INV_Bracer_19", "=q3=First Sergeant's Plate Bracers", "=ds=#s8#, #a4# =q17=#c9# =q18=Rank 5" },
-	};
+	},
 	PVPHunter = {
 		{ 0, "INV_BannerPVP_02", "=q8=#pvpea2#", "=q7=#pvps1#" },
 		{ 16465, "INV_Helmet_05", "=q4=Field Marshal's Chain Helm", "=ds=#s1#, #a3# =q7=Rank 13" },
@@ -1314,7 +1314,7 @@ AtlasLoot_Data["AtlasLootGeneralPvPItems"] = {
 		{ 22862, "INV_Gauntlets_17", "=q3=Blood Guard's Chain Vices", "=ds=#s9#, #a3# =q18=Rank 7" },
 		{ 22875, "INV_Pants_03", "=q3=Legionnaire's Chain Legguards", "=ds=#s11#, #a3# =q18=Rank 8" },
 		{ 22843, "INV_Boots_05", "=q3=Blood Guard's Chain Greaves", "=ds=#s12#, #a3# =q18=Rank 7" },
-	};
+	},
 	PVPMage = {
 		{ 0, "INV_BannerPVP_02", "=q8=#pvpea3#", "=q7=#pvps1#" },
 		{ 16441, "INV_Helmet_24", "=q4=Field Marshal's Coronet", "=ds=#s1#, #a1# =q7=Rank 13" },
@@ -1346,7 +1346,7 @@ AtlasLoot_Data["AtlasLootGeneralPvPItems"] = {
 		{ 22870, "INV_Gauntlets_06", "=q3=Blood Guard's Silk Handwraps", "=ds=#s9#, #a1# =q18=Rank 7" },
 		{ 22883, "INV_Pants_11", "=q3=Legionnaire's Silk Legguards", "=ds=#s11#, #a1# =q18=Rank 8" },
 		{ 22860, "INV_Boots_05", "=q3=Blood Guard's Silk Walkers", "=ds=#s12#, #a1# =q18=Rank 7" },
-	};
+	},
 	PVPPriest = {
 		{ 0, "INV_BannerPVP_02", "=q8=#pvpea5#", "=q7=#pvps1#" },
 		{ 17602, "INV_Helmet_24", "=q4=Field Marshal's Headdress", "=ds=#s1#, #a1# =q7=Rank 13" },
@@ -1378,7 +1378,7 @@ AtlasLoot_Data["AtlasLootGeneralPvPItems"] = {
 		{ 22869, "INV_Gauntlets_17", "=q3=Blood Guard's Satin Handwraps", "=ds=#s9#, #a1# =q18=Rank 7" },
 		{ 22882, "INV_Pants_11", "=q3=Legionnaire's Satin Legguards", "=ds=#s11#, #a1# =q18=Rank 8" },
 		{ 22859, "INV_Boots_05", "=q3=Blood Guard's Satin Walkers", "=ds=#s12#, #a1# =q18=Rank 7" },
-	};
+	},
 	PVPWarlock = {
 		{ 0, "INV_BannerPVP_02", "=q8=#pvpea7#", "=q7=#pvps1#" },
 		{ 17578, "INV_Helmet_24", "=q4=Field Marshal's Coronal", "=ds=#s1#, #a1# =q7=Rank 13" },
@@ -1410,7 +1410,7 @@ AtlasLoot_Data["AtlasLootGeneralPvPItems"] = {
 		{ 22865, "INV_Gauntlets_19", "=q3=Blood Guard's Dreadweave Handwraps", "=ds=#s9#, #a1# =q18=Rank 7" },
 		{ 22881, "INV_Pants_06", "=q3=Legionnaire's Dreadweave Legguards", "=ds=#s11#, #a1# =q18=Rank 8" },
 		{ 22855, "INV_Boots_05", "=q3=Blood Guard's Dreadweave Walkers", "=ds=#s12#, #a1# =q18=Rank 7" },
-	};
+	},
 	PVPRogue = {
 		{ 0, "INV_BannerPVP_02", "=q8=#pvpea6#", "=q7=#pvps1#" },
 		{ 16455, "INV_Helmet_41", "=q4=Field Marshal's Leather Mask", "=ds=#s1#, #a2# =q7=Rank 13" },
@@ -1442,7 +1442,7 @@ AtlasLoot_Data["AtlasLootGeneralPvPItems"] = {
 		{ 22864, "INV_Gauntlets_15", "=q3=Blood Guard's Leather Grips", "=ds=#s9#, #a2# =q18=Rank 7" },
 		{ 22880, "INV_Pants_08", "=q3=Legionnaire's Leather Legguards", "=ds=#s11#, #a2# =q18=Rank 8" },
 		{ 22856, "INV_Boots_05", "=q3=Blood Guard's Leather Walkers", "=ds=#s12#, #a2# =q18=Rank 7" },
-	};
+	},
 	PVPDruid = {
 		{ 0, "INV_BannerPVP_02", "=q8=#pvpea1#", "=q7=#pvps1#" },
 		{ 16451, "INV_Helmet_41", "=q4=Field Marshal's Dragonhide Helmet", "=ds=#s1#, #a2# =q7=Rank 13" },
@@ -1474,7 +1474,7 @@ AtlasLoot_Data["AtlasLootGeneralPvPItems"] = {
 		{ 22863, "INV_Gauntlets_25", "=q3=Blood Guard's Dragonhide Grips", "=ds=#s9#, #a2# =q18=Rank 7" },
 		{ 22878, "INV_Pants_06", "=q3=Legionnaire's Dragonhide Leggings", "=ds=#s11#, #a2# =q18=Rank 8" },
 		{ 22852, "INV_Boots_08", "=q3=Blood Guard's Dragonhide Treads", "=ds=#s12#, #a2# =q18=Rank 7" },
-	};
+	},
 	PVPShaman = {
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
@@ -1505,8 +1505,8 @@ AtlasLoot_Data["AtlasLootGeneralPvPItems"] = {
 		{ 22876, "INV_Chest_Chain_16", "=q3=Legionnaire's Mail Hauberk", "=ds=#s5#, #a3# =q18=Rank 8" },
 		{ 22867, "INV_Gauntlets_11", "=q3=Blood Guard's Mail Vices", "=ds=#s9#, #a3# =q18=Rank 7" },
 		{ 22887, "INV_Pants_09", "=q3=Legionnaire's Mail Legguards", "=ds=#s11#, #a3# =q18=Rank 8" },
-		{ 22857,"INV_Boots_07","=q3=Blood Guard's Mail Greaves", "=ds=#s12#, #a3# =q18=Rank 7" },
-	};
+		{ 22857, "INV_Boots_07", "=q3=Blood Guard's Mail Greaves", "=ds=#s12#, #a3# =q18=Rank 7" },
+	},
 	PVPWarrior = {
 		{ 0, "INV_BannerPVP_02", "=q8=#pvpea8#", "=q7=#pvps1#" },
 		{ 16478, "INV_Helmet_05", "=q4=Field Marshal's Plate Helm", "=ds=#s1#, #a4# =q7=Rank 13" },
@@ -1538,7 +1538,7 @@ AtlasLoot_Data["AtlasLootGeneralPvPItems"] = {
 		{ 22868, "INV_Gauntlets_26", "=q3=Blood Guard's Plate Gauntlets", "=ds=#s9#, #a4# =q18=Rank 7" },
 		{ 22873, "INV_Pants_06", "=q3=Legionnaire's Plate Leggings", "=ds=#s11#, #a4# =q18=Rank 8" },
 		{ 22858, "INV_Boots_Plate_09", "=q3=Blood Guard's Plate Greaves", "=ds=#s12#, #a4# =q18=Rank 7" },
-	};
+	},
 	PVPPaladin = {
 		{ 0, "INV_BannerPVP_02", "=q8=#pvpea4#", "=q7=#pvps1#" },
 		{ 16474, "INV_Helmet_05", "=q4=Field Marshal's Lamellar Faceguard", "=ds=#s1#, #a4# =q7=Rank 13" },
@@ -1555,7 +1555,7 @@ AtlasLoot_Data["AtlasLootGeneralPvPItems"] = {
 		{ 23274, "INV_Gauntlets_29", "=q3=Knight-Lieutenant's Lamellar Gauntlets", "=ds=#s9#, #a4# =q7=Rank 7" },
 		{ 23273, "INV_Pants_06", "=q3=Knight-Captain's Lamellar Leggings", "=ds=#s11#, #a4# =q7=Rank 8" },
 		{ 23275, "INV_Boots_Plate_03", "=q3=Knight-Lieutenant's Lamellar Sabatons", "=ds=#s12#, #a4# =q7=Rank 7" },
-	};
+	},
 	PvPMountsPvP = {
 		{ 0, "", "", "" },
 		{ 0, "INV_BannerPVP_02", "=q8=#m7#", "=q7=Rank 11" },
@@ -1581,5 +1581,5 @@ AtlasLoot_Data["AtlasLootGeneralPvPItems"] = {
 		{ 18247, "Ability_Mount_Kodo_03", "=q4=Black War Kodo", "=ds=#e7#" },
 		{ 18246, "Ability_Mount_Raptor", "=q4=Whistle of the Black War Raptor", "=ds=#e7#" },
 		{ 18248, "Ability_Mount_Undeadhorse", "=q4=Armored Red Deathcharger", "=ds=#e7#" },
-	};
-};
+	},
+}
