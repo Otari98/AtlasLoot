@@ -285,7 +285,7 @@ function AtlasLootPRE60SetMenu()
 	for i = 1, 30 do
 		local button = _G["AtlasLootMenuItem_" .. i]
 		button.dataSource = AtlasLoot_GetDataSource(button.lootpage)
-		if ( type(button.container) == "table" ) then
+		if type(button.container) == "table" then
 			_G["AtlasLootMenuItem_"..i.."_IconBorder"]:SetVertexColor(1, 0.82, 0)
 			for row = 1, getn(button.container) do
 				for item = 1, getn(button.container[row]) do
@@ -385,7 +385,7 @@ function AtlasLootZGSetMenu()
 	for i = 1, 30 do
 		local button = _G["AtlasLootMenuItem_" .. i]
 		button.dataSource = AtlasLoot_GetDataSource(button.lootpage)
-		if ( type(button.container) == "table" ) then
+		if type(button.container) == "table" then
 			_G["AtlasLootMenuItem_"..i.."_IconBorder"]:SetVertexColor(1, 0.82, 0)
 			for row = 1, getn(button.container) do
 				for item = 1, getn(button.container[row]) do
@@ -464,7 +464,7 @@ function AtlasLootAQ40SetMenu()
 	for i = 1, 30 do
 		local button = _G["AtlasLootMenuItem_" .. i]
 		button.dataSource = AtlasLoot_GetDataSource(button.lootpage)
-		if ( type(button.container) == "table" ) then
+		if type(button.container) == "table" then
 			_G["AtlasLootMenuItem_"..i.."_IconBorder"]:SetVertexColor(1, 0.82, 0)
 			for row = 1, getn(button.container) do
 				for item = 1, getn(button.container[row]) do
@@ -543,7 +543,7 @@ function AtlasLootAQ20SetMenu()
 	for i = 1, 30 do
 		local button = _G["AtlasLootMenuItem_" .. i]
 		button.dataSource = AtlasLoot_GetDataSource(button.lootpage)
-		if ( type(button.container) == "table" ) then
+		if type(button.container) == "table" then
 			_G["AtlasLootMenuItem_"..i.."_IconBorder"]:SetVertexColor(1, 0.82, 0)
 			for row = 1, getn(button.container) do
 				for item = 1, getn(button.container[row]) do
@@ -622,7 +622,7 @@ function AtlasLootT0SetMenu()
 	for i = 1, 30 do
 		local button = _G["AtlasLootMenuItem_" .. i]
 		button.dataSource = AtlasLoot_GetDataSource(button.lootpage)
-		if ( type(button.container) == "table" ) then
+		if type(button.container) == "table" then
 			_G["AtlasLootMenuItem_"..i.."_IconBorder"]:SetVertexColor(1, 0.82, 0)
 			for row = 1, getn(button.container) do
 				for item = 1, getn(button.container[row]) do
@@ -701,7 +701,7 @@ function AtlasLootT1SetMenu()
 	for i = 1, 30 do
 		local button = _G["AtlasLootMenuItem_" .. i]
 		button.dataSource = AtlasLoot_GetDataSource(button.lootpage)
-		if ( type(button.container) == "table" ) then
+		if type(button.container) == "table" then
 			_G["AtlasLootMenuItem_"..i.."_IconBorder"]:SetVertexColor(1, 0.82, 0)
 			for row = 1, getn(button.container) do
 				for item = 1, getn(button.container[row]) do
@@ -780,7 +780,7 @@ function AtlasLootT2SetMenu()
 	for i = 1, 30 do
 		local button = _G["AtlasLootMenuItem_" .. i]
 		button.dataSource = AtlasLoot_GetDataSource(button.lootpage)
-		if ( type(button.container) == "table" ) then
+		if type(button.container) == "table" then
 			_G["AtlasLootMenuItem_"..i.."_IconBorder"]:SetVertexColor(1, 0.82, 0)
 			for row = 1, getn(button.container) do
 				for item = 1, getn(button.container[row]) do
@@ -859,7 +859,7 @@ function AtlasLootT3SetMenu()
 	for i = 1, 30 do
 		local button = _G["AtlasLootMenuItem_" .. i]
 		button.dataSource = AtlasLoot_GetDataSource(button.lootpage)
-		if ( type(button.container) == "table" ) then
+		if type(button.container) == "table" then
 			_G["AtlasLootMenuItem_"..i.."_IconBorder"]:SetVertexColor(1, 0.82, 0)
 			for row = 1, getn(button.container) do
 				for item = 1, getn(button.container[row]) do
@@ -938,7 +938,7 @@ function AtlasLoot_Kara40SetMenu()
 	for i = 1, 30 do
 		local button = _G["AtlasLootMenuItem_" .. i]
 		button.dataSource = AtlasLoot_GetDataSource(button.lootpage)
-		if ( type(button.container) == "table" ) then
+		if type(button.container) == "table" then
 			_G["AtlasLootMenuItem_"..i.."_IconBorder"]:SetVertexColor(1, 0.82, 0)
 			for row = 1, getn(button.container) do
 				for item = 1, getn(button.container[row]) do
@@ -985,7 +985,7 @@ function AtlasLootTMHSetMenu()
 	for i = 1, 30 do
 		local button = _G["AtlasLootMenuItem_" .. i]
 		button.dataSource = AtlasLoot_GetDataSource(button.lootpage)
-		if ( type(button.container) == "table" ) then
+		if type(button.container) == "table" then
 			_G["AtlasLootMenuItem_"..i.."_IconBorder"]:SetVertexColor(1, 0.82, 0)
 			for row = 1, getn(button.container) do
 				for item = 1, getn(button.container[row]) do
