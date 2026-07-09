@@ -1727,7 +1727,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss)
 						end
 						text = AtlasLoot_FixText(dataSource[dataID][i][3])
 					end
-					quantity:SetText("")
+					quantity:SetText(dataSource[dataID][i][8])
 					itemButton.dressingroomID = dataSource[dataID][i][1]
 				elseif isEnchant then
 					local spellID = tonumber(string.sub(dataSource[dataID][i][1], 2))
@@ -1854,16 +1854,19 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss)
 					_G["AtlasLootItem_"..i.."_PriceIcon"..j]:Hide()
 				end
 				local index = 1
-				for j = 6, 14, 2 do
-					local pricetext = _G["AtlasLootItem_"..i.."_PriceText"..index]
-					local priceicon = _G["AtlasLootItem_"..i.."_PriceIcon"..index]
-					if dataSource[dataID][i][j] and dataSource[dataID][i][j] ~= "" then
-						pricetext:SetText(dataSource[dataID][i][j])
-						priceicon:SetTexture(AtlasLoot_FixText(dataSource[dataID][i][j + 1]))
-						pricetext:Show()
-						priceicon:Show()
+				local prices = dataSource[dataID][i][6]
+				if type(prices) == "table" then
+					for j = 1, getn(prices), 2 do
+						local pricetext = _G["AtlasLootItem_"..i.."_PriceText"..index]
+						local priceicon = _G["AtlasLootItem_"..i.."_PriceIcon"..index]
+						if prices[j] and prices[j + 1] and prices[j] ~= "" and prices[j + 1] ~= "" then
+							pricetext:SetText(prices[j])
+							priceicon:SetTexture(AtlasLoot_FixText(prices[j + 1]))
+							pricetext:Show()
+							priceicon:Show()
+						end
+						index = index + 1
 					end
-					index = index + 1
 				end
 				if (dataID == "SearchResult" or dataID == "WishList") and dataSource[dataID][i][5] then
 					local _, _, wishDataID, wishDataSource = strfind(dataSource[dataID][i][5], "(.+)|(.+)")
@@ -1906,7 +1909,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss)
 				itemButton.itemID = dataSource[dataID][i][1]
 				itemButton.itemIDName = dataSource[dataID][i][3]
 				itemButton.itemIDExtra = dataSource[dataID][i][4]
-				itemButton.container = dataSource[dataID][i][16]
+				itemButton.container = dataSource[dataID][i][7]
 				if type(itemButton.container) == "table" then
 					iconBorder:SetVertexColor(1, 0.82, 0)
 					for row = 1, getn(itemButton.container) do
