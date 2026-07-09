@@ -6198,7 +6198,9 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 51217, "INV_misc_ribbon_01", "=q2=Fashion Coin", "=ds=#e27#", "5%" },
 	},
 	UBRSGyth                       = {
-		{ 12871, "INV_Shield_21", "=q4=Chromatic Carapace", "=ds=#m3#", "4%" },
+		{ 12871, "INV_Shield_21", "=q4=Chromatic Carapace", "=ds=#m3#", "4%", "", "", "", "", "", "", "", "", "", "", {
+			{ { 12895, "=ds=#s5#, #a4#" }, { 83416, "=ds=#s5#, #a3#" }, { 12903, "=ds=#s11#, #a3#" }, { 12945, "=ds=#s11#, #a3#" }, },
+		} },
 		{ 0, "", "", "" },
 		{ 16669, "INV_Shoulder_29", "=q3=Pauldrons of Elements", "=ds=#s3#, #a3# (D1, =q15=#c7#=ds=)", "20%" },
 		{ 0, "", "", "" },
@@ -6212,7 +6214,9 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 51217, "INV_misc_ribbon_01", "=q2=Fashion Coin", "=ds=#e27#", "5%" },
 	},
 	UBRSBeast                      = {
-		{ 12731, "INV_Misc_MonsterScales_15", "=q4=Pristine Hide of the Beast", "=ds=#m33#", "1.896%" },
+		{ 12731, "INV_Misc_MonsterScales_15", "=q4=Pristine Hide of the Beast", "=ds=#m33#", "1.896%", "", "", "", "", "", "", "", "", "", "", {
+			{ { 12757, "=ds=#s5#, #a2#" }, { 12752, "=ds=#s1#, #a1#" }, { 12756, "=ds=#s11#, #a2#" }, { 83417, "=ds=#s3#, #a4#" }, },
+		} },
 		{ 0, "", "", "" },
 		{ 16729, "INV_Shoulder_10", "=q3=Lightforge Spaulders", "=ds=#s3#, #a4# (D1, =q16=#c4#=ds=)", "10%" },
 		{ 0, "", "", "" },
@@ -6227,7 +6231,9 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 12969, "INV_Hammer_17", "=q3=Seeping Willow", "=ds=#h2#, #w6#", "10%" },
 		{ 0, "", "", "" },
 		{ 24101, "INV_Misc_Book_02", "=q3=Book of Ferocious Bite V", "=ds=#e20# =q13=#c1#", "13%" },
-		{ 19227, "INV_Misc_Ticket_Tarot_Beasts_01", "=q3=Ace of Beasts", "=ds=#e19#", "5%" },
+		{ 19227, "INV_Misc_Ticket_Tarot_Beasts_01", "=q3=Ace of Beasts", "=ds=#e19#", "5%", "", "", "", "", "", "", "", "", "", "", {
+			{ { 19288, "=ds=#s14#" }, },
+		} },
 		{ 0, "", "", "" },
 		{ 51217, "INV_misc_ribbon_01", "=q2=Fashion Coin", "=ds=#e27#", "5%" },
 	},
