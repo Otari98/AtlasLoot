@@ -18,83 +18,71 @@ local function strtrim(s)
 	return (string.gsub(s, "^%s*(.-)%s*$", "%1"))
 end
 
-function AtlasLoot:Search(Text)
-	if not Text then return end
-	Text = strtrim(Text)
-	if Text == "" then return end
-	local text = string.lower(Text)
-	local search = function(dataSource)
-		if dataSource == "AtlasLootFallback" then return end
-		local partial = AtlasLootCharDB.PartialMatching
-		for dataID, data in pairs(AtlasLoot_Data[dataSource]) do
-			if type(data) == "table" then
-				for _, v in ipairs(data) do
-					if type(v[1]) ~= "table" then
-						-- item
-						if type(v[1]) == "number" and v[1] > 0 then
-							local itemName = GetItemInfo(v[1])
-							if not itemName then itemName = gsub(v[3], "=q%d=", "") end
-							local found
-							if partial then
-								found = string.find(string.lower(itemName), text)
-							else
-								found = string.lower(itemName) == text
-							end
-							if found then
-								local _, _, quality = string.find(v[3], "=q(%d)=")
-								if quality then itemName = "=q"..quality.."="..itemName end
-								table.insert(AtlasLootCharDB["SearchResult"], { v[1], v[2], itemName, v[4], dataID.."|"..dataSource })
-							end
-							-- spell
-						elseif (v[1] ~= nil) and (v[1] ~= "") and (string.sub(v[1], 1, 1) == "s") then
-							local spellName
-							if not spellName then
-								if (string.sub(v[3], 1, 2) == "=d") then
-									spellName = gsub(v[3], "=ds=", "")
-								else
-									spellName = gsub(v[3], "=q%d=", "")
-								end
-							end
-							local found
-							if partial then
-								found = string.find(string.lower(spellName), text)
-							else
-								found = string.lower(spellName) == text
-							end
-							if found then
-								spellName = string.sub(v[3], 1, 4)..spellName
-								table.insert(AtlasLootCharDB["SearchResult"], { v[1], v[2], spellName, v[4], dataID.."|"..dataSource })
-							end
-							-- enchant
-						elseif (v[1] ~= nil) and (v[1] ~= "") and (string.sub(v[1], 1, 1) == "e") then
-							local spellName
-							if not spellName then
-								if (string.sub(v[3], 1, 2) == "=d") then
-									spellName = gsub(v[3], "=ds=", "")
-								else
-									spellName = gsub(v[3], "=q%d=", "")
-								end
-							end
-							local found
-							if partial then
-								found = string.find(string.lower(spellName), text)
-							else
-								found = string.lower(spellName) == text
-							end
-							if found then
-								spellName = string.sub(v[3], 1, 4)..spellName
-								table.insert(AtlasLootCharDB["SearchResult"], { v[1], v[2], spellName, v[4], dataID.."|"..dataSource })
-							end
+local function contains(itemID)
+	if not itemID then return false end
+	for k, v in pairs(AtlasLootCharDB["SearchResult"]) do
+		if v[1] == itemID then return true end
+	end
+	return false
+end
+
+local function search(dataSource, text)
+	if dataSource == "AtlasLootFallback" then return end
+	local partial = AtlasLootCharDB.PartialMatching
+	for dataID, data in pairs(AtlasLoot_Data[dataSource]) do
+		if type(data) == "table" then
+			for _, v in ipairs(data) do
+				if not contains(v[1]) then
+					local found = false
+					-- item
+					if type(v[1]) == "number" and v[1] > 0 then
+						local itemName, link, quality = GetItemInfo(v[1])
+						if not itemName then
+							itemName = gsub(v[3], "=q%d=", "")
+							local _, _, q = string.find(v[3], "=q(%d)=")
+							quality = q
+						end
+						if partial then
+							found = string.find(string.lower(itemName), text, 1, true)
+						else
+							found = string.lower(itemName) == text
+						end
+						if found then
+							if quality then itemName = "=q"..quality.."="..itemName end
+							table.insert(AtlasLootCharDB["SearchResult"], { v[1], v[2], itemName, v[4], dataID.."|"..dataSource })
+						end
+					-- enchant or spell
+					elseif type(v[1]) == "string" and (string.sub(v[1], 1, 1) == "e" or string.sub(v[1], 1, 1) == "s") then
+						local spellName
+						spellName = gsub(v[3], "=ds=", "")
+						spellName = gsub(v[3], "=q%d=", "")
+						if partial then
+							found = string.find(string.lower(spellName), text, 1, true)
+						else
+							found = string.lower(spellName) == text
+						end
+						if found then
+							spellName = string.sub(v[3], 1, 4)..spellName
+							table.insert(AtlasLootCharDB["SearchResult"], { v[1], v[2], spellName, v[4], dataID.."|"..dataSource })
 						end
 					end
 				end
 			end
 		end
 	end
+end
+
+function AtlasLoot:Search(Text)
+	if not Text then return end
+	Text = strtrim(Text)
+	if Text == "" then return end
+	local text = string.lower(Text)
 
 	AtlasLootCharDB["SearchResult"] = {}
 	AtlasLootCharDB.LastSearchedText = Text
-	for dataSource in pairs(AtlasLoot_Data) do search(dataSource) end
+	for dataSource in pairs(AtlasLoot_Data) do
+		search(dataSource, text)
+	end
 
 	if getn(AtlasLootCharDB["SearchResult"]) == 0 then
 		DEFAULT_CHAT_FRAME:AddMessage(RED..AL["AtlasLoot"]..": "..WHITE..AL["No match found for"].." \""..Text.."\".")
