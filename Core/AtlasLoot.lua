@@ -221,7 +221,7 @@ function AtlasLoot_OnVariablesLoaded()
 	end
 	-- Position relevant UI objects for loot browser and set up menu
 	AtlasLootDefaultFrame_SelectedCategory:SetPoint("TOP", "AtlasLootDefaultFrame_Menu", "BOTTOM", 0, -4)
-	AtlasLootDefaultFrame_SelectedCategory:SetText(AtlasLootCharDB.LastBossText)
+	AtlasLootDefaultFrame_SelectedCategory:SetText("")
 	AtlasLootDefaultFrame_SelectedTable:SetPoint("TOP", "AtlasLootDefaultFrame_SubMenu", "BOTTOM", 0, -4)
 	AtlasLootDefaultFrame_SelectedTable:SetText("")
 	AtlasLootDefaultFrame_SelectedTable:Show()
@@ -716,7 +716,7 @@ function AtlasLootItemsFrame_OnUpdate()
 end
 
 --[[
-AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame):
+AtlasLoot_ShowItemsFrame(dataID, dataSource, title):
 dataID - Name of the loot table
 dataSource - Table in the database where the loot table is stored
 title - Text string to use as a title for the loot page
@@ -734,11 +734,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, title)
 	end
 	if not title then
 		if AtlasLoot_TableNames[dataID] and AtlasLoot_TableNames[dataID][1] then
-			if dataSource == "AtlasLootItems" or dataSource == "AtlasLootWBItems" then
-				title = gsub(AtlasLoot_TableNames[dataID][1], "^.+ %- ", "")
-			else
-				title = AtlasLoot_TableNames[dataID][1]
-			end
+			title = AtlasLoot_TableNames[dataID][1]
 		else
 			title = ""
 		end
@@ -961,7 +957,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, title)
 				end
 				-- Insert the item description
 				extra = AtlasLoot_FixText(dataSource[dataID][i][4])
-				local iconData = dataSource[dataID][i][2]
+				local iconData = dataSource[dataID][i][2] or ""
 				-- If there is no data on the texture an item should have, show a big red question mark
 				if strsub(iconData, 1, 5) == "CLASS" then
 					iconFrame:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\"..strsub(iconData, 6))
@@ -1149,12 +1145,12 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, title)
 		AtlasLoot_HewdropSubMenuRegister(subMenu)
 		AtlasLootDefaultFrame_SubMenu:Enable()
 		AtlasLootDefaultFrame_SelectedTable:SetText(bossName)
-		AtlasLootDefaultFrame_SelectedTable:Show()
 	else
 		AtlasLootDefaultFrame_SubMenu:Disable()
-		AtlasLootDefaultFrame_SelectedTable:Hide()
+		AtlasLootDefaultFrame_SelectedTable:SetText("")
 	end
-	-- AtlasLootDefaultFrame_SelectedCategory:SetText()
+	local category = AtlasLoot_TableNames[dataID] and AtlasLoot_TableNames[dataID][3] or ""
+	AtlasLootDefaultFrame_SelectedCategory:SetText(category)
 	-- Anchor the item frame where it is supposed to be
 	AtlasLootItemsFrame:SetParent(_G[AtlasLoot_AnchorPoint[2]])
 	AtlasLootItemsFrame:ClearAllPoints()
@@ -1180,7 +1176,6 @@ function AtlasLoot_HewdropClick(dataID, text, tabletype)
 		-- Purge the text label for the submenu and disable the submenu
 		AtlasLootDefaultFrame_SubMenu:Disable()
 		AtlasLootDefaultFrame_SelectedTable:SetText("")
-		AtlasLootDefaultFrame_SelectedTable:Show()
 		-- If the button links to a sub menu definition
 	else
 		-- Enable the submenu button
@@ -1192,10 +1187,9 @@ function AtlasLoot_HewdropClick(dataID, text, tabletype)
 		AtlasLoot_HewdropSubMenuRegister(AtlasLoot_HewdropDown_SubTables[dataID])
 		-- Show a text label of what has been selected
 		AtlasLootDefaultFrame_SelectedTable:SetText(AtlasLoot_HewdropDown_SubTables[dataID][1][1])
-		AtlasLootDefaultFrame_SelectedTable:Show()
 	end
 	-- Show the category that has been selected
-	AtlasLootDefaultFrame_SelectedCategory:SetText(text)
+	-- AtlasLootDefaultFrame_SelectedCategory:SetText(text)
 	AtlasLoot_Hewdrop:Close(1)
 end
 
@@ -1254,41 +1248,39 @@ function AtlasLoot_HewdropRegister()
 		end,
 		'children', function(level, value)
 			if level == 1 then
-				if AtlasLoot_HewdropDown then
-					for k, v in ipairs(AtlasLoot_HewdropDown) do
-						-- If a link to show a submenu
-						if type(v[1]) == "table" and type(v[1][1]) == "string" then
-							if v[1][3] == "Submenu" then
+				for k, v in ipairs(AtlasLoot_HewdropDown) do
+					-- If a link to show a submenu
+					if type(v[1]) == "table" and type(v[1][1]) == "string" then
+						if v[1][3] == "Submenu" then
+							AtlasLoot_Hewdrop:AddLine(
+								'text', v[1][1],
+								'textR', 1,
+								'textG', 0.82,
+								'textB', 0,
+								'func', AtlasLoot_HewdropClick,
+								'arg1', v[1][2],
+								'arg2', v[1][1],
+								'arg3', v[1][3],
+								'notCheckable', true
+							)
+						end
+					else
+						local lock = 0
+						-- If an entry linked to a subtable
+						for i, j in pairs(v) do
+							if lock == 0 then
 								AtlasLoot_Hewdrop:AddLine(
-									'text', v[1][1],
+									'text', i,
 									'textR', 1,
 									'textG', 0.82,
 									'textB', 0,
-									'func', AtlasLoot_HewdropClick,
-									'arg1', v[1][2],
-									'arg2', v[1][1],
-									'arg3', v[1][3],
+									'hasArrow', true,
+									'value', j,
+									'func', AtlasLoot_OpenMenu,
+									'arg1', i,
 									'notCheckable', true
 								)
-							end
-						else
-							local lock = 0
-							-- If an entry linked to a subtable
-							for i, j in pairs(v) do
-								if lock == 0 then
-									AtlasLoot_Hewdrop:AddLine(
-										'text', i,
-										'textR', 1,
-										'textG', 0.82,
-										'textB', 0,
-										'hasArrow', true,
-										'value', j,
-										'func', AtlasLoot_OpenMenu,
-										'arg1', i,
-										'notCheckable', true
-									)
-									lock = 1
-								end
+								lock = 1
 							end
 						end
 					end

@@ -169,7 +169,6 @@ do
 	Iterating through dropdown data tables to search backward for zone name with specified dataID
 	]]
 	function AtlasLoot_GetWishListSubheading(dataID)
-		if not AtlasLoot_HewdropDown or not AtlasLoot_HewdropDown_SubTables then return end
 		if cache[dataID] then return cache[dataID] end
 		local zoneID
 		for subKey, subTable in pairs(AtlasLoot_HewdropDown_SubTables) do
@@ -188,7 +187,6 @@ end
 do
 	local cache = {}
 	function AtlasLoot_GetWishListSubheadingBoss(dataID)
-		if not AtlasLoot_TableNamesBoss then return end
 		if cache[dataID] then return cache[dataID] end
 		local zoneID
 		for i, v in pairs(AtlasLoot_TableNamesBoss) do
@@ -218,21 +216,6 @@ function GetLootTableParent(dataID)
 	return parentID
 end
 
-function GetWishListSubheadingDungeon(dataID)
-	if not AtlasLoot_TableNames then return end
-	local zoneID
-	for i, v in pairs(AtlasLoot_TableNamesBoss) do
-		for j, k in pairs(v) do
-			if dataID == j then
-				zoneID = i
-				break
-			end
-		end
-	end
-
-	return zoneID
-end
-
 --[[
 AtlasLoot_CategorizeWishList(wlTable):
 Group items with zone/event name etc, and format them by adding subheadings and empty lines
@@ -248,7 +231,7 @@ function AtlasLoot_CategorizeWishList(wlTable)
 			-- Build subheading table
 			if not subheadings[dataID] then
 				if AtlasLootCharDB.WishlistGroupedByDungeon then
-					subheadings[dataID] = GetWishListSubheadingDungeon(dataID)
+					subheadings[dataID] = GetLootTableParent(dataID)
 				else
 					subheadings[dataID] = AtlasLoot_GetWishListSubheadingBoss(dataID)
 				end
