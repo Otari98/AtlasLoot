@@ -1,6 +1,6 @@
 --[[
 Name: Hewdrop-2.0
-Revision: $Rev: 17882 $
+Revision: $Rev: 17883 $
 Author(s): ckknight (ckknight@gmail.com)
 Website: http://ckknight.wowinterface.com/
 Documentation: http://wiki.wowace.com/index.php/Hewdrop-2.0
@@ -10,7 +10,7 @@ Dependencies: AceLibrary
 ]]
 
 local MAJOR_VERSION = "Hewdrop-2.0"
-local MINOR_VERSION = "$Revision: 17882 $"
+local MINOR_VERSION = "$Revision: 17883 $"
 
 if not AceLibrary then error(MAJOR_VERSION .. " requires AceLibrary") end
 if not AceLibrary:IsNewVersion(MAJOR_VERSION, MINOR_VERSION) then return end
@@ -593,8 +593,8 @@ local function AcquireLevel(self, level)
 					end
 				else
 					local old_CloseWindows = CloseWindows
-					function CloseWindows(ignoreCenter)
-						local found = old_CloseWindows(ignoreCenter)
+					function CloseWindows(ignoreCenter, frameToIgnore)
+						local found = old_CloseWindows(ignoreCenter, frameToIgnore)
 						if levels[1]:IsShown() then
 							self:Close()
 							return 1
