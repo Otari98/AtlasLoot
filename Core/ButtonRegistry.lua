@@ -2969,6 +2969,11 @@ AtlasLoot_ButtonRegistry = {
 	},
 	["PvP60Accessories3"] = {
 		Prev_Page = "PvP60Accessories2",
+		Next_Page = "PvP60Accessories4",
+		Back_Page = "PVPMENU",
+	},
+	["PvP60Accessories4"] = {
+		Prev_Page = "PvP60Accessories3",
 		Back_Page = "PVPMENU",
 	},
 	["PVPWeapons1"] = {
