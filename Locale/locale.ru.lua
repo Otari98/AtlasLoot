@@ -1,4 +1,4 @@
-﻿local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
+﻿local AL = AtlasLoot.L
 
 AL:RegisterTranslations("ruRU", function() return {
     [" added to the WishList."] = " добавлено в пожелания.",
@@ -150,7 +150,7 @@ AL:RegisterTranslations("ruRU", function() return {
     ["Drop Rate: "] = "Шанс выпадения",
     ["Druid of the Fang"] = "Druid of the Fang",
     ["Dukes"] = "Dukes",
-    ["Dungeon 1/2 Sets"] = "Комплекты подземелий 1/2",
+    ["Dungeon Sets"] = "Комплекты подземелий 1/2",
     ["Dungeon Set 1"] = "Комплекты подземелий 1",
     ["Dungeon Set 2 Summonable"] = "Dungeon Set 2 Summonable",
     ["Durnholde Rifleman"] = "Durnholde Rifleman",

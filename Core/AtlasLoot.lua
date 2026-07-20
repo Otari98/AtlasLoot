@@ -18,15 +18,11 @@ BINDING_NAME_ATLASLOOT_QL3 = "QuickLook 3"
 BINDING_NAME_ATLASLOOT_QL4 = "QuickLook 4"
 BINDING_NAME_ATLASLOOT_WISHLIST = "WishList"
 
-AtlasLoot = AceLibrary("AceAddon-2.0"):new("AceDB-2.0")
-
--- Instance required libraries
-local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
+local AL = AtlasLoot.L
 
 -- Establish version number and compatible version of Atlas
 local ver = string.gsub(GetAddOnMetadata("AtlasLoot", "Version"), "%.", "0")
 _, _, ver = string.find(ver, "(%d+)")
-local version = tonumber(ver)
 ATLASLOOT_VERSION = "|cffFF8400AtlasLoot TW Edition v"..GetAddOnMetadata("AtlasLoot", "Version").."|r"
 
 -- Compatibility with old EquipCompare/EQCompare
@@ -47,12 +43,9 @@ local BLUE = "|cff0070dd"
 local ORANGE = "|cffFF8400"
 local DEFAULT = "|cffFFd200"
 
--- Establish number of boss lines in the Atlas frame for scrolling
-local ATLAS_LOOT_BOSS_LINES = 24
-
+local Anchor_Default = { "TOPLEFT", "AtlasLootDefaultFrame", "TOPLEFT", 45, -85 }
 local Anchor_Atlas = { "TOPLEFT", "AtlasFrame", "TOPLEFT", 18, -84 }
 local Anchor_AlphaMap = { "TOPLEFT", "AlphaMapAlphaMapFrame", "TOPLEFT", 0, 0 }
-local Anchor_Default = { "TOPLEFT", "AtlasLootDefaultFrame", "TOPLEFT", 45, -85 }
 
 -- Variables to hold hooked Atlas functions
 local Original_Atlas_Refresh
@@ -75,842 +68,10 @@ StaticPopupDialogs["ATLASLOOT_SETUP"] = {
 	hideOnEscape = 1
 }
 
+-- Table for all data to be inserted into.
+AtlasLoot_Data = {}
 AtlasLoot_Data["AtlasLootFallback"] = {
 	EmptyInstance = {}
-}
-
-AtlasLoot_MenuList = {
-	["DUNGEONSMENU1"] = "AtlasLoot_DungeonsMenu1",
-	["DUNGEONSMENU2"] = "AtlasLoot_DungeonsMenu2",
-	["PVPMENU"] = "AtlasLootPvPMenu",
-	["ABRepMenu"] = "AtlasLootABRepMenu",
-	["AVRepMenu"] = "AtlasLootAVRepMenu",
-	["WSGRepMenu"] = "AtlasLootWSGRepMenu",
-	["BRRepMenu"] = "AtlasLootBRRepMenu",
-	["PVPSET"] = "AtlasLootPVPSetMenu",
-	["SETMENU"] = "AtlasLootSetMenu",
-	["AQ20SET"] = "AtlasLootAQ20SetMenu",
-	["AQ40SET"] = "AtlasLootAQ40SetMenu",
-	["KARASET"] = "AtlasLoot_Kara40SetMenu",
-	["PRE60SET"] = "AtlasLootPRE60SetMenu",
-	["ZGSET"] = "AtlasLootZGSetMenu",
-	["T3SET"] = "AtlasLootT3SetMenu",
-	["T2SET"] = "AtlasLootT2SetMenu",
-	["T1SET"] = "AtlasLootT1SetMenu",
-	["T0SET"] = "AtlasLootT0SetMenu",
-	["REPMENU"] = "AtlasLootRepMenu",
-	["WORLDEVENTMENU"] = "AtlasLootWorldEventMenu",
-	["ALCHEMYMENU"] = "AtlasLoot_AlchemyMenu",
-	["CRAFTINGMENU"] = "AtlasLoot_CraftingMenu",
-	["SMITHINGMENU"] = "AtlasLoot_SmithingMenu",
-	["ENCHANTINGMENU"] = "AtlasLoot_EnchantingMenu",
-	["ENGINEERINGMENU"] = "AtlasLoot_EngineeringMenu",
-	["LEATHERWORKINGMENU"] = "AtlasLoot_LeatherworkingMenu",
-	["TAILORINGMENU"] = "AtlasLoot_TailoringMenu",
-	["JEWELCRAFTMENU"] = "AtlasLoot_JewelcraftingMenu",
-	["CRAFTSET"] = "AtlasLootCraftedSetMenu",
-	["WORLDBOSSMENU"] = "AtlasLoot_WorldBossMenu",
-	["TMHSET"] = "AtlasLootTMHSetMenu",
-}
-
--- This is a multi-layer table defining the main loot listing.
--- Entries have the text to display, loot table or sub table to link to and if the link is to a loot table or sub table
-AtlasLoot_HewdropDown = {
-	{
-		[AL["Dungeons & Raids"]] = {
-			{ { WHITE.."[13-18]|r "..AL["Ragefire Chasm"], "RagefireChasm", "Submenu" }, },
-			{ { WHITE.."[13-20]|r "..AL["Frostmane Hollow"], "FrostmaneHollow", "Submenu" }, },
-			{ { WHITE.."[17-24]|r "..AL["Wailing Caverns"], "WailingCaverns", "Submenu" }, },
-			{ { WHITE.."[17-24]|r "..AL["The Deadmines"], "Deadmines", "Submenu" }, },
-			{ { WHITE.."[22-30]|r "..AL["Shadowfang Keep"], "ShadowfangKeep", "Submenu" }, },
-			{ { WHITE.."[23-32]|r "..AL["Blackfathom Deeps"], "BlackfathomDeeps", "Submenu" }, },
-			{ { WHITE.."[25-33]|r "..AL["Windhorn Canyon"], "WindhornCanyon", "Submenu" }, },
-			{ { WHITE.."[22-30]|r "..AL["The Stockade"], "TheStockade", "Submenu" }, },
-			{ { WHITE.."[26-35]|r "..AL["Dragonmaw Retreat"], "DragonmawRetreat", "Submenu" }, },
-			{ { WHITE.."[29-38]|r "..AL["Gnomeregan"], "Gnomeregan", "Submenu" }, },
-			{ { WHITE.."[29-38]|r "..AL["Razorfen Kraul"], "RazorfenKraul", "Submenu" }, },
-			{ { WHITE.."[32-38]|r "..AL["The Crescent Grove"], "TheCrescentGrove", "Submenu" }, },
-			{
-				[WHITE.."[27-45]|r "..AL["Scarlet Monastery"]] = {
-					{ WHITE.."[27-36]|r "..AL["Scarlet Monastery (Graveyard)"], "SMGraveyard", "Submenu" },
-					{ WHITE.."[28-39]|r "..AL["Scarlet Monastery (Library)"], "SMLibrary", "Submenu" },
-					{ WHITE.."[32-41]|r "..AL["Scarlet Monastery (Armory)"], "SMArmory", "Submenu" },
-					{ WHITE.."[35-45]|r "..AL["Scarlet Monastery (Cathedral)"], "SMCathedral", "Submenu" },
-				},
-			},
-			{ { WHITE.."[32-44]|r "..AL["Stormwrought Ruins"], "StormwroughtRuins", "Submenu" }, },
-			{ { WHITE.."[36-46]|r "..AL["Razorfen Downs"], "RazorfenDowns", "Submenu" }, },
-			{ { WHITE.."[40-51]|r "..AL["Uldaman"], "Uldaman", "Submenu" }, },
-			{ { WHITE.."[42-50]|r "..AL["Gilneas City"], "GilneasCity", "Submenu" }, },
-			{ { WHITE.."[45-55]|r "..AL["Maraudon"], "Maraudon", "Submenu" }, },
-			{ { WHITE.."[44-54]|r "..AL["Zul'Farrak"], "ZulFarrak", "Submenu" }, },
-			{ { WHITE.."[50-60]|r "..AL["The Sunken Temple"], "SunkenTemple", "Submenu" }, },
-			{ { WHITE.."[50-60]|r "..AL["Hateforge Quarry"], "HateforgeQuarry", "Submenu" }, },
-			{ { WHITE.."[52-60]|r "..AL["Blackrock Depths"], "BlackrockDepths", "Submenu" }, },
-			{
-				[WHITE.."[55-60]|r "..AL["Dire Maul"]] = {
-					{ WHITE.."[55-60]|r "..AL["Dire Maul (East)"], "DireMaulEast", "Submenu" },
-					{ WHITE.."[57-60]|r "..AL["Dire Maul (West)"], "DireMaulWest", "Submenu" },
-					{ WHITE.."[57-60]|r "..AL["Dire Maul (North)"], "DireMaulNorth", "Submenu" },
-				},
-			},
-			{ { WHITE.."[58-60]|r "..AL["Scholomance"], "Scholomance", "Submenu" }, },
-			{ { WHITE.."[58-60]|r "..AL["Stratholme"], "Stratholme", "Submenu" }, },
-			{ { WHITE.."[55-60]|r "..AL["Lower Blackrock Spire"], "LowerBlackrock", "Submenu" }, },
-			{ { WHITE.."[58-60]|r "..AL["Upper Blackrock Spire"], "UpperBlackrock", "Submenu" }, },
-			{ { WHITE.."[58-60]|r "..AL["Karazhan Crypt"], "KarazhanCrypt", "Submenu" }, },
-			{ { WHITE.."[60]|r "..AL["Caverns of Time: Black Morass"], "CavernsOfTimeBlackMorass", "Submenu" }, },
-			{ { WHITE.."[60]|r "..AL["Stormwind Vault"], "StormwindVault", "Submenu" }, },
-			{ { RED.."[RAID]|r "..AL["Zul'Gurub"], "ZulGurub", "Submenu" }, },
-			{ { RED.."[RAID]|r "..AL["Ruins of Ahn'Qiraj"], "RuinsofAQ", "Submenu" }, },
-			{ { RED.."[RAID]|r "..AL["Molten Core"], "MoltenCore", "Submenu" }, },
-			{ { RED.."[RAID]|r "..AL["Onyxia's Lair"], "Onyxia", "Submenu" }, },
-			{ { RED.."[RAID]|r "..AL["Lower Karazhan Halls"], "LowerKara", "Submenu" }, },
-			{ { RED.."[RAID]|r "..AL["Blackwing Lair"], "BlackwingLair", "Submenu" }, },
-			{ { RED.."[RAID]|r "..AL["Emerald Sanctum"], "EmeraldSanctum", "Submenu" }, },
-			{ { RED.."[RAID]|r "..AL["Timbermaw Hold"], "TimbermawHold", "Submenu" }, },
-			{ { RED.."[RAID]|r "..AL["Temple of Ahn'Qiraj"], "TempleofAQ", "Submenu" }, },
-			{ { RED.."[RAID]|r "..AL["Naxxramas"], "Naxxramas", "Submenu" }, },
-			{ { RED.."[RAID]|r "..AL["Upper Karazhan Halls"], "UpperKara", "Submenu" }, },
-		},
-	},
-	{
-		[AL["World Bosses"]] = {
-			{ { AL["Azuregos"], "AAzuregos", "Table" }, },
-			{ { AL["Emeriss"], "DEmeriss", "Table" }, },
-			{ { AL["Lethon"], "DLethon", "Table" }, },
-			{ { AL["Taerar"], "DTaerar", "Table" }, },
-			{ { AL["Ysondre"], "DYsondre", "Table" }, },
-			{ { AL["Lord Kazzak"], "KKazzak", "Table" }, },
-			{ { AL["Nerubian Overseer"], "Nerubian", "Table" }, },
-			{ { AL["Dark Reaver of Karazhan"], "Reaver", "Table" }, },
-			{ { AL["Ostarius"], "Ostarius", "Table" }, },
-			{ { AL["Concavius"], "Concavius", "Table" }, },
-			{ { AL["Moo"], "CowKing", "Table" }, },
-			{ { AL["Cla'ckora"], "Clackora", "Table" }, },
-		},
-	},
-	{
-		[AL["PvP Rewards"]] = {
-			{ { AL["PvP Armor Sets"], "PVPSET", "Table" }, },
-			{ { AL["PvP Accessories"], "PvP60Accessories1", "Table" }, },
-			{ { AL["Rank 14 Weapons"], "PVPWeapons1", "Table" }, },
-			{ { AL["PvP Mounts"], "PvPMountsPvP", "Table" }, },
-			{ { AL["Blood Ring"], "BRRepMenu", "Table" }, },
-			{ { AL["Alterac Valley"], "AVRepMenu", "Table" }, },
-			{ { AL["Arathi Basin"], "ABRepMenu", "Table" }, },
-			{ { AL["Warsong Gulch"], "WSGRepMenu", "Table" }, },
-		},
-	},
-	{
-		[AL["Collections"]] = {
-			{ { AL["Sets"], "PRE60SET", "Table" }, },
-			{ { AL["Zul'Gurub Sets"], "ZGSET", "Table" }, },
-			{ { AL["Ruins of Ahn'Qiraj Sets"], "AQ20SET", "Table" }, },
-			{ { AL["Temple of Ahn'Qiraj Sets"], "AQ40SET", "Table" }, },
-			{ { AL["Karazhan Sets"], "KARASET", "Table" }, },
-			{ { AL["Dungeon 1/2 Sets"], "T0SET", "Table" }, },
-			{ { AL["Tier 1 Sets"], "T1SET", "Table" }, },
-			{ { AL["Tier 2 Sets"], "T2SET", "Table" }, },
-			{ { AL["Tier 3 Sets"], "T3SET", "Table" }, },
-			{ { AL["Legendary Items"], "Legendaries", "Table" }, },
-			{ { AL["World Epics"], "WorldEpics1", "Table" }, },
-			{ { AL["Rare Pets"], "RarePets1", "Table" }, },
-			{ { AL["Rare Mounts"], "RareMounts", "Table" }, },
-			{ { AL["Tabards"], "Tabards", "Table" }, },
-		},
-	},
-	{
-		[AL["Factions"]] = {
-			{ { AL["Argent Dawn"], "Argent1", "Table" }, },
-			{ { AL["Brood of Nozdormu"], "AQBroodRings", "Table" }, },
-			{ { AL["Darkmoon Faire"], "Darkmoon", "Table" }, },
-			{ { AL["Hydraxian Waterlords"], "WaterLords1", "Table" }, },
-			{ { AL["Thorium Brotherhood"], "Thorium1", "Table" }, },
-			{ { AL["Cenarion Circle"], "Cenarion1", "Table" } },
-			{ { AL["Shen'dralar"], "Shendralar", "Table" }, },
-			{ { AL["Draenei Exiles"], "DraeneiExiles", "Table" }, },
-			{ { AL["Bloodsail Buccaneers"], "Bloodsail1", "Table" }, },
-			{ { AL["Zandalar Tribe"], "Zandalar1", "Table" }, },
-			{ { AL["Timbermaw Hold"], "Timbermaw", "Table" }, },
-			{ { AL["Wardens of Time"], "Wardens1", "Table" }, },
-			{ { AL["Gelkis Clan Centaur"], "GelkisClan1", "Table" }, },
-			{ { AL["Magram Clan Centaur"], "MagramClan1", "Table" }, },
-			{ { BLUE.."["..AL["Alliance"].."]|r "..AL["Stormwind"], "Stormwind", "Table" }, },
-			{ { BLUE.."["..AL["Alliance"].."]|r "..AL["Ironforge"], "Ironforge", "Table" }, },
-			{ { BLUE.."["..AL["Alliance"].."]|r "..AL["Gnomeregan Exiles"], "GnomereganExiles", "Table" }, },
-			{ { BLUE.."["..AL["Alliance"].."]|r "..AL["Darnassus"], "Darnassus", "Table" }, },
-			{ { BLUE.."["..AL["Alliance"].."]|r "..AL["Silvermoon Remnant"], "Helf", "Table" }, },
-			{ { BLUE.."["..AL["Alliance"].."]|r "..AL["Dalaran"], "Dalaran", "Table" }, },
-			{ { BLUE.."["..AL["Alliance"].."]|r "..AL["Wintersaber Trainers"], "Wintersaber1", "Table" }, },
-			{ { BLUE.."["..AL["Alliance"].."]|r "..AL["Wildhammer Clan"], "Wildhammer", "Table" }, },
-			{ { RED.."["..AL["Horde"].."]|r "..AL["Orgrimmar"], "Orgrimmar", "Table" }, },
-			{ { RED.."["..AL["Horde"].."]|r "..AL["Darkspear Trolls"], "DarkspearTrolls", "Table" }, },
-			{ { RED.."["..AL["Horde"].."]|r "..AL["Thunder Bluff"], "ThunderBluff", "Table" }, },
-			{ { RED.."["..AL["Horde"].."]|r "..AL["Undercity"], "Undercity", "Table" }, },
-			{ { RED.."["..AL["Horde"].."]|r "..AL["Durotar Labor Union"], "DurotarLaborUnion", "Table" }, },
-			{ { RED.."["..AL["Horde"].."]|r "..AL["Revantusk Trolls"], "Revantusk", "Table" }, },
-			{ { RED.."["..AL["Horde"].."]|r "..AL["Earthen Ring"], "EarthenRing", "Table" }, },
-		},
-	},
-	{
-		[AL["World Events"]] = {
-			{ { AL["Abyssal Council"], "AbyssalTemplars", "Table" }, },
-			{ { AL["Children's Week"], "ChildrensWeek", "Table" }, },
-			{ { AL["Elemental Invasion"], "ElementalInvasion", "Table" }, },
-			{ { AL["Feast of Winter Veil"], "Winterviel1", "Table" }, },
-			{ { AL["Gurubashi Arena"], "GurubashiArena", "Table" }, },
-			{ { AL["Hallow's End"], "Halloween1", "Table" }, },
-			{ { AL["Harvest Festival"], "HarvestFestival", "Table" }, },
-			{ { AL["Love is in the Air"], "Valentineday", "Table" }, },
-			{ { AL["Lunar Festival"], "LunarFestival1", "Table" }, },
-			{ { AL["Midsummer Fire Festival"], "MidsummerFestival", "Table" }, },
-			{ { AL["Noblegarden"], "Noblegarden", "Table" }, },
-			{ { AL["Scourge Invasion"], "ScourgeInvasionEvent1", "Table" }, },
-			{ { AL["Stranglethorn Fishing Extravaganza"], "FishingExtravaganza", "Table" }, },
-		},
-	},
-	{
-		[AL["Crafting"]] = {
-			{ { AL["Alchemy"], "ALCHEMYMENU", "Table" }, },
-			{ { AL["Blacksmithing"], "SMITHINGMENU", "Table" }, },
-			{ { AL["Enchanting"], "ENCHANTINGMENU", "Table" }, },
-			{ { AL["Engineering"], "ENGINEERINGMENU", "Table" }, },
-			{ { AL["Herbalism"], "Herbalism1", "Table" }, },
-			{ { AL["Leatherworking"], "LEATHERWORKINGMENU", "Table" }, },
-			{ { AL["Jewelcrafting"], "JEWELCRAFTMENU", "Table" }, },
-			{ { AL["Mining"], "Mining1", "Table" }, },
-			{ { AL["Tailoring"], "TAILORINGMENU", "Table" }, },
-			{ { AL["Cooking"], "CookingApprentice1", "Table" }, },
-			{ { AL["First Aid"], "FirstAid1", "Table" }, },
-			{ { AL["Survival"], "SurvivalApprentice1", "Table" }, },
-			{ { AL["Gardening"], "Gardening1", "Table" }, },
-			{ { AL["Poisons"], "Poisons1", "Table" }, },
-			{ { AL["Crafted Sets"], "CRAFTSET", "Table" }, },
-			{ { AL["Crafted Epic Weapons"], "CraftedWeapons1", "Table" }, },
-		},
-	},
-	{ { "Rare Spawns", "RareSpawns", "Submenu" }, },
-}
-
--- This table defines all the subtables needed for the full menu
--- Each sub table entry contains the text entry and the loot table that goes wih it
-AtlasLoot_HewdropDown_SubTables = {
-	["FrostmaneHollow"] = {
-		{ AL["Tan'sha the Sleek"], "FMHTansha" },
-		{ AL["Kan'za the Seer"], "FMHKanza" },
-		{ AL["Battlemaster Ubukaz"], "FMHBattlemaster" },
-		{ AL["Hailar the Frigid"], "FMHHailar" },
-	},
-	["TimbermawHold"] = {
-		{ AL["Karrsh the Sentinel"], "TMHKarrsh" },
-		{ AL["Rotgrowl"], "TMHRotgrowl" },
-		{ AL["Loktanag the Vile"], "TMHLoktanag" },
-		{ AL["Ormanos the Cracked"], "TMHOrmanos" },
-		{ AL["Chieftain Partath"], "TMHPartath" },
-		{ AL["Archdruid Kronn"], "TMHKronn" },
-		{ AL["Selenaxx Foulheart"], "TMHSelenaxx" },
-		{ AL["Trioch the Devourer"], "TMHTrioch" },
-		{ AL["Ursol"], "TMHUrsol" },
-		{ AL["Peroth'arn"], "TMHPerotharn" },
-	},
-	["WindhornCanyon"] = {
-		{ AL["Pathun Duskhide"], "WHCPathun" },
-		{ AL["Ahgk'tos the Pure"], "WHCAhgktos" },
-		{ AL["Ambassador Vortalus"], "WHCAmbassador" },
-		{ AL["Walgan Bloodcaller"], "WHCWalgan" },
-		{ AL["Bonespeaker Narlgom"], "WHCBonespeaker" },
-		{ AL["Prophet Stormhoof"], "WHCProphet" },
-		{ AL["Chieftain Shalk Blackwind"], "WHCChieftan" },
-	},
-	["HateforgeQuarry"] = {
-		{ AL["High Foreman Bargul Blackhammer"], "HQHighForemanBargulBlackhammer" },
-		{ AL["Engineer Figgles"], "HQEngineerFiggles" },
-		{ AL["Corrosis"], "HQCorrosis" },
-		{ AL["Hatereaver Annihilator"], "HQHatereaverAnnihilator" },
-		{ AL["Har'gesh Doomcaller"], "HQHargeshDoomcaller" },
-		{ AL["Trash Mobs"], "HQTrash" },
-	},
-	["BlackrockDepths"] = {
-		{ AL["Lord Roccor"], "BRDLordRoccor" },
-		{ AL["High Interrogator Gerstahn"], "BRDHighInterrogatorGerstahn" },
-		{ AL["Anub'shiah"], "BRDAnubshiah" },
-		{ AL["Eviscerator"], "BRDEviscerator" },
-		{ AL["Gorosh the Dervish"], "BRDGorosh" },
-		{ AL["Grizzle"], "BRDGrizzle" },
-		{ AL["Hedrum the Creeper"], "BRDHedrum" },
-		{ AL["Ok'thor the Breaker"], "BRDOkthor" },
-		{ AL["Theldren"], "BRDTheldren" },
-		{ AL["Houndmaster Grebmar"], "BRDHoundmaster" },
-		{ AL["Pyromancer Loregrain"].." ("..AL["Rare"]..")", "BRDPyromancerLoregrain" },
-		{ AL["The Vault"], "BRDTheVault" },
-		{ AL["Warder Stilgiss"].." ("..AL["Rare"]..")", "BRDWarderStilgiss" },
-		{ AL["Verek"].." ("..AL["Rare"]..")", "BRDVerek" },
-		{ AL["Fineous Darkvire"], "BRDFineousDarkvire" },
-		{ AL["Lord Incendius"], "BRDLordIncendius" },
-		{ AL["Bael'Gar"], "BRDBaelGar" },
-		{ AL["General Angerforge"], "BRDGeneralAngerforge" },
-		{ AL["Golem Lord Argelmach"], "BRDGolemLordArgelmach" },
-		{ AL["The Grim Guzzler"], "BRDGuzzler" },
-		{ AL["Ambassador Flamelash"], "BRDFlamelash" },
-		{ AL["Panzor the Invincible"].." ("..AL["Rare"]..")", "BRDPanzor" },
-		{ AL["Summoner's Tomb"], "BRDTomb" },
-		{ AL["Magmus"], "BRDMagmus" },
-		{ AL["Princess Moira Bronzebeard"], "BRDPrincess" },
-		{ AL["Emperor Dagran Thaurissan"], "BRDEmperorDagranThaurissan" },
-		{ AL["Trash Mobs"], "BRDTrash" },
-	},
-	["LowerBlackrock"] = {
-		{ AL["Spirestone Butcher"].." ("..AL["Rare"]..")", "LBRSSpirestoneButcher" },
-		{ AL["Spirestone Battle Lord"].." ("..AL["Rare"]..")", "LBRSSpirestoneBattleLord" },
-		{ AL["Spirestone Lord Magus"].." ("..AL["Rare"]..")", "LBRSSpirestoneLordMagus" },
-		{ AL["Highlord Omokk"], "LBRSOmokk" },
-		{ AL["Shadow Hunter Vosh'gajin"], "LBRSVosh" },
-		{ AL["War Master Voone"], "LBRSVoone" },
-		{ AL["Burning Felguard"].." ("..AL["Rare"]..")", "LBRSFelguard" },
-		{ AL["Mor Grayhoof"], "LBRSGrayhoof" },
-		{ AL["Bannok Grimaxe"].." ("..AL["Rare"]..")", "LBRSGrimaxe" },
-		{ AL["Mother Smolderweb"], "LBRSSmolderweb" },
-		{ AL["Crystal Fang"].." ("..AL["Rare"]..")", "LBRSCrystalFang" },
-		{ AL["Urok Doomhowl"], "LBRSDoomhowl" },
-		{ AL["Quartermaster Zigris"], "LBRSZigris" },
-		{ AL["Halycon"], "LBRSHalycon" },
-		{ AL["Gizrul the Slavener"], "LBRSSlavener" },
-		{ AL["Ghok Bashguud"].." ("..AL["Rare"]..")", "LBRSBashguud" },
-		{ AL["Overlord Wyrmthalak"], "LBRSWyrmthalak" },
-		{ AL["Trash Mobs"], "LBRSTrash" },
-	},
-	["UpperBlackrock"] = {
-		{ AL["Pyroguard Emberseer"], "UBRSEmberseer" },
-		{ AL["Solakar Flamewreath"], "UBRSSolakar" },
-		{ AL["Father Flame"], "UBRSFlame" },
-		{ AL["Jed Runewatcher"].." ("..AL["Rare"]..")", "UBRSRunewatcher" },
-		{ AL["Goraluk Anvilcrack"].." ("..AL["Rare"]..")", "UBRSAnvilcrack" },
-		{ AL["Warchief Rend Blackhand"], "UBRSRend" },
-		{ AL["Gyth"], "UBRSGyth" },
-		{ AL["The Beast"], "UBRSBeast" },
-		{ AL["Lord Valthalak"], "UBRSValthalak" },
-		{ AL["General Drakkisath"], "UBRSDrakkisath" },
-		{ AL["Trash Mobs"], "UBRSTrash" },
-	},
-	["KarazhanCrypt"] = {
-		{ AL["Marrowspike"], "KCMarrowspike" },
-		{ AL["Hivaxxis"], "KCHivaxxis" },
-		{ AL["Corpsemuncher"], "KCCorpsemuncher" },
-		{ AL["Guard Captain Gort"], "KCGuardCaptainGort" },
-		{ AL["Archlich Enkhraz"], "KCArchlichEnkhraz" },
-		{ AL["Commander Andreon"], "KCCommanderAndreon" },
-		{ AL["Alarus"], "KCAlarus" },
-		{ AL["Half-Buried Treasure Chest"], "KCTreasure" },
-		{ AL["Trash Mobs"], "KCTrash" },
-	},
-	["CavernsOfTimeBlackMorass"] = {
-		{ AL["Chronar"], "COTBMChronar" },
-		{ AL["Epidamu"], "COTBMEpidamu" },
-		{ AL["Drifting Avatar of Sand"], "COTBMDriftingAvatar" },
-		{ AL["Time-Lord Epochronos"], "COTBMTimeLordEpochronos" },
-		{ AL["Mossheart"], "COTBMMossheart" },
-		{ AL["Rotmaw"], "COTBMRotmaw" },
-		{ AL["Antnormi"], "COTBMAntnormi" },
-		{ AL["Trash Mobs"], "COTTrash" },
-		-- { AL["Infinite Chromie"], "COTBMInfiniteChromie" },
-	},
-	["StormwindVault"] = {
-		{ AL["Aszosh Grimflame"], "SWVAszoshGrimflame" },
-		{ AL["Tham'Grarr"], "SWVThamGrarr" },
-		{ AL["Black Bride"], "SWVBlackBride" },
-		{ AL["Damian"], "SWVDamian" },
-		{ AL["Volkan Cruelblade"], "SWVVolkanCruelblade" },
-		{ AL["Arc'tiras"], "SWVVaultArmoryEquipment" },
-		{ AL["Trash Mobs"], "SWVTrash" },
-	},
-	["BlackwingLair"] = {
-		{ AL["Razorgore the Untamed"], "BWLRazorgore" },
-		{ AL["Vaelastrasz the Corrupt"], "BWLVaelastrasz" },
-		{ AL["Broodlord Lashlayer"], "BWLLashlayer" },
-		{ AL["Firemaw"], "BWLFiremaw" },
-		{ AL["Ezzel Darkbrewer"], "BWLEzzel" },
-		{ AL["Ebonroc"], "BWLEbonroc" },
-		{ AL["Flamegor"], "BWLFlamegor" },
-		{ AL["Chromaggus"], "BWLChromaggus" },
-		{ AL["Nefarian"], "BWLNefarian" },
-		{ AL["Trash Mobs"], "BWLTrashMobs" },
-	},
-	["Deadmines"] = {
-		{ AL["Jared Voss"], "DMJaredVoss" },
-		{ AL["Rhahk'Zor"], "DMRhahkZor" },
-		{ AL["Miner Johnson"].." ("..AL["Rare"]..")", "DMMinerJohnson" },
-		{ AL["Sneed"], "DMSneed" },
-		{ AL["Sneed's Shredder"], "DMSneedsShredder" },
-		{ AL["Gilnid"], "DMGilnid" },
-		{ AL["Masterpiece Harvester"], "DMHarvester" },
-		{ AL["Mr. Smite"], "DMMrSmite" },
-		{ AL["Cookie"], "DMCookie" },
-		{ AL["Captain Greenskin"], "DMCaptainGreenskin" },
-		{ AL["Edwin VanCleef"], "DMVanCleef" },
-		{ AL["Trash Mobs"], "DMTrash" },
-	},
-	["TheCrescentGrove"] = {
-		{ AL["Grovetender Engryss"], "TCGGrovetenderEngryss" },
-		{ AL["Keeper Ranathos"], "TCGKeeperRanathos" },
-		{ AL["High Priestess A'lathea"], "TCGHighPriestessAlathea" },
-		{ AL["Fenektis the Deceiver"], "TCGFenektistheDeceiver" },
-		{ AL["Master Raxxieth"], "TCGMasterRaxxieth" },
-		{ AL["Trash Mobs"], "TCGTrash" },
-	},
-	["Gnomeregan"] = {
-		{ AL["Grubbis"], "GnGrubbis" },
-		{ AL["Viscous Fallout"], "GnViscousFallout" },
-		{ AL["Electrocutioner 6000"], "GnElectrocutioner6000" },
-		{ AL["Crowd Pummeler 9-60"], "GnCrowdPummeler960" },
-		{ AL["Dark Iron Ambassador"], "GnDIAmbassador" },
-		{ AL["Mekgineer Thermaplugg"], "GnMekgineerThermaplugg" },
-		{ AL["Trash Mobs"], "GnTrash" },
-	},
-	["MoltenCore"] = {
-		{ AL["Incindis"], "MCIncindis" },
-		{ AL["Lucifron"], "MCLucifron" },
-		{ AL["Magmadar"], "MCMagmadar" },
-		-- { AL["Gehennas"], "MCGehennas" },
-		{ AL["Garr"], "MCGarr" },
-		{ AL["Shazzrah"], "MCShazzrah" },
-		{ AL["Baron Geddon"], "MCGeddon" },
-		{ AL["Golemagg the Incinerator"], "MCGolemagg" },
-		{ AL["Basalthar & Smoldaris"], "MCTwins" },
-		{ AL["Sorcerer-Thane Thaurissan"], "MCThaurissan" },
-		{ AL["Sulfuron Harbinger"], "MCSulfuron" },
-		{ AL["Majordomo Executus"], "MCMajordomo" },
-		{ AL["Ragnaros"], "MCRagnaros" },
-		{ AL["Trash Mobs"], "MCTrashMobs" },
-		{ AL["Random Boss Loot"], "MCRANDOMBOSSDROPS" },
-	},
-	["Naxxramas"] = {
-		{ AL["Patchwerk"], "NAXPatchwerk" },
-		{ AL["Grobbulus"], "NAXGrobbulus" },
-		{ AL["Gluth"], "NAXGluth" },
-		{ AL["Thaddius"], "NAXThaddius" },
-		{ AL["Anub'Rekhan"], "NAXAnubRekhan" },
-		{ AL["Grand Widow Faerlina"], "NAXGrandWidowFaerlina" },
-		{ AL["Maexxna"], "NAXMaexxna" },
-		{ AL["Noth the Plaguebringer"], "NAXNoththePlaguebringer" },
-		{ AL["Heigan the Unclean"], "NAXHeigantheUnclean" },
-		{ AL["Loatheb"], "NAXLoatheb" },
-		{ AL["Instructor Razuvious"], "NAXInstructorRazuvious" },
-		{ AL["Gothik the Harvester"], "NAXGothiktheHarvester" },
-		{ AL["The Four Horsemen"], "NAXTheFourHorsemen" },
-		{ AL["Sapphiron"], "NAXSapphiron" },
-		{ AL["Kel'Thuzad"], "NAXKelThuzard" },
-		{ AL["Trash Mobs"], "NAXTrash" },
-	},
-	["SMGraveyard"] = {
-		{ AL["Interrogator Vishas"], "SMVishas" },
-		{ AL["Duke Dreadmoore"], "SMDukeDreadmoore" },
-		{ AL["Scorn"].." ("..AL["Scourge Invasion"]..")", "SMScorn" },
-		{ AL["Ironspine"].." ("..AL["Rare"]..")", "SMIronspine" },
-		{ AL["Azshir the Sleepless"].." ("..AL["Rare"]..")", "SMAzshir" },
-		{ AL["Fallen Champion"].." ("..AL["Rare"]..")", "SMFallenChampion" },
-		{ AL["Bloodmage Thalnos"], "SMBloodmageThalnos" },
-		{ AL["Trash Mobs"], "SMGTrash" },
-	},
-	["SMLibrary"] = {
-		{ AL["Houndmaster Loksey"], "SMHoundmasterLoksey" },
-		{ AL["Brother Wystan"], "SMBrotherWystan" },
-		{ AL["Arcanist Doan"], "SMDoan" },
-		{ AL["Trash Mobs"], "SMLTrash" },
-	},
-	["SMArmory"] = {
-		{ AL["Herod"], "SMHerod" },
-		{ AL["Armory Quartermaster Daghelm"], "SMQuartermaster" },
-		{ AL["Trash Mobs"], "SMATrash" },
-	},
-	["SMCathedral"] = {
-		{ AL["High Inquisitor Fairbanks"], "SMFairbanks" },
-		{ AL["Scarlet Commander Mograine"], "SMMograine" },
-		{ AL["High Inquisitor Whitemane"], "SMWhitemane" },
-		{ AL["Trash Mobs"], "SMCTrash" },
-	},
-	["Scholomance"] = {
-		-- { AL["Blood Steward of Kirtonos"], "SCHOLOBlood" },
-		{ AL["Kirtonos the Herald"], "SCHOLOKirtonostheHerald" },
-		{ AL["Jandice Barov"], "SCHOLOJandiceBarov" },
-		{ AL["Lord Blackwood"].." ("..AL["Scourge Invasion"]..")", "SCHOLOLordBlackwood" },
-		{ AL["Rattlegore"], "SCHOLORattlegore" },
-		{ AL["Death Knight Darkreaver"], "SCHOLODeathKnight" },
-		{ AL["Marduk Blackpool"], "SCHOLOMarduk" },
-		{ AL["Vectus"], "SCHOLOVectus" },
-		{ AL["Ras Frostwhisper"], "SCHOLORasFrostwhisper" },
-		{ AL["Kormok"], "SCHOLOKormok" },
-		{ AL["Instructor Malicia"], "SCHOLOInstructorMalicia" },
-		{ AL["Doctor Theolen Krastinov"], "SCHOLODoctorTheolenKrastinov" },
-		{ AL["Lorekeeper Polkelt"], "SCHOLOLorekeeperPolkelt" },
-		{ AL["The Ravenian"], "SCHOLOTheRavenian" },
-		{ AL["Lord Alexei Barov"], "SCHOLOLordAlexeiBarov" },
-		{ AL["Lady Illucia Barov"], "SCHOLOLadyIlluciaBarov" },
-		{ AL["Darkmaster Gandling"], "SCHOLODarkmasterGandling" },
-		{ AL["Trash Mobs"], "SCHOLOTrash" },
-	},
-	["ShadowfangKeep"] = {
-		{ AL["Rethilgore"], "SFKRethilgore" },
-		{ AL["Fel Steed"], "SFKFelSteed" },
-		{ AL["Razorclaw the Butcher"], "SFKRazorclawtheButcher" },
-		{ AL["Baron Silverlaine"], "SFKSilverlaine" },
-		{ AL["Commander Springvale"], "SFKSpringvale" },
-		{ AL["Sever"].." ("..AL["Scourge Invasion"]..")", "SFKSever" },
-		{ AL["Odo the Blindwatcher"], "SFKOdotheBlindwatcher" },
-		{ AL["Deathsworn Captain"].." ("..AL["Rare"]..")", "SFKDeathswornCaptain" },
-		{ AL["Fenrus the Devourer"], "SFKFenrustheDevourer" },
-		{ AL["Arugal's Voidwalker"], "SFKArugalsVoidwalker" },
-		{ AL["Wolf Master Nandos"], "SFKWolfMasterNandos" },
-		{ AL["Archmage Arugal"], "SFKArchmageArugal" },
-		{ AL["Prelate Ironmane"], "SFKPrelate" },
-		{ AL["Trash Mobs"], "SFKTrash" },
-	},
-	["TheStockade"] = {
-		{ AL["Targorr the Dread"], "SWStTargorr" },
-		{ AL["Kam Deepfury"], "SWStKamDeepfury" },
-		{ AL["Hamhock"], "SWStHamhock" },
-		{ AL["Dextren Ward"], "SWStDextren" },
-		{ AL["Bazil Thredd"], "SWStBazil" },
-		{ AL["Bruegal Ironknuckle"].." ("..AL["Rare"]..")", "SWStBruegalIronknuckle" },
-		{ AL["Trash Mobs"], "SWStTrash" },
-	},
-	["Stratholme"] = {
-		{ AL["Skul"].." ("..AL["Rare"]..")", "STRATSkull" },
-		{ AL["Stratholme Courier"], "STRATStratholmeCourier" },
-		{ AL["Postmaster Malown"], "STRATPostmaster" },
-		{ AL["Fras Siabi"], "STRATFrasSiabi" },
-		{ AL["Atiesh"], "STRATAtiesh" },
-		{ AL["Balzaphon"].." ("..AL["Scourge Invasion"]..")", "STRATBalzaphon" },
-		{ AL["Hearthsinger Forresten"].." ("..AL["Rare"]..")", "STRATHearthsingerForresten" },
-		{ AL["The Unforgiven"], "STRATTheUnforgiven" },
-		{ AL["Timmy the Cruel"], "STRATTimmytheCruel" },
-		{ AL["Malor the Zealous"], "STRATMalor" },
-		{ AL["Malor's Strongbox"], "STRATMalorsStrongbox" },
-		{ AL["Crimson Hammersmith"], "STRATCrimsonHammersmith" },
-		{ AL["Cannon Master Willey"], "STRATCannonMasterWilley" },
-		{ AL["Archivist Galford"], "STRATArchivistGalford" },
-		{ AL["Balnazzar"], "STRATBalnazzar" },
-		{ AL["Sothos"].." & "..AL["Jarien"], "STRATSothosJarien" },
-		{ AL["Stonespine"].." ("..AL["Rare"]..")", "STRATStonespine" },
-		{ AL["Baroness Anastari"], "STRATBaronessAnastari" },
-		{ AL["Black Guard Swordsmith"], "STRATBlackGuardSwordsmith" },
-		{ AL["Nerub'enkan"], "STRATNerubenkan" },
-		{ AL["Maleki the Pallid"], "STRATMalekithePallid" },
-		{ AL["Magistrate Barthilas"], "STRATMagistrateBarthilas" },
-		{ AL["Ramstein the Gorger"], "STRATRamsteintheGorger" },
-		{ AL["Baron Rivendare"], "STRATBaronRivendare" },
-		{ AL["Trash Mobs"], "STRATTrash" },
-	},
-	["SunkenTemple"] = {
-		{ AL["Balcony Minibosses"], "STBalconyMinibosses" },
-		{ AL["Atal'alarion"], "STAtalalarion" },
-		{ AL["Spawn of Hakkar"], "STSpawnOfHakkar" },
-		{ AL["Avatar of Hakkar"], "STAvatarofHakkar" },
-		{ AL["Jammal'an the Prophet"], "STJammalan" },
-		{ AL["Ogom the Wretched"], "STOgom" },
-		{ AL["Dreamscythe"], "STDreamscythe" },
-		{ AL["Weaver"], "STWeaver" },
-		{ AL["Morphaz"], "STMorphaz" },
-		{ AL["Hazzas"], "STHazzas" },
-		{ AL["Shade of Eranikus"], "STEranikus" },
-		{ AL["Trash Mobs"], "STTrash" },
-	},
-	["Uldaman"] = {
-		{ AL["Baelog"], "UldBaelog" },
-		{ AL["Olaf"], "UldOlaf" },
-		{ AL["Eric 'The Swift'"], "UldEric" },
-		{ AL["Revelosh"], "UldRevelosh" },
-		{ AL["Ironaya"], "UldIronaya" },
-		{ AL["Ancient Stone Keeper"], "UldAncientStoneKeeper" },
-		{ AL["Galgann Firehammer"], "UldGalgannFirehammer" },
-		{ AL["Grimlok"], "UldGrimlok" },
-		{ AL["Archaedas"], "UldArchaedas" },
-		{ AL["Trash Mobs"], "UldTrash" },
-	},
-	["GilneasCity"] = {
-		{ AL["Matthias Holtz"], "GCMatthiasHoltz" },
-		{ AL["Packmaster Ragetooth"], "GCPackmasterRagetooth" },
-		{ AL["Judge Sutherland"], "GCJudgeSutherland" },
-		{ AL["Dustivan Blackcowl"], "GCDustivanBlackcowl" },
-		{ AL["Marshal Magnus Greystone"], "GCMarshalMagnusGreystone" },
-		{ AL["Horsemaster Levvin"], "GCHorsemasterLevvin" },
-		{ AL["Harlow Family Chest"], "GCHarlowFamilyChest" },
-		{ AL["Genn Greymane"], "GCGennGreymane" },
-		{ AL["Trash Mobs"], "GCTrash" },
-	},
-	["ZulGurub"] = {
-		{ AL["High Priestess Jeklik"], "ZGJeklik" },
-		{ AL["High Priest Venoxis"], "ZGVenoxis" },
-		{ AL["High Priestess Mar'li"], "ZGMarli" },
-		{ AL["Bloodlord Mandokir"], "ZGMandokir" },
-		{ AL["Gri'lek"], "ZGGrilek" },
-		{ AL["Hazza'rah"], "ZGHazzarah" },
-		{ AL["Renataki"], "ZGRenataki" },
-		{ AL["Wushoolay"], "ZGWushoolay" },
-		{ AL["Gahz'ranka"], "ZGGahzranka" },
-		{ AL["High Priest Thekal"], "ZGThekal" },
-		{ AL["High Priestess Arlokk"], "ZGArlokk" },
-		{ AL["Jin'do the Hexxer"], "ZGJindo" },
-		{ AL["Hakkar"], "ZGHakkar" },
-		{ AL["Random Boss Loot"], "ZGShared" },
-		{ AL["Trash Mobs"], "ZGTrash1" },
-		{ AL["ZG Enchants"], "ZGEnchants" },
-	},
-	["BlackfathomDeeps"] = {
-		{ AL["Ghamoo-ra"], "BFDGhamoora" },
-		{ AL["Lady Sarevess"], "BFDLadySarevess" },
-		{ AL["Gelihast"], "BFDGelihast" },
-		{ AL["Baron Aquanis"], "BFDBaronAquanis" },
-		{ AL["Velthelaxx the Defiler"], "BFDVelthelaxx" },
-		{ AL["Twilight Lord Kelris"], "BFDTwilightLordKelris" },
-		{ AL["Old Serra'kis"], "BFDOldSerrakis" },
-		{ AL["Aku'mai"], "BFDAkumai" },
-		{ AL["Trash Mobs"], "BFDTrash" },
-	},
-	["DireMaulEast"] = {
-		{ AL["Pusillin"], "DMEPusillin" },
-		{ AL["Zevrim Thornhoof"], "DMEZevrimThornhoof" },
-		{ AL["Hydrospawn"], "DMEHydro" },
-		{ AL["Lethtendris"], "DMELethtendris" },
-		{ AL["Pimgib"], "DMEPimgib" },
-		{ AL["Isalien"], "DMEIsalien" },
-		{ AL["Alzzin the Wildshaper"], "DMEAlzzin" },
-		{ AL["Trash Mobs"], "DMETrash" },
-		{ AL["Dire Maul Books"], "DMEBooks" },
-	},
-	["DireMaulWest"] = {
-		{ AL["Tendris Warpwood"], "DMWTendrisWarpwood" },
-		{ AL["Illyanna Ravenoak"], "DMWIllyannaRavenoak" },
-		{ AL["Magister Kalendris"], "DMWMagisterKalendris" },
-		{ AL["Tsu'zee"].." ("..AL["Rare"]..")", "DMWTsuzee" },
-		{ AL["Revanchion"].." ("..AL["Scourge Invasion"]..")", "DMWRevanchion" },
-		{ AL["Immol'thar"], "DMWImmolthar" },
-		{ AL["Lord Hel'nurath"].." ("..AL["Rare"]..")", "DMWHelnurath" },
-		{ AL["Prince Tortheldrin"], "DMWPrinceTortheldrin" },
-		{ AL["Trash Mobs"], "DMWTrash" },
-		{ AL["Dire Maul Books"], "DMWBooks" },
-	},
-	["DireMaulNorth"] = {
-		{ AL["Guard Mol'dar"], "DMNGuardMoldar" },
-		{ AL["Stomper Kreeg"], "DMNStomperKreeg" },
-		{ AL["Guard Fengus"], "DMNGuardFengus" },
-		{ AL["Knot Thimblejack"], "DMNThimblejack" },
-		{ AL["Guard Slip'kik"], "DMNGuardSlipkik" },
-		{ AL["Captain Kromcrush"], "DMNCaptainKromcrush" },
-		{ AL["Cho'Rush the Observer"], "DMNChoRush" },
-		{ AL["King Gordok"], "DMNKingGordok" },
-		{ AL["Tribute Run"], "DMNTRIBUTERUN" },
-		{ AL["Trash Mobs"], "DMNTrash" },
-		{ AL["Dire Maul Books"], "DMNBooks" },
-	},
-	["Maraudon"] = {
-		{ AL["Noxxion"], "MaraNoxxion" },
-		{ AL["Razorlash"], "MaraRazorlash" },
-		{ AL["Lord Vyletongue"], "MaraLordVyletongue" },
-		{ AL["Meshlok the Harvester"].." ("..AL["Rare"]..")", "MaraMeshlok" },
-		{ AL["Celebras the Cursed"], "MaraCelebras" },
-		{ AL["Landslide"], "MaraLandslide" },
-		{ AL["Tinkerer Gizlock"], "MaraTinkererGizlock" },
-		{ AL["Rotgrip"], "MaraRotgrip" },
-		{ AL["Princess Theradras"], "MaraPrincessTheradras" },
-		{ AL["Trash Mobs"], "MaraTrash" },
-	},
-	["Onyxia"] = {
-		{ AL["Broodcommander Axelus"], "Axelus" },
-		{ AL["Onyxia"], "Onyxia" },
-	},
-	["RagefireChasm"] = {
-		{ AL["Taragaman the Hungerer"], "RFCTaragaman" },
-		{ AL["Oggleflint"], "RFCOggleflint" },
-		{ AL["Jergosh the Invoker"], "RFCJergosh" },
-		{ AL["Bazzalan"], "RFCBazzalan" },
-	},
-	["RazorfenDowns"] = {
-		{ AL["Tuten'kash"], "RFDTutenkash" },
-		{ AL["Lady Falther'ess"].." ("..AL["Scourge Invasion"]..")", "RFDLadyF" },
-		{ AL["Plaguemaw the Rotting"], "RFDPlaguemaw" },
-		{ AL["Mordresh Fire Eye"], "RFDMordreshFireEye" },
-		{ AL["Glutton"], "RFDGlutton" },
-		{ AL["Death Prophet Rakameg"], "RFDDeathProphet" },
-		{ AL["Ragglesnout"].." ("..AL["Rare"]..")", "RFDRagglesnout" },
-		{ AL["Amnennar the Coldbringer"], "RFDAmnennar" },
-		{ AL["Trash Mobs"], "RFDTrash" },
-	},
-	["RazorfenKraul"] = {
-		{ AL["Aggem Thorncurse"], "RFKAggem" },
-		{ AL["Death Speaker Jargba"], "RFKDeathSpeakerJargba" },
-		{ AL["Overlord Ramtusk"], "RFKOverlordRamtusk" },
-		{ AL["Razorfen Spearhide"].." ("..AL["Rare"]..")", "RFKRazorfenSpearhide" },
-		{ AL["Agathelos the Raging"], "RFKAgathelos" },
-		{ AL["Blind Hunter"].." ("..AL["Rare"]..")", "RFKBlindHunter" },
-		{ AL["Charlga Razorflank"], "RFKCharlgaRazorflank" },
-		{ AL["Earthcaller Halmgar"].." ("..AL["Rare"]..")", "RFKEarthcallerHalmgar" },
-		{ AL["Rotthorn"], "RFKRotthorn" },
-		{ AL["Trash Mobs"], "RFKTrash" },
-	},
-	["RuinsofAQ"] = {
-		{ AL["Kurinnaxx"], "AQ20Kurinnaxx" },
-		{ AL["Lieutenant General Andorov"], "AQ20Andorov" },
-		{ AL["Rajaxx's Captains"], "AQ20CAPTAIN" },
-		{ AL["General Rajaxx"], "AQ20Rajaxx" },
-		{ AL["Moam"], "AQ20Moam" },
-		{ AL["Buru the Gorger"], "AQ20Buru" },
-		{ AL["Ayamiss the Hunter"], "AQ20Ayamiss" },
-		{ AL["Ossirian the Unscarred"], "AQ20Ossirian" },
-		{ AL["Trash Mobs"], "AQ20Trash" },
-		{ AL["Class Books"], "AQ20ClassBooks" },
-		{ AL["AQ Enchants"], "AQ20Enchants" },
-	},
-	["TempleofAQ"] = {
-		{ AL["The Prophet Skeram"], "AQ40Skeram" },
-		{ AL["The Bug Family"], "AQ40Trio" },
-		{ AL["Battleguard Sartura"], "AQ40Sartura" },
-		{ AL["Fankriss the Unyielding"], "AQ40Fankriss" },
-		{ AL["Viscidus"], "AQ40Viscidus" },
-		{ AL["Princess Huhuran"], "AQ40Huhuran" },
-		{ AL["The Twin Emperors"], "AQ40Emperors" },
-		{ AL["Ouro"], "AQ40Ouro" },
-		{ AL["C'Thun"], "AQ40CThun" },
-		{ AL["Trash Mobs"], "AQ40Trash1" },
-		{ AL["Trash Mobs"], "AQ40Trash2" },
-		{ AL["AQ Enchants"], "AQEnchants" },
-		{ AL["AQ Opening Quest Chain"], "AQOpening" },
-	},
-	["WailingCaverns"] = {
-		{ AL["Lord Cobrahn"], "WCLordCobrahn" },
-		{ AL["Lady Anacondra"], "WCLadyAnacondra" },
-		{ AL["Kresh"], "WCKresh" },
-		{ AL["Deviate Faerie Dragon"].." ("..AL["Rare"]..")", "WCDeviateFaerieDragon" },
-		{ AL["Zandara Windhoof"], "WCZandara" },
-		{ AL["Lord Pythas"], "WCLordPythas" },
-		{ AL["Skum"], "WCSkum" },
-		{ AL["Vangros"], "WCVangros" },
-		{ AL["Lord Serpentis"], "WCLordSerpentis" },
-		{ AL["Verdan the Everliving"], "WCVerdan" },
-		{ AL["Mutanus the Devourer"], "WCMutanus" },
-		{ AL["Trash Mobs"], "WCTrash" },
-	},
-	["ZulFarrak"] = {
-		{ AL["Antu'sul"], "ZFAntusul" },
-		{ AL["Witch Doctor Zum'rah"], "ZFWitchDoctorZumrah" },
-		{ AL["Shadowpriest Sezz'ziz"], "ZFSezzziz" },
-		{ AL["Dustwraith"].." ("..AL["Rare"]..")", "ZFDustwraith" },
-		{ AL["Zerillis"].." ("..AL["Rare"]..")", "ZFZerillis" },
-		{ AL["Gahz'rilla"], "ZFGahzrilla" },
-		{ AL["Chief Ukorz Sandscalp"], "ZFChiefUkorzSandscalp" },
-		{ AL["Zel'jeb the Ancient"], "ZFZeljeb" },
-		{ AL["Champion Razjal the Quick"], "ZFChampion" },
-		{ AL["Trash Mobs"], "ZFTrash" },
-	},
-	["EmeraldSanctum"] = {
-		{ AL["Erennius"], "ESErennius" },
-		{ AL["Solnius the Awakener"], "ESSolnius1" },
-		{ AL["Favor of Erennius (ES Hard Mode)"], "ESHardMode" },
-		{ AL["Trash Mobs"], "ESTrash" },
-	},
-	["LowerKara"] = {
-		{ AL["Master Blacksmith Rolfen"], "LKHRolfen" },
-		{ AL["Brood Queen Araxxna"], "LKHBroodQueenAraxxna" },
-		{ AL["Grizikil"], "LKHGrizikil" },
-		{ AL["Clawlord Howlfang"], "LKHClawlordHowlfang" },
-		{ AL["Lord Blackwald II"], "LKHLordBlackwaldII" },
-		{ AL["Moroes"], "LKHMoroes" },
-		{ AL["Trash Mobs"], "LKHTrash" },
-		{ AL["LKH Enchants"], "LKHEnchants" },
-	},
-	["UpperKara"] = {
-		{ AL["Keeper Gnarlmoon"], "UKHGnarlmoon" },
-		{ AL["Ley-Watcher Incantagos"], "UKHIncantagos" },
-		{ AL["Anomalus"], "UKHAnomalus" },
-		{ AL["Echo of Medivh"], "UKHEcho" },
-		{ AL["King (Chess fight)"], "UKHKing" },
-		{ AL["Sanv Tas'dal"], "UKHSanvTasdal" },
-		{ AL["Kruul"], "UKHKruul" },
-		{ AL["Rupturan the Broken"], "UKHRupturan" },
-		{ AL["Mephistroth"], "UKHMephistroth" },
-		{ AL["Trash Mobs"], "UKHTrash" },
-	},
-	["WorldBosses"] = {
-		{ AL["Azuregos"], "AAzuregos" },
-		{ AL["Emeriss"], "DEmeriss" },
-		{ AL["Lethon"], "DLethon" },
-		{ AL["Taerar"], "DTaerar" },
-		{ AL["Ysondre"], "DYsondre" },
-		{ AL["Lord Kazzak"], "KKazzak" },
-		{ AL["Nerubian Overseer"], "Nerubian" },
-		{ AL["Dark Reaver of Karazhan"], "Reaver" },
-		{ AL["Ostarius"], "Ostarius" },
-		{ AL["Concavius"], "Concavius" },
-		{ AL["Moo"], "CowKing" },
-		{ AL["Cla'ckora"], "Clackora" },
-	},
-	["RareSpawns"] = {
-		{ WHITE.."[17]"..DEFAULT.." "..AL["Earthcaller Rezengal"].." "..WHITE.."("..AL["Stonetalon Mountains"]..")", "EarthcallerRezengal" },
-		{ WHITE.."[17]"..DEFAULT.." "..AL["Shade Mage"].." "..WHITE.."("..AL["Tirisfal Glades"]..")", "ShadeMage" },
-		{ WHITE.."[18]"..DEFAULT.." "..AL["Graypaw Alpha"].." "..WHITE.."("..AL["Tirisfal Glades"]..")", "GraypawAlpha" },
-		{ WHITE.."[24]"..DEFAULT.." "..AL["Blazespark"].." "..WHITE.."("..AL["Stonetalon Mountains"]..")", "Blazespark" },
-		{ WHITE.."[35]"..DEFAULT.." "..AL["Witch Doctor Tan'zo"].." "..WHITE.."("..AL["Arathi Highlands"]..")", "WitchDoctorTanzo" },
-		{ WHITE.."[40]"..DEFAULT.." "..AL["Widow of the Woods"].." "..WHITE.."("..AL["Gilneas"]..")", "WidowoftheWoods" },
-		{ WHITE.."[40]"..DEFAULT.." "..AL["Dawnhowl"].." "..WHITE.."("..AL["Gilneas"]..")", "Dawnhowl" },
-		{ WHITE.."[43]"..DEFAULT.." "..AL["Maltimor's Prototype"].." "..WHITE.."("..AL["Gilneas"]..")", "MaltimorsPrototype" },
-		{ WHITE.."[44]"..DEFAULT.." "..AL["Bonecruncher"].." "..WHITE.."("..AL["Gilneas"]..")", "Bonecruncher" },
-		{ WHITE.."[44]"..DEFAULT.." "..AL["Duskskitter"].." "..WHITE.."("..AL["Gilneas"]..")", "Duskskitter" },
-		{ WHITE.."[45]"..DEFAULT.." "..AL["Baron Perenolde"].." "..WHITE.."("..AL["Gilneas"]..")", "BaronPerenolde" },
-		{ WHITE.."[45]"..DEFAULT.." "..AL["Kin'Tozo"].." "..WHITE.."("..AL["Stranglethorn Vale"]..")", "KinTozo" },
-		{ WHITE.."[47]"..DEFAULT.." "..AL["Grug'thok the Seer"].." "..WHITE.."("..AL["Feralas"]..")", "Grugthok" },
-		{ WHITE.."[47]"..DEFAULT.." "..AL["M-0L1Y"].." "..WHITE.."("..AL["Dun Morogh"]..")", "M0L1Y" },
-		{ WHITE.."[49]"..DEFAULT.." "..AL["Explorer Ashbeard"].." "..WHITE.."("..AL["Searing Gorge"]..")", "Ashbeard" },
-		{ WHITE.."[50]"..DEFAULT.." "..AL["Jal'akar"].." "..WHITE.."("..AL["Hinterlands"]..")", "Jalakar" },
-		{ WHITE.."[51]"..DEFAULT.." "..AL["Embereye"].." "..WHITE.."("..AL["Gilijim Isle"]..")", "Embereye" },
-		{ WHITE.."[51]"..DEFAULT.." "..AL["Ruk'thok the Pyromancer"].." "..WHITE.."("..AL["Lapidis Isle"]..")", "Rukthok" },
-		{ WHITE.."[51]"..DEFAULT.." "..AL["Tarangos"].." "..WHITE.."("..AL["Azshara"]..")", "Tarangos" },
-		{ WHITE.."[51]"..DEFAULT.." "..AL["Ripjaw"].." "..WHITE.."("..AL["Lapidis Isle"]..")", "Ripjaw" },
-		{ WHITE.."[53]"..DEFAULT.." "..AL["Xalvic Blackclaw"].." "..WHITE.."("..AL["Felwood"]..")", "Xalvic" },
-		{ WHITE.."[54]"..DEFAULT.." "..AL["Aquitus"].." "..WHITE.."("..AL["Gilijim Isle"]..")", "Aquitus" },
-		{ WHITE.."[55]"..DEFAULT.." "..AL["Firstborn of Arugal"].." "..WHITE.."("..AL["Gilneas"]..")", "FirstbornofArugal" },
-		{ WHITE.."[55]"..DEFAULT.." "..AL["Letashaz"].." "..WHITE.."("..AL["Gilijim Isle"]..")", "Letashaz" },
-		{ WHITE.."[55]"..DEFAULT.." "..AL["Margon the Mighty"].." "..WHITE.."("..AL["Lapidis Isle"]..")", "MargontheMighty" },
-		{ WHITE.."[55]"..DEFAULT.." "..AL["The Wandering Knight"].." "..WHITE.."("..AL["Western Plaguelands"]..")", "WanderingKnight" },
-		{ WHITE.."[56]"..DEFAULT.." "..AL["Stoneshell"].." "..WHITE.."("..AL["Tel'abim"]..")", "Stoneshell" },
-		{ WHITE.."[57]"..DEFAULT.." "..AL["Zareth Terrorblade"].." "..WHITE.."("..AL["Blasted Lands"]..")", "Zareth" },
-		{ WHITE.."[58]"..DEFAULT.." "..AL["Highvale Silverback"].." "..WHITE.."("..AL["Tel'abim"]..")", "HighvaleSilverback" },
-		{ WHITE.."[58]"..DEFAULT.." "..AL["Mallon The Moontouched"].." "..WHITE.."("..AL["Winterspring"]..")", "Mallon" },
-		{ WHITE.."[59]"..DEFAULT.." "..AL["Blademaster Kargron"].." "..WHITE.."("..AL["Burning Steppes"]..")", "Kargron" },
-		{ WHITE.."[59]"..DEFAULT.." "..AL["Professor Lysander"].." "..WHITE.."("..AL["Eastern Plaguelands"]..")", "ProfessorLysander" },
-		{ WHITE.."[60]"..DEFAULT.." "..AL["Admiral Barean Westwind"].." "..WHITE.."("..AL["Scarlet Enclave"]..")", "AdmiralBareanWestwind" },
-		{ WHITE.."[60]"..DEFAULT.." "..AL["Azurebeak"].." "..WHITE.."("..AL["Hyjal"]..")", "Azurebeak" },
-		{ WHITE.."[60]"..DEFAULT.." "..AL["Barkskin Fisher"].." "..WHITE.."("..AL["Hyjal"]..")", "BarkskinFisher" },
-		{ WHITE.."[61]"..DEFAULT.." "..AL["Crusader Larsarius"].." "..WHITE.."("..AL["Eastern Plaguelands"]..")", "CrusaderLarsarius" },
-		{ WHITE.."[61]"..DEFAULT.." "..AL["Shadeflayer Goliath"].." "..WHITE.."("..AL["Hyjal"]..")", "ShadeflayerGoliath" },
-	},
-	["DragonmawRetreat"] = {
-		{ AL["Gowlfang"], "DMRGowlfang" },
-		{ AL["Cavernweb Broodmother"], "DMRBroodmother" },
-		{ AL["Web Master Torkon"], "DMRWebMaster" },
-		{ AL["Garlok Flamekeeper"], "DMRGarlok" },
-		{ AL["Halgan Redbrand"], "DMRHalgan" },
-		{ AL["Slagfist Destroyer"], "DMRSlagfist" },
-		{ AL["Overlord Blackheart"], "DMROverlord" },
-		{ AL["Elder Hollowblood"], "DMRElderHollowblood" },
-		{ AL["Searistrasz"], "DMRSearistrasz" },
-		{ AL["Zuluhed the Whacked"], "DMRZuluhed" },
-		{ AL["Trash Mobs"], "DMRTrash" },
-	},
-	["StormwroughtRuins"] = {
-		{ AL["Oronok Torn-Heart"], "SWROronok" },
-		{ AL["Dagar the Glutton"], "SWRDagar" },
-		{ AL["Duke Balor the IV"], "SWRDukeBalor" },
-		{ AL["Librarian Theodorus"], "SWRLibrarian" },
-		{ AL["Chieftain Stormsong"], "SWRChieftain" },
-		{ AL["Deathlord Tidebane"], "SWRDeathlord" },
-		{ AL["Subjugator Halthas Shadecrest"], "SWRSubjugator" },
-		{ AL["Mycellakos"], "SWRMycellakos" },
-		{ AL["Eldermaw the Primordial"], "SWREldermaw" },
-		{ AL["Lady Drazare"], "SWRLadyDrazare" },
-		{ AL["Remains of the Innocent"], "SWRRemains" },
-		{ AL["Mergothid"], "SWRMergothid" },
-		{ AL["Trash Mobs"], "SWRTrash" },
-	},
 }
 
 --[[
@@ -1011,13 +172,6 @@ function AtlasLoot_OnVariablesLoaded()
 			StaticPopup_Show("ATLASLOOT_SETUP")
 			AtlasLootCharDB.FirstTime = false
 		end
-		-- If an older version
-		if AtlasLootCharDB.FirstTime == nil and version < 40500 then
-			-- AtlasLootCharDB.SafeLinks = true
-			-- AtlasLootCharDB.AllLinks = false
-			StaticPopup_Show("ATLASLOOT_SETUP")
-			AtlasLootCharDB.FirstTime = false
-		end
 		Original_Atlas_Refresh()
 	else
 		-- If we are not using Atlas, keep the items frame out of the way
@@ -1067,10 +221,9 @@ function AtlasLoot_OnVariablesLoaded()
 	end
 	-- Position relevant UI objects for loot browser and set up menu
 	AtlasLootDefaultFrame_SelectedCategory:SetPoint("TOP", "AtlasLootDefaultFrame_Menu", "BOTTOM", 0, -4)
-	AtlasLootDefaultFrame_SelectedTable:SetPoint("TOP", "AtlasLootDefaultFrame_SubMenu", "BOTTOM", 0, -4)
 	AtlasLootDefaultFrame_SelectedCategory:SetText(AtlasLootCharDB.LastBossText)
+	AtlasLootDefaultFrame_SelectedTable:SetPoint("TOP", "AtlasLootDefaultFrame_SubMenu", "BOTTOM", 0, -4)
 	AtlasLootDefaultFrame_SelectedTable:SetText("")
-	AtlasLootDefaultFrame_SelectedCategory:Show()
 	AtlasLootDefaultFrame_SelectedTable:Show()
 	AtlasLootDefaultFrame_SubMenu:Disable()
 end
@@ -1094,7 +247,6 @@ function AtlasLootOptions_OnLoad()
 		AtlasLootOptionsFrameEquipCompareText:SetText(AL["|cff9d9d9dUse EquipCompare|r"])
 	end
 	AtlasLootOptions_Init()
-	UIPanelWindows['AtlasLootOptionsFrame'] = { area = 'center', pushable = 0 }
 end
 
 --[[
@@ -1107,8 +259,6 @@ function AtlasLootOptions_Init()
 		AtlasLootOptions_Fresh()
 	end
 	-- Initialise all the check boxes on the options frame
-	-- AtlasLootOptionsFrameSafeLinks:SetChecked(AtlasLootCharDB.SafeLinks)
-	-- AtlasLootOptionsFrameAllLinks:SetChecked(AtlasLootCharDB.AllLinks)
 	AtlasLootOptionsFrameDefaultTT:SetChecked(AtlasLootCharDB.DefaultTT)
 	AtlasLootOptionsFrameLootlinkTT:SetChecked(AtlasLootCharDB.LootlinkTT)
 	AtlasLootOptionsFrameItemSyncTT:SetChecked(AtlasLootCharDB.ItemSyncTT)
@@ -1117,7 +267,6 @@ function AtlasLootOptions_Init()
 	AtlasLootOptionsFrameEquipCompare:SetChecked(AtlasLootCharDB.EquipCompare)
 	AtlasLootOptionsFrameOpaque:SetChecked(AtlasLootCharDB.Opaque)
 	AtlasLootOptionsFrameItemID:SetChecked(AtlasLootCharDB.ItemIDs)
-	-- AtlasLootOptionsFrameItemSpam:SetChecked(AtlasLootCharDB.ItemSpam)
 	AtlasLootOptionsFrameHidePanel:SetChecked(AtlasLootCharDB.HidePanel)
 	AtlasLootOptionsFrameMinimap:SetChecked(AtlasLootCharDB.MinimapButton)
 	AtlasLootOptionsFrameSliderButtonPos:SetValue(AtlasLootCharDB.MinimapButtonPosition)
@@ -1136,8 +285,6 @@ Atlas_FreshOptions:
 Sets default options on a fresh start.
 ]]
 function AtlasLootOptions_Fresh()
-	-- AtlasLootCharDB.SafeLinks = false
-	-- AtlasLootCharDB.AllLinks = true
 	AtlasLootCharDB.DefaultTT = true
 	AtlasLootCharDB.LootlinkTT = false
 	AtlasLootCharDB.ItemSyncTT = false
@@ -1147,14 +294,12 @@ function AtlasLootOptions_Fresh()
 	AtlasLootCharDB.Opaque = false
 	AtlasLootCharDB.ItemIDs = false
 	AtlasLootCharDB.FirstTime = true
-	-- AtlasLootCharDB.ItemSpam = true
 	AtlasLootCharDB.MinimapButton = true
 	AtlasLootCharDB.MinimapButtonPosition = 315
 	AtlasLootCharDB.MinimapButtonRadius = 78
 	AtlasLootCharDB.HidePanel = false
 	AtlasLootCharDB.LastBoss = "DUNGEONSMENU1"
 	AtlasLootCharDB.LastBossText = AL["Dungeons & Raids"]
-	-- AtlasLootCharDB.AutoQuery = false
 	AtlasLootCharDB.PartialMatching = true
 end
 
@@ -1202,10 +347,6 @@ function AtlasLootDefaultFrame_OnHide()
 	end
 	AtlasLoot_Hewdrop:Close(1)
 	AtlasLoot_HewdropSubMenu:Close(1)
-	if AtlasLootItemsFrame.refresh then
-		AtlasLootCharDB.LastBoss = AtlasLootItemsFrame.refresh[1]
-		AtlasLootCharDB.LastBossText = AtlasLootItemsFrame.refresh[3]
-	end
 end
 
 --[[
@@ -1368,14 +509,12 @@ function AtlasLootBoss_OnClick()
 	else
 		-- If an loot table is associated with the button, show it.  Note multiple tables need to be checked due to the database structure
 		if AtlasLootBossButtons[zoneID] and AtlasLootBossButtons[zoneID][id] and AtlasLootBossButtons[zoneID][id] ~= "" then
-			-- if AtlasLoot_IsLootTableAvailable(AtlasLootBossButtons[zoneID][id]) then
 			_G[name.."_Selected"]:Show()
 			_G[name.."_Loot"]:Hide()
 			local _, _, boss = string.find(_G[name.."_Text"]:GetText(), "|c%x%x%x%x%x%x%x%x%s*[%dX']*[%) ]*(.*[^%,])[%,]?$")
 			AtlasLoot_ShowBossLoot(AtlasLootBossButtons[zoneID][id], boss)
 			AtlasLootItemsFrame.activeBoss = id
 			AtlasLoot_AtlasScrollBar_Update()
-			AtlasLootCharDB.LastBoss = AtlasLootBossButtons[zoneID][id]
 			-- dont show navigation buttons if its not rep or set
 			local match = string.find(boss, AL["Reputation"]) or string.find(boss, AL["Set"])
 			if not match then
@@ -1383,31 +522,24 @@ function AtlasLootBoss_OnClick()
 				AtlasLootItemsFrame_NEXT:Hide()
 				AtlasLootItemsFrame_PREV:Hide()
 			end
-			-- end
 		elseif AtlasLootWBBossButtons[zoneID] and AtlasLootWBBossButtons[zoneID][id] and AtlasLootWBBossButtons[zoneID][id] ~= "" then
-			-- if AtlasLoot_IsLootTableAvailable(AtlasLootWBBossButtons[zoneID][id]) then
 			_G[name.."_Selected"]:Show()
 			_G[name.."_Loot"]:Hide()
 			local _, _, boss = string.find(_G[name.."_Text"]:GetText(), "|c%x%x%x%x%x%x%x%x%s*[%dX]*[%) ]*(.*[^%,])[%,]?$")
 			AtlasLoot_ShowBossLoot(AtlasLootWBBossButtons[zoneID][id], boss)
 			AtlasLootItemsFrame.activeBoss = id
 			AtlasLoot_AtlasScrollBar_Update()
-			AtlasLootCharDB.LastBoss = AtlasLootWBBossButtons[zoneID][id]
 			-- dont show navigation buttons
 			AtlasLootItemsFrame_BACK:Hide()
 			AtlasLootItemsFrame_NEXT:Hide()
 			AtlasLootItemsFrame_PREV:Hide()
-			-- end
 		elseif AtlasLootBattlegrounds[zoneID] and AtlasLootBattlegrounds[zoneID][id] and AtlasLootBattlegrounds[zoneID][id] ~= "" then
-			-- if AtlasLoot_IsLootTableAvailable(AtlasLootBattlegrounds[zoneID][id]) then
 			_G[name.."_Selected"]:Show()
 			_G[name.."_Loot"]:Hide()
 			local _, _, boss = string.find(_G[name.."_Text"]:GetText(), "|c%x%x%x%x%x%x%x%x%s*[%wX]*[%) ]*(.*[^%,])[%,]?$")
 			AtlasLoot_ShowBossLoot(AtlasLootBattlegrounds[zoneID][id], boss)
 			AtlasLootItemsFrame.activeBoss = id
 			AtlasLoot_AtlasScrollBar_Update()
-			AtlasLootCharDB.LastBoss = AtlasLootBattlegrounds[zoneID][id]
-			-- end
 		end
 	end
 	-- This has been invoked from Atlas, so we remove any claim external mods have on the loot table
@@ -1425,34 +557,6 @@ Legacy function used in Cosmos integration to open the loot browser
 function AtlasLoot_ShowMenu()
 	AtlasLootDefaultFrame:Show()
 end
-
---[[
-AtlasLootOptions_SafeLinksToggle:
-Toggles SafeLinks. Items uncached will be linked as their names.
-]]
--- function AtlasLootOptions_SafeLinksToggle()
--- 	if AtlasLootCharDB.SafeLinks then
--- 		AtlasLootCharDB.SafeLinks = false
--- 	else
--- 		AtlasLootCharDB.SafeLinks = true
--- 		AtlasLootCharDB.AllLinks = false
--- 	end
--- 	AtlasLootOptions_Init()
--- end
-
---[[
-AtlasLootOptions_AllLinksToggle:
-Toggles AllLinks. All items will be linked.
-]]
--- function AtlasLootOptions_AllLinksToggle()
--- 	if AtlasLootCharDB.AllLinks then
--- 		AtlasLootCharDB.AllLinks = false
--- 	else
--- 		AtlasLootCharDB.AllLinks = true
--- 		AtlasLootCharDB.SafeLinks = false
--- 	end
--- 	AtlasLootOptions_Init()
--- end
 
 --[[
 AtlasLootOptions_DefaultTTToggle:
@@ -1568,19 +672,6 @@ function AtlasLootOptions_ItemIDToggle()
 end
 
 --[[
-AtlasLootOptions_ItemSpam:
-Toggles item query spam.
-]]
--- function AtlasLootOptions_ItemSpam()
--- 	if AtlasLootCharDB.ItemSpam then
--- 		AtlasLootCharDB.ItemSpam = false
--- 	else
--- 		AtlasLootCharDB.ItemSpam = true
--- 	end
--- 	AtlasLootOptions_Init()
--- end
-
---[[
 AtlasLootOptions_Toggle:
 Toggle on/off the options window
 ]]
@@ -1628,15 +719,29 @@ end
 AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame):
 dataID - Name of the loot table
 dataSource - Table in the database where the loot table is stored
-boss - Text string to use as a title for the loot page
-pFrame - Data structure describing how and where to anchor the item frame (more details, see the function AtlasLoot_SetItemInfoFrame)
+title - Text string to use as a title for the loot page
 This fuction is not normally called directly, it is usually invoked by AtlasLoot_ShowBossLoot.
 It is the workhorse of the mod and allows the loot tables to be displayed any way anywhere in any mod.
 ]]
-function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss)
+function AtlasLoot_ShowItemsFrame(dataID, dataSource, title)
 	AtlasLootItemsFrame.refreshTime = nil
 	if AtlasLootItemsFrameContainer:IsShown() and AtlasLootItemsFrame.refresh and dataID ~= AtlasLootItemsFrame.refresh[1] then
 		AtlasLootItemsFrameContainer:Hide()
+	end
+	if not dataID then return end
+	if not dataSource then
+		dataSource = AtlasLoot_TableNames[dataID] and AtlasLoot_TableNames[dataID][2] or "AtlasLootFallback"
+	end
+	if not title then
+		if AtlasLoot_TableNames[dataID] and AtlasLoot_TableNames[dataID][1] then
+			if dataSource == "AtlasLootItems" or dataSource == "AtlasLootWBItems" then
+				title = gsub(AtlasLoot_TableNames[dataID][1], "^.+ %- ", "")
+			else
+				title = AtlasLoot_TableNames[dataID][1]
+			end
+		else
+			title = ""
+		end
 	end
 	-- Set up local variables needed for GetItemInfo, etc
 	local iconFrame, nameFrame, extraFrame, itemButton
@@ -1644,38 +749,75 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss)
 	local wlPage, wlPageMax = 1, 1
 	local isItem, isEnchant, isSpell
 	local spellName, spellIcon
-	local dataSource_backup = dataSource
-	if dataSource ~= "dummy" then
-		if dataID == "SearchResult" or dataID == "WishList" then
-			dataSource = {}
-			-- Match the page number to display
-			wlPage = tonumber(string.sub(dataSource_backup, string.find(dataSource_backup, "%d"), string.len(dataSource_backup)))
-			-- Aquiring items of the page
-			if dataID == "SearchResult" then
-				dataSource[dataID], wlPageMax = AtlasLoot:GetSearchResultPage(wlPage)
-			elseif dataID == "WishList" then
-				dataSource[dataID], wlPageMax = AtlasLoot_GetWishListPage(wlPage)
-			end
-			-- Make page number reasonable
-			if wlPage < 1 then wlPage = 1 end
-			if wlPage > wlPageMax then wlPage = wlPageMax end
-		else
-			dataSource = AtlasLoot_Data[dataSource_backup]
+	local dataSourceStr = dataSource
+	if dataID == "SearchResult" or dataID == "WishList" then
+		dataSource = {}
+		-- Match the page number to display
+		wlPage = tonumber(string.sub(dataSourceStr, string.find(dataSourceStr, "%d"), string.len(dataSourceStr)))
+		-- Aquiring items of the page
+		if dataID == "SearchResult" then
+			dataSource[dataID], wlPageMax = AtlasLoot:GetSearchResultPage(wlPage)
+			title = string.format((AL["Search Result: %s"]), AtlasLootCharDB.LastSearchedText or "")
+		elseif dataID == "WishList" then
+			dataSource[dataID], wlPageMax = AtlasLoot_GetWishListPage(wlPage)
+			title = AL["WishList"]
 		end
+		-- Make page number reasonable
+		if wlPage < 1 then wlPage = 1 end
+		if wlPage > wlPageMax then wlPage = wlPageMax end
+	else
+		dataSource = AtlasLoot_Data[dataSourceStr]
 	end
+	AtlasLootCharDB.LastBossText = title
+	AtlasLootCharDB.LastBoss = dataID
 	-- Get AtlasQuest out of the way
 	if AtlasQuestInsideFrame then
 		AtlasQuestInsideFrame:Hide()
 	end
 	-- Store data about the state of the items frame to allow minor tweaks or a recall of the current loot page
-	AtlasLootItemsFrame.refresh = { dataID, dataSource_backup, boss, AtlasLoot_AnchorPoint }
-	-- Escape out of this function if creating a menu, this function only handles loot tables.
-	-- Inserting escapes in this way allows consistant calling of data whether it is a loot table or a menu.
-	if AtlasLoot_MenuList[dataID] then
-		-- Ditch the Quicklook selector
+	AtlasLootItemsFrame.refresh = { dataID, dataSourceStr, title, AtlasLoot_AnchorPoint }
+
+	if dataSourceStr == "MENUS" then
+		local data = AtlasLoot_Data.MENUS[dataID]
+		for i = 1, 30 do
+			_G["AtlasLootItem_"..i]:Hide()
+			local menuItem = _G["AtlasLootMenuItem_"..i]
+			menuItem:Hide()
+			menuItem.isheader = false
+			menuItem.container = nil
+			menuItem.dataSource = nil
+			_G["AtlasLootMenuItem_"..i.."_Icon"]:SetTexCoord(0, 1, 0, 1)
+			_G["AtlasLootMenuItem_"..i.."_IconBorder"]:SetVertexColor(1, 1, 1)
+		end
+		for i = 1, getn(data) do
+			local buttonIndex = data[i][1]
+			local lootPage = data[i][2]
+			local container = data[i][6]
+			local icon = data[i][3]
+			_G["AtlasLootMenuItem_"..buttonIndex.."_Name"]:SetText(data[i][4])
+			_G["AtlasLootMenuItem_"..buttonIndex.."_Extra"]:SetText(data[i][5])
+			if type(container) == "table" then
+				_G["AtlasLootMenuItem_"..buttonIndex].container = container
+				_G["AtlasLootMenuItem_"..buttonIndex.."_IconBorder"]:SetVertexColor(1, 0.82, 0)
+				for row = 1, getn(container) do
+					for item = 1, getn(container[row]) do
+						AtlasLoot_CacheItem(container[row][item][1])
+					end
+				end
+			else
+				_G["AtlasLootMenuItem_"..buttonIndex].lootpage = lootPage
+				_G["AtlasLootMenuItem_"..buttonIndex.."_IconBorder"]:SetVertexColor(1, 1, 1)
+			end
+			_G["AtlasLootMenuItem_"..buttonIndex].isheader = not lootPage and not container
+			if strsub(icon, 1, 5) == "CLASS" then
+				_G["AtlasLootMenuItem_"..buttonIndex.."_Icon"]:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\"..strsub(icon, 6))
+			else
+				_G["AtlasLootMenuItem_"..buttonIndex.."_Icon"]:SetTexture("Interface\\Icons\\"..icon)
+			end
+			_G["AtlasLootMenuItem_"..buttonIndex]:Show()
+		end
 		AtlasLoot_QuickLooks:Hide()
 		AtlasLootQuickLooksButton:Hide()
-		_G[AtlasLoot_MenuList[dataID]]()
 	else
 		-- This is a valid QuickLook, so show the UI objects
 		if dataID ~= "SearchResult" and dataID ~= "WishList" then
@@ -1871,7 +1013,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss)
 				if (dataID == "SearchResult" or dataID == "WishList") and dataSource[dataID][i][5] then
 					local _, _, wishDataID, wishDataSource = strfind(dataSource[dataID][i][5], "(.+)|(.+)")
 					if wishDataSource == "AtlasLootRepItems" then
-						if wishDataID --[[and AtlasLoot_IsLootTableAvailable(wishDataID)]] then
+						if wishDataID then
 							for _, v in ipairs(AtlasLoot_Data[wishDataSource][wishDataID]) do
 								if dataSource[dataID][i][1] == v[1] then
 									index = 1
@@ -1893,7 +1035,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss)
 					end
 					if wishDataSource == "AtlasLootItems" and AtlasLootCharDB.WishlistGroupedByDungeon then
 						-- Set boss
-						if wishDataID --[[and AtlasLoot_IsLootTableAvailable(wishDataID)]] then
+						if wishDataID then
 							for _, v in ipairs(AtlasLoot_Data[wishDataSource][wishDataID]) do
 								if dataSource[dataID][i][1] == v[1] then
 									local boss = AtlasLoot_GetWishListSubheadingBoss(wishDataID)
@@ -1936,73 +1078,58 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss)
 				_G["AtlasLootItem_"..i]:Hide()
 			end
 		end
-		-- Hide navigation buttons by default, only show what we need
-		AtlasLootItemsFrame_BACK:Hide()
-		AtlasLootItemsFrame_NEXT:Hide()
-		AtlasLootItemsFrame_PREV:Hide()
-		AtlasLoot_BossName:SetText(boss)
-		-- Consult the button registry to determine what nav buttons are required
-		if dataID == "SearchResult" or dataID == "WishList" then
-			if wlPage < wlPageMax then
-				AtlasLootItemsFrame_NEXT:Show()
-				AtlasLootItemsFrame_NEXT.lootpage = dataID.."Page"..(wlPage + 1)
-			end
-			if wlPage > 1 then
-				AtlasLootItemsFrame_PREV:Show()
-				AtlasLootItemsFrame_PREV.lootpage = dataID.."Page"..(wlPage - 1)
-			end
-		elseif AtlasLoot_ButtonRegistry[dataID] then
-			local tablebase = AtlasLoot_ButtonRegistry[dataID]
-			AtlasLoot_BossName:SetText(tablebase.Title)
-			if tablebase.Next_Page then
-				AtlasLootItemsFrame_NEXT:Show()
-				AtlasLootItemsFrame_NEXT.lootpage = tablebase.Next_Page
-				if AtlasLoot_ButtonRegistry[tablebase.Next_Page] then
-					AtlasLootItemsFrame_NEXT.title = AtlasLoot_ButtonRegistry[tablebase.Next_Page].Title
+	end
+	-- Hide navigation buttons by default, only show what we need
+	AtlasLootItemsFrame_BACK:Hide()
+	AtlasLootItemsFrame_NEXT:Hide()
+	AtlasLootItemsFrame_PREV:Hide()
+	AtlasLoot_BossName:SetText(title)
+	-- Consult the button registry to determine what nav buttons are required
+	if dataID == "SearchResult" or dataID == "WishList" then
+		if wlPage < wlPageMax then
+			AtlasLootItemsFrame_NEXT:Show()
+			AtlasLootItemsFrame_NEXT.lootpage = dataID.."Page"..(wlPage + 1)
+		end
+		if wlPage > 1 then
+			AtlasLootItemsFrame_PREV:Show()
+			AtlasLootItemsFrame_PREV.lootpage = dataID.."Page"..(wlPage - 1)
+		end
+	elseif AtlasLoot_ButtonRegistry[dataID] then
+		local tablebase = AtlasLoot_ButtonRegistry[dataID]
+		if tablebase.Next_Page then
+			AtlasLootItemsFrame_NEXT:Show()
+			AtlasLootItemsFrame_NEXT.lootpage = tablebase.Next_Page
+		end
+		if tablebase.Prev_Page then
+			AtlasLootItemsFrame_PREV:Show()
+			AtlasLootItemsFrame_PREV.lootpage = tablebase.Prev_Page
+		end
+		if tablebase.Back_Page then
+			AtlasLootItemsFrame_BACK:Show()
+			AtlasLootItemsFrame_BACK.lootpage = tablebase.Back_Page
+			if AtlasFrame and AtlasFrame:IsVisible() then
+				-- Hide navigation buttons if we click on boss loot in Atlas
+				if dataSourceStr == "AtlasLootItems" or dataSourceStr == "AtlasLootWBItems" then
+					AtlasLootItemsFrame_BACK:Hide()
+					AtlasLootItemsFrame_NEXT:Hide()
+					AtlasLootItemsFrame_PREV:Hide()
 				end
-			end
-			if tablebase.Prev_Page then
-				AtlasLootItemsFrame_PREV:Show()
-				AtlasLootItemsFrame_PREV.lootpage = tablebase.Prev_Page
-				if AtlasLoot_ButtonRegistry[tablebase.Prev_Page] then
-					AtlasLootItemsFrame_PREV.title = AtlasLoot_ButtonRegistry[tablebase.Prev_Page].Title
-				end
-			end
-			if tablebase.Back_Page then
-				AtlasLootItemsFrame_BACK:Show()
-				AtlasLootItemsFrame_BACK.lootpage = tablebase.Back_Page
-				if AtlasLoot_ButtonRegistry[tablebase.Back_Page] then
-					AtlasLootItemsFrame_BACK.title = AtlasLoot_ButtonRegistry[tablebase.Back_Page].Title
-				end
-				if AtlasFrame and AtlasFrame:IsVisible() then
-					local sourceKey
-					for k, v in pairs(AtlasLoot_Data) do
-						if v == dataSource then
-							sourceKey = k
-						end
-					end
-					-- Hide navigation buttons if we click on boss loot in Atlas
-					if sourceKey == "AtlasLootItems" or sourceKey == "AtlasLootWBItems" then
+				-- Hide navigation buttons if we click Quicklooks in Atlas
+				for i = 1, 4 do
+					if AtlasLootCharDB["QuickLooks"][i] and dataID == AtlasLootCharDB["QuickLooks"][i][1] then
 						AtlasLootItemsFrame_BACK:Hide()
 						AtlasLootItemsFrame_NEXT:Hide()
 						AtlasLootItemsFrame_PREV:Hide()
-					end
-					-- Hide navigation buttons if we click Quicklooks in Atlas
-					for i = 1, 4 do
-						if AtlasLootCharDB["QuickLooks"][i] and dataID == AtlasLootCharDB["QuickLooks"][i][1] then
-							AtlasLootItemsFrame_BACK:Hide()
-							AtlasLootItemsFrame_NEXT:Hide()
-							AtlasLootItemsFrame_PREV:Hide()
-						end
 					end
 				end
 			end
 		end
 	end
 	-- For Alphamap and Atlas integration, show a 'close' button to hide the loot table and restore the map view
-	AtlasLootItemsFrame_CloseButton:Hide()
-	if AtlasFrame and AtlasFrame:IsShown() or AlphaMapAlphaMapFrame and AlphaMapAlphaMapFrame:IsShown() then
+	if AtlasLoot_AnchorPoint ~= Anchor_Default then
 		AtlasLootItemsFrame_CloseButton:Show()
+	else
+		AtlasLootItemsFrame_CloseButton:Hide()
 	end
 	local subMenu = nil
 	local bossName = ""
@@ -2027,6 +1154,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss)
 		AtlasLootDefaultFrame_SubMenu:Disable()
 		AtlasLootDefaultFrame_SelectedTable:Hide()
 	end
+	-- AtlasLootDefaultFrame_SelectedCategory:SetText()
 	-- Anchor the item frame where it is supposed to be
 	AtlasLootItemsFrame:SetParent(_G[AtlasLoot_AnchorPoint[2]])
 	AtlasLootItemsFrame:ClearAllPoints()
@@ -2036,23 +1164,19 @@ end
 
 --[[
 AtlasLoot_HewdropClick(tablename, text, tabletype):
-tablename - Name of the loot table in the database
+dataID - Name of the loot table in the database
 text - Heading for the loot table
 tabletype - Whether the tablename indexes an actual table or needs to generate a submenu
 Called when a button in AtlasLoot_Hewdrop is clicked
 ]]
-function AtlasLoot_HewdropClick(tablename, text, tabletype)
-	-- AtlasLootCharDB.LastMenu = { tablename, text, tabletype }
+function AtlasLoot_HewdropClick(dataID, text, tabletype)
 	-- Definition of where I want the loot table to be shown
 	AtlasLoot_AnchorPoint = Anchor_Default
 
 	-- If the button clicked was linked to a loot table
 	if tabletype == "Table" then
 		-- Show the loot table
-		AtlasLoot_ShowBossLoot(tablename, text)
-		-- Save needed info for fuure re-display of the table
-		AtlasLootCharDB.LastBoss = tablename
-		AtlasLootCharDB.LastBossText = text
+		AtlasLoot_ShowBossLoot(dataID, text)
 		-- Purge the text label for the submenu and disable the submenu
 		AtlasLootDefaultFrame_SubMenu:Disable()
 		AtlasLootDefaultFrame_SelectedTable:SetText("")
@@ -2062,20 +1186,16 @@ function AtlasLoot_HewdropClick(tablename, text, tabletype)
 		-- Enable the submenu button
 		AtlasLootDefaultFrame_SubMenu:Enable()
 		-- Show the first loot table associated with the submenu
-		AtlasLoot_ShowBossLoot(AtlasLoot_HewdropDown_SubTables[tablename][1][2], AtlasLoot_HewdropDown_SubTables[tablename][1][1])
-		-- Save needed info for fuure re-display of the table
-		AtlasLootCharDB.LastBoss = AtlasLoot_HewdropDown_SubTables[tablename][1][2]
-		AtlasLootCharDB.LastBossText = AtlasLoot_HewdropDown_SubTables[tablename][1][1]
+		AtlasLoot_ShowBossLoot(AtlasLoot_HewdropDown_SubTables[dataID][1][2], AtlasLoot_HewdropDown_SubTables[dataID][1][1])
 		-- Load the correct submenu and associated with the button
 		AtlasLoot_HewdropSubMenu:Unregister(AtlasLootDefaultFrame_SubMenu)
-		AtlasLoot_HewdropSubMenuRegister(AtlasLoot_HewdropDown_SubTables[tablename])
+		AtlasLoot_HewdropSubMenuRegister(AtlasLoot_HewdropDown_SubTables[dataID])
 		-- Show a text label of what has been selected
-		AtlasLootDefaultFrame_SelectedTable:SetText(AtlasLoot_HewdropDown_SubTables[tablename][1][1])
+		AtlasLootDefaultFrame_SelectedTable:SetText(AtlasLoot_HewdropDown_SubTables[dataID][1][1])
 		AtlasLootDefaultFrame_SelectedTable:Show()
 	end
 	-- Show the category that has been selected
 	AtlasLootDefaultFrame_SelectedCategory:SetText(text)
-	AtlasLootDefaultFrame_SelectedCategory:Show()
 	AtlasLoot_Hewdrop:Close(1)
 end
 
@@ -2090,9 +1210,6 @@ function AtlasLoot_HewdropSubMenuClick(tablename, text)
 	AtlasLoot_AnchorPoint = Anchor_Default
 	-- Show the select loot table
 	AtlasLoot_ShowBossLoot(tablename, text)
-	-- Save needed info for fuure re-display of the table
-	AtlasLootCharDB.LastBoss = tablename
-	AtlasLootCharDB.LastBossText = text
 	-- Show the table that has been selected
 	AtlasLootDefaultFrame_SelectedTable:SetText(text)
 	AtlasLootDefaultFrame_SelectedTable:Show()
@@ -2285,22 +1402,20 @@ function AtlasLoot_OpenMenu(menuName)
 	AtlasLootDefaultFrame_SubMenu:Disable()
 	AtlasLootDefaultFrame_SelectedTable:SetText("")
 	AtlasLootDefaultFrame_SelectedTable:Show()
-	AtlasLootCharDB.LastBoss = this.lootpage
-	AtlasLootCharDB.LastBossText = menuName
 	if menuName == AL["Crafting"] then
-		AtlasLoot_ShowItemsFrame("CRAFTINGMENU", "dummy", "dummy")
+		AtlasLoot_ShowItemsFrame("CRAFTINGMENU")
 	elseif menuName == AL["PvP Rewards"] then
-		AtlasLoot_ShowItemsFrame("PVPMENU", "dummy", "dummy")
+		AtlasLoot_ShowItemsFrame("PVPMENU")
 	elseif menuName == AL["World Events"] then
-		AtlasLoot_ShowItemsFrame("WORLDEVENTMENU", "dummy", "dummy")
+		AtlasLoot_ShowItemsFrame("WORLDEVENTMENU")
 	elseif menuName == AL["Collections"] then
-		AtlasLoot_ShowItemsFrame("SETMENU", "dummy", "dummy")
+		AtlasLoot_ShowItemsFrame("SETMENU")
 	elseif menuName == AL["Factions"] then
-		AtlasLoot_ShowItemsFrame("REPMENU", "dummy", "dummy")
+		AtlasLoot_ShowItemsFrame("REPMENU")
 	elseif menuName == AL["World Bosses"] then
-		AtlasLoot_ShowItemsFrame("WORLDBOSSMENU", "dummy", "dummy")
+		AtlasLoot_ShowItemsFrame("WORLDBOSSMENU")
 	elseif menuName == AL["Dungeons & Raids"] then
-		AtlasLoot_ShowItemsFrame("DUNGEONSMENU1", "dummy", "dummy")
+		AtlasLoot_ShowItemsFrame("DUNGEONSMENU1")
 	end
 	CloseDropDownMenus()
 end
@@ -2334,36 +1449,9 @@ function AtlasLootMenuItem_OnClick()
 		AtlasLoot_ShowContainerFrame()
 		return
 	end
-	if this.isheader == nil or this.isheader == false then
-		local pagename = _G[this:GetName().."_Name"]:GetText()
-		for k, v in ipairs(AtlasLoot_HewdropDown) do
-			if not (type(v[1]) == "table") then
-				for k2, v2 in pairs(v) do
-					for k3, v3 in pairs(v2) do
-						for k4, v4 in pairs(v3) do
-							if not (type(v4[1]) == "table") then
-								if v4[1] == pagename and v4[3] ~= "Table" then
-									AtlasLoot_HewdropClick(v4[2], v4[1], v4[3])
-								end
-							else
-								for k5, v5 in pairs(v4) do
-									if v5[1] == pagename then
-										AtlasLoot_HewdropClick(v5[2], v5[1], v5[3])
-									end
-								end
-							end
-						end
-					end
-				end
-			end
-		end
-		CloseDropDownMenus()
-		AtlasLootCharDB.LastBoss = this.lootpage
-		AtlasLootCharDB.LastBossText = pagename
-		AtlasLoot_ShowBossLoot(this.lootpage, pagename)
-		AtlasLootDefaultFrame_SelectedCategory:SetText(pagename)
-		AtlasLootDefaultFrame_SelectedCategory:Show()
-	end
+	if this.isheader then return end
+	CloseDropDownMenus()
+	AtlasLoot_ShowBossLoot(this.lootpage)
 end
 
 --[[
@@ -2371,78 +1459,13 @@ AtlasLoot_NavButton_OnClick:
 Called when <-, -> or 'Back' are pressed and calls up the appropriate loot page
 ]]
 function AtlasLoot_NavButton_OnClick()
-	if (AtlasLootItemsFrame.refresh and AtlasLootItemsFrame.refresh[1] and AtlasLootItemsFrame.refresh[2]) then
-		if AtlasLootItemsFrame.refresh[1] == "DUNGEONSMENU1" then
-			AtlasLootItemsFrame.refresh[1] = "DUNGEONSMENU2"
-			AtlasLoot_DungeonsMenu2()
-			AtlasLootDefaultFrame_SubMenu:Disable()
-			return
-		elseif AtlasLootItemsFrame.refresh[1] == "DUNGEONSMENU2" then
-			AtlasLootItemsFrame.refresh[1] = "DUNGEONSMENU1"
-			AtlasLoot_DungeonsMenu1()
-			AtlasLootDefaultFrame_SubMenu:Disable()
-			return
-		end
-		if string.sub(this.lootpage, 1, 16) == "SearchResultPage" then
-			AtlasLoot_ShowItemsFrame("SearchResult", this.lootpage, string.format((AL["Search Result: %s"]), AtlasLootCharDB.LastSearchedText or ""))
-		elseif string.sub(this.lootpage, 1, 12) == "WishListPage" then
-			AtlasLoot_ShowItemsFrame("WishList", this.lootpage, AL["WishList"])
-		else
-			AtlasLootCharDB.LastBoss = this.lootpage
-			AtlasLootCharDB.LastBossText = this.title
-			AtlasLoot_ShowItemsFrame(this.lootpage, AtlasLootItemsFrame.refresh[2], this.title)
-			if AtlasLootDefaultFrame_SelectedTable:GetText() then
-				AtlasLootDefaultFrame_SelectedTable:SetText(AtlasLoot_BossName:GetText())
-			else
-				AtlasLootDefaultFrame_SelectedCategory:SetText(AtlasLoot_BossName:GetText())
-			end
-		end
-	elseif AtlasLootItemsFrame.refresh and AtlasLootItemsFrame.refresh[2] then
-		AtlasLoot_ShowItemsFrame(this.lootpage, AtlasLootItemsFrame.refresh[2], this.title)
+	if not this.lootpage then return end
+	if string.sub(this.lootpage, 1, 16) == "SearchResultPage" then
+		AtlasLoot_ShowItemsFrame("SearchResult", this.lootpage)
+	elseif string.sub(this.lootpage, 1, 12) == "WishListPage" then
+		AtlasLoot_ShowItemsFrame("WishList", this.lootpage)
 	else
-		-- Fallback for if the requested loot page is a menu and does not have a .refresh instance
-		AtlasLoot_ShowItemsFrame(this.lootpage, "dummy", this.title)
-	end
-	for k in pairs(AtlasLoot_MenuList) do
-		if this.lootpage == k then
-			AtlasLootDefaultFrame_SubMenu:Disable()
-			AtlasLootDefaultFrame_SelectedCategory:SetText(AtlasLootCharDB.LastBossText)
-			AtlasLootDefaultFrame_SelectedTable:SetText("")
-		end
-	end
-end
-
---[[
-AtlasLoot_IsLootTableAvailable(dataID):
-Checks if a loot table is in memory and attempts to load the correct LoD module if it isn't
-dataID: Loot table dataID
-]]
-function AtlasLoot_IsLootTableAvailable(dataID)
-	if not dataID then return false end
-
-	local menu_check = false
-
-	for k in pairs(AtlasLoot_MenuList) do
-		if k == dataID then
-			menu_check = true
-		end
-	end
-
-	if menu_check then
-		return true
-	else
-		if not AtlasLoot_TableNames[dataID] then
-			DEFAULT_CHAT_FRAME:AddMessage(RED..AL["AtlasLoot Error!"].." "..WHITE..dataID..AL[" not listed in loot table registry, please report this message to the AtlasLoot forums at http://www.atlasloot.net"])
-			return false
-		end
-
-		local dataSource = AtlasLoot_TableNames[dataID][2]
-
-		if AtlasLoot_Data[dataSource] then
-			if AtlasLoot_Data[dataSource][dataID] then
-				return true
-			end
-		end
+		AtlasLoot_ShowItemsFrame(this.lootpage)
 	end
 end
 
@@ -2538,13 +1561,10 @@ end
 AtlasLoot_ShowBossLoot(dataID, boss, pFrame):
 dataID - Name of the loot table
 boss - Text string to be used as the title for the loot page
-pFrame - Data structure describing how and where to anchor the item frame (more details, see the function AtlasLoot_SetItemInfoFrame)
 This is the intended API for external mods to use for displaying loot pages.
 This function figures out where the loot table is stored, then sends the relevant info to AtlasLoot_ShowItemsFrame
 ]]
 function AtlasLoot_ShowBossLoot(dataID, boss)
-	-- local tableavailable = AtlasLoot_IsLootTableAvailable(dataID)
-	-- if tableavailable then
 	AtlasLootItemsFrame:Hide()
 	-- If the loot table is already being displayed, it is hidden and the current table selection cancelled
 	if dataID == AtlasLootItemsFrame.externalBoss and AtlasLootItemsFrame:GetParent() ~= AtlasFrame and AtlasLootItemsFrame:GetParent() ~= AtlasLootDefaultFrame then
@@ -2556,7 +1576,6 @@ function AtlasLoot_ShowBossLoot(dataID, boss)
 		AtlasLootItemsFrame.externalBoss = dataID
 		AtlasLoot_ShowItemsFrame(dataID, dataSource, boss)
 	end
-	-- end
 end
 
 function AtlasLootOptions_SetupSlider(text, mymin, mymax, step)
@@ -3018,8 +2037,8 @@ function AtlasLootItem_OnClick()
 			end
 		elseif (dataID == "SearchResult" or dataID == "WishList") and this.sourcePage then
 			local _, _, dataID, dataSource = strfind(this.sourcePage, "(.+)|(.+)")
-			if dataID and dataSource --[[and AtlasLoot_IsLootTableAvailable(dataID)]] then
-				AtlasLoot_ShowItemsFrame(dataID, dataSource, AtlasLoot_TableNames[dataID][1])
+			if dataID and dataSource then
+				AtlasLoot_ShowItemsFrame(dataID, dataSource)
 			end
 		elseif this.container then
 			AtlasLoot_ShowContainerFrame()
@@ -3039,8 +2058,8 @@ function AtlasLootItem_OnClick()
 			DressUpItemLink("item:"..this.dressingroomID..":0:0:0")
 		elseif (dataID == "SearchResult" or dataID == "WishList") and this.sourcePage then
 			local _, _, dataID, dataSource = strfind(this.sourcePage, "(.+)|(.+)")
-			if dataID and dataSource --[[and AtlasLoot_IsLootTableAvailable(dataID)]] then
-				AtlasLoot_ShowItemsFrame(dataID, dataSource, bossName)
+			if dataID and dataSource then
+				AtlasLoot_ShowItemsFrame(dataID, dataSource)
 			end
 		end
 	elseif isSpell then
@@ -3075,8 +2094,8 @@ function AtlasLootItem_OnClick()
 			DressUpItemLink("item:"..this.dressingroomID..":0:0:0")
 		elseif (dataID == "SearchResult" or dataID == "WishList") and this.sourcePage then
 			local _, _, dataID, dataSource = strfind(this.sourcePage, "(.+)|(.+)")
-			if dataID and dataSource --[[and AtlasLoot_IsLootTableAvailable(dataID)]] then
-				AtlasLoot_ShowItemsFrame(dataID, dataSource, bossName)
+			if dataID and dataSource then
+				AtlasLoot_ShowItemsFrame(dataID, dataSource)
 			end
 		end
 	end

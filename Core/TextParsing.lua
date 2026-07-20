@@ -1,4 +1,4 @@
-local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
+local AL = AtlasLoot.L
 
 --------------------------------------------------------------------------------
 -- Text replacement function

@@ -3,11 +3,10 @@
 -- back to the English translation.
 -- The ["text"] = true; shortcut can ONLY be used for English (the root translation).
 
--- Table for all data to be inserted into.  Included here as it is the first file loaded
-AtlasLoot_Data = {};
-
 -- Create the library instance
-local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
+AtlasLoot = AceLibrary("AceAddon-2.0"):new("AceDB-2.0")
+AtlasLoot.L = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
+local AL = AtlasLoot.L
 
 -- Allow reporting of what translations are missing
 AL:EnableDebugging();
@@ -476,7 +475,7 @@ AL:RegisterTranslations("enUS", function() return {
     ["Dukes"] = true,
     ["Dun Morogh"] = true,
     ["Dungeon 1 Set"] = true,
-    ["Dungeon 1/2 Sets"] = true,
+    ["Dungeon Sets"] = true,
     ["Dungeon 2 Set"] = true,
     ["Dungeon Set"] = true,
     ["Dungeon Set 1"] = true,

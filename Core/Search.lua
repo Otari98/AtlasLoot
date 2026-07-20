@@ -6,12 +6,12 @@ local PURPLE = "|cff9F3FFF"
 local BLUE = "|cff0070dd"
 local ORANGE = "|cffFF8400"
 
-local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
+local AL = AtlasLoot.L
 local currentPage = 1
 local SearchResult = nil
 
 function AtlasLoot:ShowSearchResult()
-	AtlasLoot_ShowItemsFrame("SearchResult", "SearchResultPage"..currentPage, string.format((AL["Search Result: %s"]), AtlasLootCharDB.LastSearchedText or ""))
+	AtlasLoot_ShowItemsFrame("SearchResult", "SearchResultPage"..currentPage)
 end
 
 local function strtrim(s)
@@ -89,7 +89,7 @@ function AtlasLoot:Search(Text)
 	else
 		currentPage = 1
 		SearchResult = AtlasLoot_CategorizeWishList(AtlasLootCharDB["SearchResult"])
-		AtlasLoot_ShowItemsFrame("SearchResult", "SearchResultPage1", string.format((AL["Search Result: %s"]), AtlasLootCharDB.LastSearchedText or ""))
+		AtlasLoot_ShowItemsFrame("SearchResult", "SearchResultPage1")
 	end
 end
 

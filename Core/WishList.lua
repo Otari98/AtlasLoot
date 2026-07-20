@@ -1,6 +1,6 @@
 --File containing functions related to the wish list.
 
-local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
+local AL = AtlasLoot.L
 
 AtlasLoot_WishList = nil
 local currentPage = 1
@@ -19,7 +19,7 @@ AtlasLoot_ShowWishList()
 Displays the WishList
 ]]
 function AtlasLoot_ShowWishList()
-	AtlasLoot_ShowItemsFrame("WishList", "WishListPage"..currentPage, AL["WishList"])
+	AtlasLoot_ShowItemsFrame("WishList", "WishListPage"..currentPage)
 	CloseDropDownMenus()
 	AtlasLootDefaultFrame_SubMenu:Disable()
 	AtlasLootDefaultFrame_SelectedTable:Hide()
@@ -58,7 +58,7 @@ function AtlasLoot_DeleteFromWishList(itemID)
 	end
 	AtlasLoot_WishList = AtlasLoot_CategorizeWishList(AtlasLootCharDB["WishList"])
 	AtlasLootItemsFrame:Hide()
-	AtlasLoot_ShowItemsFrame("WishList", "WishListPage"..currentPage, AL["WishList"])
+	AtlasLoot_ShowItemsFrame("WishList", "WishListPage"..currentPage)
 end
 
 --[[
@@ -147,57 +147,61 @@ end
 local RecursiveSearchZoneName(dataTable, zoneID):
 A recursive function iterate AtlasLoot_HewdropDown table for the zone name
 ]]
-local function RecursiveSearchZoneName(dataTable, zoneID)
-	if (dataTable[2] == zoneID) then
-		return dataTable[1]
-	end
-	for _, v in pairs(dataTable) do
-		if type(v) == "table" then
-			local result = RecursiveSearchZoneName(v, zoneID)
-			if result then return result end
+do
+	local cache = {}
+	local function RecursiveSearchZoneName(dataTable, zoneID)
+		if (dataTable[2] == zoneID) then
+			cache[zoneID] = dataTable[1]
+			return dataTable[1]
 		end
-	end
-end
-
---[[
-AtlasLoot_GetWishListSubheading(dataID):
-Iterating through dropdown data tables to search backward for zone name with specified dataID
-]]
-function AtlasLoot_GetWishListSubheading(dataID)
-	if not AtlasLoot_HewdropDown or not AtlasLoot_HewdropDown_SubTables then return end
-	local zoneID
-	for subKey, subTable in pairs(AtlasLoot_HewdropDown_SubTables) do
-		for _, t in ipairs(subTable) do
-			if t[2] == dataID then
-				zoneID = subKey
-				break
-			end
-		end
-		if zoneID then break end
-	end
-	return RecursiveSearchZoneName(AtlasLoot_HewdropDown, zoneID or dataID)
-end
-
-function AtlasLoot_GetWishListSubheadingBoss(dataID)
-	if not AtlasLoot_TableNamesBoss then
-		return
-	end
-	local zoneID
-	for i, v in pairs(AtlasLoot_TableNamesBoss) do
-		for j, k in pairs(v) do
-			if dataID == j then
-				zoneID = k[1]
-				break
+		for _, v in pairs(dataTable) do
+			if type(v) == "table" then
+				local result = RecursiveSearchZoneName(v, zoneID)
+				if result then
+					cache[zoneID] = result
+					return result
+				end
 			end
 		end
 	end
-	--[[for i, v in pairs(AtlasLoot_TableNames) do
-		if dataID == i then
-			zoneID = v[1]
-			break
+	--[[
+	AtlasLoot_GetWishListSubheading(dataID):
+	Iterating through dropdown data tables to search backward for zone name with specified dataID
+	]]
+	function AtlasLoot_GetWishListSubheading(dataID)
+		if not AtlasLoot_HewdropDown or not AtlasLoot_HewdropDown_SubTables then return end
+		if cache[dataID] then return cache[dataID] end
+		local zoneID
+		for subKey, subTable in pairs(AtlasLoot_HewdropDown_SubTables) do
+			for _, t in ipairs(subTable) do
+				if t[2] == dataID then
+					zoneID = subKey
+					break
+				end
+			end
+			if zoneID then break end
 		end
-	end]]
-	return zoneID
+		return RecursiveSearchZoneName(AtlasLoot_HewdropDown, zoneID or dataID)
+	end
+end
+
+do
+	local cache = {}
+	function AtlasLoot_GetWishListSubheadingBoss(dataID)
+		if not AtlasLoot_TableNamesBoss then return end
+		if cache[dataID] then return cache[dataID] end
+		local zoneID
+		for i, v in pairs(AtlasLoot_TableNamesBoss) do
+			for j, k in pairs(v) do
+				if dataID == j then
+					zoneID = k[1]
+					break
+				end
+			end
+		end
+		cache[dataID] = zoneID
+		return zoneID
+	end
 end
 
 function GetLootTableParent(dataID)
@@ -214,7 +218,7 @@ function GetLootTableParent(dataID)
 	return parentID
 end
 
-local function GetWishListSubheadingDungeon(dataID)
+function GetWishListSubheadingDungeon(dataID)
 	if not AtlasLoot_TableNames then return end
 	local zoneID
 	for i, v in pairs(AtlasLoot_TableNamesBoss) do

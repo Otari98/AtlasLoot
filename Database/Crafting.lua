@@ -30,251 +30,180 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 	--------------------------------
 	--- Blacksmithing Plate Sets ---
 	--------------------------------
-
-	SteelPlate = {
-		{ 0, "", "", "" },
-		{ 0, "INV_Box_01", "=q6=#craftbp3#", "" },
-		{ 0, "", "", "" },
-		{ 83415, "INV_Helmet_25", "=q3=Steel Plate Barbute", "=ds=#s1#, #a4#" },
-		{ 83414, "INV_Shoulder_16", "=q2=Steel Plate Pauldrons", "=ds=#s3#, #a4#" },
-		{ 83413, "inv_chest_chain_10", "=q3=Steel Plate Armor", "=ds=#s5#, #a4#" },
-		{ 83411, "inv_gauntlets_31", "=q2=Steel Plate Gauntlets", "=ds=#s9#, #a4#" },
-		{ 83412, "inv_pants_04", "=q2=Steel Plate Legguards", "=ds=#s11#, #a4#" },
-		{ 83410, "inv_boots_plate_01", "=q2=Steel Plate Boots", "=ds=#s12#, #a4#" },
+	SteelPlateC = { {
+		{ 83415, "=ds=#s1#, #a4#" },
+		{ 83414, "=ds=#s3#, #a4#" },
+		{ 83413, "=ds=#s5#, #a4#" },
+		{ 83411, "=ds=#s9#, #a4#" },
+		{ 83412, "=ds=#s11#, #a4#" },
+		{ 83410, "=ds=#s12#, #a4#" },
+	}
 	},
-
-	ImperialPlate = {
-		{ 0, "", "", "" },
-		{ 0, "INV_Box_01", "=q6=#craftbp1#", "" },
-		{ 0, "", "", "" },
-		{ 12427, "INV_Helmet_22", "=q2=Imperial Plate Helm", "=ds=#s1#, #a4#" },
-		{ 12428, "INV_Shoulder_02", "=q2=Imperial Plate Shoulders", "=ds=#s3#, #a4#" },
-		{ 12422, "INV_Chest_Plate10", "=q2=Imperial Plate Chest", "=ds=#s5#, #a4#" },
-		{ 12425, "INV_Bracer_19", "=q2=Imperial Plate Bracers", "=ds=#s8#, #a4#" },
-		{ 12424, "INV_Belt_01", "=q2=Imperial Plate Belt", "=ds=#s10#, #a4#" },
-		{ 12429, "INV_Pants_04", "=q2=Imperial Plate Leggings", "=ds=#s11#, #a4#" },
-		{ 12426, "INV_Boots_Plate_01", "=q2=Imperial Plate Boots", "=ds=#s12#, #a4#" },
+	ImperialPlateC = { {
+		{ 12427, "=ds=#s1#, #a4#" },
+		{ 12428, "=ds=#s3#, #a4#" },
+		{ 12422, "=ds=#s5#, #a4#" },
+		{ 12425, "=ds=#s8#, #a4#" },
+		{ 12424, "=ds=#s10#, #a4#" },
+		{ 12429, "=ds=#s11#, #a4#" },
+		{ 12426, "=ds=#s12#, #a4#" },
+	}
 	},
-
-	TheDarksoul = {
-		{ 0, "", "", "" },
-		{ 0, "INV_Box_01", "=q6=#craftbp2#", "" },
-		{ 0, "", "", "" },
-		{ 19695, "INV_Shoulder_01", "=q3=Darksoul Shoulders", "=ds=#s3#, #a4#" },
-		{ 19693, "INV_Chest_Plate08", "=q3=Darksoul Breastplate", "=ds=#s5#, #a4#" },
-		{ 19694, "INV_Pants_Plate_21", "=q3=Darksoul Leggings", "=ds=#s11#, #a4#" },
+	TheDarksoulC = { {
+		{ 19695, "=ds=#s3#, #a4#" },
+		{ 19693, "=ds=#s5#, #a4#" },
+		{ 19694, "=ds=#s11#, #a4#" },
+	}
 	},
-
 	-------------------------------
 	--- Blacksmithing Mail Sets ---
 	-------------------------------
-
-	BloodsoulEmbrace = {
-		{ 0, "", "", "" },
-		{ 0, "INV_Box_01", "=q6=#craftbm1#", "" },
-		{ 0, "", "", "" },
-		{ 19691, "INV_Shoulder_15", "=q3=Bloodsoul Shoulders", "=ds=#s3#, #a3#" },
-		{ 19690, "INV_Chest_Chain_14", "=q3=Bloodsoul Breastplate", "=ds=#s5#, #a3#" },
-		{ 19692, "INV_Gauntlets_31", "=q3=Bloodsoul Gauntlets", "=ds=#s9#, #a3#" },
+	BloodsoulEmbraceC = { {
+		{ 19691, "=ds=#s3#, #a3#" },
+		{ 19690, "=ds=#s5#, #a3#" },
+		{ 19692, "=ds=#s9#, #a3#" },
+	}
 	},
-
 	----------------------
 	--- Tailoring Sets ---
 	----------------------
-
-	AugerersAttire = {
-		{ 0, "", "", "" },
-		{ 0, "INV_Box_01", "=q6=#craftt1#", "" },
-		{ 0, "", "", "" },
-		{ 83288, "INV_Boots_05", "=q2=Augerer's Boots", "=ds=#s12#, #a1#" },
-		{ 83289, "INV_Gauntlets_06", "=q2=Augerer's Gloves", "=ds=#s9#, #a1#" },
-		{ 83290, "INV_Shoulder_02", "=q2=Augerer's Mantle", "=ds=#s3#, #a1#" },
-		{ 83291, "INV_Pants_08", "=q2=Augerer's Trousers", "=ds=#s11#, #a1#" },
-		{ 83286, "INV_Helmet_11", "=q2=Augerer's Hat", "=ds=#s1#, #a1#" },
-		{ 83287, "inv_chest_cloth_22", "=q2=Augerer's Robe", "=ds=#s5#, #a1#" },
+	AugerersAttireC = { {
+		{ 83288, "=ds=#s12#, #a1#" },
+		{ 83289, "=ds=#s9#, #a1#" },
+		{ 83290, "=ds=#s3#, #a1#" },
+		{ 83291, "=ds=#s11#, #a1#" },
+		{ 83286, "=ds=#s1#, #a1#" },
+		{ 83287, "=ds=#s5#, #a1#" },
+	}
 	},
-
-	ShadoweaveSet = {
-		{ 0, "", "", "" },
-		{ 0, "INV_Box_01", "=q6=#craftt2#", "" },
-		{ 0, "", "", "" },
-		{ 10002, "inv_pants_11", "=q2=Shadoweave Pants", "=ds=#s11#, #a1#" },
-		{ 10004, "inv_chest_cloth_38", "=q2=Shadoweave Robe", "=ds=#s5#, #a1#" },
-		{ 10023, "inv_gauntlets_09", "=q2=Shadoweave Gloves", "=ds=#s9#, #a1#" },
-		{ 10028, "inv_shoulder_25", "=q2=Shadoweave Shoulders", "=ds=#s3#, #a1#" },
-		{ 10031, "inv_boots_05", "=q2=Shadoweave Boots", "=ds=#s12#, #a1#" },
-		{ 10025, "inv_helmet_27", "=q2=Shadoweave Mask", "=ds=#s1#, #a1#" },
+	ShadoweaveSetC = { {
+		{ 10002, "=ds=#s11#, #a1#" },
+		{ 10004, "=ds=#s5#, #a1#" },
+		{ 10023, "=ds=#s9#, #a1#" },
+		{ 10028, "=ds=#s3#, #a1#" },
+		{ 10031, "=ds=#s12#, #a1#" },
+		{ 10025, "=ds=#s1#, #a1#" },
+	}
 	},
-
-	DivinersGarments = {
-		{ 0, "", "", "" },
-		{ 0, "INV_Box_01", "=q6=#craftt3#", "" },
-		{ 0, "", "", "" },
-		{ 83283, "inv_boots_09", "=q2=Diviner's Boots", "=ds=#s12#, #a1#" },
-		{ 83284, "inv_gauntlets_23", "=q2=Diviner's Mitts", "=ds=#s9#, #a1#" },
-		{ 83285, "inv_shoulder_02", "=q2=Diviner's Epaulets", "=ds=#s3#, #a1#" },
-		{ 83280, "inv_pants_07", "=q2=Diviner's Pantaloons", "=ds=#s11#, #a1#" },
-		{ 83282, "inv_helmet_33", "=q2=Diviner's Cowl", "=ds=#s1#, #a1#" },
-		{ 83281, "inv_chest_cloth_22", "=q2=Diviner's Robes", "=ds=#s5#, #a1#" },
+	DivinersGarmentsC = { {
+		{ 83283, "=ds=#s12#, #a1#" },
+		{ 83284, "=ds=#s9#, #a1#" },
+		{ 83285, "=ds=#s3#, #a1#" },
+		{ 83280, "=ds=#s11#, #a1#" },
+		{ 83282, "=ds=#s1#, #a1#" },
+		{ 83281, "=ds=#s5#, #a1#" },
+	}
 	},
-
-	PillagersGarb = {
-		{ 0, "", "", "" },
-		{ 0, "INV_Box_01", "=q6=#craftt4#", "" },
-		{ 0, "", "", "" },
-		{ 83296, "inv_boots_09", "=q2=Pillager's Shoes", "=ds=#s12#, #a1#" },
-		{ 83295, "inv_gauntlets_15", "=q2=Pillager's Grips", "=ds=#s9#, #a1#" },
-		{ 83297, "inv_pants_06", "=q2=Pillager's Pantaloons", "=ds=#s11#, #a1#" },
-		{ 83293, "inv_shoulder_02", "=q2=Pillager's Amice", "=ds=#s3#, #a1#" },
-		{ 83292, "inv_helmet_28", "=q2=Pillager's Hood", "=ds=#s1#, #a1#" },
-		{ 83294, "inv_chest_cloth_22", "=q2=Pillager's Robe", "=ds=#s5#, #a1#" },
+	PillagersGarbC = { {
+		{ 83296, "=ds=#s12#, #a1#" },
+		{ 83295, "=ds=#s9#, #a1#" },
+		{ 83297, "=ds=#s11#, #a1#" },
+		{ 83293, "=ds=#s3#, #a1#" },
+		{ 83292, "=ds=#s1#, #a1#" },
+		{ 83294, "=ds=#s5#, #a1#" },
+	}
 	},
-
-	BloodvineG = {
-		{ 0, "", "", "" },
-		{ 0, "INV_Box_01", "=q6=#craftt5#", "" },
-		{ 0, "", "", "" },
-		{ 19682, "INV_Chest_Cloth_07", "=q3=Bloodvine Vest", "=ds=#s5#, #a1#" },
-		{ 19683, "INV_Pants_Cloth_14", "=q3=Bloodvine Leggings", "=ds=#s11#, #a1#" },
-		{ 19684, "INV_Boots_Cloth_02", "=q3=Bloodvine Boots", "=ds=#s12#, #a1#" },
+	BloodvineGC = { {
+		{ 19682, "=ds=#s5#, #a1#" },
+		{ 19683, "=ds=#s11#, #a1#" },
+		{ 19684, "=ds=#s12#, #a1#" },
+	}
 	},
-
-	MoonclothSet = {
-		{ 0, "", "", "" },
-		{ 0, "INV_Box_01", "=q6=#craftt6#", "" },
-		{ 0, "", "", "" },
-		{ 14140, "inv_misc_bandana_01", "=q3=Mooncloth Circlet", "=ds=#s1#, #a1#" },
-		{ 14139, "inv_shoulder_02", "=q3=Mooncloth Shoulders", "=ds=#s3#, #a1#" },
-		{ 14138, "inv_chest_cloth_08", "=q3=Mooncloth Vest", "=ds=#s5#, #a1#" },
-		{ 18486, "inv_chest_cloth_04", "=q3=Mooncloth Robe", "=ds=#s5#, #a1#" },
-		{ 18409, "inv_gauntlets_17", "=q3=Mooncloth Gloves", "=ds=#s9#, #a1#" },
-		{ 14137, "inv_pants_13", "=q3=Mooncloth Leggings", "=ds=#s11#, #a1#" },
-		{ 15802, "inv_boots_05", "=q3=Mooncloth Boots", "=ds=#s12#, #a1#" },
+	MoonclothSetC = { {
+		{ 14140, "=ds=#s1#, #a1#" },
+		{ 14139, "=ds=#s3#, #a1#" },
+		{ 14138, "=ds=#s5#, #a1#" },
+		{ 18486, "=ds=#s5#, #a1#" },
+		{ 18409, "=ds=#s9#, #a1#" },
+		{ 14137, "=ds=#s11#, #a1#" },
+		{ 15802, "=ds=#s12#, #a1#" },
+	}
 	},
-
 	-----------------------------------
 	--- Leatherworking Leather Sets ---
 	-----------------------------------
-
-	GriftersArmor = {
-		{ 0, "", "", "" },
-		{ 0, "INV_Box_01", "=q6=#craftlwl7#", "" },
-		{ 0, "", "", "" },
-		{ "83400", "inv_helmet_33", "=q2=Grifter's Cover", "=ds=#s1#, #a2#" },
-		{ "83401", "inv_chest_leather_08", "=q2=Grifter's Tunic", "=ds=#s5#, #a2#" },
-		{ "83402", "inv_pants_12", "=q2=Grifter's Leggings", "=ds=#s11#, #a2#" },
-		{ "83404", "inv_gauntlets_15", "=q2=Grifter's Gauntlets", "=ds=#s9#, #a2#" },
-		{ "83403", "inv_belt_04", "=q2=Grifter's Belt", "=ds=#s10#, #a2#" },
-		{ "83405", "inv_boots_05", "=q2=Grifter's Boots", "=ds=#s12#, #a2#" },
+	GriftersArmorC = { {
+		{ 83400, "=ds=#s1#, #a2#" },
+		{ 83401, "=ds=#s5#, #a2#" },
+		{ 83402, "=ds=#s11#, #a2#" },
+		{ 83404, "=ds=#s9#, #a2#" },
+		{ 83403, "=ds=#s10#, #a2#" },
+		{ 83405, "=ds=#s12#, #a2#" },
+	}
 	},
-
-	PrimalistsTrappings = {
-		{ 0, "", "", "" },
-		{ 0, "INV_Box_01", "=q6=#craftlwl8#", "" },
-		{ 0, "", "", "" },
-		{ "81063", "inv_helmet_04", "=q2=Primalist's Headdress", "=ds=#s1#, #a2#" },
-		{ "81062", "inv_shoulder_09", "=q2=Primalist's Shoulders", "=ds=#s10#, #a2#" },
-		{ "81066", "inv_chest_plate08", "=q3=Primalist's Vest", "=ds=#s5#, #a2#" },
-		{ "81064", "inv_pants_04", "=q2=Primalist's Pants", "=ds=#s11#, #a2#" },
-		{ "81061", "inv_gauntlets_09", "=q2=Primalist's Gloves", "=ds=#s9#, #a2#" },
-		{ "81065", "inv_boots_plate_05", "=q2=Primalist's Boots", "=ds=#s12#, #a2#" },
+	PrimalistsTrappingsC = { {
+		{ 81063, "=ds=#s1#, #a2#" },
+		{ 81062, "=ds=#s10#, #a2#" },
+		{ 81066, "=ds=#s5#, #a2#" },
+		{ 81064, "=ds=#s11#, #a2#" },
+		{ 81061, "=ds=#s9#, #a2#" },
+		{ 81065, "=ds=#s12#, #a2#" },
+	}
 	},
-
-	VolcanicArmor = {
-		{ 0, "", "", "" },
-		{ 0, "INV_Box_01", "=q6=#craftlwl1#", "=q1=#j6#" },
-		{ 0, "", "", "" },
-		{ 15055, "INV_Shoulder_13", "=q2=Volcanic Shoulders", "=ds=#s3#, #a2#" },
-		{ 15053, "INV_Chest_Leather_07", "=q2=Volcanic Breastplate", "=ds=#s5#, #a2#" },
-		{ 15054, "INV_Pants_06", "=q2=Volcanic Leggings", "=ds=#s11#, #a2#" },
+	VolcanicArmorC = { {
+		{ 15055, "=ds=#s3#, #a2#" },
+		{ 15053, "=ds=#s5#, #a2#" },
+		{ 15054, "=ds=#s11#, #a2#" },
+	}
 	},
-
-	IronfeatherArmor = {
-		{ 0, "", "", "" },
-		{ 0, "INV_Box_01", "=q6=#craftlwl2#", "" },
-		{ 0, "", "", "" },
-		{ 15067, "INV_Shoulder_06", "=q3=Ironfeather Shoulders", "=ds=#s3#, #a2#" },
-		{ 15066, "INV_Chest_Leather_06", "=q3=Ironfeather Breastplate", "=ds=#s5#, #a2#" },
+	IronfeatherArmorC = { {
+		{ 15067, "=ds=#s3#, #a2#" },
+		{ 15066, "=ds=#s5#, #a2#" },
+	}
 	},
-
-	StormshroudArmor = {
-		{ 0, "", "", "" },
-		{ 0, "INV_Box_01", "=q6=#craftlwl3#", "" },
-		{ 0, "", "", "" },
-		{ 15058, "INV_Shoulder_05", "=q3=Stormshroud Shoulders", "=ds=#s3#, #a2#" },
-		{ 15056, "INV_Chest_Leather_08", "=q3=Stormshroud Armor", "=ds=#s5#, #a2#" },
-		{ 21278, "INV_Gauntlets_05", "=q3=Stormshroud Gloves", "=ds=#s9#, #a2#" },
-		{ 15057, "INV_Pants_09", "=q3=Stormshroud Pants", "=ds=#s11#, #a2#" },
+	StormshroudArmorC = { {
+		{ 15058, "=ds=#s3#, #a2#" },
+		{ 15056, "=ds=#s5#, #a2#" },
+		{ 21278, "=ds=#s9#, #a2#" },
+		{ 15057, "=ds=#s11#, #a2#" },
+	}
 	},
-
-	DevilsaurArmor = {
-		{ 0, "", "", "" },
-		{ 0, "INV_Box_01", "=q6=#craftlwl4#", "" },
-		{ 0, "", "", "" },
-		{ 15063, "INV_Gauntlets_26", "=q3=Devilsaur Gauntlets", "=ds=#s9#, #a2#" },
-		{ 15062, "INV_Pants_Wolf", "=q3=Devilsaur Leggings", "=ds=#s11#, #a2#" },
+	DevilsaurArmorC = { {
+		{ 15063, "=ds=#s9#, #a2#" },
+		{ 15062, "=ds=#s11#, #a2#" },
+	}
 	},
-
-	BloodTigerH = {
-		{ 0, "", "", "" },
-		{ 0, "INV_Box_01", "=q6=#craftlwl5#", "" },
-		{ 0, "", "", "" },
-		{ 19689, "INV_Shoulder_23", "=q3=Blood Tiger Shoulders", "=ds=#s3#, #a2#" },
-		{ 19688, "INV_Chest_Leather_07", "=q3=Blood Tiger Breastplate", "=ds=#s5#, #a2#" },
+	BloodTigerHC = { {
+		{ 19689, "=ds=#s3#, #a2#" },
+		{ 19688, "=ds=#s5#, #a2#" },
+	}
 	},
-
-	PrimalBatskin = {
-		{ 0, "", "", "" },
-		{ 0, "INV_Box_01", "=q6=#craftlwl6#", "" },
-		{ 0, "", "", "" },
-		{ 19685, "INV_Chest_Leather_03", "=q3=Primal Batskin Jerkin", "=ds=#s5#, #a2#" },
-		{ 19687, "INV_Bracer_07", "=q3=Primal Batskin Bracers", "=ds=#s8#, #a2#" },
-		{ 19686, "INV_Gauntlets_31", "=q3=Primal Batskin Gloves", "=ds=#s9#, #a2#" },
+	PrimalBatskinC = { {
+		{ 19685, "=ds=#s5#, #a2#" },
+		{ 19687, "=ds=#s8#, #a2#" },
+		{ 19686, "=ds=#s9#, #a2#" },
+	}
 	},
-
 	--------------------------------
 	--- Leatherworking Mail Sets ---
 	--------------------------------
-
-	RedDragonM = {
-		{ 0, "", "", "" },
-		{ 0, "INV_Box_01", "=q6=#craftlwm4#", "=q1=#j6#" },
-		{ 0, "", "", "" },
-		{ 65001, "inv_shoulder_23", "=q3=Red Dragonscale Shoulders", "=ds=#s3#, #a3#" },
-		{ 15047, "inv_chest_chain_06", "=q3=Red Dragonscale Breastplate", "=ds=#s5#, #a3#" },
-		{ 65000, "inv_pants_mail_09", "=q3=Red Dragonscale Leggings", "=ds=#s11#, #a3#" },
-		{ 65002, "inv_boots_chain_13", "=q3=Red Dragonscale Boots", "=ds=#s9#, #a3#" },
+	RedDragonMC = { {
+		{ 65001, "=ds=#s3#, #a3#" },
+		{ 15047, "=ds=#s5#, #a3#" },
+		{ 65000, "=ds=#s11#, #a3#" },
+		{ 65002, "=ds=#s9#, #a3#" },
+	}
 	},
-
-	GreenDragonM = {
-		{ 0, "", "", "" },
-		{ 0, "INV_Box_01", "=q6=#craftlwm1#", "=q1=#j8#" },
-		{ 0, "", "", "" },
-		{ 15045, "INV_Chest_Chain_06", "=q3=Green Dragonscale Breastplate", "=ds=#s5#, #a3#" },
-		{ 20296, "INV_Gauntlets_12", "=q3=Green Dragonscale Gauntlets", "=ds=#s9#, #a3#" },
-		{ 15046, "INV_Pants_05", "=q3=Green Dragonscale Leggings", "=ds=#s11#, #a3#" },
+	GreenDragonMC = { {
+		{ 15045, "=ds=#s5#, #a3#" },
+		{ 20296, "=ds=#s9#, #a3#" },
+		{ 15046, "=ds=#s11#, #a3#" },
+	}
 	},
-
-	BlueDragonM = {
-		{ 0, "", "", "" },
-		{ 0, "INV_Box_01", "=q6=#craftlwm2#", "=q1=#j7#" },
-		{ 0, "", "", "" },
-		{ 15049, "INV_Shoulder_18", "=q3=Blue Dragonscale Shoulders", "=ds=#s3#, #a3#" },
-		{ 15048, "INV_Chest_Chain_04", "=q3=Blue Dragonscale Breastplate", "=ds=#s5#, #a3#" },
-		{ 20295, "INV_Pants_Mail_15", "=q3=Blue Dragonscale Leggings", "=ds=#s11#, #a3#" },
-		{ 65015, "INV_Boots_Chain_06", "=q3=Blue Dragonscale Boots", "=ds=#s9#, #a3#" },
+	BlueDragonMC = { {
+		{ 15049, "=ds=#s3#, #a3#" },
+		{ 15048, "=ds=#s5#, #a3#" },
+		{ 20295, "=ds=#s11#, #a3#" },
+		{ 65015, "=ds=#s9#, #a3#" },
+	}
 	},
-
-	BlackDragonM = {
-		{ 0, "", "", "" },
-		{ 0, "INV_Box_01", "=q6=#craftlwm3#", "=q1=#j6#" },
-		{ 0, "", "", "" },
-		{ 15051, "INV_Shoulder_01", "=q3=Black Dragonscale Shoulders", "=ds=#s3#, #a3#" },
-		{ 15050, "INV_Chest_Plate06", "=q3=Black Dragonscale Breastplate", "=ds=#s5#, #a3#" },
-		{ 15052, "INV_Pants_03", "=q3=Black Dragonscale Leggings", "=ds=#s11#, #a3#" },
-		{ 16984, "INV_Boots_Plate_09", "=q4=Black Dragonscale Boots", "=ds=#s12#, #a3#" },
+	BlackDragonMC = { {
+		{ 15051, "=ds=#s3#, #a3#" },
+		{ 15050, "=ds=#s5#, #a3#" },
+		{ 15052, "=ds=#s11#, #a3#" },
+		{ 16984, "=ds=#s12#, #a3#" },
+	}
 	},
-
 	---------------
 	--- Alchemy ---
 	---------------

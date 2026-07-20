@@ -1,4 +1,4 @@
-﻿local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
+﻿local AL = AtlasLoot.L
 
 AL:RegisterTranslations("zhCN", function() return {
     [" added to the WishList."] = " 被添加到装备需求表",
@@ -151,7 +151,7 @@ AL:RegisterTranslations("zhCN", function() return {
     ["Drop Rate: "] = "掉落率: ",
     ["Druid of the Fang"] = "尖牙德鲁伊",
     ["Dukes"] = "公爵",
-    ["Dungeon 1/2 Sets"] = "地下城套装1/2",
+    ["Dungeon Sets"] = "地下城套装1/2",
     ["Dungeon Set 1"] = "地下城套装1",
     ["Dungeon Set 2 Summonable"] = "地下城套装2任务首领",
     ["Durnholde Rifleman"] = "敦霍尔德火枪手",

@@ -1,4 +1,4 @@
-local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
+local AL = AtlasLoot.L
 
 AtlasLoot_Data["AtlasLootSources"] = {
     [118] = AL["Alchemy"].." ("..AL["Skill:"].." 1+)",

@@ -1582,4 +1582,31 @@ AtlasLoot_Data["AtlasLootGeneralPvPItems"] = {
 		{ 18246, "Ability_Mount_Raptor", "=q4=Whistle of the Black War Raptor", "=ds=#e7#" },
 		{ 18248, "Ability_Mount_Undeadhorse", "=q4=Armored Red Deathcharger", "=ds=#e7#" },
 	},
+	PVPPriestC = {
+		
+	},
+	PVPMageC = {
+		
+	},
+	PVPWarlockC = {
+		
+	},
+	PVPRogueC = {
+		
+	},
+	PVPDruidC = {
+		
+	},
+	PVPHunterC = {
+		
+	},
+	PVPShamanC = {
+		
+	},
+	PVPPaladinC = {
+		
+	},
+	PVPWarriorC = {
+		
+	},
 }

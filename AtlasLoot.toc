@@ -3,7 +3,7 @@
 ## Notes: Shows possible loot from dungeon bosses and other sources.
 ## Author: Otari (overhaul/revamp, menu changes, bugfixes/updates), Lexie (Turtle WoW fixes/updates), Pepopo, MarcelineVQ (Kara40 loot), Shagu
 ## LegacyAuthor: Daviesh, Pompa (Turtle WoW World Bosses), Xerron (Turtle WoW World Bosses), Gurky (Turtle WoW 1.16/1.16.1 Dungeons)
-## Version: 3.3.7
+## Version: 3.4.0
 ## SavedVariablesPerCharacter: AtlasLootCharDB
 ## OptionalDeps: Alphamap, AtlasLoader, LootLink, ItemSync, HewdropLib, Ace2, EquipCompare, EQCompare
 
@@ -24,6 +24,8 @@ Locale\locale.kr.lua
 Locale\locale.tw.lua
 Locale\locale.es.lua
 
+Core\AtlasLoot.lua
+
 Database\TooltipStrings.lua
 Database\Sets.lua
 Database\Crafting.lua
@@ -34,6 +36,7 @@ Database\Instances.lua
 Database\WorldBosses.lua
 Database\TableRegister.lua
 Database\Spells.lua
+Database\Menus.lua
 
 Core\ButtonRegistry.lua
 Core\TextParsing.lua
@@ -42,7 +45,6 @@ Core\Factions.lua
 Core\WorldEvents.lua
 Core\PvP.lua
 Core\Crafting.lua
-Core\AtlasLoot.lua
 Core\WishList.lua
 Core\Search.lua
 Core\WorldBoss.lua

@@ -1,4 +1,4 @@
-﻿local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
+﻿local AL = AtlasLoot.L
 
 AL:RegisterTranslations("koKR", function() return {
     [" is safe."] = " 은 이제 안전합니다.",
@@ -96,7 +96,7 @@ AL:RegisterTranslations("koKR", function() return {
     ["Dreamwalker Raiment"] = "꿈의감시자 의복",
     ["Drop Rate: "] = "드랍률: ",
     ["Druid of the Fang"] = "송곳니의 드루이드",
-    ["Dungeon 1/2 Sets"] = "던전 세트 1/2",
+    ["Dungeon Sets"] = "던전 세트 1/2",
     ["Dungeon Set 1"] = "던전 세트 1",
     ["Dungeon Set 2 Summonable"] = "던전 세트 2 소환가능",
     ["Emblems of Veiled Shadows"] = "어두운그림자의 상징",
