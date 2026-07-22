@@ -708,6 +708,7 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "e46601", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Arcane Power", "=ds=#sr# =so1=300 =so2=300 =so3=300 =so4=300" },
 		{ "e46602", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Nature Power", "=ds=#sr# =so1=300 =so2=300 =so3=300 =so4=300" },
 		{ "e46086", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Major Strength", "=ds=#sr# =so1=300 =so2=300 =so3=300 =so4=300" },
+		{ "e36942", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Rift Tear", "=ds=#sr# =so1=300 =so2=300 =so3=300 =so4=300" },
 		{ "e57518", "inv_misc_gem_pearl_04", "=q5=Eternal Dreamstone Shard", "=ds=#sr# =so1=300 =so2=300 =so3=300 =so4=300" },
 	},
 
@@ -846,6 +847,7 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 	},
 
 	EnchantingWeapon1 = {
+		{ "e36942", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Rift Tear", "=ds=#sr# =so1=300 =so2=300 =so3=300 =so4=300" },
 		{ "e20031", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Superior Striking", "=ds=#sr# =so1=300 =so2=320 =so3=340 =so4=360" },
 		{ "e22749", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Spell Power", "=ds=#sr# =so1=300 =so2=320 =so3=340 =so4=360" },
 		{ "e23803", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Mighty Spirit", "=ds=#sr# =so1=300 =so2=320 =so3=340 =so4=360" },

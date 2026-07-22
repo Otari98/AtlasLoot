@@ -2,6 +2,10 @@ local AL = AtlasLoot.L
 
 GetSpellInfoAtlasLootDB = {
 	["enchants"] = {
+		[36942] = {
+			["name"] = "Enchant Weapon - Rift Tear",
+			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
+		},
 		[48] = {
 			["name"] = "Enchant Boots - Lesser Intellect",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
