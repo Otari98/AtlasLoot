@@ -3845,7 +3845,7 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s41712", "BTNHarbingerRing", "=q3=Dark Iron Signet Ring", "=ds=#sr# =so1=290 =so2=320 =so3=330 =so4=340" },
 		{ "s41722", "INV_Jewelry_Necklace_06", "=q4=Pendant of Instability", "=ds=#sr# =so1=300 =so2=300 =so3=307 =so4=315" },
 		{ "s41253", "INV_Jewelry_Ring_37", "=q2=Emerald Monarch's Glow", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
-		{ "s41257", "INV_Staff_28", "=q2=Arcanum Baton", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
+		{ "s41259", "INV_Staff_28", "=q2=Arcanum Baton", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
 	},
 	JewelcraftingArtisan2 = {
 		{ "s41700", "INV_Bracer_13", "=q4=Embergem Cuffs", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
@@ -4089,7 +4089,7 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s41720", "INV_Staff_32", "=q3=Regal Twilight Staff", "=ds=#sr# =so1=240 =so2=260 =so3=275 =so4=290" },
 		{ "s41097", "INV_Staff_13", "=q2=Spellweaver Rod", "=ds=#sr# =so1=265 =so2=285 =so3=292 =so4=300" },
 		{ "s41313", "INV_Wand_07", "=q2=Garnet Guardian Staff", "=ds=#sr# =so1=??? =so2=290 =so3=300 =so4=310" },
-		{ "s41257", "INV_Staff_28", "=q2=Arcanum Baton", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
+		{ "s41259", "INV_Staff_28", "=q2=Arcanum Baton", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
 		{ "s41802", "INV_Staff_20", "=q3=Spire of Channeled Power", "=ds=#sr# =so1=300 =so2=325 =so3=335 =so4=345" },
 		{ "s36905", "INV_Staff_13", "=q4=Grandstaff of the Shen'dralar Elder", "=ds=#sr# =so1=300 =so2=330 =so3=350 =so4=370" },
 		{ "s41800", "inv_staff_14", "=q4=Rudeus' Focusing Cane", "=ds=#sr# =so1=300 =so2=330 =so3=340 =so4=350" },
