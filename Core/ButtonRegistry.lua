@@ -4041,11 +4041,16 @@ AtlasLoot_ButtonRegistry = {
 	["JewelcraftingAmulets1"] = {
 		Back_Page = "JEWELCRAFTMENU",
 		Prev_Page = "JewelcraftingRings2",
+		Next_Page = "JewelcraftingAmulets2",
+	},
+	["JewelcraftingAmulets2"] = {
+		Back_Page = "JEWELCRAFTMENU",
+		Prev_Page = "JewelcraftingAmulets1",
 		Next_Page = "JewelcraftingHelm1",
 	},
 	["JewelcraftingHelm1"] = {
 		Back_Page = "JEWELCRAFTMENU",
-		Prev_Page = "JewelcraftingAmulets1",
+		Prev_Page = "JewelcraftingAmulets2",
 		Next_Page = "JewelcraftingBracers1",
 	},
 	["JewelcraftingBracers1"] = {

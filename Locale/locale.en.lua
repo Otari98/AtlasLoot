@@ -15,6 +15,17 @@ AL:EnableDebugging();
 AL:EnableDynamicLocales();
 
 AL:RegisterTranslations("enUS", function() return {
+	["Green Woolen Robe"] = true,
+	["Simple Bronze Katana"] = true,
+	["Stormreaver Gloves"] = true,
+	["Spellwoven Nobility Drape"] = true,
+	["Grimtotem Bracers"] = true,
+	["Ceremonial Belt Buckle"] = true,
+	["Bulwark of Unshaken Earth"] = true,
+	["Kodoheart Necklace"] = true,
+	["Facetted Crystal Scope"] = true,
+	["Enchanted Thorium Shells"] = true,
+
 	["Earthen Ring"] = true,
 	["Draenei Exiles"] = true,
 
