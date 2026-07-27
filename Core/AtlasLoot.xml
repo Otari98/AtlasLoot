@@ -185,7 +185,7 @@
 						GameTooltip:Hide()
 					</OnLeave>
 					<OnClick>
-						AtlasLoot_QuickLook_OnClick(2)a
+						AtlasLoot_QuickLook_OnClick(2)
 					</OnClick>
 					<OnShow>
 						AtlasLoot_QuickLook_OnShow(2)
