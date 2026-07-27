@@ -784,14 +784,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, title)
 			end
 			_G["AtlasLootMenuItem_"..buttonIndex]:Show()
 		end
-		AtlasLoot_QuickLooks:Hide()
-		AtlasLootQuickLooksButton:Hide()
 	else
-		-- This is a valid QuickLook, so show the UI objects
-		if dataID ~= "SearchResult" and dataID ~= "WishList" then
-			AtlasLoot_QuickLooks:Show()
-			AtlasLootQuickLooksButton:Show()
-		end
 		-- Iterate through each item object and set its properties
 		for i = 1, 30, 1 do
 			-- Hide the menu objects.  These are not required for a loot table
@@ -1047,6 +1040,14 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, title)
 			end
 		end
 	end
+	-- This is a valid QuickLook, so show the UI objects
+	if dataID ~= "SearchResult" and dataID ~= "WishList" then
+		AtlasLoot_QuickLooks:Show()
+		AtlasLootQuickLooksButton:Show()
+	else
+		AtlasLoot_QuickLooks:Hide()
+		AtlasLootQuickLooksButton:Hide()
+	end
 	-- Hide navigation buttons by default, only show what we need
 	AtlasLootItemsFrame_BACK:Hide()
 	AtlasLootItemsFrame_NEXT:Hide()
@@ -1075,22 +1076,6 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, title)
 		if tablebase.Back_Page then
 			AtlasLootItemsFrame_BACK:Show()
 			AtlasLootItemsFrame_BACK.lootpage = tablebase.Back_Page
-			if AtlasFrame and AtlasFrame:IsVisible() then
-				-- Hide navigation buttons if we click on boss loot in Atlas
-				if dataSourceStr == "AtlasLootItems" or dataSourceStr == "AtlasLootWBItems" then
-					AtlasLootItemsFrame_BACK:Hide()
-					AtlasLootItemsFrame_NEXT:Hide()
-					AtlasLootItemsFrame_PREV:Hide()
-				end
-				-- Hide navigation buttons if we click Quicklooks in Atlas
-				for i = 1, 4 do
-					if AtlasLootCharDB["QuickLooks"][i] and dataID == AtlasLootCharDB["QuickLooks"][i][1] then
-						AtlasLootItemsFrame_BACK:Hide()
-						AtlasLootItemsFrame_NEXT:Hide()
-						AtlasLootItemsFrame_PREV:Hide()
-					end
-				end
-			end
 		end
 	end
 	-- For Alphamap and Atlas integration, show a 'close' button to hide the loot table and restore the map view
@@ -1360,8 +1345,6 @@ function AtlasLoot_HewdropRegister()
 end
 
 function AtlasLoot_OpenMenu(menuName)
-	AtlasLoot_QuickLooks:Hide()
-	AtlasLootQuickLooksButton:Hide()
 	AtlasLootDefaultFrame_SelectedCategory:SetText(menuName)
 	AtlasLootDefaultFrame_SubMenu:Disable()
 	AtlasLootDefaultFrame_SelectedTable:SetText("")
