@@ -1,92 +1,36 @@
-AtlasLootWBBossButtons = {
-	FourDragons = {
-		"",
-		"",
-		"",
-		"",
-		"",
-		"DLethon",
-		"DEmeriss",
-		"DTaerar",
-		"DYsondre",
-		"",
-		"DTrash",
-	},
-	Azuregos = {
-		"AAzuregos",
-		"ASpiritA",
-	},
-	LordKazzak = {
-		"KKazzak",
-	},
-	Nerubian = {
-		"Nerubian",
-	},
-	Reaver = {
-		"Reaver",
-	},
-	Ostarius = {
-		"Ostarius",
-	},
-	Concavius = {
-		"Concavius",
-	},
-	CowKing = {
-		"CowKing",
-	},
-	Clackora = {
-		"Clackora",
-	},
-	RareSpawns = {
-		"",
-		"",
-		"",
-		"",
-		"",
-		"",
-		"",
-		"",
-		"",
-		"",
-		"",
-		"Tarangos",
-		"Kargron",
-		"Xalvic",
-		"Mallon",
-		"Grugthok",
-		"WanderingKnight",
-		"CrusaderLarsarius",
-		"Zareth",
-		"Jalakar",
-		"Ashbeard",
-		"AdmiralBareanWestwind",
-		"ShadeMage",
-		"GraypawAlpha",
-		"EarthcallerRezengal",
-		"Blazespark",
-		"WitchDoctorTanzo",
-		"Dawnhowl",
-		"MaltimorsPrototype",
-		"Bonecruncher",
-		"Duskskitter",
-		"BaronPerenolde",
-		"FirstbornofArugal",
-		"WidowoftheWoods",
-		"Ripjaw",
-		"Rukthok",
-		"MargontheMighty",
-		"Embereye",
-		"Aquitus",
-		"Letashaz",
-		"Stoneshell",
-		"HighvaleSilverback",
-		"Azurebeak",
-		"BarkskinFisher",
-		"ShadeflayerGoliath",
-		"M0L1Y",
-		"KinTozo",
-		"ProfessorLysander",
-	},
+AtlasLootBossButtons = AtlasLootBossButtons or {}
+
+AtlasLootBossButtons.FourDragons = {
+	[6] = "DLethon",
+	[7] = "DEmeriss",
+	[8] = "DTaerar",
+	[9] = "DYsondre",
+	[11] = "DTrash",
+}
+AtlasLootBossButtons.Azuregos = {
+	[1] = "AAzuregos",
+	[2] = "ASpiritA",
+}
+AtlasLootBossButtons.LordKazzak = {
+	[1] = "KKazzak",
+}
+AtlasLootBossButtons.Nerubian = {
+	[1] = "Nerubian",
+}
+AtlasLootBossButtons.Reaver = {
+	[1] = "Reaver",
+}
+AtlasLootBossButtons.Ostarius = {
+	[1] = "Ostarius",
+}
+AtlasLootBossButtons.Concavius = {
+	[1] = "Concavius",
+}
+AtlasLootBossButtons.CowKing = {
+	[1] = "CowKing",
+}
+AtlasLootBossButtons.Clackora = {
+	[1] = "Clackora",
 }
 
 AtlasLoot_Data["AtlasLootWBItems"] = {

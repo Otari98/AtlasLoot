@@ -385,10 +385,7 @@ function AtlasLoot_AtlasScrollBar_Update()
 		local loot = _G["AtlasEntry"..line.."_Loot"]
 		local selected = _G["AtlasEntry"..line.."_Selected"]
 		if loot and lineplusoffset <= ATLAS_CUR_LINES then
-			_G["AtlasEntry"..line.."_Text"]:SetText(ATLAS_SCROLL_LIST[lineplusoffset])
-			local showIcon = (AtlasLootBossButtons[zoneID] and AtlasLootBossButtons[zoneID][lineplusoffset] and AtlasLootBossButtons[zoneID][lineplusoffset] ~= "") or
-				(AtlasLootWBBossButtons[zoneID] and AtlasLootWBBossButtons[zoneID][lineplusoffset] and AtlasLootWBBossButtons[zoneID][lineplusoffset] ~= "") or
-				(AtlasLootBattlegrounds[zoneID] and AtlasLootBattlegrounds[zoneID][lineplusoffset] and AtlasLootBattlegrounds[zoneID][lineplusoffset] ~= "")
+			local showIcon = AtlasLootBossButtons[zoneID] and AtlasLootBossButtons[zoneID][lineplusoffset]
 			if AtlasLootItemsFrame.activeBoss == lineplusoffset then
 				entry:Enable()
 				loot:Hide()
@@ -508,36 +505,11 @@ function AtlasLootBoss_OnClick()
 		AtlasLootItemsFrame.activeBoss = nil
 	else
 		-- If an loot table is associated with the button, show it.  Note multiple tables need to be checked due to the database structure
-		if AtlasLootBossButtons[zoneID] and AtlasLootBossButtons[zoneID][id] and AtlasLootBossButtons[zoneID][id] ~= "" then
+		if AtlasLootBossButtons[zoneID] and AtlasLootBossButtons[zoneID][id] then
 			_G[name.."_Selected"]:Show()
 			_G[name.."_Loot"]:Hide()
 			local _, _, boss = string.find(_G[name.."_Text"]:GetText(), "|c%x%x%x%x%x%x%x%x%s*[%dX']*[%) ]*(.*[^%,])[%,]?$")
 			AtlasLoot_ShowBossLoot(AtlasLootBossButtons[zoneID][id], boss)
-			AtlasLootItemsFrame.activeBoss = id
-			AtlasLoot_AtlasScrollBar_Update()
-			-- dont show navigation buttons if its not rep or set
-			local match = string.find(boss, AL["Reputation"]) or string.find(boss, AL["Set"])
-			if not match then
-				AtlasLootItemsFrame_BACK:Hide()
-				AtlasLootItemsFrame_NEXT:Hide()
-				AtlasLootItemsFrame_PREV:Hide()
-			end
-		elseif AtlasLootWBBossButtons[zoneID] and AtlasLootWBBossButtons[zoneID][id] and AtlasLootWBBossButtons[zoneID][id] ~= "" then
-			_G[name.."_Selected"]:Show()
-			_G[name.."_Loot"]:Hide()
-			local _, _, boss = string.find(_G[name.."_Text"]:GetText(), "|c%x%x%x%x%x%x%x%x%s*[%dX]*[%) ]*(.*[^%,])[%,]?$")
-			AtlasLoot_ShowBossLoot(AtlasLootWBBossButtons[zoneID][id], boss)
-			AtlasLootItemsFrame.activeBoss = id
-			AtlasLoot_AtlasScrollBar_Update()
-			-- dont show navigation buttons
-			AtlasLootItemsFrame_BACK:Hide()
-			AtlasLootItemsFrame_NEXT:Hide()
-			AtlasLootItemsFrame_PREV:Hide()
-		elseif AtlasLootBattlegrounds[zoneID] and AtlasLootBattlegrounds[zoneID][id] and AtlasLootBattlegrounds[zoneID][id] ~= "" then
-			_G[name.."_Selected"]:Show()
-			_G[name.."_Loot"]:Hide()
-			local _, _, boss = string.find(_G[name.."_Text"]:GetText(), "|c%x%x%x%x%x%x%x%x%s*[%wX]*[%) ]*(.*[^%,])[%,]?$")
-			AtlasLoot_ShowBossLoot(AtlasLootBattlegrounds[zoneID][id], boss)
 			AtlasLootItemsFrame.activeBoss = id
 			AtlasLoot_AtlasScrollBar_Update()
 		end
