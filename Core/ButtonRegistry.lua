@@ -512,18 +512,18 @@ AtlasLoot_ButtonRegistry = {
 		Back_Page = "DUNGEONSMENU2",
 	},
 	["UKHSanvTasdal"] = {
-		Next_Page = "UKHKruul",
+		Next_Page = "UKHRupturan",
 		Prev_Page = "UKHKing",
 		Back_Page = "DUNGEONSMENU2",
 	},
-	["UKHKruul"] = {
-		Next_Page = "UKHRupturan",
+	["UKHRupturan"] = {
 		Prev_Page = "UKHSanvTasdal",
+		Next_Page = "UKHKruul",
 		Back_Page = "DUNGEONSMENU2",
 	},
-	["UKHRupturan"] = {
-		Prev_Page = "UKHKruul",
+	["UKHKruul"] = {
 		Next_Page = "UKHMephistroth",
+		Prev_Page = "UKHRupturan",
 		Back_Page = "DUNGEONSMENU2",
 	},
 	["UKHMephistroth"] = {
