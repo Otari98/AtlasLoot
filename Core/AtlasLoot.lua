@@ -766,15 +766,18 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, title)
 			_G["AtlasLootMenuItem_"..buttonIndex.."_Extra"]:SetText(data[i][5])
 			if type(container) == "table" then
 				_G["AtlasLootMenuItem_"..buttonIndex].container = container
-				_G["AtlasLootMenuItem_"..buttonIndex.."_IconBorder"]:SetVertexColor(1, 0.82, 0)
 				for row = 1, getn(container) do
 					for item = 1, getn(container[row]) do
 						AtlasLoot_CacheItem(container[row][item][1])
 					end
 				end
+				_G["AtlasLootMenuItem_"..buttonIndex.."_IconBorder"]:SetVertexColor(1, 1, 1)
+				_G["AtlasLootMenuItem_"..buttonIndex.."_ContainerBorder"]:Show()
+				_G["AtlasLootMenuItem_"..buttonIndex.."_ContainerBorderHighlight"]:Show()
 			else
 				_G["AtlasLootMenuItem_"..buttonIndex].lootpage = lootPage
-				_G["AtlasLootMenuItem_"..buttonIndex.."_IconBorder"]:SetVertexColor(1, 1, 1)
+				_G["AtlasLootMenuItem_"..buttonIndex.."_ContainerBorder"]:Hide()
+				_G["AtlasLootMenuItem_"..buttonIndex.."_ContainerBorderHighlight"]:Hide()
 			end
 			_G["AtlasLootMenuItem_"..buttonIndex].isheader = not lootPage and not container
 			if strsub(icon, 1, 5) == "CLASS" then
