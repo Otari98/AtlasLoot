@@ -44,7 +44,7 @@
 		<Size x="105" y="20"/>
 	</Button>
 
-	<Frame name="AtlasLootDefaultFrame" toplevel="true" frameStrata="HIGH" movable="true" enableMouse="true" hidden="true" parent="UIParent">
+	<Frame name="AtlasLootDefaultFrame" toplevel="true" movable="true" enableMouse="true" hidden="true" parent="UIParent">
 		<Size x="600" y="690"/>
 		<Anchors>
 			<Anchor point="CENTER"/>
@@ -1833,7 +1833,7 @@
 		</Frames>
 	</Frame>
 
-	<Frame name="AtlasLootMinimapButtonFrame" parent="Minimap" enableMouse="true" hidden="true" frameStrata="LOW">
+	<Frame name="AtlasLootMinimapButtonFrame" parent="Minimap" enableMouse="true" hidden="true">
 		<Size x="32" y="32"/>
 		<Anchors>
 			<Anchor point="TOPLEFT" relativeTo="Minimap" relativePoint="RIGHT">
