@@ -447,7 +447,7 @@
 		<Size x="236" y="28"/>
 		<HighlightTexture file="Interface\QuestFrame\UI-QuestTitleHighlight" alphaMode="ADD"/>
 		<Layers>
-			<Layer level="ARTWORK">
+			<Layer level="BACKGROUND">
 				<Texture name="$parent_Icon">
 					<Size x="27" y="27"/>
 					<Anchors>
@@ -455,6 +455,15 @@
 							<Offset x="1" y="-1"/>
 						</Anchor>
 					</Anchors>
+				</Texture>
+			</Layer>
+			<Layer level="ARTWORK">
+				<Texture name="$parent_IconBorder" file="Interface\AddOns\AtlasLoot\Images\border">
+					<Size x="33" y="33"/>
+					<Anchors>
+						<Anchor point="CENTER" relativeTo="$parent_Icon"/>
+					</Anchors>
+					<Color r="1" g="1" b="1" a="1"/>
 				</Texture>
 				<FontString name="$parent_Quantity" font="Fonts\ARIALN.TTF" outline="NORMAL" justifyH="RIGHT">
 					<Size x="30" y="14"/>
@@ -559,22 +568,25 @@
 					<TexCoords left="0.078125" right="0.90625" top="0.078125" bottom="0.90625"/>
 				</Texture>
 			</Layer>
-			<Layer level="BACKGROUND">
-				<Texture name="$parent_Unsafe" hidden="true">
-					<Size x="27" y="27"/>
+			<Layer level="OVERLAY">
+				<Texture name="$parent_ContainerBorder" file="Interface\Buttons\UI-AutoCastableOverlay" hidden="true">
+					<Size x="42" y="42"/>
 					<Anchors>
-						<Anchor point="TOPLEFT"/>
+						<Anchor point="CENTER" relativeTo="$parent_Icon">
+							<Offset x="-11" y="-12"/>
+						</Anchor>
 					</Anchors>
-					<Color r="1" g="0" b="0" a="1"/>
+					<TexCoords left="0" right="0.5" top="0.5" bottom="1"/>
 				</Texture>
 			</Layer>
-			<Layer level="OVERLAY">
-				<Texture name="$parent_IconBorder" file="Interface\AddOns\AtlasLoot\Images\border">
-					<Size x="33" y="33"/>
+			<Layer level="HIGHLIGHT">
+				<Texture name="$parent_ContainerBorderHighlight" file="Interface\Buttons\UI-AutoCastableOverlay" alphaMode="ADD" hidden="true">
+					<Size x="44" y="44"/>
 					<Anchors>
-						<Anchor point="CENTER" relativeTo="$parent_Icon"/>
+						<Anchor point="CENTER" relativeTo="$parent_ContainerBorder">
+						</Anchor>
 					</Anchors>
-					<Color r="1" g="1" b="1" a="1"/>
+					<TexCoords left="0" right="0.5" top="0.5" bottom="1"/>
 				</Texture>
 			</Layer>
 		</Layers>

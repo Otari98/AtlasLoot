@@ -798,6 +798,8 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, title)
 				extraFrame       = _G["AtlasLootItem_"..i.."_Extra"]
 				local quantity   = _G["AtlasLootItem_"..i.."_Quantity"]
 				local iconBorder = _G["AtlasLootItem_"..i.."_IconBorder"]
+				local containerBorder = _G["AtlasLootItem_"..i.."_ContainerBorder"]
+				local containerHighlight = _G["AtlasLootItem_"..i.."_ContainerBorderHighlight"]
 				iconBorder:SetVertexColor(1, 1, 1)
 				if string.sub(dataSource[dataID][i][1], 1, 1) == "s" then
 					isItem = false
@@ -1014,12 +1016,16 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, title)
 				itemButton.itemIDExtra = dataSource[dataID][i][4]
 				itemButton.container = dataSource[dataID][i][7]
 				if type(itemButton.container) == "table" then
-					iconBorder:SetVertexColor(1, 0.82, 0)
+					containerBorder:Show()
+					containerHighlight:Show()
 					for row = 1, getn(itemButton.container) do
 						for item = 1, getn(itemButton.container[row]) do
 							AtlasLoot_CacheItem(itemButton.container[row][item][1])
 						end
 					end
+				else
+					containerHighlight:Hide()
+					containerBorder:Hide()
 				end
 				itemButton.droprate = nil
 				if dataID == "SearchResult" or dataID == "WishList" then
