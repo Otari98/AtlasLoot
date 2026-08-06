@@ -1103,7 +1103,7 @@
 					</OnClick>
 				</Scripts>
 			</Button>
-			<Frame name="$parentContainer" enableMouse="true" frameStrata="TOOLTIP" hidden="true" toplevel="true" movable="true" clampedToScreen="true">
+			<Frame name="$parentContainer" enableMouse="true" hidden="true" toplevel="true" movable="true" clampedToScreen="true">
 				<Size x="40" y="40"/>
 				<Anchors>
 					<Anchor point="TOPLEFT" relativeTo="$parent" relativePoint="TOPRIGHT"/>
