@@ -40,14 +40,7 @@ Database\Menus.lua
 
 Core\ButtonRegistry.lua
 Core\TextParsing.lua
-Core\Sets.lua
-Core\Factions.lua
-Core\WorldEvents.lua
-Core\PvP.lua
-Core\Crafting.lua
 Core\WishList.lua
 Core\Search.lua
-Core\WorldBoss.lua
-Core\Dungeons.lua
 Core\Tooltip.lua
 Core\AtlasLoot.xml
