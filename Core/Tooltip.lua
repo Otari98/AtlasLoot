@@ -27,13 +27,22 @@ local WrappingLines = {
 }
 
 local lines = {}
-for i = 1, 30 do
+local maxLines = 30
+for i = 1, maxLines do
 	lines[i] = {}
 end
 
 local function AddSourceLine(tooltip, sourceStr)
 	local name = tooltip:GetName()
 	local numLines = tooltip:NumLines()
+
+	if numLines > maxLines then
+		-- the buffer is pre-built for 30 lines, but long set tooltips plus
+		-- tooltip-extending addons (StatCompare etc.) can exceed that
+		for i = maxLines + 1, numLines do lines[i] = {} end
+		maxLines = numLines
+	end
+
 	local left, right
 	local leftText, rightText
 	local leftR, leftG, leftB
@@ -47,9 +56,6 @@ local function AddSourceLine(tooltip, sourceStr)
 	end
 
 	for i = 1, numLines do
-		-- the buffer is pre-built for 30 lines, but long set tooltips plus
-		-- tooltip-extending addons (StatCompare etc.) can exceed that
-		lines[i] = lines[i] or {}
 		left = _G[name.."TextLeft"..i]
 		right = _G[name.."TextRight"..i]
 		leftText = left:GetText()
@@ -72,7 +78,7 @@ local function AddSourceLine(tooltip, sourceStr)
 
 	tooltip:SetText(lines[1][1], lines[1][3], lines[1][4], lines[1][5], 1, false)
 
-	if numLines < 28 then
+	if numLines < maxLines then
 		tooltip:AddLine(sourceStr)
 	elseif lines[2][1] then
 		lines[2][1] = sourceStr.."\n"..lines[2][1]
