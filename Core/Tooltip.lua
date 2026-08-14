@@ -47,6 +47,9 @@ local function AddSourceLine(tooltip, sourceStr)
 	end
 
 	for i = 1, numLines do
+		-- the buffer is pre-built for 30 lines, but long set tooltips plus
+		-- tooltip-extending addons (StatCompare etc.) can exceed that
+		lines[i] = lines[i] or {}
 		left = _G[name.."TextLeft"..i]
 		right = _G[name.."TextRight"..i]
 		leftText = left:GetText()
