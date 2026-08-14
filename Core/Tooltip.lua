@@ -238,7 +238,11 @@ local function HookTooltip(tooltip)
 		insideHook = true
 		original_SetInboxItem(self, mailID, attachmentIndex)
 		insideHook = false
-		self.itemID = GetItemIDByName(GetInboxItem(mailID))
+		if GetInboxItemLink then
+			self.itemID = IDFromLink(GetInboxItemLink(mailID, attachmentIndex))
+		else
+			self.itemID = GetItemIDByName(GetInboxItem(mailID, attachmentIndex))
+		end
 		ExtendTooltip(self)
 	end
 
@@ -291,7 +295,12 @@ local function HookTooltip(tooltip)
 		insideHook = true
 		original_SetAuctionSellItem(self)
 		insideHook = false
-		self.itemID = tonumber(GetItemIDByName(GetAuctionSellItemInfo()))
+		local name, texture, count, quality, canUse, price, maxStack, itemLink = GetAuctionSellItemInfo()
+		if itemLink then
+			self.itemID = IDFromLink(itemLink)
+		else
+			self.itemID = tonumber(GetItemIDByName(name))
+		end
 		ExtendTooltip(self)
 	end
 
