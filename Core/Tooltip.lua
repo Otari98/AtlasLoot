@@ -16,113 +16,23 @@ function SetTooltipMoney(frame, money)
 	end
 end
 
-local WrappingLines = {
-	["^Set:"] = gsub("^"..ITEM_SET_BONUS, "%%s", ""),
-	["^%(%d%) Set:"] = gsub(gsub(ITEM_SET_BONUS_GRAY, "%(%%d%)", "^%%(%%d%%)"), "%%s", ""),
-	["^Effect:"] = gsub("^"..ITEM_SPELL_EFFECT, "%%s", ""),
-	["^Equip:"] = "^"..ITEM_SPELL_TRIGGER_ONEQUIP,
-	["^Chance on hit:"] = "^"..ITEM_SPELL_TRIGGER_ONPROC,
-	["^Use:"] = "^"..ITEM_SPELL_TRIGGER_ONUSE,
-	["^\nRequires"] = "^\n"..gsub(ITEM_REQ_SKILL, "%%s", "")
-}
-
-local lines = {}
-local maxLines = 30
-for i = 1, maxLines do
-	lines[i] = {}
-end
-
-local function AddSourceLine(tooltip, sourceStr)
-	local name = tooltip:GetName()
-	local numLines = tooltip:NumLines()
-
-	if numLines > maxLines then
-		-- the buffer is pre-built for 30 lines, but long set tooltips plus
-		-- tooltip-extending addons (StatCompare etc.) can exceed that
-		for i = maxLines + 1, numLines do lines[i] = {} end
-		maxLines = numLines
-	end
-
-	local left, right
-	local leftText, rightText
-	local leftR, leftG, leftB
-	local rightR, rightG, rightB
-	local wrap
-
-	for i in pairs(lines) do
-		for j in pairs(lines[i]) do
-			lines[i][j] = nil
-		end
-	end
-
-	for i = 1, numLines do
-		left = _G[name.."TextLeft"..i]
-		right = _G[name.."TextRight"..i]
-		leftText = left:GetText()
-		rightText = right:IsShown() and right:GetText()
-		leftR, leftG, leftB = left:GetTextColor()
-		rightR, rightG, rightB = right:GetTextColor()
-		lines[i][1] = leftText
-		lines[i][2] = rightText
-		lines[i][3] = leftR
-		lines[i][4] = leftG
-		lines[i][5] = leftB
-		lines[i][6] = rightR
-		lines[i][7] = rightG
-		lines[i][8] = rightB
-	end
-
-	if not lines[1][1] then
-		return
-	end
-
-	tooltip:SetText(lines[1][1], lines[1][3], lines[1][4], lines[1][5], 1, false)
-
-	if numLines < maxLines then
-		tooltip:AddLine(sourceStr)
-	elseif lines[2][1] then
-		lines[2][1] = sourceStr.."\n"..lines[2][1]
-	end
-
-	for i = 2, getn(lines) do
-		if lines[i][2] then
-			tooltip:AddDoubleLine(lines[i][1], lines[i][2], lines[i][3], lines[i][4], lines[i][5], lines[i][6], lines[i][7], lines[i][8])
-		else
-			wrap = false
-			if strsub(lines[i][1] or "", 1, 1) == "\"" then
-				wrap = true
-			else
-				for _, pattern in pairs(WrappingLines) do
-					if strfind(lines[i][1] or "", pattern) then
-						wrap = true
-						break
-					end
-				end
-			end
-			tooltip:AddLine(lines[i][1], lines[i][3], lines[i][4], lines[i][5], wrap)
-		end
-	end
-end
-
 local lastItemID, lastSourceStr
 local function ExtendTooltip(tooltip)
-	if AtlasLootCharDB.ShowSource then
-		local itemID = tonumber(tooltip.itemID)
-		if itemID then
-			if itemID ~= lastItemID then
-				lastItemID = itemID
-				lastSourceStr = nil
-				local source = AtlasLoot_Data["AtlasLootSources"][itemID]
-				if source then
-					local str = GREY..source.."|r"
-					lastSourceStr = str
-				end
-			end
-			if lastSourceStr then
-				AddSourceLine(tooltip, lastSourceStr)
-				tooltip:Show()
-			end
+	if not AtlasLootCharDB.ShowSource then return end
+	local itemID = tonumber(tooltip.itemID)
+	if not itemID then return end
+	if itemID ~= lastItemID then
+		lastItemID = itemID
+		lastSourceStr = nil
+		local source = AtlasLoot_Data["AtlasLootSources"][itemID]
+		if source then
+			local str = GREY..source.."|r"
+			lastSourceStr = str
 		end
+	end
+	if lastSourceStr then
+		tooltip:AddLine(lastSourceStr)
+		tooltip:Show()
 	end
 	if tooltipMoney > 0 then
 		original_SetTooltipMoney(tooltip, tooltipMoney)
@@ -152,6 +62,21 @@ local function IDFromLink(link)
 end
 
 local function HookTooltip(tooltip)
+	if not tooltip then return end
+
+	if tooltip.HookScript then
+		tooltip:HookScript("OnHide", function(self)
+			self.itemID = nil
+			tooltipMoney = 0
+		end)
+		tooltip:HookScript("OnTooltipSetItem", function(self)
+			local itemName, itemLink, itemID = self:GetItem()
+			self.itemID = itemID or IDFromLink(itemLink)
+			ExtendTooltip(self)
+		end)
+		return
+	end
+
 	local original_SetLootRollItem = tooltip.SetLootRollItem
 	local original_SetLootItem = tooltip.SetLootItem
 	local original_SetMerchantItem = tooltip.SetMerchantItem
