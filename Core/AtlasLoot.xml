@@ -1155,7 +1155,7 @@
 				AtlasLoot_OnEvent()
 			</OnEvent>
 			<OnUpdate>
-				AtlasLootItemsFrame_OnUpdate()
+				AtlasLootItemsFrame_OnUpdate(this, arg1)
 			</OnUpdate>
 			<OnMouseWheel>
 				if arg1 == 1 and AtlasLootItemsFrame_NEXT:IsVisible() then

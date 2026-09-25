@@ -664,25 +664,18 @@ function AtlasLootOptions_Toggle()
 	end
 end
 
-function AtlasLootItemsFrame_OnUpdate()
-	if not this.refreshTime then
-		return
-	end
-	this.refreshTime = (this.refreshTime or refreshTimeout) - arg1
+function AtlasLootItemsFrame_OnUpdate(self, elapsed)
+	if not self.refreshTime then return end
+	self.refreshTime = self.refreshTime - elapsed
 	local done = true
-	for item in pairs(this.queue) do
-		if not GetItemInfo(item) then
-			done = false
-			break
-		end
+	for item in pairs(self.queue) do
+		if not GetItemInfo(item) then done = false break end
 	end
-	if done or this.refreshTime <= 0 then
-		this.refreshTime = nil
-		for k in pairs(this.queue) do
-			this.queue[k] = nil
-		end
-		if this.refresh and this.refresh[1] and this.refresh[2] and this.refresh[3] then
-			AtlasLoot_ShowItemsFrame(this.refresh[1], this.refresh[2], this.refresh[3])
+	if done or self.refreshTime <= 0 then
+		self.refreshTime = nil
+		for k in pairs(self.queue) do self.queue[k] = nil end
+		if self.refresh and self.refresh[1] and self.refresh[2] and self.refresh[3] then
+			AtlasLoot_ShowItemsFrame(self.refresh[1], self.refresh[2], self.refresh[3])
 		end
 	end
 end
