@@ -1,132 +1,37 @@
 -- extra info on GameTooltip and ItemRefTooltip
-local AtlasLootTip = CreateFrame("Frame", "AtlasLootTip", GameTooltip)
 local strfind = string.find
 local GetItemInfo = GetItemInfo
 local GREY = "|cff999999"
 local _G = _G or getfenv(0)
 
-local insideHook = false
-local tooltipMoney = 0
 local original_SetTooltipMoney = SetTooltipMoney
 function SetTooltipMoney(frame, money)
-	if insideHook then
-		tooltipMoney = money or 0
+	if frame.insideHook then
+		frame.tooltipMoney = tonumber(money) or 0
 	else
 		original_SetTooltipMoney(frame, money)
 	end
 end
 
-local WrappingLines = {
-	["^Set:"] = gsub("^"..ITEM_SET_BONUS, "%%s", ""),
-	["^%(%d%) Set:"] = gsub(gsub(ITEM_SET_BONUS_GRAY, "%(%%d%)", "^%%(%%d%%)"), "%%s", ""),
-	["^Effect:"] = gsub("^"..ITEM_SPELL_EFFECT, "%%s", ""),
-	["^Equip:"] = "^"..ITEM_SPELL_TRIGGER_ONEQUIP,
-	["^Chance on hit:"] = "^"..ITEM_SPELL_TRIGGER_ONPROC,
-	["^Use:"] = "^"..ITEM_SPELL_TRIGGER_ONUSE,
-	["^\nRequires"] = "^\n"..gsub(ITEM_REQ_SKILL, "%%s", "")
-}
-
-local lines = {}
-local maxLines = 30
-for i = 1, maxLines do
-	lines[i] = {}
-end
-
-local function AddSourceLine(tooltip, sourceStr)
-	local name = tooltip:GetName()
-	local numLines = tooltip:NumLines()
-
-	if numLines > maxLines then
-		-- the buffer is pre-built for 30 lines, but long set tooltips plus
-		-- tooltip-extending addons (StatCompare etc.) can exceed that
-		for i = maxLines + 1, numLines do lines[i] = {} end
-		maxLines = numLines
-	end
-
-	local left, right
-	local leftText, rightText
-	local leftR, leftG, leftB
-	local rightR, rightG, rightB
-	local wrap
-
-	for i in pairs(lines) do
-		for j in pairs(lines[i]) do
-			lines[i][j] = nil
-		end
-	end
-
-	for i = 1, numLines do
-		left = _G[name.."TextLeft"..i]
-		right = _G[name.."TextRight"..i]
-		leftText = left:GetText()
-		rightText = right:IsShown() and right:GetText()
-		leftR, leftG, leftB = left:GetTextColor()
-		rightR, rightG, rightB = right:GetTextColor()
-		lines[i][1] = leftText
-		lines[i][2] = rightText
-		lines[i][3] = leftR
-		lines[i][4] = leftG
-		lines[i][5] = leftB
-		lines[i][6] = rightR
-		lines[i][7] = rightG
-		lines[i][8] = rightB
-	end
-
-	if not lines[1][1] then
-		return
-	end
-
-	tooltip:SetText(lines[1][1], lines[1][3], lines[1][4], lines[1][5], 1, false)
-
-	if numLines < maxLines then
-		tooltip:AddLine(sourceStr)
-	elseif lines[2][1] then
-		lines[2][1] = sourceStr.."\n"..lines[2][1]
-	end
-
-	for i = 2, getn(lines) do
-		if lines[i][2] then
-			tooltip:AddDoubleLine(lines[i][1], lines[i][2], lines[i][3], lines[i][4], lines[i][5], lines[i][6], lines[i][7], lines[i][8])
-		else
-			wrap = false
-			if strsub(lines[i][1] or "", 1, 1) == "\"" then
-				wrap = true
-			else
-				for _, pattern in pairs(WrappingLines) do
-					if strfind(lines[i][1] or "", pattern) then
-						wrap = true
-						break
-					end
-				end
-			end
-			tooltip:AddLine(lines[i][1], lines[i][3], lines[i][4], lines[i][5], wrap)
-		end
-	end
-end
-
-local lastItemID, lastSourceStr
 local function ExtendTooltip(tooltip)
 	if AtlasLootCharDB.ShowSource then
 		local itemID = tonumber(tooltip.itemID)
 		if itemID then
-			if itemID ~= lastItemID then
-				lastItemID = itemID
-				lastSourceStr = nil
-				local source = AtlasLoot_Data["AtlasLootSources"][itemID]
-				if source then
-					local str = GREY..source.."|r"
-					lastSourceStr = str
-				end
+			local str
+			local source = AtlasLoot_Data["AtlasLootSources"][itemID]
+			if source then
+				str = GREY..source.."|r"
 			end
-			if lastSourceStr then
-				AddSourceLine(tooltip, lastSourceStr)
+			if str then
+				tooltip:AddLine(str)
+				tooltip.atlasLootLine = str
 				tooltip:Show()
 			end
 		end
 	end
-	if tooltipMoney > 0 then
-		original_SetTooltipMoney(tooltip, tooltipMoney)
-		tooltip:Show()
+	local money = tonumber(tooltip.tooltipMoney) or 0
+	if money > 0 then
+		original_SetTooltipMoney(tooltip, money)
 	end
 end
 
@@ -152,92 +57,109 @@ local function IDFromLink(link)
 end
 
 local function HookTooltip(tooltip)
-	local original_SetLootRollItem = tooltip.SetLootRollItem
-	local original_SetLootItem = tooltip.SetLootItem
-	local original_SetMerchantItem = tooltip.SetMerchantItem
-	local original_SetQuestLogItem = tooltip.SetQuestLogItem
-	local original_SetQuestItem = tooltip.SetQuestItem
-	local original_SetHyperlink = tooltip.SetHyperlink
+	if not (tooltip and type(tooltip.GetFrameType) == "function" and tooltip:GetFrameType() == "GameTooltip") then
+		return
+	end
+
+	if type(tooltip.HookScript) == "function" then
+		tooltip:HookScript("OnTooltipSetItem", function(self)
+			local itemName, itemLink, itemID = self:GetItem()
+			self.itemID = itemID or IDFromLink(itemLink)
+		end)
+		tooltip:HookScript("OnTooltipCleared", function(self)
+			self.itemID = nil
+			self.atlasLootLine = nil
+			self.tooltipMoney = 0
+		end)
+		for _, method in pairs({
+			"SetBagItem","SetInventoryItem","SetLootRollItem","SetLootItem","SetMerchantItem","SetQuestLogItem",
+			"SetQuestItem","SetHyperlink","SetInboxItem","SetCraftItem","SetCraftSpell","SetTradeSkillItem",
+			"SetAuctionItem","SetAuctionSellItem","SetTradePlayerItem","SetTradeTargetItem","SetAction","SetBuybackItem"
+		}) do
+			hooksecurefunc(tooltip, method, ExtendTooltip)
+		end
+		return
+	end
+
 	local original_SetBagItem = tooltip.SetBagItem
-	local original_SetInboxItem = tooltip.SetInboxItem
-	local original_SetInventoryItem = tooltip.SetInventoryItem
-	local original_SetCraftItem = tooltip.SetCraftItem
-	local original_SetCraftSpell = tooltip.SetCraftSpell
-	local original_SetTradeSkillItem = tooltip.SetTradeSkillItem
-	local original_SetAuctionItem = tooltip.SetAuctionItem
-	local original_SetAuctionSellItem = tooltip.SetAuctionSellItem
-	local original_SetTradePlayerItem = tooltip.SetTradePlayerItem
-	local original_SetTradeTargetItem = tooltip.SetTradeTargetItem
-
-	local original_OnHide = tooltip:GetScript("OnHide")
-
-	tooltip:SetScript("OnHide", function()
-		if original_OnHide then original_OnHide() end
-		this.itemID = nil
-		tooltipMoney = 0
-	end)
-
-	function tooltip.SetLootRollItem(self, rollID)
-		insideHook = true
-		original_SetLootRollItem(self, rollID)
-		insideHook = false
-		self.itemID = IDFromLink(GetLootRollItemLink(rollID))
-		ExtendTooltip(self)
-	end
-
-	function tooltip.SetLootItem(self, slot)
-		insideHook = true
-		original_SetLootItem(self, slot)
-		insideHook = false
-		self.itemID = IDFromLink(GetLootSlotLink(slot))
-		ExtendTooltip(self)
-	end
-
-	function tooltip.SetMerchantItem(self, merchantIndex)
-		insideHook = true
-		original_SetMerchantItem(self, merchantIndex)
-		insideHook = false
-		self.itemID = IDFromLink(GetMerchantItemLink(merchantIndex))
-		ExtendTooltip(self)
-	end
-
-	function tooltip.SetQuestLogItem(self, itemType, index)
-		insideHook = true
-		original_SetQuestLogItem(self, itemType, index)
-		insideHook = false
-		self.itemID = IDFromLink(GetQuestLogItemLink(itemType, index))
-		ExtendTooltip(self)
-	end
-
-	function tooltip.SetQuestItem(self, itemType, index)
-		insideHook = true
-		original_SetQuestItem(self, itemType, index)
-		insideHook = false
-		self.itemID = IDFromLink(GetQuestItemLink(itemType, index))
-		ExtendTooltip(self)
-	end
-
-	function tooltip.SetHyperlink(self, arg1)
-		insideHook = true
-		original_SetHyperlink(self, arg1)
-		insideHook = false
-		self.itemID = IDFromLink(arg1)
-		ExtendTooltip(self)
-	end
-
 	function tooltip.SetBagItem(self, container, slot)
-		insideHook = true
+		self.insideHook = true
 		local hasCooldown, repairCost = original_SetBagItem(self, container, slot)
-		insideHook = false
+		self.insideHook = nil
 		self.itemID = IDFromLink(GetContainerItemLink(container, slot))
 		ExtendTooltip(self)
 		return hasCooldown, repairCost
 	end
 
+	local original_SetInventoryItem = tooltip.SetInventoryItem
+	function tooltip.SetInventoryItem(self, unit, slot, nameOnly)
+		self.insideHook = true
+		local hasItem, hasCooldown, repairCost = original_SetInventoryItem(self, unit, slot, nameOnly)
+		self.insideHook = nil
+		self.itemID = IDFromLink(GetInventoryItemLink(unit, slot))
+		ExtendTooltip(self)
+		return hasItem, hasCooldown, repairCost
+	end
+
+	local original_SetLootRollItem = tooltip.SetLootRollItem
+	function tooltip.SetLootRollItem(self, rollID)
+		self.insideHook = true
+		original_SetLootRollItem(self, rollID)
+		self.insideHook = nil
+		self.itemID = IDFromLink(GetLootRollItemLink(rollID))
+		ExtendTooltip(self)
+	end
+
+	local original_SetLootItem = tooltip.SetLootItem
+	function tooltip.SetLootItem(self, slot)
+		self.insideHook = true
+		original_SetLootItem(self, slot)
+		self.insideHook = nil
+		self.itemID = IDFromLink(GetLootSlotLink(slot))
+		ExtendTooltip(self)
+	end
+
+	local original_SetMerchantItem = tooltip.SetMerchantItem
+	function tooltip.SetMerchantItem(self, merchantIndex)
+		self.insideHook = true
+		original_SetMerchantItem(self, merchantIndex)
+		self.insideHook = nil
+		self.itemID = IDFromLink(GetMerchantItemLink(merchantIndex))
+		ExtendTooltip(self)
+	end
+
+	local original_SetQuestLogItem = tooltip.SetQuestLogItem
+	function tooltip.SetQuestLogItem(self, itemType, index)
+		self.insideHook = true
+		original_SetQuestLogItem(self, itemType, index)
+		self.insideHook = nil
+		self.itemID = IDFromLink(GetQuestLogItemLink(itemType, index))
+		ExtendTooltip(self)
+	end
+
+	local original_SetQuestItem = tooltip.SetQuestItem
+	function tooltip.SetQuestItem(self, itemType, index)
+		self.insideHook = true
+		original_SetQuestItem(self, itemType, index)
+		self.insideHook = nil
+		self.itemID = IDFromLink(GetQuestItemLink(itemType, index))
+		ExtendTooltip(self)
+	end
+
+	local original_SetHyperlink = tooltip.SetHyperlink
+	function tooltip.SetHyperlink(self, arg1)
+		self.insideHook = true
+		original_SetHyperlink(self, arg1)
+		self.insideHook = nil
+		self.itemID = IDFromLink(arg1)
+		ExtendTooltip(self)
+	end
+
+	local original_SetInboxItem = tooltip.SetInboxItem
 	function tooltip.SetInboxItem(self, mailID, attachmentIndex)
-		insideHook = true
+		self.insideHook = true
 		original_SetInboxItem(self, mailID, attachmentIndex)
-		insideHook = false
+		self.insideHook = nil
 		if GetInboxItemLink then
 			self.itemID = IDFromLink(GetInboxItemLink(mailID, attachmentIndex))
 		else
@@ -246,35 +168,29 @@ local function HookTooltip(tooltip)
 		ExtendTooltip(self)
 	end
 
-	function tooltip.SetInventoryItem(self, unit, slot)
-		insideHook = true
-		local hasItem, hasCooldown, repairCost = original_SetInventoryItem(self, unit, slot)
-		insideHook = false
-		self.itemID = IDFromLink(GetInventoryItemLink(unit, slot))
-		ExtendTooltip(self)
-		return hasItem, hasCooldown, repairCost
-	end
-
+	local original_SetCraftItem = tooltip.SetCraftItem
 	function tooltip.SetCraftItem(self, skill, slot)
-		insideHook = true
+		self.insideHook = true
 		original_SetCraftItem(self, skill, slot)
-		insideHook = false
+		self.insideHook = nil
 		self.itemID = IDFromLink(GetCraftReagentItemLink(skill, slot))
 		ExtendTooltip(self)
 	end
 
+	local original_SetCraftSpell = tooltip.SetCraftSpell
 	function tooltip.SetCraftSpell(self, slot)
-		insideHook = true
+		self.insideHook = true
 		original_SetCraftSpell(self, slot)
-		insideHook = false
+		self.insideHook = nil
 		self.itemID = IDFromLink(GetCraftItemLink(slot))
 		ExtendTooltip(self)
 	end
 
+	local original_SetTradeSkillItem = tooltip.SetTradeSkillItem
 	function tooltip.SetTradeSkillItem(self, skillIndex, reagentIndex)
-		insideHook = true
+		self.insideHook = true
 		original_SetTradeSkillItem(self, skillIndex, reagentIndex)
-		insideHook = false
+		self.insideHook = nil
 		if reagentIndex then
 			self.itemID = IDFromLink(GetTradeSkillReagentItemLink(skillIndex, reagentIndex))
 		else
@@ -283,18 +199,20 @@ local function HookTooltip(tooltip)
 		ExtendTooltip(self)
 	end
 
+	local original_SetAuctionItem = tooltip.SetAuctionItem
 	function tooltip.SetAuctionItem(self, atype, index)
-		insideHook = true
+		self.insideHook = true
 		original_SetAuctionItem(self, atype, index)
-		insideHook = false
+		self.insideHook = nil
 		self.itemID = IDFromLink(GetAuctionItemLink(atype, index))
 		ExtendTooltip(self)
 	end
 
+	local original_SetAuctionSellItem = tooltip.SetAuctionSellItem
 	function tooltip.SetAuctionSellItem(self)
-		insideHook = true
+		self.insideHook = true
 		original_SetAuctionSellItem(self)
-		insideHook = false
+		self.insideHook = nil
 		local name, texture, count, quality, canUse, price, maxStack, itemLink = GetAuctionSellItemInfo()
 		if itemLink then
 			self.itemID = IDFromLink(itemLink)
@@ -304,23 +222,34 @@ local function HookTooltip(tooltip)
 		ExtendTooltip(self)
 	end
 
+	local original_SetTradePlayerItem = tooltip.SetTradePlayerItem
 	function tooltip.SetTradePlayerItem(self, index)
-		insideHook = true
+		self.insideHook = true
 		original_SetTradePlayerItem(self, index)
-		insideHook = false
+		self.insideHook = nil
 		self.itemID = IDFromLink(GetTradePlayerItemLink(index))
 		ExtendTooltip(self)
 	end
 
+	local original_SetTradeTargetItem = tooltip.SetTradeTargetItem
 	function tooltip.SetTradeTargetItem(self, index)
-		insideHook = true
+		self.insideHook = true
 		original_SetTradeTargetItem(self, index)
-		insideHook = false
+		self.insideHook = nil
 		self.itemID = IDFromLink(GetTradeTargetItemLink(index))
 		ExtendTooltip(self)
 	end
+
+	local original_OnHide = tooltip:GetScript("OnHide")
+	tooltip:SetScript("OnHide", function()
+		if original_OnHide then original_OnHide(tooltip) end
+		tooltip.itemID = nil
+		tooltip.atlasLootLine = nil
+		tooltip.tooltipMoney = 0
+	end)
 end
 
+local AtlasLootTip = CreateFrame("Frame", "AtlasLootTip", GameTooltip)
 AtlasLootTip:SetScript("OnShow", function()
 	if not (aux_frame and aux_frame:IsShown()) then return end
 	local focus = GetMouseFocus()
@@ -332,7 +261,7 @@ AtlasLootTip:SetScript("OnShow", function()
 end)
 
 -- adapted from http://shagu.org/ShaguTweaks/
-AtlasLootTip.HookAddonOrVariable = function(addon, func)
+local function HookAddonOrVariable(addon, func)
 	local lurker = CreateFrame("Frame", nil)
 	lurker.func = func
 	lurker:RegisterEvent("ADDON_LOADED")
@@ -346,7 +275,7 @@ AtlasLootTip.HookAddonOrVariable = function(addon, func)
 	end)
 end
 
-AtlasLootTip.HookAddonOrVariable("Tmog", function()
+HookAddonOrVariable("Tmog", function()
 	HookTooltip(TmogTooltip)
 end)
 
