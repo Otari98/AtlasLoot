@@ -690,6 +690,7 @@ It is the workhorse of the mod and allows the loot tables to be displayed any wa
 ]]
 function AtlasLoot_ShowItemsFrame(dataID, dataSource, title)
 	AtlasLootItemsFrame.refreshTime = nil
+	for itemID in pairs(AtlasLootItemsFrame.queue) do AtlasLootItemsFrame.queue[itemID] = nil end
 	if AtlasLootItemsFrameContainer:IsShown() and AtlasLootItemsFrame.refresh and dataID ~= AtlasLootItemsFrame.refresh[1] then
 		AtlasLootItemsFrameContainer:Hide()
 	end
@@ -698,11 +699,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, title)
 		dataSource = AtlasLoot_TableNames[dataID] and AtlasLoot_TableNames[dataID][2] or "AtlasLootFallback"
 	end
 	if not title then
-		if AtlasLoot_TableNames[dataID] and AtlasLoot_TableNames[dataID][1] then
-			title = AtlasLoot_TableNames[dataID][1]
-		else
-			title = ""
-		end
+		title = AtlasLoot_TableNames[dataID] and AtlasLoot_TableNames[dataID][1] or ""
 	end
 	-- Set up local variables needed for GetItemInfo, etc
 	local iconFrame, nameFrame, extraFrame, itemButton
