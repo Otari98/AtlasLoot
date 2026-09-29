@@ -1204,7 +1204,7 @@
 				<Scripts>
 					<OnLoad>
 						local AL = AtlasLoot.L
-						getglobal(this:GetName().."Text"):SetText(AL["Default Tooltips"])
+						_G[this:GetName().."Text"]:SetText(AL["Default Tooltips"])
 					</OnLoad>
 					<OnClick>
 						AtlasLootOptions_DefaultTTToggle()
@@ -1220,7 +1220,7 @@
 				<Scripts>
 					<OnLoad>
 						local AL = AtlasLoot.L
-						getglobal(this:GetName().."Text"):SetText(AL["Lootlink Tooltips"])
+						_G[this:GetName().."Text"]:SetText(AL["Lootlink Tooltips"])
 					</OnLoad>
 					<OnClick>
 						AtlasLootOptions_DefaultTTToggle()
@@ -1236,7 +1236,7 @@
 				<Scripts>
 					<OnLoad>
 						local AL = AtlasLoot.L
-						getglobal(this:GetName().."Text"):SetText(AL["ItemSync Tooltips"])
+						_G[this:GetName().."Text"]:SetText(AL["ItemSync Tooltips"])
 					</OnLoad>
 					<OnClick>
 						AtlasLootOptions_DefaultTTToggle()
@@ -1252,7 +1252,7 @@
 				<Scripts>
 					<OnLoad>
 						local AL = AtlasLoot.L
-						getglobal(this:GetName().."Text"):SetText(AL["Show Source on Tooltips"])
+						_G[this:GetName().."Text"]:SetText(AL["Show Source on Tooltips"])
 					</OnLoad>
 					<OnClick>
 						AtlasLootOptions_ShowSourceToggle()
@@ -1268,7 +1268,7 @@
 				<Scripts>
 					<OnLoad>
 						local AL = AtlasLoot.L
-						getglobal(this:GetName().."Text"):SetText("Group wishlist by dungeon")
+						_G[this:GetName().."Text"]:SetText("Group wishlist by dungeon")
 					</OnLoad>
 					<OnClick>
 						AtlasLootOptions_WishlistGroupedByDungeonToggle()
@@ -1284,7 +1284,7 @@
 				<Scripts>
 					<OnLoad>
 						local AL = AtlasLoot.L
-						getglobal(this:GetName().."Text"):SetText(AL["Use EquipCompare"])
+						_G[this:GetName().."Text"]:SetText(AL["Use EquipCompare"])
 					</OnLoad>
 					<OnClick>
 						AtlasLootOptions_EquipCompareToggle()
@@ -1300,7 +1300,7 @@
 				<Scripts>
 					<OnLoad>
 						local AL = AtlasLoot.L
-						getglobal(this:GetName().."Text"):SetText(AL["Show IDs at all times"])
+						_G[this:GetName().."Text"]:SetText(AL["Show IDs at all times"])
 					</OnLoad>
 					<OnClick>
 						AtlasLootOptions_ItemIDToggle()
@@ -1316,14 +1316,10 @@
 				<Scripts>
 					<OnLoad>
 						local AL = AtlasLoot.L
-						getglobal(this:GetName().."Text"):SetText(AL["Show Minimap Button"])
+						_G[this:GetName().."Text"]:SetText(AL["Show Minimap Button"])
 					</OnLoad>
 					<OnClick>
-						if AtlasLootCharDB.MinimapButton == true then
-							AtlasLootCharDB.MinimapButton = false
-						else
-							AtlasLootCharDB.MinimapButton = true
-						end
+						AtlasLootCharDB.MinimapButton = not AtlasLootCharDB.MinimapButton
 						AtlasLootMinimapButton_Init()
 					</OnClick>
 				</Scripts>
@@ -1337,7 +1333,7 @@
 				<Scripts>
 					<OnLoad>
 						local AL = AtlasLoot.L
-						getglobal(this:GetName().."Text"):SetText(AL["Hide AtlasLoot Panel"])
+						_G[this:GetName().."Text"]:SetText(AL["Hide AtlasLoot Panel"])
 					</OnLoad>
 					<OnClick>
 						if AtlasLootCharDB.HidePanel == true then
@@ -1367,7 +1363,7 @@
 				<Scripts>
 					<OnLoad>
 						local AL = AtlasLoot.L
-						getglobal(this:GetName().."Text"):SetText(AL["Make Loot Table Opaque"])
+						_G[this:GetName().."Text"]:SetText(AL["Make Loot Table Opaque"])
 					</OnLoad>
 					<OnClick>
 						AtlasLootOptions_OpaqueToggle()
@@ -1383,7 +1379,7 @@
 				<Scripts>
 					<OnLoad>
 						local AL = AtlasLoot.L
-						getglobal(this:GetName().."Text"):SetText(AL["Suppress text spam when querying items"])
+						_G[this:GetName().."Text"]:SetText(AL["Suppress text spam when querying items"])
 					</OnLoad>
 					<OnClick>
 						AtlasLootOptions_ItemSpam()
@@ -1833,64 +1829,44 @@
 		</Frames>
 	</Frame>
 
-	<Frame name="AtlasLootMinimapButtonFrame" parent="Minimap" enableMouse="true" hidden="true">
-		<Size x="32" y="32"/>
+	<Button name="AtlasLootMinimapButton" parent="Minimap" enableMouse="true" hidden="true">
+		<Size x="33" y="33"/>
 		<Anchors>
 			<Anchor point="TOPLEFT" relativeTo="Minimap" relativePoint="RIGHT">
 				<Offset x="2" y="0"/>
 			</Anchor>
 		</Anchors>
-		<Frames>
-			<Button name="AtlasLootMinimapButton">
-				<HighlightTexture alphaMode="ADD" file="Interface\Minimap\UI-Minimap-ZoomButton-Highlight"/>
-				<Size x="33" y="33"/>
-				<Anchors>
-					<Anchor point="TOPLEFT"/>
-				</Anchors>
-				<NormalTexture file="Interface\AddOns\AtlasLoot\Images\AtlasLootMinimap"/>
-				<PushedTexture file="Interface\AddOns\AtlasLoot\Images\AtlasLootMinimap"/>
-				<HighlightTexture alphaMode="ADD" file="Interface\Minimap\UI-Minimap-ZoomButton-Highlight"/>
-				<Scripts>
-					<OnLoad>
-						this:RegisterForDrag("RightButton")
-						this.aldragme = false
-					</OnLoad>
-					<OnDragStart> 
-						this.aldragme = true
-					</OnDragStart>
-					<OnDragStop>
-						this.aldragme = false
-					</OnDragStop>
-					<OnUpdate>
-						if (this.aldragme == true) then
-							AtlasLootMinimapButton_BeingDragged()
-						end
-					</OnUpdate>
-					<OnClick>
-						AtlasLootMinimapButton_OnClick(arg1)
-					</OnClick>
-					<OnMouseUp>
-						if arg1 == "MiddleButton" then
-							AtlasLootOptions_Toggle()
-						end
-					</OnMouseUp>
-					<OnEnter>
-						AtlasLootMinimapButton_OnEnter()
-					</OnEnter>
-					<OnLeave>
-						GameTooltip:Hide()
-					</OnLeave>
-				</Scripts>
-			</Button>
-		</Frames>
+		<NormalTexture file="Interface\AddOns\AtlasLoot\Images\AtlasLootMinimap"/>
+		<PushedTexture file="Interface\AddOns\AtlasLoot\Images\AtlasLootMinimap"/>
+		<HighlightTexture alphaMode="ADD" file="Interface\Minimap\UI-Minimap-ZoomButton-Highlight"/>
 		<Scripts>
 			<OnLoad>
-				this:RegisterEvent("VARIABLES_LOADED")
+				this:RegisterForDrag("RightButton")
+				this:RegisterForClicks("LeftButtonUp", "MiddleButtonUp")
+				this:SetFrameLevel(Minimap:GetFrameLevel() + 3)
+				this.aldragme = false
 			</OnLoad>
-			<OnEvent>
-				AtlasLootMinimapButton_Init()
-			</OnEvent>
+			<OnDragStart> 
+				this.aldragme = true
+			</OnDragStart>
+			<OnDragStop>
+				this.aldragme = false
+			</OnDragStop>
+			<OnUpdate>
+				if this.aldragme then
+					AtlasLootMinimapButton_BeingDragged()
+				end
+			</OnUpdate>
+			<OnClick>
+				AtlasLootMinimapButton_OnClick(arg1)
+			</OnClick>
+			<OnEnter>
+				AtlasLootMinimapButton_OnEnter()
+			</OnEnter>
+			<OnLeave>
+				GameTooltip:Hide()
+			</OnLeave>
 		</Scripts>
-	</Frame>
+	</Button>
 
 </Ui>

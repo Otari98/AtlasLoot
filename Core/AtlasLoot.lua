@@ -5,7 +5,7 @@ Loot browser associating loot with instance bosses
 Can be integrated with Atlas (http://www.atlasmod.com)
 ]]
 
-local _G = _G or getfenv(0)
+_G = _G or getfenv(0)
 local refreshTimeout = 2
 
 -- Bindings
@@ -226,6 +226,8 @@ function AtlasLoot_OnVariablesLoaded()
 	AtlasLootDefaultFrame_SelectedTable:SetText("")
 	AtlasLootDefaultFrame_SelectedTable:Show()
 	AtlasLootDefaultFrame_SubMenu:Disable()
+
+	AtlasLootMinimapButton_Init()
 end
 
 --[[
@@ -271,7 +273,7 @@ function AtlasLootOptions_Init()
 	AtlasLootOptionsFrameMinimap:SetChecked(AtlasLootCharDB.MinimapButton)
 	AtlasLootOptionsFrameSliderButtonPos:SetValue(AtlasLootCharDB.MinimapButtonPosition)
 	AtlasLootOptionsFrameSliderButtonRad:SetValue(AtlasLootCharDB.MinimapButtonRadius)
-	AtlasLootMinimapButtonFrame:SetPoint(
+	AtlasLootMinimapButton:SetPoint(
 		"TOPLEFT",
 		"Minimap",
 		"TOPLEFT",
@@ -1539,6 +1541,8 @@ Function to show/hide AtlasLoot when click on minimap button.
 function AtlasLootMinimapButton_OnClick(arg1)
 	if arg1 == "LeftButton" then
 		AtlasLoot_Toggle()
+	elseif arg1 == "MiddleButton" then
+		AtlasLootOptions_Toggle()
 	end
 end
 
@@ -1547,10 +1551,10 @@ AtlasLootMinimapButton_Init:
 Show/hide minimap button.
 ]]
 function AtlasLootMinimapButton_Init()
-	if AtlasLootCharDB.MinimapButton == true then
-		AtlasLootMinimapButtonFrame:Show()
+	if AtlasLootCharDB.MinimapButton then
+		AtlasLootMinimapButton:Show()
 	else
-		AtlasLootMinimapButtonFrame:Hide()
+		AtlasLootMinimapButton:Hide()
 	end
 end
 
@@ -1560,8 +1564,7 @@ Show tooltip when mouse is over minimap button.
 ]]
 function AtlasLootMinimapButton_OnEnter()
 	GameTooltip:SetOwner(this, "ANCHOR_LEFT")
-	GameTooltip:SetText(AL["AtlasLoot Enhanced"])
-	GameTooltipTextLeft1:SetTextColor(1, 1, 1)
+	GameTooltip:SetText(AL["AtlasLoot Enhanced"], 1, 1, 1)
 	GameTooltip:AddLine(AL["Left-click to open AtlasLoot.\nMiddle-click for AtlasLoot options.\nRight-click and drag to move this button."])
 	GameTooltip:Show()
 end
@@ -1571,7 +1574,7 @@ AtlasLootButton_UpdatePosition:
 Function to move the minimap button around the minimap.
 ]]
 function AtlasLootMinimapButton_UpdatePosition()
-	AtlasLootMinimapButtonFrame:SetPoint(
+	AtlasLootMinimapButton:SetPoint(
 		"TOPLEFT",
 		"Minimap",
 		"TOPLEFT",
@@ -1598,8 +1601,6 @@ function AtlasLootOptions_ResetPosition()
 end
 
 function AtlasLootOptions_DefaultSettings()
-	-- AtlasLootCharDB.SafeLinks = false
-	-- AtlasLootCharDB.AllLinks = true
 	AtlasLootCharDB.DefaultTT = true
 	AtlasLootCharDB.LootlinkTT = false
 	AtlasLootCharDB.ItemSyncTT = false
@@ -1607,10 +1608,8 @@ function AtlasLootOptions_DefaultSettings()
 	AtlasLootCharDB.EquipCompare = false
 	AtlasLootCharDB.Opaque = false
 	AtlasLootCharDB.ItemIDs = false
-	-- AtlasLootCharDB.ItemSpam = true
 	AtlasLootCharDB.MinimapButton = true
 	AtlasLootCharDB.HidePanel = false
-	-- AtlasLootCharDB.AutoQuery = false
 	AtlasLootCharDB.PartialMatching = true
 	AtlasLootCharDB.LastBoss = "DUNGEONSMENU1"
 	AtlasLootCharDB.LastBossText = AL["Dungeons & Raids"]
@@ -1642,9 +1641,7 @@ AtlasLootButton_SetPosition:
 Function to save the position of the minimap button.
 ]]
 function AtlasLootMinimapButton_SetPosition(v)
-	if v < 0 then
-		v = v + 360
-	end
+	if v < 0 then v = v + 360 end
 	AtlasLootCharDB.MinimapButtonPosition = v
 	AtlasLootMinimapButton_UpdatePosition()
 end
