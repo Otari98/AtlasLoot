@@ -517,7 +517,7 @@ AtlasLoot_Data.MENUS = {
 -- Entries have the text to display, loot table or sub table to link to and if the link is to a loot table or sub table
 AtlasLoot_HewdropDown = {
 	{
-		[AL["Dungeons & Raids"]] = {
+		["DUNGEONSMENU1"] = {
 			{ { WHITE.."[13-18]|r "..AL["Ragefire Chasm"], "RagefireChasm", "Submenu" }, },
 			{ { WHITE.."[13-20]|r "..AL["Frostmane Hollow"], "FrostmaneHollow", "Submenu" }, },
 			{ { WHITE.."[17-24]|r "..AL["Wailing Caverns"], "WailingCaverns", "Submenu" }, },
@@ -575,7 +575,7 @@ AtlasLoot_HewdropDown = {
 		},
 	},
 	{
-		[AL["World Bosses"]] = {
+		["WORLDBOSSMENU"] = {
 			{ { AL["Azuregos"], "AAzuregos", "Table" }, },
 			{ { AL["Emeriss"], "DEmeriss", "Table" }, },
 			{ { AL["Lethon"], "DLethon", "Table" }, },
@@ -591,7 +591,7 @@ AtlasLoot_HewdropDown = {
 		},
 	},
 	{
-		[AL["PvP Rewards"]] = {
+		["PVPMENU"] = {
 			{ { AL["PvP Armor Sets"], "PVPSET", "Table" }, },
 			{ { AL["PvP Accessories"], "PvP60Accessories1", "Table" }, },
 			{ { AL["Rank 14 Weapons"], "PVPWeapons1", "Table" }, },
@@ -603,7 +603,7 @@ AtlasLoot_HewdropDown = {
 		},
 	},
 	{
-		[AL["Collections"]] = {
+		["SETMENU"] = {
 			{ { AL["Sets"], "PRE60SET", "Table" }, },
 			{ { AL["Zul'Gurub Sets"], "ZGSET", "Table" }, },
 			{ { AL["Ruins of Ahn'Qiraj Sets"], "AQ20SET", "Table" }, },
@@ -621,7 +621,7 @@ AtlasLoot_HewdropDown = {
 		},
 	},
 	{
-		[AL["Factions"]] = {
+		["REPMENU"] = {
 			{ { AL["Argent Dawn"], "Argent1", "Table" }, },
 			{ { AL["Brood of Nozdormu"], "AQBroodRings", "Table" }, },
 			{ { AL["Darkmoon Faire"], "Darkmoon", "Table" }, },
@@ -654,7 +654,7 @@ AtlasLoot_HewdropDown = {
 		},
 	},
 	{
-		[AL["World Events"]] = {
+		["WORLDEVENTMENU"] = {
 			{ { AL["Abyssal Council"], "AbyssalTemplars", "Table" }, },
 			{ { AL["Children's Week"], "ChildrensWeek", "Table" }, },
 			{ { AL["Elemental Invasion"], "ElementalInvasion", "Table" }, },
@@ -671,7 +671,7 @@ AtlasLoot_HewdropDown = {
 		},
 	},
 	{
-		[AL["Crafting"]] = {
+		["CRAFTINGMENU"] = {
 			{ { AL["Alchemy"], "ALCHEMYMENU", "Table" }, },
 			{ { AL["Blacksmithing"], "SMITHINGMENU", "Table" }, },
 			{ { AL["Enchanting"], "ENCHANTINGMENU", "Table" }, },

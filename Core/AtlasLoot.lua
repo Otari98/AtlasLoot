@@ -704,7 +704,6 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, title)
 		title = AtlasLoot_TableNames[dataID] and AtlasLoot_TableNames[dataID][1] or ""
 	end
 	-- Set up local variables needed for GetItemInfo, etc
-	local iconFrame, nameFrame, extraFrame, itemButton
 	local text, extra
 	local wlPage, wlPageMax = 1, 1
 	local isItem, isEnchant, isSpell
@@ -752,8 +751,8 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, title)
 		for i = 1, getn(data) do
 			local buttonIndex = data[i][1]
 			local lootPage = data[i][2]
-			local container = data[i][6]
 			local icon = data[i][3]
+			local container = data[i][6]
 			_G["AtlasLootMenuItem_"..buttonIndex.."_Name"]:SetText(data[i][4])
 			_G["AtlasLootMenuItem_"..buttonIndex.."_Extra"]:SetText(data[i][5])
 			if type(container) == "table" then
@@ -787,11 +786,11 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, title)
 			-- Check for a valid object (that it exists, and that it has a name)
 			if dataSource[dataID][i] and dataSource[dataID][i][3] ~= "" then
 				-- Use shortcuts for easier reference to parts of the item button
-				itemButton       = _G["AtlasLootItem_"..i]
-				iconFrame        = _G["AtlasLootItem_"..i.."_Icon"]
-				nameFrame        = _G["AtlasLootItem_"..i.."_Name"]
-				extraFrame       = _G["AtlasLootItem_"..i.."_Extra"]
-				local quantity   = _G["AtlasLootItem_"..i.."_Quantity"]
+				local itemButton = _G["AtlasLootItem_"..i]
+				local iconFrame = _G["AtlasLootItem_"..i.."_Icon"]
+				local nameFrame = _G["AtlasLootItem_"..i.."_Name"]
+				local extraFrame = _G["AtlasLootItem_"..i.."_Extra"]
+				local quantity = _G["AtlasLootItem_"..i.."_Quantity"]
 				local iconBorder = _G["AtlasLootItem_"..i.."_IconBorder"]
 				local containerBorder = _G["AtlasLootItem_"..i.."_ContainerBorder"]
 				local containerHighlight = _G["AtlasLootItem_"..i.."_ContainerBorderHighlight"]
@@ -1027,7 +1026,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, title)
 					itemButton.sourcePage = dataSource[dataID][i][5]
 				else
 					local droprate = dataSource[dataID][i][5]
-					if droprate and string.find(droprate, "%%") then
+					if droprate and string.find(droprate, "%", 1, true) then
 						itemButton.droprate = droprate
 					end
 				end
@@ -1228,7 +1227,7 @@ function AtlasLoot_HewdropRegister()
 						for i, j in pairs(v) do
 							if lock == 0 then
 								AtlasLoot_Hewdrop:AddLine(
-									'text', i,
+									'text', AtlasLoot_TableNames[i] and AtlasLoot_TableNames[i][1],
 									'textR', 1,
 									'textG', 0.82,
 									'textB', 0,
@@ -1345,26 +1344,8 @@ function AtlasLoot_HewdropRegister()
 	)
 end
 
-function AtlasLoot_OpenMenu(menuName)
-	AtlasLootDefaultFrame_SelectedCategory:SetText(menuName)
-	AtlasLootDefaultFrame_SubMenu:Disable()
-	AtlasLootDefaultFrame_SelectedTable:SetText("")
-	AtlasLootDefaultFrame_SelectedTable:Show()
-	if menuName == AL["Crafting"] then
-		AtlasLoot_ShowItemsFrame("CRAFTINGMENU")
-	elseif menuName == AL["PvP Rewards"] then
-		AtlasLoot_ShowItemsFrame("PVPMENU")
-	elseif menuName == AL["World Events"] then
-		AtlasLoot_ShowItemsFrame("WORLDEVENTMENU")
-	elseif menuName == AL["Collections"] then
-		AtlasLoot_ShowItemsFrame("SETMENU")
-	elseif menuName == AL["Factions"] then
-		AtlasLoot_ShowItemsFrame("REPMENU")
-	elseif menuName == AL["World Bosses"] then
-		AtlasLoot_ShowItemsFrame("WORLDBOSSMENU")
-	elseif menuName == AL["Dungeons & Raids"] then
-		AtlasLoot_ShowItemsFrame("DUNGEONSMENU1")
-	end
+function AtlasLoot_OpenMenu(dataID)
+	AtlasLoot_ShowItemsFrame(dataID)
 	CloseDropDownMenus()
 end
 
