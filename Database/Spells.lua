@@ -18622,5 +18622,36 @@ GetSpellInfoAtlasLootDB = {
 				{ 15992 },
 			},
 		},
+		[32313] = {
+			["name"] = AL["Squid Eel Skewer"],
+			["craftItem"] = 42163,
+			["castTime"] = 3,
+			["craftQuantityMin"] = 2,
+			["reagents"] = {
+				{ 13755 },
+				{ 13757 },
+				{ 2692, 2 },
+			},
+		},
+		[1207] = {
+			["name"] = AL["Fried Strider with a Side of Berries"],
+			["craftItem"] = 68513,
+			["castTime"] = 3,
+			["reagents"] = {
+				{ 42010 },
+				{ 42000 },
+				{ 2692, 2 },
+			},
+		},
+		[58046] = {
+			["name"] = AL["Crawford Apple Tarte"],
+			["craftItem"] = 41673,
+			["castTime"] = 3,
+			["reagents"] = {
+				{ 4539 },
+				{ 41677 },
+				{ 1179 },
+			},
+		},
 	},
 }

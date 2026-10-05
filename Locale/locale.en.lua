@@ -3358,4 +3358,7 @@ AL:RegisterTranslations("enUS", function() return {
 	["Starfeather Arrows"] = true,
 	["Rugged Mining Sack"] = true,
 	["Fisherman's Backpack"] = true,
+	["Squid Eel Skewer"] = true,
+	["Fried Strider with a Side of Berries"] = true,
+	["Crawford Apple Tarte"] = true,
 } end)

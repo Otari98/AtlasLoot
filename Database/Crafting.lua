@@ -3468,6 +3468,8 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s18245", "inv_drink_17", "=q1=Lobster Stew", "=ds=#sr# =so1=275 =so2=315 =so3=335 =so4=355" },
 		{ "s18246", "inv_misc_food_47", "=q1=Mightfish Steak", "=ds=#sr# =so1=275 =so2=315 =so3=335 =so4=355" },
 		{ "s22761", "inv_misc_food_63", "=q1=Runn Tum Tuber Surprise", "=ds=#sr# =so1=275 =so2=315 =so3=335 =so4=355" },
+		{ "s32313", "inv_misc_food_68", "=q1=Squid Eel Skewer", "=ds=#sr# =so1=275 =so2=315 =so3=335 =so4=355" },
+		{ "s1207", "inv_drink_21", "=q1=Fried Strider with a Side of Berries", "=ds=#sr# =so1=275 =so2=315 =so3=335 =so4=355" },
 		{ "s24801", "inv_misc_food_64", "=q1=Smoked Desert Dumplings", "=ds=#sr# =so1=285 =so2=325 =so3=345 =so4=365" },
 		{ "s25659", "inv_misc_food_65", "=q1=Dirge's Kickin' Chimaerok Chops", "=ds=#sr# =so1=300 =so2=325 =so3=345 =so4=365" },
 		{ "s57047", "inv_misc_food_09", "=q1=Danonzo's Tel'Abim Surprise", "=ds=#sr# =so1=300 =so2=300 =so3=300 =so4=300" },
