@@ -346,13 +346,11 @@
 					</OnShow>
 					<OnEnter>
 						local AL = AtlasLoot.L
-						if this:IsEnabled() then
-							GameTooltip:ClearLines()
-							GameTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 5)
-							GameTooltip:AddLine("|cffFFFFFF"..AL["WishList"].."|r")
-							GameTooltip:AddLine(AL["ALT+Click on item to add or remove it from WishList"])
-							GameTooltip:Show()
-						end
+						GameTooltip:ClearLines()
+						GameTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 5)
+						GameTooltip:AddLine("|cffFFFFFF"..AL["WishList"].."|r")
+						GameTooltip:AddLine(AL["ALT+Click on item to add or remove it from WishList"])
+						GameTooltip:Show()
 					</OnEnter>
 					<OnLeave>
 						GameTooltip:Hide()
@@ -1092,11 +1090,6 @@
 				<Scripts>
 					<OnShow>
 						this:SetFrameLevel(AtlasLootItemsFrame:GetFrameLevel() + 1)
-						if (AtlasLootItemsFrame.refresh) and ((AtlasLootItemsFrame.refresh[1] == "SearchResult") or (AtlasLootItemsFrame.refresh[1] == "WishList")) then
-							this:Disable()
-						else
-							this:Enable()
-						end
 					</OnShow>
 					<OnClick>
 						AtlasLoot_ShowQuickLooks(this)
@@ -1529,8 +1522,6 @@
 				</Anchors>
 				<Scripts>
 					<OnClick>
-						AtlasLoot_QuickLooks:Hide()
-						AtlasLootQuickLooksButton:Hide()
 						AtlasLoot_ShowItemsFrame("WORLDEVENTMENU")
 					</OnClick>
 					<OnShow>
@@ -1546,8 +1537,6 @@
 				</Anchors>
 				<Scripts>
 					<OnClick>
-						AtlasLoot_QuickLooks:Hide()
-						AtlasLootQuickLooksButton:Hide()
 						AtlasLoot_ShowItemsFrame("SETMENU")
 					</OnClick>
 					<OnShow>
@@ -1563,8 +1552,6 @@
 				</Anchors>
 				<Scripts>
 					<OnClick>
-						AtlasLoot_QuickLooks:Hide()
-						AtlasLootQuickLooksButton:Hide()
 						AtlasLoot_ShowItemsFrame("REPMENU")
 					</OnClick>
 					<OnShow>
@@ -1580,8 +1567,6 @@
 				</Anchors>
 				<Scripts>
 					<OnClick>
-						AtlasLoot_QuickLooks:Hide()
-						AtlasLootQuickLooksButton:Hide()
 						AtlasLoot_ShowItemsFrame("PVPMENU")
 					</OnClick>
 					<OnShow>
@@ -1597,8 +1582,6 @@
 				</Anchors>
 				<Scripts>
 					<OnClick>
-						AtlasLoot_QuickLooks:Hide()
-						AtlasLootQuickLooksButton:Hide()
 						AtlasLoot_ShowItemsFrame("CRAFTINGMENU")
 					</OnClick>
 					<OnShow>
@@ -1642,13 +1625,11 @@
 					</OnShow>
 					<OnEnter>
 						local AL = AtlasLoot.L
-						if this:IsEnabled() then
-							GameTooltip:ClearLines()
-							GameTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 5)
-							GameTooltip:AddLine("|cffFFFFFF"..AL["WishList"].."|r")
-							GameTooltip:AddLine(AL["ALT+Click on item to add or remove it from WishList"])
-							GameTooltip:Show()
-						end
+						GameTooltip:ClearLines()
+						GameTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 5)
+						GameTooltip:AddLine("|cffFFFFFF"..AL["WishList"].."|r")
+						GameTooltip:AddLine(AL["ALT+Click on item to add or remove it from WishList"])
+						GameTooltip:Show()
 					</OnEnter>
 					<OnLeave>
 						GameTooltip:Hide()

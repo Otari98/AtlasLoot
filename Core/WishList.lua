@@ -20,11 +20,10 @@ Displays the WishList
 ]]
 function AtlasLoot_ShowWishList()
 	AtlasLoot_ShowItemsFrame("WishList", "WishListPage"..currentPage)
+	ShowUIPanel(_G[AtlasLoot_AnchorPoint[2]])
 	CloseDropDownMenus()
 	AtlasLootDefaultFrame_SubMenu:Disable()
 	AtlasLootDefaultFrame_SelectedTable:Hide()
-	AtlasLootQuickLooksButton:Hide()
-	AtlasLoot_QuickLooks:Hide()
 end
 
 --[[

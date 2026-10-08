@@ -2347,20 +2347,14 @@ function AtlasLoot_GetChatLink(id)
 end
 
 function AtlasLoot_QuickLook_OnClick(id)
+	ShowUIPanel(_G[AtlasLoot_AnchorPoint[2]])
 	if IsAltKeyDown() then
-		AtlasLoot_ClearQuickLookButton(id)
-		return
-	end
-	if this:GetParent() == AtlasLootPanel then
-		if AtlasLootPanel:GetParent() == AtlasFrame then
-			AtlasLoot_AnchorPoint = Anchor_Atlas
-		elseif AtlasLootPanel:GetParent() == AlphaMapAlphaMapFrame then
-			AtlasLoot_AnchorPoint = Anchor_AlphaMap
-		end
+		AtlasLootCharDB["QuickLooks"][id] = nil
+		AtlasLoot_RefreshQuickLookButtons()
+		DEFAULT_CHAT_FRAME:AddMessage(BLUE..AL["AtlasLoot"]..": "..WHITE..AL["QuickLook"].." "..id.." "..AL["has been reset!"])
 	else
-		AtlasLoot_AnchorPoint = Anchor_Default
+		AtlasLoot_ShowItemsFrame(AtlasLootCharDB["QuickLooks"][id][1], AtlasLootCharDB["QuickLooks"][id][2], AtlasLootCharDB["QuickLooks"][id][3])
 	end
-	AtlasLoot_ShowItemsFrame(AtlasLootCharDB["QuickLooks"][id][1], AtlasLootCharDB["QuickLooks"][id][2], AtlasLootCharDB["QuickLooks"][id][3])
 end
 
 function AtlasLoot_QuickLook_OnShow(id)
@@ -2372,11 +2366,8 @@ function AtlasLoot_QuickLook_OnShow(id)
 end
 
 function AtlasLoot_QuickLook_OnEnter(id)
-	if this:IsEnabled() then
-		GameTooltip:ClearLines()
-		GameTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 5)
-		GameTooltip:AddLine(WHITE..AtlasLootCharDB["QuickLooks"][id][3].."|r")
-		GameTooltip:AddLine(AL["ALT+Click to clear"])
-		GameTooltip:Show()
-	end
+	GameTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 5)
+	GameTooltip:AddLine(AtlasLootCharDB["QuickLooks"][id][3], 1, 1, 1)
+	GameTooltip:AddLine(AL["ALT+Click to clear"])
+	GameTooltip:Show()
 end
