@@ -37,8 +37,8 @@ Database\WorldBosses.lua
 Database\TableRegister.lua
 Database\Spells.lua
 Database\Menus.lua
+Database\ButtonRegistry.lua
 
-Core\ButtonRegistry.lua
 Core\TextParsing.lua
 Core\WishList.lua
 Core\Search.lua
