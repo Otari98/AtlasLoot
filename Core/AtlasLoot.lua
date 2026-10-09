@@ -2346,27 +2346,30 @@ function AtlasLoot_GetChatLink(id)
 	return color.."|H"..itemLink.."|h["..itemName.."]|h|r"
 end
 
-function AtlasLoot_QuickLook_OnClick(id)
+function AtlasLoot_QuickLook_OnClick(self)
+	local id = self:GetID()
 	ShowUIPanel(_G[AtlasLoot_AnchorPoint[2]])
 	if IsAltKeyDown() then
 		AtlasLootCharDB["QuickLooks"][id] = nil
 		AtlasLoot_RefreshQuickLookButtons()
-		DEFAULT_CHAT_FRAME:AddMessage(BLUE..AL["AtlasLoot"]..": "..WHITE..AL["QuickLook"].." "..id.." "..AL["has been reset!"])
+		DEFAULT_CHAT_FRAME:AddMessage(BLUE..AL["AtlasLoot"]..":|r "..AL["QuickLook"].." "..id.." "..AL["has been reset!"])
 	else
 		AtlasLoot_ShowItemsFrame(AtlasLootCharDB["QuickLooks"][id][1], AtlasLootCharDB["QuickLooks"][id][2], AtlasLootCharDB["QuickLooks"][id][3])
 	end
 end
 
-function AtlasLoot_QuickLook_OnShow(id)
-	this:SetText(AL["QuickLook"].." "..id)
-	this:SetFrameLevel(this:GetParent():GetFrameLevel() + 1)
+function AtlasLoot_QuickLook_OnShow(self)
+	local id = self:GetID()
+	self:SetText(AL["QuickLook"].." "..id)
+	self:SetFrameLevel(self:GetParent():GetFrameLevel() + 1)
 	if not AtlasLootCharDB["QuickLooks"][id] or not AtlasLootCharDB["QuickLooks"][id][1] then
-		this:Disable()
+		self:Disable()
 	end
 end
 
-function AtlasLoot_QuickLook_OnEnter(id)
-	GameTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 5)
+function AtlasLoot_QuickLook_OnEnter(self)
+	local id = self:GetID()
+	GameTooltip:SetOwner(self, "ANCHOR_RIGHT", -(self:GetWidth() / 2), 5)
 	GameTooltip:AddLine(AtlasLootCharDB["QuickLooks"][id][3], 1, 1, 1)
 	GameTooltip:AddLine(AL["ALT+Click to clear"])
 	GameTooltip:Show()

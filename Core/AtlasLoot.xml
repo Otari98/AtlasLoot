@@ -40,8 +40,21 @@
 		</Scripts>
 	</Button>
 
-	<Button name="AtlasLootDefaultFrameButtonTemplate" inherits="OptionsButtonTemplate" virtual="true">
-		<Size x="105" y="20"/>
+	<Button name="AtlasLootQuickLookButtonTemplate" inherits="UIPanelButtonTemplate" virtual="true">
+		<Scripts>
+			<OnEnter>
+				AtlasLoot_QuickLook_OnEnter(this)
+			</OnEnter>
+			<OnLeave>
+				GameTooltip:Hide()
+			</OnLeave>
+			<OnClick>
+				AtlasLoot_QuickLook_OnClick(this)
+			</OnClick>
+			<OnShow>
+				AtlasLoot_QuickLook_OnShow(this)
+			</OnShow>
+		</Scripts>
 	</Button>
 
 	<Frame name="AtlasLootDefaultFrame" toplevel="true" movable="true" enableMouse="true" hidden="true" parent="UIParent">
@@ -150,89 +163,29 @@
 					</OnShow>
 				</Scripts>
 			</Button>
-			<Button name="$parent_Preset1" inherits="AtlasLootDefaultFrameButtonTemplate">
+			<Button name="$parent_Preset1" inherits="AtlasLootQuickLookButtonTemplate" id="1">
+				<Size x="105" y="20"/>
 				<Anchors>
-					<Anchor point="BOTTOMLEFT" relativeTo="$parent" relativePoint="BOTTOMLEFT">
-						<Offset x="75" y="63"/>
-					</Anchor>
+					<Anchor point="BOTTOMLEFT"><Offset x="75" y="63"/></Anchor>
 				</Anchors>
-				<Scripts>
-					<OnEnter>
-						AtlasLoot_QuickLook_OnEnter(1)
-					</OnEnter>
-					<OnLeave>
-						GameTooltip:Hide()
-					</OnLeave>
-					<OnClick>
-						AtlasLoot_QuickLook_OnClick(1)
-					</OnClick>
-					<OnShow>
-						AtlasLoot_QuickLook_OnShow(1)
-					</OnShow>
-				</Scripts>
 			</Button>
-			<Button name="$parent_Preset2" inherits="AtlasLootDefaultFrameButtonTemplate">
+			<Button name="$parent_Preset2" inherits="AtlasLootQuickLookButtonTemplate" id="2">
+				<Size x="105" y="20"/>
 				<Anchors>
-					<Anchor point="LEFT" relativeTo="$parent_Preset1" relativePoint="RIGHT">
-						<Offset x="5" y="0"/>
-					</Anchor>
+					<Anchor point="LEFT" relativeTo="$parent_Preset1" relativePoint="RIGHT"><Offset x="5" y="0"/></Anchor>
 				</Anchors>
-				<Scripts>
-					<OnEnter>
-						AtlasLoot_QuickLook_OnEnter(2)
-					</OnEnter>
-					<OnLeave>
-						GameTooltip:Hide()
-					</OnLeave>
-					<OnClick>
-						AtlasLoot_QuickLook_OnClick(2)
-					</OnClick>
-					<OnShow>
-						AtlasLoot_QuickLook_OnShow(2)
-					</OnShow>
-				</Scripts>
 			</Button>
-			<Button name="$parent_Preset3" inherits="AtlasLootDefaultFrameButtonTemplate">
+			<Button name="$parent_Preset3" inherits="AtlasLootQuickLookButtonTemplate" id="3">
+				<Size x="105" y="20"/>
 				<Anchors>
-					<Anchor point="LEFT" relativeTo="$parent_Preset2" relativePoint="RIGHT">
-						<Offset x="5" y="0"/>
-					</Anchor>
+					<Anchor point="LEFT" relativeTo="$parent_Preset2" relativePoint="RIGHT"><Offset x="5" y="0"/></Anchor>
 				</Anchors>
-				<Scripts>
-					<OnEnter>
-						AtlasLoot_QuickLook_OnEnter(3)
-					</OnEnter>
-					<OnLeave>
-						GameTooltip:Hide()
-					</OnLeave>
-					<OnClick>
-						AtlasLoot_QuickLook_OnClick(3)
-					</OnClick>
-					<OnShow>
-						AtlasLoot_QuickLook_OnShow(3)
-					</OnShow>
-				</Scripts>
 			</Button>
-			<Button name="$parent_Preset4" inherits="AtlasLootDefaultFrameButtonTemplate">
+			<Button name="$parent_Preset4" inherits="AtlasLootQuickLookButtonTemplate" id="4">
+				<Size x="105" y="20"/>
 				<Anchors>
-					<Anchor point="LEFT" relativeTo="$parent_Preset3" relativePoint="RIGHT">
-						<Offset x="5" y="0"/>
-					</Anchor>
+					<Anchor point="LEFT" relativeTo="$parent_Preset3" relativePoint="RIGHT"><Offset x="5" y="0"/></Anchor>
 				</Anchors>
-				<Scripts>
-					<OnEnter>
-						AtlasLoot_QuickLook_OnEnter(4)
-					</OnEnter>
-					<OnLeave>
-						GameTooltip:Hide()
-					</OnLeave>
-					<OnClick>
-						AtlasLoot_QuickLook_OnClick(4)
-					</OnClick>
-					<OnShow>
-						AtlasLoot_QuickLook_OnShow(4)
-					</OnShow>
-				</Scripts>
 			</Button>
 			<EditBox name="AtlasLootDefaultFrameSearchBox" inherits="InputBoxTemplate" letters="100">
 				<Size x="180" y="32"/>
@@ -1636,89 +1589,29 @@
 					</OnLeave>
 				</Scripts>
 			</Button>
-			<Button name="$parent_Preset1" inherits="AtlasLootPanelButtonTemplate">
+			<Button name="$parent_Preset1" inherits="AtlasLootQuickLookButtonTemplate" id="1">
+				<Size x="120" y="20"/>
 				<Anchors>
-					<Anchor point="TOP" relativeTo="$parent_Sets" relativePoint="BOTTOM">
-						<Offset x="0" y="-2"/>
-					</Anchor>
+					<Anchor point="TOP" relativeTo="$parent_Sets" relativePoint="BOTTOM"><Offset x="0" y="-2"/></Anchor>
 				</Anchors>
-				<Scripts>
-					<OnEnter>
-						AtlasLoot_QuickLook_OnEnter(1)
-					</OnEnter>
-					<OnLeave>
-						GameTooltip:Hide()
-					</OnLeave>
-					<OnClick>
-						AtlasLoot_QuickLook_OnClick(1)
-					</OnClick>
-					<OnShow>
-						AtlasLoot_QuickLook_OnShow(1)
-					</OnShow>
-				</Scripts>
 			</Button>
-			<Button name="$parent_Preset2" inherits="AtlasLootPanelButtonTemplate">
+			<Button name="$parent_Preset2" inherits="AtlasLootQuickLookButtonTemplate" id="2">
+				<Size x="120" y="20"/>
 				<Anchors>
-					<Anchor point="TOP" relativeTo="$parent_Reputation" relativePoint="BOTTOM">
-						<Offset x="0" y="-2"/>
-					</Anchor>
+					<Anchor point="TOP" relativeTo="$parent_Reputation" relativePoint="BOTTOM"><Offset x="0" y="-2"/></Anchor>
 				</Anchors>
-				<Scripts>
-					<OnEnter>
-						AtlasLoot_QuickLook_OnEnter(2)
-					</OnEnter>
-					<OnLeave>
-						GameTooltip:Hide()
-					</OnLeave>
-					<OnClick>
-						AtlasLoot_QuickLook_OnClick(2)
-					</OnClick>
-					<OnShow>
-						AtlasLoot_QuickLook_OnShow(2)
-					</OnShow>
-				</Scripts>
 			</Button>
-			<Button name="$parent_Preset3" inherits="AtlasLootPanelButtonTemplate">
+			<Button name="$parent_Preset3" inherits="AtlasLootQuickLookButtonTemplate" id="3">
+				<Size x="120" y="20"/>
 				<Anchors>
-					<Anchor point="TOP" relativeTo="$parent_PvP" relativePoint="BOTTOM">
-						<Offset x="0" y="-2"/>
-					</Anchor>
+					<Anchor point="TOP" relativeTo="$parent_PvP" relativePoint="BOTTOM"><Offset x="0" y="-2"/></Anchor>
 				</Anchors>
-				<Scripts>
-					<OnEnter>
-						AtlasLoot_QuickLook_OnEnter(3)
-					</OnEnter>
-					<OnLeave>
-						GameTooltip:Hide()
-					</OnLeave>
-					<OnClick>
-						AtlasLoot_QuickLook_OnClick(3)
-					</OnClick>
-					<OnShow>
-						AtlasLoot_QuickLook_OnShow(3)
-					</OnShow>
-				</Scripts>
 			</Button>
-			<Button name="$parent_Preset4" inherits="AtlasLootPanelButtonTemplate">
+			<Button name="$parent_Preset4" inherits="AtlasLootQuickLookButtonTemplate" id="4">
+				<Size x="120" y="20"/>
 				<Anchors>
-					<Anchor point="TOP" relativeTo="$parent_Crafting" relativePoint="BOTTOM">
-						<Offset x="0" y="-2"/>
-					</Anchor>
+					<Anchor point="TOP" relativeTo="$parent_Crafting" relativePoint="BOTTOM"><Offset x="0" y="-2"/></Anchor>
 				</Anchors>
-				<Scripts>
-					<OnEnter>
-						AtlasLoot_QuickLook_OnEnter(4)
-					</OnEnter>
-					<OnLeave>
-						GameTooltip:Hide()
-					</OnLeave>
-					<OnClick>
-						AtlasLoot_QuickLook_OnClick(4)
-					</OnClick>
-					<OnShow>
-						AtlasLoot_QuickLook_OnShow(4)
-					</OnShow>
-				</Scripts>
 			</Button>
 			<EditBox name="AtlasLootSearchBox" inherits="InputBoxTemplate" letters="100" toplevel="true" autoFocus="false">
 				<Size x="200" y="35"/>
