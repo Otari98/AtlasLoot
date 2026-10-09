@@ -3,17 +3,17 @@
 ## Notes: Shows possible loot from dungeon bosses and other sources.
 ## Author: Otari (overhaul/revamp, menu changes, bugfixes/updates), Lexie (Turtle WoW fixes/updates), Pepopo, MarcelineVQ (Kara40 loot), Shagu
 ## LegacyAuthor: Daviesh, Pompa (Turtle WoW World Bosses), Xerron (Turtle WoW World Bosses), Gurky (Turtle WoW 1.16/1.16.1 Dungeons)
-## Version: 3.4.10
+## Version: 3.5.0
 ## SavedVariablesPerCharacter: AtlasLootCharDB
 ## OptionalDeps: Alphamap, AtlasLoader, LootLink, ItemSync, HewdropLib, Ace2, EquipCompare, EQCompare
 
-Libs\AceLibrary\AceLibrary.lua
-Libs\AceOO\AceOO-2.0.lua
-Libs\AceEvent\AceEvent-2.0.lua
-Libs\AceDB\AceDB-2.0.lua
-Libs\AceLocale\AceLocale-2.2.lua
-Libs\AceAddon\AceAddon-2.0.lua
-Libs\Hewdrop\Hewdrop-2.0.lua
+Libs\AceLibrary.lua
+Libs\AceOO-2.0.lua
+Libs\AceEvent-2.0.lua
+Libs\AceDB-2.0.lua
+Libs\AceLocale-2.2.lua
+Libs\AceAddon-2.0.lua
+Libs\Hewdrop-2.0.lua
 
 Locale\locale.en.lua
 Locale\locale.ru.lua
