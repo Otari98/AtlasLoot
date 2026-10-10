@@ -19,8 +19,8 @@ AtlasLoot_ShowWishList()
 Displays the WishList
 ]]
 function AtlasLoot_ShowWishList()
-	AtlasLoot_ShowItemsFrame("WishList", "WishListPage"..currentPage)
 	ShowUIPanel(_G[AtlasLoot_AnchorPoint[2]])
+	AtlasLoot_ShowItemsFrame("WishListPage"..currentPage)
 	CloseDropDownMenus()
 	AtlasLootDefaultFrame_SubMenu:Disable()
 	AtlasLootDefaultFrame_SelectedTable:Hide()
@@ -57,7 +57,7 @@ function AtlasLoot_DeleteFromWishList(itemID)
 	end
 	AtlasLoot_WishList = AtlasLoot_CategorizeWishList(AtlasLootCharDB["WishList"])
 	AtlasLootItemsFrame:Hide()
-	AtlasLoot_ShowItemsFrame("WishList", "WishListPage"..currentPage)
+	AtlasLoot_ShowItemsFrame("WishListPage"..currentPage)
 end
 
 --[[
@@ -261,14 +261,14 @@ function AtlasLoot_CategorizeWishList(wlTable)
 		_, _, cat = strfind(cat, "^(.+)|.+")
 		local parent = GetLootTableParent(cat) or "Unknown"
 		--print("box: "..box.." - cat: "..cat)
-		table.insert(result, { 0, "INV_Box_01", "=q6="..box, "=q0="..parent })
+		table.insert(result, { 0, "", "=q6="..box, "=q0="..parent })
 
 		--table.insert(result, { 0, "INV_Box_01", "=q6="..k, "=q0="..GetLootTableParent(strsplit("|", categories[k][1][5])) })
 		-- Sort first then add items
 		table.sort(v, AtlasLoot_WishListSortCheck) -- not works?
 		for i = 1, table.getn(v) do table.insert(result, v[i]) end
 	end
-	collectgarbage()
+	-- collectgarbage()
 	return result
 end
 

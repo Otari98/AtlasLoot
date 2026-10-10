@@ -273,7 +273,7 @@ local TextMap = {
 	-- Misc
 	["#j1#"] = AL["Dungeon 1 Set"],
 	["#j2#"] = AL["Dungeon 2 Set"],
-	["#j3#"] = AL["D2 Summonable"],
+	["#j3#"] = AL["Summonable"],
 	["#j4#"] = AL["Token Hand-Ins"],
 	["#j5#"] = AL["Level 60"],
 	["#j6#"] = AL["Fire Resistance Gear"],
@@ -502,7 +502,7 @@ local TextMap = {
 	["=q5="] = "|cffFF8000", -- legendary
 	["=q6="] = "|cffFF0000", -- red
 	["=q7="] = "|cff03c0f6", -- "dropped by" colour
-	["=q8="] = "|cff2773ff", -- alliance colour, alliance rank colour
+	["=q8="] = "|cff2773ff", -- alliance rank colour
 	["=q9="] = "|cffffffff", -- priest colour
 	["=q10="] = "|cff68ccef", -- mage colour
 	["=q11="] = "|cff9382c9", -- warlock colour
@@ -512,8 +512,8 @@ local TextMap = {
 	["=q15="] = "|cff2773ff", -- shaman colour
 	["=q16="] = "|cfff48cba", -- paladin colour
 	["=q17="] = "|cffc69b6d", -- warrior colour
-	["=q18="] = "|cffff3100", -- horde rank colour
-	["=q19="] = "|cffe6cc80", -- horde rank colour
+	["=q18="] = "|cffff7070", -- horde rank colour
+	["=q19="] = "|cffe6cc80", -- artifact
 	["=ec1="] = "|cffFF8400",
 	["=ds="] = "|cffFFd200", -- default gold color
 	-- Dropped by names
@@ -598,6 +598,8 @@ local TextMap = {
 	["#zandalar#"] = "Interface\\Icons\\INV_Misc_Coin_08",
 	-- Challenges
 	["#lvl1#"] = AL["Level One Lunatic Challenge"],
+
+	["#rnk#"] = AL["Rank"]
 }
 
 local gsub = string.gsub

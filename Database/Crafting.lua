@@ -5,9 +5,7 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 	----------------------------
 
 	CraftedWeapons1 = {
-		{ 0, "", "", "" },
 		{ 0, "Trade_BlackSmithing", "=q6=#p2#", "" },
-		{ 0, "", "", "" },
 		{ 22384, "INV_Hammer_08", "=q4=Persuader", "=ds=#h3#, #w6#" },
 		{ 22383, "INV_Sword_51", "=q4=Sageblade", "=ds=#h3#, #w10#" },
 		{ 19166, "INV_Weapon_ShortBlade_12", "=q4=Black Amnesty", "=ds=#h1#, #w4#" },
@@ -21,8 +19,8 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
-		{ 0, "Trade_Engineering", "=q6=#p5#", "" },
 		{ 0, "", "", "" },
+		{ 0, "Trade_Engineering", "=q6=#p5#", "" },
 		{ 18282, "INV_Weapon_Rifle_05", "=q4=Core Marksman Rifle", "=ds=#w5#" },
 		{ 18168, "Spell_Arcane_PortalDarnassus", "=q4=Force Reactive Disk", "=ds=#w8#" },
 	},

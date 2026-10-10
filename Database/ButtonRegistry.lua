@@ -4,9 +4,39 @@ AtlasLoot_ButtonRegistry = {
 	-- Dungeons & Raids
 	["DUNGEONSMENU1"] = {
 		Next_Page = "DUNGEONSMENU2",
+		Back_Page = "MAINMENU",
 	},
 	["DUNGEONSMENU2"] = {
 		Prev_Page = "DUNGEONSMENU1",
+		Back_Page = "MAINMENU",
+	},
+
+	["RARESPAWNSMENU1"] = {
+		Next_Page = "RARESPAWNSMENU2",
+		Back_Page = "MAINMENU",
+	},
+	["RARESPAWNSMENU2"] = {
+		Prev_Page = "RARESPAWNSMENU1",
+		Back_Page = "MAINMENU",
+	},
+
+	["CRAFTINGMENU"] = {
+		Back_Page = "MAINMENU",
+	},
+	["REPMENU"] = {
+		Back_Page = "MAINMENU",
+	},
+	["PVPMENU"] = {
+		Back_Page = "MAINMENU",
+	},
+	["SETMENU"] = {
+		Back_Page = "MAINMENU",
+	},
+	["WORLDBOSSMENU"] = {
+		Back_Page = "MAINMENU",
+	},
+	["WORLDEVENTMENU"] = {
+		Back_Page = "MAINMENU",
 	},
 
 	["TMHSET"] = {
@@ -2490,145 +2520,186 @@ AtlasLoot_ButtonRegistry = {
 	-- Rare Spawns
 	["EarthcallerRezengal"] = {
 		Next_Page = "ShadeMage",
+		Back_Page = "RARESPAWNSMENU1",
 	},
 	["ShadeMage"] = {
-		Next_Page = "GraypawAlpha",
 		Prev_Page = "EarthcallerRezengal",
+		Next_Page = "GraypawAlpha",
+		Back_Page = "RARESPAWNSMENU1",
 	},
 	["GraypawAlpha"] = {
-		Next_Page = "Blazespark",
 		Prev_Page = "ShadeMage",
+		Next_Page = "Blazespark",
+		Back_Page = "RARESPAWNSMENU1",
 	},
 	["Blazespark"] = {
-		Next_Page = "WitchDoctorTanzo",
 		Prev_Page = "GraypawAlpha",
+		Next_Page = "WitchDoctorTanzo",
+		Back_Page = "RARESPAWNSMENU1",
 	},
 	["WitchDoctorTanzo"] = {
-		Next_Page = "Dawnhowl",
 		Prev_Page = "Blazespark",
-	},
-	["Dawnhowl"] = {
-		Next_Page = "MaltimorsPrototype",
-		Prev_Page = "WitchDoctorTanzo",
-	},
-	["MaltimorsPrototype"] = {
-		Next_Page = "Bonecruncher",
-		Prev_Page = "Dawnhowl",
-	},
-	["Bonecruncher"] = {
-		Next_Page = "Duskskitter",
-		Prev_Page = "MaltimorsPrototype",
-	},
-	["Duskskitter"] = {
-		Next_Page = "BaronPerenolde",
-		Prev_Page = "Bonecruncher",
-	},
-	["BaronPerenolde"] = {
-		Next_Page = "Grugthok",
-		Prev_Page = "Duskskitter",
-	},
-	["Grugthok"] = {
-		Next_Page = "Ashbeard",
-		Prev_Page = "BaronPerenolde",
-	},
-	["Ashbeard"] = {
-		Next_Page = "Jalakar",
-		Prev_Page = "Grugthok",
-	},
-	["Jalakar"] = {
-		Next_Page = "Embereye",
-		Prev_Page = "Ashbeard",
-	},
-	["Embereye"] = {
-		Next_Page = "Rukthok",
-		Prev_Page = "Jalakar",
-	},
-	["Rukthok"] = {
-		Next_Page = "Tarangos",
-		Prev_Page = "Embereye",
-	},
-	["Tarangos"] = {
-		Next_Page = "Ripjaw",
-		Prev_Page = "Rukthok",
-	},
-	["Ripjaw"] = {
-		Next_Page = "Xalvic",
-		Prev_Page = "Tarangos",
-	},
-	["Xalvic"] = {
-		Next_Page = "Aquitus",
-		Prev_Page = "Ripjaw",
-	},
-	["Aquitus"] = {
-		Next_Page = "FirstbornofArugal",
-		Prev_Page = "Xalvic",
-	},
-	["FirstbornofArugal"] = {
-		Next_Page = "Letashaz",
-		Prev_Page = "Aquitus",
-	},
-	["Letashaz"] = {
-		Next_Page = "MargontheMighty",
-		Prev_Page = "FirstbornofArugal",
-	},
-	["MargontheMighty"] = {
-		Next_Page = "WanderingKnight",
-		Prev_Page = "Letashaz",
-	},
-	["WanderingKnight"] = {
-		Next_Page = "Stoneshell",
-		Prev_Page = "MargontheMighty",
-	},
-	["Stoneshell"] = {
-		Next_Page = "Zareth",
-		Prev_Page = "WanderingKnight",
-	},
-	["Zareth"] = {
-		Next_Page = "HighvaleSilverback",
-		Prev_Page = "Stoneshell",
-	},
-	["HighvaleSilverback"] = {
-		Next_Page = "Mallon",
-		Prev_Page = "Zareth",
-	},
-	["Mallon"] = {
-		Next_Page = "Kargron",
-		Prev_Page = "HighvaleSilverback",
-	},
-	["Kargron"] = {
-		Next_Page = "AdmiralBareanWestwind",
-		Prev_Page = "Mallon",
-	},
-	["ProfessorLysander"] = {
-		Next_Page = "AdmiralBareanWestwind",
-		Prev_Page = "Kargron",
-	},
-	["AdmiralBareanWestwind"] = {
-		Next_Page = "Azurebeak",
-		Prev_Page = "ProfessorLysander",
-	},
-	["Azurebeak"] = {
-		Next_Page = "BarkskinFisher",
-		Prev_Page = "AdmiralBareanWestwind",
-	},
-	["BarkskinFisher"] = {
-		Next_Page = "CrusaderLarsarius",
-		Prev_Page = "Azurebeak",
-	},
-	["CrusaderLarsarius"] = {
-		Next_Page = "ShadeflayerGoliath",
-		Prev_Page = "BarkskinFisher",
-	},
-	["ShadeflayerGoliath"] = {
 		Next_Page = "WidowoftheWoods",
-		Prev_Page = "CrusaderLarsarius",
+		Back_Page = "RARESPAWNSMENU1",
 	},
 	["WidowoftheWoods"] = {
+		Prev_Page = "WitchDoctorTanzo",
+		Next_Page = "Dawnhowl",
+		Back_Page = "RARESPAWNSMENU1",
+	},
+	["Dawnhowl"] = {
+		Prev_Page = "WidowoftheWoods",
+		Next_Page = "MaltimorsPrototype",
+		Back_Page = "RARESPAWNSMENU1",
+	},
+	["MaltimorsPrototype"] = {
+		Prev_Page = "Dawnhowl",
+		Next_Page = "Bonecruncher",
+		Back_Page = "RARESPAWNSMENU1",
+	},
+	["Bonecruncher"] = {
+		Prev_Page = "MaltimorsPrototype",
+		Next_Page = "Duskskitter",
+		Back_Page = "RARESPAWNSMENU1",
+	},
+	["Duskskitter"] = {
+		Prev_Page = "Bonecruncher",
+		Next_Page = "BaronPerenolde",
+		Back_Page = "RARESPAWNSMENU1",
+	},
+	["BaronPerenolde"] = {
+		Prev_Page = "Duskskitter",
+		Next_Page = "KinTozo",
+		Back_Page = "RARESPAWNSMENU1",
+	},
+	["KinTozo"] = {
+		Prev_Page = "BaronPerenolde",
+		Next_Page = "Grugthok",
+		Back_Page = "RARESPAWNSMENU1",
+	},
+	["Grugthok"] = {
+		Prev_Page = "KinTozo",
 		Next_Page = "M0L1Y",
-		Prev_Page = "ShadeflayerGoliath",
+		Back_Page = "RARESPAWNSMENU1",
 	},
 	["M0L1Y"] = {
-		Prev_Page = "WidowoftheWoods",
+		Prev_Page = "Grugthok",
+		Next_Page = "Ashbeard",
+		Back_Page = "RARESPAWNSMENU1",
+	},
+	["Ashbeard"] = {
+		Prev_Page = "M0L1Y",
+		Next_Page = "Jalakar",
+		Back_Page = "RARESPAWNSMENU1",
+	},
+	["Jalakar"] = {
+		Prev_Page = "Ashbeard",
+		Next_Page = "Embereye",
+		Back_Page = "RARESPAWNSMENU1",
+	},
+	["Embereye"] = {
+		Prev_Page = "Jalakar",
+		Next_Page = "Rukthok",
+		Back_Page = "RARESPAWNSMENU1",
+	},
+	["Rukthok"] = {
+		Prev_Page = "Embereye",
+		Next_Page = "Tarangos",
+		Back_Page = "RARESPAWNSMENU1",
+	},
+	["Tarangos"] = {
+		Prev_Page = "Rukthok",
+		Next_Page = "Ripjaw",
+		Back_Page = "RARESPAWNSMENU1",
+	},
+	["Ripjaw"] = {
+		Prev_Page = "Tarangos",
+		Next_Page = "Xalvic",
+		Back_Page = "RARESPAWNSMENU1",
+	},
+	["Xalvic"] = {
+		Prev_Page = "Ripjaw",
+		Next_Page = "Aquitus",
+		Back_Page = "RARESPAWNSMENU1",
+	},
+	["Aquitus"] = {
+		Prev_Page = "Xalvic",
+		Next_Page = "FirstbornofArugal",
+		Back_Page = "RARESPAWNSMENU1",
+	},
+	["FirstbornofArugal"] = {
+		Prev_Page = "Aquitus",
+		Next_Page = "Letashaz",
+		Back_Page = "RARESPAWNSMENU1",
+	},
+	["Letashaz"] = {
+		Prev_Page = "FirstbornofArugal",
+		Next_Page = "MargontheMighty",
+		Back_Page = "RARESPAWNSMENU1",
+	},
+	["MargontheMighty"] = {
+		Prev_Page = "Letashaz",
+		Next_Page = "WanderingKnight",
+		Back_Page = "RARESPAWNSMENU1",
+	},
+	["WanderingKnight"] = {
+		Prev_Page = "MargontheMighty",
+		Next_Page = "Stoneshell",
+		Back_Page = "RARESPAWNSMENU1",
+	},
+	["Stoneshell"] = {
+		Prev_Page = "WanderingKnight",
+		Next_Page = "Zareth",
+		Back_Page = "RARESPAWNSMENU1",
+	},
+	["Zareth"] = {
+		Prev_Page = "Stoneshell",
+		Next_Page = "HighvaleSilverback",
+		Back_Page = "RARESPAWNSMENU1",
+	},
+	["HighvaleSilverback"] = {
+		Prev_Page = "Zareth",
+		Next_Page = "Mallon",
+		Back_Page = "RARESPAWNSMENU1",
+	},
+	["Mallon"] = {
+		Prev_Page = "HighvaleSilverback",
+		Next_Page = "Kargron",
+		Back_Page = "RARESPAWNSMENU1",
+	},
+	["Kargron"] = {
+		Prev_Page = "Mallon",
+		Next_Page = "ProfessorLysander",
+		Back_Page = "RARESPAWNSMENU2",
+	},
+	["ProfessorLysander"] = {
+		Prev_Page = "Kargron",
+		Next_Page = "AdmiralBareanWestwind",
+		Back_Page = "RARESPAWNSMENU2",
+	},
+	["AdmiralBareanWestwind"] = {
+		Prev_Page = "ProfessorLysander",
+		Next_Page = "Azurebeak",
+		Back_Page = "RARESPAWNSMENU2",
+	},
+	["Azurebeak"] = {
+		Prev_Page = "AdmiralBareanWestwind",
+		Next_Page = "BarkskinFisher",
+		Back_Page = "RARESPAWNSMENU2",
+	},
+	["BarkskinFisher"] = {
+		Prev_Page = "Azurebeak",
+		Next_Page = "CrusaderLarsarius",
+		Back_Page = "RARESPAWNSMENU2",
+	},
+	["CrusaderLarsarius"] = {
+		Prev_Page = "BarkskinFisher",
+		Next_Page = "ShadeflayerGoliath",
+		Back_Page = "RARESPAWNSMENU2",
+	},
+	["ShadeflayerGoliath"] = {
+		Prev_Page = "CrusaderLarsarius",
+		Back_Page = "RARESPAWNSMENU2",
 	},
 
 	-- Factions

@@ -613,7 +613,6 @@ AtlasLoot_TableNames = {
 	["ScourgeInvasion"] = { AL["Scourge Invasion"], "AtlasLootSetItems" },
 	["Legendaries"] = { AL["Legendary Items"], "AtlasLootSetItems" },
 	["RareMounts"] = { AL["Rare Mounts"], "AtlasLootSetItems" },
-	["PvPMountsSets"] = { AL["PvP Mounts"], "AtlasLootSetItems" },
 	["Tabards"] = { AL["Tabards"], "AtlasLootSetItems" },
 	["RarePets1"] = { AL["Rare Pets"], "AtlasLootSetItems" },
 	["RarePets2"] = { AL["Rare Pets"], "AtlasLootSetItems" },
@@ -1105,6 +1104,9 @@ AtlasLoot_TableNames = {
 	-------------
 	--- Menus ---
 	-------------
+	["MAINMENU"] = { AL["Main Menu"], "MENUS"},
+	["RARESPAWNSMENU1"] = { AL["Rare Spawns"], "MENUS"},
+	["RARESPAWNSMENU2"] = { AL["Rare Spawns"], "MENUS"},
 	["DUNGEONSMENU1"] = { AL["Dungeons & Raids"], "MENUS" },
 	["DUNGEONSMENU2"] = { AL["Dungeons & Raids"], "MENUS" },
 	["PVPMENU"] = { AL["PvP Rewards"], "MENUS" },
@@ -1140,7 +1142,6 @@ AtlasLoot_TableNames = {
 	-- Other
 	["WishList"] = { AL["WishList"], "AtlasLootCharDB" },
 	["SearchResult"] = { AL["Search"], "AtlasLootCharDB" },
-	["EmptyInstance"] = { "AtlasLoot", "AtlasLootFallback" },
 }
 
 AtlasLoot_TableNamesBoss = {
@@ -1801,7 +1802,6 @@ AtlasLoot_TableNamesBoss = {
 		["ScourgeInvasion"] = { AL["Set: "]..AL["Scourge Invasion"], "AtlasLootSetItems" },
 		["Legendaries"] = { AL["Set: "]..AL["Legendary Items"], "AtlasLootSetItems" },
 		["RareMounts"] = { AL["Rare Mounts"], "AtlasLootSetItems" },
-		["PvPMountsSets"] = { AL["PvP Mounts"], "AtlasLootSetItems" },
 		["Tabards"] = { AL["Tabards"], "AtlasLootSetItems" },
 		["RarePets1"] = { AL["Rare Pets"], "AtlasLootSetItems" },
 		["RarePets2"] = { AL["Rare Pets"], "AtlasLootSetItems" },

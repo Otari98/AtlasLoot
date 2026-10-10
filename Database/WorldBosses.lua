@@ -34,7 +34,6 @@ AtlasLootBossButtons.Clackora = {
 }
 
 AtlasLoot_Data["AtlasLootWBItems"] = {
-	EmptyInstance = {},
 	Reaver = {
 		{ 51778, "INV_Staff_05", "=q4=Lost Crusader's Artifact", "=ds=#h4#", "4%" },
 		{ 51779, "inv_axe_14", "=q4=Greataxe of the Decrepit Crypt", "=ds=#h2#, #w1#", "4%" },

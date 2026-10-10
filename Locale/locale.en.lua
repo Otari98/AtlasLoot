@@ -15,6 +15,10 @@ AL:EnableDebugging();
 AL:EnableDynamicLocales();
 
 AL:RegisterTranslations("enUS", function() return {
+	["Main Menu"] = MAIN_MENU,
+    ["Rare Spawns"] = true,
+	["Arena Spoils"] = true,
+
 	["Green Woolen Robe"] = true,
 	["Simple Bronze Katana"] = true,
 	["Stormreaver Gloves"] = true,
@@ -210,7 +214,7 @@ AL:RegisterTranslations("enUS", function() return {
     ["Azure Templar"] = true,
     ["Azurebeak"] = true,
     ["Azuregos"] = true,
-    ["Back"] = BACKSLOT,
+    ["Back"] = BACK,
     ["Badlands"] = true,
     ["Bael'Gar"] = true,
     ["Baelog"] = true,
@@ -405,7 +409,7 @@ AL:RegisterTranslations("enUS", function() return {
     ["Crusader Larsarius"] = true,
     ["Cryptstalker Armor"] = true,
     ["Crystal Fang"] = true,
-    ["D2 Summonable"] = true,
+    ["Summonable"] = true,
     ["DKP"] = true,
     ["Tribute Chest"] = true,
 	["Dagar the Glutton"] = true,

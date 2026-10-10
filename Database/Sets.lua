@@ -1,5 +1,4 @@
 AtlasLoot_Data["AtlasLootSetItems"] = {
-	EmptyInstance = {},
 	TMHClothHealer = { {
 		{ 33380, "=ds=#s1#" },
 		{ 33381, "=ds=#s3#" },
@@ -319,13 +318,21 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 19905, "INV_Jewelry_Ring_46", "=q3=Zanzil's Band", "=ds=#s13#", "9.24%" },
 		{ 19893, "INV_Jewelry_Ring_46", "=q3=Zanzil's Seal", "=ds=#s13#", "10.12%" },
 	},
-	ZGRingsC = { {
+	ZGRings1C = { {
 		{ 19898, "=ds=#s13#", "8.81%" }, { 19925, "=ds=#s13#", "10.36%" },
+	},
+	},
+	ZGRings2C = { {
 		{ 19873, "=ds=#s13#", "10.12%" }, { 19912, "=ds=#s13#", "14.51%" },
-	}, {
+	},
+	},
+	ZGRings3C = { {
 		{ 19863, "=ds=#s13#", "9.72%" }, { 19920, "=ds=#s13#", "8.95%" },
+	},
+	},
+	ZGRings4C = { {
 		{ 19905, "=ds=#s13#", "9.24%" }, { 19893, "=ds=#s13#", "10.12%" },
-	}
+	},
 	},
 	SpiritofEskhandar = {
 		{ 0, "", "", "" },
@@ -1791,8 +1798,7 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 	}
 	},
 	T0Mage = {
-		{ 0, "", "", "" },
-		{ 0, "CLASSmage", "=q10=#t0s3#", "" },
+		{ 0, "$MAGE", "=q10=#t0s3#", "" },
 		{ 0, "", "", "" },
 		{ 16686, "INV_Crown_02", "=q3=Magister's Crown", "=ds=#s1#, #a1# =q7=#db33#" },
 		{ 16689, "INV_Shoulder_23", "=q3=Magister's Mantle", "=ds=#s3#, #a1# =q7=#db36#" },
@@ -1807,7 +1813,7 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
-		{ 0, "CLASSmage", "=q10=#t05s3#", "" },
+		{ 0, "$MAGE", "=q10=#t05s3#", "" },
 		{ 0, "", "", "" },
 		{ 22065, "INV_Crown_02", "=q4=Sorcerer's Crown", "=ds=#s1#, #a1#" },
 		{ 22068, "INV_Shoulder_23", "=q3=Sorcerer's Mantle", "=ds=#s3#, #a1#" },
@@ -1827,8 +1833,7 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 	},
 	},
 	T0Priest = {
-		{ 0, "", "", "" },
-		{ 0, "CLASSpriest", "=q9=#t0s5#", "" },
+		{ 0, "$PRIEST", "=q9=#t0s5#", "" },
 		{ 0, "", "", "" },
 		{ 16693, "INV_Crown_01", "=q3=Devout Crown", "=ds=#s1#, #a1# =q7=#db33#" },
 		{ 16695, "INV_Shoulder_02", "=q3=Devout Mantle", "=ds=#s3#, #a1# =q7=#db39#" },
@@ -1843,7 +1848,7 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
-		{ 0, "CLASSpriest", "=q9=#t05s5#", "" },
+		{ 0, "$PRIEST", "=q9=#t05s5#", "" },
 		{ 0, "", "", "" },
 		{ 22080, "INV_Crown_01", "=q4=Virtuous Crown", "=ds=#s1#, #a1#" },
 		{ 22082, "INV_Shoulder_02", "=q3=Virtuous Mantle", "=ds=#s3#, #a1#" },
@@ -1863,8 +1868,7 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 	},
 	},
 	T0Warlock = {
-		{ 0, "", "", "" },
-		{ 0, "CLASSwarlock", "=q11=#t0s8#", "" },
+		{ 0, "$WARLOCK", "=q11=#t0s8#", "" },
 		{ 0, "", "", "" },
 		{ 16698, "INV_Helmet_29", "=q3=Dreadmist Mask", "=ds=#s1#, #a1# =q7=#db33#" },
 		{ 16701, "INV_Misc_Bone_TaurenSkull_01", "=q3=Dreadmist Mantle", "=ds=#s3#, #a1# =q7=#db42#" },
@@ -1879,7 +1883,7 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
-		{ 0, "CLASSwarlock", "=q11=#t05s8#", "" },
+		{ 0, "$WARLOCK", "=q11=#t05s8#", "" },
 		{ 0, "", "", "" },
 		{ 22074, "INV_Helmet_29", "=q4=Deathmist Mask", "=ds=#s1#, #a1#" },
 		{ 22073, "INV_Misc_Bone_TaurenSkull_01", "=q3=Deathmist Mantle", "=ds=#s3#, #a1#" },
@@ -1899,8 +1903,7 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 	},
 	},
 	T0Rogue = {
-		{ 0, "", "", "" },
-		{ 0, "CLASSrogue", "=q12=#t0s6#", "" },
+		{ 0, "$ROGUE", "=q12=#t0s6#", "" },
 		{ 0, "", "", "" },
 		{ 16707, "INV_Helmet_41", "=q3=Shadowcraft Cap", "=ds=#s1#, #a2# =q7=#db33#" },
 		{ 16708, "INV_Shoulder_07", "=q3=Shadowcraft Spaulders", "=ds=#s3#, #a2# =q7=#db45#" },
@@ -1915,7 +1918,7 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
-		{ 0, "CLASSrogue", "=q12=#t05s6#", "" },
+		{ 0, "$ROGUE", "=q12=#t05s6#", "" },
 		{ 0, "", "", "" },
 		{ 22005, "INV_Helmet_41", "=q4=Darkmantle Cap", "=ds=#s1#, #a2#" },
 		{ 22008, "INV_Shoulder_07", "=q3=Darkmantle Spaulders", "=ds=#s3#, #a2#" },
@@ -1935,8 +1938,7 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 	},
 	},
 	T0Druid = {
-		{ 0, "", "", "" },
-		{ 0, "CLASSdruid", "=q13=#t0s1#", "" },
+		{ 0, "$DRUID", "=q13=#t0s1#", "" },
 		{ 0, "", "", "" },
 		{ 16720, "INV_Helmet_27", "=q3=Wildheart Cowl", "=ds=#s1#, #a2# =q7=#db33#" },
 		{ 16718, "INV_Shoulder_01", "=q3=Wildheart Spaulders", "=ds=#s3#, #a2# =q7=#db49#" },
@@ -1951,7 +1953,7 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
-		{ 0, "CLASSdruid", "=q13=#t05s1#", "" },
+		{ 0, "$DRUID", "=q13=#t05s1#", "" },
 		{ 0, "", "", "" },
 		{ 22109, "INV_Helmet_27", "=q4=Feralheart Cowl", "=ds=#s1#, #a2#" },
 		{ 22112, "INV_Shoulder_01", "=q3=Feralheart Spaulders", "=ds=#s3#, #a2#" },
@@ -1971,8 +1973,7 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 	},
 	},
 	T0Hunter = {
-		{ 0, "", "", "" },
-		{ 0, "CLASShunter", "=q14=#t0s2#", "" },
+		{ 0, "$HUNTER", "=q14=#t0s2#", "" },
 		{ 0, "", "", "" },
 		{ 16677, "INV_Helmet_24", "=q3=Beaststalker's Cap", "=ds=#s1#, #a3# =q7=#db33#" },
 		{ 16679, "INV_Shoulder_10", "=q3=Beaststalker's Mantle", "=ds=#s3#, #a3# =q7=#db53#" },
@@ -1987,7 +1988,7 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
-		{ 0, "CLASShunter", "=q14=#t05s2#", "" },
+		{ 0, "$HUNTER", "=q14=#t05s2#", "" },
 		{ 0, "", "", "" },
 		{ 22013, "INV_Helmet_24", "=q4=Beastmaster's Cap", "=ds=#s1#, #a3#" },
 		{ 22016, "INV_Shoulder_10", "=q3=Beastmaster's Mantle", "=ds=#s3#, #a3#" },
@@ -2007,8 +2008,7 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 	},
 	},
 	T0Shaman = {
-		{ 0, "", "", "" },
-		{ 0, "CLASSshaman", "=q15=#t0s7#", "" },
+		{ 0, "$SHAMAN", "=q15=#t0s7#", "" },
 		{ 0, "", "", "" },
 		{ 16667, "INV_Helmet_04", "=q3=Coif of Elements", "=ds=#s1#, #a3# =q7=#db33#" },
 		{ 16669, "INV_Shoulder_29", "=q3=Pauldrons of Elements", "=ds=#s3#, #a3# =q7=#db56#" },
@@ -2023,7 +2023,7 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
-		{ 0, "CLASSshaman", "=q15=#t05s7#", "" },
+		{ 0, "$SHAMAN", "=q15=#t05s7#", "" },
 		{ 0, "", "", "" },
 		{ 22097, "INV_Helmet_04", "=q4=Coif of The Five Thunders", "=ds=#s1#, #a3#" },
 		{ 22101, "INV_Shoulder_29", "=q3=Pauldrons of The Five Thunders", "=ds=#s3#, #a3#" },
@@ -2043,8 +2043,7 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 	},
 	},
 	T0Warrior = {
-		{ 0, "", "", "" },
-		{ 0, "CLASSwarrior", "=q17=#t0s9#", "" },
+		{ 0, "$WARRIOR", "=q17=#t0s9#", "" },
 		{ 0, "", "", "" },
 		{ 16731, "INV_Helmet_02", "=q3=Helm of Valor", "=ds=#s1#, #a4# =q7=#db33#" },
 		{ 16733, "INV_Shoulder_30", "=q3=Spaulders of Valor", "=ds=#s3#, #a4# =q7=#db59#" },
@@ -2059,7 +2058,7 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
-		{ 0, "CLASSwarrior", "=q17=#t05s9#", "" },
+		{ 0, "$WARRIOR", "=q17=#t05s9#", "" },
 		{ 0, "", "", "" },
 		{ 21999, "INV_Helmet_02", "=q4=Helm of Heroism", "=ds=#s1#, #a4#" },
 		{ 22001, "INV_Shoulder_30", "=q3=Spaulders of Heroism", "=ds=#s3#, #a4#" },
@@ -2079,8 +2078,7 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 	},
 	},
 	T0Paladin = {
-		{ 0, "", "", "" },
-		{ 0, "CLASSpaladin", "=q16=#t0s4#", "" },
+		{ 0, "$PALADIN", "=q16=#t0s4#", "" },
 		{ 0, "", "", "" },
 		{ 16727, "INV_Helmet_08", "=q3=Lightforge Helm", "=ds=#s1#, #a4# =q7=#db33#" },
 		{ 16729, "INV_Shoulder_10", "=q3=Lightforge Spaulders", "=ds=#s3#, #a4# =q7=#db62#" },
@@ -2095,7 +2093,7 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
-		{ 0, "CLASSpaladin", "=q16=#t05s4#", "" },
+		{ 0, "$PALADIN", "=q16=#t05s4#", "" },
 		{ 0, "", "", "" },
 		{ 22091, "INV_Helmet_08", "=q4=Soulforge Helm", "=ds=#s1#, #a4#" },
 		{ 22093, "INV_Shoulder_10", "=q3=Soulforge Spaulders", "=ds=#s3#, #a4#" },
@@ -2115,8 +2113,7 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 	},
 	},
 	ZGMage = {
-		{ 0, "", "", "" },
-		{ 0, "CLASSmage", "=q10=#zgs3#", "" },
+		{ 0, "$MAGE", "=q10=#zgs3#", "" },
 		{ 0, "", "", "" },
 		{ 19959, "INV_Jewelry_Necklace_19", "=q4=Hazza'rah's Charm of Magic", "=ds=#s14#" },
 		{ 19601, "INV_Jewelry_Necklace_26", "=q4=Jewel of Kajaro", "=ds=#r5#" },
@@ -2133,8 +2130,7 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 	}
 	},
 	ZGWarlock = {
-		{ 0, "", "", "" },
-		{ 0, "CLASSwarlock", "=q11=#zgs8#", "" },
+		{ 0, "$WARLOCK", "=q11=#zgs8#", "" },
 		{ 0, "", "", "" },
 		{ 19957, "INV_Jewelry_Necklace_19", "=q4=Hazza'rah's Charm of Destruction", "=ds=#s14#" },
 		{ 19605, "INV_Jewelry_Necklace_26", "=q4=Kezan's Unstoppable Taint", "=ds=#r5#" },
@@ -2151,8 +2147,7 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 	}
 	},
 	ZGPriest = {
-		{ 0, "", "", "" },
-		{ 0, "CLASSpriest", "=q9=#zgs5#", "" },
+		{ 0, "$PRIEST", "=q9=#zgs5#", "" },
 		{ 0, "", "", "" },
 		{ 19958, "INV_Jewelry_Necklace_19", "=q4=Hazza'rah's Charm of Healing", "=ds=#s14#" },
 		{ 19594, "INV_Jewelry_Necklace_26", "=q4=The All-Seeing Eye of Zuldazar", "=ds=#r5#" },
@@ -2169,8 +2164,7 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 	},
 	},
 	ZGRogue = {
-		{ 0, "", "", "" },
-		{ 0, "CLASSrogue", "=q12=#zgs6#", "" },
+		{ 0, "$ROGUE", "=q12=#zgs6#", "" },
 		{ 0, "", "", "" },
 		{ 19954, "INV_Jewelry_Necklace_19", "=q4=Renataki's Charm of Trickery", "=ds=#s14#" },
 		{ 19617, "INV_Jewelry_Necklace_26", "=q4=Zandalarian Shadow Mastery Talisman", "=ds=#r5#" },
@@ -2187,8 +2181,7 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 	}
 	},
 	ZGDruid = {
-		{ 0, "", "", "" },
-		{ 0, "CLASSdruid", "=q13=#zgs1#", "" },
+		{ 0, "$DRUID", "=q13=#zgs1#", "" },
 		{ 0, "", "", "" },
 		{ 19955, "INV_Jewelry_Necklace_19", "=q4=Wushoolay's Charm of Nature", "=ds=#s14#" },
 		{ 19613, "INV_Jewelry_Necklace_26", "=q4=Pristine Enchanted South Seas Kelp", "=ds=#r5#" },
@@ -2205,8 +2198,7 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 	}
 	},
 	ZGHunter = {
-		{ 0, "", "", "" },
-		{ 0, "CLASShunter", "=q14=#zgs2#", "" },
+		{ 0, "$HUNTER", "=q14=#zgs2#", "" },
 		{ 0, "", "", "" },
 		{ 19953, "INV_Jewelry_Necklace_19", "=q4=Renataki's Charm of Beasts", "=ds=#s14#" },
 		{ 19621, "INV_Jewelry_Necklace_26", "=q4=Maelstrom's Wrath", "=ds=#r5#" },
@@ -2223,8 +2215,7 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 	}
 	},
 	ZGShaman = {
-		{ 0, "", "", "" },
-		{ 0, "CLASSshaman", "=q15=#zgs7#", "" },
+		{ 0, "$SHAMAN", "=q15=#zgs7#", "" },
 		{ 0, "", "", "" },
 		{ 19956, "INV_Jewelry_Necklace_19", "=q4=Wushoolay's Charm of Spirits", "=ds=#s14#" },
 		{ 19609, "INV_Jewelry_Necklace_26", "=q4=Unmarred Vision of Voodress", "=ds=#r5#" },
@@ -2241,8 +2232,7 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 	}
 	},
 	ZGWarrior = {
-		{ 0, "", "", "" },
-		{ 0, "CLASSwarrior", "=q17=#zgs9#", "" },
+		{ 0, "$WARRIOR", "=q17=#zgs9#", "" },
 		{ 19951, "INV_Jewelry_Necklace_19", "=q4=Gri'lek's Charm of Might", "=ds=#s14#" },
 		{ 19577, "INV_Jewelry_Necklace_26", "=q4=Rage of Mugamba", "=ds=#r5#" },
 		{ 19822, "INV_Chest_Plate07", "=q4=Zandalar Vindicator's Breastplate", "=q4=#x10#=ds=, #r4#" },
@@ -2258,7 +2248,7 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 	}
 	},
 	ZGPaladin = {
-		{ 0, "CLASSpaladin", "=q16=#zgs4#", "" },
+		{ 0, "$PALADIN", "=q16=#zgs4#", "" },
 		{ 0, "", "", "" },
 		{ 19952, "INV_Jewelry_Necklace_19", "=q4=Gri'lek's Charm of Valor", "=ds=#s14#" },
 		{ 19588, "INV_Jewelry_Necklace_26", "=q4=Hero's Brand", "=ds=#r5#" },
@@ -2275,8 +2265,7 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 	}
 	},
 	AQ20Mage = {
-		{ 0, "", "", "" },
-		{ 0, "CLASSmage", "=q10=#aq20s3#", "" },
+		{ 0, "$MAGE", "=q10=#aq20s3#", "" },
 		{ 0, "", "", "" },
 		{ 21413, "INV_Sword_57", "=q4=Blade of Vaulted Secrets", "=q4=#x19#=ds=, #r5#" },
 		{ 21415, "INV_Misc_Cape_19", "=q4=Drape of Vaulted Secrets", "=q3=#x20#=ds=, #r4#" },
@@ -2289,8 +2278,7 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 	}
 	},
 	AQ20Warlock = {
-		{ 0, "", "", "" },
-		{ 0, "CLASSwarlock", "=q11=#aq20s8#", "" },
+		{ 0, "$WARLOCK", "=q11=#aq20s8#", "" },
 		{ 0, "", "", "" },
 		{ 21416, "INV_Weapon_ShortBlade_27", "=q4=Kris of Unspoken Names", "=q4=#x19#=ds=, #r5#" },
 		{ 21418, "INV_Misc_Cape_20", "=q4=Shroud of Unspoken Names", "=q3=#x23#=ds=, #r4#" },
@@ -2303,8 +2291,7 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 	}
 	},
 	AQ20Priest = {
-		{ 0, "", "", "" },
-		{ 0, "CLASSpriest", "=q9=#aq20s5#", "" },
+		{ 0, "$PRIEST", "=q9=#aq20s5#", "" },
 		{ 0, "", "", "" },
 		{ 21410, "INV_Mace22", "=q4=Gavel of Infinite Wisdom", "=q4=#x19#=ds=, #r5#" },
 		{ 21412, "INV_Misc_Cape_16", "=q4=Shroud of Infinite Wisdom", "=q3=#x20#=ds=, #r4#" },
@@ -2317,8 +2304,7 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 	}
 	},
 	AQ20Rogue = {
-		{ 0, "", "", "" },
-		{ 0, "CLASSrogue", "=q12=#aq20s6#", "" },
+		{ 0, "$ROGUE", "=q12=#aq20s6#", "" },
 		{ 0, "", "", "" },
 		{ 21404, "INV_Weapon_ShortBlade_27", "=q4=Dagger of Veiled Shadows", "=q4=#x24#=ds=, #r5#" },
 		{ 21406, "INV_Misc_Cape_19", "=q4=Cloak of Veiled Shadows", "=q3=#x20#=ds=, #r4#" },
@@ -2331,8 +2317,7 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 	}
 	},
 	AQ20Druid = {
-		{ 0, "", "", "" },
-		{ 0, "CLASSdruid", "=q13=#aq20s1#", "" },
+		{ 0, "$DRUID", "=q13=#aq20s1#", "" },
 		{ 0, "", "", "" },
 		{ 21407, "INV_Mace22", "=q4=Mace of Unending Life", "=q4=#x19#=ds=, #r5#" },
 		{ 21409, "INV_Misc_Cape_15", "=q4=Cloak of Unending Life", "=q3=#x23#=ds=, #r4#" },
@@ -2345,8 +2330,7 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 	}
 	},
 	AQ20Hunter = {
-		{ 0, "", "", "" },
-		{ 0, "CLASShunter", "=q14=#aq20s2#", "" },
+		{ 0, "$HUNTER", "=q14=#aq20s2#", "" },
 		{ 0, "", "", "" },
 		{ 21401, "INV_Axe_15", "=q4=Scythe of the Unseen Path", "=q4=#x24#=ds=, #r5#" },
 		{ 21403, "INV_Misc_Cape_15", "=q4=Cloak of the Unseen Path", "=q3=#x23#=ds=, #r4#" },
@@ -2359,8 +2343,7 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 	}
 	},
 	AQ20Paladin = {
-		{ 0, "", "", "" },
-		{ 0, "CLASSpaladin", "=q16=#aq20s4#", "" },
+		{ 0, "$PALADIN", "=q16=#aq20s4#", "" },
 		{ 0, "", "", "" },
 		{ 21395, "INV_Sword_57", "=q4=Blade of Eternal Justice", "=q4=#x24#=ds=, #r5#" },
 		{ 21397, "INV_Misc_Cape_14", "=q4=Cape of Eternal Justice", "=q3=#x23#=ds=, #r4#" },
@@ -2373,8 +2356,7 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 	}
 	},
 	AQ20Shaman = {
-		{ 0, "", "", "" },
-		{ 0, "CLASSshaman", "=q15=#aq20s7#", "" },
+		{ 0, "$SHAMAN", "=q15=#aq20s7#", "" },
 		{ 0, "", "", "" },
 		{ 21398, "INV_Mace22", "=q4=Hammer of the Gathering Storm", "=q4=#x24#=ds=, #r5#" },
 		{ 21400, "INV_Misc_Cape_16", "=q4=Cloak of the Gathering Storm", "=q3=#x23#=ds=, #r4#" },
@@ -2387,8 +2369,7 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 	}
 	},
 	AQ20Warrior = {
-		{ 0, "", "", "" },
-		{ 0, "CLASSwarrior", "=q17=#aq20s9#", "" },
+		{ 0, "$WARRIOR", "=q17=#aq20s9#", "" },
 		{ 0, "", "", "" },
 		{ 21392, "INV_Axe_15", "=q4=Sickle of Unyielding Strength", "=q4=#x24#=ds=, #r5#" },
 		{ 21394, "INV_Misc_Cape_20", "=q4=Drape of Unyielding Strength", "=q3=#x20#=ds=, #r4#" },
@@ -2683,10 +2664,10 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 	}
 	},
 	Legendaries = {
-		{ 0, "", "", "" },
 		{ 19019, "INV_Sword_39", "=q5=Thunderfury, Blessed Blade of the Windseeker", "=ds=#h1#, #w10#" },
 		{ 22736, "INV_Sword_61", "=q5=Andonisus, Reaper of Souls", "=ds=#h1#, #w10#" },
 		{ 17182, "INV_Hammer_Unique_Sulfuras", "=q5=Sulfuras, Hand of Ragnaros", "=ds=#h2#, #w6#" },
+		{ 0, "", "", "" },
 		{ 21176, "INV_Misc_QirajiCrystal_05", "=q5=Black Qiraji Resonating Crystal", "=ds=#e7#" },
 		{ 0, "", "", "" },
 		{ 17204, "INV_Misc_Gem_Pearl_05", "=q5=Eye of Sulfuras", "=q1=#m31#", " 3.42%" },
@@ -2698,7 +2679,6 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 55505, "Inv_weapon_shortblade_23", "=q5=The Scythe of Elune", "=ds=#s14#" },
 		{ 0, "", "", "" },
 		{ "e57518", "inv_misc_gem_pearl_04", "=q5=Eternal Dreamstone Shard", "=q1=Enchanting" },
-		{ 0, "", "", "" },
 		{ 22631, "INV_Staff_Medivh", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#w9# =q9=#c5#" },
 		{ 22589, "INV_Staff_Medivh", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#w9# =q10=#c3#" },
 		{ 22630, "INV_Staff_Medivh", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#w9# =q11=#c8#" },
@@ -2712,10 +2692,10 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
+		{ 17142, "INV_Sword_01", "=q5=Shard of the Defiler", "=ds=#h1#, #w4#" },
 		{ 13262, "INV_Sword_48", "=q5=Ashbringer", "=ds=#h2#, #w10#" },
 	},
 	RareMounts = {
-		{ 0, "", "", "" },
 		{ 21176, "INV_Misc_QirajiCrystal_05", "=q5=Black Qiraji Resonating Crystal", "=ds=#e7#" },
 		{ 0, "", "", "" },
 		{ 13335, "Ability_Mount_Undeadhorse", "=q4=Deathcharger's Reins", "=ds=#e7#" },
@@ -2728,32 +2708,6 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 21323, "INV_Misc_QirajiCrystal_03", "=q3=Green Qiraji Resonating Crystal", "=ds=#e7#" },
 		{ 21321, "INV_Misc_QirajiCrystal_02", "=q3=Red Qiraji Resonating Crystal", "=ds=#e7#" },
 		{ 21324, "INV_Misc_QirajiCrystal_01", "=q3=Yellow Qiraji Resonating Crystal", "=ds=#e7#" },
-	},
-	PvPMountsSets = {
-		{ 0, "", "", "" },
-		{ 0, "INV_BannerPVP_02", "=q8=#m7#", "=q7=Rank 11" },
-		{ 0, "", "", "" },
-		{ 19030, "Ability_Mount_MountainRam", "=q4=Stormpike Battle Charger", "=ds=#e7#" },
-		{ 0, "", "", "" },
-		{ 18244, "Ability_Mount_Mountainram", "=q4=Black War Ram", "=ds=#e7#" },
-		{ 18243, "Ability_Mount_Mechastrider", "=q4=Black Battlestrider", "=ds=#e7#" },
-		{ 18241, "Ability_Mount_Nightmarehorse", "=q4=Black War Steed Bridle", "=ds=#e7#" },
-		{ 18242, "Ability_Mount_Blackpanther", "=q4=Reins of the Black War Tiger", "=ds=#e7#" },
-		{ 0, "", "", "" },
-		{ 0, "", "", "" },
-		{ 0, "", "", "" },
-		{ 0, "", "", "" },
-		{ 0, "", "", "" },
-		{ 0, "", "", "" },
-		{ 0, "", "", "" },
-		{ 0, "INV_BannerPVP_01", "=q6=#m6#", "=q18=Rank 11" },
-		{ 0, "", "", "" },
-		{ 19029, "INV_Misc_Horn_01", "=q4=Horn of the Frostwolf Howler", "=ds=#e7#" },
-		{ 0, "", "", "" },
-		{ 18245, "Ability_Mount_Blackdirewolf", "=q4=Horn of the Black War Wolf", "=ds=#e7#" },
-		{ 18247, "Ability_Mount_Kodo_03", "=q4=Black War Kodo", "=ds=#e7#" },
-		{ 18246, "Ability_Mount_Raptor", "=q4=Whistle of the Black War Raptor", "=ds=#e7#" },
-		{ 18248, "Ability_Mount_Undeadhorse", "=q4=Red Skeletal Warhorse", "=ds=#e7#" },
 	},
 	Tabards = {
 		{ 15196, "INV_Misc_TabardPVP_01", "=q1=Private's Tabard", "PvP =q8=#m7#" },
@@ -2778,7 +2732,6 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 19031, "INV_Shirt_GuildTabard_01", "=q1=Frostwolf Battle Tabard", "PvP =q6=#m6#" },
 	},
 	WorldEpics1 = {
-		{ 0, "", "", "" },
 		{ 1981, "INV_Chest_Plate06", "=q4=Icemail Jerkin", "=ds=#s5#, #a3#", "" },
 		{ 867, "INV_Gauntlets_06", "=q4=Gloves of Holy Might", "=ds=#s9#, #a2#", "" },
 		{ 1980, "INV_Jewelry_Ring_15", "=q4=Underworld Band", "=ds=#s13#", "" },
@@ -2803,7 +2756,6 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 873, "INV_Staff_13", "=q4=Staff of Jordan", "=ds=#w9#", "" },
 	},
 	WorldEpics2 = {
-		{ 0, "", "", "" },
 		{ 14550, "inv_bracer_09", "=q4=Bladebane Armguards", "=ds=#s8#, #a2#", "" },
 		{ 3075, "INV_Helmet_44", "=q4=Eye of Flame", "=ds=#s1#, #a1#", "" },
 		{ 1315, "INV_Misc_Flower_01", "=q4=Lei of Lilies", "=ds=#s2#", "" },
@@ -2834,7 +2786,6 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 1979, "INV_Shield_02", "=q4=Wall of the Dead", "=ds=#w8#", "" },
 	},
 	WorldEpics3 = {
-		{ 0, "", "", "" },
 		{ 2245, "INV_Helmet_05", "=q4=Helm of Narv", "=ds=#s1#, #a3#", "" },
 		{ 1443, "INV_Jewelry_Amulet_01", "=q4=Jeweled Amulet of Cainwyn", "=ds=#s2#", "" },
 		{ 14558, "INV_Jewelry_Necklace_08", "=q4=Lady Maye's Pendant", "=ds=#s2#", "" },
@@ -2864,7 +2815,6 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 944, "INV_Staff_07", "=q4=Elemental Mage Staff", "=ds=#w9#", "" },
 	},
 	RarePets1 = {
-		{ 0, "", "", "" },
 		{ 23713, "INV_Egg_02", "=q4=Hippogryph Hatchling", "=ds=#e15# =q6=TCG" },
 		{ 23712, "INV_Misc_Head_Tiger_01", "=q4=White Tiger Cub", "=ds=#e15# =q6=TCG" },
 		{ 0, "", "", "" },
@@ -2896,7 +2846,6 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 8494, "Spell_Nature_ForceofNature", "=q1=Parrot Cage (Hyacinth Macaw)", "=ds=#e15#" },
 	},
 	RarePets2 = {
-		{ 0, "", "", "" },
 		{ 11825, "INV_Misc_Bomb_04", "=q1=Pet Bombling", "=ds=#e15#" },
 		{ 12529, "INV_Box_Birdcage_01", "=q1=Smolderweb Carrier", "=ds=#e15#" },
 		{ 11474, "INV_Egg_02", "=q1=Sprite Darter Egg", "=ds=#e15#" },

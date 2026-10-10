@@ -29,13 +29,13 @@
 		</Layers>
 		<Scripts>
 			<OnClick>
-				AtlasLoot_ContainerItem_OnClick(arg1)
+				AtlasLoot_ContainerItem_OnClick(this, arg1)
 			</OnClick>
 			<OnEnter>
-				AtlasLoot_ContainerItem_OnEnter()
+				AtlasLoot_ContainerItem_OnEnter(this)
 			</OnEnter>
 			<OnLeave>
-				AtlasLoot_ContainerItem_OnLeave()
+				AtlasLoot_ContainerItem_OnLeave(this)
 			</OnLeave>
 		</Scripts>
 	</Button>
@@ -62,9 +62,8 @@
 		<Anchors>
 			<Anchor point="CENTER"/>
 		</Anchors>
-		<Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background" edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
-			<BackgroundInsets left="11" right="12" top="12" bottom="11"/>
-			<TileSize val="32"/>
+		<Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background" edgeFile="Interface\DialogFrame\UI-DialogBox-Border">
+			<BackgroundInsets left="12" right="12" top="12" bottom="12"/>
 			<EdgeSize val="32"/>
 		</Backdrop>
 		<Frames>
@@ -75,7 +74,8 @@
 					</Anchor>
 				</Anchors>
 			</Button>
-			<Button name="$parent_Atlas" inherits="AtlasLootDefaultFrameButtonTemplate">
+			<Button name="$parent_Atlas" inherits="UIPanelButtonTemplate">
+				<Size x="105" y="20"/>
 				<Anchors>
 					<Anchor point="TOPRIGHT">
 						<Offset x="-38" y="-15"/>
@@ -101,7 +101,8 @@
 					</OnShow>
 				</Scripts>
 			</Button>
-			<Button name="$parent_Options" inherits="AtlasLootDefaultFrameButtonTemplate">
+			<Button name="$parent_Options" inherits="UIPanelButtonTemplate">
+				<Size x="105" y="20"/>
 				<Anchors>
 					<Anchor point="TOPLEFT">
 						<Offset x="15" y="-15"/>
@@ -119,7 +120,7 @@
 					</OnShow>
 				</Scripts>
 			</Button>
-			<Button name="$parent_Menu" inherits="OptionsButtonTemplate">
+			<Button name="$parent_Menu" inherits="UIPanelButtonTemplate">
 				<Size x="130" y="20"/>
 				<Anchors>
 					<Anchor point="TOP">
@@ -141,7 +142,7 @@
 					</OnShow>
 				</Scripts>
 			</Button>
-			<Button name="$parent_SubMenu" inherits="OptionsButtonTemplate">
+			<Button name="$parent_SubMenu" inherits="UIPanelButtonTemplate">
 				<Size x="130" y="20"/>
 				<Anchors>
 					<Anchor point="TOP">
@@ -187,24 +188,20 @@
 					<Anchor point="LEFT" relativeTo="$parent_Preset3" relativePoint="RIGHT"><Offset x="5" y="0"/></Anchor>
 				</Anchors>
 			</Button>
-			<EditBox name="AtlasLootDefaultFrameSearchBox" inherits="InputBoxTemplate" letters="100">
+			<EditBox name="AtlasLootDefaultFrameSearchBox" inherits="InputBoxTemplate" letters="100" autoFocus="false">
 				<Size x="180" y="32"/>
 				<Anchors>
 					<Anchor point="BOTTOM">
 						<Offset x="-70" y="30"/>
 					</Anchor>
 				</Anchors>
+				<TextInsets left="0" right="8" top="0" bottom="0"/>
 				<Scripts>
-					<OnLoad>
-						this:SetAutoFocus(false)
-						this:SetTextInsets(0, 8, 0, 0)
-					</OnLoad>
 					<OnEnterPressed>
 						AtlasLoot:Search(this:GetText())
 						this:ClearFocus()
 					</OnEnterPressed>
 				</Scripts>
-				<FontString name="AtlasLootDefaultFrameSearchString" inherits="GameFontNormal"/>
 			</EditBox>
 			<Button name="AtlasLootDefaultFrameSearchButton" inherits="UIPanelButtonTemplate2" parent="AtlasLootDefaultFrameSearchBox">
 				<Size x="69" y="21"/>
@@ -355,26 +352,21 @@
 		</Layers>
 		<Scripts>
 			<OnLoad>
-				this:RegisterForDrag("LeftButton")
-				this:SetBackdropColor(0.75, 0, 0.75)
 				local AL = AtlasLoot.L
 				AtlasLootDefaultFrame_Notice:SetText(AL["NoticeFrame"])
 			</OnLoad>
-			<OnMouseUp>
-				CloseDropDownMenus()
-			</OnMouseUp>
 			<OnShow>
 				AtlasLootDefaultFrame_OnShow()
 			</OnShow>
-			<OnHide>
-				AtlasLootDefaultFrame_OnHide()
-			</OnHide>
-			<OnDragStart>
-				this:StartMoving()
-			</OnDragStart>
-			<OnDragStop>
+			<OnMouseDown>
+				if this:IsMovable() then
+					this:StartMoving()
+				end
+			</OnMouseDown>
+			<OnMouseUp>
+				CloseDropDownMenus()
 				this:StopMovingOrSizing()
-			</OnDragStop>
+			</OnMouseUp>
 		</Scripts>
 	</Frame>
 
@@ -390,21 +382,15 @@
 		</Scripts>
 	</GameTooltip>
 
-	<Button name="AtlasLootPanelButtonTemplate" inherits="OptionsButtonTemplate" virtual="true">
-		<Size x="120" y="20"/>
-	</Button>
-
-	<Button name="AtlasLootItem_ParentTemplate" virtual="true">
+	<Button name="AtlasLootItem_Template" virtual="true">
 		<Size x="236" y="28"/>
-		<HighlightTexture file="Interface\QuestFrame\UI-QuestTitleHighlight" alphaMode="ADD"/>
+		<HighlightTexture name="$parent_Highlight" file="Interface\QuestFrame\UI-QuestTitleHighlight" alphaMode="ADD"/>
 		<Layers>
 			<Layer level="BACKGROUND">
 				<Texture name="$parent_Icon">
 					<Size x="27" y="27"/>
 					<Anchors>
-						<Anchor point="TOPLEFT">
-							<Offset x="1" y="-1"/>
-						</Anchor>
+						<Anchor point="TOPLEFT"><Offset x="1" y="-1"/></Anchor>
 					</Anchors>
 				</Texture>
 			</Layer>
@@ -420,41 +406,31 @@
 					<Size x="30" y="14"/>
 					<FontHeight val="12"/>
 					<Anchors>
-						<Anchor point="BOTTOMRIGHT" relativeTo="$parent_Icon" relativePoint="BOTTOMRIGHT">
-							<Offset x="0" y="1"/>
-						</Anchor>
+						<Anchor point="BOTTOMRIGHT" relativeTo="$parent_Icon" relativePoint="BOTTOMRIGHT"><Offset x="0" y="1"/></Anchor>
 					</Anchors>
 				</FontString>
 				<FontString name="$parent_Name" inherits="GameFontNormal" justifyH="LEFT">
 					<Size x="205" y="14"/>
 					<Anchors>
-						<Anchor point="TOPLEFT" relativeTo="$parent_Icon" relativePoint="TOPRIGHT">
-							<Offset x="3" y="0"/>
-						</Anchor>
+						<Anchor point="TOPLEFT" relativeTo="$parent_Icon" relativePoint="TOPRIGHT"><Offset x="3" y="0"/></Anchor>
 					</Anchors>
 				</FontString>
 				<FontString name="$parent_Extra" inherits="GameFontNormalSmall" justifyH="LEFT">
 					<Size x="205" y="12"/>
 					<Anchors>
-						<Anchor point="TOPLEFT" relativeTo="$parent_Name" relativePoint="BOTTOMLEFT">
-							<Offset x="0" y="-1"/>
-						</Anchor>
+						<Anchor point="TOPLEFT" relativeTo="$parent_Name" relativePoint="BOTTOMLEFT"><Offset x="0" y="0"/></Anchor>
 					</Anchors>
 				</FontString>
 				<FontString name="$parent_PriceText1" inherits="GameFontNormalSmall" justifyH="RIGHT" hidden="true" text="333333">
 					<Size x="60" y="12"/>
 					<Anchors>
-						<Anchor point="TOPLEFT" relativeTo="$parent_Name" relativePoint="BOTTOMLEFT">
-							<Offset x="12" y="-1"/>
-						</Anchor>
+						<Anchor point="TOPLEFT" relativeTo="$parent_Name" relativePoint="BOTTOMLEFT"><Offset x="12" y="-1"/></Anchor>
 					</Anchors>
 				</FontString>
 				<Texture name="$parent_PriceIcon1" hidden="true">
 					<Size x="12" y="12"/>
 					<Anchors>
-						<Anchor point="TOPLEFT" relativeTo="$parent_PriceText1" relativePoint="TOPRIGHT">
-							<Offset x="1" y="0"/>
-						</Anchor>
+						<Anchor point="TOPLEFT" relativeTo="$parent_PriceText1" relativePoint="TOPRIGHT"><Offset x="1" y="0"/></Anchor>
 					</Anchors>
 					<TexCoords left="0.078125" right="0.90625" top="0.078125" bottom="0.90625"/>
 				</Texture>
@@ -467,9 +443,7 @@
 				<Texture name="$parent_PriceIcon2" hidden="true">
 					<Size x="12" y="12"/>
 					<Anchors>
-						<Anchor point="TOPLEFT" relativeTo="$parent_PriceText2" relativePoint="TOPRIGHT">
-							<Offset x="1" y="0"/>
-						</Anchor>
+						<Anchor point="TOPLEFT" relativeTo="$parent_PriceText2" relativePoint="TOPRIGHT"><Offset x="1" y="0"/></Anchor>
 					</Anchors>
 					<TexCoords left="0.078125" right="0.90625" top="0.078125" bottom="0.90625"/>
 				</Texture>
@@ -482,9 +456,7 @@
 				<Texture name="$parent_PriceIcon3" hidden="true">
 					<Size x="12" y="12"/>
 					<Anchors>
-						<Anchor point="TOPLEFT" relativeTo="$parent_PriceText3" relativePoint="TOPRIGHT">
-							<Offset x="1" y="0"/>
-						</Anchor>
+						<Anchor point="TOPLEFT" relativeTo="$parent_PriceText3" relativePoint="TOPRIGHT"><Offset x="1" y="0"/></Anchor>
 					</Anchors>
 					<TexCoords left="0.078125" right="0.90625" top="0.078125" bottom="0.90625"/>
 				</Texture>
@@ -497,9 +469,7 @@
 				<Texture name="$parent_PriceIcon4" hidden="true">
 					<Size x="12" y="12"/>
 					<Anchors>
-						<Anchor point="TOPLEFT" relativeTo="$parent_PriceText4" relativePoint="TOPRIGHT">
-							<Offset x="1" y="0"/>
-						</Anchor>
+						<Anchor point="TOPLEFT" relativeTo="$parent_PriceText4" relativePoint="TOPRIGHT"><Offset x="1" y="0"/></Anchor>
 					</Anchors>
 					<TexCoords left="0.078125" right="0.90625" top="0.078125" bottom="0.90625"/>
 				</Texture>
@@ -512,9 +482,7 @@
 				<Texture name="$parent_PriceIcon5" hidden="true">
 					<Size x="12" y="12"/>
 					<Anchors>
-						<Anchor point="TOPLEFT" relativeTo="$parent_PriceText5" relativePoint="TOPRIGHT">
-							<Offset x="1" y="0"/>
-						</Anchor>
+						<Anchor point="TOPLEFT" relativeTo="$parent_PriceText5" relativePoint="TOPRIGHT"><Offset x="1" y="0"/></Anchor>
 					</Anchors>
 					<TexCoords left="0.078125" right="0.90625" top="0.078125" bottom="0.90625"/>
 				</Texture>
@@ -523,9 +491,7 @@
 				<Texture name="$parent_ContainerBorder" file="Interface\Buttons\UI-AutoCastableOverlay" hidden="true">
 					<Size x="42" y="42"/>
 					<Anchors>
-						<Anchor point="CENTER" relativeTo="$parent_Icon">
-							<Offset x="-11" y="-12"/>
-						</Anchor>
+						<Anchor point="CENTER" relativeTo="$parent_Icon"><Offset x="-11" y="-12"/></Anchor>
 					</Anchors>
 					<TexCoords left="0" right="0.5" top="0.5" bottom="1"/>
 				</Texture>
@@ -534,43 +500,24 @@
 				<Texture name="$parent_ContainerBorderHighlight" file="Interface\Buttons\UI-AutoCastableOverlay" alphaMode="ADD" hidden="true">
 					<Size x="44" y="44"/>
 					<Anchors>
-						<Anchor point="CENTER" relativeTo="$parent_ContainerBorder">
-						</Anchor>
+						<Anchor point="CENTER" relativeTo="$parent_ContainerBorder"/>
 					</Anchors>
 					<TexCoords left="0" right="0.5" top="0.5" bottom="1"/>
 				</Texture>
 			</Layer>
 		</Layers>
-	</Button>
-
-	<Button name="AtlasLootItem_Template" inherits="AtlasLootItem_ParentTemplate" virtual="true">
 		<Scripts>
 			<OnLoad>
-				this:RegisterForClicks("LeftButtonDown", "RightButtonDown")
+				AtlasLootItem_OnLoad(this)
 			</OnLoad>
 			<OnEnter>
-				AtlasLootItem_OnEnter()
+				AtlasLootItem_OnEnter(this)
 			</OnEnter>
 			<OnLeave>
-				AtlasLootItem_OnLeave()
+				AtlasLootItem_OnLeave(this)
 			</OnLeave>
 			<OnClick>
-				AtlasLootItem_OnClick()
-				CloseDropDownMenus()
-			</OnClick>
-			<OnShow>
-				this:SetFrameLevel(AtlasLootItemsFrame:GetFrameLevel() + 1)
-			</OnShow>
-		</Scripts>
-	</Button>
-
-	<Button name="AtlasLootMenuItem_Template" inherits="AtlasLootItem_ParentTemplate" virtual="true">
-		<Scripts>
-			<OnLoad>
-				this:RegisterForClicks("LeftButtonDown", "RightButtonDown")
-			</OnLoad>
-			<OnClick>
-				AtlasLootMenuItem_OnClick()
+				AtlasLootItem_OnClick(this, arg1)
 			</OnClick>
 			<OnShow>
 				this:SetFrameLevel(AtlasLootItemsFrame:GetFrameLevel() + 1)
@@ -819,196 +766,43 @@
 					<Anchor point="TOPLEFT" relativeTo="AtlasLootItem_29" relativePoint="BOTTOMLEFT"/>
 				</Anchors>
 			</Button>
-			<Button name="AtlasLootMenuItem_1" inherits="AtlasLootMenuItem_Template" id="1">
-				<Anchors>
-					<Anchor point="TOPLEFT">
-						<Offset x="25" y="-43"/>
-					</Anchor>
-				</Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_2" inherits="AtlasLootMenuItem_Template" id="2">
-				<Anchors>
-					<Anchor point="TOPLEFT" relativeTo="AtlasLootItem_1" relativePoint="BOTTOMLEFT"/>
-				</Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_3" inherits="AtlasLootMenuItem_Template" id="3">
-				<Anchors>
-					<Anchor point="TOPLEFT" relativeTo="AtlasLootItem_2" relativePoint="BOTTOMLEFT"/>
-				</Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_4" inherits="AtlasLootMenuItem_Template" id="4">
-				<Anchors>
-					<Anchor point="TOPLEFT" relativeTo="AtlasLootItem_3" relativePoint="BOTTOMLEFT"/>
-				</Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_5" inherits="AtlasLootMenuItem_Template" id="5">
-				<Anchors>
-					<Anchor point="TOPLEFT" relativeTo="AtlasLootItem_4" relativePoint="BOTTOMLEFT"/>
-				</Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_6" inherits="AtlasLootMenuItem_Template" id="6">
-				<Anchors>
-					<Anchor point="TOPLEFT" relativeTo="AtlasLootItem_5" relativePoint="BOTTOMLEFT"/>
-				</Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_7" inherits="AtlasLootMenuItem_Template" id="7">
-				<Anchors>
-					<Anchor point="TOPLEFT" relativeTo="AtlasLootItem_6" relativePoint="BOTTOMLEFT"/>
-				</Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_8" inherits="AtlasLootMenuItem_Template" id="8">
-				<Anchors>
-					<Anchor point="TOPLEFT" relativeTo="AtlasLootItem_7" relativePoint="BOTTOMLEFT"/>
-				</Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_9" inherits="AtlasLootMenuItem_Template" id="9">
-				<Anchors>
-					<Anchor point="TOPLEFT" relativeTo="AtlasLootItem_8" relativePoint="BOTTOMLEFT"/>
-				</Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_10" inherits="AtlasLootMenuItem_Template" id="10">
-				<Anchors>
-					<Anchor point="TOPLEFT" relativeTo="AtlasLootItem_9" relativePoint="BOTTOMLEFT"/>
-				</Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_11" inherits="AtlasLootMenuItem_Template" id="11">
-				<Anchors>
-					<Anchor point="TOPLEFT" relativeTo="AtlasLootItem_10" relativePoint="BOTTOMLEFT"/>
-				</Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_12" inherits="AtlasLootMenuItem_Template" id="12">
-				<Anchors>
-					<Anchor point="TOPLEFT" relativeTo="AtlasLootItem_11" relativePoint="BOTTOMLEFT"/>
-				</Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_13" inherits="AtlasLootMenuItem_Template" id="13">
-				<Anchors>
-					<Anchor point="TOPLEFT" relativeTo="AtlasLootItem_12" relativePoint="BOTTOMLEFT"/>
-				</Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_14" inherits="AtlasLootMenuItem_Template" id="14">
-				<Anchors>
-					<Anchor point="TOPLEFT" relativeTo="AtlasLootItem_13" relativePoint="BOTTOMLEFT"/>
-				</Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_15" inherits="AtlasLootMenuItem_Template" id="15">
-				<Anchors>
-					<Anchor point="TOPLEFT" relativeTo="AtlasLootItem_14" relativePoint="BOTTOMLEFT"/>
-				</Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_16" inherits="AtlasLootMenuItem_Template" id="16">
-				<Anchors>
-					<Anchor point="TOPLEFT" relativeTo="AtlasLootItem_1" relativePoint="TOPRIGHT"/>
-				</Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_17" inherits="AtlasLootMenuItem_Template" id="17">
-				<Anchors>
-					<Anchor point="TOPLEFT" relativeTo="AtlasLootItem_16" relativePoint="BOTTOMLEFT"/>
-				</Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_18" inherits="AtlasLootMenuItem_Template" id="18">
-				<Anchors>
-					<Anchor point="TOPLEFT" relativeTo="AtlasLootItem_17" relativePoint="BOTTOMLEFT"/>
-				</Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_19" inherits="AtlasLootMenuItem_Template" id="19">
-				<Anchors>
-					<Anchor point="TOPLEFT" relativeTo="AtlasLootItem_18" relativePoint="BOTTOMLEFT"/>
-				</Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_20" inherits="AtlasLootMenuItem_Template" id="20">
-				<Anchors>
-					<Anchor point="TOPLEFT" relativeTo="AtlasLootItem_19" relativePoint="BOTTOMLEFT"/>
-				</Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_21" inherits="AtlasLootMenuItem_Template" id="21">
-				<Anchors>
-					<Anchor point="TOPLEFT" relativeTo="AtlasLootItem_20" relativePoint="BOTTOMLEFT"/>
-				</Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_22" inherits="AtlasLootMenuItem_Template" id="22">
-				<Anchors>
-					<Anchor point="TOPLEFT" relativeTo="AtlasLootItem_21" relativePoint="BOTTOMLEFT"/>
-				</Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_23" inherits="AtlasLootMenuItem_Template" id="23">
-				<Anchors>
-					<Anchor point="TOPLEFT" relativeTo="AtlasLootItem_22" relativePoint="BOTTOMLEFT"/>
-				</Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_24" inherits="AtlasLootMenuItem_Template" id="24">
-				<Anchors>
-					<Anchor point="TOPLEFT" relativeTo="AtlasLootItem_23" relativePoint="BOTTOMLEFT"/>
-				</Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_25" inherits="AtlasLootMenuItem_Template" id="25">
-				<Anchors>
-					<Anchor point="TOPLEFT" relativeTo="AtlasLootItem_24" relativePoint="BOTTOMLEFT"/>
-				</Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_26" inherits="AtlasLootMenuItem_Template" id="26">
-				<Anchors>
-					<Anchor point="TOPLEFT" relativeTo="AtlasLootItem_25" relativePoint="BOTTOMLEFT"/>
-				</Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_27" inherits="AtlasLootMenuItem_Template" id="27">
-				<Anchors>
-					<Anchor point="TOPLEFT" relativeTo="AtlasLootItem_26" relativePoint="BOTTOMLEFT"/>
-				</Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_28" inherits="AtlasLootMenuItem_Template" id="28">
-				<Anchors>
-					<Anchor point="TOPLEFT" relativeTo="AtlasLootItem_27" relativePoint="BOTTOMLEFT"/>
-				</Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_29" inherits="AtlasLootMenuItem_Template" id="29">
-				<Anchors>
-					<Anchor point="TOPLEFT" relativeTo="AtlasLootItem_28" relativePoint="BOTTOMLEFT"/>
-				</Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_30" inherits="AtlasLootMenuItem_Template" id="30">
-				<Anchors>
-					<Anchor point="TOPLEFT" relativeTo="AtlasLootItem_29" relativePoint="BOTTOMLEFT"/>
-				</Anchors>
-			</Button>
-			<Button name="$parent_BACK" inherits="OptionsButtonTemplate" hidden="true">
+			<Button name="AtlasLootItemsFrame_BACK" inherits="UIPanelButtonTemplate" hidden="true">
+				<Size x="90" y="21"/>
 				<Anchors>
 					<Anchor point="BOTTOM">
-						<Offset x="0" y="8"/>
+						<Offset x="0" y="12"/>
 					</Anchor>
 				</Anchors>
 				<Scripts>
 					<OnClick>
-						AtlasLoot_NavButton_OnClick()
-						CloseDropDownMenus()
+						AtlasLoot_NavButton_OnClick(this)
 					</OnClick>
 					<OnShow>
 						this:SetFrameLevel(AtlasLootItemsFrame:GetFrameLevel() + 1)
 					</OnShow>
 				</Scripts>
 			</Button>
-			<Button name="$parent_PREV" inherits="AtlasLootPrevButtonTemplate">
+			<Button name="AtlasLootItemsFrame_PREV" inherits="AtlasLootPrevButtonTemplate">
 				<Size x="32" y="32"/>
 				<NormalTexture file="Interface\Buttons\UI-SpellbookIcon-PrevPage-Up"/>
 				<PushedTexture file="Interface\Buttons\UI-SpellbookIcon-PrevPage-Down"/>
 				<DisabledTexture file="Interface\Buttons\UI-SpellbookIcon-PrevPage-Disabled"/>
 				<HighlightTexture file="Interface\Buttons\UI-Common-MouseHilight" alphaMode="ADD"/>
 				<Anchors>
-					<Anchor point="BOTTOMLEFT" relativeTo="$parent" relativePoint="BOTTOMLEFT">
+					<Anchor point="BOTTOMLEFT" relativeTo="AtlasLootItemsFrame" relativePoint="BOTTOMLEFT">
 						<Offset x="12" y="8"/>
 					</Anchor>
 				</Anchors>
 				<Scripts>
 					<OnClick>
-						AtlasLoot_NavButton_OnClick()
-						CloseDropDownMenus()
+						AtlasLoot_NavButton_OnClick(this)
 					</OnClick>
 					<OnShow>
 						this:SetFrameLevel(AtlasLootItemsFrame:GetFrameLevel() + 1)
 					</OnShow>
 				</Scripts>
 			</Button>
-			<Button name="$parent_NEXT" inherits="AtlasLootNextButtonTemplate">
+			<Button name="AtlasLootItemsFrame_NEXT" inherits="AtlasLootNextButtonTemplate">
 				<Size x="32" y="32"/>
 				<NormalTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Up"/>
 				<PushedTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Down"/>
@@ -1016,13 +810,12 @@
 				<HighlightTexture file="Interface\Buttons\UI-Common-MouseHilight" alphaMode="ADD"/>
 				<Anchors>
 					<Anchor point="BOTTOMRIGHT">
-						<Offset x="-5" y="5"/>
+						<Offset x="-12" y="8"/>
 					</Anchor>
 				</Anchors>
 				<Scripts>
 					<OnClick>
-						AtlasLoot_NavButton_OnClick()
-						CloseDropDownMenus()
+						AtlasLoot_NavButton_OnClick(this)
 					</OnClick>
 					<OnShow>
 						this:SetFrameLevel(AtlasLootItemsFrame:GetFrameLevel() + 1)
@@ -1032,10 +825,18 @@
 			<Button name="AtlasLootQuickLooksButton">
 				<Size x="25" y="25"/>
 				<Anchors>
-					<Anchor point="BOTTOM">
-						<Offset x="-70" y="6"/>
-					</Anchor>
+					<Anchor point="BOTTOM"><Offset x="-70" y="10"/></Anchor>
 				</Anchors>
+				<Layers>
+					<Layer level="ARTWORK">
+						<FontString name="AtlasLootItemsFrame_QuickLooks" inherits="GameFontNormal" justifyH="RIGHT">
+							<Size x="200" y="25"/>
+							<Anchors>
+								<Anchor point="RIGHT" relativePoint="LEFT"><Offset x="-5" y="1"/></Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
 				<NormalTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Up"/>
 				<PushedTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Down"/>
 				<DisabledTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Disabled"/>
@@ -1049,10 +850,10 @@
 					</OnClick>
 				</Scripts>
 			</Button>
-			<Frame name="$parentContainer" enableMouse="true" hidden="true" toplevel="true" movable="true" clampedToScreen="true">
+			<Frame name="AtlasLootItemsFrameContainer" enableMouse="true" hidden="true" toplevel="true" movable="true" clampedToScreen="true">
 				<Size x="40" y="40"/>
 				<Anchors>
-					<Anchor point="TOPLEFT" relativeTo="$parent" relativePoint="TOPRIGHT"/>
+					<Anchor point="TOPLEFT" relativeTo="AtlasLootItemsFrame" relativePoint="TOPRIGHT"/>
 				</Anchors>
 				<Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
 					<EdgeSize val="16"/>
@@ -1065,7 +866,7 @@
 		</Frames>
 		<Layers>
 			<Layer level="BACKGROUND">
-				<Texture name="$parent_Back">
+				<Texture name="AtlasLootItemsFrame_Background">
 					<Anchors>
 						<Anchor point="TOPLEFT"/>
 						<Anchor point="BOTTOMRIGHT"/>
@@ -1074,18 +875,10 @@
 				</Texture>
 			</Layer>
 			<Layer level="OVERLAY">
-				<FontString name="AtlasLoot_BossName" inherits="GameFontHighlightLarge" justifyH="CENTER">
+				<FontString name="AtlasLootItemsFrame_BossName" inherits="GameFontHighlightLarge" justifyH="CENTER">
 					<Size x="512" y="34"/>
 					<Anchors>
-						<Anchor point="TOP"/>
-					</Anchors>
-				</FontString>
-				<FontString name="AtlasLoot_QuickLooks" inherits="GameFontNormal" justifyH="RIGHT">
-					<Size x="200" y="25"/>
-					<Anchors>
-						<Anchor point="BOTTOM">
-							<Offset x="-185" y="6"/>
-						</Anchor>
+						<Anchor point="TOP"><Offset x="0" y="-2"/></Anchor>
 					</Anchors>
 				</FontString>
 			</Layer>
@@ -1093,9 +886,6 @@
 		<Scripts>
 			<OnLoad>
 				AtlasLoot_OnLoad()
-				local AL = AtlasLoot.L
-				AtlasLootItemsFrame_BACK:SetText(AL["Back"])
-				AtlasLoot_QuickLooks:SetText(AL["Add to QuickLooks:"])
 			</OnLoad>
 			<OnEvent>
 				AtlasLoot_OnEvent()
@@ -1113,7 +903,7 @@
 		</Scripts>
 	</Frame>
 
-	<Frame name="AtlasLootOptionsFrame" toplevel="true" frameStrata="DIALOG" movable="true" enableMouse="true" hidden="true" parent="UIParent" enableKeyboard="true">
+	<Frame name="AtlasLootOptionsFrame" toplevel="true" frameStrata="DIALOG" movable="true" enableMouse="true" hidden="true" parent="UIParent">
 		<Size x="560" y="350"/>
 		<Anchors>
 			<Anchor point="CENTER"/>
@@ -1426,17 +1216,17 @@
 		</Frames>
 		<Scripts>
 			<OnLoad>
-				this:RegisterForDrag("LeftButton")
-				this:SetMovable(1)
 				local AL = AtlasLoot.L
 				AtlasLootOptionsFrame_Title:SetText(AL["Atlasloot Options"])
 			</OnLoad>
-			<OnDragStart>
-				this:StartMoving()
-			</OnDragStart>
-			<OnDragStop>
+			<OnMouseDown>
+				if this:IsMovable() then
+					this:StartMoving()
+				end
+			</OnMouseDown>
+			<OnMouseUp>
 				this:StopMovingOrSizing()
-			</OnDragStop>
+			</OnMouseUp>
 		</Scripts>
 	</Frame>
 
@@ -1467,7 +1257,8 @@
 			</Layer>
 		</Layers>
 		<Frames>
-			<Button name="$parent_WorldEvents" inherits="AtlasLootPanelButtonTemplate">
+			<Button name="$parent_WorldEvents" inherits="UIPanelButtonTemplate">
+				<Size x="120" y="20"/>
 				<Anchors>
 					<Anchor point="LEFT" relativeTo="$parent" relativePoint="LEFT">
 						<Offset x="15" y="29"/>
@@ -1484,7 +1275,8 @@
 					</OnShow>
 				</Scripts>
 			</Button>
-			<Button name="$parent_Sets" inherits="AtlasLootPanelButtonTemplate">
+			<Button name="$parent_Sets" inherits="UIPanelButtonTemplate">
+				<Size x="120" y="20"/>
 				<Anchors>
 					<Anchor point="LEFT" relativeTo="$parent_WorldEvents" relativePoint="RIGHT"/>
 				</Anchors>
@@ -1499,7 +1291,8 @@
 					</OnShow>
 				</Scripts>
 			</Button>
-			<Button name="$parent_Reputation" inherits="AtlasLootPanelButtonTemplate">
+			<Button name="$parent_Reputation" inherits="UIPanelButtonTemplate">
+				<Size x="120" y="20"/>
 				<Anchors>
 					<Anchor point="LEFT" relativeTo="$parent_Sets" relativePoint="RIGHT"/>
 				</Anchors>
@@ -1514,7 +1307,8 @@
 					</OnShow>
 				</Scripts>
 			</Button>
-			<Button name="$parent_PvP" inherits="AtlasLootPanelButtonTemplate">
+			<Button name="$parent_PvP" inherits="UIPanelButtonTemplate">
+				<Size x="120" y="20"/>
 				<Anchors>
 					<Anchor point="LEFT" relativeTo="$parent_Reputation" relativePoint="RIGHT"/>
 				</Anchors>
@@ -1529,7 +1323,8 @@
 					</OnShow>
 				</Scripts>
 			</Button>
-			<Button name="$parent_Crafting" inherits="AtlasLootPanelButtonTemplate">
+			<Button name="$parent_Crafting" inherits="UIPanelButtonTemplate">
+				<Size x="120" y="20"/>
 				<Anchors>
 					<Anchor point="LEFT" relativeTo="$parent_PvP" relativePoint="RIGHT"/>
 				</Anchors>
@@ -1544,7 +1339,8 @@
 					</OnShow>
 				</Scripts>
 			</Button>
-			<Button name="$parent_Options" inherits="AtlasLootPanelButtonTemplate">
+			<Button name="$parent_Options" inherits="UIPanelButtonTemplate">
+				<Size x="120" y="20"/>
 				<Anchors>
 					<Anchor point="TOP" relativeTo="$parent_WorldEvents" relativePoint="BOTTOM">
 						<Offset x="0" y="-2"/>
@@ -1561,7 +1357,8 @@
 					</OnShow>
 				</Scripts>
 			</Button>
-			<Button name="$parent_WishList" inherits="AtlasLootPanelButtonTemplate">
+			<Button name="$parent_WishList" inherits="UIPanelButtonTemplate">
+				<Size x="120" y="20"/>
 				<Anchors>
 					<Anchor point="TOP" relativeTo="$parent_Options" relativePoint="BOTTOM">
 						<Offset x="0" y="-2"/>
@@ -1627,7 +1424,6 @@
 						this:ClearFocus()
 					</OnEnterPressed>
 				</Scripts>
-				<FontString inherits="GameFontNormal"/>
 			</EditBox>
 			<Button name="AtlasLootSearchButton" inherits="UIPanelButtonTemplate2" parent="AtlasLootSearchBox">
 				<Size x="69" y="21"/>
@@ -1685,7 +1481,8 @@
 					</OnClick>
 				</Scripts>
 			</Button>
-			<Button name="AtlasLootLastResultButton" inherits="AtlasLootPanelButtonTemplate">
+			<Button name="AtlasLootLastResultButton" inherits="UIPanelButtonTemplate">
+				<Size x="120" y="20"/>
 				<Anchors>
 					<Anchor point="LEFT" relativeTo="AtlasLootSearchClearButton" relativePoint="RIGHT"/>
 				</Anchors>
