@@ -609,11 +609,15 @@ for k, v in pairs(TextMap) do
 end
 table.sort(SortedTextMap, function(a, b) return strlen(a.value) > strlen(b.value) end)
 
+local mem = {}
 function AtlasLoot_FixText(text)
 	if not text then return nil end
+	if mem[text] then return mem[text] end
+	local input = text
 	for k, v in ipairs(SortedTextMap) do
 		text = gsub(text, v.key, v.value)
 	end
+	mem[input] = text
 	return text
 end
 
