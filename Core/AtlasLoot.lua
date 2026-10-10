@@ -85,6 +85,19 @@ AtlasLoot_Data["AtlasLootFallback"] = {
 	EmptyInstance = {}
 }
 
+local wipe = table.wipe or function(t)
+	local value = t and type(t) or "no value"
+	if value ~= "table" then
+		error(string.format("bad argument #1 to `wipe' (table expected, got %s)", value))
+		return
+	end
+	for k in pairs(t) do rawset(t, k, nil) end
+	table.setn(t, 0)
+	return t
+end
+
+AtlasLoot.wipe = wipe
+
 --[[
 AtlasLootDefaultFrame_OnShow:
 Called whenever the loot browser is shown and sets up buttons and loot tables
@@ -660,7 +673,7 @@ function AtlasLootItemsFrame_OnUpdate(self, elapsed)
 	end
 	if done or self.refreshTime <= 0 then
 		self.refreshTime = nil
-		for k in pairs(self.queue) do self.queue[k] = nil end
+		wipe(self.queue)
 		if self.refresh and self.refresh[1] and self.refresh[2] and self.refresh[3] then
 			AtlasLoot_ShowItemsFrame(self.refresh[1], self.refresh[2], self.refresh[3])
 		end
@@ -675,7 +688,7 @@ function AtlasLoot_ShowItemsFrame(dataID, parentID, title)
 	if not dataID then return end
 
 	AtlasLootItemsFrame.refreshTime = nil
-	for itemID in pairs(AtlasLootItemsFrame.queue) do AtlasLootItemsFrame.queue[itemID] = nil end
+	wipe(AtlasLootItemsFrame.queue)
 
 	if AtlasLootItemsFrameContainer:IsShown() and dataID ~= AtlasLootItemsFrame.refresh[1] then
 		AtlasLootItemsFrameContainer:Hide()
@@ -1113,9 +1126,7 @@ function AtlasLoot_ShowItemsFrame(dataID, parentID, title)
 	local subMenu = nil
 	local bossName = ""
 	for k in pairs(AtlasLoot_HewdropDown_SubTables) do
-		if subMenu then
-			break
-		end
+		if subMenu then break end
 		for _, n in pairs(AtlasLoot_HewdropDown_SubTables[k]) do
 			if n[2] == dataID then
 				subMenu = AtlasLoot_HewdropDown_SubTables[k]
@@ -1791,7 +1802,7 @@ function AtlasLootItem_OnEnter(self)
 				AtlasLootTooltip:AddLine(castTime, 1, 1, 1)
 			end
 			if type(tools) == "table" then
-				for i = table.getn(stringArgs), 1, -1 do table.remove(stringArgs, i) end
+				wipe(stringArgs)
 				for j = 1, table.getn(tools) do
 					if not AtlasLoot_CacheItem(tools[j]) then
 						AtlasLootItemsFrame.refreshTime = refreshTimeout
@@ -1803,7 +1814,7 @@ function AtlasLootItem_OnEnter(self)
 				AtlasLootTooltip:AddLine(SPELL_TOTEMS..BuildColoredListString(unpack(stringArgs)), 1, 1, 1, false)
 			end
 			if type(reagents) == "table" then
-				for i = table.getn(stringArgs), 1, -1 do table.remove(stringArgs, i) end
+				wipe(stringArgs)
 				for j = 1, table.getn(reagents) do
 					if reagents[j][2] and reagents[j][2] > 1 then
 						if not AtlasLoot_CacheItem(reagents[j][1]) then
