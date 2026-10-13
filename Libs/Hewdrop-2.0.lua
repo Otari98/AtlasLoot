@@ -1,6 +1,6 @@
 --[[
 Name: Hewdrop-2.0
-Revision: $Rev: 17883 $
+Revision: $Rev: 17884 $
 Author(s): ckknight (ckknight@gmail.com)
 Website: http://ckknight.wowinterface.com/
 Documentation: http://wiki.wowace.com/index.php/Hewdrop-2.0
@@ -10,7 +10,7 @@ Dependencies: AceLibrary
 ]]
 
 local MAJOR_VERSION = "Hewdrop-2.0"
-local MINOR_VERSION = "$Revision: 17883 $"
+local MINOR_VERSION = "$Revision: 17884 $"
 
 if not AceLibrary then error(MAJOR_VERSION .. " requires AceLibrary") end
 if not AceLibrary:IsNewVersion(MAJOR_VERSION, MINOR_VERSION) then return end
@@ -343,7 +343,7 @@ local function AcquireButton(self, level)
 		button = CreateFrame("Button", "Hewdrop20Button" .. numButtons, nil)
 		button:SetFrameStrata("FULLSCREEN_DIALOG")
 		button:SetHeight(16)
-		local highlight = button:CreateTexture(nil, "BACKGROUND")
+		local highlight = button:CreateTexture(nil, "BORDER")
 		highlight:SetTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight")
 		button.highlight = highlight
 		highlight:SetBlendMode("ADD")
