@@ -1,12 +1,12 @@
 <Bindings>
-	<Binding name="ATLASLOOT_TOGGLE" header="ATLASLOOT_TITLE">
-		AtlasLoot.DefaultFrame_Toggle()
-	</Binding>
-	<Binding name="ATLASLOOT_OPTIONS">
-		AtlasLoot.Options_Toggle()
-	</Binding>
-	<Binding name="ATLASLOOT_WISHLIST">
-		ShowUIPanel(_G[AtlasLoot_AnchorPoint[2]])
-		AtlasLoot.ShowWishList()
-	</Binding>
+    <Binding name="ATLASLOOT_TOGGLE" header="ATLASLOOT_TITLE">
+        AtlasLoot.DefaultFrame_Toggle()
+    </Binding>
+    <Binding name="ATLASLOOT_OPTIONS">
+        AtlasLoot.Options_Toggle()
+    </Binding>
+    <Binding name="ATLASLOOT_WISHLIST">
+        ShowUIPanel(_G[AtlasLoot_AnchorPoint[2]])
+        AtlasLoot.ShowWishList()
+    </Binding>
 </Bindings>

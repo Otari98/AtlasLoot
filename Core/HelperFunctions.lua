@@ -18,7 +18,7 @@ AtlasLoot.tcontains = function(t, value)
 end
 
 function AtlasLoot.strtrim(s)
-	return (string.gsub(s, "^%s*(.-)%s*$", "%1"))
+    return (string.gsub(s, "^%s*(.-)%s*$", "%1"))
 end
 
 function AtlasLoot.GetIDFromItemLink(itemlink)
@@ -57,64 +57,64 @@ end
 ---@return Button|nil  -- AtlasLootItem_# frame
 ---@return boolean|nil -- isInsideContainer flag
 function AtlasLoot.GetParentButton(itemID)
-	if not itemID then return nil end
-	for i = 1, 30 do
-		local button = _G["AtlasLootItem_"..i]
-		if button.itemID == itemID then return button, false end
-		if button.container then
-			for k, v in pairs(button.container) do
-				for k2, v2 in pairs(v) do
-					if v2[1] == itemID then return button, true end
-				end
-			end
-		end
-	end
-	return nil
+    if not itemID then return nil end
+    for i = 1, 30 do
+        local button = _G["AtlasLootItem_"..i]
+        if button.itemID == itemID then return button, false end
+        if button.container then
+            for k, v in pairs(button.container) do
+                for k2, v2 in pairs(v) do
+                    if v2[1] == itemID then return button, true end
+                end
+            end
+        end
+    end
+    return nil
 end
 
 function AtlasLoot.CacheItem(linkOrID)
-	if not linkOrID or tonumber(linkOrID) == 0 then return false end
-	if tonumber(linkOrID) then
-		if GetItemInfo(linkOrID) then return true end
+    if not linkOrID or tonumber(linkOrID) == 0 then return false end
+    if tonumber(linkOrID) then
+        if GetItemInfo(linkOrID) then return true end
         AtlasLootCacheTooltip:SetOwner(WorldFrame, "ANCHOR_NONE")
-		AtlasLootCacheTooltip:SetHyperlink("item:"..linkOrID)
-		return false
-	else
-		if type(linkOrID) ~= "string" then return false end
-		local _, _, item = string.find(linkOrID, "(item:%d+:%d+:%d+:%d+)")
-		if not item then return false end
-		if GetItemInfo(item) then return true end
+        AtlasLootCacheTooltip:SetHyperlink("item:"..linkOrID)
+        return false
+    else
+        if type(linkOrID) ~= "string" then return false end
+        local _, _, item = string.find(linkOrID, "(item:%d+:%d+:%d+:%d+)")
+        if not item then return false end
+        if GetItemInfo(item) then return true end
         AtlasLootCacheTooltip:SetOwner(WorldFrame, "ANCHOR_NONE")
-		AtlasLootCacheTooltip:SetHyperlink(item)
-		return false
-	end
+        AtlasLootCacheTooltip:SetHyperlink(item)
+        return false
+    end
 end
 
 local mem = {}
 function AtlasLoot.GetItemIDByName(name)
-	if not name then return nil end
-	if mem[name] then return mem[name] ~= 0 and mem[name] or nil end
-	for itemID = 1, 99999 do
-		if GetItemInfo(itemID) == name then
-			mem[name] = itemID
-			return itemID
-		end
-	end
-	mem[name] = 0
-	return nil
+    if not name then return nil end
+    if mem[name] then return mem[name] ~= 0 and mem[name] or nil end
+    for itemID = 1, 99999 do
+        if GetItemInfo(itemID) == name then
+            mem[name] = itemID
+            return itemID
+        end
+    end
+    mem[name] = 0
+    return nil
 end
 
 -- from http://shagu.org/ShaguTweaks/
 function AtlasLoot.HookAddonOrVariable(addon, func)
-	local lurker = CreateFrame("Frame")
-	lurker.func = func
-	lurker:RegisterEvent("ADDON_LOADED")
-	lurker:RegisterEvent("VARIABLES_LOADED")
-	lurker:RegisterEvent("PLAYER_ENTERING_WORLD")
-	lurker:SetScript("OnEvent", function()
-		if IsAddOnLoaded(addon) or _G[addon] then
-			this:func()
-			this:UnregisterAllEvents()
-		end
-	end)
+    local lurker = CreateFrame("Frame")
+    lurker.func = func
+    lurker:RegisterEvent("ADDON_LOADED")
+    lurker:RegisterEvent("VARIABLES_LOADED")
+    lurker:RegisterEvent("PLAYER_ENTERING_WORLD")
+    lurker:SetScript("OnEvent", function()
+        if IsAddOnLoaded(addon) or _G[addon] then
+            this:func()
+            this:UnregisterAllEvents()
+        end
+    end)
 end

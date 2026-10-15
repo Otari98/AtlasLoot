@@ -48,9 +48,9 @@ end
 
 function AtlasLoot.ResetCharDB()
     AtlasLootCharDB = {}
-	AtlasLootCharDB["WishList"] = {}
-	AtlasLootCharDB["Bookmarks"] = {}
-	AtlasLootCharDB["SearchResult"] = {}
+    AtlasLootCharDB["WishList"] = {}
+    AtlasLootCharDB["Bookmarks"] = {}
+    AtlasLootCharDB["SearchResult"] = {}
     AtlasLootCharDB.DefaultTT = true
     AtlasLootCharDB.LootlinkTT = false
     AtlasLootCharDB.ItemSyncTT = false
@@ -69,21 +69,21 @@ function AtlasLoot.ResetCharDB()
 end
 
 function AtlasLoot.Options_ResetPosition()
-	AtlasLootCharDB.MinimapButtonPosition = 315
-	AtlasLootCharDB.MinimapButtonRadius = 78
-	AtlasLoot.MinimapButton_UpdatePosition()
-	DEFAULT_CHAT_FRAME:AddMessage("["..ORANGE..L["AtlasLoot"].."|r] "..L["Minimap button has been reset!"])
+    AtlasLootCharDB.MinimapButtonPosition = 315
+    AtlasLootCharDB.MinimapButtonRadius = 78
+    AtlasLoot.MinimapButton_UpdatePosition()
+    DEFAULT_CHAT_FRAME:AddMessage("["..ORANGE..L["AtlasLoot"].."|r] "..L["Minimap button has been reset!"])
 end
 
 function AtlasLoot.Options_DefaultSettings()
     AtlasLoot.ResetCharDB()
-	AtlasLootDefaultFrame:ClearAllPoints()
-	AtlasLootDefaultFrame:SetPoint("TOP", "UIParent", "TOP", 0, -30)
-	AtlasLootOptionsFrame:ClearAllPoints()
-	AtlasLootOptionsFrame:SetPoint("CENTER", "UIParent", "CENTER", 0, 100)
-	AtlasLoot.Options_Update()
+    AtlasLootDefaultFrame:ClearAllPoints()
+    AtlasLootDefaultFrame:SetPoint("TOP", "UIParent", "TOP", 0, -30)
+    AtlasLootOptionsFrame:ClearAllPoints()
+    AtlasLootOptionsFrame:SetPoint("CENTER", "UIParent", "CENTER", 0, 100)
+    AtlasLoot.Options_Update()
     AtlasLoot.ShowItemsFrame("MAINMENU")
-	DEFAULT_CHAT_FRAME:AddMessage("["..ORANGE..L["AtlasLoot"].."|r] "..L["Default settings applied!"])
+    DEFAULT_CHAT_FRAME:AddMessage("["..ORANGE..L["AtlasLoot"].."|r] "..L["Default settings applied!"])
 end
 
 function AtlasLoot.Options_DefaultTTToggle()
