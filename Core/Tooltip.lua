@@ -1,8 +1,5 @@
 -- extra info on GameTooltip and ItemRefTooltip
-local strfind = string.find
-local GetItemInfo = GetItemInfo
 local GREY = "|cff999999"
-local _G = _G or getfenv(0)
 
 local original_SetTooltipMoney = SetTooltipMoney
 function SetTooltipMoney(frame, money)
@@ -35,27 +32,6 @@ local function ExtendTooltip(tooltip)
 	end
 end
 
-local IDCache = {}
-
-local function GetItemIDByName(name)
-	if not name then return nil end
-	if IDCache[name] then return IDCache[name] ~= 0 and IDCache[name] or nil end
-	for itemID = 1, 99999 do
-		if GetItemInfo(itemID) == name then
-			IDCache[name] = itemID
-			return itemID
-		end
-	end
-	IDCache[name] = 0
-	return nil
-end
-
-local function IDFromLink(link)
-	if not link then return nil end
-	local _, _, id = strfind(link, "item:(%d+)")
-	return tonumber(id)
-end
-
 local function HookTooltip(tooltip)
 	if not (tooltip and type(tooltip.GetFrameType) == "function" and tooltip:GetFrameType() == "GameTooltip") then
 		return
@@ -64,7 +40,7 @@ local function HookTooltip(tooltip)
 	if type(tooltip.HookScript) == "function" then
 		tooltip:HookScript("OnTooltipSetItem", function(self)
 			local itemName, itemLink, itemID = self:GetItem()
-			self.itemID = itemID or IDFromLink(itemLink)
+			self.itemID = itemID or AtlasLoot.GetIDFromItemLink(itemLink)
 		end)
 		tooltip:HookScript("OnTooltipCleared", function(self)
 			self.itemID = nil
@@ -86,7 +62,7 @@ local function HookTooltip(tooltip)
 		self.insideHook = true
 		local hasCooldown, repairCost = original_SetBagItem(self, container, slot)
 		self.insideHook = nil
-		self.itemID = IDFromLink(GetContainerItemLink(container, slot))
+		self.itemID = AtlasLoot.GetIDFromItemLink(GetContainerItemLink(container, slot))
 		ExtendTooltip(self)
 		return hasCooldown, repairCost
 	end
@@ -96,7 +72,7 @@ local function HookTooltip(tooltip)
 		self.insideHook = true
 		local hasItem, hasCooldown, repairCost = original_SetInventoryItem(self, unit, slot, nameOnly)
 		self.insideHook = nil
-		self.itemID = IDFromLink(GetInventoryItemLink(unit, slot))
+		self.itemID = AtlasLoot.GetIDFromItemLink(GetInventoryItemLink(unit, slot))
 		ExtendTooltip(self)
 		return hasItem, hasCooldown, repairCost
 	end
@@ -106,7 +82,7 @@ local function HookTooltip(tooltip)
 		self.insideHook = true
 		original_SetLootRollItem(self, rollID)
 		self.insideHook = nil
-		self.itemID = IDFromLink(GetLootRollItemLink(rollID))
+		self.itemID = AtlasLoot.GetIDFromItemLink(GetLootRollItemLink(rollID))
 		ExtendTooltip(self)
 	end
 
@@ -115,7 +91,7 @@ local function HookTooltip(tooltip)
 		self.insideHook = true
 		original_SetLootItem(self, slot)
 		self.insideHook = nil
-		self.itemID = IDFromLink(GetLootSlotLink(slot))
+		self.itemID = AtlasLoot.GetIDFromItemLink(GetLootSlotLink(slot))
 		ExtendTooltip(self)
 	end
 
@@ -124,7 +100,7 @@ local function HookTooltip(tooltip)
 		self.insideHook = true
 		original_SetMerchantItem(self, merchantIndex)
 		self.insideHook = nil
-		self.itemID = IDFromLink(GetMerchantItemLink(merchantIndex))
+		self.itemID = AtlasLoot.GetIDFromItemLink(GetMerchantItemLink(merchantIndex))
 		ExtendTooltip(self)
 	end
 
@@ -133,7 +109,7 @@ local function HookTooltip(tooltip)
 		self.insideHook = true
 		original_SetQuestLogItem(self, itemType, index)
 		self.insideHook = nil
-		self.itemID = IDFromLink(GetQuestLogItemLink(itemType, index))
+		self.itemID = AtlasLoot.GetIDFromItemLink(GetQuestLogItemLink(itemType, index))
 		ExtendTooltip(self)
 	end
 
@@ -142,7 +118,7 @@ local function HookTooltip(tooltip)
 		self.insideHook = true
 		original_SetQuestItem(self, itemType, index)
 		self.insideHook = nil
-		self.itemID = IDFromLink(GetQuestItemLink(itemType, index))
+		self.itemID = AtlasLoot.GetIDFromItemLink(GetQuestItemLink(itemType, index))
 		ExtendTooltip(self)
 	end
 
@@ -151,7 +127,7 @@ local function HookTooltip(tooltip)
 		self.insideHook = true
 		original_SetHyperlink(self, arg1)
 		self.insideHook = nil
-		self.itemID = IDFromLink(arg1)
+		self.itemID = AtlasLoot.GetIDFromItemLink(arg1)
 		ExtendTooltip(self)
 	end
 
@@ -161,7 +137,7 @@ local function HookTooltip(tooltip)
 		original_SetInboxItem(self, mailID, attachmentIndex)
 		self.insideHook = nil
 		if GetInboxItemLink then
-			self.itemID = IDFromLink(GetInboxItemLink(mailID, attachmentIndex))
+			self.itemID = AtlasLoot.GetIDFromItemLink(GetInboxItemLink(mailID, attachmentIndex))
 		else
 			self.itemID = GetItemIDByName(GetInboxItem(mailID, attachmentIndex))
 		end
@@ -173,7 +149,7 @@ local function HookTooltip(tooltip)
 		self.insideHook = true
 		original_SetCraftItem(self, skill, slot)
 		self.insideHook = nil
-		self.itemID = IDFromLink(GetCraftReagentItemLink(skill, slot))
+		self.itemID = AtlasLoot.GetIDFromItemLink(GetCraftReagentItemLink(skill, slot))
 		ExtendTooltip(self)
 	end
 
@@ -182,7 +158,7 @@ local function HookTooltip(tooltip)
 		self.insideHook = true
 		original_SetCraftSpell(self, slot)
 		self.insideHook = nil
-		self.itemID = IDFromLink(GetCraftItemLink(slot))
+		self.itemID = AtlasLoot.GetIDFromItemLink(GetCraftItemLink(slot))
 		ExtendTooltip(self)
 	end
 
@@ -192,9 +168,9 @@ local function HookTooltip(tooltip)
 		original_SetTradeSkillItem(self, skillIndex, reagentIndex)
 		self.insideHook = nil
 		if reagentIndex then
-			self.itemID = IDFromLink(GetTradeSkillReagentItemLink(skillIndex, reagentIndex))
+			self.itemID = AtlasLoot.GetIDFromItemLink(GetTradeSkillReagentItemLink(skillIndex, reagentIndex))
 		else
-			self.itemID = IDFromLink(GetTradeSkillItemLink(skillIndex))
+			self.itemID = AtlasLoot.GetIDFromItemLink(GetTradeSkillItemLink(skillIndex))
 		end
 		ExtendTooltip(self)
 	end
@@ -204,7 +180,7 @@ local function HookTooltip(tooltip)
 		self.insideHook = true
 		original_SetAuctionItem(self, atype, index)
 		self.insideHook = nil
-		self.itemID = IDFromLink(GetAuctionItemLink(atype, index))
+		self.itemID = AtlasLoot.GetIDFromItemLink(GetAuctionItemLink(atype, index))
 		ExtendTooltip(self)
 	end
 
@@ -215,7 +191,7 @@ local function HookTooltip(tooltip)
 		self.insideHook = nil
 		local name, texture, count, quality, canUse, price, maxStack, itemLink = GetAuctionSellItemInfo()
 		if itemLink then
-			self.itemID = IDFromLink(itemLink)
+			self.itemID = AtlasLoot.GetIDFromItemLink(itemLink)
 		else
 			self.itemID = tonumber(GetItemIDByName(name))
 		end
@@ -227,7 +203,7 @@ local function HookTooltip(tooltip)
 		self.insideHook = true
 		original_SetTradePlayerItem(self, index)
 		self.insideHook = nil
-		self.itemID = IDFromLink(GetTradePlayerItemLink(index))
+		self.itemID = AtlasLoot.GetIDFromItemLink(GetTradePlayerItemLink(index))
 		ExtendTooltip(self)
 	end
 
@@ -236,7 +212,7 @@ local function HookTooltip(tooltip)
 		self.insideHook = true
 		original_SetTradeTargetItem(self, index)
 		self.insideHook = nil
-		self.itemID = IDFromLink(GetTradeTargetItemLink(index))
+		self.itemID = AtlasLoot.GetIDFromItemLink(GetTradeTargetItemLink(index))
 		ExtendTooltip(self)
 	end
 
@@ -260,22 +236,7 @@ AtlasLootTip:SetScript("OnShow", function()
 	ExtendTooltip(GameTooltip)
 end)
 
--- adapted from http://shagu.org/ShaguTweaks/
-local function HookAddonOrVariable(addon, func)
-	local lurker = CreateFrame("Frame", nil)
-	lurker.func = func
-	lurker:RegisterEvent("ADDON_LOADED")
-	lurker:RegisterEvent("VARIABLES_LOADED")
-	lurker:RegisterEvent("PLAYER_ENTERING_WORLD")
-	lurker:SetScript("OnEvent", function()
-		if IsAddOnLoaded(addon) or _G[addon] then
-			this:func()
-			this:UnregisterAllEvents()
-		end
-	end)
-end
-
-HookAddonOrVariable("Tmog", function()
+AtlasLoot.HookAddonOrVariable("Tmog", function()
 	HookTooltip(TmogTooltip)
 end)
 

@@ -1,62 +1,6 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/">
 
-	<Button name="AtlasLootContainerItemTemplate" virtual="true">
-		<Size x="40" y="40"/>
-		<Backdrop edgeFile="Interface\Tooltips\UI-Tooltip-Border">
-			<EdgeSize val="19"/>
-		</Backdrop>
-		<Layers>
-			<Layer level="BACKGROUND">
-				<Texture name="$parentIcon">
-					<Size x="32" y="32"/>
-					<Anchors>
-						<Anchor point="TOPLEFT">
-							<Offset x="4" y="-4"/>
-						</Anchor>
-					</Anchors>
-				</Texture>
-				<FontString name="$parent_Quantity" font="Fonts\ARIALN.TTF" outline="NORMAL" justifyH="RIGHT">
-					<Size x="25" y="0"/>
-					<FontHeight val="12"/>
-					<Anchors>
-						<Anchor point="BOTTOMRIGHT" relativeTo="$parentIcon" relativePoint="BOTTOMRIGHT">
-							<Offset x="0" y="1"/>
-						</Anchor>
-					</Anchors>
-				</FontString>
-			</Layer>
-		</Layers>
-		<Scripts>
-			<OnClick>
-				AtlasLoot_ContainerItem_OnClick(this, arg1)
-			</OnClick>
-			<OnEnter>
-				AtlasLoot_ContainerItem_OnEnter(this)
-			</OnEnter>
-			<OnLeave>
-				AtlasLoot_ContainerItem_OnLeave(this)
-			</OnLeave>
-		</Scripts>
-	</Button>
-
-	<Button name="AtlasLootQuickLookButtonTemplate" inherits="UIPanelButtonTemplate" virtual="true">
-		<Scripts>
-			<OnEnter>
-				AtlasLoot_QuickLook_OnEnter(this)
-			</OnEnter>
-			<OnLeave>
-				GameTooltip:Hide()
-			</OnLeave>
-			<OnClick>
-				AtlasLoot_QuickLook_OnClick(this)
-			</OnClick>
-			<OnShow>
-				AtlasLoot_QuickLook_OnShow(this)
-			</OnShow>
-		</Scripts>
-	</Button>
-
 	<Frame name="AtlasLootDefaultFrame" toplevel="true" movable="true" enableMouse="true" hidden="true" parent="UIParent">
 		<Size x="600" y="690"/>
 		<Anchors>
@@ -67,6 +11,100 @@
 			<EdgeSize val="32"/>
 		</Backdrop>
 		<Frames>
+			<Button name="AtlasLootDefaultFrameBookmark1" inherits="AtlasLootBookmarkButtonTemplate" id="1">
+				<Anchors>
+					<Anchor point="TOPLEFT"><Offset x="55" y="-80"/></Anchor>
+				</Anchors>
+			</Button>
+			<Button name="AtlasLootDefaultFrameBookmark2" inherits="AtlasLootBookmarkButtonTemplate" id="2">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="AtlasLootDefaultFrameBookmark1" relativePoint="TOPRIGHT"><Offset x="-3" y="0"/></Anchor>
+				</Anchors>
+			</Button>
+			<Button name="AtlasLootDefaultFrameBookmark3" inherits="AtlasLootBookmarkButtonTemplate" id="3">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="AtlasLootDefaultFrameBookmark2" relativePoint="TOPRIGHT"><Offset x="-3" y="0"/></Anchor>
+				</Anchors>
+			</Button>
+			<Button name="AtlasLootDefaultFrameBookmark4" inherits="AtlasLootBookmarkButtonTemplate" id="4">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="AtlasLootDefaultFrameBookmark3" relativePoint="TOPRIGHT"><Offset x="-3" y="0"/></Anchor>
+				</Anchors>
+			</Button>
+			<Button name="AtlasLootDefaultFrameBookmark5" inherits="AtlasLootBookmarkButtonTemplate" id="5">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="AtlasLootDefaultFrameBookmark4" relativePoint="TOPRIGHT"><Offset x="-3" y="0"/></Anchor>
+				</Anchors>
+			</Button>
+			<Button name="AtlasLootDefaultFrameBookmark6" inherits="AtlasLootBookmarkButtonTemplate" id="6">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="AtlasLootDefaultFrameBookmark5" relativePoint="TOPRIGHT"><Offset x="-3" y="0"/></Anchor>
+				</Anchors>
+			</Button>
+			<Button name="AtlasLootMoreBookmarksButton">
+				<Size x="24" y="24"/>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="AtlasLootDefaultFrameBookmark5" relativePoint="TOPRIGHT"><Offset x="0" y="-9"/></Anchor>
+				</Anchors>
+				<HitRectInsets left="-1" right="-5" top="-8" bottom="-2"/>
+				<NormalTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Up"/>
+				<PushedTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Down"/>
+				<DisabledTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Disabled"/>
+				<HighlightTexture file="Interface\Buttons\UI-Common-MouseHilight" alphaMode="ADD"/>
+				<Scripts>
+					<OnEnter>
+						GameTooltip:SetOwner(this, "ANCHOR_RIGHT", -5, -5)
+						GameTooltip:SetText(AtlasLoot.L["Show more bookmarks"], 1, 1, 1)
+					</OnEnter>
+					<OnLeave>
+						GameTooltip:Hide()
+					</OnLeave>
+					<OnClick>
+						AtlasLoot.MoreBookmarksButton_OnClick(this, arg1)
+					</OnClick>
+					<OnShow>
+						this:SetFrameLevel(AtlasLootDefaultFrameBookmark5:GetFrameLevel() + 5)
+					</OnShow>
+				</Scripts>
+			</Button>
+			<Button name="AtlasLootDefaultFrameFloatingBookmarkButton" inherits="AtlasLootBookmarkButtonTemplate" frameStrata="TOOLTIP" movable="true" hidden="true" parent="UIParent" id="0">
+				<Scripts>
+					<OnEnter/>
+					<OnLeave/>
+					<OnDragStart/>
+					<OnDragStop/>
+					<OnClick>
+						AtlasLoot.StopMovingBookmark()
+					</OnClick>
+					<OnUpdate>
+						AtlasLoot.FloatingBookmark_OnUpdate(this, arg1)
+					</OnUpdate>
+					<OnShow>
+						AtlasLoot.FloatingBookmark_OnShow(this)
+					</OnShow>
+					<OnHide>
+						AtlasLoot.FloatingBookmark_OnHide(this)
+					</OnHide>
+				</Scripts>
+			</Button>
+			<Frame name="AtlasLootDefaultFrameFloatingDockRegion" frameStrata="TOOLTIP" enableMouse="true" hidden="true" parent="UIParent">
+				<Size x="132" y="36"/>
+				<Layers>
+					<Layer level="BACKGROUND">
+						<Texture name="$parentHighlight" file="Interface\AddOns\AtlasLoot\Images\UI-ChatFrame-DockHighlightH" alphaMode="ADD">
+							<Size x="128" y="32"/>
+							<Anchors>
+								<Anchor point="CENTER"/>
+							</Anchors>
+						</Texture>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnLoad>
+						this.Highlight = _G[this:GetName().."Highlight"]
+					</OnLoad>
+				</Scripts>
+			</Frame>
 			<Button name="$parent_CloseButton" inherits="UIPanelCloseButton">
 				<Anchors>
 					<Anchor point="TOPRIGHT">
@@ -83,16 +121,11 @@
 				</Anchors>
 				<Scripts>
 					<OnClick>
-						if AtlasLootDefaultFrameSearchBox:GetText() ~= "" then
-							AtlasLootSearchBox:SetText(AtlasLootDefaultFrameSearchBox:GetText())
-							AtlasLootSearchBox:ClearFocus()
-						end
 						Atlas_Toggle()
-						CloseDropDownMenus()
+						AtlasLoot.Hewdrop:Close(1)
 					</OnClick>
 					<OnShow>
-						local AL = AtlasLoot.L
-						this:SetText(AL["Atlas"])
+						this:SetText(AtlasLoot.L["Atlas"])
 						if IsAddOnLoaded("Atlas") then
 							this:Enable()
 						else
@@ -110,13 +143,12 @@
 				</Anchors>
 				<Scripts>
 					<OnClick>
-						AtlasLootOptions_Toggle()
-						CloseDropDownMenus()
+						AtlasLoot.Options_Toggle()
+						AtlasLoot.Hewdrop:Close(1)
 					</OnClick>
 					<OnShow>
-						local AL = AtlasLoot.L
-						this:SetText(AL["Options"])
-						this:SetFrameLevel((this:GetParent()):GetFrameLevel() + 1)
+						this:SetText(AtlasLoot.L["Options"])
+						this:SetFrameLevel(this:GetParent():GetFrameLevel() + 1)
 					</OnShow>
 				</Scripts>
 			</Button>
@@ -129,16 +161,15 @@
 				</Anchors>
 				<Scripts>
 					<OnClick>
-						if AtlasLoot_Hewdrop:IsOpen() then
-							AtlasLoot_Hewdrop:Close()
+						if AtlasLoot.Hewdrop:IsOpen() then
+							AtlasLoot.Hewdrop:Close()
 						else
-							AtlasLoot_Hewdrop:Open(this)
+							AtlasLoot.Hewdrop:Open(this)
 						end
 					</OnClick>
 					<OnShow>
-						local AL = AtlasLoot.L
-						this:SetText(AL["Select Loot Table"])
-						this:SetFrameLevel((this:GetParent()):GetFrameLevel() + 1)
+						this:SetText(AtlasLoot.L["Select Loot Table"])
+						this:SetFrameLevel(this:GetParent():GetFrameLevel() + 1)
 					</OnShow>
 				</Scripts>
 			</Button>
@@ -151,155 +182,36 @@
 				</Anchors>
 				<Scripts>
 					<OnClick>
-						if AtlasLoot_HewdropSubMenu:IsOpen() then
-							AtlasLoot_HewdropSubMenu:Close()
+						if AtlasLoot.Hewdrop:IsOpen() then
+							AtlasLoot.Hewdrop:Close()
 						else
-							AtlasLoot_HewdropSubMenu:Open(this)
+							AtlasLoot.Hewdrop:Open(this)
 						end
 					</OnClick>
 					<OnShow>
-						local AL = AtlasLoot.L
-						this:SetText(AL["Select Sub-Table"])
-						this:SetFrameLevel((this:GetParent()):GetFrameLevel() + 1)
+						this:SetText(AtlasLoot.L["Select Sub-Table"])
+						this:SetFrameLevel(this:GetParent():GetFrameLevel() + 1)
 					</OnShow>
 				</Scripts>
 			</Button>
-			<Button name="$parent_Preset1" inherits="AtlasLootQuickLookButtonTemplate" id="1">
-				<Size x="105" y="20"/>
-				<Anchors>
-					<Anchor point="BOTTOMLEFT"><Offset x="75" y="63"/></Anchor>
-				</Anchors>
-			</Button>
-			<Button name="$parent_Preset2" inherits="AtlasLootQuickLookButtonTemplate" id="2">
-				<Size x="105" y="20"/>
-				<Anchors>
-					<Anchor point="LEFT" relativeTo="$parent_Preset1" relativePoint="RIGHT"><Offset x="5" y="0"/></Anchor>
-				</Anchors>
-			</Button>
-			<Button name="$parent_Preset3" inherits="AtlasLootQuickLookButtonTemplate" id="3">
-				<Size x="105" y="20"/>
-				<Anchors>
-					<Anchor point="LEFT" relativeTo="$parent_Preset2" relativePoint="RIGHT"><Offset x="5" y="0"/></Anchor>
-				</Anchors>
-			</Button>
-			<Button name="$parent_Preset4" inherits="AtlasLootQuickLookButtonTemplate" id="4">
-				<Size x="105" y="20"/>
-				<Anchors>
-					<Anchor point="LEFT" relativeTo="$parent_Preset3" relativePoint="RIGHT"><Offset x="5" y="0"/></Anchor>
-				</Anchors>
-			</Button>
-			<EditBox name="AtlasLootDefaultFrameSearchBox" inherits="InputBoxTemplate" letters="100" autoFocus="false">
-				<Size x="180" y="32"/>
-				<Anchors>
-					<Anchor point="BOTTOM">
-						<Offset x="-70" y="30"/>
-					</Anchor>
-				</Anchors>
-				<TextInsets left="0" right="8" top="0" bottom="0"/>
-				<Scripts>
-					<OnEnterPressed>
-						AtlasLoot:Search(this:GetText())
-						this:ClearFocus()
-					</OnEnterPressed>
-				</Scripts>
-			</EditBox>
-			<Button name="AtlasLootDefaultFrameSearchButton" inherits="UIPanelButtonTemplate2" parent="AtlasLootDefaultFrameSearchBox">
-				<Size x="69" y="21"/>
-				<Anchors>
-					<Anchor point="LEFT" relativePoint="RIGHT"/>
-				</Anchors>
-				<Scripts>
-					<OnShow>
-						local AL = AtlasLoot.L
-						this:SetText(AL["Search"])
-						this:SetFrameLevel((this:GetParent()):GetFrameLevel() + 1)
-					</OnShow>
-					<OnClick>
-						AtlasLoot:Search(AtlasLootDefaultFrameSearchBox:GetText())
-						AtlasLootDefaultFrameSearchBox:ClearFocus()
-						CloseDropDownMenus()
-					</OnClick>
-				</Scripts>
-			</Button>
-			<Button name="AtlasLootDefaultFrameSearchOptionsButton" parent="AtlasLootDefaultFrameSearchButton">
-				<Size x="28" y="28"/>
-				<Anchors>
-					<Anchor point="LEFT" relativeTo="AtlasLootDefaultFrameSearchButton" relativePoint="RIGHT">
-						<Offset x="-6" y="0"/>
-					</Anchor>
-				</Anchors>
-				<NormalTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Up"/>
-				<PushedTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Down"/>
-				<DisabledTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Disabled"/>
-				<HighlightTexture file="Interface\Buttons\UI-Common-MouseHilight" alphaMode="ADD"/>
-				<Scripts>
-					<OnShow>
-						this:SetFrameLevel((this:GetParent()):GetFrameLevel() + 1)
-					</OnShow>
-					<OnClick>
-						AtlasLoot:ShowSearchOptions(this)
-					</OnClick>
-				</Scripts>
-			</Button>
-			<Button name="AtlasLootDefaultFrameSearchClearButton" inherits="UIPanelButtonTemplate2" parent="AtlasLootDefaultFrameSearchBox">
-				<Size x="58" y="21"/>
-				<Anchors>
-					<Anchor point="LEFT" relativeTo="AtlasLootDefaultFrameSearchOptionsButton" relativePoint="RIGHT">
-						<Offset x="-2" y="0"/>
-					</Anchor>
-				</Anchors>
-				<Scripts>
-					<OnShow>
-						local AL = AtlasLoot.L
-						this:SetText(AL["Clear"])
-						this:SetFrameLevel((this:GetParent()):GetFrameLevel() + 1)
-					</OnShow>
-					<OnClick>
-						AtlasLootDefaultFrameSearchBox:SetText("")
-						AtlasLootDefaultFrameSearchBox:ClearFocus()
-						CloseDropDownMenus()
-					</OnClick>
-				</Scripts>
-			</Button>
-			<Button name="AtlasLootDefaultFrameLastResultButton" inherits="UIPanelButtonTemplate2" parent="AtlasLootDefaultFrameSearchBox">
+			<Button name="AtlasLootWishListButton" inherits="UIPanelButtonTemplate2">
 				<Size x="100" y="21"/>
-				<Anchors>
-					<Anchor point="LEFT" relativeTo="AtlasLootDefaultFrameSearchClearButton" relativePoint="RIGHT"/>
-				</Anchors>
-				<Scripts>
-					<OnShow>
-						local AL = AtlasLoot.L
-						this:SetText(AL["Last Result"])
-						this:SetFrameLevel((this:GetParent()):GetFrameLevel() + 1)
-					</OnShow>
-					<OnClick>
-						AtlasLoot:ShowSearchResult()
-						CloseDropDownMenus()
-					</OnClick>
-				</Scripts>
-			</Button>
-			<Button name="AtlasLootDefaultFrameWishListButton" inherits="UIPanelButtonTemplate2" parent="AtlasLootDefaultFrame">
-				<Size x="100" y="21"/>
-				<Anchors>
-					<Anchor point="RIGHT" relativeTo="AtlasLootDefaultFrameSearchBox" relativePoint="LEFT">
-						<Offset x="-7" y="0"/>
-					</Anchor>
-				</Anchors>
+				<!-- <Anchors>
+					<Anchor point="BOTTOMLEFT"><Offset x="56" y="35"/></Anchor>
+				</Anchors> -->
 				<Scripts>
 					<OnClick>
-						AtlasLoot_ShowWishList()
+						AtlasLoot.ShowWishList()
 					</OnClick>
 					<OnShow>
-						local AL = AtlasLoot.L
-						this:SetText(AL["WishList"])
-						this:SetFrameLevel((this:GetParent()):GetFrameLevel() + 1)
+						this:SetText(AtlasLoot.L["WishList"])
+						this:SetFrameLevel(this:GetParent():GetFrameLevel() + 1)
 					</OnShow>
 					<OnEnter>
-						local AL = AtlasLoot.L
 						GameTooltip:ClearLines()
-						GameTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 5)
-						GameTooltip:AddLine("|cffFFFFFF"..AL["WishList"].."|r")
-						GameTooltip:AddLine(AL["ALT+Click on item to add or remove it from WishList"])
+						GameTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 0)
+						GameTooltip:AddLine("|cffFFFFFF"..AtlasLoot.L["WishList"].."|r")
+						GameTooltip:AddLine(AtlasLoot.L["ALT+Click on item to add or remove it from WishList"])
 						GameTooltip:Show()
 					</OnEnter>
 					<OnLeave>
@@ -307,6 +219,131 @@
 					</OnLeave>
 				</Scripts>
 			</Button>
+			<EditBox name="AtlasLootSearchBox" inherits="InputBoxTemplate" letters="100" autoFocus="false">
+				<Size x="248" y="32"/>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="AtlasLootWishListButton" relativePoint="RIGHT"><Offset x="10" y="0"/></Anchor>
+				</Anchors>
+				<TextInsets left="0" right="8" top="0" bottom="0"/>
+				<Layers>
+					<Layer level="ARTWORK">
+						<FontString name="AtlasLootSearchBoxPrompt" inherits="GameFontDisableSmall" justifyH="LEFT">
+							<Size x="0" y="20"/>
+							<Anchors>
+								<Anchor point="LEFT"><Offset x="0" y="0"/></Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnLoad>
+						AtlasLootSearchBoxPrompt:SetText(AtlasLoot.L["Search loot"])
+						AtlasLootClearSearchButton:SetAlpha(0.5)
+						AtlasLootClearSearchButton:Disable()
+					</OnLoad>
+					<OnEnterPressed>
+						AtlasLoot.Search(this:GetText())
+						this:ClearFocus()
+					</OnEnterPressed>
+					<OnEscapePressed>
+						-- this:SetText("")
+						this:ClearFocus()
+					</OnEscapePressed>
+					<OnEditFocusGained>
+						this:HighlightText()
+						AtlasLootSearchBoxPrompt:Hide()
+						AtlasLootClearSearchButton:SetAlpha(1)
+						AtlasLootClearSearchButton:Enable()
+					</OnEditFocusGained>
+					<OnEditFocusLost>
+						this:HighlightText(0, 0)
+						if this:GetText() == "" then
+							AtlasLootSearchBoxPrompt:Show()
+							AtlasLootClearSearchButton:SetAlpha(0.5)
+							AtlasLootClearSearchButton:SetButtonState("NORMAL")
+							AtlasLootClearSearchButton:Disable()
+						else
+							AtlasLootClearSearchButton:SetAlpha(1)
+							AtlasLootClearSearchButton:Enable()
+						end
+					</OnEditFocusLost>
+					<OnTextChanged>
+						if this:GetText() ~= "" then
+							AtlasLootSearchBoxPrompt:Hide()
+						end
+					</OnTextChanged>
+				</Scripts>
+				<Frames>
+					<Button name="AtlasLootSearchOptionsButton">
+						<Size x="28" y="28"/>
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="AtlasLootSearchBox" relativePoint="RIGHT"><Offset x="0" y="0"/></Anchor>
+						</Anchors>
+						<NormalTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Up"/>
+						<PushedTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Down"/>
+						<DisabledTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Disabled"/>
+						<HighlightTexture file="Interface\Buttons\UI-Common-MouseHilight" alphaMode="ADD"/>
+						<Scripts>
+							<OnShow>
+								this:SetFrameLevel(this:GetParent():GetFrameLevel() + 1)
+							</OnShow>
+							<OnClick>
+								AtlasLoot.ShowSearchOptions(this)
+							</OnClick>
+							<OnEnter>
+								GameTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 0)
+								GameTooltip:SetText(AtlasLoot.L["Search options"], 1, 1, 1)
+							</OnEnter>
+							<OnLeave>
+								GameTooltip:Hide()
+							</OnLeave>
+						</Scripts>
+					</Button>
+					<Button name="AtlasLootLastResultButton" inherits="UIPanelButtonTemplate2">
+						<Size x="100" y="21"/>
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="AtlasLootSearchOptionsButton" relativePoint="RIGHT"/>
+						</Anchors>
+						<Scripts>
+							<OnShow>
+								this:SetText(AtlasLoot.L["Last Result"])
+								this:SetFrameLevel(this:GetParent():GetFrameLevel() + 1)
+							</OnShow>
+							<OnEnter>
+								GameTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 0)
+								GameTooltip:SetText(AtlasLoot.L["Last Result"], 1, 1, 1)
+								GameTooltip:AddLine(AtlasLoot.L["Show results of the last search"])
+								GameTooltip:Show()
+							</OnEnter>
+							<OnLeave>
+								GameTooltip:Hide()
+							</OnLeave>
+							<OnClick>
+								AtlasLoot.ShowSearchResult()
+							</OnClick>
+						</Scripts>
+					</Button>
+					<Button name="AtlasLootClearSearchButton" inherits="UIPanelCloseButton">
+						<Size x="20" y="20"/>
+						<Anchors>
+							<Anchor point="RIGHT"><Offset x="-2" y="0"/></Anchor>
+						</Anchors>
+						<Scripts>
+							<OnShow>
+								this:SetFrameLevel(AtlasLootSearchBox:GetFrameLevel() + 3)
+							</OnShow>
+							<OnClick>
+								AtlasLootSearchBox:SetText("")
+								AtlasLootSearchBox:ClearFocus()
+								AtlasLootSearchBoxPrompt:Show()
+								AtlasLootClearSearchButton:SetButtonState("NORMAL")
+								AtlasLootClearSearchButton:Disable()
+								AtlasLootClearSearchButton:SetAlpha(0.5)
+							</OnClick>
+						</Scripts>
+					</Button>
+				</Frames>
+			</EditBox>
 		</Frames>
 		<Layers>
 			<Layer level="ARTWORK">
@@ -352,11 +389,10 @@
 		</Layers>
 		<Scripts>
 			<OnLoad>
-				local AL = AtlasLoot.L
-				AtlasLootDefaultFrame_Notice:SetText(AL["NoticeFrame"])
+				AtlasLootDefaultFrame_Notice:SetText(AtlasLoot.L["NoticeFrame"])
 			</OnLoad>
 			<OnShow>
-				AtlasLootDefaultFrame_OnShow()
+				AtlasLoot.DefaultFrame_OnShow()
 			</OnShow>
 			<OnMouseDown>
 				if this:IsMovable() then
@@ -364,7 +400,7 @@
 				end
 			</OnMouseDown>
 			<OnMouseUp>
-				CloseDropDownMenus()
+				AtlasLoot.Hewdrop:Close(1)
 				this:StopMovingOrSizing()
 			</OnMouseUp>
 		</Scripts>
@@ -382,223 +418,26 @@
 		</Scripts>
 	</GameTooltip>
 
-	<Button name="AtlasLootItem_Template" virtual="true">
-		<Size x="236" y="28"/>
-		<HighlightTexture name="$parent_Highlight" file="Interface\QuestFrame\UI-QuestTitleHighlight" alphaMode="ADD"/>
-		<Layers>
-			<Layer level="BACKGROUND">
-				<Texture name="$parent_Icon">
-					<Size x="27" y="27"/>
-					<Anchors>
-						<Anchor point="TOPLEFT"><Offset x="1" y="-1"/></Anchor>
-					</Anchors>
-				</Texture>
-			</Layer>
-			<Layer level="ARTWORK">
-				<Texture name="$parent_IconBorder" file="Interface\AddOns\AtlasLoot\Images\border">
-					<Size x="33" y="33"/>
-					<Anchors>
-						<Anchor point="CENTER" relativeTo="$parent_Icon"/>
-					</Anchors>
-					<Color r="1" g="1" b="1" a="1"/>
-				</Texture>
-				<FontString name="$parent_Quantity" font="Fonts\ARIALN.TTF" outline="NORMAL" justifyH="RIGHT">
-					<Size x="30" y="14"/>
-					<FontHeight val="12"/>
-					<Anchors>
-						<Anchor point="BOTTOMRIGHT" relativeTo="$parent_Icon" relativePoint="BOTTOMRIGHT"><Offset x="0" y="1"/></Anchor>
-					</Anchors>
-				</FontString>
-				<FontString name="$parent_Name" inherits="GameFontNormal" justifyH="LEFT">
-					<Size x="205" y="14"/>
-					<Anchors>
-						<Anchor point="TOPLEFT" relativeTo="$parent_Icon" relativePoint="TOPRIGHT"><Offset x="3" y="0"/></Anchor>
-					</Anchors>
-				</FontString>
-				<FontString name="$parent_Extra" inherits="GameFontNormalSmall" justifyH="LEFT">
-					<Size x="205" y="12"/>
-					<Anchors>
-						<Anchor point="TOPLEFT" relativeTo="$parent_Name" relativePoint="BOTTOMLEFT"><Offset x="0" y="0"/></Anchor>
-					</Anchors>
-				</FontString>
-				<FontString name="$parent_PriceText1" inherits="GameFontNormalSmall" justifyH="RIGHT" hidden="true" text="333333">
-					<Size x="60" y="12"/>
-					<Anchors>
-						<Anchor point="TOPLEFT" relativeTo="$parent_Name" relativePoint="BOTTOMLEFT"><Offset x="12" y="-1"/></Anchor>
-					</Anchors>
-				</FontString>
-				<Texture name="$parent_PriceIcon1" hidden="true">
-					<Size x="12" y="12"/>
-					<Anchors>
-						<Anchor point="TOPLEFT" relativeTo="$parent_PriceText1" relativePoint="TOPRIGHT"><Offset x="1" y="0"/></Anchor>
-					</Anchors>
-					<TexCoords left="0.078125" right="0.90625" top="0.078125" bottom="0.90625"/>
-				</Texture>
-				<FontString name="$parent_PriceText2" inherits="GameFontNormalSmall" justifyH="RIGHT" hidden="true" text="120">
-					<Size x="20" y="12"/>
-					<Anchors>
-						<Anchor point="TOPLEFT" relativeTo="$parent_PriceIcon1" relativePoint="TOPRIGHT"/>
-					</Anchors>
-				</FontString>
-				<Texture name="$parent_PriceIcon2" hidden="true">
-					<Size x="12" y="12"/>
-					<Anchors>
-						<Anchor point="TOPLEFT" relativeTo="$parent_PriceText2" relativePoint="TOPRIGHT"><Offset x="1" y="0"/></Anchor>
-					</Anchors>
-					<TexCoords left="0.078125" right="0.90625" top="0.078125" bottom="0.90625"/>
-				</Texture>
-				<FontString name="$parent_PriceText3" inherits="GameFontNormalSmall" justifyH="RIGHT" hidden="true" text="120">
-					<Size x="20" y="12"/>
-					<Anchors>
-						<Anchor point="TOPLEFT" relativeTo="$parent_PriceIcon2" relativePoint="TOPRIGHT"/>
-					</Anchors>
-				</FontString>
-				<Texture name="$parent_PriceIcon3" hidden="true">
-					<Size x="12" y="12"/>
-					<Anchors>
-						<Anchor point="TOPLEFT" relativeTo="$parent_PriceText3" relativePoint="TOPRIGHT"><Offset x="1" y="0"/></Anchor>
-					</Anchors>
-					<TexCoords left="0.078125" right="0.90625" top="0.078125" bottom="0.90625"/>
-				</Texture>
-				<FontString name="$parent_PriceText4" inherits="GameFontNormalSmall" justifyH="RIGHT" hidden="true" text="120">
-					<Size x="20" y="12"/>
-					<Anchors>
-						<Anchor point="TOPLEFT" relativeTo="$parent_PriceIcon3" relativePoint="TOPRIGHT"/>
-					</Anchors>
-				</FontString>
-				<Texture name="$parent_PriceIcon4" hidden="true">
-					<Size x="12" y="12"/>
-					<Anchors>
-						<Anchor point="TOPLEFT" relativeTo="$parent_PriceText4" relativePoint="TOPRIGHT"><Offset x="1" y="0"/></Anchor>
-					</Anchors>
-					<TexCoords left="0.078125" right="0.90625" top="0.078125" bottom="0.90625"/>
-				</Texture>
-				<FontString name="$parent_PriceText5" inherits="GameFontNormalSmall" justifyH="RIGHT" hidden="true" text="120">
-					<Size x="20" y="12"/>
-					<Anchors>
-						<Anchor point="TOPLEFT" relativeTo="$parent_PriceIcon4" relativePoint="TOPRIGHT"/>
-					</Anchors>
-				</FontString>
-				<Texture name="$parent_PriceIcon5" hidden="true">
-					<Size x="12" y="12"/>
-					<Anchors>
-						<Anchor point="TOPLEFT" relativeTo="$parent_PriceText5" relativePoint="TOPRIGHT"><Offset x="1" y="0"/></Anchor>
-					</Anchors>
-					<TexCoords left="0.078125" right="0.90625" top="0.078125" bottom="0.90625"/>
-				</Texture>
-			</Layer>
-			<Layer level="OVERLAY">
-				<Texture name="$parent_ContainerBorder" file="Interface\Buttons\UI-AutoCastableOverlay" hidden="true">
-					<Size x="42" y="42"/>
-					<Anchors>
-						<Anchor point="CENTER" relativeTo="$parent_Icon"><Offset x="-11" y="-12"/></Anchor>
-					</Anchors>
-					<TexCoords left="0" right="0.5" top="0.5" bottom="1"/>
-				</Texture>
-			</Layer>
-			<Layer level="HIGHLIGHT">
-				<Texture name="$parent_ContainerBorderHighlight" file="Interface\Buttons\UI-AutoCastableOverlay" alphaMode="ADD" hidden="true">
-					<Size x="44" y="44"/>
-					<Anchors>
-						<Anchor point="CENTER" relativeTo="$parent_ContainerBorder"/>
-					</Anchors>
-					<TexCoords left="0" right="0.5" top="0.5" bottom="1"/>
-				</Texture>
-			</Layer>
-		</Layers>
-		<Scripts>
-			<OnLoad>
-				AtlasLootItem_OnLoad(this)
-			</OnLoad>
-			<OnEnter>
-				AtlasLootItem_OnEnter(this)
-			</OnEnter>
-			<OnLeave>
-				AtlasLootItem_OnLeave(this)
-			</OnLeave>
-			<OnClick>
-				AtlasLootItem_OnClick(this, arg1)
-			</OnClick>
-			<OnShow>
-				this:SetFrameLevel(AtlasLootItemsFrame:GetFrameLevel() + 1)
-			</OnShow>
-		</Scripts>
-	</Button>
-
-	<Frame name="AtlasLootInfo">
-		<Size x="128" y="75"/>
-		<Frames>
-			<Button name="$parentHidePanel" inherits="UIPanelButtonTemplate2">
-				<Size x="80" y="21"/>
-				<Anchors>
-					<Anchor point="BOTTOMLEFT" relativeTo="$parent" relativePoint="BOTTOMLEFT">
-						<Offset x="-7" y="-3"/>
-					</Anchor>
-				</Anchors>
-				<Scripts>
-					<OnShow>
-						local AL = AtlasLoot.L
-						this:SetFrameLevel((this:GetParent()):GetFrameLevel() + 1)
-						this:SetText(AL["AL Panel"])
-					</OnShow>
-					<OnClick>
-						if AtlasLootPanel:IsShown() then
-							AtlasLootPanel:Hide()
-						else
-							AtlasLootPanel:Show()
-						end
-						AtlasLootCharDB.HidePanel = not AtlasLootPanel:IsShown()
-						AtlasLootOptionsFrameHidePanel:SetChecked(AtlasLootCharDB.HidePanel)
-					</OnClick>
-				</Scripts>
-			</Button>
-			<Button name="$parent_AtlasLoot" inherits="UIPanelButtonTemplate2">
-				<Size x="80" y="21"/>
-				<Anchors>
-					<Anchor point="BOTTOMLEFT" relativeTo="$parentHidePanel" relativePoint="BOTTOMRIGHT"/>
-				</Anchors>
-				<Scripts>
-					<OnClick>
-						if AtlasLootSearchBox:GetText() ~= "" then
-							AtlasLootDefaultFrameSearchBox:SetText(AtlasLootSearchBox:GetText())
-							AtlasLootDefaultFrameSearchBox:ClearFocus()
-						end
-						AtlasLoot_Toggle()
-					</OnClick>
-					<OnShow>
-						local AL = AtlasLoot.L
-						this:SetText(AL["AtlasLoot"])
-						this:SetFrameLevel((this:GetParent()):GetFrameLevel() + 1)
-					</OnShow>
-				</Scripts>
-			</Button>
-		</Frames>
-		<Layers>
-			<Layer level="OVERLAY">
-				<FontString name="$parent_Text1" inherits="GameFontNormalSmall" text="ATLASLOOT_VERSION" justifyH="LEFT">
-					<Size x="180" y="12"/>
-					<Anchor point="TOPLEFT">
-						<Offset x="0" y="25"/>
-					</Anchor>
-				</FontString>
-				<FontString name="$parent_Text2" inherits="GameFontNormalSmall" justifyH="LEFT">
-					<Size x="180" y="12"/>
-					<Anchors>
-						<Anchor point="TOPLEFT" relativeTo="$parent_Text1" relativePoint="BOTTOMLEFT">
-							<Offset x="0" y="-2"/>
-						</Anchor>
-					</Anchors>
-				</FontString>
-			</Layer>
-		</Layers>
-	</Frame>
-
 	<Frame name="AtlasLootItemsFrame" parent="UIParent" hidden="true">
 		<Size x="510" y="510"/>
-		<Anchors>
-			<Anchor point="CENTER"/>
-		</Anchors>
 		<Frames>
+			<CheckButton name="AtlasLootDefaultFrameBookmarkPageButton" inherits="UICheckButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT"><Offset x="23" y="-9"/></Anchor>
+				</Anchors>
+				<HitRectInsets left="-5" right="-50" top="-5" bottom="0"/>
+				<Scripts>
+					<OnLoad>
+						_G[this:GetName().."Text"]:SetText(AtlasLoot.L["Bookmark"])
+					</OnLoad>
+					<OnClick>
+						AtlasLoot.BookmarkPageButton_OnClick(this, arg1)
+					</OnClick>
+					<OnShow>
+						this:SetFrameLevel(AtlasLootItemsFrame:GetFrameLevel() + 1)
+					</OnShow>
+				</Scripts>
+			</CheckButton>
 			<Button name="$parent_CloseButton" inherits="UIPanelCloseButton">
 				<Anchors>
 					<Anchor point="TOPRIGHT" relativeTo="$parent" relativePoint="TOPRIGHT">
@@ -606,9 +445,6 @@
 					</Anchor>
 				</Anchors>
 				<Scripts>
-					<OnClick>
-						AtlasLootItemsFrame_OnCloseButton()
-					</OnClick>
 					<OnShow>
 						this:SetFrameLevel(AtlasLootItemsFrame:GetFrameLevel() + 1)
 					</OnShow>
@@ -774,8 +610,11 @@
 					</Anchor>
 				</Anchors>
 				<Scripts>
+					<OnLoad>
+						this:SetText(AtlasLoot.L["Back"])
+					</OnLoad>
 					<OnClick>
-						AtlasLoot_NavButton_OnClick(this)
+						AtlasLoot.NavigationButton_OnClick(this)
 					</OnClick>
 					<OnShow>
 						this:SetFrameLevel(AtlasLootItemsFrame:GetFrameLevel() + 1)
@@ -795,7 +634,7 @@
 				</Anchors>
 				<Scripts>
 					<OnClick>
-						AtlasLoot_NavButton_OnClick(this)
+						AtlasLoot.NavigationButton_OnClick(this)
 					</OnClick>
 					<OnShow>
 						this:SetFrameLevel(AtlasLootItemsFrame:GetFrameLevel() + 1)
@@ -815,39 +654,11 @@
 				</Anchors>
 				<Scripts>
 					<OnClick>
-						AtlasLoot_NavButton_OnClick(this)
+						AtlasLoot.NavigationButton_OnClick(this)
 					</OnClick>
 					<OnShow>
 						this:SetFrameLevel(AtlasLootItemsFrame:GetFrameLevel() + 1)
 					</OnShow>
-				</Scripts>
-			</Button>
-			<Button name="AtlasLootQuickLooksButton">
-				<Size x="25" y="25"/>
-				<Anchors>
-					<Anchor point="BOTTOM"><Offset x="-70" y="10"/></Anchor>
-				</Anchors>
-				<Layers>
-					<Layer level="ARTWORK">
-						<FontString name="AtlasLootItemsFrame_QuickLooks" inherits="GameFontNormal" justifyH="RIGHT">
-							<Size x="200" y="25"/>
-							<Anchors>
-								<Anchor point="RIGHT" relativePoint="LEFT"><Offset x="-5" y="1"/></Anchor>
-							</Anchors>
-						</FontString>
-					</Layer>
-				</Layers>
-				<NormalTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Up"/>
-				<PushedTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Down"/>
-				<DisabledTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Disabled"/>
-				<HighlightTexture file="Interface\Buttons\UI-Common-MouseHilight" alphaMode="ADD"/>
-				<Scripts>
-					<OnShow>
-						this:SetFrameLevel(AtlasLootItemsFrame:GetFrameLevel() + 1)
-					</OnShow>
-					<OnClick>
-						AtlasLoot_ShowQuickLooks(this)
-					</OnClick>
 				</Scripts>
 			</Button>
 			<Frame name="AtlasLootItemsFrameContainer" enableMouse="true" hidden="true" toplevel="true" movable="true" clampedToScreen="true">
@@ -885,14 +696,17 @@
 		</Layers>
 		<Scripts>
 			<OnLoad>
-				AtlasLoot_OnLoad()
+				AtlasLoot.ItemsFrame_OnLoad(this)
 			</OnLoad>
 			<OnEvent>
-				AtlasLoot_OnEvent()
+				AtlasLoot.ItemsFrame_OnEvent(this, event)
 			</OnEvent>
 			<OnUpdate>
-				AtlasLootItemsFrame_OnUpdate(this, arg1)
+				AtlasLoot.ItemsFrame_OnUpdate(this, arg1)
 			</OnUpdate>
+			<OnHide>
+				AtlasLoot.ItemsFrame_OnHide(this)
+			</OnHide>
 			<OnMouseWheel>
 				if arg1 == 1 and AtlasLootItemsFrame_NEXT:IsVisible() then
 					AtlasLootItemsFrame_NEXT:Click()
@@ -939,11 +753,10 @@
 				</Anchors>
 				<Scripts>
 					<OnLoad>
-						local AL = AtlasLoot.L
-						_G[this:GetName().."Text"]:SetText(AL["Default Tooltips"])
+						_G[this:GetName().."Text"]:SetText(AtlasLoot.L["Default Tooltips"])
 					</OnLoad>
 					<OnClick>
-						AtlasLootOptions_DefaultTTToggle()
+						AtlasLoot.Options_DefaultTTToggle()
 					</OnClick>
 				</Scripts>
 			</CheckButton>
@@ -955,11 +768,10 @@
 				</Anchors>
 				<Scripts>
 					<OnLoad>
-						local AL = AtlasLoot.L
-						_G[this:GetName().."Text"]:SetText(AL["Lootlink Tooltips"])
+						_G[this:GetName().."Text"]:SetText(AtlasLoot.L["Lootlink Tooltips"])
 					</OnLoad>
 					<OnClick>
-						AtlasLootOptions_DefaultTTToggle()
+						AtlasLoot.Options_DefaultTTToggle()
 					</OnClick>
 				</Scripts>
 			</CheckButton>
@@ -971,11 +783,10 @@
 				</Anchors>
 				<Scripts>
 					<OnLoad>
-						local AL = AtlasLoot.L
-						_G[this:GetName().."Text"]:SetText(AL["ItemSync Tooltips"])
+						_G[this:GetName().."Text"]:SetText(AtlasLoot.L["ItemSync Tooltips"])
 					</OnLoad>
 					<OnClick>
-						AtlasLootOptions_DefaultTTToggle()
+						AtlasLoot.Options_DefaultTTToggle()
 					</OnClick>
 				</Scripts>
 			</CheckButton>
@@ -987,11 +798,10 @@
 				</Anchors>
 				<Scripts>
 					<OnLoad>
-						local AL = AtlasLoot.L
-						_G[this:GetName().."Text"]:SetText(AL["Show Source on Tooltips"])
+						_G[this:GetName().."Text"]:SetText(AtlasLoot.L["Show Source on Tooltips"])
 					</OnLoad>
 					<OnClick>
-						AtlasLootOptions_ShowSourceToggle()
+						AtlasLoot.Options_ShowSourceToggle()
 					</OnClick>
 				</Scripts>
 			</CheckButton>
@@ -1003,11 +813,10 @@
 				</Anchors>
 				<Scripts>
 					<OnLoad>
-						local AL = AtlasLoot.L
 						_G[this:GetName().."Text"]:SetText("Group wishlist by dungeon")
 					</OnLoad>
 					<OnClick>
-						AtlasLootOptions_WishlistGroupedByDungeonToggle()
+						AtlasLoot.Options_WishlistGroupedByDungeonToggle()
 					</OnClick>
 				</Scripts>
 			</CheckButton>
@@ -1019,11 +828,10 @@
 				</Anchors>
 				<Scripts>
 					<OnLoad>
-						local AL = AtlasLoot.L
-						_G[this:GetName().."Text"]:SetText(AL["Use EquipCompare"])
+						_G[this:GetName().."Text"]:SetText(AtlasLoot.L["Use EquipCompare"])
 					</OnLoad>
 					<OnClick>
-						AtlasLootOptions_EquipCompareToggle()
+						AtlasLoot.Options_EquipCompareToggle()
 					</OnClick>
 				</Scripts>
 			</CheckButton>
@@ -1035,11 +843,10 @@
 				</Anchors>
 				<Scripts>
 					<OnLoad>
-						local AL = AtlasLoot.L
-						_G[this:GetName().."Text"]:SetText(AL["Show IDs at all times"])
+						_G[this:GetName().."Text"]:SetText(AtlasLoot.L["Show IDs at all times"])
 					</OnLoad>
 					<OnClick>
-						AtlasLootOptions_ItemIDToggle()
+						AtlasLoot.Options_ItemIDToggle()
 					</OnClick>
 				</Scripts>
 			</CheckButton>
@@ -1051,12 +858,11 @@
 				</Anchors>
 				<Scripts>
 					<OnLoad>
-						local AL = AtlasLoot.L
-						_G[this:GetName().."Text"]:SetText(AL["Show Minimap Button"])
+						_G[this:GetName().."Text"]:SetText(AtlasLoot.L["Show Minimap Button"])
 					</OnLoad>
 					<OnClick>
 						AtlasLootCharDB.MinimapButton = not AtlasLootCharDB.MinimapButton
-						AtlasLootMinimapButton_Init()
+						AtlasLoot.MinimapButton_Toggle()
 					</OnClick>
 				</Scripts>
 			</CheckButton>
@@ -1068,23 +874,15 @@
 				</Anchors>
 				<Scripts>
 					<OnLoad>
-						local AL = AtlasLoot.L
-						_G[this:GetName().."Text"]:SetText(AL["Hide AtlasLoot Panel"])
+						_G[this:GetName().."Text"]:SetText(AtlasLoot.L["Hide AtlasLoot Panel"])
 					</OnLoad>
 					<OnClick>
-						if AtlasLootCharDB.HidePanel == true then
-							AtlasLootCharDB.HidePanel = false
-							if (AtlasFrame) then
-								if AtlasFrame:IsVisible() then
-									AtlasLootPanel:Show()
-								end
-							end
-						else
-							AtlasLootCharDB.HidePanel = true
-							if (AtlasFrame) then
-								if AtlasFrame:IsVisible() then
-									AtlasLootPanel:Hide()
-								end
+						AtlasLootCharDB.HidePanel = not AtlasLootCharDB.HidePanel
+							if AtlasLootCharDB.HidePanel then
+						if AtlasFrame then
+								AtlasLootPanel:Show()
+							else
+								AtlasLootPanel:Hide()
 							end
 						end
 					</OnClick>
@@ -1098,30 +896,13 @@
 				</Anchors>
 				<Scripts>
 					<OnLoad>
-						local AL = AtlasLoot.L
-						_G[this:GetName().."Text"]:SetText(AL["Make Loot Table Opaque"])
+						_G[this:GetName().."Text"]:SetText(AtlasLoot.L["Make Loot Table Opaque"])
 					</OnLoad>
 					<OnClick>
-						AtlasLootOptions_OpaqueToggle()
+						AtlasLoot.Options_OpaqueToggle()
 					</OnClick>
 				</Scripts>
 			</CheckButton>
-			<!-- <CheckButton name="$parentItemSpam" inherits="OptionsCheckButtonTemplate">
-				<Anchors>
-					<Anchor point="TOP">
-						<Offset x="20" y="-160"/>
-					</Anchor>
-				</Anchors>
-				<Scripts>
-					<OnLoad>
-						local AL = AtlasLoot.L
-						_G[this:GetName().."Text"]:SetText(AL["Suppress text spam when querying items"])
-					</OnLoad>
-					<OnClick>
-						AtlasLootOptions_ItemSpam()
-					</OnClick>
-				</Scripts>
-			</CheckButton> -->
 			<Slider name="$ParentSliderButtonRad" inherits="OptionsSliderTemplate">
 				<Size x="240" y="16"/>
 				<Anchors>
@@ -1131,14 +912,10 @@
 				</Anchors>
 				<Scripts>
 					<OnLoad>
-						local AL = AtlasLoot.L
-						AtlasLootOptions_SetupSlider(AL["Button Radius"], 0, 200, 1)
+						AtlasLoot.Options_SetupSlider(this, "MinimapButtonRadius", AtlasLoot.L["Button Radius"], 0, 200, 1)
 					</OnLoad>
 					<OnValueChanged>
-						local AL = AtlasLoot.L
-						AtlasLootOptions_UpdateSlider(AL["Button Radius"])
-						AtlasLootCharDB.MinimapButtonRadius = this:GetValue()
-						AtlasLootMinimapButton_UpdatePosition()
+						AtlasLoot.Options_UpdateSlider(this)
 					</OnValueChanged>
 				</Scripts>
 			</Slider>
@@ -1151,14 +928,10 @@
 				</Anchors>
 				<Scripts>
 					<OnLoad>
-						local AL = AtlasLoot.L
-						AtlasLootOptions_SetupSlider(AL["Button Position"], 0, 360, 1)
+						AtlasLoot.Options_SetupSlider(this, "MinimapButtonPosition", AtlasLoot.L["Button Position"], 0, 360, 1)
 					</OnLoad>
 					<OnValueChanged>
-						local AL = AtlasLoot.L
-						AtlasLootOptions_UpdateSlider(AL["Button Position"])
-						AtlasLootCharDB.MinimapButtonPosition = this:GetValue()
-						AtlasLootMinimapButton_UpdatePosition()
+						AtlasLoot.Options_UpdateSlider(this)
 					</OnValueChanged>
 				</Scripts>
 			</Slider>
@@ -1171,11 +944,10 @@
 				</Anchors>
 				<Scripts>
 					<OnLoad>
-						local AL = AtlasLoot.L
-						this:SetText(AL["Done"])
+						this:SetText(AtlasLoot.L["Done"])
 					</OnLoad>
 					<OnClick>
-						AtlasLootOptions_Toggle()
+						AtlasLoot.Options_Toggle()
 					</OnClick>
 				</Scripts>
 			</Button>
@@ -1188,11 +960,10 @@
 				</Anchors>
 				<Scripts>
 					<OnLoad>
-						local AL = AtlasLoot.L
-						this:SetText(AL["Reset Position"])
+						this:SetText(AtlasLoot.L["Reset Position"])
 					</OnLoad>
 					<OnClick>
-						AtlasLootOptions_ResetPosition()
+						AtlasLoot.Options_ResetPosition()
 					</OnClick>
 				</Scripts>
 			</Button>
@@ -1205,19 +976,17 @@
 				</Anchors>
 				<Scripts>
 					<OnLoad>
-						local AL = AtlasLoot.L
-						this:SetText(AL["Default Settings"])
+						this:SetText(AtlasLoot.L["Default Settings"])
 					</OnLoad>
 					<OnClick>
-						AtlasLootOptions_DefaultSettings()
+						AtlasLoot.Options_DefaultSettings()
 					</OnClick>
 				</Scripts>
 			</Button>
 		</Frames>
 		<Scripts>
 			<OnLoad>
-				local AL = AtlasLoot.L
-				AtlasLootOptionsFrame_Title:SetText(AL["Atlasloot Options"])
+				AtlasLootOptionsFrame_Title:SetText(AtlasLoot.L["Atlasloot Options"])
 			</OnLoad>
 			<OnMouseDown>
 				if this:IsMovable() then
@@ -1228,276 +997,6 @@
 				this:StopMovingOrSizing()
 			</OnMouseUp>
 		</Scripts>
-	</Frame>
-
-	<Frame name="AtlasLootPanel" parent="UIParent" hidden="true" enableMouse="true">
-		<Size x="630" y="105"/>
-		<Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background" edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
-			<BackgroundInsets left="11" right="12" top="12" bottom="11"/>
-			<TileSize val="32"/>
-			<EdgeSize val="32"/>
-		</Backdrop>
-		<Layers>
-			<Layer level="ARTWORK">
-				<Texture name="$parent_Title" file="Interface\DialogFrame\UI-DialogBox-Header">
-					<Size x="275" y="59"/>
-					<Anchors>
-						<Anchor point="BOTTOM">
-							<Offset x="0" y="-32"/>
-						</Anchor>
-					</Anchors>
-				</Texture>
-				<FontString inherits="GameFontNormal" text="Atlasloot Enhanced">
-					<Anchors>
-						<Anchor point="BOTTOM" relativeTo="$parent_Title" relativePoint="BOTTOM">
-							<Offset x="0" y="35"/>
-						</Anchor>
-					</Anchors>
-				</FontString>
-			</Layer>
-		</Layers>
-		<Frames>
-			<Button name="$parent_WorldEvents" inherits="UIPanelButtonTemplate">
-				<Size x="120" y="20"/>
-				<Anchors>
-					<Anchor point="LEFT" relativeTo="$parent" relativePoint="LEFT">
-						<Offset x="15" y="29"/>
-					</Anchor>
-				</Anchors>
-				<Scripts>
-					<OnClick>
-						AtlasLoot_ShowItemsFrame("WORLDEVENTMENU")
-					</OnClick>
-					<OnShow>
-						local AL = AtlasLoot.L
-						this:SetText(AL["World Events"])
-						this:SetFrameLevel((this:GetParent()):GetFrameLevel() + 1)
-					</OnShow>
-				</Scripts>
-			</Button>
-			<Button name="$parent_Sets" inherits="UIPanelButtonTemplate">
-				<Size x="120" y="20"/>
-				<Anchors>
-					<Anchor point="LEFT" relativeTo="$parent_WorldEvents" relativePoint="RIGHT"/>
-				</Anchors>
-				<Scripts>
-					<OnClick>
-						AtlasLoot_ShowItemsFrame("SETMENU")
-					</OnClick>
-					<OnShow>
-						local AL = AtlasLoot.L
-						this:SetText(AL["Collections"])
-						this:SetFrameLevel((this:GetParent()):GetFrameLevel() + 1)
-					</OnShow>
-				</Scripts>
-			</Button>
-			<Button name="$parent_Reputation" inherits="UIPanelButtonTemplate">
-				<Size x="120" y="20"/>
-				<Anchors>
-					<Anchor point="LEFT" relativeTo="$parent_Sets" relativePoint="RIGHT"/>
-				</Anchors>
-				<Scripts>
-					<OnClick>
-						AtlasLoot_ShowItemsFrame("REPMENU")
-					</OnClick>
-					<OnShow>
-						local AL = AtlasLoot.L
-						this:SetText(AL["Factions"])
-						this:SetFrameLevel((this:GetParent()):GetFrameLevel() + 1)
-					</OnShow>
-				</Scripts>
-			</Button>
-			<Button name="$parent_PvP" inherits="UIPanelButtonTemplate">
-				<Size x="120" y="20"/>
-				<Anchors>
-					<Anchor point="LEFT" relativeTo="$parent_Reputation" relativePoint="RIGHT"/>
-				</Anchors>
-				<Scripts>
-					<OnClick>
-						AtlasLoot_ShowItemsFrame("PVPMENU")
-					</OnClick>
-					<OnShow>
-						local AL = AtlasLoot.L
-						this:SetText(AL["PvP Rewards"])
-						this:SetFrameLevel((this:GetParent()):GetFrameLevel() + 1)
-					</OnShow>
-				</Scripts>
-			</Button>
-			<Button name="$parent_Crafting" inherits="UIPanelButtonTemplate">
-				<Size x="120" y="20"/>
-				<Anchors>
-					<Anchor point="LEFT" relativeTo="$parent_PvP" relativePoint="RIGHT"/>
-				</Anchors>
-				<Scripts>
-					<OnClick>
-						AtlasLoot_ShowItemsFrame("CRAFTINGMENU")
-					</OnClick>
-					<OnShow>
-						local AL = AtlasLoot.L
-						this:SetText(AL["Crafting"])
-						this:SetFrameLevel((this:GetParent()):GetFrameLevel() + 1)
-					</OnShow>
-				</Scripts>
-			</Button>
-			<Button name="$parent_Options" inherits="UIPanelButtonTemplate">
-				<Size x="120" y="20"/>
-				<Anchors>
-					<Anchor point="TOP" relativeTo="$parent_WorldEvents" relativePoint="BOTTOM">
-						<Offset x="0" y="-2"/>
-					</Anchor>
-				</Anchors>
-				<Scripts>
-					<OnClick>
-						AtlasLootOptions_Toggle()
-					</OnClick>
-					<OnShow>
-						local AL = AtlasLoot.L
-						this:SetText(AL["Options"])
-						this:SetFrameLevel((this:GetParent()):GetFrameLevel() + 1)
-					</OnShow>
-				</Scripts>
-			</Button>
-			<Button name="$parent_WishList" inherits="UIPanelButtonTemplate">
-				<Size x="120" y="20"/>
-				<Anchors>
-					<Anchor point="TOP" relativeTo="$parent_Options" relativePoint="BOTTOM">
-						<Offset x="0" y="-2"/>
-					</Anchor>
-				</Anchors>
-				<Scripts>
-					<OnClick>
-						AtlasLoot_ShowWishList()
-					</OnClick>
-					<OnShow>
-						local AL = AtlasLoot.L
-						this:SetText(AL["WishList"])
-						this:SetFrameLevel((this:GetParent()):GetFrameLevel() + 1)
-					</OnShow>
-					<OnEnter>
-						local AL = AtlasLoot.L
-						GameTooltip:ClearLines()
-						GameTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 5)
-						GameTooltip:AddLine("|cffFFFFFF"..AL["WishList"].."|r")
-						GameTooltip:AddLine(AL["ALT+Click on item to add or remove it from WishList"])
-						GameTooltip:Show()
-					</OnEnter>
-					<OnLeave>
-						GameTooltip:Hide()
-					</OnLeave>
-				</Scripts>
-			</Button>
-			<Button name="$parent_Preset1" inherits="AtlasLootQuickLookButtonTemplate" id="1">
-				<Size x="120" y="20"/>
-				<Anchors>
-					<Anchor point="TOP" relativeTo="$parent_Sets" relativePoint="BOTTOM"><Offset x="0" y="-2"/></Anchor>
-				</Anchors>
-			</Button>
-			<Button name="$parent_Preset2" inherits="AtlasLootQuickLookButtonTemplate" id="2">
-				<Size x="120" y="20"/>
-				<Anchors>
-					<Anchor point="TOP" relativeTo="$parent_Reputation" relativePoint="BOTTOM"><Offset x="0" y="-2"/></Anchor>
-				</Anchors>
-			</Button>
-			<Button name="$parent_Preset3" inherits="AtlasLootQuickLookButtonTemplate" id="3">
-				<Size x="120" y="20"/>
-				<Anchors>
-					<Anchor point="TOP" relativeTo="$parent_PvP" relativePoint="BOTTOM"><Offset x="0" y="-2"/></Anchor>
-				</Anchors>
-			</Button>
-			<Button name="$parent_Preset4" inherits="AtlasLootQuickLookButtonTemplate" id="4">
-				<Size x="120" y="20"/>
-				<Anchors>
-					<Anchor point="TOP" relativeTo="$parent_Crafting" relativePoint="BOTTOM"><Offset x="0" y="-2"/></Anchor>
-				</Anchors>
-			</Button>
-			<EditBox name="AtlasLootSearchBox" inherits="InputBoxTemplate" letters="100" toplevel="true" autoFocus="false">
-				<Size x="200" y="35"/>
-				<TextInsets left="0" right="8" top="0" bottom="0"/>
-				<Anchors>
-					<Anchor point="LEFT" relativeTo="$parent_WishList" relativePoint="RIGHT">
-						<Offset x="8" y="0"/>
-					</Anchor>
-				</Anchors>
-				<Scripts>
-					<OnEnterPressed>
-						AtlasLoot:Search(this:GetText())
-						this:ClearFocus()
-					</OnEnterPressed>
-				</Scripts>
-			</EditBox>
-			<Button name="AtlasLootSearchButton" inherits="UIPanelButtonTemplate2" parent="AtlasLootSearchBox">
-				<Size x="69" y="21"/>
-				<Anchors>
-					<Anchor point="LEFT" relativePoint="RIGHT"/>
-				</Anchors>
-				<Scripts>
-					<OnShow>
-						local AL = AtlasLoot.L
-						this:SetText(AL["Search"])
-						this:SetFrameLevel((this:GetParent()):GetFrameLevel() + 1)
-					</OnShow>
-					<OnClick>
-						AtlasLoot:Search(AtlasLootSearchBox:GetText())
-						AtlasLootSearchBox:ClearFocus()
-					</OnClick>
-				</Scripts>
-			</Button>
-			<Button name="AtlasLootSearchOptionsButton" parent="AtlasLootSearchButton">
-				<Size x="28" y="28"/>
-				<Anchors>
-					<Anchor point="LEFT" relativeTo="AtlasLootSearchButton" relativePoint="RIGHT">
-						<Offset x="-2" y="0"/>
-					</Anchor>
-				</Anchors>
-				<NormalTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Up"/>
-				<PushedTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Down"/>
-				<DisabledTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Disabled"/>
-				<HighlightTexture file="Interface\Buttons\UI-Common-MouseHilight" alphaMode="ADD"/>
-				<Scripts>
-					<OnShow>
-						this:SetFrameLevel((this:GetParent()):GetFrameLevel() + 1)
-					</OnShow>
-					<OnClick>
-						AtlasLoot:ShowSearchOptions(this)
-					</OnClick>
-				</Scripts>
-			</Button>
-			<Button name="AtlasLootSearchClearButton" inherits="UIPanelButtonTemplate2" parent="AtlasLootSearchBox">
-				<Size x="58" y="21"/>
-				<Anchors>
-					<Anchor point="LEFT" relativeTo="AtlasLootSearchOptionsButton" relativePoint="RIGHT">
-						<Offset x="-2" y="0"/>
-					</Anchor>
-				</Anchors>
-				<Scripts>
-					<OnShow>
-						local AL = AtlasLoot.L
-						this:SetText(AL["Clear"])
-						this:SetFrameLevel((this:GetParent()):GetFrameLevel() + 1)
-					</OnShow>
-					<OnClick>
-						AtlasLootSearchBox:SetText("")
-						AtlasLootSearchBox:ClearFocus()
-					</OnClick>
-				</Scripts>
-			</Button>
-			<Button name="AtlasLootLastResultButton" inherits="UIPanelButtonTemplate">
-				<Size x="120" y="20"/>
-				<Anchors>
-					<Anchor point="LEFT" relativeTo="AtlasLootSearchClearButton" relativePoint="RIGHT"/>
-				</Anchors>
-				<Scripts>
-					<OnShow>
-						local AL = AtlasLoot.L
-						this:SetText(AL["Last Result"])
-						this:SetFrameLevel((this:GetParent()):GetFrameLevel() + 1)
-					</OnShow>
-					<OnClick>
-						AtlasLoot:ShowSearchResult()
-					</OnClick>
-				</Scripts>
-			</Button>
-		</Frames>
 	</Frame>
 
 	<Button name="AtlasLootMinimapButton" parent="Minimap" enableMouse="true" hidden="true">
@@ -1512,8 +1011,8 @@
 		<HighlightTexture alphaMode="ADD" file="Interface\Minimap\UI-Minimap-ZoomButton-Highlight"/>
 		<Scripts>
 			<OnLoad>
-				this:RegisterForDrag("RightButton")
-				this:RegisterForClicks("LeftButtonUp", "MiddleButtonUp")
+				this:RegisterForDrag("LeftButton", "RightButton")
+				this:RegisterForClicks("LeftButtonUp", "RightButtonUp")
 				this:SetFrameLevel(Minimap:GetFrameLevel() + 3)
 				this.aldragme = false
 			</OnLoad>
@@ -1524,15 +1023,13 @@
 				this.aldragme = false
 			</OnDragStop>
 			<OnUpdate>
-				if this.aldragme then
-					AtlasLootMinimapButton_BeingDragged()
-				end
+				AtlasLoot.MinimapButton_OnUpdate(this, arg1)
 			</OnUpdate>
 			<OnClick>
-				AtlasLootMinimapButton_OnClick(arg1)
+				AtlasLoot.MinimapButton_OnClick(this, arg1)
 			</OnClick>
 			<OnEnter>
-				AtlasLootMinimapButton_OnEnter()
+				AtlasLoot.MinimapButton_OnEnter(this)
 			</OnEnter>
 			<OnLeave>
 				GameTooltip:Hide()

@@ -1,23 +1,12 @@
 <Bindings>
 	<Binding name="ATLASLOOT_TOGGLE" header="ATLASLOOT_TITLE">
-		AtlasLoot_Toggle()
+		AtlasLoot.DefaultFrame_Toggle()
 	</Binding>
 	<Binding name="ATLASLOOT_OPTIONS">
-		AtlasLootOptions_Toggle()
-	</Binding>
-	<Binding name="ATLASLOOT_QL1">
-		AtlasLoot_QuickLook_OnClick(1)
-	</Binding>
-	<Binding name="ATLASLOOT_QL2">
-		AtlasLoot_QuickLook_OnClick(2)
-	</Binding>
-	<Binding name="ATLASLOOT_QL3">
-		AtlasLoot_QuickLook_OnClick(3)
-	</Binding>
-	<Binding name="ATLASLOOT_QL4">
-		AtlasLoot_QuickLook_OnClick(4)
+		AtlasLoot.Options_Toggle()
 	</Binding>
 	<Binding name="ATLASLOOT_WISHLIST">
-		AtlasLoot_ShowWishList()
+		ShowUIPanel(_G[AtlasLoot_AnchorPoint[2]])
+		AtlasLoot.ShowWishList()
 	</Binding>
 </Bindings>

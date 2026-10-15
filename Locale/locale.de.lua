@@ -21,7 +21,6 @@ AL:RegisterTranslations("deDE", function() return {
     ["Accesories and Weapons"] = "Zubehör und Waffen",
     ["Accessories"] = "Zubehör",
     ["Adamantite Battlegear"] = "Adamantitschlachtrüstung",
-    ["Add to QuickLooks:"] = "Zu QuickLook hinzufügen",
     ["Aether-tech Adept"] = "Äthertechnikeradept",
     ["Aether-tech Assistant"] = "Äthertechnikerassistent",
     ["Aether-tech Master"] = "Meisteräthertechniker",

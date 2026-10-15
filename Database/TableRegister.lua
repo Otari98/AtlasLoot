@@ -7,9 +7,9 @@ inherant title to the loot table, given the origins of the mod as an Atlas plugi
 
 local AL = AtlasLoot.L
 local GREY = "|cff999999"
-local RED = "|cffff0000"
+local RED = RED_FONT_COLOR_CODE
 local WHITE = "|cffFFFFFF"
-local GREEN = "|cff1eff00"
+local GREEN = GREEN_FONT_COLOR_CODE
 local PURPLE = "|cff9F3FFF"
 local BLUE = "|cff0070dd"
 local ORANGE = "|cffFF8400"
@@ -871,9 +871,9 @@ AtlasLoot_TableNames = {
 	["AlchemyProtectionPots1"] = { AL["Alchemy"]..": "..AL["Protection Potions"], "AtlasLootCrafting" },
 	["AlchemyHealingAndMana1"] = { AL["Alchemy"]..": "..AL["Health and Mana Potions"], "AtlasLootCrafting" },
 	["AlchemyTransmutes1"] = { AL["Alchemy"]..": "..AL["Transmutes"], "AtlasLootCrafting" },
-	["AlchemyDefensive1"] = { AL["Alchemy"]..": "..AL["Defensive Potions and Elixirs"], "AtlasLootCrafting" },
-	["AlchemyOffensive1"] = { AL["Alchemy"]..": "..AL["Offensive Potions and Elixirs"], "AtlasLootCrafting" },
-	["AlchemyOffensive2"] = { AL["Alchemy"]..": "..AL["Offensive Potions and Elixirs"], "AtlasLootCrafting" },
+	["AlchemyDefensive1"] = { AL["Alchemy"]..": "..AL["Defensive Potions"], "AtlasLootCrafting" },
+	["AlchemyOffensive1"] = { AL["Alchemy"]..": "..AL["Offensive Potions"], "AtlasLootCrafting" },
+	["AlchemyOffensive2"] = { AL["Alchemy"]..": "..AL["Offensive Potions"], "AtlasLootCrafting" },
 	["AlchemyMisc1"] = { AL["Alchemy"]..": "..AL["Miscellaneous"], "AtlasLootCrafting" },
 	--BlackSmithing
 	["SmithingApprentice1"] = { AL["Blacksmithing"]..": "..AL["Apprentice"], "AtlasLootCrafting" },
@@ -2060,7 +2060,6 @@ AtlasLoot_TableNamesBoss = {
 		--Zandalar Tribe
 		["Zandalar1"] = { AL["Zandalar Tribe"]..": "..AL["Friendly"].."/"..AL["Honored"], "AtlasLootRepItems" },
 		["Zandalar2"] = { AL["Zandalar Tribe"]..": "..AL["Revered"].."/"..AL["Exalted"], "AtlasLootRepItems" },
-
 		["Helf"] = { AL["Silvermoon Remnant"], "AtlasLootRepItems" },
 		["Helf2"] = { AL["Silvermoon Remnant"], "AtlasLootRepItems" },
 		["Helf3"] = { AL["Silvermoon Remnant"], "AtlasLootRepItems" },
@@ -2096,9 +2095,9 @@ AtlasLoot_TableNamesBoss = {
 		["AlchemyProtectionPots1"] = { AL["Protection Potions"], "AtlasLootCrafting" },
 		["AlchemyHealingAndMana1"] = { AL["Health and Mana Potions"], "AtlasLootCrafting" },
 		["AlchemyTransmutes1"] = { AL["Transmutes"], "AtlasLootCrafting" },
-		["AlchemyDefensive1"] = { AL["Defensive Potions and Elixirs"], "AtlasLootCrafting" },
-		["AlchemyOffensive1"] = { AL["Offensive Potions and Elixirs"], "AtlasLootCrafting" },
-		["AlchemyOffensive2"] = { AL["Offensive Potions and Elixirs"], "AtlasLootCrafting" },
+		["AlchemyDefensive1"] = { AL["Defensive Potions"], "AtlasLootCrafting" },
+		["AlchemyOffensive1"] = { AL["Offensive Potions"], "AtlasLootCrafting" },
+		["AlchemyOffensive2"] = { AL["Offensive Potions"], "AtlasLootCrafting" },
 		["AlchemyMisc1"] = { AL["Miscellaneous"], "AtlasLootCrafting" },
 		--BlackSmithing
 		["SmithingApprentice1"] = { AL["Blacksmithing"]..": "..AL["Apprentice"], "AtlasLootCrafting" },
