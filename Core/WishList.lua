@@ -181,10 +181,10 @@ function AtlasLoot.CategorizeWishList(info)
     end
 
     -- set correct button indexes
+    local buttonIndex = 1
     for i = 1, table.getn(result) do
-        local modulo = math.mod(i, 30)
-        local buttonIndex = modulo > 0 and modulo or 30
         result[i][1] = buttonIndex
+        buttonIndex = buttonIndex + (buttonIndex < 30 and 1 or -29)
     end
 
     return result
@@ -204,13 +204,12 @@ function AtlasLoot.GetWishListPage(page)
     if page > pageMax then page = pageMax end
     currentPage = page
 
-    -- Table copy
-    local result = AtlasLoot.wipe(WishListSlice)
+    AtlasLoot.wipe(WishListSlice)
     local start = (page - 1) * 30 + 1
     for i = start, start + 29 do
         if not AtlasLoot.WishList[i] then break end
-        table.insert(result, AtlasLoot.WishList[i])
+        table.insert(WishListSlice, AtlasLoot.WishList[i])
     end
 
-    return result, pageMax
+    return WishListSlice, pageMax
 end

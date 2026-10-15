@@ -605,23 +605,82 @@ for k, v in pairs(TextMap) do
 end
 table.sort(SortedTextMap, function(a, b) return strlen(a.value) > strlen(b.value) end)
 
-local mem = {}
-function AtlasLoot.DecompressText(text)
-    if not text then return nil end
-    if mem[text] then return mem[text] end
-    local input = text
-    for k, v in ipairs(SortedTextMap) do
-        text = gsub(text, v.key, v.value)
+do
+    local mem = {}
+    function AtlasLoot.DecompressText(text)
+        if not text then return nil end
+        if mem[text] then return mem[text] end
+        local input = text
+        for k, v in ipairs(SortedTextMap) do
+            text = gsub(text, v.key, v.value)
+        end
+        mem[input] = text
+        return text
     end
-    mem[input] = text
-    return text
 end
 
-function AtlasLoot.CompressText(text)
-    if not text then return nil end
-    for k, v in ipairs(SortedTextMap) do
-        local _v = gsub(v.value, "([%(%)%-%+%*%%%?%.%$%^])", "%%%1")
-        text = gsub(text, _v, v.key)
+do
+    local mem = {}
+    function AtlasLoot.CompressText(text)
+        if not text then return nil end
+        if mem[text] then return mem[text] end
+        local result = text
+        for k, v in ipairs(SortedTextMap) do
+            local _v = gsub(v.value, "([%(%)%-%+%*%%%?%.%$%^])", "%%%1")
+            result = gsub(result, _v, v.key)
+        end
+        mem[text] = result
+        return result
     end
-    return text
+end
+
+do
+    local Gear = {
+        [L["One-Handed Axes"]] = L["Axe"],
+        [L["Two-Handed Axes"]] = L["Axe"],
+        [L["Bows"]] = L["Bow"],
+        [L["Guns"]] = L["Gun"],
+        [L["One-Handed Maces"]] = L["Mace"],
+        [L["Two-Handed Maces"]] = L["Mace"],
+        [L["Polearms"]] = L["Polearm"],
+        [L["One-Handed Swords"]] = L["Sword"],
+        [L["Two-Handed Swords"]] = L["Sword"],
+        [L["Staves"]] = L["Staff"],
+        [L["Fist Weapons"]] = L["Fist Weapon"],
+        [L["Daggers"]] = L["Dagger"],
+        [L["Thrown"]] = L["Thrown"],
+        [L["Crossbows"]] = L["Crossbow"],
+        [L["Wands"]] = L["Wand"],
+        [L["Cloth"]] = L["Cloth"],
+        [L["Leather"]] = L["Leather"],
+        [L["Mail"]] = L["Mail"],
+        [L["Plate"]] = L["Plate"],
+        [L["Shields"]] = L["Shield"],
+        [L["Librams"]] = L["Libram"],
+        [L["Idols"]] = L["Idol"],
+        [L["Totems"]] = L["Totem"],
+    }
+    local mem = {}
+    function AtlasLoot.GetItemSubtext(itemID)
+        if not itemID then return "" end
+        if mem[itemID] then return mem[itemID] end
+        local itemName, itemLink, itemQuality, itemLevel, itemType, itemSubType, itemCount, itemEquipLoc, itemTexture = GetItemInfo(itemID)
+        local text = ""
+        if itemEquipLoc ~= "" and _G[itemEquipLoc] and itemEquipLoc ~= "INVTYPE_BAG" then
+            if Gear[itemSubType] and itemEquipLoc ~= "INVTYPE_CLOAK" and itemEquipLoc ~= "INVTYPE_BODY" then
+                text = _G[itemEquipLoc]..", "..Gear[itemSubType]
+            else
+                text = _G[itemEquipLoc]
+            end
+            mem[itemID] = text
+            return text
+        end
+        if Gear[itemSubType] then
+            text = Gear[itemSubType]
+        else
+            text = itemSubType and itemSubType or ""
+        end
+        mem[itemID] = text
+        return text
+    end
 end

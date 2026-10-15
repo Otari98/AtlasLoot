@@ -355,31 +355,29 @@ function AtlasLoot.ShowItemsFrame(dataID, parentID, title)
     AtlasLootItemsFrame.refresh[3] = title
     AtlasLootItemsFrame.refresh[4] = AtlasLoot.AnchorPoint
 
-    if isDifferentPage then
-        for i = 1, 30 do
-            local button = _G["AtlasLootItem_"..i]
-            if UIFrameIsFading(button) or UIFrameIsFlashing(button) then
-                UIFrameFadeRemoveFrame(button)
-                UIFrameFlashRemoveFrame(button)
-                button:SetAlpha(1)
-                button.flashTimer = nil
-            end
-            button:Hide()
-            button.itemID = nil
-            button.itemIDExtra = nil
-            button.itemIDName = nil
-            button.dressingroomID = nil
-            button.droprate = nil
-            button.container = nil
-            button.lootpage = nil
-            button.sourcePage = nil
-            button.dataSource = nil
-            button._IconBorder:SetVertexColor(1, 1, 1)
-            button._Quantity:SetText("")
-            for j = 1, 5 do
-                button["_PriceText"..j]:Hide()
-                button["_PriceIcon"..j]:Hide()
-            end
+    for i = 1, 30 do
+        local button = _G["AtlasLootItem_"..i]
+        if UIFrameIsFading(button) or UIFrameIsFlashing(button) then
+            UIFrameFadeRemoveFrame(button)
+            UIFrameFlashRemoveFrame(button)
+            button:SetAlpha(1)
+            button.flashTimer = nil
+        end
+        button:Hide()
+        button.itemID = nil
+        button.itemIDExtra = nil
+        button.itemIDName = nil
+        button.dressingroomID = nil
+        button.droprate = nil
+        button.container = nil
+        button.lootpage = nil
+        button.sourcePage = nil
+        button.dataSource = nil
+        button._IconBorder:SetVertexColor(1, 1, 1)
+        button._Quantity:SetText("")
+        for j = 1, 5 do
+            button["_PriceText"..j]:Hide()
+            button["_PriceIcon"..j]:Hide()
         end
     end
 
@@ -558,7 +556,7 @@ function AtlasLoot.ShowItemsFrame(dataID, parentID, title)
                 button.container = containerData
                 for row = 1, table.getn(containerData) do
                     for item = 1, table.getn(containerData[row]) do
-                        AtlasLoot.CacheItem(containerData[row][item][1])
+                        AtlasLoot.CacheItem(containerData[row][item])
                     end
                 end
                 containerBorder:Show()
@@ -1249,10 +1247,10 @@ function AtlasLoot.ShowContainerFrame(self)
                 itemButton:SetID(buttonIndex)
                 AtlasLoot.ContainerButtons[buttonIndex] = itemButton
             end
-            local itemID = data[i][j][1]
+            local itemID = data[i][j]
             AtlasLoot.CacheItem(itemID)
             itemButton.itemID = itemID
-            itemButton.itemIDExtra = data[i][j][2]
+            itemButton.itemIDExtra = AtlasLoot.GetItemSubtext(itemID)
             itemButton.dressingroomID = itemID
             local _, _, quality, _, _, _, _, _, tex = GetItemInfo(itemID)
             local r, g, b = 1, 1, 1

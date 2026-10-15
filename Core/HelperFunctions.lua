@@ -64,7 +64,7 @@ function AtlasLoot.GetParentButton(itemID)
         if button.container then
             for k, v in pairs(button.container) do
                 for k2, v2 in pairs(v) do
-                    if v2[1] == itemID then return button, true end
+                    if v2 == itemID then return button, true end
                 end
             end
         end

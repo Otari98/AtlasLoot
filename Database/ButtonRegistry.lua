@@ -92,6 +92,11 @@ AtlasLoot_ButtonRegistry = {
         Back_Page = "CRAFTINGMENU"
     },
     ["CRAFTSET"] = {
+        Back_Page = "CRAFTINGMENU",
+        Next_Page = "CRAFTSET2",
+    },
+    ["CRAFTSET2"] = {
+        Prev_Page = "CRAFTSET",
         Back_Page = "CRAFTINGMENU"
     },
 

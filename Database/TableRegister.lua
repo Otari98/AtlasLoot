@@ -1130,6 +1130,7 @@ AtlasLoot_TableNames = {
     ["WORLDEVENTMENU"] = { AL["World Events"], "MENUS" },
     ["ALCHEMYMENU"] = { AL["Alchemy"], "MENUS" },
     ["CRAFTSET"] = { AL["Crafted Sets"], "MENUS" },
+    ["CRAFTSET2"] = { AL["Crafted Sets"], "MENUS" },
     ["CRAFTINGMENU"] = { AL["Crafting"], "MENUS" },
     ["SMITHINGMENU"] = { AL["Blacksmithing"], "MENUS" },
     ["ENCHANTINGMENU"] = { AL["Enchanting"], "MENUS" },

@@ -46,7 +46,7 @@ function AtlasLoot.Search(text)
                         local textData = value[4]
                         local subTextData = value[5]
                         -- item
-                        if type(mainData) == "number" and mainData > 0 then
+                        if type(mainData) == "number" and mainData > 0 and type(textData) == "string" then
                             local itemName, link, quality = GetItemInfo(mainData)
                             if not itemName then
                                 itemName = string.gsub(textData, "=q%d+=", "")
@@ -134,13 +134,12 @@ function AtlasLoot.GetSearchResultPage(page)
     if page > pageMax then page = pageMax end
     currentPage = page
 
-    -- Table copy
-    local result = AtlasLoot.wipe(SearchResultSlice)
+    AtlasLoot.wipe(SearchResultSlice)
     local start = (page - 1) * 30 + 1
     for i = start, start + 29 do
         if not AtlasLoot.SearchResult[i] then break end
-        table.insert(result, AtlasLoot.SearchResult[i])
+        table.insert(SearchResultSlice, AtlasLoot.SearchResult[i])
     end
 
-    return result, pageMax
+    return SearchResultSlice, pageMax
 end
