@@ -139,7 +139,7 @@ local function HookTooltip(tooltip)
         if GetInboxItemLink then
             self.itemID = AtlasLoot.GetIDFromItemLink(GetInboxItemLink(mailID, attachmentIndex))
         else
-            self.itemID = GetItemIDByName(GetInboxItem(mailID, attachmentIndex))
+            self.itemID = AtlasLoot.GetItemIDByName(GetInboxItem(mailID, attachmentIndex))
         end
         ExtendTooltip(self)
     end
@@ -193,7 +193,7 @@ local function HookTooltip(tooltip)
         if itemLink then
             self.itemID = AtlasLoot.GetIDFromItemLink(itemLink)
         else
-            self.itemID = tonumber(GetItemIDByName(name))
+            self.itemID = AtlasLoot.GetItemIDByName(name)
         end
         ExtendTooltip(self)
     end
