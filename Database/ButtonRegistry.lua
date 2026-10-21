@@ -1,6 +1,4 @@
-﻿local AL = AtlasLoot.L
-
-AtlasLoot_ButtonRegistry = {
+﻿AtlasLoot_ButtonRegistry = {
     -- Dungeons & Raids
     ["DUNGEONSMENU1"] = {
         Next_Page = "DUNGEONSMENU2",

@@ -38,7 +38,7 @@ function AtlasLoot.GetItemLink(itemID)
 end
 
 function AtlasLoot.CheckBagsForReagent(reagentID, numRequired)
-    if not reagentID then return end
+    if not reagentID then return false end
     if not numRequired then numRequired = 1 end
     if not GetItemInfo(reagentID) then return false end
     local numFound = 0

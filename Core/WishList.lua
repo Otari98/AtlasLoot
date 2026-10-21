@@ -1,5 +1,5 @@
 -- File containing functions related to the wish list.
-local AL = AtlasLoot.L
+local L = AtlasLoot.L
 
 AtlasLoot.WishList = nil
 local currentPage = 1
@@ -22,12 +22,12 @@ function AtlasLoot.AddToWishlist(itemID, itemTexture, itemName, extraText, sourc
     -- print(itemID, itemTexture, itemName, extraText, sourcePage)
     for _, v in ipairs(AtlasLootCharDB["WishList"]) do
         if v[2] == itemID then
-            DEFAULT_CHAT_FRAME:AddMessage("["..ORANGE..AL["AtlasLoot"].."|r] "..AtlasLoot.DecompressText(itemName)..RED..AL[" already in the WishList!"])
+            DEFAULT_CHAT_FRAME:AddMessage("["..ORANGE..L["AtlasLoot"].."|r] "..AtlasLoot.DecompressText(itemName)..RED..L[" already in the WishList!"])
             return
         end
     end
     table.insert(AtlasLootCharDB["WishList"], { 0, itemID, itemTexture, itemName, extraText, sourcePage })
-    DEFAULT_CHAT_FRAME:AddMessage("["..ORANGE..AL["AtlasLoot"].."|r] "..AtlasLoot.DecompressText(itemName)..AL[" added to the WishList."])
+    DEFAULT_CHAT_FRAME:AddMessage("["..ORANGE..L["AtlasLoot"].."|r] "..AtlasLoot.DecompressText(itemName)..L[" added to the WishList."])
     AtlasLoot.WishList = AtlasLoot.CategorizeWishList(AtlasLootCharDB["WishList"])
 end
 
@@ -35,7 +35,7 @@ function AtlasLoot.DeleteFromWishList(itemID)
     if itemID and itemID == 0 then return end
     for i, v in ipairs(AtlasLootCharDB["WishList"]) do
         if v[2] == itemID then
-            DEFAULT_CHAT_FRAME:AddMessage("["..ORANGE..AL["AtlasLoot"].."|r] "..AtlasLoot.DecompressText(v[4])..AL[" deleted from the WishList."])
+            DEFAULT_CHAT_FRAME:AddMessage("["..ORANGE..L["AtlasLoot"].."|r] "..AtlasLoot.DecompressText(v[4])..L[" deleted from the WishList."])
             table.remove(AtlasLootCharDB["WishList"], i)
             break
         end
@@ -141,7 +141,7 @@ function AtlasLoot.CategorizeWishList(info)
                     subheadings[dataID] = AtlasLoot.GetWishListSubheadingBoss(dataID)
                 end
                 -- If still cant find it, mark it with Unknown
-                if not subheadings[dataID] then subheadings[dataID] = AL["Unknown"] end
+                if not subheadings[dataID] then subheadings[dataID] = L["Unknown"] end
             end
             -- Build category tables
             if not categories[subheadings[dataID]] then categories[subheadings[dataID]] = {} end
@@ -163,7 +163,7 @@ function AtlasLoot.CategorizeWishList(info)
         if AtlasLootCharDB.WishlistGroupedByDungeon then
             table.insert(result, { 0, 0, "", "=q6="..text, "" })
         else
-            local subtext = AtlasLoot.GetLootTableParentName(dataID) or AL["Unknown"]
+            local subtext = AtlasLoot.GetLootTableParentName(dataID) or L["Unknown"]
             table.insert(result, { 0, 0, "", "=q6="..text, "=q0="..subtext })
         end
 

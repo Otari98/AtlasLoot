@@ -1,4 +1,4 @@
-local AL = AtlasLoot.L
+local L = AtlasLoot.L
 
 AtlasLootBossButtons = AtlasLootBossButtons or {}
 
@@ -1213,7 +1213,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
         { 29, 18842, "INV_Staff_13", "=q4=Staff of Dominance", "=ds=#w9#", "25%" },
     },
     MCTwins = {
-        { 1, 0, "", "=q6="..AL["Basalthar"], "" },
+        { 1, 0, "", "=q6="..L["Basalthar"], "" },
         { 2, 18820, "INV_Misc_StoneTablet_11", "=q4=Talisman of Ephemeral Power", "=ds=#s14#", "11.11%" },
         { 3, 18821, "INV_Jewelry_Ring_07", "=q4=Quick Strike Ring", "=ds=#s13#", "11.11%" },
         { 4, 18823, "INV_Gauntlets_23", "=q4=Aged Core Leather Gloves", "#s9#, #a2#", "11.11%" },
@@ -1231,7 +1231,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
         { 16, 58238, "inv_square_rune_4", "=q4=Runed Wardstone", "=ds=#s14#", "16.66%" },
         { 17, 58237, "INV_Chest_Cloth_18", "=q4=Emberwoven Binding Garments", "#s5#, #a1#", "16.67%" },
         { 18, 58215, "INV_Boots_Chain_01", "=q4=Ash-Forged Greaves", "#s12#, #a4#", "16.67%" },
-        { 20, 0, "", "=q6="..AL["Smoldaris"], "" },
+        { 20, 0, "", "=q6="..L["Smoldaris"], "" },
         { 21, 58241, "Spell_Fire_Volcano", "=q4=Totem of Eruption", "=ds=#s16#, #e17# =q15=#c7#", "25%" },
         { 22, 58213, "INV_Misc_Orb_03", "=q4=Smoldaris’ Fractured Eye", "#s15#", "25%" },
         { 23, 58211, "INV_Misc_Gem_Ruby_01", "=q4=Molten Emberstone", "=ds=#s14#", "25%" },
@@ -2104,7 +2104,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
         { 25, 21269, "INV_Shield_23", "=q4=Blessed Qiraji Bulwark", "=q1=#m4# =ds=#w8#" },
     },
     AQ40Emperors = {
-        { 1, 0, "", "=q6="..AL["Emperor Vek'lor"], "" },
+        { 1, 0, "", "=q6="..L["Emperor Vek'lor"], "" },
         { 2, 20930, "INV_Bracer_18", "=q4=Vek'lor's Diadem", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q12=#c6#=ds=, =q15=#c7#=ds=, =q13=#c1#", "100%", nil, {
             { 21387, 47032, 47037, 21366, 21360 },
             { 21372, 47152, 47157, 21353, 47362, 47367, },
@@ -2122,7 +2122,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
         { 13, 21244, "INV_Weapon_Shortblade_35", "=q4=Blessed Qiraji Pugio", "=q1=#m4# =ds=#h1#, #w4#" },
         { 14, 21272, "INV_Weapon_Rifle_11", "=q4=Blessed Qiraji Musket", "=q1=#m4# =ds=#w5#" },
         { 15, 21269, "INV_Shield_23", "=q4=Blessed Qiraji Bulwark", "=q1=#m4# =ds=#w8#" },
-        { 16, 0, "", "=q6="..AL["Emperor Vek'nilash"], "" },
+        { 16, 0, "", "=q6="..L["Emperor Vek'nilash"], "" },
         { 17, 20926, "INV_Bracer_18", "=q4=Vek'nilash's Circlet", "=q17=#c9#=ds=, =q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "100%", nil, {
             { 21329, 21348, 47214, 21347, 47094 },
             { 21337, 47292, },
@@ -3797,7 +3797,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
         { 6, 51217, "INV_misc_ribbon_01", "=q2=Fashion Coin", "=ds=#e27#", "5%" },
     },
     BRDTheldren = {
-        { 1, 0, "", "=q6=#j3#", "=q0="..AL["Arena Spoils"] },
+        { 1, 0, "", "=q6=#j3#", "=q0="..L["Arena Spoils"] },
         { 2, 22305, "INV_Shoulder_05", "=q3=Ironweave Mantle", "=ds=#s3#, #a1# =q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#, =q13=#c1#", "38%" },
         { 3, 22330, "INV_Misc_Cape_16", "=q3=Shroud of Arcane Mastery", "=ds=#s4#", "19%" },
         { 4, 22318, "INV_Weapon_Bow_12", "=q3=Malgen's Long Bow", "=ds=#w2#", "26%" },
@@ -4157,7 +4157,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
         { 1, 18501, "INV_Enchant_ShardRadientSmall", "=q1=Felvine Shard", "=ds=#m8#" },
     },
     DMEIsalien = {
-        { 1, 0, "", "=q6=#j3#", "=q0="..AL["Isalien"] },
+        { 1, 0, "", "=q6=#j3#", "=q0="..L["Isalien"] },
         { 2, 22304, "INV_Gauntlets_27", "=q3=Ironweave Gloves", "=ds=#s9#, #a1# =q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "17%" },
         { 3, 22472, "INV_Boots_08", "=q3=Boots of Ferocity", "=ds=#s12#, #a2#", "17%" },
         { 4, 22401, "INV_Relics_LibramofHope", "=q3=Libram of Hope", "=ds=#s16#, #e18# =q16=#c4#", "17%" },
@@ -4595,7 +4595,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
         { 18, 51217, "INV_misc_ribbon_01", "=q2=Fashion Coin", "=ds=#e27#", "5%" },
     },
     UBRSValthalak = {
-        { 1, 0, "", "=q6=#j3#", "=q0="..AL["Lord Valthalak"] },
+        { 1, 0, "", "=q6=#j3#", "=q0="..L["Lord Valthalak"] },
         { 2, 22302, "INV_Helmet_30", "=q3=Ironweave Cowl", "=ds=#s1#, #a1# =q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "25%" },
         { 3, 22340, "INV_Jewelry_Necklace_04", "=q3=Pendant of Celerity", "=ds=#s2#", "25%" },
         { 4, 22337, "INV_Misc_Cape_19", "=q3=Shroud of Domination", "=ds=#s4#", "25%" },
@@ -4775,7 +4775,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
         { 29, 51217, "INV_misc_ribbon_01", "=q2=Fashion Coin", "=ds=#e27#", "100%" },
     },
     STRATSothosJarien = {
-        { 1, 0, "", "=q6=#j3#", "=q0="..AL["Sothos and Jarien"] },
+        { 1, 0, "", "=q6=#j3#", "=q0="..L["Sothos and Jarien"] },
         { 2, 22327, "INV_Jewelry_Necklace_08", "=q3=Amulet of the Redeemed", "=ds=#s2#", "20%" },
         { 3, 22301, "INV_Chest_Cloth_48", "=q3=Ironweave Robe", "=ds=#s5#, #a1# =q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "20%" },
         { 4, 22328, "INV_Pants_04", "=q3=Legplates of Vigilance", "=ds=#s11#, #a4#", "20%" },
@@ -4966,7 +4966,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
         { 11, 51217, "INV_misc_ribbon_01", "=q2=Fashion Coin", "=ds=#e27#", "5%" },
     },
     LBRSGrayhoof = {
-        { 1, 0, "", "=q6=#j3#", "=q0="..AL["Mor Grayhoof"] },
+        { 1, 0, "", "=q6=#j3#", "=q0="..L["Mor Grayhoof"] },
         { 2, 22306, "INV_Belt_03", "=q3=Ironweave Belt", "=ds=#s10#, #a1# =q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "20%" },
         { 3, 22325, "INV_Belt_26", "=q3=Belt of the Trickster", "=ds=#s10#, #a2#", "20%" },
         { 4, 22319, "INV_Misc_Book_07", "=q3=Tome of Divine Right", "=ds=#s15#", "20%" },
@@ -5162,7 +5162,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
         { 18, 51217, "INV_misc_ribbon_01", "=q2=Fashion Coin", "=ds=#e27#", "5%" },
     },
     SCHOLOKormok = {
-        { 1, 0, "", "=q6=#j3#", "=q0="..AL["Kormok"] },
+        { 1, 0, "", "=q6=#j3#", "=q0="..L["Kormok"] },
         { 2, 22303, "INV_Pants_08", "=q3=Ironweave Pants", "=ds=#s11#, #a1#", "20%" },
         { 3, 22326, "INV_Jewelry_Ring_19", "=q3=Amalgam's Band", "=ds=#s13#", "20%" },
         { 4, 22331, "INV_Jewelry_Ring_33", "=q3=Band of the Steadfast Hero", "=ds=#s13#", "20%" },
@@ -6579,7 +6579,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
         { 4, 58202, "INV_Misc_Gem_Amethyst_02", "=q3=Twisted Demon Crystal", "#s14#", "20%" },
         { 5, 58201, "INV_Misc_Cape_22", "=q3=Mantle of the Disciple", "#s4#", "20%" },
         { 6, 58199, "inv_weirdogreheadstick_3", "=q4=Spine of Dentarg", "#h2#, #w9#", "1%" },
-        { 8, 0, "", "=q6="..AL["Ighal'for"], "" },
+        { 8, 0, "", "=q6="..L["Ighal'for"], "" },
         { 9, 41939, "INV_Jewelry_Necklace_05", "=q1=Broken Bloodstone Pendant", "#m2#", "100%" },
     },
     SWRTrash = {

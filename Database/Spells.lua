@@ -1,4 +1,4 @@
-local AL = AtlasLoot.L
+local L = AtlasLoot.L
 
 GetSpellInfoAtlasLootDB = {
     ["enchants"] = {
@@ -714,7 +714,7 @@ GetSpellInfoAtlasLootDB = {
     ["craftspells"] = {
         [37] = {
             ["craftItem"] = 55043,
-            ["name"] = AL["Harness of the High Thane"],
+            ["name"] = L["Harness of the High Thane"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 15407, 6 },
@@ -728,9 +728,9 @@ GetSpellInfoAtlasLootDB = {
         },
         [55] = {
             ["craftItem"] = 65,
-            ["name"] = AL["Dragonmaw Armor Kit"],
+            ["name"] = L["Dragonmaw Armor Kit"],
             ["castTime"] = 25,
-            ["text"] = AL["Permanently increase the intellect by 8 and spell power by 6 of an item worn on the chest, legs, hands or feet.  Only usable on items level 60 and above."],
+            ["text"] = L["Permanently increase the intellect by 8 and spell power by 6 of an item worn on the chest, legs, hands or feet.  Only usable on items level 60 and above."],
             ["reagents"] = {
                 { 7287, 5 },
                 { 6371 },
@@ -739,7 +739,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57] = {
             ["craftItem"] = 131,
-            ["name"] = AL["Steel Belt Buckle"],
+            ["name"] = L["Steel Belt Buckle"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -750,7 +750,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [69] = {
             ["craftItem"] = 66,
-            ["name"] = AL["Gold Belt Buckle"],
+            ["name"] = L["Gold Belt Buckle"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -761,7 +761,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [70] = {
             ["craftItem"] = 58112,
-            ["name"] = AL["Dragonmaw Gloves"],
+            ["name"] = L["Dragonmaw Gloves"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4234, 14 },
@@ -774,7 +774,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [74] = {
             ["craftItem"] = 67,
-            ["name"] = AL["Dragonscale Belt Buckle"],
+            ["name"] = L["Dragonscale Belt Buckle"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -786,7 +786,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [85] = {
             ["craftItem"] = 82,
-            ["name"] = AL["Dark Iron Belt Buckle"],
+            ["name"] = L["Dark Iron Belt Buckle"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -798,7 +798,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [90] = {
             ["craftItem"] = 151,
-            ["name"] = AL["Truesilver Belt Buckle"],
+            ["name"] = L["Truesilver Belt Buckle"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -809,7 +809,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [93] = {
             ["craftItem"] = 156,
-            ["name"] = AL["Refined Dwarven Necklace"],
+            ["name"] = L["Refined Dwarven Necklace"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155, 41326 },
             ["reagents"] = {
@@ -822,7 +822,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [95] = {
             ["craftItem"] = 87,
-            ["name"] = AL["Enchanted Thorium Belt Buckle"],
+            ["name"] = L["Enchanted Thorium Belt Buckle"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -834,7 +834,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [102] = {
             ["craftItem"] = 103,
-            ["name"] = AL["Obsidian Belt Buckle"],
+            ["name"] = L["Obsidian Belt Buckle"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -847,7 +847,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [104] = {
             ["craftItem"] = 56112,
-            ["name"] = AL["Ancient Dwarven Gemstone"],
+            ["name"] = L["Ancient Dwarven Gemstone"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155, 41326 },
             ["reagents"] = {
@@ -858,7 +858,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [115] = {
             ["craftItem"] = 56113,
-            ["name"] = AL["Elixir of Rapid Growth"],
+            ["name"] = L["Elixir of Rapid Growth"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 4625 },
@@ -867,18 +867,18 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [818] = {
-            ["name"] = AL["Basic Campfire"],
+            ["name"] = L["Basic Campfire"],
             ["castTime"] = 10,
             ["tools"] = { 4471 },
             ["cooldown"] = 300,
-            ["text"] = AL["Builds a campfire that increases the spirits of those nearby by 4 and allows cooking."],
+            ["text"] = L["Builds a campfire that increases the spirits of those nearby by 4 and allows cooking."],
             ["reagents"] = {
                 { 4470 },
             },
         },
         [2149] = {
             ["craftItem"] = 2302,
-            ["name"] = AL["Handstitched Leather Boots"],
+            ["name"] = L["Handstitched Leather Boots"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 2318, 2 },
@@ -887,7 +887,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2152] = {
             ["craftItem"] = 2304,
-            ["name"] = AL["Light Armor Kit"],
+            ["name"] = L["Light Armor Kit"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 2318 },
@@ -895,7 +895,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2153] = {
             ["craftItem"] = 2303,
-            ["name"] = AL["Handstitched Leather Pants"],
+            ["name"] = L["Handstitched Leather Pants"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 2318, 4 },
@@ -904,7 +904,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2158] = {
             ["craftItem"] = 2307,
-            ["name"] = AL["Fine Leather Boots"],
+            ["name"] = L["Fine Leather Boots"],
             ["castTime"] = 8,
             ["reagents"] = {
                 { 2318, 7 },
@@ -913,7 +913,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2159] = {
             ["craftItem"] = 2308,
-            ["name"] = AL["Fine Leather Cloak"],
+            ["name"] = L["Fine Leather Cloak"],
             ["castTime"] = 8,
             ["reagents"] = {
                 { 2318, 10 },
@@ -922,7 +922,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2160] = {
             ["craftItem"] = 2300,
-            ["name"] = AL["Embossed Leather Vest"],
+            ["name"] = L["Embossed Leather Vest"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 2318, 8 },
@@ -931,7 +931,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2161] = {
             ["craftItem"] = 2309,
-            ["name"] = AL["Embossed Leather Boots"],
+            ["name"] = L["Embossed Leather Boots"],
             ["castTime"] = 8,
             ["reagents"] = {
                 { 2318, 8 },
@@ -940,7 +940,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2162] = {
             ["craftItem"] = 2310,
-            ["name"] = AL["Embossed Leather Cloak"],
+            ["name"] = L["Embossed Leather Cloak"],
             ["castTime"] = 8,
             ["reagents"] = {
                 { 2318, 5 },
@@ -949,7 +949,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2163] = {
             ["craftItem"] = 2311,
-            ["name"] = AL["White Leather Jerkin"],
+            ["name"] = L["White Leather Jerkin"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 2318, 8 },
@@ -959,7 +959,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2164] = {
             ["craftItem"] = 2312,
-            ["name"] = AL["Fine Leather Gloves"],
+            ["name"] = L["Fine Leather Gloves"],
             ["castTime"] = 8,
             ["reagents"] = {
                 { 4231 },
@@ -969,7 +969,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2165] = {
             ["craftItem"] = 2313,
-            ["name"] = AL["Medium Armor Kit"],
+            ["name"] = L["Medium Armor Kit"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 2319, 4 },
@@ -978,7 +978,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2166] = {
             ["craftItem"] = 2314,
-            ["name"] = AL["Toughened Leather Armor"],
+            ["name"] = L["Toughened Leather Armor"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 2319, 10 },
@@ -988,7 +988,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2167] = {
             ["craftItem"] = 2315,
-            ["name"] = AL["Dark Leather Boots"],
+            ["name"] = L["Dark Leather Boots"],
             ["castTime"] = 8,
             ["reagents"] = {
                 { 2319, 4 },
@@ -998,7 +998,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2168] = {
             ["craftItem"] = 2316,
-            ["name"] = AL["Dark Leather Cloak"],
+            ["name"] = L["Dark Leather Cloak"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 2319, 8 },
@@ -1008,7 +1008,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2169] = {
             ["craftItem"] = 2317,
-            ["name"] = AL["Dark Leather Tunic"],
+            ["name"] = L["Dark Leather Tunic"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 2319, 6 },
@@ -1018,9 +1018,9 @@ GetSpellInfoAtlasLootDB = {
         },
         [2329] = {
             ["craftItem"] = 2454,
-            ["name"] = AL["Elixir of Lion's Strength"],
+            ["name"] = L["Elixir of Lion's Strength"],
             ["castTime"] = 3,
-            ["text"] = AL["With the mixture of Snakeroot for physical improvement and crushed Silverleaf for enhancement, a potion to to bring out one's inner lion is brewed."],
+            ["text"] = L["With the mixture of Snakeroot for physical improvement and crushed Silverleaf for enhancement, a potion to to bring out one's inner lion is brewed."],
             ["reagents"] = {
                 { 2449 },
                 { 765 },
@@ -1029,7 +1029,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2330] = {
             ["craftItem"] = 118,
-            ["name"] = AL["Minor Healing Potion"],
+            ["name"] = L["Minor Healing Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 2447 },
@@ -1039,7 +1039,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2331] = {
             ["craftItem"] = 2455,
-            ["name"] = AL["Minor Mana Potion"],
+            ["name"] = L["Minor Mana Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 785 },
@@ -1049,7 +1049,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2332] = {
             ["craftItem"] = 2456,
-            ["name"] = AL["Minor Rejuvenation Potion"],
+            ["name"] = L["Minor Rejuvenation Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 785, 2 },
@@ -1059,7 +1059,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2333] = {
             ["craftItem"] = 3390,
-            ["name"] = AL["Elixir of Lesser Agility"],
+            ["name"] = L["Elixir of Lesser Agility"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 3355 },
@@ -1069,7 +1069,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2334] = {
             ["craftItem"] = 2458,
-            ["name"] = AL["Elixir of Minor Fortitude"],
+            ["name"] = L["Elixir of Minor Fortitude"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 2449, 2 },
@@ -1079,7 +1079,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2335] = {
             ["craftItem"] = 2459,
-            ["name"] = AL["Swiftness Potion"],
+            ["name"] = L["Swiftness Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 2452 },
@@ -1089,7 +1089,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2337] = {
             ["craftItem"] = 858,
-            ["name"] = AL["Lesser Healing Potion"],
+            ["name"] = L["Lesser Healing Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 118 },
@@ -1098,7 +1098,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2385] = {
             ["craftItem"] = 2568,
-            ["name"] = AL["Brown Linen Vest"],
+            ["name"] = L["Brown Linen Vest"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 2996 },
@@ -1107,7 +1107,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2386] = {
             ["craftItem"] = 2569,
-            ["name"] = AL["Linen Boots"],
+            ["name"] = L["Linen Boots"],
             ["castTime"] = 8,
             ["reagents"] = {
                 { 2996, 3 },
@@ -1117,7 +1117,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2387] = {
             ["craftItem"] = 2570,
-            ["name"] = AL["Linen Cloak"],
+            ["name"] = L["Linen Cloak"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 2996 },
@@ -1126,7 +1126,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2389] = {
             ["craftItem"] = 2572,
-            ["name"] = AL["Red Linen Robe"],
+            ["name"] = L["Red Linen Robe"],
             ["castTime"] = 8,
             ["reagents"] = {
                 { 2996, 2 },
@@ -1136,7 +1136,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2392] = {
             ["craftItem"] = 2575,
-            ["name"] = AL["Red Linen Shirt"],
+            ["name"] = L["Red Linen Shirt"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 2996, 2 },
@@ -1146,7 +1146,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2393] = {
             ["craftItem"] = 2576,
-            ["name"] = AL["White Linen Shirt"],
+            ["name"] = L["White Linen Shirt"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 2996 },
@@ -1156,7 +1156,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2394] = {
             ["craftItem"] = 2577,
-            ["name"] = AL["Blue Linen Shirt"],
+            ["name"] = L["Blue Linen Shirt"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 2996, 2 },
@@ -1166,7 +1166,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2395] = {
             ["craftItem"] = 2578,
-            ["name"] = AL["Barbaric Linen Vest"],
+            ["name"] = L["Barbaric Linen Vest"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 2996, 4 },
@@ -1176,7 +1176,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2396] = {
             ["craftItem"] = 2579,
-            ["name"] = AL["Green Linen Shirt"],
+            ["name"] = L["Green Linen Shirt"],
             ["castTime"] = 8,
             ["reagents"] = {
                 { 2996, 3 },
@@ -1186,7 +1186,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2397] = {
             ["craftItem"] = 2580,
-            ["name"] = AL["Reinforced Linen Cape"],
+            ["name"] = L["Reinforced Linen Cape"],
             ["castTime"] = 8,
             ["reagents"] = {
                 { 2996, 2 },
@@ -1195,7 +1195,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2399] = {
             ["craftItem"] = 2582,
-            ["name"] = AL["Green Woolen Vest"],
+            ["name"] = L["Green Woolen Vest"],
             ["castTime"] = 8,
             ["reagents"] = {
                 { 2997, 2 },
@@ -1205,7 +1205,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2401] = {
             ["craftItem"] = 2583,
-            ["name"] = AL["Woolen Boots"],
+            ["name"] = L["Woolen Boots"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 2997, 4 },
@@ -1215,7 +1215,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2402] = {
             ["craftItem"] = 2584,
-            ["name"] = AL["Woolen Cape"],
+            ["name"] = L["Woolen Cape"],
             ["castTime"] = 8,
             ["reagents"] = {
                 { 2997 },
@@ -1224,7 +1224,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2403] = {
             ["craftItem"] = 2585,
-            ["name"] = AL["Gray Woolen Robe"],
+            ["name"] = L["Gray Woolen Robe"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 2997, 4 },
@@ -1234,7 +1234,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2406] = {
             ["craftItem"] = 2587,
-            ["name"] = AL["Gray Woolen Shirt"],
+            ["name"] = L["Gray Woolen Shirt"],
             ["castTime"] = 8,
             ["reagents"] = {
                 { 2997, 2 },
@@ -1244,7 +1244,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2538] = {
             ["craftItem"] = 2679,
-            ["name"] = AL["Charred Wolf Meat"],
+            ["name"] = L["Charred Wolf Meat"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 2672 },
@@ -1252,7 +1252,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2539] = {
             ["craftItem"] = 2680,
-            ["name"] = AL["Spiced Wolf Meat"],
+            ["name"] = L["Spiced Wolf Meat"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 2672 },
@@ -1261,7 +1261,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2540] = {
             ["craftItem"] = 2681,
-            ["name"] = AL["Roasted Boar Meat"],
+            ["name"] = L["Roasted Boar Meat"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 769 },
@@ -1269,7 +1269,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2541] = {
             ["craftItem"] = 2684,
-            ["name"] = AL["Coyote Steak"],
+            ["name"] = L["Coyote Steak"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 2673 },
@@ -1277,7 +1277,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2542] = {
             ["craftItem"] = 724,
-            ["name"] = AL["Goretusk Liver Pie"],
+            ["name"] = L["Goretusk Liver Pie"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 723 },
@@ -1286,7 +1286,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2543] = {
             ["craftItem"] = 733,
-            ["name"] = AL["Westfall Stew"],
+            ["name"] = L["Westfall Stew"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 729 },
@@ -1296,7 +1296,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2544] = {
             ["craftItem"] = 2683,
-            ["name"] = AL["Crab Cake"],
+            ["name"] = L["Crab Cake"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 2674 },
@@ -1305,7 +1305,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2545] = {
             ["craftItem"] = 2682,
-            ["name"] = AL["Cooked Crab Claw"],
+            ["name"] = L["Cooked Crab Claw"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 2675 },
@@ -1314,7 +1314,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2546] = {
             ["craftItem"] = 2687,
-            ["name"] = AL["Dry Pork Ribs"],
+            ["name"] = L["Dry Pork Ribs"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 2677 },
@@ -1323,7 +1323,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2547] = {
             ["craftItem"] = 1082,
-            ["name"] = AL["Redridge Goulash"],
+            ["name"] = L["Redridge Goulash"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 1081 },
@@ -1332,7 +1332,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2548] = {
             ["craftItem"] = 2685,
-            ["name"] = AL["Succulent Pork Ribs"],
+            ["name"] = L["Succulent Pork Ribs"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 2677 },
@@ -1341,7 +1341,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2549] = {
             ["craftItem"] = 1017,
-            ["name"] = AL["Seasoned Wolf Kabob"],
+            ["name"] = L["Seasoned Wolf Kabob"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 1015, 2 },
@@ -1351,27 +1351,27 @@ GetSpellInfoAtlasLootDB = {
         },
         [2657] = {
             ["craftItem"] = 2840,
-            ["name"] = AL["Smelt Copper"],
+            ["name"] = L["Smelt Copper"],
             ["castTime"] = 3,
-            ["text"] = AL["Allows the miner to smelt a chunk of copper ore into a copper bar.  Smelting copper requires a forge."],
+            ["text"] = L["Allows the miner to smelt a chunk of copper ore into a copper bar.  Smelting copper requires a forge."],
             ["reagents"] = {
                 { 2770 },
             },
         },
         [2658] = {
             ["craftItem"] = 2842,
-            ["name"] = AL["Smelt Silver"],
+            ["name"] = L["Smelt Silver"],
             ["castTime"] = 3,
-            ["text"] = AL["Allows the miner to smelt a chunk of silver ore into a silver bar.  Smelting silver requires a forge."],
+            ["text"] = L["Allows the miner to smelt a chunk of silver ore into a silver bar.  Smelting silver requires a forge."],
             ["reagents"] = {
                 { 2775 },
             },
         },
         [2659] = {
             ["craftItem"] = 2841,
-            ["name"] = AL["Smelt Bronze"],
+            ["name"] = L["Smelt Bronze"],
             ["castTime"] = 3,
-            ["text"] = AL["Allows the miner to smelt a tin bar and a copper bar together into two bronze bars.  Smelting bronze requires a forge."],
+            ["text"] = L["Allows the miner to smelt a tin bar and a copper bar together into two bronze bars.  Smelting bronze requires a forge."],
             ["reagents"] = {
                 { 2840 },
                 { 3576 },
@@ -1380,7 +1380,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2660] = {
             ["craftItem"] = 2862,
-            ["name"] = AL["Rough Sharpening Stone"],
+            ["name"] = L["Rough Sharpening Stone"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 2835 },
@@ -1388,7 +1388,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2661] = {
             ["craftItem"] = 2851,
-            ["name"] = AL["Copper Chain Belt"],
+            ["name"] = L["Copper Chain Belt"],
             ["castTime"] = 8,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -1397,7 +1397,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2662] = {
             ["craftItem"] = 2852,
-            ["name"] = AL["Copper Chain Pants"],
+            ["name"] = L["Copper Chain Pants"],
             ["castTime"] = 5.13,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -1406,7 +1406,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2663] = {
             ["craftItem"] = 2853,
-            ["name"] = AL["Copper Bracers"],
+            ["name"] = L["Copper Bracers"],
             ["castTime"] = 5.13,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -1415,7 +1415,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2664] = {
             ["craftItem"] = 2854,
-            ["name"] = AL["Runed Copper Bracers"],
+            ["name"] = L["Runed Copper Bracers"],
             ["castTime"] = 8,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -1425,7 +1425,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2665] = {
             ["craftItem"] = 2863,
-            ["name"] = AL["Coarse Sharpening Stone"],
+            ["name"] = L["Coarse Sharpening Stone"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 2836 },
@@ -1433,7 +1433,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2666] = {
             ["craftItem"] = 2857,
-            ["name"] = AL["Runed Copper Belt"],
+            ["name"] = L["Runed Copper Belt"],
             ["castTime"] = 8,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -1442,7 +1442,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2667] = {
             ["craftItem"] = 2864,
-            ["name"] = AL["Runed Copper Breastplate"],
+            ["name"] = L["Runed Copper Breastplate"],
             ["castTime"] = 12.5,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -1453,7 +1453,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2668] = {
             ["craftItem"] = 2865,
-            ["name"] = AL["Rough Bronze Leggings"],
+            ["name"] = L["Rough Bronze Leggings"],
             ["castTime"] = 12.5,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -1462,7 +1462,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2670] = {
             ["craftItem"] = 2866,
-            ["name"] = AL["Rough Bronze Cuirass"],
+            ["name"] = L["Rough Bronze Cuirass"],
             ["castTime"] = 12.5,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -1471,7 +1471,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2671] = {
             ["craftItem"] = 2867,
-            ["name"] = AL["Rough Bronze Bracers"],
+            ["name"] = L["Rough Bronze Bracers"],
             ["castTime"] = 12.5,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -1480,7 +1480,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2672] = {
             ["craftItem"] = 2868,
-            ["name"] = AL["Patterned Bronze Bracers"],
+            ["name"] = L["Patterned Bronze Bracers"],
             ["castTime"] = 12.5,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -1490,7 +1490,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2673] = {
             ["craftItem"] = 2869,
-            ["name"] = AL["Silvered Bronze Breastplate"],
+            ["name"] = L["Silvered Bronze Breastplate"],
             ["castTime"] = 25,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -1502,7 +1502,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2674] = {
             ["craftItem"] = 2871,
-            ["name"] = AL["Heavy Sharpening Stone"],
+            ["name"] = L["Heavy Sharpening Stone"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 2838 },
@@ -1510,7 +1510,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2675] = {
             ["craftItem"] = 2870,
-            ["name"] = AL["Shining Silver Breastplate"],
+            ["name"] = L["Shining Silver Breastplate"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -1523,7 +1523,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2737] = {
             ["craftItem"] = 2844,
-            ["name"] = AL["Copper Mace"],
+            ["name"] = L["Copper Mace"],
             ["castTime"] = 5.13,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -1534,7 +1534,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2738] = {
             ["craftItem"] = 2845,
-            ["name"] = AL["Copper Axe"],
+            ["name"] = L["Copper Axe"],
             ["castTime"] = 5.13,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -1545,7 +1545,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2739] = {
             ["craftItem"] = 2847,
-            ["name"] = AL["Copper Shortsword"],
+            ["name"] = L["Copper Shortsword"],
             ["castTime"] = 5.13,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -1556,7 +1556,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2740] = {
             ["craftItem"] = 2848,
-            ["name"] = AL["Bronze Mace"],
+            ["name"] = L["Bronze Mace"],
             ["castTime"] = 12.5,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -1567,7 +1567,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2741] = {
             ["craftItem"] = 2849,
-            ["name"] = AL["Bronze Axe"],
+            ["name"] = L["Bronze Axe"],
             ["castTime"] = 12.5,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -1578,7 +1578,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2742] = {
             ["craftItem"] = 2850,
-            ["name"] = AL["Bronze Shortsword"],
+            ["name"] = L["Bronze Shortsword"],
             ["castTime"] = 12.5,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -1589,7 +1589,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2795] = {
             ["craftItem"] = 2888,
-            ["name"] = AL["Beer Basted Boar Ribs"],
+            ["name"] = L["Beer Basted Boar Ribs"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 2886 },
@@ -1598,9 +1598,9 @@ GetSpellInfoAtlasLootDB = {
         },
         [2835] = {
             ["craftItem"] = 2892,
-            ["name"] = AL["Deadly Poison"],
+            ["name"] = L["Deadly Poison"],
             ["castTime"] = 3,
-            ["text"] = AL["Coats a weapon with poison that lasts for 30 minutes.\nEach strike has a 30% chance of poisoning the enemy for 36 Nature damage over 12 sec.  Stacks up to 5 times on a single target.  60 charges."],
+            ["text"] = L["Coats a weapon with poison that lasts for 30 minutes.\nEach strike has a 30% chance of poisoning the enemy for 36 Nature damage over 12 sec.  Stacks up to 5 times on a single target.  60 charges."],
             ["reagents"] = {
                 { 5173 },
                 { 3372 },
@@ -1608,9 +1608,9 @@ GetSpellInfoAtlasLootDB = {
         },
         [2837] = {
             ["craftItem"] = 2893,
-            ["name"] = AL["Deadly Poison II"],
+            ["name"] = L["Deadly Poison II"],
             ["castTime"] = 3,
-            ["text"] = AL["Coats a weapon with poison that lasts for 30 minutes.\nEach strike has a 30% chance of poisoning the enemy for 52 Nature damage over 12 sec.  Stacks up to 5 times on a single target.  75 charges."],
+            ["text"] = L["Coats a weapon with poison that lasts for 30 minutes.\nEach strike has a 30% chance of poisoning the enemy for 52 Nature damage over 12 sec.  Stacks up to 5 times on a single target.  75 charges."],
             ["reagents"] = {
                 { 5173, 2 },
                 { 3372 },
@@ -1618,7 +1618,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2881] = {
             ["craftItem"] = 2318,
-            ["name"] = AL["Light Leather"],
+            ["name"] = L["Light Leather"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 2934, 3 },
@@ -1626,7 +1626,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2963] = {
             ["craftItem"] = 2996,
-            ["name"] = AL["Bolt of Linen Cloth"],
+            ["name"] = L["Bolt of Linen Cloth"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 2589, 2 },
@@ -1634,7 +1634,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [2964] = {
             ["craftItem"] = 2997,
-            ["name"] = AL["Bolt of Woolen Cloth"],
+            ["name"] = L["Bolt of Woolen Cloth"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 2592, 3 },
@@ -1642,7 +1642,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3115] = {
             ["craftItem"] = 3239,
-            ["name"] = AL["Rough Weightstone"],
+            ["name"] = L["Rough Weightstone"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 2835 },
@@ -1651,7 +1651,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3116] = {
             ["craftItem"] = 3240,
-            ["name"] = AL["Coarse Weightstone"],
+            ["name"] = L["Coarse Weightstone"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 2836 },
@@ -1660,7 +1660,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3117] = {
             ["craftItem"] = 3241,
-            ["name"] = AL["Heavy Weightstone"],
+            ["name"] = L["Heavy Weightstone"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 2838 },
@@ -1669,7 +1669,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3170] = {
             ["craftItem"] = 3382,
-            ["name"] = AL["Weak Troll's Blood Potion"],
+            ["name"] = L["Weak Troll's Blood Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 2447 },
@@ -1679,7 +1679,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3171] = {
             ["craftItem"] = 3383,
-            ["name"] = AL["Elixir of Wisdom"],
+            ["name"] = L["Elixir of Wisdom"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 785 },
@@ -1689,7 +1689,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3172] = {
             ["craftItem"] = 3384,
-            ["name"] = AL["Minor Magic Resistance Potion"],
+            ["name"] = L["Minor Magic Resistance Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 785, 3 },
@@ -1699,7 +1699,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3173] = {
             ["craftItem"] = 3385,
-            ["name"] = AL["Lesser Mana Potion"],
+            ["name"] = L["Lesser Mana Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 785 },
@@ -1709,7 +1709,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3174] = {
             ["craftItem"] = 3386,
-            ["name"] = AL["Elixir of Poison Resistance"],
+            ["name"] = L["Elixir of Poison Resistance"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 1288 },
@@ -1719,7 +1719,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3175] = {
             ["craftItem"] = 3387,
-            ["name"] = AL["Limited Invulnerability Potion"],
+            ["name"] = L["Limited Invulnerability Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 8839, 2 },
@@ -1729,7 +1729,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3176] = {
             ["craftItem"] = 3388,
-            ["name"] = AL["Strong Troll's Blood Potion"],
+            ["name"] = L["Strong Troll's Blood Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 2453, 2 },
@@ -1739,7 +1739,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3177] = {
             ["craftItem"] = 3389,
-            ["name"] = AL["Elixir of Defense"],
+            ["name"] = L["Elixir of Defense"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 3355 },
@@ -1749,7 +1749,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3188] = {
             ["craftItem"] = 3391,
-            ["name"] = AL["Elixir of Ogre's Strength"],
+            ["name"] = L["Elixir of Ogre's Strength"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 2449 },
@@ -1759,9 +1759,9 @@ GetSpellInfoAtlasLootDB = {
         },
         [3230] = {
             ["craftItem"] = 2457,
-            ["name"] = AL["Elixir of Minor Agility"],
+            ["name"] = L["Elixir of Minor Agility"],
             ["castTime"] = 3,
-            ["text"] = AL["With  Swiftthistle for speed and crushed Silverleaf for enhancement, a potion to to enchance ones natural agility is brewed."],
+            ["text"] = L["With  Swiftthistle for speed and crushed Silverleaf for enhancement, a potion to to enchance ones natural agility is brewed."],
             ["reagents"] = {
                 { 2452 },
                 { 765 },
@@ -1770,7 +1770,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3275] = {
             ["craftItem"] = 1251,
-            ["name"] = AL["Linen Bandage"],
+            ["name"] = L["Linen Bandage"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 2589 },
@@ -1778,7 +1778,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3276] = {
             ["craftItem"] = 2581,
-            ["name"] = AL["Heavy Linen Bandage"],
+            ["name"] = L["Heavy Linen Bandage"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 2589, 2 },
@@ -1786,7 +1786,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3277] = {
             ["craftItem"] = 3530,
-            ["name"] = AL["Wool Bandage"],
+            ["name"] = L["Wool Bandage"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 2592 },
@@ -1794,7 +1794,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3278] = {
             ["craftItem"] = 3531,
-            ["name"] = AL["Heavy Wool Bandage"],
+            ["name"] = L["Heavy Wool Bandage"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 2592, 2 },
@@ -1802,7 +1802,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3292] = {
             ["craftItem"] = 3487,
-            ["name"] = AL["Heavy Copper Broadsword"],
+            ["name"] = L["Heavy Copper Broadsword"],
             ["castTime"] = 12.5,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -1814,7 +1814,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3293] = {
             ["craftItem"] = 3488,
-            ["name"] = AL["Copper Battle Axe"],
+            ["name"] = L["Copper Battle Axe"],
             ["castTime"] = 12.5,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -1827,7 +1827,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3294] = {
             ["craftItem"] = 3489,
-            ["name"] = AL["Thick War Axe"],
+            ["name"] = L["Thick War Axe"],
             ["castTime"] = 12.5,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -1840,7 +1840,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3295] = {
             ["craftItem"] = 3490,
-            ["name"] = AL["Deadly Bronze Poniard"],
+            ["name"] = L["Deadly Bronze Poniard"],
             ["castTime"] = 25,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -1854,7 +1854,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3296] = {
             ["craftItem"] = 3491,
-            ["name"] = AL["Heavy Bronze Mace"],
+            ["name"] = L["Heavy Bronze Mace"],
             ["castTime"] = 25,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -1868,7 +1868,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3297] = {
             ["craftItem"] = 3492,
-            ["name"] = AL["Mighty Iron Hammer"],
+            ["name"] = L["Mighty Iron Hammer"],
             ["castTime"] = 25,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -1882,34 +1882,34 @@ GetSpellInfoAtlasLootDB = {
         },
         [3304] = {
             ["craftItem"] = 3576,
-            ["name"] = AL["Smelt Tin"],
+            ["name"] = L["Smelt Tin"],
             ["castTime"] = 3,
-            ["text"] = AL["Allows the miner to smelt a chunk of tin ore into a tin bar.  Smelting tin requires a forge."],
+            ["text"] = L["Allows the miner to smelt a chunk of tin ore into a tin bar.  Smelting tin requires a forge."],
             ["reagents"] = {
                 { 2771 },
             },
         },
         [3307] = {
             ["craftItem"] = 3575,
-            ["name"] = AL["Smelt Iron"],
+            ["name"] = L["Smelt Iron"],
             ["castTime"] = 3,
-            ["text"] = AL["Allows the miner to smelt a chunk of iron ore into an iron bar.  Smelting iron requires a forge."],
+            ["text"] = L["Allows the miner to smelt a chunk of iron ore into an iron bar.  Smelting iron requires a forge."],
             ["reagents"] = {
                 { 2772 },
             },
         },
         [3308] = {
             ["craftItem"] = 3577,
-            ["name"] = AL["Smelt Gold"],
+            ["name"] = L["Smelt Gold"],
             ["castTime"] = 3,
-            ["text"] = AL["Allows the miner to smelt a chunk of gold ore into a gold bar.  Smelting gold requires a forge."],
+            ["text"] = L["Allows the miner to smelt a chunk of gold ore into a gold bar.  Smelting gold requires a forge."],
             ["reagents"] = {
                 { 2776 },
             },
         },
         [3319] = {
             ["craftItem"] = 3469,
-            ["name"] = AL["Copper Chain Boots"],
+            ["name"] = L["Copper Chain Boots"],
             ["castTime"] = 5.13,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -1918,7 +1918,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3320] = {
             ["craftItem"] = 3470,
-            ["name"] = AL["Rough Grinding Stone"],
+            ["name"] = L["Rough Grinding Stone"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 2835, 2 },
@@ -1926,7 +1926,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3321] = {
             ["craftItem"] = 3471,
-            ["name"] = AL["Copper Chain Vest"],
+            ["name"] = L["Copper Chain Vest"],
             ["castTime"] = 8,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -1937,7 +1937,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3323] = {
             ["craftItem"] = 3472,
-            ["name"] = AL["Runed Copper Gauntlets"],
+            ["name"] = L["Runed Copper Gauntlets"],
             ["castTime"] = 8,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -1947,7 +1947,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3324] = {
             ["craftItem"] = 3473,
-            ["name"] = AL["Runed Copper Pants"],
+            ["name"] = L["Runed Copper Pants"],
             ["castTime"] = 12.5,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -1958,7 +1958,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3325] = {
             ["craftItem"] = 3474,
-            ["name"] = AL["Gemmed Copper Gauntlets"],
+            ["name"] = L["Gemmed Copper Gauntlets"],
             ["castTime"] = 12.5,
             ["tools"] = { 5956 },
             ["extra"] = GREEN_FONT_COLOR_CODE..ITEM_RANDOM_ENCHANT,
@@ -1970,7 +1970,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3326] = {
             ["craftItem"] = 3478,
-            ["name"] = AL["Coarse Grinding Stone"],
+            ["name"] = L["Coarse Grinding Stone"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 2836, 2 },
@@ -1978,7 +1978,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3328] = {
             ["craftItem"] = 3480,
-            ["name"] = AL["Rough Bronze Shoulders"],
+            ["name"] = L["Rough Bronze Shoulders"],
             ["castTime"] = 12.5,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -1989,7 +1989,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3330] = {
             ["craftItem"] = 3481,
-            ["name"] = AL["Silvered Bronze Shoulders"],
+            ["name"] = L["Silvered Bronze Shoulders"],
             ["castTime"] = 25,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -2000,7 +2000,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3331] = {
             ["craftItem"] = 3482,
-            ["name"] = AL["Silvered Bronze Boots"],
+            ["name"] = L["Silvered Bronze Boots"],
             ["castTime"] = 25,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -2011,7 +2011,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3333] = {
             ["craftItem"] = 3483,
-            ["name"] = AL["Silvered Bronze Gauntlets"],
+            ["name"] = L["Silvered Bronze Gauntlets"],
             ["castTime"] = 25,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -2022,7 +2022,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3334] = {
             ["craftItem"] = 3484,
-            ["name"] = AL["Green Iron Boots"],
+            ["name"] = L["Green Iron Boots"],
             ["castTime"] = 25,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -2034,7 +2034,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3336] = {
             ["craftItem"] = 3485,
-            ["name"] = AL["Green Iron Gauntlets"],
+            ["name"] = L["Green Iron Gauntlets"],
             ["castTime"] = 25,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -2046,7 +2046,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3337] = {
             ["craftItem"] = 3486,
-            ["name"] = AL["Heavy Grinding Stone"],
+            ["name"] = L["Heavy Grinding Stone"],
             ["castTime"] = 8,
             ["reagents"] = {
                 { 2838, 3 },
@@ -2054,7 +2054,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3370] = {
             ["craftItem"] = 3662,
-            ["name"] = AL["Crocolisk Steak"],
+            ["name"] = L["Crocolisk Steak"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 2924 },
@@ -2063,7 +2063,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3371] = {
             ["craftItem"] = 3220,
-            ["name"] = AL["Blood Sausage"],
+            ["name"] = L["Blood Sausage"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 3173 },
@@ -2074,7 +2074,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3372] = {
             ["craftItem"] = 3663,
-            ["name"] = AL["Murloc Fin Soup"],
+            ["name"] = L["Murloc Fin Soup"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 1468, 2 },
@@ -2083,7 +2083,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3373] = {
             ["craftItem"] = 3664,
-            ["name"] = AL["Crocolisk Gumbo"],
+            ["name"] = L["Crocolisk Gumbo"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 3667 },
@@ -2092,7 +2092,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3376] = {
             ["craftItem"] = 3665,
-            ["name"] = AL["Curiously Tasty Omelet"],
+            ["name"] = L["Curiously Tasty Omelet"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 3685 },
@@ -2101,7 +2101,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3377] = {
             ["craftItem"] = 3666,
-            ["name"] = AL["Gooey Spider Cake"],
+            ["name"] = L["Gooey Spider Cake"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 2251, 2 },
@@ -2110,7 +2110,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3397] = {
             ["craftItem"] = 3726,
-            ["name"] = AL["Big Bear Steak"],
+            ["name"] = L["Big Bear Steak"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 3730 },
@@ -2119,7 +2119,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3398] = {
             ["craftItem"] = 3727,
-            ["name"] = AL["Hot Lion Chops"],
+            ["name"] = L["Hot Lion Chops"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 3731 },
@@ -2128,7 +2128,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3399] = {
             ["craftItem"] = 3728,
-            ["name"] = AL["Tasty Lion Steak"],
+            ["name"] = L["Tasty Lion Steak"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 3731, 2 },
@@ -2137,7 +2137,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3400] = {
             ["craftItem"] = 3729,
-            ["name"] = AL["Soothing Turtle Bisque"],
+            ["name"] = L["Soothing Turtle Bisque"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 3712 },
@@ -2146,9 +2146,9 @@ GetSpellInfoAtlasLootDB = {
         },
         [3420] = {
             ["craftItem"] = 3775,
-            ["name"] = AL["Crippling Poison"],
+            ["name"] = L["Crippling Poison"],
             ["castTime"] = 3,
-            ["text"] = AL["Coats a weapon with poison that lasts for 30 minutes.\nEach strike has a 30% chance of poisoning the enemy, slowing their movement speed by 50% for 12 sec."],
+            ["text"] = L["Coats a weapon with poison that lasts for 30 minutes.\nEach strike has a 30% chance of poisoning the enemy, slowing their movement speed by 50% for 12 sec."],
             ["reagents"] = {
                 { 2930 },
                 { 3371 },
@@ -2156,9 +2156,9 @@ GetSpellInfoAtlasLootDB = {
         },
         [3421] = {
             ["craftItem"] = 3776,
-            ["name"] = AL["Crippling Poison II"],
+            ["name"] = L["Crippling Poison II"],
             ["castTime"] = 3,
-            ["text"] = AL["Coats a weapon with poison that lasts for 30 minutes.\nEach strike has a 30% chance of poisoning the enemy, slowing their movement speed by 60% for 12 sec."],
+            ["text"] = L["Coats a weapon with poison that lasts for 30 minutes.\nEach strike has a 30% chance of poisoning the enemy, slowing their movement speed by 60% for 12 sec."],
             ["reagents"] = {
                 { 8923, 3 },
                 { 8925 },
@@ -2166,7 +2166,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3447] = {
             ["craftItem"] = 929,
-            ["name"] = AL["Healing Potion"],
+            ["name"] = L["Healing Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 2453 },
@@ -2176,7 +2176,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3448] = {
             ["craftItem"] = 3823,
-            ["name"] = AL["Lesser Invisibility Potion"],
+            ["name"] = L["Lesser Invisibility Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 3818 },
@@ -2186,7 +2186,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3449] = {
             ["craftItem"] = 3824,
-            ["name"] = AL["Shadow Oil"],
+            ["name"] = L["Shadow Oil"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 3818, 4 },
@@ -2196,7 +2196,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3450] = {
             ["craftItem"] = 3825,
-            ["name"] = AL["Elixir of Fortitude"],
+            ["name"] = L["Elixir of Fortitude"],
             ["castTime"] = 5,
             ["reagents"] = {
                 { 3355 },
@@ -2206,7 +2206,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3451] = {
             ["craftItem"] = 3826,
-            ["name"] = AL["Mighty Troll's Blood Potion"],
+            ["name"] = L["Mighty Troll's Blood Potion"],
             ["castTime"] = 5,
             ["reagents"] = {
                 { 3357 },
@@ -2216,7 +2216,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3452] = {
             ["craftItem"] = 3827,
-            ["name"] = AL["Mana Potion"],
+            ["name"] = L["Mana Potion"],
             ["castTime"] = 5,
             ["reagents"] = {
                 { 3820 },
@@ -2226,7 +2226,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3453] = {
             ["craftItem"] = 3828,
-            ["name"] = AL["Elixir of Detect Lesser Invisibility"],
+            ["name"] = L["Elixir of Detect Lesser Invisibility"],
             ["castTime"] = 5,
             ["reagents"] = {
                 { 3358 },
@@ -2236,7 +2236,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3454] = {
             ["craftItem"] = 3829,
-            ["name"] = AL["Frost Oil"],
+            ["name"] = L["Frost Oil"],
             ["castTime"] = 5,
             ["reagents"] = {
                 { 3358, 4 },
@@ -2246,7 +2246,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3491] = {
             ["craftItem"] = 3848,
-            ["name"] = AL["Big Bronze Knife"],
+            ["name"] = L["Big Bronze Knife"],
             ["castTime"] = 25,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -2259,7 +2259,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3492] = {
             ["craftItem"] = 3849,
-            ["name"] = AL["Hardened Iron Shortsword"],
+            ["name"] = L["Hardened Iron Shortsword"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -2272,7 +2272,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3493] = {
             ["craftItem"] = 3850,
-            ["name"] = AL["Jade Serpentblade"],
+            ["name"] = L["Jade Serpentblade"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -2285,7 +2285,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3494] = {
             ["craftItem"] = 3851,
-            ["name"] = AL["Solid Iron Maul"],
+            ["name"] = L["Solid Iron Maul"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -2298,7 +2298,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3495] = {
             ["craftItem"] = 3852,
-            ["name"] = AL["Golden Iron Destroyer"],
+            ["name"] = L["Golden Iron Destroyer"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -2312,7 +2312,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3496] = {
             ["craftItem"] = 3853,
-            ["name"] = AL["Moonsteel Broadsword"],
+            ["name"] = L["Moonsteel Broadsword"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -2325,7 +2325,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3497] = {
             ["craftItem"] = 3854,
-            ["name"] = AL["Frost Tiger Blade"],
+            ["name"] = L["Frost Tiger Blade"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -2339,7 +2339,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3498] = {
             ["craftItem"] = 3855,
-            ["name"] = AL["Massive Iron Axe"],
+            ["name"] = L["Massive Iron Axe"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -2352,7 +2352,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3500] = {
             ["craftItem"] = 3856,
-            ["name"] = AL["Shadow Crescent Axe"],
+            ["name"] = L["Shadow Crescent Axe"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -2366,7 +2366,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3501] = {
             ["craftItem"] = 3835,
-            ["name"] = AL["Green Iron Bracers"],
+            ["name"] = L["Green Iron Bracers"],
             ["castTime"] = 25,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -2376,7 +2376,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3502] = {
             ["craftItem"] = 3836,
-            ["name"] = AL["Green Iron Helm"],
+            ["name"] = L["Green Iron Helm"],
             ["castTime"] = 25,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -2387,7 +2387,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3503] = {
             ["craftItem"] = 3837,
-            ["name"] = AL["Golden Scale Coif"],
+            ["name"] = L["Golden Scale Coif"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -2398,7 +2398,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3504] = {
             ["craftItem"] = 3840,
-            ["name"] = AL["Green Iron Shoulders"],
+            ["name"] = L["Green Iron Shoulders"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -2409,7 +2409,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3505] = {
             ["craftItem"] = 3841,
-            ["name"] = AL["Golden Scale Shoulders"],
+            ["name"] = L["Golden Scale Shoulders"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -2420,7 +2420,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3506] = {
             ["craftItem"] = 3842,
-            ["name"] = AL["Green Iron Leggings"],
+            ["name"] = L["Green Iron Leggings"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -2431,7 +2431,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3507] = {
             ["craftItem"] = 3843,
-            ["name"] = AL["Golden Scale Leggings"],
+            ["name"] = L["Golden Scale Leggings"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -2442,7 +2442,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3508] = {
             ["craftItem"] = 3844,
-            ["name"] = AL["Green Iron Hauberk"],
+            ["name"] = L["Green Iron Hauberk"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -2455,7 +2455,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3511] = {
             ["craftItem"] = 3845,
-            ["name"] = AL["Golden Scale Cuirass"],
+            ["name"] = L["Golden Scale Cuirass"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -2467,7 +2467,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3513] = {
             ["craftItem"] = 3846,
-            ["name"] = AL["Polished Steel Boots"],
+            ["name"] = L["Polished Steel Boots"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -2479,7 +2479,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3515] = {
             ["craftItem"] = 3847,
-            ["name"] = AL["Golden Scale Boots"],
+            ["name"] = L["Golden Scale Boots"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -2491,9 +2491,9 @@ GetSpellInfoAtlasLootDB = {
         },
         [3569] = {
             ["craftItem"] = 3859,
-            ["name"] = AL["Smelt Steel"],
+            ["name"] = L["Smelt Steel"],
             ["castTime"] = 3,
-            ["text"] = AL["Allows the miner to smelt a chunk of iron ore and a lump of coal together into a steel bar.  Smelting steel requires a forge."],
+            ["text"] = L["Allows the miner to smelt a chunk of iron ore and a lump of coal together into a steel bar.  Smelting steel requires a forge."],
             ["reagents"] = {
                 { 3575 },
                 { 3857 },
@@ -2501,7 +2501,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3753] = {
             ["craftItem"] = 4237,
-            ["name"] = AL["Handstitched Leather Belt"],
+            ["name"] = L["Handstitched Leather Belt"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 2318, 6 },
@@ -2510,7 +2510,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3755] = {
             ["craftItem"] = 4238,
-            ["name"] = AL["Linen Bag"],
+            ["name"] = L["Linen Bag"],
             ["castTime"] = 8,
             ["reagents"] = {
                 { 2996, 3 },
@@ -2519,7 +2519,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3756] = {
             ["craftItem"] = 4239,
-            ["name"] = AL["Embossed Leather Gloves"],
+            ["name"] = L["Embossed Leather Gloves"],
             ["castTime"] = 8,
             ["reagents"] = {
                 { 2318, 3 },
@@ -2528,7 +2528,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3757] = {
             ["craftItem"] = 4240,
-            ["name"] = AL["Woolen Bag"],
+            ["name"] = L["Woolen Bag"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 2997, 3 },
@@ -2537,7 +2537,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3758] = {
             ["craftItem"] = 4241,
-            ["name"] = AL["Green Woolen Bag"],
+            ["name"] = L["Green Woolen Bag"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 2997, 4 },
@@ -2547,7 +2547,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3759] = {
             ["craftItem"] = 4242,
-            ["name"] = AL["Embossed Leather Pants"],
+            ["name"] = L["Embossed Leather Pants"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 4231 },
@@ -2557,7 +2557,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3760] = {
             ["craftItem"] = 3719,
-            ["name"] = AL["Hillman's Cloak"],
+            ["name"] = L["Hillman's Cloak"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 4234, 5 },
@@ -2566,7 +2566,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3761] = {
             ["craftItem"] = 4243,
-            ["name"] = AL["Fine Leather Tunic"],
+            ["name"] = L["Fine Leather Tunic"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 4231, 3 },
@@ -2576,7 +2576,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3762] = {
             ["craftItem"] = 4244,
-            ["name"] = AL["Hillman's Leather Vest"],
+            ["name"] = L["Hillman's Leather Vest"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 4243 },
@@ -2586,7 +2586,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3763] = {
             ["craftItem"] = 4246,
-            ["name"] = AL["Fine Leather Belt"],
+            ["name"] = L["Fine Leather Belt"],
             ["castTime"] = 8,
             ["reagents"] = {
                 { 2318, 6 },
@@ -2595,7 +2595,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3764] = {
             ["craftItem"] = 4247,
-            ["name"] = AL["Hillman's Leather Gloves"],
+            ["name"] = L["Hillman's Leather Gloves"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 2319, 14 },
@@ -2604,7 +2604,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3765] = {
             ["craftItem"] = 4248,
-            ["name"] = AL["Dark Leather Gloves"],
+            ["name"] = L["Dark Leather Gloves"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 2312 },
@@ -2615,7 +2615,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3766] = {
             ["craftItem"] = 4249,
-            ["name"] = AL["Dark Leather Belt"],
+            ["name"] = L["Dark Leather Belt"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 2312 },
@@ -2626,7 +2626,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3767] = {
             ["craftItem"] = 4250,
-            ["name"] = AL["Hillman's Belt"],
+            ["name"] = L["Hillman's Belt"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 2319, 8 },
@@ -2636,7 +2636,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3768] = {
             ["craftItem"] = 4251,
-            ["name"] = AL["Hillman's Shoulders"],
+            ["name"] = L["Hillman's Shoulders"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 4233 },
@@ -2646,7 +2646,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3769] = {
             ["craftItem"] = 4252,
-            ["name"] = AL["Dark Leather Shoulders"],
+            ["name"] = L["Dark Leather Shoulders"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 2319, 12 },
@@ -2657,7 +2657,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3770] = {
             ["craftItem"] = 4253,
-            ["name"] = AL["Toughened Leather Gloves"],
+            ["name"] = L["Toughened Leather Gloves"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 2319, 4 },
@@ -2669,7 +2669,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3771] = {
             ["craftItem"] = 4254,
-            ["name"] = AL["Barbaric Gloves"],
+            ["name"] = L["Barbaric Gloves"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 4234, 6 },
@@ -2679,7 +2679,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3772] = {
             ["craftItem"] = 4255,
-            ["name"] = AL["Green Leather Armor"],
+            ["name"] = L["Green Leather Armor"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4234, 9 },
@@ -2689,7 +2689,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3773] = {
             ["craftItem"] = 4256,
-            ["name"] = AL["Guardian Armor"],
+            ["name"] = L["Guardian Armor"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4236, 2 },
@@ -2700,7 +2700,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3774] = {
             ["craftItem"] = 4257,
-            ["name"] = AL["Green Leather Belt"],
+            ["name"] = L["Green Leather Belt"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4236 },
@@ -2712,7 +2712,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3775] = {
             ["craftItem"] = 4258,
-            ["name"] = AL["Guardian Belt"],
+            ["name"] = L["Guardian Belt"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4236, 2 },
@@ -2723,7 +2723,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3776] = {
             ["craftItem"] = 4259,
-            ["name"] = AL["Green Leather Bracers"],
+            ["name"] = L["Green Leather Bracers"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4236, 2 },
@@ -2734,7 +2734,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3777] = {
             ["craftItem"] = 4260,
-            ["name"] = AL["Guardian Leather Bracers"],
+            ["name"] = L["Guardian Leather Bracers"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4234, 6 },
@@ -2744,7 +2744,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3778] = {
             ["craftItem"] = 4262,
-            ["name"] = AL["Gem-studded Leather Belt"],
+            ["name"] = L["Gem-studded Leather Belt"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4236, 4 },
@@ -2756,7 +2756,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3779] = {
             ["craftItem"] = 4264,
-            ["name"] = AL["Barbaric Belt"],
+            ["name"] = L["Barbaric Belt"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4234, 6 },
@@ -2769,7 +2769,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3780] = {
             ["craftItem"] = 4265,
-            ["name"] = AL["Heavy Armor Kit"],
+            ["name"] = L["Heavy Armor Kit"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 4234, 5 },
@@ -2778,7 +2778,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3813] = {
             ["craftItem"] = 4245,
-            ["name"] = AL["Small Silk Pack"],
+            ["name"] = L["Small Silk Pack"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 4305, 3 },
@@ -2788,7 +2788,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3816] = {
             ["craftItem"] = 4231,
-            ["name"] = AL["Cured Light Hide"],
+            ["name"] = L["Cured Light Hide"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 783 },
@@ -2797,7 +2797,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3817] = {
             ["craftItem"] = 4233,
-            ["name"] = AL["Cured Medium Hide"],
+            ["name"] = L["Cured Medium Hide"],
             ["castTime"] = 8,
             ["reagents"] = {
                 { 4232 },
@@ -2806,7 +2806,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3818] = {
             ["craftItem"] = 4236,
-            ["name"] = AL["Cured Heavy Hide"],
+            ["name"] = L["Cured Heavy Hide"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 4235 },
@@ -2815,7 +2815,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3839] = {
             ["craftItem"] = 4305,
-            ["name"] = AL["Bolt of Silk Cloth"],
+            ["name"] = L["Bolt of Silk Cloth"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 4306, 4 },
@@ -2823,7 +2823,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3840] = {
             ["craftItem"] = 4307,
-            ["name"] = AL["Heavy Linen Gloves"],
+            ["name"] = L["Heavy Linen Gloves"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 2996, 2 },
@@ -2832,7 +2832,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3841] = {
             ["craftItem"] = 4308,
-            ["name"] = AL["Green Linen Bracers"],
+            ["name"] = L["Green Linen Bracers"],
             ["castTime"] = 8,
             ["reagents"] = {
                 { 2996, 3 },
@@ -2842,7 +2842,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3842] = {
             ["craftItem"] = 4309,
-            ["name"] = AL["Handstitched Linen Britches"],
+            ["name"] = L["Handstitched Linen Britches"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 2996, 4 },
@@ -2851,7 +2851,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3843] = {
             ["craftItem"] = 4310,
-            ["name"] = AL["Heavy Woolen Gloves"],
+            ["name"] = L["Heavy Woolen Gloves"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 2997, 3 },
@@ -2860,7 +2860,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3844] = {
             ["craftItem"] = 4311,
-            ["name"] = AL["Heavy Woolen Cloak"],
+            ["name"] = L["Heavy Woolen Cloak"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 2997, 3 },
@@ -2870,7 +2870,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3845] = {
             ["craftItem"] = 4312,
-            ["name"] = AL["Soft-soled Linen Boots"],
+            ["name"] = L["Soft-soled Linen Boots"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 2996, 5 },
@@ -2880,7 +2880,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3847] = {
             ["craftItem"] = 4313,
-            ["name"] = AL["Red Woolen Boots"],
+            ["name"] = L["Red Woolen Boots"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 2997, 3 },
@@ -2891,7 +2891,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3848] = {
             ["craftItem"] = 4314,
-            ["name"] = AL["Double-stitched Woolen Shoulders"],
+            ["name"] = L["Double-stitched Woolen Shoulders"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 2997, 3 },
@@ -2900,7 +2900,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3849] = {
             ["craftItem"] = 4315,
-            ["name"] = AL["Reinforced Woolen Shoulders"],
+            ["name"] = L["Reinforced Woolen Shoulders"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 2997, 6 },
@@ -2910,7 +2910,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3850] = {
             ["craftItem"] = 4316,
-            ["name"] = AL["Heavy Woolen Pants"],
+            ["name"] = L["Heavy Woolen Pants"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 2997, 5 },
@@ -2919,7 +2919,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3851] = {
             ["craftItem"] = 4317,
-            ["name"] = AL["Phoenix Pants"],
+            ["name"] = L["Phoenix Pants"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 2997, 6 },
@@ -2929,7 +2929,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3852] = {
             ["craftItem"] = 4318,
-            ["name"] = AL["Gloves of Meditation"],
+            ["name"] = L["Gloves of Meditation"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 2997, 4 },
@@ -2939,7 +2939,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3854] = {
             ["craftItem"] = 4319,
-            ["name"] = AL["Azure Silk Gloves"],
+            ["name"] = L["Azure Silk Gloves"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 4305, 3 },
@@ -2950,7 +2950,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3855] = {
             ["craftItem"] = 4320,
-            ["name"] = AL["Spidersilk Boots"],
+            ["name"] = L["Spidersilk Boots"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4305, 2 },
@@ -2961,7 +2961,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3856] = {
             ["craftItem"] = 4321,
-            ["name"] = AL["Spider Silk Slippers"],
+            ["name"] = L["Spider Silk Slippers"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 4305, 3 },
@@ -2971,7 +2971,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3857] = {
             ["craftItem"] = 4322,
-            ["name"] = AL["Enchanter's Cowl"],
+            ["name"] = L["Enchanter's Cowl"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4305, 3 },
@@ -2981,7 +2981,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3858] = {
             ["craftItem"] = 4323,
-            ["name"] = AL["Shadow Hood"],
+            ["name"] = L["Shadow Hood"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4305, 4 },
@@ -2991,7 +2991,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3859] = {
             ["craftItem"] = 4324,
-            ["name"] = AL["Azure Silk Vest"],
+            ["name"] = L["Azure Silk Vest"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 4305, 5 },
@@ -3000,7 +3000,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3860] = {
             ["craftItem"] = 4325,
-            ["name"] = AL["Boots of the Enchanter"],
+            ["name"] = L["Boots of the Enchanter"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4305, 4 },
@@ -3010,7 +3010,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3861] = {
             ["craftItem"] = 4326,
-            ["name"] = AL["Long Silken Cloak"],
+            ["name"] = L["Long Silken Cloak"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4305, 4 },
@@ -3020,7 +3020,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3862] = {
             ["craftItem"] = 4327,
-            ["name"] = AL["Icy Cloak"],
+            ["name"] = L["Icy Cloak"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4339, 3 },
@@ -3031,7 +3031,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3863] = {
             ["craftItem"] = 4328,
-            ["name"] = AL["Spider Belt"],
+            ["name"] = L["Spider Belt"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4305, 4 },
@@ -3041,7 +3041,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3864] = {
             ["craftItem"] = 4329,
-            ["name"] = AL["Star Belt"],
+            ["name"] = L["Star Belt"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4339, 4 },
@@ -3053,7 +3053,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3865] = {
             ["craftItem"] = 4339,
-            ["name"] = AL["Bolt of Mageweave"],
+            ["name"] = L["Bolt of Mageweave"],
             ["castTime"] = 8,
             ["reagents"] = {
                 { 4338, 5 },
@@ -3061,7 +3061,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3866] = {
             ["craftItem"] = 4330,
-            ["name"] = AL["Stylish Red Shirt"],
+            ["name"] = L["Stylish Red Shirt"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 2997, 3 },
@@ -3071,7 +3071,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3868] = {
             ["craftItem"] = 4331,
-            ["name"] = AL["Phoenix Gloves"],
+            ["name"] = L["Phoenix Gloves"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 2997, 4 },
@@ -3082,7 +3082,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3869] = {
             ["craftItem"] = 4332,
-            ["name"] = AL["Bright Yellow Shirt"],
+            ["name"] = L["Bright Yellow Shirt"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 4305 },
@@ -3092,7 +3092,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3870] = {
             ["craftItem"] = 4333,
-            ["name"] = AL["Dark Silk Shirt"],
+            ["name"] = L["Dark Silk Shirt"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 4305, 2 },
@@ -3102,7 +3102,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3871] = {
             ["craftItem"] = 4334,
-            ["name"] = AL["Formal White Shirt"],
+            ["name"] = L["Formal White Shirt"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 4305, 3 },
@@ -3112,7 +3112,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3872] = {
             ["craftItem"] = 4335,
-            ["name"] = AL["Rich Purple Silk Shirt"],
+            ["name"] = L["Rich Purple Silk Shirt"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 4305, 4 },
@@ -3122,7 +3122,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3873] = {
             ["craftItem"] = 4336,
-            ["name"] = AL["Black Swashbuckler's Shirt"],
+            ["name"] = L["Black Swashbuckler's Shirt"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 4305, 5 },
@@ -3132,7 +3132,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3914] = {
             ["craftItem"] = 4343,
-            ["name"] = AL["Brown Linen Pants"],
+            ["name"] = L["Brown Linen Pants"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 2996, 2 },
@@ -3141,7 +3141,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3915] = {
             ["craftItem"] = 4344,
-            ["name"] = AL["Brown Linen Shirt"],
+            ["name"] = L["Brown Linen Shirt"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 2996 },
@@ -3150,7 +3150,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3918] = {
             ["craftItem"] = 4357,
-            ["name"] = AL["Rough Blasting Powder"],
+            ["name"] = L["Rough Blasting Powder"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 2835 },
@@ -3158,7 +3158,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3919] = {
             ["craftItem"] = 4358,
-            ["name"] = AL["Rough Dynamite"],
+            ["name"] = L["Rough Dynamite"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 4357, 2 },
@@ -3168,7 +3168,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3920] = {
             ["craftItem"] = 8067,
-            ["name"] = AL["Crafted Light Shot"],
+            ["name"] = L["Crafted Light Shot"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 4357 },
@@ -3178,7 +3178,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3922] = {
             ["craftItem"] = 4359,
-            ["name"] = AL["Handful of Copper Bolts"],
+            ["name"] = L["Handful of Copper Bolts"],
             ["castTime"] = 5.13,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -3187,7 +3187,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3923] = {
             ["craftItem"] = 4360,
-            ["name"] = AL["Rough Copper Bomb"],
+            ["name"] = L["Rough Copper Bomb"],
             ["castTime"] = 5.13,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -3200,7 +3200,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3924] = {
             ["craftItem"] = 4361,
-            ["name"] = AL["Copper Tube"],
+            ["name"] = L["Copper Tube"],
             ["castTime"] = 5.13,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -3210,7 +3210,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3925] = {
             ["craftItem"] = 4362,
-            ["name"] = AL["Rough Boomstick"],
+            ["name"] = L["Rough Boomstick"],
             ["castTime"] = 8,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -3221,7 +3221,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3926] = {
             ["craftItem"] = 4363,
-            ["name"] = AL["Copper Modulator"],
+            ["name"] = L["Copper Modulator"],
             ["castTime"] = 5.13,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -3232,7 +3232,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3928] = {
             ["craftItem"] = 4401,
-            ["name"] = AL["Mechanical Squirrel"],
+            ["name"] = L["Mechanical Squirrel"],
             ["castTime"] = 8,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -3244,7 +3244,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3929] = {
             ["craftItem"] = 4364,
-            ["name"] = AL["Coarse Blasting Powder"],
+            ["name"] = L["Coarse Blasting Powder"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 2836 },
@@ -3252,7 +3252,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3930] = {
             ["craftItem"] = 8068,
-            ["name"] = AL["Crafted Heavy Shot"],
+            ["name"] = L["Crafted Heavy Shot"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 4364 },
@@ -3262,7 +3262,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3931] = {
             ["craftItem"] = 4365,
-            ["name"] = AL["Coarse Dynamite"],
+            ["name"] = L["Coarse Dynamite"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 4364, 3 },
@@ -3273,7 +3273,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3932] = {
             ["craftItem"] = 4366,
-            ["name"] = AL["Target Dummy"],
+            ["name"] = L["Target Dummy"],
             ["castTime"] = 8,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -3285,9 +3285,9 @@ GetSpellInfoAtlasLootDB = {
         },
         [3933] = {
             ["craftItem"] = 4367,
-            ["name"] = AL["Small Seaforium Charge"],
+            ["name"] = L["Small Seaforium Charge"],
             ["castTime"] = 8,
-            ["text"] = AL["A Small Seaforium charge which is enough to blast open some doors."],
+            ["text"] = L["A Small Seaforium charge which is enough to blast open some doors."],
             ["reagents"] = {
                 { 4364, 2 },
                 { 4363 },
@@ -3297,7 +3297,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3934] = {
             ["craftItem"] = 4368,
-            ["name"] = AL["Flying Tiger Goggles"],
+            ["name"] = L["Flying Tiger Goggles"],
             ["castTime"] = 12.5,
             ["tools"] = { 6219 },
             ["reagents"] = {
@@ -3307,7 +3307,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3936] = {
             ["craftItem"] = 4369,
-            ["name"] = AL["Deadly Blunderbuss"],
+            ["name"] = L["Deadly Blunderbuss"],
             ["castTime"] = 25,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -3319,7 +3319,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3937] = {
             ["craftItem"] = 4370,
-            ["name"] = AL["Large Copper Bomb"],
+            ["name"] = L["Large Copper Bomb"],
             ["castTime"] = 8,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -3332,7 +3332,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3938] = {
             ["craftItem"] = 4371,
-            ["name"] = AL["Bronze Tube"],
+            ["name"] = L["Bronze Tube"],
             ["castTime"] = 5.13,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -3342,7 +3342,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3939] = {
             ["craftItem"] = 4372,
-            ["name"] = AL["Lovingly Crafted Boomstick"],
+            ["name"] = L["Lovingly Crafted Boomstick"],
             ["castTime"] = 25,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -3354,7 +3354,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3940] = {
             ["craftItem"] = 4373,
-            ["name"] = AL["Shadow Goggles"],
+            ["name"] = L["Shadow Goggles"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 2319, 4 },
@@ -3363,7 +3363,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3941] = {
             ["craftItem"] = 4374,
-            ["name"] = AL["Small Bronze Bomb"],
+            ["name"] = L["Small Bronze Bomb"],
             ["castTime"] = 8,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -3377,7 +3377,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3942] = {
             ["craftItem"] = 4375,
-            ["name"] = AL["Whirring Bronze Gizmo"],
+            ["name"] = L["Whirring Bronze Gizmo"],
             ["castTime"] = 5.13,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -3387,7 +3387,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3944] = {
             ["craftItem"] = 4376,
-            ["name"] = AL["Flame Deflector"],
+            ["name"] = L["Flame Deflector"],
             ["castTime"] = 12.5,
             ["tools"] = { 5956, 6219 },
             ["extra"] = format(ITEM_SPELL_CHARGES_P1, 5),
@@ -3398,7 +3398,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3945] = {
             ["craftItem"] = 4377,
-            ["name"] = AL["Heavy Blasting Powder"],
+            ["name"] = L["Heavy Blasting Powder"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 2838 },
@@ -3406,7 +3406,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3946] = {
             ["craftItem"] = 4378,
-            ["name"] = AL["Heavy Dynamite"],
+            ["name"] = L["Heavy Dynamite"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 4377, 2 },
@@ -3417,7 +3417,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3947] = {
             ["craftItem"] = 8069,
-            ["name"] = AL["Crafted Solid Shot"],
+            ["name"] = L["Crafted Solid Shot"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 4377 },
@@ -3427,7 +3427,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3949] = {
             ["craftItem"] = 4379,
-            ["name"] = AL["Silver-plated Shotgun"],
+            ["name"] = L["Silver-plated Shotgun"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 4371, 2 },
@@ -3438,7 +3438,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3950] = {
             ["craftItem"] = 4380,
-            ["name"] = AL["Big Bronze Bomb"],
+            ["name"] = L["Big Bronze Bomb"],
             ["castTime"] = 8,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -3451,7 +3451,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3952] = {
             ["craftItem"] = 4381,
-            ["name"] = AL["Minor Recombobulator"],
+            ["name"] = L["Minor Recombobulator"],
             ["castTime"] = 12.5,
             ["extra"] = format(ITEM_SPELL_CHARGES_P1, 10),
             ["reagents"] = {
@@ -3463,7 +3463,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3953] = {
             ["craftItem"] = 4382,
-            ["name"] = AL["Bronze Framework"],
+            ["name"] = L["Bronze Framework"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 2841, 2 },
@@ -3473,7 +3473,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3954] = {
             ["craftItem"] = 4383,
-            ["name"] = AL["Moonsight Rifle"],
+            ["name"] = L["Moonsight Rifle"],
             ["castTime"] = 25,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -3485,7 +3485,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3955] = {
             ["craftItem"] = 4384,
-            ["name"] = AL["Explosive Sheep"],
+            ["name"] = L["Explosive Sheep"],
             ["castTime"] = 8,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -3497,7 +3497,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3956] = {
             ["craftItem"] = 4385,
-            ["name"] = AL["Green Tinted Goggles"],
+            ["name"] = L["Green Tinted Goggles"],
             ["castTime"] = 12.5,
             ["tools"] = { 6219 },
             ["reagents"] = {
@@ -3508,7 +3508,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3957] = {
             ["craftItem"] = 4386,
-            ["name"] = AL["Ice Deflector"],
+            ["name"] = L["Ice Deflector"],
             ["castTime"] = 12.5,
             ["tools"] = { 5956, 6219 },
             ["extra"] = format(ITEM_SPELL_CHARGES_P1, 5),
@@ -3519,7 +3519,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3958] = {
             ["craftItem"] = 4387,
-            ["name"] = AL["Iron Strut"],
+            ["name"] = L["Iron Strut"],
             ["castTime"] = 8,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -3528,7 +3528,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3959] = {
             ["craftItem"] = 4388,
-            ["name"] = AL["Discombobulator Ray"],
+            ["name"] = L["Discombobulator Ray"],
             ["castTime"] = 12.5,
             ["tools"] = { 5956, 6219 },
             ["extra"] = format(ITEM_SPELL_CHARGES_P1, 5),
@@ -3541,7 +3541,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3960] = {
             ["craftItem"] = 4403,
-            ["name"] = AL["Portable Bronze Mortar"],
+            ["name"] = L["Portable Bronze Mortar"],
             ["castTime"] = 12.5,
             ["tools"] = { 5956, 6219 },
             ["extra"] = format(ITEM_SPELL_CHARGES_P1, 8),
@@ -3554,7 +3554,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3961] = {
             ["craftItem"] = 4389,
-            ["name"] = AL["Gyrochronatom"],
+            ["name"] = L["Gyrochronatom"],
             ["castTime"] = 8,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -3564,7 +3564,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3962] = {
             ["craftItem"] = 4390,
-            ["name"] = AL["Iron Grenade"],
+            ["name"] = L["Iron Grenade"],
             ["castTime"] = 8,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -3577,7 +3577,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3963] = {
             ["craftItem"] = 4391,
-            ["name"] = AL["Compact Harvest Reaper Kit"],
+            ["name"] = L["Compact Harvest Reaper Kit"],
             ["castTime"] = 25,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -3589,7 +3589,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3965] = {
             ["craftItem"] = 4392,
-            ["name"] = AL["Advanced Target Dummy"],
+            ["name"] = L["Advanced Target Dummy"],
             ["castTime"] = 12.5,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -3601,7 +3601,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3966] = {
             ["craftItem"] = 4393,
-            ["name"] = AL["Craftsman's Monocle"],
+            ["name"] = L["Craftsman's Monocle"],
             ["castTime"] = 25,
             ["tools"] = { 6219, 10498 },
             ["reagents"] = {
@@ -3611,7 +3611,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3967] = {
             ["craftItem"] = 4394,
-            ["name"] = AL["Big Iron Bomb"],
+            ["name"] = L["Big Iron Bomb"],
             ["castTime"] = 12.5,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -3623,10 +3623,10 @@ GetSpellInfoAtlasLootDB = {
         },
         [3968] = {
             ["craftItem"] = 4395,
-            ["name"] = AL["Goblin Land Mine"],
+            ["name"] = L["Goblin Land Mine"],
             ["castTime"] = 12.5,
             ["tools"] = { 5956, 6219 },
-            ["text"] = AL["Build a Goblin Land Mine."],
+            ["text"] = L["Build a Goblin Land Mine."],
             ["reagents"] = {
                 { 4377, 3 },
                 { 3575, 2 },
@@ -3635,7 +3635,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3969] = {
             ["craftItem"] = 4396,
-            ["name"] = AL["Mechanical Dragonling"],
+            ["name"] = L["Mechanical Dragonling"],
             ["castTime"] = 45,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -3648,7 +3648,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3971] = {
             ["craftItem"] = 4397,
-            ["name"] = AL["Gnomish Cloaking Device"],
+            ["name"] = L["Gnomish Cloaking Device"],
             ["castTime"] = 45,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -3661,7 +3661,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3972] = {
             ["craftItem"] = 4398,
-            ["name"] = AL["Large Seaforium Charge"],
+            ["name"] = L["Large Seaforium Charge"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 10505, 2 },
@@ -3671,7 +3671,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3973] = {
             ["craftItem"] = 4404,
-            ["name"] = AL["Silver Contact"],
+            ["name"] = L["Silver Contact"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 2842 },
@@ -3680,7 +3680,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3977] = {
             ["craftItem"] = 4405,
-            ["name"] = AL["Crude Scope"],
+            ["name"] = L["Crude Scope"],
             ["castTime"] = 8,
             ["tools"] = { 6219 },
             ["reagents"] = {
@@ -3691,10 +3691,10 @@ GetSpellInfoAtlasLootDB = {
         },
         [3978] = {
             ["craftItem"] = 4406,
-            ["name"] = AL["Standard Scope"],
+            ["name"] = L["Standard Scope"],
             ["castTime"] = 8,
             ["tools"] = { 6219 },
-            ["text"] = AL["An improved scope that increases the damage done with your bow or gun."],
+            ["text"] = L["An improved scope that increases the damage done with your bow or gun."],
             ["reagents"] = {
                 { 4371 },
                 { 1206 },
@@ -3702,7 +3702,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [3979] = {
             ["craftItem"] = 4407,
-            ["name"] = AL["Accurate Scope"],
+            ["name"] = L["Accurate Scope"],
             ["castTime"] = 25,
             ["tools"] = { 6219, 10498 },
             ["reagents"] = {
@@ -3713,7 +3713,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [4094] = {
             ["craftItem"] = 4457,
-            ["name"] = AL["Barbecued Buzzard Wing"],
+            ["name"] = L["Barbecued Buzzard Wing"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 3404 },
@@ -3722,7 +3722,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [4096] = {
             ["craftItem"] = 4455,
-            ["name"] = AL["Raptor Hide Harness"],
+            ["name"] = L["Raptor Hide Harness"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4461, 6 },
@@ -3732,7 +3732,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [4097] = {
             ["craftItem"] = 4456,
-            ["name"] = AL["Raptor Hide Belt"],
+            ["name"] = L["Raptor Hide Belt"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4461, 4 },
@@ -3742,7 +3742,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [4508] = {
             ["craftItem"] = 4596,
-            ["name"] = AL["Discolored Healing Potion"],
+            ["name"] = L["Discolored Healing Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 3164 },
@@ -3752,7 +3752,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [4942] = {
             ["craftItem"] = 4623,
-            ["name"] = AL["Lesser Stoneshield Potion"],
+            ["name"] = L["Lesser Stoneshield Potion"],
             ["castTime"] = 5,
             ["reagents"] = {
                 { 3858 },
@@ -3762,7 +3762,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [5244] = {
             ["craftItem"] = 5081,
-            ["name"] = AL["Kodo Hide Bag"],
+            ["name"] = L["Kodo Hide Bag"],
             ["castTime"] = 8,
             ["reagents"] = {
                 { 5082, 3 },
@@ -3772,9 +3772,9 @@ GetSpellInfoAtlasLootDB = {
         },
         [5763] = {
             ["craftItem"] = 5237,
-            ["name"] = AL["Mind-numbing Poison"],
+            ["name"] = L["Mind-numbing Poison"],
             ["castTime"] = 3,
-            ["text"] = AL["Coats a weapon with poison that lasts for 30 minutes.\nEach strike has a 20% chance of poisoning the enemy, increasing their casting time by 40% for 10 sec.  50 charges."],
+            ["text"] = L["Coats a weapon with poison that lasts for 30 minutes.\nEach strike has a 20% chance of poisoning the enemy, increasing their casting time by 40% for 10 sec.  50 charges."],
             ["reagents"] = {
                 { 2928 },
                 { 2930 },
@@ -3783,7 +3783,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [6412] = {
             ["craftItem"] = 5472,
-            ["name"] = AL["Kaldorei Spider Kabob"],
+            ["name"] = L["Kaldorei Spider Kabob"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 5465 },
@@ -3791,7 +3791,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [6413] = {
             ["craftItem"] = 5473,
-            ["name"] = AL["Scorpid Surprise"],
+            ["name"] = L["Scorpid Surprise"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 5466 },
@@ -3799,7 +3799,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [6414] = {
             ["craftItem"] = 5474,
-            ["name"] = AL["Roasted Kodo Meat"],
+            ["name"] = L["Roasted Kodo Meat"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 5467 },
@@ -3809,7 +3809,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [6415] = {
             ["craftItem"] = 5476,
-            ["name"] = AL["Fillet of Frenzy"],
+            ["name"] = L["Fillet of Frenzy"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 5468 },
@@ -3819,7 +3819,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [6416] = {
             ["craftItem"] = 5477,
-            ["name"] = AL["Strider Stew"],
+            ["name"] = L["Strider Stew"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 5469 },
@@ -3829,7 +3829,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [6417] = {
             ["craftItem"] = 5478,
-            ["name"] = AL["Dig Rat Stew"],
+            ["name"] = L["Dig Rat Stew"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 5051 },
@@ -3838,7 +3838,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [6418] = {
             ["craftItem"] = 5479,
-            ["name"] = AL["Crispy Lizard Tail"],
+            ["name"] = L["Crispy Lizard Tail"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 5470 },
@@ -3848,7 +3848,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [6419] = {
             ["craftItem"] = 5480,
-            ["name"] = AL["Lean Venison"],
+            ["name"] = L["Lean Venison"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 5471 },
@@ -3858,7 +3858,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [6458] = {
             ["craftItem"] = 5507,
-            ["name"] = AL["Ornate Spyglass"],
+            ["name"] = L["Ornate Spyglass"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 4371, 2 },
@@ -3869,7 +3869,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [6499] = {
             ["craftItem"] = 5525,
-            ["name"] = AL["Boiled Clams"],
+            ["name"] = L["Boiled Clams"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 5503 },
@@ -3878,7 +3878,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [6500] = {
             ["craftItem"] = 5527,
-            ["name"] = AL["Goblin Deviled Clams"],
+            ["name"] = L["Goblin Deviled Clams"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 5504 },
@@ -3887,7 +3887,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [6501] = {
             ["craftItem"] = 5526,
-            ["name"] = AL["Clam Chowder"],
+            ["name"] = L["Clam Chowder"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 5503 },
@@ -3897,9 +3897,9 @@ GetSpellInfoAtlasLootDB = {
         },
         [6510] = {
             ["craftItem"] = 5530,
-            ["name"] = AL["Blinding Powder"],
+            ["name"] = L["Blinding Powder"],
             ["castTime"] = 3,
-            ["text"] = AL["Create the reagent for the Blind ability."],
+            ["text"] = L["Create the reagent for the Blind ability."],
             ["reagents"] = {
                 { 3818 },
             },
@@ -3907,7 +3907,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [6517] = {
             ["craftItem"] = 5540,
-            ["name"] = AL["Pearl-handled Dagger"],
+            ["name"] = L["Pearl-handled Dagger"],
             ["castTime"] = 25,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -3919,7 +3919,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [6518] = {
             ["craftItem"] = 5541,
-            ["name"] = AL["Iridescent Hammer"],
+            ["name"] = L["Iridescent Hammer"],
             ["castTime"] = 25,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -3932,7 +3932,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [6521] = {
             ["craftItem"] = 5542,
-            ["name"] = AL["Pearl-clasped Cloak"],
+            ["name"] = L["Pearl-clasped Cloak"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 2997, 3 },
@@ -3942,7 +3942,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [6617] = {
             ["craftItem"] = 5631,
-            ["name"] = AL["Rage Potion"],
+            ["name"] = L["Rage Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 5635 },
@@ -3952,7 +3952,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [6618] = {
             ["craftItem"] = 5633,
-            ["name"] = AL["Great Rage Potion"],
+            ["name"] = L["Great Rage Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 5637 },
@@ -3962,7 +3962,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [6624] = {
             ["craftItem"] = 5634,
-            ["name"] = AL["Free Action Potion"],
+            ["name"] = L["Free Action Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 6370, 2 },
@@ -3972,7 +3972,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [6661] = {
             ["craftItem"] = 5739,
-            ["name"] = AL["Barbaric Harness"],
+            ["name"] = L["Barbaric Harness"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 4234, 14 },
@@ -3982,7 +3982,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [6686] = {
             ["craftItem"] = 5762,
-            ["name"] = AL["Red Linen Bag"],
+            ["name"] = L["Red Linen Bag"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 2996, 4 },
@@ -3992,7 +3992,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [6688] = {
             ["craftItem"] = 5763,
-            ["name"] = AL["Red Woolen Bag"],
+            ["name"] = L["Red Woolen Bag"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 2997, 4 },
@@ -4002,7 +4002,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [6690] = {
             ["craftItem"] = 5766,
-            ["name"] = AL["Lesser Wizard's Robe"],
+            ["name"] = L["Lesser Wizard's Robe"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 4305, 2 },
@@ -4012,7 +4012,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [6692] = {
             ["craftItem"] = 5770,
-            ["name"] = AL["Robes of Arcana"],
+            ["name"] = L["Robes of Arcana"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 4305, 4 },
@@ -4022,7 +4022,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [6693] = {
             ["craftItem"] = 5764,
-            ["name"] = AL["Green Silk Pack"],
+            ["name"] = L["Green Silk Pack"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4305, 4 },
@@ -4033,7 +4033,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [6695] = {
             ["craftItem"] = 5765,
-            ["name"] = AL["Black Silk Pack"],
+            ["name"] = L["Black Silk Pack"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4305, 5 },
@@ -4043,7 +4043,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [6702] = {
             ["craftItem"] = 5780,
-            ["name"] = AL["Murloc Scale Belt"],
+            ["name"] = L["Murloc Scale Belt"],
             ["castTime"] = 8,
             ["reagents"] = {
                 { 5784, 8 },
@@ -4053,7 +4053,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [6703] = {
             ["craftItem"] = 5781,
-            ["name"] = AL["Murloc Scale Breastplate"],
+            ["name"] = L["Murloc Scale Breastplate"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 5784, 12 },
@@ -4064,7 +4064,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [6704] = {
             ["craftItem"] = 5782,
-            ["name"] = AL["Thick Murloc Armor"],
+            ["name"] = L["Thick Murloc Armor"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 5785, 12 },
@@ -4075,7 +4075,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [6705] = {
             ["craftItem"] = 5783,
-            ["name"] = AL["Murloc Scale Bracers"],
+            ["name"] = L["Murloc Scale Bracers"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 5785, 16 },
@@ -4086,7 +4086,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7126] = {
             ["craftItem"] = 5957,
-            ["name"] = AL["Handstitched Leather Vest"],
+            ["name"] = L["Handstitched Leather Vest"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 2318, 3 },
@@ -4095,7 +4095,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7133] = {
             ["craftItem"] = 5958,
-            ["name"] = AL["Fine Leather Pants"],
+            ["name"] = L["Fine Leather Pants"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 2319, 8 },
@@ -4105,7 +4105,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7135] = {
             ["craftItem"] = 5961,
-            ["name"] = AL["Dark Leather Pants"],
+            ["name"] = L["Dark Leather Pants"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 2319, 12 },
@@ -4115,7 +4115,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7147] = {
             ["craftItem"] = 5962,
-            ["name"] = AL["Guardian Pants"],
+            ["name"] = L["Guardian Pants"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4234, 12 },
@@ -4125,7 +4125,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7149] = {
             ["craftItem"] = 5963,
-            ["name"] = AL["Barbaric Leggings"],
+            ["name"] = L["Barbaric Leggings"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4234, 10 },
@@ -4135,7 +4135,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7151] = {
             ["craftItem"] = 5964,
-            ["name"] = AL["Barbaric Shoulders"],
+            ["name"] = L["Barbaric Shoulders"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4234, 8 },
@@ -4145,7 +4145,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7153] = {
             ["craftItem"] = 5965,
-            ["name"] = AL["Guardian Cloak"],
+            ["name"] = L["Guardian Cloak"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4234, 14 },
@@ -4155,7 +4155,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7156] = {
             ["craftItem"] = 5966,
-            ["name"] = AL["Guardian Gloves"],
+            ["name"] = L["Guardian Gloves"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 4234, 4 },
@@ -4165,7 +4165,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7179] = {
             ["craftItem"] = 5996,
-            ["name"] = AL["Elixir of Water Breathing"],
+            ["name"] = L["Elixir of Water Breathing"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 3820 },
@@ -4175,7 +4175,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7181] = {
             ["craftItem"] = 1710,
-            ["name"] = AL["Greater Healing Potion"],
+            ["name"] = L["Greater Healing Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 3357 },
@@ -4185,7 +4185,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7183] = {
             ["craftItem"] = 5997,
-            ["name"] = AL["Elixir of Minor Defense"],
+            ["name"] = L["Elixir of Minor Defense"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 765, 2 },
@@ -4194,7 +4194,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7213] = {
             ["craftItem"] = 6038,
-            ["name"] = AL["Giant Clam Scorcho"],
+            ["name"] = L["Giant Clam Scorcho"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 4655 },
@@ -4203,7 +4203,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7221] = {
             ["craftItem"] = 6042,
-            ["name"] = AL["Iron Shield Spike"],
+            ["name"] = L["Iron Shield Spike"],
             ["castTime"] = 25,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -4213,7 +4213,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7222] = {
             ["craftItem"] = 6043,
-            ["name"] = AL["Iron Counterweight"],
+            ["name"] = L["Iron Counterweight"],
             ["castTime"] = 25,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -4224,7 +4224,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7223] = {
             ["craftItem"] = 6040,
-            ["name"] = AL["Golden Scale Bracers"],
+            ["name"] = L["Golden Scale Bracers"],
             ["castTime"] = 25,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -4234,7 +4234,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7224] = {
             ["craftItem"] = 6041,
-            ["name"] = AL["Steel Weapon Chain"],
+            ["name"] = L["Steel Weapon Chain"],
             ["castTime"] = 25,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -4245,7 +4245,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7255] = {
             ["craftItem"] = 6051,
-            ["name"] = AL["Holy Protection Potion"],
+            ["name"] = L["Holy Protection Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 2453 },
@@ -4255,7 +4255,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7256] = {
             ["craftItem"] = 6048,
-            ["name"] = AL["Shadow Protection Potion"],
+            ["name"] = L["Shadow Protection Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 3369 },
@@ -4265,7 +4265,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7257] = {
             ["craftItem"] = 6049,
-            ["name"] = AL["Fire Protection Potion"],
+            ["name"] = L["Fire Protection Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 4402 },
@@ -4275,7 +4275,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7258] = {
             ["craftItem"] = 6050,
-            ["name"] = AL["Frost Protection Potion"],
+            ["name"] = L["Frost Protection Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 3819 },
@@ -4285,7 +4285,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7259] = {
             ["craftItem"] = 6052,
-            ["name"] = AL["Nature Protection Potion"],
+            ["name"] = L["Nature Protection Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 3357 },
@@ -4295,7 +4295,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7408] = {
             ["craftItem"] = 6214,
-            ["name"] = AL["Heavy Copper Maul"],
+            ["name"] = L["Heavy Copper Maul"],
             ["castTime"] = 12.5,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -4306,7 +4306,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7430] = {
             ["craftItem"] = 6219,
-            ["name"] = AL["Arclight Spanner"],
+            ["name"] = L["Arclight Spanner"],
             ["castTime"] = 8,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -4315,7 +4315,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7623] = {
             ["craftItem"] = 6238,
-            ["name"] = AL["Brown Linen Robe"],
+            ["name"] = L["Brown Linen Robe"],
             ["castTime"] = 8,
             ["reagents"] = {
                 { 2996, 3 },
@@ -4324,7 +4324,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7624] = {
             ["craftItem"] = 6241,
-            ["name"] = AL["White Linen Robe"],
+            ["name"] = L["White Linen Robe"],
             ["castTime"] = 8,
             ["reagents"] = {
                 { 2996, 3 },
@@ -4334,7 +4334,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7629] = {
             ["craftItem"] = 6239,
-            ["name"] = AL["Red Linen Vest"],
+            ["name"] = L["Red Linen Vest"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 2996, 3 },
@@ -4344,7 +4344,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7630] = {
             ["craftItem"] = 6240,
-            ["name"] = AL["Blue Linen Vest"],
+            ["name"] = L["Blue Linen Vest"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 2996, 3 },
@@ -4354,7 +4354,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7633] = {
             ["craftItem"] = 6242,
-            ["name"] = AL["Blue Linen Robe"],
+            ["name"] = L["Blue Linen Robe"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 2996, 4 },
@@ -4364,7 +4364,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7639] = {
             ["craftItem"] = 6263,
-            ["name"] = AL["Blue Overalls"],
+            ["name"] = L["Blue Overalls"],
             ["castTime"] = 8,
             ["reagents"] = {
                 { 2997, 4 },
@@ -4374,7 +4374,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7643] = {
             ["craftItem"] = 6264,
-            ["name"] = AL["Greater Adept's Robe"],
+            ["name"] = L["Greater Adept's Robe"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 2997, 5 },
@@ -4384,7 +4384,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7751] = {
             ["craftItem"] = 6290,
-            ["name"] = AL["Brilliant Smallfish"],
+            ["name"] = L["Brilliant Smallfish"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 6291 },
@@ -4392,7 +4392,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7752] = {
             ["craftItem"] = 787,
-            ["name"] = AL["Slitherskin Mackerel"],
+            ["name"] = L["Slitherskin Mackerel"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 6303 },
@@ -4400,7 +4400,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7753] = {
             ["craftItem"] = 4592,
-            ["name"] = AL["Longjaw Mud Snapper"],
+            ["name"] = L["Longjaw Mud Snapper"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 6289 },
@@ -4408,7 +4408,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7754] = {
             ["craftItem"] = 6316,
-            ["name"] = AL["Loch Frenzy Delight"],
+            ["name"] = L["Loch Frenzy Delight"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 6317 },
@@ -4417,7 +4417,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7755] = {
             ["craftItem"] = 4593,
-            ["name"] = AL["Bristle Whisker Catfish"],
+            ["name"] = L["Bristle Whisker Catfish"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 6308 },
@@ -4425,7 +4425,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7817] = {
             ["craftItem"] = 6350,
-            ["name"] = AL["Rough Bronze Boots"],
+            ["name"] = L["Rough Bronze Boots"],
             ["castTime"] = 8,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -4435,7 +4435,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7818] = {
             ["craftItem"] = 6338,
-            ["name"] = AL["Silver Rod"],
+            ["name"] = L["Silver Rod"],
             ["castTime"] = 8,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -4445,7 +4445,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7827] = {
             ["craftItem"] = 5095,
-            ["name"] = AL["Rainbow Fin Albacore"],
+            ["name"] = L["Rainbow Fin Albacore"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 6361 },
@@ -4453,7 +4453,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7828] = {
             ["craftItem"] = 4594,
-            ["name"] = AL["Rockscale Cod"],
+            ["name"] = L["Rockscale Cod"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 6362 },
@@ -4461,7 +4461,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7836] = {
             ["craftItem"] = 6370,
-            ["name"] = AL["Blackmouth Oil"],
+            ["name"] = L["Blackmouth Oil"],
             ["castTime"] = 5,
             ["reagents"] = {
                 { 6358, 2 },
@@ -4470,7 +4470,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7837] = {
             ["craftItem"] = 6371,
-            ["name"] = AL["Fire Oil"],
+            ["name"] = L["Fire Oil"],
             ["castTime"] = 5,
             ["reagents"] = {
                 { 6359, 2 },
@@ -4479,7 +4479,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7841] = {
             ["craftItem"] = 6372,
-            ["name"] = AL["Swim Speed Potion"],
+            ["name"] = L["Swim Speed Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 2452 },
@@ -4489,7 +4489,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7845] = {
             ["craftItem"] = 6373,
-            ["name"] = AL["Elixir of Firepower"],
+            ["name"] = L["Elixir of Firepower"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 6371, 2 },
@@ -4499,7 +4499,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7892] = {
             ["craftItem"] = 6384,
-            ["name"] = AL["Stylish Blue Shirt"],
+            ["name"] = L["Stylish Blue Shirt"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 2997, 4 },
@@ -4510,7 +4510,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7893] = {
             ["craftItem"] = 6385,
-            ["name"] = AL["Stylish Green Shirt"],
+            ["name"] = L["Stylish Green Shirt"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 2997, 4 },
@@ -4521,7 +4521,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7928] = {
             ["craftItem"] = 6450,
-            ["name"] = AL["Silk Bandage"],
+            ["name"] = L["Silk Bandage"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 4306 },
@@ -4529,7 +4529,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7929] = {
             ["craftItem"] = 6451,
-            ["name"] = AL["Heavy Silk Bandage"],
+            ["name"] = L["Heavy Silk Bandage"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 4306, 2 },
@@ -4537,9 +4537,9 @@ GetSpellInfoAtlasLootDB = {
         },
         [7934] = {
             ["craftItem"] = 6452,
-            ["name"] = AL["Anti-Venom"],
+            ["name"] = L["Anti-Venom"],
             ["castTime"] = 3,
-            ["text"] = AL["Creates 3 Vials of Anti-Venom."],
+            ["text"] = L["Creates 3 Vials of Anti-Venom."],
             ["reagents"] = {
                 { 1475 },
             },
@@ -4547,9 +4547,9 @@ GetSpellInfoAtlasLootDB = {
         },
         [7935] = {
             ["craftItem"] = 6453,
-            ["name"] = AL["Strong Anti-Venom"],
+            ["name"] = L["Strong Anti-Venom"],
             ["castTime"] = 3,
-            ["text"] = AL["Creates 3 Vials of Strong Anti-Venom."],
+            ["text"] = L["Creates 3 Vials of Strong Anti-Venom."],
             ["reagents"] = {
                 { 1288 },
             },
@@ -4557,7 +4557,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7953] = {
             ["craftItem"] = 6466,
-            ["name"] = AL["Deviate Scale Cloak"],
+            ["name"] = L["Deviate Scale Cloak"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 6470, 8 },
@@ -4567,7 +4567,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7954] = {
             ["craftItem"] = 6467,
-            ["name"] = AL["Deviate Scale Gloves"],
+            ["name"] = L["Deviate Scale Gloves"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 6471, 2 },
@@ -4577,7 +4577,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [7955] = {
             ["craftItem"] = 6468,
-            ["name"] = AL["Deviate Scale Belt"],
+            ["name"] = L["Deviate Scale Belt"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 6471, 10 },
@@ -4587,7 +4587,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [8238] = {
             ["craftItem"] = 6657,
-            ["name"] = AL["Savory Deviate Delight"],
+            ["name"] = L["Savory Deviate Delight"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 6522 },
@@ -4596,7 +4596,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [8240] = {
             ["craftItem"] = 6662,
-            ["name"] = AL["Elixir of Giant Growth"],
+            ["name"] = L["Elixir of Giant Growth"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 6522 },
@@ -4606,7 +4606,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [8243] = {
             ["craftItem"] = 4852,
-            ["name"] = AL["Flash Bomb"],
+            ["name"] = L["Flash Bomb"],
             ["castTime"] = 8,
             ["reagents"] = {
                 { 4611 },
@@ -4616,7 +4616,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [8322] = {
             ["craftItem"] = 6709,
-            ["name"] = AL["Moonglow Vest"],
+            ["name"] = L["Moonglow Vest"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 2318, 6 },
@@ -4627,7 +4627,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [8334] = {
             ["craftItem"] = 6712,
-            ["name"] = AL["Practice Lock"],
+            ["name"] = L["Practice Lock"],
             ["castTime"] = 8,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -4638,7 +4638,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [8339] = {
             ["craftItem"] = 6714,
-            ["name"] = AL["EZ-Thro Dynamite"],
+            ["name"] = L["EZ-Thro Dynamite"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 4364, 4 },
@@ -4649,7 +4649,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [8366] = {
             ["craftItem"] = 6730,
-            ["name"] = AL["Ironforge Chain"],
+            ["name"] = L["Ironforge Chain"],
             ["castTime"] = 12.5,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -4660,7 +4660,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [8367] = {
             ["craftItem"] = 6731,
-            ["name"] = AL["Ironforge Breastplate"],
+            ["name"] = L["Ironforge Breastplate"],
             ["castTime"] = 12.5,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -4671,7 +4671,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [8368] = {
             ["craftItem"] = 6733,
-            ["name"] = AL["Ironforge Gauntlets"],
+            ["name"] = L["Ironforge Gauntlets"],
             ["castTime"] = 12.5,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -4682,7 +4682,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [8465] = {
             ["craftItem"] = 6786,
-            ["name"] = AL["Simple Dress"],
+            ["name"] = L["Simple Dress"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 2996, 2 },
@@ -4693,7 +4693,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [8467] = {
             ["craftItem"] = 6787,
-            ["name"] = AL["White Woolen Dress"],
+            ["name"] = L["White Woolen Dress"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 2997, 3 },
@@ -4703,7 +4703,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [8483] = {
             ["craftItem"] = 6795,
-            ["name"] = AL["White Swashbuckler's Shirt"],
+            ["name"] = L["White Swashbuckler's Shirt"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 4305, 3 },
@@ -4713,7 +4713,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [8489] = {
             ["craftItem"] = 6796,
-            ["name"] = AL["Red Swashbuckler's Shirt"],
+            ["name"] = L["Red Swashbuckler's Shirt"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 4305, 3 },
@@ -4723,7 +4723,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [8604] = {
             ["craftItem"] = 6888,
-            ["name"] = AL["Herb Baked Egg"],
+            ["name"] = L["Herb Baked Egg"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 6889 },
@@ -4732,7 +4732,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [8607] = {
             ["craftItem"] = 6890,
-            ["name"] = AL["Smoked Bear Meat"],
+            ["name"] = L["Smoked Bear Meat"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 3173 },
@@ -4740,9 +4740,9 @@ GetSpellInfoAtlasLootDB = {
         },
         [8681] = {
             ["craftItem"] = 6947,
-            ["name"] = AL["Instant Poison"],
+            ["name"] = L["Instant Poison"],
             ["castTime"] = 3,
-            ["text"] = AL["Coats a weapon with poison that lasts for 30 minutes.\nEach strike has a 20% chance of poisoning the enemy which instantly inflicts 19 to 25 Nature damage.  40 charges."],
+            ["text"] = L["Coats a weapon with poison that lasts for 30 minutes.\nEach strike has a 20% chance of poisoning the enemy which instantly inflicts 19 to 25 Nature damage.  40 charges."],
             ["reagents"] = {
                 { 2928 },
                 { 3371 },
@@ -4750,9 +4750,9 @@ GetSpellInfoAtlasLootDB = {
         },
         [8687] = {
             ["craftItem"] = 6949,
-            ["name"] = AL["Instant Poison II"],
+            ["name"] = L["Instant Poison II"],
             ["castTime"] = 3,
-            ["text"] = AL["Coats a weapon with poison that lasts for 30 minutes.\nEach strike has a 20% chance of poisoning the enemy which instantly inflicts 30 to 38 Nature damage.  55 charges."],
+            ["text"] = L["Coats a weapon with poison that lasts for 30 minutes.\nEach strike has a 20% chance of poisoning the enemy which instantly inflicts 30 to 38 Nature damage.  55 charges."],
             ["reagents"] = {
                 { 2928, 3 },
                 { 3372 },
@@ -4760,9 +4760,9 @@ GetSpellInfoAtlasLootDB = {
         },
         [8691] = {
             ["craftItem"] = 6950,
-            ["name"] = AL["Instant Poison III"],
+            ["name"] = L["Instant Poison III"],
             ["castTime"] = 3,
-            ["text"] = AL["Coats a weapon with poison that lasts for 30 minutes.\nEach strike has a 20% chance of poisoning the enemy which instantly inflicts 44 to 56 Nature damage.  70 charges."],
+            ["text"] = L["Coats a weapon with poison that lasts for 30 minutes.\nEach strike has a 20% chance of poisoning the enemy which instantly inflicts 44 to 56 Nature damage.  70 charges."],
             ["reagents"] = {
                 { 8924 },
                 { 3372 },
@@ -4770,9 +4770,9 @@ GetSpellInfoAtlasLootDB = {
         },
         [8694] = {
             ["craftItem"] = 6951,
-            ["name"] = AL["Mind-numbing Poison II"],
+            ["name"] = L["Mind-numbing Poison II"],
             ["castTime"] = 3,
-            ["text"] = AL["Coats a weapon with poison that lasts for 30 minutes.\nEach strike has a 20% chance of poisoning the enemy, increasing their casting time by 50% for 12 sec.  75 charges."],
+            ["text"] = L["Coats a weapon with poison that lasts for 30 minutes.\nEach strike has a 20% chance of poisoning the enemy, increasing their casting time by 50% for 12 sec.  75 charges."],
             ["reagents"] = {
                 { 2928, 4 },
                 { 2930, 4 },
@@ -4781,7 +4781,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [8758] = {
             ["craftItem"] = 7046,
-            ["name"] = AL["Azure Silk Pants"],
+            ["name"] = L["Azure Silk Pants"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 4305, 4 },
@@ -4791,7 +4791,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [8760] = {
             ["craftItem"] = 7048,
-            ["name"] = AL["Azure Silk Hood"],
+            ["name"] = L["Azure Silk Hood"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 4305, 3 },
@@ -4801,7 +4801,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [8762] = {
             ["craftItem"] = 7050,
-            ["name"] = AL["Silk Headband"],
+            ["name"] = L["Silk Headband"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 4305, 3 },
@@ -4810,7 +4810,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [8764] = {
             ["craftItem"] = 7051,
-            ["name"] = AL["Earthen Vest"],
+            ["name"] = L["Earthen Vest"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4305, 3 },
@@ -4820,7 +4820,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [8766] = {
             ["craftItem"] = 7052,
-            ["name"] = AL["Azure Silk Belt"],
+            ["name"] = L["Azure Silk Belt"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4305, 4 },
@@ -4832,10 +4832,10 @@ GetSpellInfoAtlasLootDB = {
         },
         [8768] = {
             ["craftItem"] = 7071,
-            ["name"] = AL["Iron Belt Buckle"],
+            ["name"] = L["Iron Belt Buckle"],
             ["castTime"] = 5.13,
             ["tools"] = { 5956 },
-            ["text"] = AL["Creates two Iron Buckles that are used by other trade skills."],
+            ["text"] = L["Creates two Iron Buckles that are used by other trade skills."],
             ["reagents"] = {
                 { 3575 },
             },
@@ -4843,7 +4843,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [8770] = {
             ["craftItem"] = 7054,
-            ["name"] = AL["Robe of Power"],
+            ["name"] = L["Robe of Power"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4339, 2 },
@@ -4856,7 +4856,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [8772] = {
             ["craftItem"] = 7055,
-            ["name"] = AL["Crimson Silk Belt"],
+            ["name"] = L["Crimson Silk Belt"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4305, 4 },
@@ -4867,7 +4867,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [8774] = {
             ["craftItem"] = 7057,
-            ["name"] = AL["Green Silken Shoulders"],
+            ["name"] = L["Green Silken Shoulders"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4305, 5 },
@@ -4876,7 +4876,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [8776] = {
             ["craftItem"] = 7026,
-            ["name"] = AL["Linen Belt"],
+            ["name"] = L["Linen Belt"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 2996 },
@@ -4885,7 +4885,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [8778] = {
             ["craftItem"] = 7027,
-            ["name"] = AL["Boots of Darkness"],
+            ["name"] = L["Boots of Darkness"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 4305, 3 },
@@ -4896,7 +4896,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [8780] = {
             ["craftItem"] = 7047,
-            ["name"] = AL["Hands of Darkness"],
+            ["name"] = L["Hands of Darkness"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 4305, 3 },
@@ -4907,7 +4907,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [8782] = {
             ["craftItem"] = 7049,
-            ["name"] = AL["Truefaith Gloves"],
+            ["name"] = L["Truefaith Gloves"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 4305, 3 },
@@ -4918,7 +4918,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [8784] = {
             ["craftItem"] = 7065,
-            ["name"] = AL["Green Silk Armor"],
+            ["name"] = L["Green Silk Armor"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4305, 5 },
@@ -4928,7 +4928,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [8786] = {
             ["craftItem"] = 7053,
-            ["name"] = AL["Azure Silk Cloak"],
+            ["name"] = L["Azure Silk Cloak"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4305, 3 },
@@ -4938,7 +4938,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [8789] = {
             ["craftItem"] = 7056,
-            ["name"] = AL["Crimson Silk Cloak"],
+            ["name"] = L["Crimson Silk Cloak"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4305, 5 },
@@ -4949,7 +4949,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [8791] = {
             ["craftItem"] = 7058,
-            ["name"] = AL["Crimson Silk Vest"],
+            ["name"] = L["Crimson Silk Vest"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 4305, 4 },
@@ -4959,7 +4959,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [8793] = {
             ["craftItem"] = 7059,
-            ["name"] = AL["Crimson Silk Shoulders"],
+            ["name"] = L["Crimson Silk Shoulders"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4305, 5 },
@@ -4970,7 +4970,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [8795] = {
             ["craftItem"] = 7060,
-            ["name"] = AL["Azure Shoulders"],
+            ["name"] = L["Azure Shoulders"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4305, 6 },
@@ -4981,7 +4981,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [8797] = {
             ["craftItem"] = 7061,
-            ["name"] = AL["Earthen Silk Belt"],
+            ["name"] = L["Earthen Silk Belt"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4305, 5 },
@@ -4993,7 +4993,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [8799] = {
             ["craftItem"] = 7062,
-            ["name"] = AL["Crimson Silk Pantaloons"],
+            ["name"] = L["Crimson Silk Pantaloons"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 4305, 4 },
@@ -5003,7 +5003,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [8802] = {
             ["craftItem"] = 7063,
-            ["name"] = AL["Crimson Silk Robe"],
+            ["name"] = L["Crimson Silk Robe"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4305, 8 },
@@ -5015,7 +5015,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [8804] = {
             ["craftItem"] = 7064,
-            ["name"] = AL["Crimson Silk Gloves"],
+            ["name"] = L["Crimson Silk Gloves"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4305, 6 },
@@ -5028,7 +5028,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [8880] = {
             ["craftItem"] = 7166,
-            ["name"] = AL["Copper Dagger"],
+            ["name"] = L["Copper Dagger"],
             ["castTime"] = 8,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5040,7 +5040,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [8895] = {
             ["craftItem"] = 7189,
-            ["name"] = AL["Goblin Rocket Boots"],
+            ["name"] = L["Goblin Rocket Boots"],
             ["castTime"] = 12.5,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -5053,7 +5053,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9058] = {
             ["craftItem"] = 7276,
-            ["name"] = AL["Handstitched Leather Cloak"],
+            ["name"] = L["Handstitched Leather Cloak"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 2318, 2 },
@@ -5062,7 +5062,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9059] = {
             ["craftItem"] = 7277,
-            ["name"] = AL["Handstitched Leather Bracers"],
+            ["name"] = L["Handstitched Leather Bracers"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 2318, 2 },
@@ -5071,7 +5071,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9060] = {
             ["craftItem"] = 7278,
-            ["name"] = AL["Light Leather Quiver"],
+            ["name"] = L["Light Leather Quiver"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 2318, 4 },
@@ -5080,7 +5080,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9062] = {
             ["craftItem"] = 7279,
-            ["name"] = AL["Small Leather Ammo Pouch"],
+            ["name"] = L["Small Leather Ammo Pouch"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 2318, 3 },
@@ -5089,7 +5089,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9064] = {
             ["craftItem"] = 7280,
-            ["name"] = AL["Rugged Leather Pants"],
+            ["name"] = L["Rugged Leather Pants"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 2318, 5 },
@@ -5098,7 +5098,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9065] = {
             ["craftItem"] = 7281,
-            ["name"] = AL["Light Leather Bracers"],
+            ["name"] = L["Light Leather Bracers"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 2318, 6 },
@@ -5107,7 +5107,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9068] = {
             ["craftItem"] = 7282,
-            ["name"] = AL["Light Leather Pants"],
+            ["name"] = L["Light Leather Pants"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 2318, 10 },
@@ -5117,7 +5117,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9070] = {
             ["craftItem"] = 7283,
-            ["name"] = AL["Black Whelp Cloak"],
+            ["name"] = L["Black Whelp Cloak"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 7286, 12 },
@@ -5127,7 +5127,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9072] = {
             ["craftItem"] = 7284,
-            ["name"] = AL["Red Whelp Gloves"],
+            ["name"] = L["Red Whelp Gloves"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 7287, 6 },
@@ -5137,7 +5137,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9074] = {
             ["craftItem"] = 7285,
-            ["name"] = AL["Nimble Leather Gloves"],
+            ["name"] = L["Nimble Leather Gloves"],
             ["castTime"] = 8,
             ["reagents"] = {
                 { 2457 },
@@ -5147,7 +5147,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9145] = {
             ["craftItem"] = 7348,
-            ["name"] = AL["Fletcher's Gloves"],
+            ["name"] = L["Fletcher's Gloves"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 2319, 8 },
@@ -5157,7 +5157,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9146] = {
             ["craftItem"] = 7349,
-            ["name"] = AL["Herbalist's Gloves"],
+            ["name"] = L["Herbalist's Gloves"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 2319, 8 },
@@ -5167,7 +5167,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9147] = {
             ["craftItem"] = 7352,
-            ["name"] = AL["Earthen Leather Shoulders"],
+            ["name"] = L["Earthen Leather Shoulders"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 2319, 6 },
@@ -5177,7 +5177,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9148] = {
             ["craftItem"] = 7358,
-            ["name"] = AL["Pilferer's Gloves"],
+            ["name"] = L["Pilferer's Gloves"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 2319, 10 },
@@ -5187,7 +5187,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9149] = {
             ["craftItem"] = 7359,
-            ["name"] = AL["Heavy Earthen Gloves"],
+            ["name"] = L["Heavy Earthen Gloves"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 2319, 12 },
@@ -5198,7 +5198,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9193] = {
             ["craftItem"] = 7371,
-            ["name"] = AL["Heavy Quiver"],
+            ["name"] = L["Heavy Quiver"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 4234, 8 },
@@ -5207,7 +5207,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9194] = {
             ["craftItem"] = 7372,
-            ["name"] = AL["Heavy Leather Ammo Pouch"],
+            ["name"] = L["Heavy Leather Ammo Pouch"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 4234, 8 },
@@ -5216,7 +5216,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9195] = {
             ["craftItem"] = 7373,
-            ["name"] = AL["Dusky Leather Leggings"],
+            ["name"] = L["Dusky Leather Leggings"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 4234, 10 },
@@ -5226,7 +5226,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9196] = {
             ["craftItem"] = 7374,
-            ["name"] = AL["Dusky Leather Armor"],
+            ["name"] = L["Dusky Leather Armor"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4234, 10 },
@@ -5236,7 +5236,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9197] = {
             ["craftItem"] = 7375,
-            ["name"] = AL["Green Whelp Armor"],
+            ["name"] = L["Green Whelp Armor"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 7392, 4 },
@@ -5246,7 +5246,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9198] = {
             ["craftItem"] = 7377,
-            ["name"] = AL["Frost Leather Cloak"],
+            ["name"] = L["Frost Leather Cloak"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4236, 2 },
@@ -5257,7 +5257,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9201] = {
             ["craftItem"] = 7378,
-            ["name"] = AL["Dusky Bracers"],
+            ["name"] = L["Dusky Bracers"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4234, 16 },
@@ -5267,7 +5267,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9202] = {
             ["craftItem"] = 7386,
-            ["name"] = AL["Green Whelp Bracers"],
+            ["name"] = L["Green Whelp Bracers"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 7392, 6 },
@@ -5277,7 +5277,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9206] = {
             ["craftItem"] = 7387,
-            ["name"] = AL["Dusky Belt"],
+            ["name"] = L["Dusky Belt"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4234, 10 },
@@ -5288,7 +5288,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9207] = {
             ["craftItem"] = 7390,
-            ["name"] = AL["Dusky Boots"],
+            ["name"] = L["Dusky Boots"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4234, 8 },
@@ -5299,7 +5299,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9208] = {
             ["craftItem"] = 7391,
-            ["name"] = AL["Swift Boots"],
+            ["name"] = L["Swift Boots"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4234, 10 },
@@ -5310,7 +5310,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9269] = {
             ["craftItem"] = 7506,
-            ["name"] = AL["Gnomish Universal Remote"],
+            ["name"] = L["Gnomish Universal Remote"],
             ["castTime"] = 12.5,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -5323,7 +5323,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9271] = {
             ["craftItem"] = 6533,
-            ["name"] = AL["Aquadynamic Fish Attractor"],
+            ["name"] = L["Aquadynamic Fish Attractor"],
             ["castTime"] = 8,
             ["reagents"] = {
                 { 2841, 2 },
@@ -5334,7 +5334,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9273] = {
             ["craftItem"] = 7148,
-            ["name"] = AL["Goblin Jumper Cables"],
+            ["name"] = L["Goblin Jumper Cables"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 3575, 6 },
@@ -5347,7 +5347,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9513] = {
             ["craftItem"] = 7676,
-            ["name"] = AL["Thistle Tea"],
+            ["name"] = L["Thistle Tea"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 2452 },
@@ -5356,7 +5356,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9811] = {
             ["craftItem"] = 7913,
-            ["name"] = AL["Barbaric Iron Shoulders"],
+            ["name"] = L["Barbaric Iron Shoulders"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5368,7 +5368,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9813] = {
             ["craftItem"] = 7914,
-            ["name"] = AL["Barbaric Iron Breastplate"],
+            ["name"] = L["Barbaric Iron Breastplate"],
             ["castTime"] = 25,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5378,7 +5378,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9814] = {
             ["craftItem"] = 7915,
-            ["name"] = AL["Barbaric Iron Helm"],
+            ["name"] = L["Barbaric Iron Helm"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5389,7 +5389,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9818] = {
             ["craftItem"] = 7916,
-            ["name"] = AL["Barbaric Iron Boots"],
+            ["name"] = L["Barbaric Iron Boots"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5401,7 +5401,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9820] = {
             ["craftItem"] = 7917,
-            ["name"] = AL["Barbaric Iron Gloves"],
+            ["name"] = L["Barbaric Iron Gloves"],
             ["castTime"] = 25,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5412,7 +5412,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9916] = {
             ["craftItem"] = 7963,
-            ["name"] = AL["Steel Breastplate"],
+            ["name"] = L["Steel Breastplate"],
             ["castTime"] = 25,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5422,7 +5422,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9918] = {
             ["craftItem"] = 7964,
-            ["name"] = AL["Solid Sharpening Stone"],
+            ["name"] = L["Solid Sharpening Stone"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 7912 },
@@ -5430,7 +5430,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9920] = {
             ["craftItem"] = 7966,
-            ["name"] = AL["Solid Grinding Stone"],
+            ["name"] = L["Solid Grinding Stone"],
             ["castTime"] = 8,
             ["reagents"] = {
                 { 7912, 4 },
@@ -5438,7 +5438,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9921] = {
             ["craftItem"] = 7965,
-            ["name"] = AL["Solid Weightstone"],
+            ["name"] = L["Solid Weightstone"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 7912 },
@@ -5447,7 +5447,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9926] = {
             ["craftItem"] = 7918,
-            ["name"] = AL["Heavy Mithril Shoulder"],
+            ["name"] = L["Heavy Mithril Shoulder"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5457,7 +5457,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9928] = {
             ["craftItem"] = 7919,
-            ["name"] = AL["Heavy Mithril Gauntlet"],
+            ["name"] = L["Heavy Mithril Gauntlet"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5467,7 +5467,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9931] = {
             ["craftItem"] = 7920,
-            ["name"] = AL["Mithril Scale Pants"],
+            ["name"] = L["Mithril Scale Pants"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5476,7 +5476,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9933] = {
             ["craftItem"] = 7921,
-            ["name"] = AL["Heavy Mithril Pants"],
+            ["name"] = L["Heavy Mithril Pants"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5486,7 +5486,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9935] = {
             ["craftItem"] = 7922,
-            ["name"] = AL["Steel Plate Helm"],
+            ["name"] = L["Steel Plate Helm"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5496,7 +5496,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9937] = {
             ["craftItem"] = 7924,
-            ["name"] = AL["Mithril Scale Bracers"],
+            ["name"] = L["Mithril Scale Bracers"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5506,7 +5506,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9939] = {
             ["craftItem"] = 7967,
-            ["name"] = AL["Mithril Shield Spike"],
+            ["name"] = L["Mithril Shield Spike"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5517,7 +5517,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9942] = {
             ["craftItem"] = 7925,
-            ["name"] = AL["Mithril Scale Gloves"],
+            ["name"] = L["Mithril Scale Gloves"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5528,7 +5528,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9945] = {
             ["craftItem"] = 7926,
-            ["name"] = AL["Ornate Mithril Pants"],
+            ["name"] = L["Ornate Mithril Pants"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5540,7 +5540,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9950] = {
             ["craftItem"] = 7927,
-            ["name"] = AL["Ornate Mithril Gloves"],
+            ["name"] = L["Ornate Mithril Gloves"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5552,7 +5552,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9952] = {
             ["craftItem"] = 7928,
-            ["name"] = AL["Ornate Mithril Shoulders"],
+            ["name"] = L["Ornate Mithril Shoulders"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5563,7 +5563,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9954] = {
             ["craftItem"] = 7938,
-            ["name"] = AL["Truesilver Gauntlets"],
+            ["name"] = L["Truesilver Gauntlets"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5577,7 +5577,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9957] = {
             ["craftItem"] = 7929,
-            ["name"] = AL["Orcish War Leggings"],
+            ["name"] = L["Orcish War Leggings"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5587,7 +5587,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9959] = {
             ["craftItem"] = 7930,
-            ["name"] = AL["Heavy Mithril Breastplate"],
+            ["name"] = L["Heavy Mithril Breastplate"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5596,7 +5596,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9961] = {
             ["craftItem"] = 7931,
-            ["name"] = AL["Mithril Coif"],
+            ["name"] = L["Mithril Coif"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5606,7 +5606,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9964] = {
             ["craftItem"] = 7969,
-            ["name"] = AL["Mithril Spurs"],
+            ["name"] = L["Mithril Spurs"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5616,7 +5616,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9966] = {
             ["craftItem"] = 7932,
-            ["name"] = AL["Mithril Scale Shoulders"],
+            ["name"] = L["Mithril Scale Shoulders"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5627,7 +5627,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9968] = {
             ["craftItem"] = 7933,
-            ["name"] = AL["Heavy Mithril Boots"],
+            ["name"] = L["Heavy Mithril Boots"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5637,7 +5637,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9970] = {
             ["craftItem"] = 7934,
-            ["name"] = AL["Heavy Mithril Helm"],
+            ["name"] = L["Heavy Mithril Helm"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5647,7 +5647,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9972] = {
             ["craftItem"] = 7935,
-            ["name"] = AL["Ornate Mithril Breastplate"],
+            ["name"] = L["Ornate Mithril Breastplate"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5659,7 +5659,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9974] = {
             ["craftItem"] = 7939,
-            ["name"] = AL["Truesilver Breastplate"],
+            ["name"] = L["Truesilver Breastplate"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5672,7 +5672,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9979] = {
             ["craftItem"] = 7936,
-            ["name"] = AL["Ornate Mithril Boots"],
+            ["name"] = L["Ornate Mithril Boots"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5685,7 +5685,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9980] = {
             ["craftItem"] = 7937,
-            ["name"] = AL["Ornate Mithril Helm"],
+            ["name"] = L["Ornate Mithril Helm"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5697,7 +5697,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9983] = {
             ["craftItem"] = 7955,
-            ["name"] = AL["Copper Claymore"],
+            ["name"] = L["Copper Claymore"],
             ["castTime"] = 8,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5709,7 +5709,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9985] = {
             ["craftItem"] = 7956,
-            ["name"] = AL["Bronze Warhammer"],
+            ["name"] = L["Bronze Warhammer"],
             ["castTime"] = 12.5,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5720,7 +5720,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9986] = {
             ["craftItem"] = 7957,
-            ["name"] = AL["Bronze Greatsword"],
+            ["name"] = L["Bronze Greatsword"],
             ["castTime"] = 12.5,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5731,7 +5731,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9987] = {
             ["craftItem"] = 7958,
-            ["name"] = AL["Bronze Battle Axe"],
+            ["name"] = L["Bronze Battle Axe"],
             ["castTime"] = 12.5,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5742,7 +5742,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9993] = {
             ["craftItem"] = 7941,
-            ["name"] = AL["Heavy Mithril Axe"],
+            ["name"] = L["Heavy Mithril Axe"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5754,7 +5754,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9995] = {
             ["craftItem"] = 7942,
-            ["name"] = AL["Blue Glittering Axe"],
+            ["name"] = L["Blue Glittering Axe"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5766,7 +5766,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [9997] = {
             ["craftItem"] = 7943,
-            ["name"] = AL["Wicked Mithril Blade"],
+            ["name"] = L["Wicked Mithril Blade"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5778,7 +5778,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10001] = {
             ["craftItem"] = 7945,
-            ["name"] = AL["Big Black Mace"],
+            ["name"] = L["Big Black Mace"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5791,7 +5791,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10003] = {
             ["craftItem"] = 7954,
-            ["name"] = AL["The Shatterer"],
+            ["name"] = L["The Shatterer"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5806,7 +5806,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10005] = {
             ["craftItem"] = 7944,
-            ["name"] = AL["Dazzling Mithril Rapier"],
+            ["name"] = L["Dazzling Mithril Rapier"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5820,7 +5820,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10007] = {
             ["craftItem"] = 7961,
-            ["name"] = AL["Phantom Blade"],
+            ["name"] = L["Phantom Blade"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5835,7 +5835,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10009] = {
             ["craftItem"] = 7946,
-            ["name"] = AL["Runed Mithril Hammer"],
+            ["name"] = L["Runed Mithril Hammer"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5847,7 +5847,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10011] = {
             ["craftItem"] = 7959,
-            ["name"] = AL["Blight"],
+            ["name"] = L["Blight"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5860,7 +5860,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10013] = {
             ["craftItem"] = 7947,
-            ["name"] = AL["Ebon Shiv"],
+            ["name"] = L["Ebon Shiv"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5873,7 +5873,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10015] = {
             ["craftItem"] = 7960,
-            ["name"] = AL["Truesilver Champion"],
+            ["name"] = L["Truesilver Champion"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -5887,25 +5887,25 @@ GetSpellInfoAtlasLootDB = {
         },
         [10097] = {
             ["craftItem"] = 3860,
-            ["name"] = AL["Smelt Mithril"],
+            ["name"] = L["Smelt Mithril"],
             ["castTime"] = 3,
-            ["text"] = AL["Allows the miner to smelt a chunk of mithril ore into a mithril bar.  Smelting mithril requires a forge."],
+            ["text"] = L["Allows the miner to smelt a chunk of mithril ore into a mithril bar.  Smelting mithril requires a forge."],
             ["reagents"] = {
                 { 3858 },
             },
         },
         [10098] = {
             ["craftItem"] = 6037,
-            ["name"] = AL["Smelt Truesilver"],
+            ["name"] = L["Smelt Truesilver"],
             ["castTime"] = 3,
-            ["text"] = AL["Allows the miner to smelt a chunk of truesilver ore into a truesilver bar.  Smelting truesilver requires a forge."],
+            ["text"] = L["Allows the miner to smelt a chunk of truesilver ore into a truesilver bar.  Smelting truesilver requires a forge."],
             ["reagents"] = {
                 { 7911 },
             },
         },
         [10482] = {
             ["craftItem"] = 8172,
-            ["name"] = AL["Cured Thick Hide"],
+            ["name"] = L["Cured Thick Hide"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 8169 },
@@ -5914,7 +5914,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10487] = {
             ["craftItem"] = 8173,
-            ["name"] = AL["Thick Armor Kit"],
+            ["name"] = L["Thick Armor Kit"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 4304, 5 },
@@ -5923,7 +5923,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10490] = {
             ["craftItem"] = 8174,
-            ["name"] = AL["Comfortable Leather Hat"],
+            ["name"] = L["Comfortable Leather Hat"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4234, 12 },
@@ -5933,7 +5933,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10499] = {
             ["craftItem"] = 8175,
-            ["name"] = AL["Nightscape Tunic"],
+            ["name"] = L["Nightscape Tunic"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4304, 7 },
@@ -5942,7 +5942,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10507] = {
             ["craftItem"] = 8176,
-            ["name"] = AL["Nightscape Headband"],
+            ["name"] = L["Nightscape Headband"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4304, 5 },
@@ -5951,7 +5951,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10509] = {
             ["craftItem"] = 8187,
-            ["name"] = AL["Turtle Scale Gloves"],
+            ["name"] = L["Turtle Scale Gloves"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4304, 6 },
@@ -5961,7 +5961,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10511] = {
             ["craftItem"] = 8189,
-            ["name"] = AL["Turtle Scale Breastplate"],
+            ["name"] = L["Turtle Scale Breastplate"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4304, 6 },
@@ -5971,7 +5971,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10516] = {
             ["craftItem"] = 8192,
-            ["name"] = AL["Nightscape Shoulders"],
+            ["name"] = L["Nightscape Shoulders"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4304, 8 },
@@ -5981,7 +5981,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10518] = {
             ["craftItem"] = 8198,
-            ["name"] = AL["Turtle Scale Bracers"],
+            ["name"] = L["Turtle Scale Bracers"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4304, 8 },
@@ -5991,7 +5991,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10520] = {
             ["craftItem"] = 8200,
-            ["name"] = AL["Big Voodoo Robe"],
+            ["name"] = L["Big Voodoo Robe"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4304, 10 },
@@ -6001,7 +6001,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10525] = {
             ["craftItem"] = 8203,
-            ["name"] = AL["Tough Scorpid Breastplate"],
+            ["name"] = L["Tough Scorpid Breastplate"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4304, 12 },
@@ -6011,7 +6011,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10529] = {
             ["craftItem"] = 8210,
-            ["name"] = AL["Wild Leather Shoulders"],
+            ["name"] = L["Wild Leather Shoulders"],
             ["castTime"] = 60,
             ["extra"] = GREEN_FONT_COLOR_CODE..ITEM_RANDOM_ENCHANT,
             ["reagents"] = {
@@ -6022,7 +6022,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10531] = {
             ["craftItem"] = 8201,
-            ["name"] = AL["Big Voodoo Mask"],
+            ["name"] = L["Big Voodoo Mask"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4304, 8 },
@@ -6032,7 +6032,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10533] = {
             ["craftItem"] = 8205,
-            ["name"] = AL["Tough Scorpid Bracers"],
+            ["name"] = L["Tough Scorpid Bracers"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4304, 10 },
@@ -6042,7 +6042,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10542] = {
             ["craftItem"] = 8204,
-            ["name"] = AL["Tough Scorpid Gloves"],
+            ["name"] = L["Tough Scorpid Gloves"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4304, 6 },
@@ -6052,7 +6052,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10544] = {
             ["craftItem"] = 8211,
-            ["name"] = AL["Wild Leather Vest"],
+            ["name"] = L["Wild Leather Vest"],
             ["castTime"] = 60,
             ["extra"] = GREEN_FONT_COLOR_CODE..ITEM_RANDOM_ENCHANT,
             ["reagents"] = {
@@ -6063,7 +6063,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10546] = {
             ["craftItem"] = 8214,
-            ["name"] = AL["Wild Leather Helmet"],
+            ["name"] = L["Wild Leather Helmet"],
             ["castTime"] = 60,
             ["extra"] = GREEN_FONT_COLOR_CODE..ITEM_RANDOM_ENCHANT,
             ["reagents"] = {
@@ -6074,7 +6074,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10548] = {
             ["craftItem"] = 8193,
-            ["name"] = AL["Nightscape Pants"],
+            ["name"] = L["Nightscape Pants"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4304, 14 },
@@ -6083,7 +6083,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10550] = {
             ["craftItem"] = 8195,
-            ["name"] = AL["Nightscape Cloak"],
+            ["name"] = L["Nightscape Cloak"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4304, 12 },
@@ -6092,7 +6092,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10552] = {
             ["craftItem"] = 8191,
-            ["name"] = AL["Turtle Scale Helm"],
+            ["name"] = L["Turtle Scale Helm"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4304, 14 },
@@ -6102,7 +6102,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10554] = {
             ["craftItem"] = 8209,
-            ["name"] = AL["Tough Scorpid Boots"],
+            ["name"] = L["Tough Scorpid Boots"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4304, 12 },
@@ -6112,7 +6112,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10556] = {
             ["craftItem"] = 8185,
-            ["name"] = AL["Turtle Scale Leggings"],
+            ["name"] = L["Turtle Scale Leggings"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4304, 14 },
@@ -6122,7 +6122,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10558] = {
             ["craftItem"] = 8197,
-            ["name"] = AL["Nightscape Boots"],
+            ["name"] = L["Nightscape Boots"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4304, 16 },
@@ -6131,7 +6131,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10560] = {
             ["craftItem"] = 8202,
-            ["name"] = AL["Big Voodoo Pants"],
+            ["name"] = L["Big Voodoo Pants"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4304, 10 },
@@ -6141,7 +6141,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10562] = {
             ["craftItem"] = 8216,
-            ["name"] = AL["Big Voodoo Cloak"],
+            ["name"] = L["Big Voodoo Cloak"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4304, 14 },
@@ -6151,7 +6151,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10564] = {
             ["craftItem"] = 8207,
-            ["name"] = AL["Tough Scorpid Shoulders"],
+            ["name"] = L["Tough Scorpid Shoulders"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4304, 12 },
@@ -6161,7 +6161,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10566] = {
             ["craftItem"] = 8213,
-            ["name"] = AL["Wild Leather Boots"],
+            ["name"] = L["Wild Leather Boots"],
             ["castTime"] = 60,
             ["extra"] = GREEN_FONT_COLOR_CODE..ITEM_RANDOM_ENCHANT,
             ["reagents"] = {
@@ -6172,7 +6172,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10568] = {
             ["craftItem"] = 8206,
-            ["name"] = AL["Tough Scorpid Leggings"],
+            ["name"] = L["Tough Scorpid Leggings"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4304, 14 },
@@ -6182,7 +6182,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10570] = {
             ["craftItem"] = 8208,
-            ["name"] = AL["Tough Scorpid Helm"],
+            ["name"] = L["Tough Scorpid Helm"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4304, 10 },
@@ -6192,7 +6192,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10572] = {
             ["craftItem"] = 8212,
-            ["name"] = AL["Wild Leather Leggings"],
+            ["name"] = L["Wild Leather Leggings"],
             ["castTime"] = 60,
             ["extra"] = GREEN_FONT_COLOR_CODE..ITEM_RANDOM_ENCHANT,
             ["reagents"] = {
@@ -6203,7 +6203,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10574] = {
             ["craftItem"] = 8215,
-            ["name"] = AL["Wild Leather Cloak"],
+            ["name"] = L["Wild Leather Cloak"],
             ["castTime"] = 60,
             ["extra"] = GREEN_FONT_COLOR_CODE..ITEM_RANDOM_ENCHANT,
             ["reagents"] = {
@@ -6214,7 +6214,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10619] = {
             ["craftItem"] = 8347,
-            ["name"] = AL["Dragonscale Gauntlets"],
+            ["name"] = L["Dragonscale Gauntlets"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4304, 24 },
@@ -6225,7 +6225,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10621] = {
             ["craftItem"] = 8345,
-            ["name"] = AL["Wolfshead Helm"],
+            ["name"] = L["Wolfshead Helm"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4304, 18 },
@@ -6237,7 +6237,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10630] = {
             ["craftItem"] = 8346,
-            ["name"] = AL["Gauntlets of the Sea"],
+            ["name"] = L["Gauntlets of the Sea"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4304, 20 },
@@ -6249,7 +6249,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10632] = {
             ["craftItem"] = 8348,
-            ["name"] = AL["Helm of Fire"],
+            ["name"] = L["Helm of Fire"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4304, 40 },
@@ -6261,7 +6261,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10647] = {
             ["craftItem"] = 8349,
-            ["name"] = AL["Feathered Breastplate"],
+            ["name"] = L["Feathered Breastplate"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4304, 40 },
@@ -6273,7 +6273,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10650] = {
             ["craftItem"] = 8367,
-            ["name"] = AL["Dragonscale Breastplate"],
+            ["name"] = L["Dragonscale Breastplate"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4304, 40 },
@@ -6284,7 +6284,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10840] = {
             ["craftItem"] = 8544,
-            ["name"] = AL["Mageweave Bandage"],
+            ["name"] = L["Mageweave Bandage"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 4338 },
@@ -6292,7 +6292,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10841] = {
             ["craftItem"] = 8545,
-            ["name"] = AL["Heavy Mageweave Bandage"],
+            ["name"] = L["Heavy Mageweave Bandage"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 4338, 2 },
@@ -6300,7 +6300,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [10844] = {
             ["craftItem"] = 8546,
-            ["name"] = AL["Powerful Smelling Salts"],
+            ["name"] = L["Powerful Smelling Salts"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 8150, 4 },
@@ -6310,9 +6310,9 @@ GetSpellInfoAtlasLootDB = {
         },
         [11341] = {
             ["craftItem"] = 8926,
-            ["name"] = AL["Instant Poison IV"],
+            ["name"] = L["Instant Poison IV"],
             ["castTime"] = 3,
-            ["text"] = AL["Coats a weapon with poison that lasts for 30 minutes.\nEach strike has a 20% chance of poisoning the enemy which instantly inflicts 67 to 85 Nature damage.  85 charges."],
+            ["text"] = L["Coats a weapon with poison that lasts for 30 minutes.\nEach strike has a 20% chance of poisoning the enemy which instantly inflicts 67 to 85 Nature damage.  85 charges."],
             ["reagents"] = {
                 { 8924, 2 },
                 { 8925 },
@@ -6320,9 +6320,9 @@ GetSpellInfoAtlasLootDB = {
         },
         [11342] = {
             ["craftItem"] = 8927,
-            ["name"] = AL["Instant Poison V"],
+            ["name"] = L["Instant Poison V"],
             ["castTime"] = 3,
-            ["text"] = AL["Coats a weapon with poison that lasts for 30 minutes.\nEach strike has a 20% chance of poisoning the enemy which instantly inflicts 92 to 118 Nature damage.  100 charges."],
+            ["text"] = L["Coats a weapon with poison that lasts for 30 minutes.\nEach strike has a 20% chance of poisoning the enemy which instantly inflicts 92 to 118 Nature damage.  100 charges."],
             ["reagents"] = {
                 { 8924, 3 },
                 { 8925 },
@@ -6330,9 +6330,9 @@ GetSpellInfoAtlasLootDB = {
         },
         [11343] = {
             ["craftItem"] = 8928,
-            ["name"] = AL["Instant Poison VI"],
+            ["name"] = L["Instant Poison VI"],
             ["castTime"] = 3,
-            ["text"] = AL["Coats a weapon with poison that lasts for 30 minutes.\nEach strike has a 20% chance of poisoning the enemy which instantly inflicts 112 to 148 Nature damage.  115 charges."],
+            ["text"] = L["Coats a weapon with poison that lasts for 30 minutes.\nEach strike has a 20% chance of poisoning the enemy which instantly inflicts 112 to 148 Nature damage.  115 charges."],
             ["reagents"] = {
                 { 8924, 4 },
                 { 8925 },
@@ -6340,9 +6340,9 @@ GetSpellInfoAtlasLootDB = {
         },
         [11357] = {
             ["craftItem"] = 8984,
-            ["name"] = AL["Deadly Poison III"],
+            ["name"] = L["Deadly Poison III"],
             ["castTime"] = 3,
-            ["text"] = AL["Coats a weapon with poison that lasts for 30 minutes.\nEach strike has a 30% chance of poisoning the enemy for 80 Nature damage over 12 sec.  Stacks up to 5 times on a single target.  90 charges."],
+            ["text"] = L["Coats a weapon with poison that lasts for 30 minutes.\nEach strike has a 30% chance of poisoning the enemy for 80 Nature damage over 12 sec.  Stacks up to 5 times on a single target.  90 charges."],
             ["reagents"] = {
                 { 5173, 3 },
                 { 8925 },
@@ -6350,9 +6350,9 @@ GetSpellInfoAtlasLootDB = {
         },
         [11358] = {
             ["craftItem"] = 8985,
-            ["name"] = AL["Deadly Poison IV"],
+            ["name"] = L["Deadly Poison IV"],
             ["castTime"] = 3,
-            ["text"] = AL["Coats a weapon with poison that lasts for 30 minutes.\nEach strike has a 30% chance of poisoning the enemy for 108 Nature damage over 12 sec.  Stacks up to 5 times on a single target.  105 charges."],
+            ["text"] = L["Coats a weapon with poison that lasts for 30 minutes.\nEach strike has a 30% chance of poisoning the enemy for 108 Nature damage over 12 sec.  Stacks up to 5 times on a single target.  105 charges."],
             ["reagents"] = {
                 { 5173, 5 },
                 { 8925 },
@@ -6360,9 +6360,9 @@ GetSpellInfoAtlasLootDB = {
         },
         [11400] = {
             ["craftItem"] = 9186,
-            ["name"] = AL["Mind-numbing Poison III"],
+            ["name"] = L["Mind-numbing Poison III"],
             ["castTime"] = 3,
-            ["text"] = AL["Coats a weapon with poison that lasts for 30 minutes.\nEach strike has a 20% chance of poisoning the enemy, increasing their casting time by 60% for 14 sec.  100 charges."],
+            ["text"] = L["Coats a weapon with poison that lasts for 30 minutes.\nEach strike has a 20% chance of poisoning the enemy, increasing their casting time by 60% for 14 sec.  100 charges."],
             ["reagents"] = {
                 { 8924, 2 },
                 { 8923, 2 },
@@ -6371,7 +6371,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [11448] = {
             ["craftItem"] = 6149,
-            ["name"] = AL["Greater Mana Potion"],
+            ["name"] = L["Greater Mana Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 3358 },
@@ -6381,7 +6381,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [11449] = {
             ["craftItem"] = 8949,
-            ["name"] = AL["Elixir of Agility"],
+            ["name"] = L["Elixir of Agility"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 3820 },
@@ -6391,7 +6391,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [11450] = {
             ["craftItem"] = 8951,
-            ["name"] = AL["Elixir of Greater Defense"],
+            ["name"] = L["Elixir of Greater Defense"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 3355 },
@@ -6401,7 +6401,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [11451] = {
             ["craftItem"] = 8956,
-            ["name"] = AL["Oil of Immolation"],
+            ["name"] = L["Oil of Immolation"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 4625 },
@@ -6411,7 +6411,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [11452] = {
             ["craftItem"] = 9030,
-            ["name"] = AL["Restorative Potion"],
+            ["name"] = L["Restorative Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 7067 },
@@ -6421,7 +6421,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [11453] = {
             ["craftItem"] = 9036,
-            ["name"] = AL["Magic Resistance Potion"],
+            ["name"] = L["Magic Resistance Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 3358 },
@@ -6431,7 +6431,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [11454] = {
             ["craftItem"] = 9060,
-            ["name"] = AL["Inlaid Mithril Cylinder"],
+            ["name"] = L["Inlaid Mithril Cylinder"],
             ["castTime"] = 3,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -6442,7 +6442,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [11456] = {
             ["craftItem"] = 9061,
-            ["name"] = AL["Goblin Rocket Fuel"],
+            ["name"] = L["Goblin Rocket Fuel"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 4625 },
@@ -6452,7 +6452,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [11457] = {
             ["craftItem"] = 3928,
-            ["name"] = AL["Superior Healing Potion"],
+            ["name"] = L["Superior Healing Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 8838 },
@@ -6462,7 +6462,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [11458] = {
             ["craftItem"] = 9144,
-            ["name"] = AL["Wildvine Potion"],
+            ["name"] = L["Wildvine Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 8153 },
@@ -6472,7 +6472,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [11459] = {
             ["craftItem"] = 9149,
-            ["name"] = AL["Philosophers' Stone"],
+            ["name"] = L["Philosophers' Stone"],
             ["castTime"] = 30,
             ["reagents"] = {
                 { 3575, 4 },
@@ -6483,7 +6483,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [11460] = {
             ["craftItem"] = 9154,
-            ["name"] = AL["Elixir of Detect Undead"],
+            ["name"] = L["Elixir of Detect Undead"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 8836 },
@@ -6492,7 +6492,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [11461] = {
             ["craftItem"] = 9155,
-            ["name"] = AL["Arcane Elixir"],
+            ["name"] = L["Arcane Elixir"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 8839 },
@@ -6502,7 +6502,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [11464] = {
             ["craftItem"] = 9172,
-            ["name"] = AL["Invisibility Potion"],
+            ["name"] = L["Invisibility Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 8845 },
@@ -6512,7 +6512,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [11465] = {
             ["craftItem"] = 9179,
-            ["name"] = AL["Elixir of Greater Intellect"],
+            ["name"] = L["Elixir of Greater Intellect"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 8839 },
@@ -6522,7 +6522,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [11466] = {
             ["craftItem"] = 9088,
-            ["name"] = AL["Gift of Arthas"],
+            ["name"] = L["Gift of Arthas"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 8836 },
@@ -6532,7 +6532,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [11467] = {
             ["craftItem"] = 9187,
-            ["name"] = AL["Elixir of Greater Agility"],
+            ["name"] = L["Elixir of Greater Agility"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 8838 },
@@ -6542,7 +6542,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [11468] = {
             ["craftItem"] = 9197,
-            ["name"] = AL["Elixir of Dream Vision"],
+            ["name"] = L["Elixir of Dream Vision"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 8831, 3 },
@@ -6551,7 +6551,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [11472] = {
             ["craftItem"] = 9206,
-            ["name"] = AL["Elixir of Giants"],
+            ["name"] = L["Elixir of Giants"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 8838 },
@@ -6561,7 +6561,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [11473] = {
             ["craftItem"] = 9210,
-            ["name"] = AL["Ghost Dye"],
+            ["name"] = L["Ghost Dye"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 8845, 2 },
@@ -6571,7 +6571,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [11476] = {
             ["craftItem"] = 9264,
-            ["name"] = AL["Elixir of Shadow Power"],
+            ["name"] = L["Elixir of Shadow Power"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 8845, 3 },
@@ -6580,7 +6580,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [11477] = {
             ["craftItem"] = 9224,
-            ["name"] = AL["Elixir of Demonslaying"],
+            ["name"] = L["Elixir of Demonslaying"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 8846 },
@@ -6590,7 +6590,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [11478] = {
             ["craftItem"] = 9233,
-            ["name"] = AL["Elixir of Detect Demon"],
+            ["name"] = L["Elixir of Detect Demon"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 8846, 2 },
@@ -6599,29 +6599,29 @@ GetSpellInfoAtlasLootDB = {
         },
         [11479] = {
             ["craftItem"] = 3577,
-            ["name"] = AL["Transmute: Iron to Gold"],
+            ["name"] = L["Transmute: Iron to Gold"],
             ["castTime"] = 10,
             ["tools"] = { 9149 },
             ["cooldown"] = 86400,
-            ["text"] = AL["Turns a bar of Iron into a bar of Gold."],
+            ["text"] = L["Turns a bar of Iron into a bar of Gold."],
             ["reagents"] = {
                 { 3575 },
             },
         },
         [11480] = {
             ["craftItem"] = 6037,
-            ["name"] = AL["Transmute: Mithril to Truesilver"],
+            ["name"] = L["Transmute: Mithril to Truesilver"],
             ["castTime"] = 10,
             ["tools"] = { 9149 },
             ["cooldown"] = 172800,
-            ["text"] = AL["Turns a bar of Mithril into a bar of Truesilver."],
+            ["text"] = L["Turns a bar of Mithril into a bar of Truesilver."],
             ["reagents"] = {
                 { 3860 },
             },
         },
         [11643] = {
             ["craftItem"] = 9366,
-            ["name"] = AL["Golden Scale Gauntlets"],
+            ["name"] = L["Golden Scale Gauntlets"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -6633,7 +6633,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12044] = {
             ["craftItem"] = 10045,
-            ["name"] = AL["Simple Linen Pants"],
+            ["name"] = L["Simple Linen Pants"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 2996 },
@@ -6642,7 +6642,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12045] = {
             ["craftItem"] = 10046,
-            ["name"] = AL["Simple Linen Boots"],
+            ["name"] = L["Simple Linen Boots"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 2996, 2 },
@@ -6652,7 +6652,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12046] = {
             ["craftItem"] = 10047,
-            ["name"] = AL["Simple Kilt"],
+            ["name"] = L["Simple Kilt"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 2996, 4 },
@@ -6661,7 +6661,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12047] = {
             ["craftItem"] = 10048,
-            ["name"] = AL["Colorful Kilt"],
+            ["name"] = L["Colorful Kilt"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 2997, 5 },
@@ -6671,7 +6671,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12048] = {
             ["craftItem"] = 9998,
-            ["name"] = AL["Black Mageweave Vest"],
+            ["name"] = L["Black Mageweave Vest"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4339, 2 },
@@ -6680,7 +6680,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12049] = {
             ["craftItem"] = 9999,
-            ["name"] = AL["Black Mageweave Leggings"],
+            ["name"] = L["Black Mageweave Leggings"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4339, 2 },
@@ -6689,7 +6689,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12050] = {
             ["craftItem"] = 10001,
-            ["name"] = AL["Black Mageweave Robe"],
+            ["name"] = L["Black Mageweave Robe"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4339, 3 },
@@ -6698,7 +6698,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12052] = {
             ["craftItem"] = 10002,
-            ["name"] = AL["Shadoweave Pants"],
+            ["name"] = L["Shadoweave Pants"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4339, 3 },
@@ -6708,7 +6708,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12053] = {
             ["craftItem"] = 10003,
-            ["name"] = AL["Black Mageweave Gloves"],
+            ["name"] = L["Black Mageweave Gloves"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4339, 2 },
@@ -6717,7 +6717,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12055] = {
             ["craftItem"] = 10004,
-            ["name"] = AL["Shadoweave Robe"],
+            ["name"] = L["Shadoweave Robe"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4339, 3 },
@@ -6727,7 +6727,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12056] = {
             ["craftItem"] = 10007,
-            ["name"] = AL["Red Mageweave Vest"],
+            ["name"] = L["Red Mageweave Vest"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4339, 3 },
@@ -6737,7 +6737,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12059] = {
             ["craftItem"] = 10008,
-            ["name"] = AL["White Bandit Mask"],
+            ["name"] = L["White Bandit Mask"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4339 },
@@ -6747,7 +6747,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12060] = {
             ["craftItem"] = 10009,
-            ["name"] = AL["Red Mageweave Pants"],
+            ["name"] = L["Red Mageweave Pants"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4339, 3 },
@@ -6757,7 +6757,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12061] = {
             ["craftItem"] = 10056,
-            ["name"] = AL["Orange Mageweave Shirt"],
+            ["name"] = L["Orange Mageweave Shirt"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4339 },
@@ -6767,7 +6767,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12062] = {
             ["craftItem"] = 10010,
-            ["name"] = AL["Stormcloth Pants"],
+            ["name"] = L["Stormcloth Pants"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4339, 4 },
@@ -6777,7 +6777,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12063] = {
             ["craftItem"] = 10011,
-            ["name"] = AL["Stormcloth Gloves"],
+            ["name"] = L["Stormcloth Gloves"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4339, 3 },
@@ -6787,7 +6787,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12064] = {
             ["craftItem"] = 10052,
-            ["name"] = AL["Orange Martial Shirt"],
+            ["name"] = L["Orange Martial Shirt"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4339, 2 },
@@ -6797,7 +6797,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12065] = {
             ["craftItem"] = 10050,
-            ["name"] = AL["Mageweave Bag"],
+            ["name"] = L["Mageweave Bag"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4339, 4 },
@@ -6806,7 +6806,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12066] = {
             ["craftItem"] = 10018,
-            ["name"] = AL["Red Mageweave Gloves"],
+            ["name"] = L["Red Mageweave Gloves"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4339, 3 },
@@ -6816,7 +6816,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12067] = {
             ["craftItem"] = 10019,
-            ["name"] = AL["Dreamweave Gloves"],
+            ["name"] = L["Dreamweave Gloves"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4339, 4 },
@@ -6827,7 +6827,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12068] = {
             ["craftItem"] = 10020,
-            ["name"] = AL["Stormcloth Vest"],
+            ["name"] = L["Stormcloth Vest"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4339, 5 },
@@ -6837,7 +6837,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12069] = {
             ["craftItem"] = 10042,
-            ["name"] = AL["Cindercloth Robe"],
+            ["name"] = L["Cindercloth Robe"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4339, 5 },
@@ -6847,7 +6847,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12070] = {
             ["craftItem"] = 10021,
-            ["name"] = AL["Dreamweave Vest"],
+            ["name"] = L["Dreamweave Vest"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4339, 6 },
@@ -6858,7 +6858,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12071] = {
             ["craftItem"] = 10023,
-            ["name"] = AL["Shadoweave Gloves"],
+            ["name"] = L["Shadoweave Gloves"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4339, 5 },
@@ -6868,7 +6868,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12072] = {
             ["craftItem"] = 10024,
-            ["name"] = AL["Black Mageweave Headband"],
+            ["name"] = L["Black Mageweave Headband"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4339, 3 },
@@ -6877,7 +6877,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12073] = {
             ["craftItem"] = 10026,
-            ["name"] = AL["Black Mageweave Boots"],
+            ["name"] = L["Black Mageweave Boots"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4339, 3 },
@@ -6887,7 +6887,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12074] = {
             ["craftItem"] = 10027,
-            ["name"] = AL["Black Mageweave Shoulders"],
+            ["name"] = L["Black Mageweave Shoulders"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4339, 3 },
@@ -6896,7 +6896,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12075] = {
             ["craftItem"] = 10054,
-            ["name"] = AL["Lavender Mageweave Shirt"],
+            ["name"] = L["Lavender Mageweave Shirt"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4339, 2 },
@@ -6906,7 +6906,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12076] = {
             ["craftItem"] = 10028,
-            ["name"] = AL["Shadoweave Shoulders"],
+            ["name"] = L["Shadoweave Shoulders"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4339, 5 },
@@ -6916,7 +6916,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12077] = {
             ["craftItem"] = 10053,
-            ["name"] = AL["Simple Black Dress"],
+            ["name"] = L["Simple Black Dress"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 4339, 3 },
@@ -6927,7 +6927,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12078] = {
             ["craftItem"] = 10029,
-            ["name"] = AL["Red Mageweave Shoulders"],
+            ["name"] = L["Red Mageweave Shoulders"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4339, 4 },
@@ -6937,7 +6937,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12079] = {
             ["craftItem"] = 10051,
-            ["name"] = AL["Red Mageweave Bag"],
+            ["name"] = L["Red Mageweave Bag"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4339, 4 },
@@ -6947,7 +6947,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12080] = {
             ["craftItem"] = 10055,
-            ["name"] = AL["Pink Mageweave Shirt"],
+            ["name"] = L["Pink Mageweave Shirt"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4339, 3 },
@@ -6957,7 +6957,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12081] = {
             ["craftItem"] = 10030,
-            ["name"] = AL["Admiral's Hat"],
+            ["name"] = L["Admiral's Hat"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4339, 3 },
@@ -6967,7 +6967,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12082] = {
             ["craftItem"] = 10031,
-            ["name"] = AL["Shadoweave Boots"],
+            ["name"] = L["Shadoweave Boots"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4339, 6 },
@@ -6978,7 +6978,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12083] = {
             ["craftItem"] = 10032,
-            ["name"] = AL["Stormcloth Headband"],
+            ["name"] = L["Stormcloth Headband"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4339, 4 },
@@ -6988,7 +6988,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12084] = {
             ["craftItem"] = 10033,
-            ["name"] = AL["Red Mageweave Headband"],
+            ["name"] = L["Red Mageweave Headband"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4339, 4 },
@@ -6998,7 +6998,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12085] = {
             ["craftItem"] = 10034,
-            ["name"] = AL["Tuxedo Shirt"],
+            ["name"] = L["Tuxedo Shirt"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4339, 4 },
@@ -7008,7 +7008,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12086] = {
             ["craftItem"] = 10025,
-            ["name"] = AL["Shadoweave Mask"],
+            ["name"] = L["Shadoweave Mask"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4339, 2 },
@@ -7018,7 +7018,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12087] = {
             ["craftItem"] = 10038,
-            ["name"] = AL["Stormcloth Shoulders"],
+            ["name"] = L["Stormcloth Shoulders"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4339, 6 },
@@ -7028,7 +7028,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12088] = {
             ["craftItem"] = 10044,
-            ["name"] = AL["Cindercloth Boots"],
+            ["name"] = L["Cindercloth Boots"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4339, 5 },
@@ -7039,7 +7039,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12089] = {
             ["craftItem"] = 10035,
-            ["name"] = AL["Tuxedo Pants"],
+            ["name"] = L["Tuxedo Pants"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4339, 4 },
@@ -7048,7 +7048,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12090] = {
             ["craftItem"] = 10039,
-            ["name"] = AL["Stormcloth Boots"],
+            ["name"] = L["Stormcloth Boots"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4339, 6 },
@@ -7059,7 +7059,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12091] = {
             ["craftItem"] = 10040,
-            ["name"] = AL["White Wedding Dress"],
+            ["name"] = L["White Wedding Dress"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 4339, 5 },
@@ -7069,7 +7069,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12092] = {
             ["craftItem"] = 10041,
-            ["name"] = AL["Dreamweave Circlet"],
+            ["name"] = L["Dreamweave Circlet"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4339, 8 },
@@ -7082,7 +7082,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12093] = {
             ["craftItem"] = 10036,
-            ["name"] = AL["Tuxedo Jacket"],
+            ["name"] = L["Tuxedo Jacket"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4339, 5 },
@@ -7091,7 +7091,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12259] = {
             ["craftItem"] = 10423,
-            ["name"] = AL["Silvered Bronze Leggings"],
+            ["name"] = L["Silvered Bronze Leggings"],
             ["castTime"] = 25,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -7102,7 +7102,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12260] = {
             ["craftItem"] = 10421,
-            ["name"] = AL["Rough Copper Vest"],
+            ["name"] = L["Rough Copper Vest"],
             ["castTime"] = 5.13,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -7111,7 +7111,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12584] = {
             ["craftItem"] = 10558,
-            ["name"] = AL["Gold Power Core"],
+            ["name"] = L["Gold Power Core"],
             ["castTime"] = 25,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -7121,7 +7121,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12585] = {
             ["craftItem"] = 10505,
-            ["name"] = AL["Solid Blasting Powder"],
+            ["name"] = L["Solid Blasting Powder"],
             ["castTime"] = 8,
             ["reagents"] = {
                 { 7912, 2 },
@@ -7129,7 +7129,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12586] = {
             ["craftItem"] = 10507,
-            ["name"] = AL["Solid Dynamite"],
+            ["name"] = L["Solid Dynamite"],
             ["castTime"] = 8,
             ["reagents"] = {
                 { 10505 },
@@ -7139,7 +7139,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12587] = {
             ["craftItem"] = 10499,
-            ["name"] = AL["Bright-Eye Goggles"],
+            ["name"] = L["Bright-Eye Goggles"],
             ["castTime"] = 45,
             ["tools"] = { 6219, 10498 },
             ["reagents"] = {
@@ -7149,7 +7149,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12589] = {
             ["craftItem"] = 10559,
-            ["name"] = AL["Mithril Tube"],
+            ["name"] = L["Mithril Tube"],
             ["castTime"] = 8,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -7158,7 +7158,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12590] = {
             ["craftItem"] = 10498,
-            ["name"] = AL["Gyromatic Micro-Adjustor"],
+            ["name"] = L["Gyromatic Micro-Adjustor"],
             ["castTime"] = 8,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -7167,7 +7167,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12591] = {
             ["craftItem"] = 10560,
-            ["name"] = AL["Unstable Trigger"],
+            ["name"] = L["Unstable Trigger"],
             ["castTime"] = 8,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -7178,7 +7178,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12594] = {
             ["craftItem"] = 10500,
-            ["name"] = AL["Fire Goggles"],
+            ["name"] = L["Fire Goggles"],
             ["castTime"] = 45,
             ["tools"] = { 6219, 10498 },
             ["reagents"] = {
@@ -7190,7 +7190,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12595] = {
             ["craftItem"] = 10508,
-            ["name"] = AL["Mithril Blunderbuss"],
+            ["name"] = L["Mithril Blunderbuss"],
             ["castTime"] = 45,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -7203,7 +7203,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12596] = {
             ["craftItem"] = 10512,
-            ["name"] = AL["Hi-Impact Mithril Slugs"],
+            ["name"] = L["Hi-Impact Mithril Slugs"],
             ["castTime"] = 8,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -7214,7 +7214,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12597] = {
             ["craftItem"] = 10546,
-            ["name"] = AL["Deadly Scope"],
+            ["name"] = L["Deadly Scope"],
             ["castTime"] = 45,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -7225,7 +7225,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12599] = {
             ["craftItem"] = 10561,
-            ["name"] = AL["Mithril Casing"],
+            ["name"] = L["Mithril Casing"],
             ["castTime"] = 8,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -7234,7 +7234,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12603] = {
             ["craftItem"] = 10514,
-            ["name"] = AL["Mithril Frag Bomb"],
+            ["name"] = L["Mithril Frag Bomb"],
             ["castTime"] = 8,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -7246,7 +7246,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12607] = {
             ["craftItem"] = 10501,
-            ["name"] = AL["Catseye Ultra Goggles"],
+            ["name"] = L["Catseye Ultra Goggles"],
             ["castTime"] = 45,
             ["tools"] = { 6219, 10498 },
             ["reagents"] = {
@@ -7257,7 +7257,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12609] = {
             ["craftItem"] = 10592,
-            ["name"] = AL["Catseye Elixir"],
+            ["name"] = L["Catseye Elixir"],
             ["castTime"] = 5,
             ["reagents"] = {
                 { 3821 },
@@ -7267,7 +7267,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12614] = {
             ["craftItem"] = 10510,
-            ["name"] = AL["Mithril Heavy-bore Rifle"],
+            ["name"] = L["Mithril Heavy-bore Rifle"],
             ["castTime"] = 45,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -7280,7 +7280,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12615] = {
             ["craftItem"] = 10502,
-            ["name"] = AL["Spellpower Goggles Xtreme"],
+            ["name"] = L["Spellpower Goggles Xtreme"],
             ["castTime"] = 45,
             ["tools"] = { 6219, 10498 },
             ["reagents"] = {
@@ -7290,7 +7290,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12616] = {
             ["craftItem"] = 10518,
-            ["name"] = AL["Parachute Cloak"],
+            ["name"] = L["Parachute Cloak"],
             ["castTime"] = 45,
             ["tools"] = { 6219, 10498 },
             ["reagents"] = {
@@ -7302,7 +7302,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12617] = {
             ["craftItem"] = 10506,
-            ["name"] = AL["Deepdive Helmet"],
+            ["name"] = L["Deepdive Helmet"],
             ["castTime"] = 45,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -7315,7 +7315,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12618] = {
             ["craftItem"] = 10503,
-            ["name"] = AL["Rose Colored Goggles"],
+            ["name"] = L["Rose Colored Goggles"],
             ["castTime"] = 45,
             ["tools"] = { 6219, 10498 },
             ["reagents"] = {
@@ -7325,7 +7325,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12619] = {
             ["craftItem"] = 10562,
-            ["name"] = AL["Hi-Explosive Bomb"],
+            ["name"] = L["Hi-Explosive Bomb"],
             ["castTime"] = 8,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -7337,7 +7337,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12620] = {
             ["craftItem"] = 10548,
-            ["name"] = AL["Sniper Scope"],
+            ["name"] = L["Sniper Scope"],
             ["castTime"] = 45,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -7348,7 +7348,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12621] = {
             ["craftItem"] = 10513,
-            ["name"] = AL["Mithril Gyro-Shot"],
+            ["name"] = L["Mithril Gyro-Shot"],
             ["castTime"] = 8,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -7359,7 +7359,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12622] = {
             ["craftItem"] = 10504,
-            ["name"] = AL["Green Lens"],
+            ["name"] = L["Green Lens"],
             ["castTime"] = 45,
             ["tools"] = { 6219, 10498 },
             ["extra"] = GREEN_FONT_COLOR_CODE..ITEM_RANDOM_ENCHANT,
@@ -7373,7 +7373,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12624] = {
             ["craftItem"] = 10576,
-            ["name"] = AL["Mithril Mechanical Dragonling"],
+            ["name"] = L["Mithril Mechanical Dragonling"],
             ["castTime"] = 45,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -7387,7 +7387,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12715] = {
             ["craftItem"] = 10644,
-            ["name"] = AL["Goblin Rocket Fuel Recipe"],
+            ["name"] = L["Goblin Rocket Fuel Recipe"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 10648 },
@@ -7396,7 +7396,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12716] = {
             ["craftItem"] = 10577,
-            ["name"] = AL["Goblin Mortar"],
+            ["name"] = L["Goblin Mortar"],
             ["castTime"] = 25,
             ["tools"] = { 5956, 6219 },
             ["extra"] = format(ITEM_SPELL_CHARGES_P1, 6),
@@ -7410,7 +7410,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12717] = {
             ["craftItem"] = 10542,
-            ["name"] = AL["Goblin Mining Helmet"],
+            ["name"] = L["Goblin Mining Helmet"],
             ["castTime"] = 25,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -7421,7 +7421,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12718] = {
             ["craftItem"] = 10543,
-            ["name"] = AL["Goblin Construction Helmet"],
+            ["name"] = L["Goblin Construction Helmet"],
             ["castTime"] = 25,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -7432,7 +7432,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12722] = {
             ["craftItem"] = 10585,
-            ["name"] = AL["Goblin Radio"],
+            ["name"] = L["Goblin Radio"],
             ["castTime"] = 25,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -7444,7 +7444,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12754] = {
             ["craftItem"] = 10586,
-            ["name"] = AL["The Big One"],
+            ["name"] = L["The Big One"],
             ["castTime"] = 12.5,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -7457,7 +7457,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12755] = {
             ["craftItem"] = 10587,
-            ["name"] = AL["Goblin Bomb Dispenser"],
+            ["name"] = L["Goblin Bomb Dispenser"],
             ["castTime"] = 12.5,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -7470,7 +7470,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12758] = {
             ["craftItem"] = 10588,
-            ["name"] = AL["Goblin Rocket Helmet"],
+            ["name"] = L["Goblin Rocket Helmet"],
             ["castTime"] = 12.5,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -7482,7 +7482,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12759] = {
             ["craftItem"] = 10645,
-            ["name"] = AL["Gnomish Death Ray"],
+            ["name"] = L["Gnomish Death Ray"],
             ["castTime"] = 12.5,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -7495,7 +7495,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12760] = {
             ["craftItem"] = 10646,
-            ["name"] = AL["Goblin Sapper Charge"],
+            ["name"] = L["Goblin Sapper Charge"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 4338 },
@@ -7505,7 +7505,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12895] = {
             ["craftItem"] = 10713,
-            ["name"] = AL["Inlaid Mithril Cylinder Plans"],
+            ["name"] = L["Inlaid Mithril Cylinder Plans"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 10648 },
@@ -7514,7 +7514,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12897] = {
             ["craftItem"] = 10545,
-            ["name"] = AL["Gnomish Goggles"],
+            ["name"] = L["Gnomish Goggles"],
             ["castTime"] = 45,
             ["tools"] = { 6219, 10498 },
             ["reagents"] = {
@@ -7527,7 +7527,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12899] = {
             ["craftItem"] = 10716,
-            ["name"] = AL["Gnomish Shrink Ray"],
+            ["name"] = L["Gnomish Shrink Ray"],
             ["castTime"] = 25,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -7540,7 +7540,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12902] = {
             ["craftItem"] = 10720,
-            ["name"] = AL["Gnomish Net-o-Matic Projector"],
+            ["name"] = L["Gnomish Net-o-Matic Projector"],
             ["castTime"] = 25,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -7553,7 +7553,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12903] = {
             ["craftItem"] = 10721,
-            ["name"] = AL["Gnomish Harm Prevention Belt"],
+            ["name"] = L["Gnomish Harm Prevention Belt"],
             ["castTime"] = 45,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -7566,7 +7566,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12905] = {
             ["craftItem"] = 10724,
-            ["name"] = AL["Gnomish Rocket Boots"],
+            ["name"] = L["Gnomish Rocket Boots"],
             ["castTime"] = 12.5,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -7579,7 +7579,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12906] = {
             ["craftItem"] = 10725,
-            ["name"] = AL["Gnomish Battle Chicken"],
+            ["name"] = L["Gnomish Battle Chicken"],
             ["castTime"] = 25,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -7593,7 +7593,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12907] = {
             ["craftItem"] = 10726,
-            ["name"] = AL["Gnomish Mind Control Cap"],
+            ["name"] = L["Gnomish Mind Control Cap"],
             ["castTime"] = 25,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -7606,7 +7606,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [12908] = {
             ["craftItem"] = 10727,
-            ["name"] = AL["Goblin Dragon Gun"],
+            ["name"] = L["Goblin Dragon Gun"],
             ["castTime"] = 25,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -7619,7 +7619,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [13028] = {
             ["craftItem"] = 10841,
-            ["name"] = AL["Goldthorn Tea"],
+            ["name"] = L["Goldthorn Tea"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 3821 },
@@ -7629,9 +7629,9 @@ GetSpellInfoAtlasLootDB = {
         },
         [13220] = {
             ["craftItem"] = 10918,
-            ["name"] = AL["Wound Poison"],
+            ["name"] = L["Wound Poison"],
             ["castTime"] = 3,
-            ["text"] = AL["Coats a weapon with poison that lasts for 30 minutes.\nEach strike has a 30% chance of poisoning the enemy, reducing all healing effects used on them by 5% for 15 sec."],
+            ["text"] = L["Coats a weapon with poison that lasts for 30 minutes.\nEach strike has a 30% chance of poisoning the enemy, reducing all healing effects used on them by 5% for 15 sec."],
             ["reagents"] = {
                 { 2930 },
                 { 5173 },
@@ -7640,9 +7640,9 @@ GetSpellInfoAtlasLootDB = {
         },
         [13228] = {
             ["craftItem"] = 10920,
-            ["name"] = AL["Wound Poison II"],
+            ["name"] = L["Wound Poison II"],
             ["castTime"] = 3,
-            ["text"] = AL["Coats a weapon with poison that lasts for 30 minutes.\nEach strike has a 30% chance of poisoning the enemy, reducing all healing effects used on them by 75 for 15 sec."],
+            ["text"] = L["Coats a weapon with poison that lasts for 30 minutes.\nEach strike has a 30% chance of poisoning the enemy, reducing all healing effects used on them by 75 for 15 sec."],
             ["reagents"] = {
                 { 2930 },
                 { 5173, 2 },
@@ -7651,9 +7651,9 @@ GetSpellInfoAtlasLootDB = {
         },
         [13229] = {
             ["craftItem"] = 10921,
-            ["name"] = AL["Wound Poison III"],
+            ["name"] = L["Wound Poison III"],
             ["castTime"] = 3,
-            ["text"] = AL["Coats a weapon with poison that lasts for 30 minutes.\nEach strike has a 30% chance of poisoning the enemy, reducing all healing effects used on them by 105 for 15 sec."],
+            ["text"] = L["Coats a weapon with poison that lasts for 30 minutes.\nEach strike has a 30% chance of poisoning the enemy, reducing all healing effects used on them by 105 for 15 sec."],
             ["reagents"] = {
                 { 8923 },
                 { 5173, 2 },
@@ -7662,9 +7662,9 @@ GetSpellInfoAtlasLootDB = {
         },
         [13230] = {
             ["craftItem"] = 10922,
-            ["name"] = AL["Wound Poison IV"],
+            ["name"] = L["Wound Poison IV"],
             ["castTime"] = 3,
-            ["text"] = AL["Coats a weapon with poison that lasts for 30 minutes.\nEach strike has a 30% chance of poisoning the enemy, reducing all healing effects used on them by 135 for 15 sec."],
+            ["text"] = L["Coats a weapon with poison that lasts for 30 minutes.\nEach strike has a 30% chance of poisoning the enemy, reducing all healing effects used on them by 135 for 15 sec."],
             ["reagents"] = {
                 { 8923, 2 },
                 { 5173, 2 },
@@ -7673,10 +7673,10 @@ GetSpellInfoAtlasLootDB = {
         },
         [13240] = {
             ["craftItem"] = 10577,
-            ["name"] = AL["The Mortar: Reloaded"],
+            ["name"] = L["The Mortar: Reloaded"],
             ["castTime"] = 25,
             ["tools"] = { 5956, 6219 },
-            ["text"] = AL["Reloads an empty Goblin mortar."],
+            ["text"] = L["Reloads an empty Goblin mortar."],
             ["extra"] = format(ITEM_SPELL_CHARGES_P1, 6),
             ["reagents"] = {
                 { 10577 },
@@ -7686,7 +7686,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [14379] = {
             ["craftItem"] = 11128,
-            ["name"] = AL["Golden Rod"],
+            ["name"] = L["Golden Rod"],
             ["castTime"] = 8,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -7696,7 +7696,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [14380] = {
             ["craftItem"] = 11144,
-            ["name"] = AL["Truesilver Rod"],
+            ["name"] = L["Truesilver Rod"],
             ["castTime"] = 8,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -7706,16 +7706,16 @@ GetSpellInfoAtlasLootDB = {
         },
         [14891] = {
             ["craftItem"] = 11371,
-            ["name"] = AL["Smelt Dark Iron"],
+            ["name"] = L["Smelt Dark Iron"],
             ["castTime"] = 3,
-            ["text"] = AL["Allows the miner to smelt chunks of dark iron ore into a dark iron bar.  Smelting Dark Iron can only be done at the Black Forge in Blackrock Depths."],
+            ["text"] = L["Allows the miner to smelt chunks of dark iron ore into a dark iron bar.  Smelting Dark Iron can only be done at the Black Forge in Blackrock Depths."],
             ["reagents"] = {
                 { 11370, 8 },
             },
         },
         [14930] = {
             ["craftItem"] = 8217,
-            ["name"] = AL["Quickdraw Quiver"],
+            ["name"] = L["Quickdraw Quiver"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 4304, 12 },
@@ -7726,7 +7726,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [14932] = {
             ["craftItem"] = 8218,
-            ["name"] = AL["Thick Leather Ammo Pouch"],
+            ["name"] = L["Thick Leather Ammo Pouch"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 4304, 10 },
@@ -7737,7 +7737,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [15255] = {
             ["craftItem"] = 11590,
-            ["name"] = AL["Mechanical Repair Kit"],
+            ["name"] = L["Mechanical Repair Kit"],
             ["castTime"] = 8,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -7748,7 +7748,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [15292] = {
             ["craftItem"] = 11608,
-            ["name"] = AL["Dark Iron Pulverizer"],
+            ["name"] = L["Dark Iron Pulverizer"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -7758,7 +7758,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [15293] = {
             ["craftItem"] = 11606,
-            ["name"] = AL["Dark Iron Mail"],
+            ["name"] = L["Dark Iron Mail"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -7768,7 +7768,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [15294] = {
             ["craftItem"] = 11607,
-            ["name"] = AL["Dark Iron Sunderer"],
+            ["name"] = L["Dark Iron Sunderer"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -7778,7 +7778,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [15295] = {
             ["craftItem"] = 11605,
-            ["name"] = AL["Dark Iron Shoulders"],
+            ["name"] = L["Dark Iron Shoulders"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -7788,7 +7788,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [15296] = {
             ["craftItem"] = 11604,
-            ["name"] = AL["Dark Iron Plate"],
+            ["name"] = L["Dark Iron Plate"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -7798,7 +7798,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [15628] = {
             ["craftItem"] = 11825,
-            ["name"] = AL["Pet Bombling"],
+            ["name"] = L["Pet Bombling"],
             ["castTime"] = 25,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -7810,7 +7810,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [15633] = {
             ["craftItem"] = 11826,
-            ["name"] = AL["Lil' Smoky"],
+            ["name"] = L["Lil' Smoky"],
             ["castTime"] = 25,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -7823,7 +7823,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [15833] = {
             ["craftItem"] = 12190,
-            ["name"] = AL["Dreamless Sleep Potion"],
+            ["name"] = L["Dreamless Sleep Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 8831, 3 },
@@ -7832,7 +7832,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [15853] = {
             ["craftItem"] = 12209,
-            ["name"] = AL["Lean Wolf Steak"],
+            ["name"] = L["Lean Wolf Steak"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 1015 },
@@ -7841,7 +7841,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [15855] = {
             ["craftItem"] = 12210,
-            ["name"] = AL["Roast Raptor"],
+            ["name"] = L["Roast Raptor"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 12184 },
@@ -7850,7 +7850,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [15856] = {
             ["craftItem"] = 13851,
-            ["name"] = AL["Hot Wolf Ribs"],
+            ["name"] = L["Hot Wolf Ribs"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 12203 },
@@ -7859,7 +7859,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [15861] = {
             ["craftItem"] = 12212,
-            ["name"] = AL["Jungle Stew"],
+            ["name"] = L["Jungle Stew"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 12202 },
@@ -7870,7 +7870,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [15863] = {
             ["craftItem"] = 12213,
-            ["name"] = AL["Carrion Surprise"],
+            ["name"] = L["Carrion Surprise"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 12037 },
@@ -7879,7 +7879,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [15865] = {
             ["craftItem"] = 12214,
-            ["name"] = AL["Mystery Stew"],
+            ["name"] = L["Mystery Stew"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 12037 },
@@ -7888,7 +7888,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [15906] = {
             ["craftItem"] = 12217,
-            ["name"] = AL["Dragonbreath Chili"],
+            ["name"] = L["Dragonbreath Chili"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 12037 },
@@ -7898,7 +7898,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [15910] = {
             ["craftItem"] = 12215,
-            ["name"] = AL["Heavy Kodo Stew"],
+            ["name"] = L["Heavy Kodo Stew"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 12204, 2 },
@@ -7909,7 +7909,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [15915] = {
             ["craftItem"] = 12216,
-            ["name"] = AL["Spiced Chili Crab"],
+            ["name"] = L["Spiced Chili Crab"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 12206 },
@@ -7918,7 +7918,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [15933] = {
             ["craftItem"] = 12218,
-            ["name"] = AL["Monster Omelet"],
+            ["name"] = L["Monster Omelet"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 12207 },
@@ -7927,7 +7927,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [15935] = {
             ["craftItem"] = 12224,
-            ["name"] = AL["Crispy Bat Wing"],
+            ["name"] = L["Crispy Bat Wing"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 12223 },
@@ -7936,7 +7936,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [15972] = {
             ["craftItem"] = 12259,
-            ["name"] = AL["Glinting Steel Dagger"],
+            ["name"] = L["Glinting Steel Dagger"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -7949,7 +7949,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [15973] = {
             ["craftItem"] = 12260,
-            ["name"] = AL["Searing Golden Blade"],
+            ["name"] = L["Searing Golden Blade"],
             ["castTime"] = 25,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -7961,16 +7961,16 @@ GetSpellInfoAtlasLootDB = {
         },
         [16153] = {
             ["craftItem"] = 12359,
-            ["name"] = AL["Smelt Thorium"],
+            ["name"] = L["Smelt Thorium"],
             ["castTime"] = 3,
-            ["text"] = AL["Allows the miner to smelt a chunk of thorium ore into a thorium bar.  Smelting thorium requires a forge."],
+            ["text"] = L["Allows the miner to smelt a chunk of thorium ore into a thorium bar.  Smelting thorium requires a forge."],
             ["reagents"] = {
                 { 10620 },
             },
         },
         [16639] = {
             ["craftItem"] = 12644,
-            ["name"] = AL["Dense Grinding Stone"],
+            ["name"] = L["Dense Grinding Stone"],
             ["castTime"] = 8,
             ["reagents"] = {
                 { 12365, 4 },
@@ -7978,7 +7978,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16640] = {
             ["craftItem"] = 12643,
-            ["name"] = AL["Dense Weightstone"],
+            ["name"] = L["Dense Weightstone"],
             ["castTime"] = 8,
             ["reagents"] = {
                 { 12365 },
@@ -7987,7 +7987,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16641] = {
             ["craftItem"] = 12404,
-            ["name"] = AL["Dense Sharpening Stone"],
+            ["name"] = L["Dense Sharpening Stone"],
             ["castTime"] = 8,
             ["reagents"] = {
                 { 12365 },
@@ -7995,7 +7995,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16642] = {
             ["craftItem"] = 12405,
-            ["name"] = AL["Thorium Armor"],
+            ["name"] = L["Thorium Armor"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8006,7 +8006,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16643] = {
             ["craftItem"] = 12406,
-            ["name"] = AL["Thorium Belt"],
+            ["name"] = L["Thorium Belt"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8016,7 +8016,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16644] = {
             ["craftItem"] = 12408,
-            ["name"] = AL["Thorium Bracers"],
+            ["name"] = L["Thorium Bracers"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8026,7 +8026,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16645] = {
             ["craftItem"] = 12416,
-            ["name"] = AL["Radiant Belt"],
+            ["name"] = L["Radiant Belt"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8036,7 +8036,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16646] = {
             ["craftItem"] = 12428,
-            ["name"] = AL["Imperial Plate Shoulders"],
+            ["name"] = L["Imperial Plate Shoulders"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8047,7 +8047,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16647] = {
             ["craftItem"] = 12424,
-            ["name"] = AL["Imperial Plate Belt"],
+            ["name"] = L["Imperial Plate Belt"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8058,7 +8058,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16648] = {
             ["craftItem"] = 12415,
-            ["name"] = AL["Radiant Breastplate"],
+            ["name"] = L["Radiant Breastplate"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8069,7 +8069,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16649] = {
             ["craftItem"] = 12425,
-            ["name"] = AL["Imperial Plate Bracers"],
+            ["name"] = L["Imperial Plate Bracers"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8079,7 +8079,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16650] = {
             ["craftItem"] = 12624,
-            ["name"] = AL["Wildthorn Mail"],
+            ["name"] = L["Wildthorn Mail"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8092,7 +8092,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16651] = {
             ["craftItem"] = 12645,
-            ["name"] = AL["Thorium Shield Spike"],
+            ["name"] = L["Thorium Shield Spike"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8103,7 +8103,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16652] = {
             ["craftItem"] = 12409,
-            ["name"] = AL["Thorium Boots"],
+            ["name"] = L["Thorium Boots"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8114,7 +8114,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16653] = {
             ["craftItem"] = 12410,
-            ["name"] = AL["Thorium Helm"],
+            ["name"] = L["Thorium Helm"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8125,7 +8125,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16654] = {
             ["craftItem"] = 12418,
-            ["name"] = AL["Radiant Gloves"],
+            ["name"] = L["Radiant Gloves"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8135,7 +8135,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16655] = {
             ["craftItem"] = 12631,
-            ["name"] = AL["Fiery Plate Gauntlets"],
+            ["name"] = L["Fiery Plate Gauntlets"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8147,7 +8147,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16656] = {
             ["craftItem"] = 12419,
-            ["name"] = AL["Radiant Boots"],
+            ["name"] = L["Radiant Boots"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8157,7 +8157,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16657] = {
             ["craftItem"] = 12426,
-            ["name"] = AL["Imperial Plate Boots"],
+            ["name"] = L["Imperial Plate Boots"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8168,7 +8168,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16658] = {
             ["craftItem"] = 12427,
-            ["name"] = AL["Imperial Plate Helm"],
+            ["name"] = L["Imperial Plate Helm"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8178,7 +8178,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16659] = {
             ["craftItem"] = 12417,
-            ["name"] = AL["Radiant Circlet"],
+            ["name"] = L["Radiant Circlet"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8188,7 +8188,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16660] = {
             ["craftItem"] = 12625,
-            ["name"] = AL["Dawnbringer Shoulders"],
+            ["name"] = L["Dawnbringer Shoulders"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8200,7 +8200,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16661] = {
             ["craftItem"] = 12632,
-            ["name"] = AL["Storm Gauntlets"],
+            ["name"] = L["Storm Gauntlets"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8212,7 +8212,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16662] = {
             ["craftItem"] = 12414,
-            ["name"] = AL["Thorium Leggings"],
+            ["name"] = L["Thorium Leggings"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8222,7 +8222,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16663] = {
             ["craftItem"] = 12422,
-            ["name"] = AL["Imperial Plate Chest"],
+            ["name"] = L["Imperial Plate Chest"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8232,7 +8232,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16664] = {
             ["craftItem"] = 12610,
-            ["name"] = AL["Runic Plate Shoulders"],
+            ["name"] = L["Runic Plate Shoulders"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8243,7 +8243,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16665] = {
             ["craftItem"] = 12611,
-            ["name"] = AL["Runic Plate Boots"],
+            ["name"] = L["Runic Plate Boots"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8254,7 +8254,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16667] = {
             ["craftItem"] = 12628,
-            ["name"] = AL["Demon Forged Breastplate"],
+            ["name"] = L["Demon Forged Breastplate"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8266,7 +8266,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16724] = {
             ["craftItem"] = 12633,
-            ["name"] = AL["Whitesoul Helm"],
+            ["name"] = L["Whitesoul Helm"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8279,7 +8279,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16725] = {
             ["craftItem"] = 12420,
-            ["name"] = AL["Radiant Leggings"],
+            ["name"] = L["Radiant Leggings"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8289,7 +8289,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16726] = {
             ["craftItem"] = 12612,
-            ["name"] = AL["Runic Plate Helm"],
+            ["name"] = L["Runic Plate Helm"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8301,7 +8301,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16728] = {
             ["craftItem"] = 12636,
-            ["name"] = AL["Helm of the Great Chief"],
+            ["name"] = L["Helm of the Great Chief"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8314,7 +8314,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16729] = {
             ["craftItem"] = 12640,
-            ["name"] = AL["Lionheart Helm"],
+            ["name"] = L["Lionheart Helm"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8327,7 +8327,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16730] = {
             ["craftItem"] = 12429,
-            ["name"] = AL["Imperial Plate Leggings"],
+            ["name"] = L["Imperial Plate Leggings"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8337,7 +8337,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16731] = {
             ["craftItem"] = 12613,
-            ["name"] = AL["Runic Breastplate"],
+            ["name"] = L["Runic Breastplate"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8348,7 +8348,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16732] = {
             ["craftItem"] = 12614,
-            ["name"] = AL["Runic Plate Leggings"],
+            ["name"] = L["Runic Plate Leggings"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8359,7 +8359,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16741] = {
             ["craftItem"] = 12639,
-            ["name"] = AL["Stronghold Gauntlets"],
+            ["name"] = L["Stronghold Gauntlets"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8372,7 +8372,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16742] = {
             ["craftItem"] = 12620,
-            ["name"] = AL["Enchanted Thorium Helm"],
+            ["name"] = L["Enchanted Thorium Helm"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8385,7 +8385,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16744] = {
             ["craftItem"] = 12619,
-            ["name"] = AL["Enchanted Thorium Leggings"],
+            ["name"] = L["Enchanted Thorium Leggings"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8398,7 +8398,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16745] = {
             ["craftItem"] = 12618,
-            ["name"] = AL["Enchanted Thorium Breastplate"],
+            ["name"] = L["Enchanted Thorium Breastplate"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8412,7 +8412,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16746] = {
             ["craftItem"] = 12641,
-            ["name"] = AL["Invulnerable Mail"],
+            ["name"] = L["Invulnerable Mail"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8424,7 +8424,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16960] = {
             ["craftItem"] = 12764,
-            ["name"] = AL["Thorium Greatsword"],
+            ["name"] = L["Thorium Greatsword"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8435,7 +8435,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16965] = {
             ["craftItem"] = 12769,
-            ["name"] = AL["Bleakwood Hew"],
+            ["name"] = L["Bleakwood Hew"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8449,7 +8449,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16967] = {
             ["craftItem"] = 12772,
-            ["name"] = AL["Inlaid Thorium Hammer"],
+            ["name"] = L["Inlaid Thorium Hammer"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8462,7 +8462,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16969] = {
             ["craftItem"] = 12773,
-            ["name"] = AL["Ornate Thorium Handaxe"],
+            ["name"] = L["Ornate Thorium Handaxe"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8474,7 +8474,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16970] = {
             ["craftItem"] = 12774,
-            ["name"] = AL["Dawn's Edge"],
+            ["name"] = L["Dawn's Edge"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8488,7 +8488,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16971] = {
             ["craftItem"] = 12775,
-            ["name"] = AL["Huge Thorium Battleaxe"],
+            ["name"] = L["Huge Thorium Battleaxe"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8499,7 +8499,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16973] = {
             ["craftItem"] = 12776,
-            ["name"] = AL["Enchanted Battlehammer"],
+            ["name"] = L["Enchanted Battlehammer"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8512,7 +8512,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16978] = {
             ["craftItem"] = 12777,
-            ["name"] = AL["Blazing Rapier"],
+            ["name"] = L["Blazing Rapier"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8525,7 +8525,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16980] = {
             ["craftItem"] = 12779,
-            ["name"] = AL["Rune Edge"],
+            ["name"] = L["Rune Edge"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8537,7 +8537,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16983] = {
             ["craftItem"] = 12781,
-            ["name"] = AL["Serenity"],
+            ["name"] = L["Serenity"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8551,7 +8551,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16984] = {
             ["craftItem"] = 12792,
-            ["name"] = AL["Volcanic Hammer"],
+            ["name"] = L["Volcanic Hammer"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8563,7 +8563,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16985] = {
             ["craftItem"] = 12782,
-            ["name"] = AL["Corruption"],
+            ["name"] = L["Corruption"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8578,7 +8578,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16986] = {
             ["craftItem"] = 12795,
-            ["name"] = AL["Blood Talon"],
+            ["name"] = L["Blood Talon"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8592,7 +8592,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16987] = {
             ["craftItem"] = 12802,
-            ["name"] = AL["Darkspear"],
+            ["name"] = L["Darkspear"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8605,7 +8605,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16988] = {
             ["craftItem"] = 12796,
-            ["name"] = AL["Hammer of the Titans"],
+            ["name"] = L["Hammer of the Titans"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8618,7 +8618,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16990] = {
             ["craftItem"] = 12790,
-            ["name"] = AL["Arcanite Champion"],
+            ["name"] = L["Arcanite Champion"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8632,7 +8632,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16991] = {
             ["craftItem"] = 12798,
-            ["name"] = AL["Annihilator"],
+            ["name"] = L["Annihilator"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8646,7 +8646,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16992] = {
             ["craftItem"] = 12797,
-            ["name"] = AL["Frostguard"],
+            ["name"] = L["Frostguard"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8660,7 +8660,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16993] = {
             ["craftItem"] = 12794,
-            ["name"] = AL["Masterwork Stormhammer"],
+            ["name"] = L["Masterwork Stormhammer"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8673,7 +8673,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16994] = {
             ["craftItem"] = 12784,
-            ["name"] = AL["Arcanite Reaper"],
+            ["name"] = L["Arcanite Reaper"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8684,7 +8684,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [16995] = {
             ["craftItem"] = 12783,
-            ["name"] = AL["Heartseeker"],
+            ["name"] = L["Heartseeker"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -8699,11 +8699,11 @@ GetSpellInfoAtlasLootDB = {
         },
         [17187] = {
             ["craftItem"] = 12360,
-            ["name"] = AL["Transmute: Arcanite"],
+            ["name"] = L["Transmute: Arcanite"],
             ["castTime"] = 25,
             ["tools"] = { 9149 },
             ["cooldown"] = 172800,
-            ["text"] = AL["Turns a bar of Thorium and an Arcane Crystal into Arcanite."],
+            ["text"] = L["Turns a bar of Thorium and an Arcane Crystal into Arcanite."],
             ["reagents"] = {
                 { 12359 },
                 { 12363 },
@@ -8711,7 +8711,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [17551] = {
             ["craftItem"] = 13423,
-            ["name"] = AL["Stonescale Oil"],
+            ["name"] = L["Stonescale Oil"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 13422 },
@@ -8720,7 +8720,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [17552] = {
             ["craftItem"] = 13442,
-            ["name"] = AL["Mighty Rage Potion"],
+            ["name"] = L["Mighty Rage Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 8846, 3 },
@@ -8729,7 +8729,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [17553] = {
             ["craftItem"] = 13443,
-            ["name"] = AL["Superior Mana Potion"],
+            ["name"] = L["Superior Mana Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 8838, 2 },
@@ -8739,7 +8739,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [17554] = {
             ["craftItem"] = 13445,
-            ["name"] = AL["Elixir of Superior Defense"],
+            ["name"] = L["Elixir of Superior Defense"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 13423, 2 },
@@ -8749,7 +8749,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [17555] = {
             ["craftItem"] = 13447,
-            ["name"] = AL["Elixir of the Sages"],
+            ["name"] = L["Elixir of the Sages"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 13463 },
@@ -8759,7 +8759,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [17556] = {
             ["craftItem"] = 13446,
-            ["name"] = AL["Major Healing Potion"],
+            ["name"] = L["Major Healing Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 13464, 2 },
@@ -8769,7 +8769,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [17557] = {
             ["craftItem"] = 13453,
-            ["name"] = AL["Elixir of Brute Force"],
+            ["name"] = L["Elixir of Brute Force"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 8846, 2 },
@@ -8779,95 +8779,95 @@ GetSpellInfoAtlasLootDB = {
         },
         [17559] = {
             ["craftItem"] = 7078,
-            ["name"] = AL["Transmute: Air to Fire"],
+            ["name"] = L["Transmute: Air to Fire"],
             ["castTime"] = 25,
             ["tools"] = { 9149 },
             ["cooldown"] = 86400,
-            ["text"] = AL["Transmutes Air into Fire."],
+            ["text"] = L["Transmutes Air into Fire."],
             ["reagents"] = {
                 { 7082 },
             },
         },
         [17560] = {
             ["craftItem"] = 7076,
-            ["name"] = AL["Transmute: Fire to Earth"],
+            ["name"] = L["Transmute: Fire to Earth"],
             ["castTime"] = 10,
             ["tools"] = { 9149 },
             ["cooldown"] = 86400,
-            ["text"] = AL["Transmutes Fire into Earth."],
+            ["text"] = L["Transmutes Fire into Earth."],
             ["reagents"] = {
                 { 7078 },
             },
         },
         [17561] = {
             ["craftItem"] = 7080,
-            ["name"] = AL["Transmute: Earth to Water"],
+            ["name"] = L["Transmute: Earth to Water"],
             ["castTime"] = 10,
             ["tools"] = { 9149 },
             ["cooldown"] = 86400,
-            ["text"] = AL["Transmutes Earth into Water."],
+            ["text"] = L["Transmutes Earth into Water."],
             ["reagents"] = {
                 { 7076 },
             },
         },
         [17562] = {
             ["craftItem"] = 7082,
-            ["name"] = AL["Transmute: Water to Air"],
+            ["name"] = L["Transmute: Water to Air"],
             ["castTime"] = 10,
             ["tools"] = { 9149 },
             ["cooldown"] = 86400,
-            ["text"] = AL["Transmutes Water into Air."],
+            ["text"] = L["Transmutes Water into Air."],
             ["reagents"] = {
                 { 7080 },
             },
         },
         [17563] = {
             ["craftItem"] = 7080,
-            ["name"] = AL["Transmute: Undeath to Water"],
+            ["name"] = L["Transmute: Undeath to Water"],
             ["castTime"] = 10,
             ["tools"] = { 9149 },
             ["cooldown"] = 86400,
-            ["text"] = AL["Purifies Essence of Undeath turning it into Water."],
+            ["text"] = L["Purifies Essence of Undeath turning it into Water."],
             ["reagents"] = {
                 { 12808 },
             },
         },
         [17564] = {
             ["craftItem"] = 12808,
-            ["name"] = AL["Transmute: Water to Undeath"],
+            ["name"] = L["Transmute: Water to Undeath"],
             ["castTime"] = 10,
             ["tools"] = { 9149 },
             ["cooldown"] = 86400,
-            ["text"] = AL["Taints Essence of Water turning it into Undeath."],
+            ["text"] = L["Taints Essence of Water turning it into Undeath."],
             ["reagents"] = {
                 { 7080 },
             },
         },
         [17565] = {
             ["craftItem"] = 7076,
-            ["name"] = AL["Transmute: Life to Earth"],
+            ["name"] = L["Transmute: Life to Earth"],
             ["castTime"] = 10,
             ["tools"] = { 9149 },
             ["cooldown"] = 86400,
-            ["text"] = AL["Transmutes Living Essence into Earth."],
+            ["text"] = L["Transmutes Living Essence into Earth."],
             ["reagents"] = {
                 { 12803 },
             },
         },
         [17566] = {
             ["craftItem"] = 12803,
-            ["name"] = AL["Transmute: Earth to Life"],
+            ["name"] = L["Transmute: Earth to Life"],
             ["castTime"] = 10,
             ["tools"] = { 9149 },
             ["cooldown"] = 86400,
-            ["text"] = AL["Transmutes Earth to Living Essence."],
+            ["text"] = L["Transmutes Earth to Living Essence."],
             ["reagents"] = {
                 { 7076 },
             },
         },
         [17570] = {
             ["craftItem"] = 13455,
-            ["name"] = AL["Greater Stoneshield Potion"],
+            ["name"] = L["Greater Stoneshield Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 13423, 3 },
@@ -8877,7 +8877,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [17571] = {
             ["craftItem"] = 13452,
-            ["name"] = AL["Elixir of the Mongoose"],
+            ["name"] = L["Elixir of the Mongoose"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 13465, 2 },
@@ -8887,7 +8887,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [17572] = {
             ["craftItem"] = 13462,
-            ["name"] = AL["Purification Potion"],
+            ["name"] = L["Purification Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 13467, 2 },
@@ -8897,7 +8897,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [17573] = {
             ["craftItem"] = 13454,
-            ["name"] = AL["Greater Arcane Elixir"],
+            ["name"] = L["Greater Arcane Elixir"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 13463, 3 },
@@ -8907,7 +8907,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [17574] = {
             ["craftItem"] = 13457,
-            ["name"] = AL["Greater Fire Protection Potion"],
+            ["name"] = L["Greater Fire Protection Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 7068 },
@@ -8917,7 +8917,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [17575] = {
             ["craftItem"] = 13456,
-            ["name"] = AL["Greater Frost Protection Potion"],
+            ["name"] = L["Greater Frost Protection Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 7070 },
@@ -8927,7 +8927,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [17576] = {
             ["craftItem"] = 13458,
-            ["name"] = AL["Greater Nature Protection Potion"],
+            ["name"] = L["Greater Nature Protection Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 7067 },
@@ -8937,7 +8937,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [17577] = {
             ["craftItem"] = 13461,
-            ["name"] = AL["Greater Arcane Protection Potion"],
+            ["name"] = L["Greater Arcane Protection Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 11176 },
@@ -8947,7 +8947,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [17578] = {
             ["craftItem"] = 13459,
-            ["name"] = AL["Greater Shadow Protection Potion"],
+            ["name"] = L["Greater Shadow Protection Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 3824 },
@@ -8957,7 +8957,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [17579] = {
             ["craftItem"] = 13460,
-            ["name"] = AL["Greater Holy Protection Potion"],
+            ["name"] = L["Greater Holy Protection Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 7069 },
@@ -8967,7 +8967,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [17580] = {
             ["craftItem"] = 13444,
-            ["name"] = AL["Major Mana Potion"],
+            ["name"] = L["Major Mana Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 13463, 2 },
@@ -8977,7 +8977,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [17632] = {
             ["craftItem"] = 13503,
-            ["name"] = AL["Alchemist's Stone"],
+            ["name"] = L["Alchemist's Stone"],
             ["castTime"] = 30,
             ["reagents"] = {
                 { 7078, 8 },
@@ -8991,7 +8991,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [17634] = {
             ["craftItem"] = 13506,
-            ["name"] = AL["Flask of Petrification"],
+            ["name"] = L["Flask of Petrification"],
             ["castTime"] = 25,
             ["tools"] = { 9149 },
             ["reagents"] = {
@@ -9003,7 +9003,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [17635] = {
             ["craftItem"] = 13510,
-            ["name"] = AL["Flask of the Titans"],
+            ["name"] = L["Flask of the Titans"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 13464, 30 },
@@ -9014,7 +9014,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [17636] = {
             ["craftItem"] = 13511,
-            ["name"] = AL["Flask of Distilled Wisdom"],
+            ["name"] = L["Flask of Distilled Wisdom"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 8838, 30 },
@@ -9025,7 +9025,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [17637] = {
             ["craftItem"] = 13512,
-            ["name"] = AL["Flask of Supreme Power"],
+            ["name"] = L["Flask of Supreme Power"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 13463, 30 },
@@ -9036,7 +9036,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [17638] = {
             ["craftItem"] = 13513,
-            ["name"] = AL["Flask of Chromatic Resistance"],
+            ["name"] = L["Flask of Chromatic Resistance"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 13467, 30 },
@@ -9047,7 +9047,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18238] = {
             ["craftItem"] = 6887,
-            ["name"] = AL["Spotted Yellowtail"],
+            ["name"] = L["Spotted Yellowtail"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 4603 },
@@ -9055,7 +9055,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18239] = {
             ["craftItem"] = 13927,
-            ["name"] = AL["Cooked Glossy Mightfish"],
+            ["name"] = L["Cooked Glossy Mightfish"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 13754 },
@@ -9064,7 +9064,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18240] = {
             ["craftItem"] = 13928,
-            ["name"] = AL["Grilled Squid"],
+            ["name"] = L["Grilled Squid"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 13755 },
@@ -9073,7 +9073,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18241] = {
             ["craftItem"] = 13930,
-            ["name"] = AL["Filet of Redgill"],
+            ["name"] = L["Filet of Redgill"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 13758 },
@@ -9081,7 +9081,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18242] = {
             ["craftItem"] = 13929,
-            ["name"] = AL["Hot Smoked Bass"],
+            ["name"] = L["Hot Smoked Bass"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 13756 },
@@ -9090,7 +9090,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18243] = {
             ["craftItem"] = 13931,
-            ["name"] = AL["Nightfin Soup"],
+            ["name"] = L["Nightfin Soup"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 13759 },
@@ -9099,7 +9099,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18244] = {
             ["craftItem"] = 13932,
-            ["name"] = AL["Poached Sunscale Salmon"],
+            ["name"] = L["Poached Sunscale Salmon"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 13760 },
@@ -9107,7 +9107,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18245] = {
             ["craftItem"] = 13933,
-            ["name"] = AL["Lobster Stew"],
+            ["name"] = L["Lobster Stew"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 13888 },
@@ -9116,7 +9116,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18246] = {
             ["craftItem"] = 13934,
-            ["name"] = AL["Mightfish Steak"],
+            ["name"] = L["Mightfish Steak"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 13893 },
@@ -9126,7 +9126,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18247] = {
             ["craftItem"] = 13935,
-            ["name"] = AL["Baked Salmon"],
+            ["name"] = L["Baked Salmon"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 13889 },
@@ -9135,7 +9135,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18401] = {
             ["craftItem"] = 14048,
-            ["name"] = AL["Bolt of Runecloth"],
+            ["name"] = L["Bolt of Runecloth"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 14047, 5 },
@@ -9143,7 +9143,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18402] = {
             ["craftItem"] = 13856,
-            ["name"] = AL["Runecloth Belt"],
+            ["name"] = L["Runecloth Belt"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 3 },
@@ -9152,7 +9152,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18403] = {
             ["craftItem"] = 13869,
-            ["name"] = AL["Frostweave Tunic"],
+            ["name"] = L["Frostweave Tunic"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 5 },
@@ -9162,7 +9162,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18404] = {
             ["craftItem"] = 13868,
-            ["name"] = AL["Frostweave Robe"],
+            ["name"] = L["Frostweave Robe"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 5 },
@@ -9172,7 +9172,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18405] = {
             ["craftItem"] = 14046,
-            ["name"] = AL["Runecloth Bag"],
+            ["name"] = L["Runecloth Bag"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 5 },
@@ -9182,7 +9182,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18406] = {
             ["craftItem"] = 13858,
-            ["name"] = AL["Runecloth Robe"],
+            ["name"] = L["Runecloth Robe"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 5 },
@@ -9192,7 +9192,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18407] = {
             ["craftItem"] = 13857,
-            ["name"] = AL["Runecloth Tunic"],
+            ["name"] = L["Runecloth Tunic"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 5 },
@@ -9202,7 +9202,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18408] = {
             ["craftItem"] = 14042,
-            ["name"] = AL["Cindercloth Vest"],
+            ["name"] = L["Cindercloth Vest"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 5 },
@@ -9212,7 +9212,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18409] = {
             ["craftItem"] = 13860,
-            ["name"] = AL["Runecloth Cloak"],
+            ["name"] = L["Runecloth Cloak"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 4 },
@@ -9222,7 +9222,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18410] = {
             ["craftItem"] = 14143,
-            ["name"] = AL["Ghostweave Belt"],
+            ["name"] = L["Ghostweave Belt"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 3 },
@@ -9233,7 +9233,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18411] = {
             ["craftItem"] = 13870,
-            ["name"] = AL["Frostweave Gloves"],
+            ["name"] = L["Frostweave Gloves"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 3 },
@@ -9243,7 +9243,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18412] = {
             ["craftItem"] = 14043,
-            ["name"] = AL["Cindercloth Gloves"],
+            ["name"] = L["Cindercloth Gloves"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 4 },
@@ -9253,7 +9253,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18413] = {
             ["craftItem"] = 14142,
-            ["name"] = AL["Ghostweave Gloves"],
+            ["name"] = L["Ghostweave Gloves"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 4 },
@@ -9264,7 +9264,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18414] = {
             ["craftItem"] = 14100,
-            ["name"] = AL["Brightcloth Robe"],
+            ["name"] = L["Brightcloth Robe"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 5 },
@@ -9274,7 +9274,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18415] = {
             ["craftItem"] = 14101,
-            ["name"] = AL["Brightcloth Gloves"],
+            ["name"] = L["Brightcloth Gloves"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 4 },
@@ -9284,7 +9284,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18416] = {
             ["craftItem"] = 14141,
-            ["name"] = AL["Ghostweave Vest"],
+            ["name"] = L["Ghostweave Vest"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 6 },
@@ -9295,7 +9295,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18417] = {
             ["craftItem"] = 13863,
-            ["name"] = AL["Runecloth Gloves"],
+            ["name"] = L["Runecloth Gloves"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 4 },
@@ -9305,7 +9305,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18418] = {
             ["craftItem"] = 14044,
-            ["name"] = AL["Cindercloth Cloak"],
+            ["name"] = L["Cindercloth Cloak"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 5 },
@@ -9315,7 +9315,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18419] = {
             ["craftItem"] = 14107,
-            ["name"] = AL["Felcloth Pants"],
+            ["name"] = L["Felcloth Pants"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 5 },
@@ -9325,7 +9325,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18420] = {
             ["craftItem"] = 14103,
-            ["name"] = AL["Brightcloth Cloak"],
+            ["name"] = L["Brightcloth Cloak"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 4 },
@@ -9335,7 +9335,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18421] = {
             ["craftItem"] = 14132,
-            ["name"] = AL["Wizardweave Leggings"],
+            ["name"] = L["Wizardweave Leggings"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 6 },
@@ -9345,7 +9345,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18422] = {
             ["craftItem"] = 14134,
-            ["name"] = AL["Cloak of Fire"],
+            ["name"] = L["Cloak of Fire"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 6 },
@@ -9357,7 +9357,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18423] = {
             ["craftItem"] = 13864,
-            ["name"] = AL["Runecloth Boots"],
+            ["name"] = L["Runecloth Boots"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 4 },
@@ -9368,7 +9368,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18424] = {
             ["craftItem"] = 13871,
-            ["name"] = AL["Frostweave Pants"],
+            ["name"] = L["Frostweave Pants"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 6 },
@@ -9378,7 +9378,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18434] = {
             ["craftItem"] = 14045,
-            ["name"] = AL["Cindercloth Pants"],
+            ["name"] = L["Cindercloth Pants"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 6 },
@@ -9388,7 +9388,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18436] = {
             ["craftItem"] = 14136,
-            ["name"] = AL["Robe of Winter Night"],
+            ["name"] = L["Robe of Winter Night"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 10 },
@@ -9400,7 +9400,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18437] = {
             ["craftItem"] = 14108,
-            ["name"] = AL["Felcloth Boots"],
+            ["name"] = L["Felcloth Boots"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 6 },
@@ -9411,7 +9411,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18438] = {
             ["craftItem"] = 13865,
-            ["name"] = AL["Runecloth Pants"],
+            ["name"] = L["Runecloth Pants"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 6 },
@@ -9421,7 +9421,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18439] = {
             ["craftItem"] = 14104,
-            ["name"] = AL["Brightcloth Pants"],
+            ["name"] = L["Brightcloth Pants"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 6 },
@@ -9432,7 +9432,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18440] = {
             ["craftItem"] = 14137,
-            ["name"] = AL["Mooncloth Leggings"],
+            ["name"] = L["Mooncloth Leggings"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 6 },
@@ -9442,7 +9442,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18441] = {
             ["craftItem"] = 14144,
-            ["name"] = AL["Ghostweave Pants"],
+            ["name"] = L["Ghostweave Pants"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 6 },
@@ -9452,7 +9452,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18442] = {
             ["craftItem"] = 14111,
-            ["name"] = AL["Felcloth Hood"],
+            ["name"] = L["Felcloth Hood"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 5 },
@@ -9462,7 +9462,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18444] = {
             ["craftItem"] = 13866,
-            ["name"] = AL["Runecloth Headband"],
+            ["name"] = L["Runecloth Headband"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 4 },
@@ -9472,7 +9472,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18445] = {
             ["craftItem"] = 14155,
-            ["name"] = AL["Mooncloth Bag"],
+            ["name"] = L["Mooncloth Bag"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 4 },
@@ -9482,7 +9482,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18446] = {
             ["craftItem"] = 14128,
-            ["name"] = AL["Wizardweave Robe"],
+            ["name"] = L["Wizardweave Robe"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 8 },
@@ -9492,7 +9492,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18447] = {
             ["craftItem"] = 14138,
-            ["name"] = AL["Mooncloth Vest"],
+            ["name"] = L["Mooncloth Vest"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 6 },
@@ -9502,7 +9502,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18448] = {
             ["craftItem"] = 14139,
-            ["name"] = AL["Mooncloth Shoulders"],
+            ["name"] = L["Mooncloth Shoulders"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 5 },
@@ -9512,7 +9512,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18449] = {
             ["craftItem"] = 13867,
-            ["name"] = AL["Runecloth Shoulders"],
+            ["name"] = L["Runecloth Shoulders"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 7 },
@@ -9523,7 +9523,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18450] = {
             ["craftItem"] = 14130,
-            ["name"] = AL["Wizardweave Turban"],
+            ["name"] = L["Wizardweave Turban"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 6 },
@@ -9534,7 +9534,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18451] = {
             ["craftItem"] = 14106,
-            ["name"] = AL["Felcloth Robe"],
+            ["name"] = L["Felcloth Robe"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 8 },
@@ -9545,7 +9545,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18452] = {
             ["craftItem"] = 14140,
-            ["name"] = AL["Mooncloth Circlet"],
+            ["name"] = L["Mooncloth Circlet"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 4 },
@@ -9557,7 +9557,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18453] = {
             ["craftItem"] = 14112,
-            ["name"] = AL["Felcloth Shoulders"],
+            ["name"] = L["Felcloth Shoulders"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 7 },
@@ -9569,7 +9569,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18454] = {
             ["craftItem"] = 14146,
-            ["name"] = AL["Gloves of Spell Mastery"],
+            ["name"] = L["Gloves of Spell Mastery"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 10 },
@@ -9583,7 +9583,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18455] = {
             ["craftItem"] = 14156,
-            ["name"] = AL["Bottomless Bag"],
+            ["name"] = L["Bottomless Bag"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 8 },
@@ -9595,7 +9595,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18456] = {
             ["craftItem"] = 14154,
-            ["name"] = AL["Truefaith Vestments"],
+            ["name"] = L["Truefaith Vestments"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 12 },
@@ -9608,7 +9608,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18457] = {
             ["craftItem"] = 14152,
-            ["name"] = AL["Robe of the Archmage"],
+            ["name"] = L["Robe of the Archmage"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 12 },
@@ -9621,7 +9621,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18458] = {
             ["craftItem"] = 14153,
-            ["name"] = AL["Robe of the Void"],
+            ["name"] = L["Robe of the Void"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 12 },
@@ -9634,17 +9634,17 @@ GetSpellInfoAtlasLootDB = {
         },
         [18560] = {
             ["craftItem"] = 14342,
-            ["name"] = AL["Mooncloth"],
+            ["name"] = L["Mooncloth"],
             ["castTime"] = 60,
             ["cooldown"] = 345600,
-            ["text"] = AL["The purification of tainted Felcloth into Mooncloth can only be done at a moonwell, and only ocassionally will the waters permit themselves to be used in such a way."],
+            ["text"] = L["The purification of tainted Felcloth into Mooncloth can only be done at a moonwell, and only ocassionally will the waters permit themselves to be used in such a way."],
             ["reagents"] = {
                 { 14256, 2 },
             },
         },
         [18629] = {
             ["craftItem"] = 14529,
-            ["name"] = AL["Runecloth Bandage"],
+            ["name"] = L["Runecloth Bandage"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 14047 },
@@ -9652,7 +9652,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [18630] = {
             ["craftItem"] = 14530,
-            ["name"] = AL["Heavy Runecloth Bandage"],
+            ["name"] = L["Heavy Runecloth Bandage"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 14047, 2 },
@@ -9660,7 +9660,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19047] = {
             ["craftItem"] = 15407,
-            ["name"] = AL["Cured Rugged Hide"],
+            ["name"] = L["Cured Rugged Hide"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 8171 },
@@ -9669,7 +9669,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19048] = {
             ["craftItem"] = 15077,
-            ["name"] = AL["Heavy Scorpid Bracers"],
+            ["name"] = L["Heavy Scorpid Bracers"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 4 },
@@ -9679,7 +9679,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19049] = {
             ["craftItem"] = 15083,
-            ["name"] = AL["Wicked Leather Gauntlets"],
+            ["name"] = L["Wicked Leather Gauntlets"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 8 },
@@ -9689,7 +9689,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19050] = {
             ["craftItem"] = 15045,
-            ["name"] = AL["Green Dragonscale Breastplate"],
+            ["name"] = L["Green Dragonscale Breastplate"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 20 },
@@ -9699,7 +9699,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19051] = {
             ["craftItem"] = 15076,
-            ["name"] = AL["Heavy Scorpid Vest"],
+            ["name"] = L["Heavy Scorpid Vest"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 6 },
@@ -9709,7 +9709,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19052] = {
             ["craftItem"] = 15084,
-            ["name"] = AL["Wicked Leather Bracers"],
+            ["name"] = L["Wicked Leather Bracers"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 8 },
@@ -9719,7 +9719,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19053] = {
             ["craftItem"] = 15074,
-            ["name"] = AL["Chimeric Gloves"],
+            ["name"] = L["Chimeric Gloves"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 6 },
@@ -9729,7 +9729,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19054] = {
             ["craftItem"] = 15047,
-            ["name"] = AL["Red Dragonscale Breastplate"],
+            ["name"] = L["Red Dragonscale Breastplate"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 40 },
@@ -9739,7 +9739,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19055] = {
             ["craftItem"] = 15091,
-            ["name"] = AL["Runic Leather Gauntlets"],
+            ["name"] = L["Runic Leather Gauntlets"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 10 },
@@ -9749,7 +9749,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19058] = {
             ["craftItem"] = 15564,
-            ["name"] = AL["Rugged Armor Kit"],
+            ["name"] = L["Rugged Armor Kit"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 8170, 5 },
@@ -9757,7 +9757,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19059] = {
             ["craftItem"] = 15054,
-            ["name"] = AL["Volcanic Leggings"],
+            ["name"] = L["Volcanic Leggings"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 6 },
@@ -9768,7 +9768,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19060] = {
             ["craftItem"] = 15046,
-            ["name"] = AL["Green Dragonscale Leggings"],
+            ["name"] = L["Green Dragonscale Leggings"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 20 },
@@ -9778,7 +9778,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19061] = {
             ["craftItem"] = 15061,
-            ["name"] = AL["Living Shoulders"],
+            ["name"] = L["Living Shoulders"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 12 },
@@ -9788,7 +9788,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19062] = {
             ["craftItem"] = 15067,
-            ["name"] = AL["Ironfeather Shoulders"],
+            ["name"] = L["Ironfeather Shoulders"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 24 },
@@ -9799,7 +9799,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19063] = {
             ["craftItem"] = 15073,
-            ["name"] = AL["Chimeric Boots"],
+            ["name"] = L["Chimeric Boots"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 4 },
@@ -9809,7 +9809,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19064] = {
             ["craftItem"] = 15078,
-            ["name"] = AL["Heavy Scorpid Gauntlets"],
+            ["name"] = L["Heavy Scorpid Gauntlets"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 6 },
@@ -9819,7 +9819,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19065] = {
             ["craftItem"] = 15092,
-            ["name"] = AL["Runic Leather Bracers"],
+            ["name"] = L["Runic Leather Bracers"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 6 },
@@ -9830,7 +9830,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19066] = {
             ["craftItem"] = 15071,
-            ["name"] = AL["Frostsaber Boots"],
+            ["name"] = L["Frostsaber Boots"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 4 },
@@ -9840,7 +9840,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19067] = {
             ["craftItem"] = 15057,
-            ["name"] = AL["Stormshroud Pants"],
+            ["name"] = L["Stormshroud Pants"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 16 },
@@ -9851,7 +9851,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19068] = {
             ["craftItem"] = 15064,
-            ["name"] = AL["Warbear Harness"],
+            ["name"] = L["Warbear Harness"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 28 },
@@ -9861,7 +9861,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19070] = {
             ["craftItem"] = 15082,
-            ["name"] = AL["Heavy Scorpid Belt"],
+            ["name"] = L["Heavy Scorpid Belt"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 6 },
@@ -9871,7 +9871,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19071] = {
             ["craftItem"] = 15086,
-            ["name"] = AL["Wicked Leather Headband"],
+            ["name"] = L["Wicked Leather Headband"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 12 },
@@ -9881,7 +9881,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19072] = {
             ["craftItem"] = 15093,
-            ["name"] = AL["Runic Leather Belt"],
+            ["name"] = L["Runic Leather Belt"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 12 },
@@ -9891,7 +9891,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19073] = {
             ["craftItem"] = 15072,
-            ["name"] = AL["Chimeric Leggings"],
+            ["name"] = L["Chimeric Leggings"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 8 },
@@ -9901,7 +9901,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19074] = {
             ["craftItem"] = 15069,
-            ["name"] = AL["Frostsaber Leggings"],
+            ["name"] = L["Frostsaber Leggings"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 6 },
@@ -9911,7 +9911,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19075] = {
             ["craftItem"] = 15079,
-            ["name"] = AL["Heavy Scorpid Leggings"],
+            ["name"] = L["Heavy Scorpid Leggings"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 8 },
@@ -9921,7 +9921,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19076] = {
             ["craftItem"] = 15053,
-            ["name"] = AL["Volcanic Breastplate"],
+            ["name"] = L["Volcanic Breastplate"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 8 },
@@ -9932,7 +9932,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19077] = {
             ["craftItem"] = 15048,
-            ["name"] = AL["Blue Dragonscale Breastplate"],
+            ["name"] = L["Blue Dragonscale Breastplate"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 28 },
@@ -9943,7 +9943,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19078] = {
             ["craftItem"] = 15060,
-            ["name"] = AL["Living Leggings"],
+            ["name"] = L["Living Leggings"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 16 },
@@ -9954,7 +9954,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19079] = {
             ["craftItem"] = 15056,
-            ["name"] = AL["Stormshroud Armor"],
+            ["name"] = L["Stormshroud Armor"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 16 },
@@ -9966,7 +9966,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19080] = {
             ["craftItem"] = 15065,
-            ["name"] = AL["Warbear Woolies"],
+            ["name"] = L["Warbear Woolies"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 24 },
@@ -9976,7 +9976,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19081] = {
             ["craftItem"] = 15075,
-            ["name"] = AL["Chimeric Vest"],
+            ["name"] = L["Chimeric Vest"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 10 },
@@ -9986,7 +9986,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19082] = {
             ["craftItem"] = 15094,
-            ["name"] = AL["Runic Leather Headband"],
+            ["name"] = L["Runic Leather Headband"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 14 },
@@ -9996,7 +9996,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19083] = {
             ["craftItem"] = 15087,
-            ["name"] = AL["Wicked Leather Pants"],
+            ["name"] = L["Wicked Leather Pants"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 16 },
@@ -10007,7 +10007,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19084] = {
             ["craftItem"] = 15063,
-            ["name"] = AL["Devilsaur Gauntlets"],
+            ["name"] = L["Devilsaur Gauntlets"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 30 },
@@ -10017,7 +10017,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19085] = {
             ["craftItem"] = 15050,
-            ["name"] = AL["Black Dragonscale Breastplate"],
+            ["name"] = L["Black Dragonscale Breastplate"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 40 },
@@ -10028,7 +10028,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19086] = {
             ["craftItem"] = 15066,
-            ["name"] = AL["Ironfeather Breastplate"],
+            ["name"] = L["Ironfeather Breastplate"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 40 },
@@ -10040,7 +10040,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19087] = {
             ["craftItem"] = 15070,
-            ["name"] = AL["Frostsaber Gloves"],
+            ["name"] = L["Frostsaber Gloves"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 6 },
@@ -10050,7 +10050,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19088] = {
             ["craftItem"] = 15080,
-            ["name"] = AL["Heavy Scorpid Helm"],
+            ["name"] = L["Heavy Scorpid Helm"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 8 },
@@ -10061,7 +10061,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19089] = {
             ["craftItem"] = 15049,
-            ["name"] = AL["Blue Dragonscale Shoulders"],
+            ["name"] = L["Blue Dragonscale Shoulders"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 28 },
@@ -10073,7 +10073,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19090] = {
             ["craftItem"] = 15058,
-            ["name"] = AL["Stormshroud Shoulders"],
+            ["name"] = L["Stormshroud Shoulders"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 12 },
@@ -10085,7 +10085,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19091] = {
             ["craftItem"] = 15095,
-            ["name"] = AL["Runic Leather Pants"],
+            ["name"] = L["Runic Leather Pants"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 18 },
@@ -10096,7 +10096,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19092] = {
             ["craftItem"] = 15088,
-            ["name"] = AL["Wicked Leather Belt"],
+            ["name"] = L["Wicked Leather Belt"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 14 },
@@ -10106,7 +10106,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19093] = {
             ["craftItem"] = 15138,
-            ["name"] = AL["Onyxia Scale Cloak"],
+            ["name"] = L["Onyxia Scale Cloak"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 15410 },
@@ -10116,7 +10116,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19094] = {
             ["craftItem"] = 15051,
-            ["name"] = AL["Black Dragonscale Shoulders"],
+            ["name"] = L["Black Dragonscale Shoulders"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 44 },
@@ -10128,7 +10128,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19095] = {
             ["craftItem"] = 15059,
-            ["name"] = AL["Living Breastplate"],
+            ["name"] = L["Living Breastplate"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 16 },
@@ -10140,7 +10140,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19097] = {
             ["craftItem"] = 15062,
-            ["name"] = AL["Devilsaur Leggings"],
+            ["name"] = L["Devilsaur Leggings"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 30 },
@@ -10151,7 +10151,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19098] = {
             ["craftItem"] = 15085,
-            ["name"] = AL["Wicked Leather Armor"],
+            ["name"] = L["Wicked Leather Armor"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 20 },
@@ -10163,7 +10163,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19100] = {
             ["craftItem"] = 15081,
-            ["name"] = AL["Heavy Scorpid Shoulders"],
+            ["name"] = L["Heavy Scorpid Shoulders"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 14 },
@@ -10174,7 +10174,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19101] = {
             ["craftItem"] = 15055,
-            ["name"] = AL["Volcanic Shoulders"],
+            ["name"] = L["Volcanic Shoulders"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 10 },
@@ -10185,7 +10185,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19102] = {
             ["craftItem"] = 15090,
-            ["name"] = AL["Runic Leather Armor"],
+            ["name"] = L["Runic Leather Armor"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 22 },
@@ -10197,7 +10197,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19103] = {
             ["craftItem"] = 15096,
-            ["name"] = AL["Runic Leather Shoulders"],
+            ["name"] = L["Runic Leather Shoulders"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 16 },
@@ -10209,7 +10209,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19104] = {
             ["craftItem"] = 15068,
-            ["name"] = AL["Frostsaber Tunic"],
+            ["name"] = L["Frostsaber Tunic"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 12 },
@@ -10220,7 +10220,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19107] = {
             ["craftItem"] = 15052,
-            ["name"] = AL["Black Dragonscale Leggings"],
+            ["name"] = L["Black Dragonscale Leggings"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 40 },
@@ -10232,7 +10232,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19435] = {
             ["craftItem"] = 15802,
-            ["name"] = AL["Mooncloth Boots"],
+            ["name"] = L["Mooncloth Boots"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 6 },
@@ -10243,7 +10243,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19567] = {
             ["craftItem"] = 15846,
-            ["name"] = AL["Salt Shaker"],
+            ["name"] = L["Salt Shaker"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -10255,7 +10255,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19666] = {
             ["craftItem"] = 15869,
-            ["name"] = AL["Silver Skeleton Key"],
+            ["name"] = L["Silver Skeleton Key"],
             ["castTime"] = 8,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -10266,7 +10266,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19667] = {
             ["craftItem"] = 15870,
-            ["name"] = AL["Golden Skeleton Key"],
+            ["name"] = L["Golden Skeleton Key"],
             ["castTime"] = 8,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -10277,7 +10277,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19668] = {
             ["craftItem"] = 15871,
-            ["name"] = AL["Truesilver Skeleton Key"],
+            ["name"] = L["Truesilver Skeleton Key"],
             ["castTime"] = 8,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -10288,10 +10288,10 @@ GetSpellInfoAtlasLootDB = {
         },
         [19669] = {
             ["craftItem"] = 15872,
-            ["name"] = AL["Arcanite Skeleton Key"],
+            ["name"] = L["Arcanite Skeleton Key"],
             ["castTime"] = 8,
             ["tools"] = { 5956 },
-            ["text"] = AL["Allows opening of hard locks.  The skeleton key is consumed in the process."],
+            ["text"] = L["Allows opening of hard locks.  The skeleton key is consumed in the process."],
             ["reagents"] = {
                 { 12360 },
                 { 12644 },
@@ -10300,7 +10300,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19788] = {
             ["craftItem"] = 15992,
-            ["name"] = AL["Dense Blasting Powder"],
+            ["name"] = L["Dense Blasting Powder"],
             ["castTime"] = 8,
             ["reagents"] = {
                 { 12365, 2 },
@@ -10308,7 +10308,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19790] = {
             ["craftItem"] = 15993,
-            ["name"] = AL["Thorium Grenade"],
+            ["name"] = L["Thorium Grenade"],
             ["castTime"] = 8,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -10321,7 +10321,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19791] = {
             ["craftItem"] = 15994,
-            ["name"] = AL["Thorium Widget"],
+            ["name"] = L["Thorium Widget"],
             ["castTime"] = 8,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -10331,7 +10331,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19792] = {
             ["craftItem"] = 15995,
-            ["name"] = AL["Thorium Rifle"],
+            ["name"] = L["Thorium Rifle"],
             ["castTime"] = 45,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -10344,7 +10344,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19793] = {
             ["craftItem"] = 15996,
-            ["name"] = AL["Lifelike Mechanical Toad"],
+            ["name"] = L["Lifelike Mechanical Toad"],
             ["castTime"] = 8,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -10356,7 +10356,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19794] = {
             ["craftItem"] = 15999,
-            ["name"] = AL["Spellpower Goggles Xtreme Plus"],
+            ["name"] = L["Spellpower Goggles Xtreme Plus"],
             ["castTime"] = 45,
             ["tools"] = { 6219, 10498 },
             ["reagents"] = {
@@ -10368,7 +10368,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19795] = {
             ["craftItem"] = 16000,
-            ["name"] = AL["Thorium Tube"],
+            ["name"] = L["Thorium Tube"],
             ["castTime"] = 8,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -10377,7 +10377,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19796] = {
             ["craftItem"] = 16004,
-            ["name"] = AL["Dark Iron Rifle"],
+            ["name"] = L["Dark Iron Rifle"],
             ["castTime"] = 45,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -10391,7 +10391,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19799] = {
             ["craftItem"] = 16005,
-            ["name"] = AL["Dark Iron Bomb"],
+            ["name"] = L["Dark Iron Bomb"],
             ["castTime"] = 8,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -10404,7 +10404,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19800] = {
             ["craftItem"] = 15997,
-            ["name"] = AL["Thorium Shells"],
+            ["name"] = L["Thorium Shells"],
             ["castTime"] = 8,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -10415,7 +10415,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19814] = {
             ["craftItem"] = 16023,
-            ["name"] = AL["Masterwork Target Dummy"],
+            ["name"] = L["Masterwork Target Dummy"],
             ["castTime"] = 12.5,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -10429,7 +10429,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19815] = {
             ["craftItem"] = 16006,
-            ["name"] = AL["Delicate Arcanite Converter"],
+            ["name"] = L["Delicate Arcanite Converter"],
             ["castTime"] = 8,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -10439,7 +10439,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19819] = {
             ["craftItem"] = 16009,
-            ["name"] = AL["Voice Amplification Modulator"],
+            ["name"] = L["Voice Amplification Modulator"],
             ["castTime"] = 8,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -10451,7 +10451,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19825] = {
             ["craftItem"] = 16008,
-            ["name"] = AL["Master Engineer's Goggles"],
+            ["name"] = L["Master Engineer's Goggles"],
             ["castTime"] = 60,
             ["tools"] = { 6219, 10498 },
             ["reagents"] = {
@@ -10462,7 +10462,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19830] = {
             ["craftItem"] = 16022,
-            ["name"] = AL["Arcanite Dragonling"],
+            ["name"] = L["Arcanite Dragonling"],
             ["castTime"] = 60,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -10476,7 +10476,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19831] = {
             ["craftItem"] = 16040,
-            ["name"] = AL["Arcane Bomb"],
+            ["name"] = L["Arcane Bomb"],
             ["castTime"] = 8,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -10488,7 +10488,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [19833] = {
             ["craftItem"] = 16007,
-            ["name"] = AL["Flawless Arcanite Rifle"],
+            ["name"] = L["Flawless Arcanite Rifle"],
             ["castTime"] = 60,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -10502,7 +10502,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [20201] = {
             ["craftItem"] = 16206,
-            ["name"] = AL["Arcanite Rod"],
+            ["name"] = L["Arcanite Rod"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -10512,7 +10512,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [20626] = {
             ["craftItem"] = 16766,
-            ["name"] = AL["Undermine Clam Chowder"],
+            ["name"] = L["Undermine Clam Chowder"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 7974, 2 },
@@ -10523,7 +10523,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [20648] = {
             ["craftItem"] = 2319,
-            ["name"] = AL["Medium Leather"],
+            ["name"] = L["Medium Leather"],
             ["castTime"] = 8,
             ["reagents"] = {
                 { 2318, 4 },
@@ -10531,7 +10531,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [20649] = {
             ["craftItem"] = 4234,
-            ["name"] = AL["Heavy Leather"],
+            ["name"] = L["Heavy Leather"],
             ["castTime"] = 8,
             ["reagents"] = {
                 { 2319, 5 },
@@ -10539,7 +10539,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [20650] = {
             ["craftItem"] = 4304,
-            ["name"] = AL["Thick Leather"],
+            ["name"] = L["Thick Leather"],
             ["castTime"] = 8,
             ["reagents"] = {
                 { 4234, 6 },
@@ -10547,7 +10547,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [20848] = {
             ["craftItem"] = 16980,
-            ["name"] = AL["Flarecore Mantle"],
+            ["name"] = L["Flarecore Mantle"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14342, 6 },
@@ -10559,7 +10559,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [20849] = {
             ["craftItem"] = 16979,
-            ["name"] = AL["Flarecore Gloves"],
+            ["name"] = L["Flarecore Gloves"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14342, 4 },
@@ -10571,7 +10571,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [20853] = {
             ["craftItem"] = 16982,
-            ["name"] = AL["Corehound Boots"],
+            ["name"] = L["Corehound Boots"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 17012, 20 },
@@ -10582,7 +10582,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [20854] = {
             ["craftItem"] = 16983,
-            ["name"] = AL["Molten Helm"],
+            ["name"] = L["Molten Helm"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 17012, 15 },
@@ -10593,7 +10593,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [20855] = {
             ["craftItem"] = 16984,
-            ["name"] = AL["Black Dragonscale Boots"],
+            ["name"] = L["Black Dragonscale Boots"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 12810, 6 },
@@ -10605,7 +10605,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [20872] = {
             ["craftItem"] = 16989,
-            ["name"] = AL["Fiery Chain Girdle"],
+            ["name"] = L["Fiery Chain Girdle"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -10616,7 +10616,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [20873] = {
             ["craftItem"] = 16988,
-            ["name"] = AL["Fiery Chain Shoulders"],
+            ["name"] = L["Fiery Chain Shoulders"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -10627,7 +10627,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [20874] = {
             ["craftItem"] = 17014,
-            ["name"] = AL["Dark Iron Bracers"],
+            ["name"] = L["Dark Iron Bracers"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -10638,7 +10638,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [20876] = {
             ["craftItem"] = 17013,
-            ["name"] = AL["Dark Iron Leggings"],
+            ["name"] = L["Dark Iron Leggings"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -10649,7 +10649,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [20890] = {
             ["craftItem"] = 17015,
-            ["name"] = AL["Dark Iron Reaver"],
+            ["name"] = L["Dark Iron Reaver"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -10661,7 +10661,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [20897] = {
             ["craftItem"] = 17016,
-            ["name"] = AL["Dark Iron Destroyer"],
+            ["name"] = L["Dark Iron Destroyer"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -10673,7 +10673,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [20916] = {
             ["craftItem"] = 8364,
-            ["name"] = AL["Mithril Headed Trout"],
+            ["name"] = L["Mithril Headed Trout"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 8365 },
@@ -10681,7 +10681,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [21143] = {
             ["craftItem"] = 17197,
-            ["name"] = AL["Gingerbread Cookie"],
+            ["name"] = L["Gingerbread Cookie"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 6889 },
@@ -10690,7 +10690,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [21144] = {
             ["craftItem"] = 17198,
-            ["name"] = AL["Egg Nog"],
+            ["name"] = L["Egg Nog"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 6889 },
@@ -10701,7 +10701,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [21161] = {
             ["craftItem"] = 17193,
-            ["name"] = AL["Sulfuron Hammer"],
+            ["name"] = L["Sulfuron Hammer"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -10716,7 +10716,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [21175] = {
             ["craftItem"] = 17222,
-            ["name"] = AL["Spider Sausage"],
+            ["name"] = L["Spider Sausage"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 12205, 2 },
@@ -10724,7 +10724,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [21913] = {
             ["craftItem"] = 17704,
-            ["name"] = AL["Edge of Winter"],
+            ["name"] = L["Edge of Winter"],
             ["castTime"] = 25,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -10737,7 +10737,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [21923] = {
             ["craftItem"] = 17708,
-            ["name"] = AL["Elixir of Frost Power"],
+            ["name"] = L["Elixir of Frost Power"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 3819, 2 },
@@ -10747,7 +10747,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [21940] = {
             ["craftItem"] = 17716,
-            ["name"] = AL["SnowMaster 9000"],
+            ["name"] = L["SnowMaster 9000"],
             ["castTime"] = 25,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -10759,7 +10759,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [21943] = {
             ["craftItem"] = 17721,
-            ["name"] = AL["Gloves of the Greatfather"],
+            ["name"] = L["Gloves of the Greatfather"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4234, 8 },
@@ -10769,7 +10769,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [21945] = {
             ["craftItem"] = 17723,
-            ["name"] = AL["Green Holiday Shirt"],
+            ["name"] = L["Green Holiday Shirt"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 4305, 5 },
@@ -10779,7 +10779,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [22331] = {
             ["craftItem"] = 8170,
-            ["name"] = AL["Rugged Leather"],
+            ["name"] = L["Rugged Leather"],
             ["castTime"] = 8,
             ["reagents"] = {
                 { 4304, 6 },
@@ -10787,7 +10787,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [22480] = {
             ["craftItem"] = 18045,
-            ["name"] = AL["Tender Wolf Steak"],
+            ["name"] = L["Tender Wolf Steak"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 12208 },
@@ -10796,7 +10796,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [22704] = {
             ["craftItem"] = 18232,
-            ["name"] = AL["Field Repair Bot 74A"],
+            ["name"] = L["Field Repair Bot 74A"],
             ["castTime"] = 60,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -10809,7 +10809,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [22711] = {
             ["craftItem"] = 18238,
-            ["name"] = AL["Shadowskin Gloves"],
+            ["name"] = L["Shadowskin Gloves"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4304, 6 },
@@ -10822,7 +10822,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [22727] = {
             ["craftItem"] = 18251,
-            ["name"] = AL["Core Armor Kit"],
+            ["name"] = L["Core Armor Kit"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 17012, 3 },
@@ -10831,7 +10831,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [22732] = {
             ["craftItem"] = 18253,
-            ["name"] = AL["Major Rejuvenation Potion"],
+            ["name"] = L["Major Rejuvenation Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 10286 },
@@ -10842,7 +10842,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [22757] = {
             ["craftItem"] = 18262,
-            ["name"] = AL["Elemental Sharpening Stone"],
+            ["name"] = L["Elemental Sharpening Stone"],
             ["castTime"] = 8,
             ["reagents"] = {
                 { 7067, 2 },
@@ -10851,7 +10851,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [22759] = {
             ["craftItem"] = 18263,
-            ["name"] = AL["Flarecore Wraps"],
+            ["name"] = L["Flarecore Wraps"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14342, 6 },
@@ -10863,7 +10863,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [22761] = {
             ["craftItem"] = 18254,
-            ["name"] = AL["Runn Tum Tuber Surprise"],
+            ["name"] = L["Runn Tum Tuber Surprise"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 18255 },
@@ -10872,7 +10872,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [22793] = {
             ["craftItem"] = 18283,
-            ["name"] = AL["Biznicks 247x128 Accurascope"],
+            ["name"] = L["Biznicks 247x128 Accurascope"],
             ["castTime"] = 45,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -10885,7 +10885,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [22795] = {
             ["craftItem"] = 18282,
-            ["name"] = AL["Core Marksman Rifle"],
+            ["name"] = L["Core Marksman Rifle"],
             ["castTime"] = 60,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -10898,7 +10898,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [22797] = {
             ["craftItem"] = 18168,
-            ["name"] = AL["Force Reactive Disk"],
+            ["name"] = L["Force Reactive Disk"],
             ["castTime"] = 60,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -10911,7 +10911,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [22808] = {
             ["craftItem"] = 18294,
-            ["name"] = AL["Elixir of Greater Water Breathing"],
+            ["name"] = L["Elixir of Greater Water Breathing"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 7972 },
@@ -10921,7 +10921,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [22813] = {
             ["craftItem"] = 18258,
-            ["name"] = AL["Gordok Ogre Suit"],
+            ["name"] = L["Gordok Ogre Suit"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 2 },
@@ -10932,7 +10932,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [22815] = {
             ["craftItem"] = 18258,
-            ["name"] = AL["Gordok Ogre Suit"],
+            ["name"] = L["Gordok Ogre Suit"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 4 },
@@ -10943,7 +10943,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [22866] = {
             ["craftItem"] = 18405,
-            ["name"] = AL["Belt of the Archmage"],
+            ["name"] = L["Belt of the Archmage"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 16 },
@@ -10957,7 +10957,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [22867] = {
             ["craftItem"] = 18407,
-            ["name"] = AL["Felcloth Gloves"],
+            ["name"] = L["Felcloth Gloves"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 12 },
@@ -10969,7 +10969,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [22868] = {
             ["craftItem"] = 18408,
-            ["name"] = AL["Inferno Gloves"],
+            ["name"] = L["Inferno Gloves"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 12 },
@@ -10980,7 +10980,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [22869] = {
             ["craftItem"] = 18409,
-            ["name"] = AL["Mooncloth Gloves"],
+            ["name"] = L["Mooncloth Gloves"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 12 },
@@ -10991,7 +10991,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [22870] = {
             ["craftItem"] = 18413,
-            ["name"] = AL["Cloak of Warding"],
+            ["name"] = L["Cloak of Warding"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 12 },
@@ -11002,7 +11002,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [22902] = {
             ["craftItem"] = 18486,
-            ["name"] = AL["Mooncloth Robe"],
+            ["name"] = L["Mooncloth Robe"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 6 },
@@ -11013,7 +11013,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [22921] = {
             ["craftItem"] = 18504,
-            ["name"] = AL["Girdle of Insight"],
+            ["name"] = L["Girdle of Insight"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 12 },
@@ -11024,7 +11024,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [22922] = {
             ["craftItem"] = 18506,
-            ["name"] = AL["Mongoose Boots"],
+            ["name"] = L["Mongoose Boots"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 12 },
@@ -11036,7 +11036,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [22923] = {
             ["craftItem"] = 18508,
-            ["name"] = AL["Swift Flight Bracers"],
+            ["name"] = L["Swift Flight Bracers"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 12 },
@@ -11048,7 +11048,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [22926] = {
             ["craftItem"] = 18509,
-            ["name"] = AL["Chromatic Cloak"],
+            ["name"] = L["Chromatic Cloak"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 30 },
@@ -11061,7 +11061,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [22927] = {
             ["craftItem"] = 18510,
-            ["name"] = AL["Hide of the Wild"],
+            ["name"] = L["Hide of the Wild"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 30 },
@@ -11074,7 +11074,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [22928] = {
             ["craftItem"] = 18511,
-            ["name"] = AL["Shifting Cloak"],
+            ["name"] = L["Shifting Cloak"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 30 },
@@ -11087,7 +11087,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [22967] = {
             ["craftItem"] = 17771,
-            ["name"] = AL["Smelt Elementium"],
+            ["name"] = L["Smelt Elementium"],
             ["castTime"] = 10,
             ["reagents"] = {
                 { 18562 },
@@ -11098,7 +11098,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [23066] = {
             ["craftItem"] = 9318,
-            ["name"] = AL["Red Firework"],
+            ["name"] = L["Red Firework"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 4377 },
@@ -11108,7 +11108,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [23067] = {
             ["craftItem"] = 9312,
-            ["name"] = AL["Blue Firework"],
+            ["name"] = L["Blue Firework"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 4377 },
@@ -11118,7 +11118,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [23068] = {
             ["craftItem"] = 9313,
-            ["name"] = AL["Green Firework"],
+            ["name"] = L["Green Firework"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 4377 },
@@ -11128,7 +11128,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [23069] = {
             ["craftItem"] = 18588,
-            ["name"] = AL["EZ-Thro Dynamite II"],
+            ["name"] = L["EZ-Thro Dynamite II"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 10505 },
@@ -11137,7 +11137,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [23070] = {
             ["craftItem"] = 18641,
-            ["name"] = AL["Dense Dynamite"],
+            ["name"] = L["Dense Dynamite"],
             ["castTime"] = 8,
             ["reagents"] = {
                 { 15992, 2 },
@@ -11147,7 +11147,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [23071] = {
             ["craftItem"] = 18631,
-            ["name"] = AL["Truesilver Transformer"],
+            ["name"] = L["Truesilver Transformer"],
             ["castTime"] = 8,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -11158,7 +11158,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [23077] = {
             ["craftItem"] = 18634,
-            ["name"] = AL["Gyrofreeze Ice Reflector"],
+            ["name"] = L["Gyrofreeze Ice Reflector"],
             ["castTime"] = 45,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -11172,7 +11172,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [23078] = {
             ["craftItem"] = 18587,
-            ["name"] = AL["Goblin Jumper Cables XL"],
+            ["name"] = L["Goblin Jumper Cables XL"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 15994, 2 },
@@ -11184,7 +11184,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [23079] = {
             ["craftItem"] = 18637,
-            ["name"] = AL["Major Recombobulator"],
+            ["name"] = L["Major Recombobulator"],
             ["castTime"] = 25,
             ["extra"] = format(ITEM_SPELL_CHARGES_P1, 10),
             ["reagents"] = {
@@ -11195,7 +11195,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [23080] = {
             ["craftItem"] = 18594,
-            ["name"] = AL["Powerful Seaforium Charge"],
+            ["name"] = L["Powerful Seaforium Charge"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 15994, 2 },
@@ -11206,7 +11206,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [23081] = {
             ["craftItem"] = 18638,
-            ["name"] = AL["Hyper-Radiant Flame Reflector"],
+            ["name"] = L["Hyper-Radiant Flame Reflector"],
             ["castTime"] = 45,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -11219,7 +11219,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [23082] = {
             ["craftItem"] = 18639,
-            ["name"] = AL["Ultra-Flash Shadow Reflector"],
+            ["name"] = L["Ultra-Flash Shadow Reflector"],
             ["castTime"] = 45,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -11233,7 +11233,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [23096] = {
             ["craftItem"] = 18645,
-            ["name"] = AL["Alarm-O-Bot"],
+            ["name"] = L["Alarm-O-Bot"],
             ["castTime"] = 25,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -11246,7 +11246,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [23129] = {
             ["craftItem"] = 18660,
-            ["name"] = AL["World Enlarger"],
+            ["name"] = L["World Enlarger"],
             ["castTime"] = 8,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -11259,7 +11259,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [23190] = {
             ["craftItem"] = 18662,
-            ["name"] = AL["Heavy Leather Ball"],
+            ["name"] = L["Heavy Leather Ball"],
             ["castTime"] = 8,
             ["reagents"] = {
                 { 4234, 2 },
@@ -11268,7 +11268,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [23399] = {
             ["craftItem"] = 18948,
-            ["name"] = AL["Barbaric Bracers"],
+            ["name"] = L["Barbaric Bracers"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 4234, 8 },
@@ -11280,7 +11280,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [23486] = {
             ["craftItem"] = 18984,
-            ["name"] = AL["Dimensional Ripper - Everlook"],
+            ["name"] = L["Dimensional Ripper - Everlook"],
             ["castTime"] = 45,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -11293,7 +11293,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [23489] = {
             ["craftItem"] = 18986,
-            ["name"] = AL["Ultrasafe Transporter - Gadgetzan"],
+            ["name"] = L["Ultrasafe Transporter - Gadgetzan"],
             ["castTime"] = 45,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -11307,7 +11307,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [23507] = {
             ["craftItem"] = 19026,
-            ["name"] = AL["Snake Burst Firework"],
+            ["name"] = L["Snake Burst Firework"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 15992, 2 },
@@ -11318,7 +11318,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [23628] = {
             ["craftItem"] = 19043,
-            ["name"] = AL["Heavy Timbermaw Belt"],
+            ["name"] = L["Heavy Timbermaw Belt"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -11329,7 +11329,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [23629] = {
             ["craftItem"] = 19048,
-            ["name"] = AL["Heavy Timbermaw Boots"],
+            ["name"] = L["Heavy Timbermaw Boots"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -11340,7 +11340,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [23632] = {
             ["craftItem"] = 19051,
-            ["name"] = AL["Girdle of the Dawn"],
+            ["name"] = L["Girdle of the Dawn"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -11351,7 +11351,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [23633] = {
             ["craftItem"] = 19057,
-            ["name"] = AL["Gloves of the Dawn"],
+            ["name"] = L["Gloves of the Dawn"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -11362,7 +11362,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [23636] = {
             ["craftItem"] = 19148,
-            ["name"] = AL["Dark Iron Helm"],
+            ["name"] = L["Dark Iron Helm"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -11373,7 +11373,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [23637] = {
             ["craftItem"] = 19164,
-            ["name"] = AL["Dark Iron Gauntlets"],
+            ["name"] = L["Dark Iron Gauntlets"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -11386,7 +11386,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [23638] = {
             ["craftItem"] = 19166,
-            ["name"] = AL["Black Amnesty"],
+            ["name"] = L["Black Amnesty"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -11399,7 +11399,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [23639] = {
             ["craftItem"] = 19167,
-            ["name"] = AL["Blackfury"],
+            ["name"] = L["Blackfury"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -11411,7 +11411,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [23650] = {
             ["craftItem"] = 19170,
-            ["name"] = AL["Ebon Hand"],
+            ["name"] = L["Ebon Hand"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -11424,7 +11424,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [23652] = {
             ["craftItem"] = 19168,
-            ["name"] = AL["Blackguard"],
+            ["name"] = L["Blackguard"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -11437,7 +11437,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [23653] = {
             ["craftItem"] = 19169,
-            ["name"] = AL["Nightfall"],
+            ["name"] = L["Nightfall"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -11450,7 +11450,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [23662] = {
             ["craftItem"] = 19047,
-            ["name"] = AL["Wisdom of the Timbermaw"],
+            ["name"] = L["Wisdom of the Timbermaw"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 8 },
@@ -11461,7 +11461,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [23663] = {
             ["craftItem"] = 19050,
-            ["name"] = AL["Mantle of the Timbermaw"],
+            ["name"] = L["Mantle of the Timbermaw"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14342, 5 },
@@ -11472,7 +11472,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [23664] = {
             ["craftItem"] = 19056,
-            ["name"] = AL["Argent Boots"],
+            ["name"] = L["Argent Boots"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 6 },
@@ -11484,7 +11484,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [23665] = {
             ["craftItem"] = 19059,
-            ["name"] = AL["Argent Shoulders"],
+            ["name"] = L["Argent Shoulders"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14342, 5 },
@@ -11494,7 +11494,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [23666] = {
             ["craftItem"] = 19156,
-            ["name"] = AL["Flarecore Robe"],
+            ["name"] = L["Flarecore Robe"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14342, 10 },
@@ -11506,7 +11506,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [23667] = {
             ["craftItem"] = 19165,
-            ["name"] = AL["Flarecore Leggings"],
+            ["name"] = L["Flarecore Leggings"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14342, 8 },
@@ -11518,7 +11518,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [23703] = {
             ["craftItem"] = 19044,
-            ["name"] = AL["Might of the Timbermaw"],
+            ["name"] = L["Might of the Timbermaw"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 30 },
@@ -11530,7 +11530,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [23704] = {
             ["craftItem"] = 19049,
-            ["name"] = AL["Timbermaw Brawlers"],
+            ["name"] = L["Timbermaw Brawlers"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 12810, 8 },
@@ -11542,7 +11542,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [23705] = {
             ["craftItem"] = 19052,
-            ["name"] = AL["Dawn Treaders"],
+            ["name"] = L["Dawn Treaders"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 30 },
@@ -11554,7 +11554,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [23706] = {
             ["craftItem"] = 19058,
-            ["name"] = AL["Golden Mantle of the Dawn"],
+            ["name"] = L["Golden Mantle of the Dawn"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 12810, 8 },
@@ -11566,7 +11566,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [23707] = {
             ["craftItem"] = 19149,
-            ["name"] = AL["Lava Belt"],
+            ["name"] = L["Lava Belt"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 17011, 5 },
@@ -11576,7 +11576,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [23708] = {
             ["craftItem"] = 19157,
-            ["name"] = AL["Chromatic Gauntlets"],
+            ["name"] = L["Chromatic Gauntlets"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 17010, 5 },
@@ -11589,7 +11589,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [23709] = {
             ["craftItem"] = 19162,
-            ["name"] = AL["Corehound Belt"],
+            ["name"] = L["Corehound Belt"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 17010, 8 },
@@ -11601,7 +11601,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [23710] = {
             ["craftItem"] = 19163,
-            ["name"] = AL["Molten Belt"],
+            ["name"] = L["Molten Belt"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 17010, 2 },
@@ -11613,16 +11613,16 @@ GetSpellInfoAtlasLootDB = {
         },
         [23787] = {
             ["craftItem"] = 19440,
-            ["name"] = AL["Powerful Anti-Venom"],
+            ["name"] = L["Powerful Anti-Venom"],
             ["castTime"] = 3,
-            ["text"] = AL["Creates a Vial of Powerful Anti-Venom."],
+            ["text"] = L["Creates a Vial of Powerful Anti-Venom."],
             ["reagents"] = {
                 { 19441 },
             },
         },
         [24091] = {
             ["craftItem"] = 19682,
-            ["name"] = AL["Bloodvine Vest"],
+            ["name"] = L["Bloodvine Vest"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14342, 3 },
@@ -11634,7 +11634,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [24092] = {
             ["craftItem"] = 19683,
-            ["name"] = AL["Bloodvine Leggings"],
+            ["name"] = L["Bloodvine Leggings"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14342, 4 },
@@ -11646,7 +11646,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [24093] = {
             ["craftItem"] = 19684,
-            ["name"] = AL["Bloodvine Boots"],
+            ["name"] = L["Bloodvine Boots"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14342, 3 },
@@ -11658,7 +11658,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [24121] = {
             ["craftItem"] = 19685,
-            ["name"] = AL["Primal Batskin Jerkin"],
+            ["name"] = L["Primal Batskin Jerkin"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 19767, 14 },
@@ -11669,7 +11669,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [24122] = {
             ["craftItem"] = 19686,
-            ["name"] = AL["Primal Batskin Gloves"],
+            ["name"] = L["Primal Batskin Gloves"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 19767, 10 },
@@ -11680,7 +11680,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [24123] = {
             ["craftItem"] = 19687,
-            ["name"] = AL["Primal Batskin Bracers"],
+            ["name"] = L["Primal Batskin Bracers"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 19767, 8 },
@@ -11691,7 +11691,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [24124] = {
             ["craftItem"] = 19688,
-            ["name"] = AL["Blood Tiger Breastplate"],
+            ["name"] = L["Blood Tiger Breastplate"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 19768, 35 },
@@ -11702,7 +11702,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [24125] = {
             ["craftItem"] = 19689,
-            ["name"] = AL["Blood Tiger Shoulders"],
+            ["name"] = L["Blood Tiger Shoulders"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 19768, 25 },
@@ -11713,7 +11713,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [24136] = {
             ["craftItem"] = 19690,
-            ["name"] = AL["Bloodsoul Breastplate"],
+            ["name"] = L["Bloodsoul Breastplate"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -11725,7 +11725,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [24137] = {
             ["craftItem"] = 19691,
-            ["name"] = AL["Bloodsoul Shoulders"],
+            ["name"] = L["Bloodsoul Shoulders"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -11737,7 +11737,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [24138] = {
             ["craftItem"] = 19692,
-            ["name"] = AL["Bloodsoul Gauntlets"],
+            ["name"] = L["Bloodsoul Gauntlets"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -11749,7 +11749,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [24139] = {
             ["craftItem"] = 19693,
-            ["name"] = AL["Darksoul Breastplate"],
+            ["name"] = L["Darksoul Breastplate"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -11760,7 +11760,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [24140] = {
             ["craftItem"] = 19694,
-            ["name"] = AL["Darksoul Leggings"],
+            ["name"] = L["Darksoul Leggings"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -11771,7 +11771,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [24141] = {
             ["craftItem"] = 19695,
-            ["name"] = AL["Darksoul Shoulders"],
+            ["name"] = L["Darksoul Shoulders"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -11782,7 +11782,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [24266] = {
             ["craftItem"] = 19931,
-            ["name"] = AL["Gurubashi Mojo Madness"],
+            ["name"] = L["Gurubashi Mojo Madness"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 12938 },
@@ -11794,7 +11794,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [24356] = {
             ["craftItem"] = 19999,
-            ["name"] = AL["Bloodvine Goggles"],
+            ["name"] = L["Bloodvine Goggles"],
             ["castTime"] = 60,
             ["tools"] = { 10498, 6219 },
             ["reagents"] = {
@@ -11807,7 +11807,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [24357] = {
             ["craftItem"] = 19998,
-            ["name"] = AL["Bloodvine Lens"],
+            ["name"] = L["Bloodvine Lens"],
             ["castTime"] = 60,
             ["tools"] = { 10498, 6219 },
             ["reagents"] = {
@@ -11820,7 +11820,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [24365] = {
             ["craftItem"] = 20007,
-            ["name"] = AL["Mageblood Potion"],
+            ["name"] = L["Mageblood Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 13463 },
@@ -11830,7 +11830,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [24366] = {
             ["craftItem"] = 20002,
-            ["name"] = AL["Greater Dreamless Sleep Potion"],
+            ["name"] = L["Greater Dreamless Sleep Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 13463, 2 },
@@ -11840,7 +11840,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [24367] = {
             ["craftItem"] = 20008,
-            ["name"] = AL["Living Action Potion"],
+            ["name"] = L["Living Action Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 13467, 2 },
@@ -11851,7 +11851,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [24368] = {
             ["craftItem"] = 20004,
-            ["name"] = AL["Major Troll's Blood Potion"],
+            ["name"] = L["Major Troll's Blood Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 8846 },
@@ -11861,7 +11861,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [24399] = {
             ["craftItem"] = 20039,
-            ["name"] = AL["Dark Iron Boots"],
+            ["name"] = L["Dark Iron Boots"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["extra"] = GREEN_FONT_COLOR_CODE..ITEM_RANDOM_ENCHANT,
@@ -11874,7 +11874,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [24418] = {
             ["craftItem"] = 20074,
-            ["name"] = AL["Heavy Crocolisk Stew"],
+            ["name"] = L["Heavy Crocolisk Stew"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 3667, 2 },
@@ -11883,7 +11883,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [24654] = {
             ["craftItem"] = 20295,
-            ["name"] = AL["Blue Dragonscale Leggings"],
+            ["name"] = L["Blue Dragonscale Leggings"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 28 },
@@ -11894,7 +11894,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [24655] = {
             ["craftItem"] = 20296,
-            ["name"] = AL["Green Dragonscale Gauntlets"],
+            ["name"] = L["Green Dragonscale Gauntlets"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 20 },
@@ -11905,7 +11905,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [24703] = {
             ["craftItem"] = 20380,
-            ["name"] = AL["Dreamscale Breastplate"],
+            ["name"] = L["Dreamscale Breastplate"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 12810, 12 },
@@ -11917,7 +11917,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [24801] = {
             ["craftItem"] = 20452,
-            ["name"] = AL["Smoked Desert Dumplings"],
+            ["name"] = L["Smoked Desert Dumplings"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 20424 },
@@ -11926,7 +11926,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [24846] = {
             ["craftItem"] = 20481,
-            ["name"] = AL["Spitfire Bracers"],
+            ["name"] = L["Spitfire Bracers"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 20500 },
@@ -11936,7 +11936,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [24847] = {
             ["craftItem"] = 20480,
-            ["name"] = AL["Spitfire Gauntlets"],
+            ["name"] = L["Spitfire Gauntlets"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 20500, 2 },
@@ -11947,7 +11947,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [24848] = {
             ["craftItem"] = 20479,
-            ["name"] = AL["Spitfire Breastplate"],
+            ["name"] = L["Spitfire Breastplate"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 20500, 3 },
@@ -11958,7 +11958,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [24849] = {
             ["craftItem"] = 20476,
-            ["name"] = AL["Sandstalker Bracers"],
+            ["name"] = L["Sandstalker Bracers"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 20501 },
@@ -11968,7 +11968,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [24850] = {
             ["craftItem"] = 20477,
-            ["name"] = AL["Sandstalker Gauntlets"],
+            ["name"] = L["Sandstalker Gauntlets"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 20501, 2 },
@@ -11979,7 +11979,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [24851] = {
             ["craftItem"] = 20478,
-            ["name"] = AL["Sandstalker Breastplate"],
+            ["name"] = L["Sandstalker Breastplate"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 20501, 3 },
@@ -11990,7 +11990,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [24901] = {
             ["craftItem"] = 20538,
-            ["name"] = AL["Runed Stygian Leggings"],
+            ["name"] = L["Runed Stygian Leggings"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 6 },
@@ -12001,7 +12001,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [24902] = {
             ["craftItem"] = 20539,
-            ["name"] = AL["Runed Stygian Belt"],
+            ["name"] = L["Runed Stygian Belt"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 2 },
@@ -12013,7 +12013,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [24903] = {
             ["craftItem"] = 20537,
-            ["name"] = AL["Runed Stygian Boots"],
+            ["name"] = L["Runed Stygian Boots"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 4 },
@@ -12025,7 +12025,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [24912] = {
             ["craftItem"] = 20549,
-            ["name"] = AL["Darkrune Gauntlets"],
+            ["name"] = L["Darkrune Gauntlets"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -12037,7 +12037,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [24913] = {
             ["craftItem"] = 20551,
-            ["name"] = AL["Darkrune Helm"],
+            ["name"] = L["Darkrune Helm"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -12049,7 +12049,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [24914] = {
             ["craftItem"] = 20550,
-            ["name"] = AL["Darkrune Breastplate"],
+            ["name"] = L["Darkrune Breastplate"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -12060,7 +12060,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [24940] = {
             ["craftItem"] = 20575,
-            ["name"] = AL["Black Whelp Tunic"],
+            ["name"] = L["Black Whelp Tunic"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 2319, 8 },
@@ -12071,11 +12071,11 @@ GetSpellInfoAtlasLootDB = {
         },
         [25146] = {
             ["craftItem"] = 7068,
-            ["name"] = AL["Transmute: Elemental Fire"],
+            ["name"] = L["Transmute: Elemental Fire"],
             ["castTime"] = 25,
             ["tools"] = { 9149 },
             ["cooldown"] = 600,
-            ["text"] = AL["Transmutes a Heart of Fire into three Elemental Fires."],
+            ["text"] = L["Transmutes a Heart of Fire into three Elemental Fires."],
             ["reagents"] = {
                 { 7077 },
             },
@@ -12083,9 +12083,9 @@ GetSpellInfoAtlasLootDB = {
         },
         [25347] = {
             ["craftItem"] = 20844,
-            ["name"] = AL["Deadly Poison V"],
+            ["name"] = L["Deadly Poison V"],
             ["castTime"] = 3,
-            ["text"] = AL["Coats a weapon with poison that lasts for 30 minutes.\nEach strike has a 30% chance of poisoning the enemy for 136 Nature damage over 12 sec.  Stacks up to 5 times on a single target.  105 charges."],
+            ["text"] = L["Coats a weapon with poison that lasts for 30 minutes.\nEach strike has a 30% chance of poisoning the enemy for 136 Nature damage over 12 sec.  Stacks up to 5 times on a single target.  105 charges."],
             ["reagents"] = {
                 { 5173, 7 },
                 { 8925 },
@@ -12093,7 +12093,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [25659] = {
             ["craftItem"] = 21023,
-            ["name"] = AL["Dirge's Kickin' Chimaerok Chops"],
+            ["name"] = L["Dirge's Kickin' Chimaerok Chops"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 2692 },
@@ -12105,7 +12105,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [25704] = {
             ["craftItem"] = 21072,
-            ["name"] = AL["Smoked Sagefish"],
+            ["name"] = L["Smoked Sagefish"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 21071 },
@@ -12114,7 +12114,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [25954] = {
             ["craftItem"] = 21217,
-            ["name"] = AL["Sagefish Delight"],
+            ["name"] = L["Sagefish Delight"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 21153 },
@@ -12123,7 +12123,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [26011] = {
             ["craftItem"] = 21277,
-            ["name"] = AL["Tranquil Mechanical Yeti"],
+            ["name"] = L["Tranquil Mechanical Yeti"],
             ["castTime"] = 60,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -12136,7 +12136,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [26085] = {
             ["craftItem"] = 21340,
-            ["name"] = AL["Soul Pouch"],
+            ["name"] = L["Soul Pouch"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 6 },
@@ -12147,7 +12147,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [26086] = {
             ["craftItem"] = 21341,
-            ["name"] = AL["Felcloth Bag"],
+            ["name"] = L["Felcloth Bag"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14256, 12 },
@@ -12158,7 +12158,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [26087] = {
             ["craftItem"] = 21342,
-            ["name"] = AL["Core Felcloth Bag"],
+            ["name"] = L["Core Felcloth Bag"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14256, 20 },
@@ -12170,7 +12170,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [26277] = {
             ["craftItem"] = 21546,
-            ["name"] = AL["Elixir of Greater Firepower"],
+            ["name"] = L["Elixir of Greater Firepower"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 6371, 3 },
@@ -12180,7 +12180,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [26279] = {
             ["craftItem"] = 21278,
-            ["name"] = AL["Stormshroud Gloves"],
+            ["name"] = L["Stormshroud Gloves"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 12810, 6 },
@@ -12192,7 +12192,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [26403] = {
             ["craftItem"] = 21154,
-            ["name"] = AL["Festive Red Dress"],
+            ["name"] = L["Festive Red Dress"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 14048, 4 },
@@ -12203,7 +12203,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [26407] = {
             ["craftItem"] = 21542,
-            ["name"] = AL["Festive Red Pant Suit"],
+            ["name"] = L["Festive Red Pant Suit"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 14048, 4 },
@@ -12214,7 +12214,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [26416] = {
             ["craftItem"] = 21558,
-            ["name"] = AL["Small Blue Rocket"],
+            ["name"] = L["Small Blue Rocket"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 4364 },
@@ -12224,7 +12224,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [26417] = {
             ["craftItem"] = 21559,
-            ["name"] = AL["Small Green Rocket"],
+            ["name"] = L["Small Green Rocket"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 4364 },
@@ -12234,7 +12234,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [26418] = {
             ["craftItem"] = 21557,
-            ["name"] = AL["Small Red Rocket"],
+            ["name"] = L["Small Red Rocket"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 4364 },
@@ -12244,7 +12244,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [26420] = {
             ["craftItem"] = 21589,
-            ["name"] = AL["Large Blue Rocket"],
+            ["name"] = L["Large Blue Rocket"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 4377 },
@@ -12254,7 +12254,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [26421] = {
             ["craftItem"] = 21590,
-            ["name"] = AL["Large Green Rocket"],
+            ["name"] = L["Large Green Rocket"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 4377 },
@@ -12264,7 +12264,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [26422] = {
             ["craftItem"] = 21592,
-            ["name"] = AL["Large Red Rocket"],
+            ["name"] = L["Large Red Rocket"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 4377 },
@@ -12274,7 +12274,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [26423] = {
             ["craftItem"] = 21571,
-            ["name"] = AL["Blue Rocket Cluster"],
+            ["name"] = L["Blue Rocket Cluster"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 10505 },
@@ -12284,7 +12284,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [26424] = {
             ["craftItem"] = 21574,
-            ["name"] = AL["Green Rocket Cluster"],
+            ["name"] = L["Green Rocket Cluster"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 10505 },
@@ -12294,7 +12294,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [26425] = {
             ["craftItem"] = 21576,
-            ["name"] = AL["Red Rocket Cluster"],
+            ["name"] = L["Red Rocket Cluster"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 10505 },
@@ -12304,7 +12304,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [26426] = {
             ["craftItem"] = 21714,
-            ["name"] = AL["Large Blue Rocket Cluster"],
+            ["name"] = L["Large Blue Rocket Cluster"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 15992 },
@@ -12314,7 +12314,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [26427] = {
             ["craftItem"] = 21716,
-            ["name"] = AL["Large Green Rocket Cluster"],
+            ["name"] = L["Large Green Rocket Cluster"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 15992 },
@@ -12324,7 +12324,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [26428] = {
             ["craftItem"] = 21718,
-            ["name"] = AL["Large Red Rocket Cluster"],
+            ["name"] = L["Large Red Rocket Cluster"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 15992 },
@@ -12334,7 +12334,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [26442] = {
             ["craftItem"] = 21569,
-            ["name"] = AL["Firework Launcher"],
+            ["name"] = L["Firework Launcher"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 9060 },
@@ -12345,7 +12345,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [26443] = {
             ["craftItem"] = 21570,
-            ["name"] = AL["Firework Cluster Launcher"],
+            ["name"] = L["Firework Cluster Launcher"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 9060, 4 },
@@ -12356,7 +12356,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [27585] = {
             ["craftItem"] = 22197,
-            ["name"] = AL["Heavy Obsidian Belt"],
+            ["name"] = L["Heavy Obsidian Belt"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -12367,7 +12367,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [27586] = {
             ["craftItem"] = 22198,
-            ["name"] = AL["Jagged Obsidian Shield"],
+            ["name"] = L["Jagged Obsidian Shield"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -12379,7 +12379,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [27587] = {
             ["craftItem"] = 22196,
-            ["name"] = AL["Thick Obsidian Breastplate"],
+            ["name"] = L["Thick Obsidian Breastplate"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -12392,7 +12392,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [27588] = {
             ["craftItem"] = 22195,
-            ["name"] = AL["Light Obsidian Belt"],
+            ["name"] = L["Light Obsidian Belt"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -12402,7 +12402,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [27589] = {
             ["craftItem"] = 22194,
-            ["name"] = AL["Black Grasp of the Destroyer"],
+            ["name"] = L["Black Grasp of the Destroyer"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -12414,7 +12414,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [27590] = {
             ["craftItem"] = 22191,
-            ["name"] = AL["Obsidian Mail Tunic"],
+            ["name"] = L["Obsidian Mail Tunic"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -12427,7 +12427,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [27658] = {
             ["craftItem"] = 22246,
-            ["name"] = AL["Enchanted Mageweave Pouch"],
+            ["name"] = L["Enchanted Mageweave Pouch"],
             ["castTime"] = 45,
             ["reagents"] = {
                 { 4339, 4 },
@@ -12437,7 +12437,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [27659] = {
             ["craftItem"] = 22248,
-            ["name"] = AL["Enchanted Runecloth Bag"],
+            ["name"] = L["Enchanted Runecloth Bag"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 5 },
@@ -12447,7 +12447,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [27660] = {
             ["craftItem"] = 22249,
-            ["name"] = AL["Big Bag of Enchantment"],
+            ["name"] = L["Big Bag of Enchantment"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 6 },
@@ -12458,7 +12458,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [27724] = {
             ["craftItem"] = 22251,
-            ["name"] = AL["Cenarion Herb Bag"],
+            ["name"] = L["Cenarion Herb Bag"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 5 },
@@ -12469,7 +12469,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [27725] = {
             ["craftItem"] = 22252,
-            ["name"] = AL["Satchel of Cenarius"],
+            ["name"] = L["Satchel of Cenarius"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 6 },
@@ -12480,7 +12480,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [27829] = {
             ["craftItem"] = 22385,
-            ["name"] = AL["Titanic Leggings"],
+            ["name"] = L["Titanic Leggings"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -12492,7 +12492,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [27830] = {
             ["craftItem"] = 22384,
-            ["name"] = AL["Persuader"],
+            ["name"] = L["Persuader"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -12506,7 +12506,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [27832] = {
             ["craftItem"] = 22383,
-            ["name"] = AL["Sageblade"],
+            ["name"] = L["Sageblade"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -12518,7 +12518,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [28205] = {
             ["craftItem"] = 22654,
-            ["name"] = AL["Glacial Gloves"],
+            ["name"] = L["Glacial Gloves"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 22682, 5 },
@@ -12529,7 +12529,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [28207] = {
             ["craftItem"] = 22652,
-            ["name"] = AL["Glacial Vest"],
+            ["name"] = L["Glacial Vest"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 22682, 7 },
@@ -12540,7 +12540,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [28208] = {
             ["craftItem"] = 22658,
-            ["name"] = AL["Glacial Cloak"],
+            ["name"] = L["Glacial Cloak"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 22682, 5 },
@@ -12551,7 +12551,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [28209] = {
             ["craftItem"] = 22655,
-            ["name"] = AL["Glacial Wrists"],
+            ["name"] = L["Glacial Wrists"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 22682, 4 },
@@ -12562,7 +12562,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [28210] = {
             ["craftItem"] = 22660,
-            ["name"] = AL["Gaea's Embrace"],
+            ["name"] = L["Gaea's Embrace"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 19726 },
@@ -12573,7 +12573,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [28219] = {
             ["craftItem"] = 22661,
-            ["name"] = AL["Polar Tunic"],
+            ["name"] = L["Polar Tunic"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 22682, 7 },
@@ -12585,7 +12585,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [28220] = {
             ["craftItem"] = 22662,
-            ["name"] = AL["Polar Gloves"],
+            ["name"] = L["Polar Gloves"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 22682, 5 },
@@ -12597,7 +12597,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [28221] = {
             ["craftItem"] = 22663,
-            ["name"] = AL["Polar Bracers"],
+            ["name"] = L["Polar Bracers"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 22682, 4 },
@@ -12609,7 +12609,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [28222] = {
             ["craftItem"] = 22664,
-            ["name"] = AL["Icy Scale Breastplate"],
+            ["name"] = L["Icy Scale Breastplate"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 22682, 7 },
@@ -12621,7 +12621,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [28223] = {
             ["craftItem"] = 22666,
-            ["name"] = AL["Icy Scale Gauntlets"],
+            ["name"] = L["Icy Scale Gauntlets"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 22682, 5 },
@@ -12633,7 +12633,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [28224] = {
             ["craftItem"] = 22665,
-            ["name"] = AL["Icy Scale Bracers"],
+            ["name"] = L["Icy Scale Bracers"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 22682, 4 },
@@ -12645,7 +12645,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [28242] = {
             ["craftItem"] = 22669,
-            ["name"] = AL["Icebane Breastplate"],
+            ["name"] = L["Icebane Breastplate"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -12657,7 +12657,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [28243] = {
             ["craftItem"] = 22670,
-            ["name"] = AL["Icebane Gauntlets"],
+            ["name"] = L["Icebane Gauntlets"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -12669,7 +12669,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [28244] = {
             ["craftItem"] = 22671,
-            ["name"] = AL["Icebane Bracers"],
+            ["name"] = L["Icebane Bracers"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -12681,7 +12681,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [28461] = {
             ["craftItem"] = 22762,
-            ["name"] = AL["Ironvine Breastplate"],
+            ["name"] = L["Ironvine Breastplate"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -12693,7 +12693,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [28462] = {
             ["craftItem"] = 22763,
-            ["name"] = AL["Ironvine Gloves"],
+            ["name"] = L["Ironvine Gloves"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -12704,7 +12704,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [28463] = {
             ["craftItem"] = 22764,
-            ["name"] = AL["Ironvine Belt"],
+            ["name"] = L["Ironvine Belt"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -12714,7 +12714,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [28472] = {
             ["craftItem"] = 22759,
-            ["name"] = AL["Bramblewood Helm"],
+            ["name"] = L["Bramblewood Helm"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 12810, 12 },
@@ -12725,7 +12725,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [28473] = {
             ["craftItem"] = 22760,
-            ["name"] = AL["Bramblewood Boots"],
+            ["name"] = L["Bramblewood Boots"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 12810, 6 },
@@ -12736,7 +12736,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [28474] = {
             ["craftItem"] = 22761,
-            ["name"] = AL["Bramblewood Belt"],
+            ["name"] = L["Bramblewood Belt"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 12810, 4 },
@@ -12746,7 +12746,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [28480] = {
             ["craftItem"] = 22756,
-            ["name"] = AL["Sylvan Vest"],
+            ["name"] = L["Sylvan Vest"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 4 },
@@ -12757,7 +12757,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [28481] = {
             ["craftItem"] = 22757,
-            ["name"] = AL["Sylvan Crown"],
+            ["name"] = L["Sylvan Crown"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 4 },
@@ -12768,7 +12768,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [28482] = {
             ["craftItem"] = 22758,
-            ["name"] = AL["Sylvan Shoulders"],
+            ["name"] = L["Sylvan Shoulders"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 2 },
@@ -12778,7 +12778,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [29728] = {
             ["craftItem"] = 55150,
-            ["name"] = AL["Rough Gritted Paper"],
+            ["name"] = L["Rough Gritted Paper"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 2589 },
@@ -12787,7 +12787,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [29730] = {
             ["craftItem"] = 55156,
-            ["name"] = AL["Rough Copper Ring"],
+            ["name"] = L["Rough Copper Ring"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -12796,7 +12796,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [29732] = {
             ["craftItem"] = 55157,
-            ["name"] = AL["Copper Bangle"],
+            ["name"] = L["Copper Bangle"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -12805,7 +12805,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [36901] = {
             ["craftItem"] = 55046,
-            ["name"] = AL["Elixir of Greater Frost Power"],
+            ["name"] = L["Elixir of Greater Frost Power"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 13467, 3 },
@@ -12814,7 +12814,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [36903] = {
             ["craftItem"] = 55048,
-            ["name"] = AL["Elixir of Greater Arcane Power"],
+            ["name"] = L["Elixir of Greater Arcane Power"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 8831, 3 },
@@ -12823,7 +12823,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [36905] = {
             ["craftItem"] = 55060,
-            ["name"] = AL["Grandstaff of the Shen'dralar Elder"],
+            ["name"] = L["Grandstaff of the Shen'dralar Elder"],
             ["castTime"] = 25,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -12837,7 +12837,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [36907] = {
             ["craftItem"] = 55058,
-            ["name"] = AL["Rune-Inscribed Plate Leggings"],
+            ["name"] = L["Rune-Inscribed Plate Leggings"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -12851,7 +12851,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [36909] = {
             ["craftItem"] = 55050,
-            ["name"] = AL["Essence Infused Leather Gloves"],
+            ["name"] = L["Essence Infused Leather Gloves"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 12810, 10 },
@@ -12862,7 +12862,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [36911] = {
             ["craftItem"] = 55054,
-            ["name"] = AL["Prismatic Scale Barbute"],
+            ["name"] = L["Prismatic Scale Barbute"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8165, 20 },
@@ -12875,7 +12875,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [36913] = {
             ["craftItem"] = 55052,
-            ["name"] = AL["Astronomer Raiments     "],
+            ["name"] = L["Astronomer Raiments     "],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 4339, 4 },
@@ -12885,7 +12885,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [36929] = {
             ["craftItem"] = 47410,
-            ["name"] = AL["Concoction of the Emerald Mongoose"],
+            ["name"] = L["Concoction of the Emerald Mongoose"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 13452 },
@@ -12895,7 +12895,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [36932] = {
             ["craftItem"] = 47412,
-            ["name"] = AL["Concoction of the Arcane Giant"],
+            ["name"] = L["Concoction of the Arcane Giant"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 9206 },
@@ -12905,7 +12905,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [36935] = {
             ["craftItem"] = 47414,
-            ["name"] = AL["Concoction of the Dreamwater"],
+            ["name"] = L["Concoction of the Dreamwater"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 12820 },
@@ -12915,7 +12915,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41001] = {
             ["craftItem"] = 55158,
-            ["name"] = AL["Bright Copper Ring"],
+            ["name"] = L["Bright Copper Ring"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -12925,7 +12925,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41003] = {
             ["craftItem"] = 81030,
-            ["name"] = AL["Malachite Ring"],
+            ["name"] = L["Malachite Ring"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -12936,7 +12936,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41005] = {
             ["craftItem"] = 55159,
-            ["name"] = AL["Sturdy Copper Ring"],
+            ["name"] = L["Sturdy Copper Ring"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -12947,7 +12947,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41007] = {
             ["craftItem"] = 55160,
-            ["name"] = AL["Inlaid Copper Ring"],
+            ["name"] = L["Inlaid Copper Ring"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -12959,7 +12959,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41009] = {
             ["craftItem"] = 81092,
-            ["name"] = AL["Copper Staff"],
+            ["name"] = L["Copper Staff"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -12969,7 +12969,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41011] = {
             ["craftItem"] = 55161,
-            ["name"] = AL["Encrusted Copper Bangle"],
+            ["name"] = L["Encrusted Copper Bangle"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -12980,7 +12980,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41013] = {
             ["craftItem"] = 55162,
-            ["name"] = AL["Lesser Fortification Ring"],
+            ["name"] = L["Lesser Fortification Ring"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -12991,7 +12991,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41015] = {
             ["craftItem"] = 55163,
-            ["name"] = AL["Tigercrest Ring"],
+            ["name"] = L["Tigercrest Ring"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -13003,7 +13003,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41017] = {
             ["craftItem"] = 55165,
-            ["name"] = AL["Small Pearlstone Staff"],
+            ["name"] = L["Small Pearlstone Staff"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -13014,7 +13014,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41019] = {
             ["craftItem"] = 55166,
-            ["name"] = AL["Amber Ring"],
+            ["name"] = L["Amber Ring"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -13025,7 +13025,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41021] = {
             ["craftItem"] = 55167,
-            ["name"] = AL["Azure Ring"],
+            ["name"] = L["Azure Ring"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -13037,7 +13037,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41023] = {
             ["craftItem"] = 81031,
-            ["name"] = AL["Bright Copper Necklace"],
+            ["name"] = L["Bright Copper Necklace"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -13048,7 +13048,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41025] = {
             ["craftItem"] = 55168,
-            ["name"] = AL["Softglow Ring"],
+            ["name"] = L["Softglow Ring"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -13060,7 +13060,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41027] = {
             ["craftItem"] = 55170,
-            ["name"] = AL["Topaz Studded Ring"],
+            ["name"] = L["Topaz Studded Ring"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -13072,7 +13072,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41029] = {
             ["craftItem"] = 55151,
-            ["name"] = AL["Coarse Gritted Paper"],
+            ["name"] = L["Coarse Gritted Paper"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -13082,7 +13082,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41031] = {
             ["craftItem"] = 81032,
-            ["name"] = AL["Rough Gemstone Cluster"],
+            ["name"] = L["Rough Gemstone Cluster"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -13092,7 +13092,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41033] = {
             ["craftItem"] = 55171,
-            ["name"] = AL["Lavish Gemmed Necklace"],
+            ["name"] = L["Lavish Gemmed Necklace"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -13105,7 +13105,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41035] = {
             ["craftItem"] = 55172,
-            ["name"] = AL["Amberstone Pendant"],
+            ["name"] = L["Amberstone Pendant"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -13117,7 +13117,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41037] = {
             ["craftItem"] = 55173,
-            ["name"] = AL["Deepmist Choker"],
+            ["name"] = L["Deepmist Choker"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -13130,7 +13130,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41039] = {
             ["craftItem"] = 55174,
-            ["name"] = AL["Rough Bronze Ring"],
+            ["name"] = L["Rough Bronze Ring"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -13139,7 +13139,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41041] = {
             ["craftItem"] = 41308,
-            ["name"] = AL["Shimmering Bronze Ring"],
+            ["name"] = L["Shimmering Bronze Ring"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -13151,7 +13151,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41043] = {
             ["craftItem"] = 41309,
-            ["name"] = AL["Amber Orb"],
+            ["name"] = L["Amber Orb"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -13163,7 +13163,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41045] = {
             ["craftItem"] = 55175,
-            ["name"] = AL["Encrusted Bronze Staff"],
+            ["name"] = L["Encrusted Bronze Staff"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -13176,7 +13176,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41047] = {
             ["craftItem"] = 55176,
-            ["name"] = AL["Earthrock Loop"],
+            ["name"] = L["Earthrock Loop"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -13188,7 +13188,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41049] = {
             ["craftItem"] = 41310,
-            ["name"] = AL["Bronze Cuffed Bangles"],
+            ["name"] = L["Bronze Cuffed Bangles"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -13199,7 +13199,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41051] = {
             ["craftItem"] = 41311,
-            ["name"] = AL["Shadowgem Band"],
+            ["name"] = L["Shadowgem Band"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -13210,7 +13210,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41053] = {
             ["craftItem"] = 41313,
-            ["name"] = AL["Bronze Scepter"],
+            ["name"] = L["Bronze Scepter"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -13221,7 +13221,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41055] = {
             ["craftItem"] = 41312,
-            ["name"] = AL["Pendant of Midnight"],
+            ["name"] = L["Pendant of Midnight"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -13233,7 +13233,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41057] = {
             ["craftItem"] = 41314,
-            ["name"] = AL["Agatestone Crown"],
+            ["name"] = L["Agatestone Crown"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -13245,7 +13245,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41059] = {
             ["craftItem"] = 41315,
-            ["name"] = AL["Moonlight Staff"],
+            ["name"] = L["Moonlight Staff"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -13257,7 +13257,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41061] = {
             ["craftItem"] = 41316,
-            ["name"] = AL["Binding Signet"],
+            ["name"] = L["Binding Signet"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -13268,7 +13268,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41063] = {
             ["craftItem"] = 41318,
-            ["name"] = AL["Enchanted Bracelets"],
+            ["name"] = L["Enchanted Bracelets"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -13279,7 +13279,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41065] = {
             ["craftItem"] = 41320,
-            ["name"] = AL["Coarse Gemstone Cluster"],
+            ["name"] = L["Coarse Gemstone Cluster"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -13289,7 +13289,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41067] = {
             ["craftItem"] = 41319,
-            ["name"] = AL["Rough Silver Ring"],
+            ["name"] = L["Rough Silver Ring"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -13298,7 +13298,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41069] = {
             ["craftItem"] = 41325,
-            ["name"] = AL["Silver Medallion"],
+            ["name"] = L["Silver Medallion"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155, 41326 },
             ["reagents"] = {
@@ -13310,7 +13310,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41071] = {
             ["craftItem"] = 41329,
-            ["name"] = AL["Ring of Purified Silver"],
+            ["name"] = L["Ring of Purified Silver"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155, 41326 },
             ["reagents"] = {
@@ -13324,7 +13324,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41073] = {
             ["craftItem"] = 41326,
-            ["name"] = AL["Jewelry Lens"],
+            ["name"] = L["Jewelry Lens"],
             ["castTime"] = 5.13,
             ["tools"] = { 6219, 5956 },
             ["reagents"] = {
@@ -13337,7 +13337,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41075] = {
             ["craftItem"] = 41327,
-            ["name"] = AL["Jewelry Scope"],
+            ["name"] = L["Jewelry Scope"],
             ["castTime"] = 5.13,
             ["tools"] = { 6219, 5956 },
             ["reagents"] = {
@@ -13350,7 +13350,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41077] = {
             ["craftItem"] = 41328,
-            ["name"] = AL["Precision Jewelry Kit"],
+            ["name"] = L["Precision Jewelry Kit"],
             ["castTime"] = 5.13,
             ["tools"] = { 6219, 5956 },
             ["reagents"] = {
@@ -13363,7 +13363,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41081] = {
             ["craftItem"] = 41332,
-            ["name"] = AL["Rough Iron Ring"],
+            ["name"] = L["Rough Iron Ring"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -13372,7 +13372,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41083] = {
             ["craftItem"] = 41331,
-            ["name"] = AL["Rough Gold Ring"],
+            ["name"] = L["Rough Gold Ring"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -13381,7 +13381,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41085] = {
             ["craftItem"] = 41323,
-            ["name"] = AL["Emberstone Studded Ring"],
+            ["name"] = L["Emberstone Studded Ring"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -13393,7 +13393,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41087] = {
             ["craftItem"] = 41321,
-            ["name"] = AL["Rough Thorium Ring"],
+            ["name"] = L["Rough Thorium Ring"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41327 },
             ["reagents"] = {
@@ -13402,7 +13402,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41089] = {
             ["craftItem"] = 41324,
-            ["name"] = AL["Mithril Blackstone Necklace"],
+            ["name"] = L["Mithril Blackstone Necklace"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -13414,7 +13414,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41091] = {
             ["craftItem"] = 55154,
-            ["name"] = AL["Dense Gritted Paper"],
+            ["name"] = L["Dense Gritted Paper"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328 },
             ["reagents"] = {
@@ -13424,7 +13424,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41093] = {
             ["craftItem"] = 55256,
-            ["name"] = AL["Radiant Thorium Twilight"],
+            ["name"] = L["Radiant Thorium Twilight"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41327 },
             ["reagents"] = {
@@ -13436,7 +13436,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41095] = {
             ["craftItem"] = 55269,
-            ["name"] = AL["Glyph Codex"],
+            ["name"] = L["Glyph Codex"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41327 },
             ["reagents"] = {
@@ -13447,7 +13447,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41097] = {
             ["craftItem"] = 55271,
-            ["name"] = AL["Spellweaver Rod"],
+            ["name"] = L["Spellweaver Rod"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41327 },
             ["reagents"] = {
@@ -13460,7 +13460,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41099] = {
             ["craftItem"] = 55268,
-            ["name"] = AL["Quicksilver Whirl"],
+            ["name"] = L["Quicksilver Whirl"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41327 },
             ["reagents"] = {
@@ -13472,7 +13472,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41101] = {
             ["craftItem"] = 55273,
-            ["name"] = AL["Crystalweft Bracers"],
+            ["name"] = L["Crystalweft Bracers"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41327 },
             ["reagents"] = {
@@ -13484,7 +13484,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41103] = {
             ["craftItem"] = 55267,
-            ["name"] = AL["Ethereal Frostspark Crown"],
+            ["name"] = L["Ethereal Frostspark Crown"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41327 },
             ["reagents"] = {
@@ -13496,7 +13496,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41105] = {
             ["craftItem"] = 41330,
-            ["name"] = AL["Pendant of Arcane Radiance"],
+            ["name"] = L["Pendant of Arcane Radiance"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41327 },
             ["reagents"] = {
@@ -13507,7 +13507,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41201] = {
             ["craftItem"] = 55152,
-            ["name"] = AL["Heavy Gritted Paper"],
+            ["name"] = L["Heavy Gritted Paper"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -13517,7 +13517,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41203] = {
             ["craftItem"] = 41344,
-            ["name"] = AL["Heavy Gemstone Cluster"],
+            ["name"] = L["Heavy Gemstone Cluster"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -13527,7 +13527,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41205] = {
             ["craftItem"] = 55144,
-            ["name"] = AL["Goldfire Crystal Bracelet"],
+            ["name"] = L["Goldfire Crystal Bracelet"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -13539,7 +13539,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41207] = {
             ["craftItem"] = 55142,
-            ["name"] = AL["Quartz Halo"],
+            ["name"] = L["Quartz Halo"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155, 41326 },
             ["reagents"] = {
@@ -13551,7 +13551,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41209] = {
             ["craftItem"] = 55148,
-            ["name"] = AL["Staff of Blossomed Jade"],
+            ["name"] = L["Staff of Blossomed Jade"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155, 41326 },
             ["reagents"] = {
@@ -13564,7 +13564,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41211] = {
             ["craftItem"] = 55143,
-            ["name"] = AL["Jade Harmony Circlet"],
+            ["name"] = L["Jade Harmony Circlet"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155, 41326 },
             ["reagents"] = {
@@ -13576,7 +13576,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41213] = {
             ["craftItem"] = 55145,
-            ["name"] = AL["Goldenshade Quartz Crown"],
+            ["name"] = L["Goldenshade Quartz Crown"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -13587,7 +13587,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41215] = {
             ["craftItem"] = 55146,
-            ["name"] = AL["The Golden Goblet"],
+            ["name"] = L["The Golden Goblet"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -13599,7 +13599,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41217] = {
             ["craftItem"] = 55147,
-            ["name"] = AL["Powerful Citrine Pendant"],
+            ["name"] = L["Powerful Citrine Pendant"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155, 41326 },
             ["reagents"] = {
@@ -13613,7 +13613,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41219] = {
             ["craftItem"] = 41322,
-            ["name"] = AL["Rough Mithril Ring"],
+            ["name"] = L["Rough Mithril Ring"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -13622,7 +13622,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41221] = {
             ["craftItem"] = 55141,
-            ["name"] = AL["Ironsun Citrine Ring"],
+            ["name"] = L["Ironsun Citrine Ring"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155, 41326 },
             ["reagents"] = {
@@ -13634,7 +13634,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41223] = {
             ["craftItem"] = 41340,
-            ["name"] = AL["Shimmering Gold Necklace"],
+            ["name"] = L["Shimmering Gold Necklace"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155, 41326 },
             ["reagents"] = {
@@ -13645,7 +13645,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41225] = {
             ["craftItem"] = 41342,
-            ["name"] = AL["Ironbloom Ring"],
+            ["name"] = L["Ironbloom Ring"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155, 41326 },
             ["reagents"] = {
@@ -13658,7 +13658,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41227] = {
             ["craftItem"] = 41343,
-            ["name"] = AL["Ornate Mithril Scepter"],
+            ["name"] = L["Ornate Mithril Scepter"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328 },
             ["reagents"] = {
@@ -13669,7 +13669,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41229] = {
             ["craftItem"] = 55153,
-            ["name"] = AL["Solid Gritted Paper"],
+            ["name"] = L["Solid Gritted Paper"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328 },
             ["reagents"] = {
@@ -13679,7 +13679,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41231] = {
             ["craftItem"] = 55164,
-            ["name"] = AL["Minor Trollblood Ring"],
+            ["name"] = L["Minor Trollblood Ring"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -13690,7 +13690,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41233] = {
             ["craftItem"] = 41341,
-            ["name"] = AL["Rough Truesilver Ring"],
+            ["name"] = L["Rough Truesilver Ring"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328 },
             ["reagents"] = {
@@ -13700,7 +13700,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41235] = {
             ["craftItem"] = 55196,
-            ["name"] = AL["Aquamarine Pendant"],
+            ["name"] = L["Aquamarine Pendant"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328 },
             ["reagents"] = {
@@ -13711,7 +13711,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41237] = {
             ["craftItem"] = 56020,
-            ["name"] = AL["Solid Gemstone Cluster"],
+            ["name"] = L["Solid Gemstone Cluster"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328 },
             ["reagents"] = {
@@ -13721,7 +13721,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41239] = {
             ["craftItem"] = 41346,
-            ["name"] = AL["Greater Binding Signet"],
+            ["name"] = L["Greater Binding Signet"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -13734,7 +13734,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41241] = {
             ["craftItem"] = 41345,
-            ["name"] = AL["Royal Gemstone Staff"],
+            ["name"] = L["Royal Gemstone Staff"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -13747,7 +13747,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41243] = {
             ["craftItem"] = 41349,
-            ["name"] = AL["Emberstone Idol"],
+            ["name"] = L["Emberstone Idol"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -13759,7 +13759,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41245] = {
             ["craftItem"] = 41347,
-            ["name"] = AL["Runed Truesilver Ring"],
+            ["name"] = L["Runed Truesilver Ring"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -13771,7 +13771,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41247] = {
             ["craftItem"] = 55169,
-            ["name"] = AL["Small Pearl Ring"],
+            ["name"] = L["Small Pearl Ring"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -13783,7 +13783,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41249] = {
             ["craftItem"] = 81093,
-            ["name"] = AL["Bulky Copper Ring"],
+            ["name"] = L["Bulky Copper Ring"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -13794,7 +13794,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41251] = {
             ["craftItem"] = 55258,
-            ["name"] = AL["Blue Starfire"],
+            ["name"] = L["Blue Starfire"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41327 },
             ["reagents"] = {
@@ -13806,7 +13806,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41253] = {
             ["craftItem"] = 55265,
-            ["name"] = AL["Emerald Monarch's Glow"],
+            ["name"] = L["Emerald Monarch's Glow"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41327 },
             ["reagents"] = {
@@ -13819,7 +13819,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41255] = {
             ["craftItem"] = 55259,
-            ["name"] = AL["Sapphire Luminescence"],
+            ["name"] = L["Sapphire Luminescence"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41327 },
             ["reagents"] = {
@@ -13833,7 +13833,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41259] = {
             ["craftItem"] = 55272,
-            ["name"] = AL["Arcanum Baton"],
+            ["name"] = L["Arcanum Baton"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41327 },
             ["reagents"] = {
@@ -13846,7 +13846,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41261] = {
             ["craftItem"] = 55266,
-            ["name"] = AL["Sunburst Tiara"],
+            ["name"] = L["Sunburst Tiara"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -13859,7 +13859,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41263] = {
             ["craftItem"] = 56023,
-            ["name"] = AL["Ocean's Gaze"],
+            ["name"] = L["Ocean's Gaze"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155, 41326 },
             ["reagents"] = {
@@ -13871,7 +13871,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41265] = {
             ["craftItem"] = 55260,
-            ["name"] = AL["Starry Thorium Band"],
+            ["name"] = L["Starry Thorium Band"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41327 },
             ["reagents"] = {
@@ -13883,7 +13883,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41267] = {
             ["craftItem"] = 56032,
-            ["name"] = AL["Ruby Ring of Ruin"],
+            ["name"] = L["Ruby Ring of Ruin"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41327 },
             ["reagents"] = {
@@ -13897,7 +13897,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41269] = {
             ["craftItem"] = 56031,
-            ["name"] = AL["Encrusted Gemstone Ring"],
+            ["name"] = L["Encrusted Gemstone Ring"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41327 },
             ["reagents"] = {
@@ -13911,7 +13911,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41271] = {
             ["craftItem"] = 56033,
-            ["name"] = AL["Pure Gold Ring"],
+            ["name"] = L["Pure Gold Ring"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -13922,7 +13922,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41273] = {
             ["craftItem"] = 55199,
-            ["name"] = AL["Prism Amulet"],
+            ["name"] = L["Prism Amulet"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -13934,7 +13934,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41275] = {
             ["craftItem"] = 55202,
-            ["name"] = AL["Gemmed Citrine Pendant"],
+            ["name"] = L["Gemmed Citrine Pendant"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155, 41326 },
             ["reagents"] = {
@@ -13946,7 +13946,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41277] = {
             ["craftItem"] = 55197,
-            ["name"] = AL["Starforge Amulet"],
+            ["name"] = L["Starforge Amulet"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155, 41326 },
             ["reagents"] = {
@@ -13958,7 +13958,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41279] = {
             ["craftItem"] = 55200,
-            ["name"] = AL["Voidheart Charm"],
+            ["name"] = L["Voidheart Charm"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41327 },
             ["reagents"] = {
@@ -13971,7 +13971,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41281] = {
             ["craftItem"] = 55204,
-            ["name"] = AL["Runebound Amulet"],
+            ["name"] = L["Runebound Amulet"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -13984,7 +13984,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41283] = {
             ["craftItem"] = 55195,
-            ["name"] = AL["Astral Amulet"],
+            ["name"] = L["Astral Amulet"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155, 41326 },
             ["reagents"] = {
@@ -13996,7 +13996,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41285] = {
             ["craftItem"] = 56034,
-            ["name"] = AL["Shimmering Moonstone Tablet"],
+            ["name"] = L["Shimmering Moonstone Tablet"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155, 41326 },
             ["reagents"] = {
@@ -14008,7 +14008,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41287] = {
             ["craftItem"] = 56035,
-            ["name"] = AL["Stormcloud Sigil"],
+            ["name"] = L["Stormcloud Sigil"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41327 },
             ["reagents"] = {
@@ -14020,7 +14020,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41303] = {
             ["craftItem"] = 55264,
-            ["name"] = AL["Massive Jewel Circlet"],
+            ["name"] = L["Massive Jewel Circlet"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41327 },
             ["reagents"] = {
@@ -14032,7 +14032,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41305] = {
             ["craftItem"] = 56036,
-            ["name"] = AL["Golden Scepter of Authority"],
+            ["name"] = L["Golden Scepter of Authority"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -14044,7 +14044,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41307] = {
             ["craftItem"] = 55243,
-            ["name"] = AL["Gemkeeper's Folio"],
+            ["name"] = L["Gemkeeper's Folio"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -14057,7 +14057,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41309] = {
             ["craftItem"] = 55261,
-            ["name"] = AL["Stellar Ruby Ring"],
+            ["name"] = L["Stellar Ruby Ring"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -14069,7 +14069,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41311] = {
             ["craftItem"] = 55178,
-            ["name"] = AL["Stellar Gemguards"],
+            ["name"] = L["Stellar Gemguards"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -14081,7 +14081,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41313] = {
             ["craftItem"] = 55241,
-            ["name"] = AL["Garnet Guardian Staff"],
+            ["name"] = L["Garnet Guardian Staff"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -14094,7 +14094,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41315] = {
             ["craftItem"] = 55198,
-            ["name"] = AL["Moonlit Charm"],
+            ["name"] = L["Moonlit Charm"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -14105,7 +14105,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41317] = {
             ["craftItem"] = 55263,
-            ["name"] = AL["Twilight Opal Cascade"],
+            ["name"] = L["Twilight Opal Cascade"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -14117,7 +14117,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41321] = {
             ["craftItem"] = 56037,
-            ["name"] = AL["Gleaming Chain"],
+            ["name"] = L["Gleaming Chain"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -14128,7 +14128,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41323] = {
             ["craftItem"] = 56038,
-            ["name"] = AL["Talisman of Stone"],
+            ["name"] = L["Talisman of Stone"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -14139,7 +14139,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41325] = {
             ["craftItem"] = 56039,
-            ["name"] = AL["Medallion of Flame"],
+            ["name"] = L["Medallion of Flame"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -14150,7 +14150,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41327] = {
             ["craftItem"] = 56040,
-            ["name"] = AL["Gleaming Silver Necklace"],
+            ["name"] = L["Gleaming Silver Necklace"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -14162,7 +14162,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41329] = {
             ["craftItem"] = 56041,
-            ["name"] = AL["Ring of The Turtle"],
+            ["name"] = L["Ring of The Turtle"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155, 41326 },
             ["reagents"] = {
@@ -14173,7 +14173,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41331] = {
             ["craftItem"] = 56042,
-            ["name"] = AL["Gem Encrusted Choker"],
+            ["name"] = L["Gem Encrusted Choker"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155, 41326 },
             ["reagents"] = {
@@ -14185,7 +14185,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41333] = {
             ["craftItem"] = 56043,
-            ["name"] = AL["Goldcrest Amulet"],
+            ["name"] = L["Goldcrest Amulet"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155, 41326 },
             ["reagents"] = {
@@ -14196,7 +14196,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41335] = {
             ["craftItem"] = 56044,
-            ["name"] = AL["Shining Copper Cuffs"],
+            ["name"] = L["Shining Copper Cuffs"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -14207,7 +14207,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41337] = {
             ["craftItem"] = 56045,
-            ["name"] = AL["Dawnbright Cuffs"],
+            ["name"] = L["Dawnbright Cuffs"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -14218,7 +14218,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41339] = {
             ["craftItem"] = 56046,
-            ["name"] = AL["Circlet of Dampening"],
+            ["name"] = L["Circlet of Dampening"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -14230,7 +14230,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41348] = {
             ["craftItem"] = 55180,
-            ["name"] = AL["Crystalfire Armlets"],
+            ["name"] = L["Crystalfire Armlets"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -14242,7 +14242,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41350] = {
             ["craftItem"] = 55228,
-            ["name"] = AL["Cinderfall Band"],
+            ["name"] = L["Cinderfall Band"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -14255,7 +14255,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41352] = {
             ["craftItem"] = 55242,
-            ["name"] = AL["Opaline Illuminator"],
+            ["name"] = L["Opaline Illuminator"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -14268,7 +14268,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41354] = {
             ["craftItem"] = 55255,
-            ["name"] = AL["Skyfire Jewel"],
+            ["name"] = L["Skyfire Jewel"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -14279,7 +14279,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41356] = {
             ["craftItem"] = 55244,
-            ["name"] = AL["Gemstone Compendium"],
+            ["name"] = L["Gemstone Compendium"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -14292,7 +14292,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41541] = {
             ["craftItem"] = 56048,
-            ["name"] = AL["Dazzling Aquamarine Loop"],
+            ["name"] = L["Dazzling Aquamarine Loop"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155, 41326 },
             ["reagents"] = {
@@ -14304,7 +14304,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41546] = {
             ["craftItem"] = 56049,
-            ["name"] = AL["Alluring Citrine Choker"],
+            ["name"] = L["Alluring Citrine Choker"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 55155 },
             ["reagents"] = {
@@ -14314,7 +14314,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41548] = {
             ["craftItem"] = 56050,
-            ["name"] = AL["Elaborate Golden Bracelets"],
+            ["name"] = L["Elaborate Golden Bracelets"],
             ["castTime"] = 5.13,
             ["tools"] = { 41326, 55155 },
             ["reagents"] = {
@@ -14325,7 +14325,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41550] = {
             ["craftItem"] = 56051,
-            ["name"] = AL["Heart of the Sea"],
+            ["name"] = L["Heart of the Sea"],
             ["castTime"] = 5.13,
             ["tools"] = { 41326, 55155 },
             ["reagents"] = {
@@ -14337,7 +14337,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41552] = {
             ["craftItem"] = 56052,
-            ["name"] = AL["Staff of Gallitrea"],
+            ["name"] = L["Staff of Gallitrea"],
             ["castTime"] = 5.13,
             ["tools"] = { 41326, 55155 },
             ["reagents"] = {
@@ -14349,7 +14349,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41554] = {
             ["craftItem"] = 56053,
-            ["name"] = AL["Golden Jade Ring"],
+            ["name"] = L["Golden Jade Ring"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -14362,7 +14362,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41556] = {
             ["craftItem"] = 56054,
-            ["name"] = AL["Delicate Mithril Amulet"],
+            ["name"] = L["Delicate Mithril Amulet"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155, 41326 },
             ["reagents"] = {
@@ -14373,7 +14373,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41558] = {
             ["craftItem"] = 56055,
-            ["name"] = AL["Draenethyst Baton"],
+            ["name"] = L["Draenethyst Baton"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -14384,7 +14384,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41560] = {
             ["craftItem"] = 55316,
-            ["name"] = AL["Ebon Ring"],
+            ["name"] = L["Ebon Ring"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -14395,7 +14395,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41562] = {
             ["craftItem"] = 55317,
-            ["name"] = AL["The King's Conviction"],
+            ["name"] = L["The King's Conviction"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -14406,7 +14406,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41564] = {
             ["craftItem"] = 55318,
-            ["name"] = AL["Shadowfall Jewel"],
+            ["name"] = L["Shadowfall Jewel"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -14418,7 +14418,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41566] = {
             ["craftItem"] = 55319,
-            ["name"] = AL["Ocean's Wrath"],
+            ["name"] = L["Ocean's Wrath"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -14429,7 +14429,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41568] = {
             ["craftItem"] = 55320,
-            ["name"] = AL["Dazzling Moonstone Band"],
+            ["name"] = L["Dazzling Moonstone Band"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155, 41326 },
             ["reagents"] = {
@@ -14440,7 +14440,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41570] = {
             ["craftItem"] = 55321,
-            ["name"] = AL["Harpy Talon Ring"],
+            ["name"] = L["Harpy Talon Ring"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155, 41326 },
             ["reagents"] = {
@@ -14451,7 +14451,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41572] = {
             ["craftItem"] = 55322,
-            ["name"] = AL["Centaur Hoof Circlet"],
+            ["name"] = L["Centaur Hoof Circlet"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155, 41326 },
             ["reagents"] = {
@@ -14463,7 +14463,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41574] = {
             ["craftItem"] = 55323,
-            ["name"] = AL["Ogre Bone Band"],
+            ["name"] = L["Ogre Bone Band"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155, 41326 },
             ["reagents"] = {
@@ -14476,7 +14476,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41577] = {
             ["craftItem"] = 81030,
-            ["name"] = AL["Malachite Ring"],
+            ["name"] = L["Malachite Ring"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -14486,7 +14486,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41579] = {
             ["craftItem"] = 55325,
-            ["name"] = AL["Marine's Demise"],
+            ["name"] = L["Marine's Demise"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155, 41326 },
             ["reagents"] = {
@@ -14498,7 +14498,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41581] = {
             ["craftItem"] = 55326,
-            ["name"] = AL["Serpent's Coil Staff"],
+            ["name"] = L["Serpent's Coil Staff"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -14509,7 +14509,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41583] = {
             ["craftItem"] = 55327,
-            ["name"] = AL["Farraki Ceremony Totem"],
+            ["name"] = L["Farraki Ceremony Totem"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155, 41326 },
             ["reagents"] = {
@@ -14523,7 +14523,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41585] = {
             ["craftItem"] = 55328,
-            ["name"] = AL["Sphinx's Wisdom Staff"],
+            ["name"] = L["Sphinx's Wisdom Staff"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155, 41326 },
             ["reagents"] = {
@@ -14534,7 +14534,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41587] = {
             ["craftItem"] = 55329,
-            ["name"] = AL["Gloomweed Bindings"],
+            ["name"] = L["Gloomweed Bindings"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -14545,7 +14545,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41589] = {
             ["craftItem"] = 56047,
-            ["name"] = AL["Crystal Earring"],
+            ["name"] = L["Crystal Earring"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155, 41326 },
             ["reagents"] = {
@@ -14557,7 +14557,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41591] = {
             ["craftItem"] = 55324,
-            ["name"] = AL["Specter's Shade Ring"],
+            ["name"] = L["Specter's Shade Ring"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155, 41326 },
             ["reagents"] = {
@@ -14569,7 +14569,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41601] = {
             ["craftItem"] = 56002,
-            ["name"] = AL["Sharpened Citrine Gemstone"],
+            ["name"] = L["Sharpened Citrine Gemstone"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -14580,7 +14580,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41603] = {
             ["craftItem"] = 56004,
-            ["name"] = AL["Radiant Ember Gemstone"],
+            ["name"] = L["Radiant Ember Gemstone"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -14591,7 +14591,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41605] = {
             ["craftItem"] = 56006,
-            ["name"] = AL["Glowing Ruby Gemstone"],
+            ["name"] = L["Glowing Ruby Gemstone"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -14603,7 +14603,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41607] = {
             ["craftItem"] = 56003,
-            ["name"] = AL["Shimmering Aqua Gemstone"],
+            ["name"] = L["Shimmering Aqua Gemstone"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -14615,7 +14615,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41609] = {
             ["craftItem"] = 56015,
-            ["name"] = AL["Azerothian Ruby Gemstone"],
+            ["name"] = L["Azerothian Ruby Gemstone"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -14628,7 +14628,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41611] = {
             ["craftItem"] = 56012,
-            ["name"] = AL["Gloomy Diamond Gemstone"],
+            ["name"] = L["Gloomy Diamond Gemstone"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -14639,7 +14639,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41613] = {
             ["craftItem"] = 56013,
-            ["name"] = AL["Flawless Black Gemstone"],
+            ["name"] = L["Flawless Black Gemstone"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -14651,7 +14651,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41615] = {
             ["craftItem"] = 56016,
-            ["name"] = AL["Arcane Emerald Gemstone"],
+            ["name"] = L["Arcane Emerald Gemstone"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -14664,7 +14664,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41617] = {
             ["craftItem"] = 56017,
-            ["name"] = AL["Tempered Azerothian Gemstone"],
+            ["name"] = L["Tempered Azerothian Gemstone"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -14675,7 +14675,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41619] = {
             ["craftItem"] = 56014,
-            ["name"] = AL["Stunning Imperial Gemstone"],
+            ["name"] = L["Stunning Imperial Gemstone"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -14688,7 +14688,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41621] = {
             ["craftItem"] = 56018,
-            ["name"] = AL["Enchanted Emerald Gemstone"],
+            ["name"] = L["Enchanted Emerald Gemstone"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -14700,7 +14700,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41623] = {
             ["craftItem"] = 56058,
-            ["name"] = AL["Pure Shining Moonstone"],
+            ["name"] = L["Pure Shining Moonstone"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -14711,7 +14711,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41625] = {
             ["craftItem"] = 56010,
-            ["name"] = AL["Beautiful Diamond Gemstone"],
+            ["name"] = L["Beautiful Diamond Gemstone"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -14722,7 +14722,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41627] = {
             ["craftItem"] = 56000,
-            ["name"] = AL["Pristine Crystal Gemstone"],
+            ["name"] = L["Pristine Crystal Gemstone"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155, 41326 },
             ["reagents"] = {
@@ -14733,7 +14733,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41629] = {
             ["craftItem"] = 56001,
-            ["name"] = AL["Gleaming Jade Gemstone"],
+            ["name"] = L["Gleaming Jade Gemstone"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155, 41326 },
             ["reagents"] = {
@@ -14744,7 +14744,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41631] = {
             ["craftItem"] = 56005,
-            ["name"] = AL["Illuminated Gemstone"],
+            ["name"] = L["Illuminated Gemstone"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -14756,7 +14756,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41633] = {
             ["craftItem"] = 56056,
-            ["name"] = AL["Burning Star Gemstone"],
+            ["name"] = L["Burning Star Gemstone"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -14767,7 +14767,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41635] = {
             ["craftItem"] = 56008,
-            ["name"] = AL["Brilliant Opal Gemstone"],
+            ["name"] = L["Brilliant Opal Gemstone"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -14778,7 +14778,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41637] = {
             ["craftItem"] = 56009,
-            ["name"] = AL["Elegant Emerald Gemstone"],
+            ["name"] = L["Elegant Emerald Gemstone"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -14789,7 +14789,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41639] = {
             ["craftItem"] = 56007,
-            ["name"] = AL["Shining Sapphire Gemstone"],
+            ["name"] = L["Shining Sapphire Gemstone"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -14800,7 +14800,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41641] = {
             ["craftItem"] = 56011,
-            ["name"] = AL["Unstable Arcane Gemstone"],
+            ["name"] = L["Unstable Arcane Gemstone"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -14811,7 +14811,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41643] = {
             ["craftItem"] = 56057,
-            ["name"] = AL["Glittering Sapphire Gemstone"],
+            ["name"] = L["Glittering Sapphire Gemstone"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -14823,7 +14823,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41696] = {
             ["craftItem"] = 56059,
-            ["name"] = AL["Shimmering Diamond Band"],
+            ["name"] = L["Shimmering Diamond Band"],
             ["castTime"] = 5.13,
             ["tools"] = { 41326, 41328 },
             ["reagents"] = {
@@ -14837,7 +14837,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41698] = {
             ["craftItem"] = 56060,
-            ["name"] = AL["Crown of Molten Ascension"],
+            ["name"] = L["Crown of Molten Ascension"],
             ["castTime"] = 5.13,
             ["tools"] = { 41326, 41328 },
             ["reagents"] = {
@@ -14851,7 +14851,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41700] = {
             ["craftItem"] = 56061,
-            ["name"] = AL["Embergem Cuffs"],
+            ["name"] = L["Embergem Cuffs"],
             ["castTime"] = 5.13,
             ["tools"] = { 41326, 41328 },
             ["reagents"] = {
@@ -14865,7 +14865,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41702] = {
             ["craftItem"] = 56062,
-            ["name"] = AL["Blackwing Signet of Command"],
+            ["name"] = L["Blackwing Signet of Command"],
             ["castTime"] = 5.13,
             ["tools"] = { 41326, 41328 },
             ["reagents"] = {
@@ -14879,7 +14879,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41704] = {
             ["craftItem"] = 56063,
-            ["name"] = AL["Talisman of Hinderance"],
+            ["name"] = L["Talisman of Hinderance"],
             ["castTime"] = 5.13,
             ["tools"] = { 41326, 41328 },
             ["reagents"] = {
@@ -14893,7 +14893,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41706] = {
             ["craftItem"] = 56064,
-            ["name"] = AL["Mastercrafted Diamond Crown"],
+            ["name"] = L["Mastercrafted Diamond Crown"],
             ["castTime"] = 5.13,
             ["tools"] = { 41326, 41328 },
             ["reagents"] = {
@@ -14907,7 +14907,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41708] = {
             ["craftItem"] = 56065,
-            ["name"] = AL["Opalstone Circle"],
+            ["name"] = L["Opalstone Circle"],
             ["castTime"] = 5.13,
             ["tools"] = { 41326, 41328 },
             ["reagents"] = {
@@ -14921,7 +14921,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41710] = {
             ["craftItem"] = 56066,
-            ["name"] = AL["Deep Sapphire Circlet"],
+            ["name"] = L["Deep Sapphire Circlet"],
             ["castTime"] = 5.13,
             ["tools"] = { 41326, 41328 },
             ["reagents"] = {
@@ -14933,7 +14933,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41712] = {
             ["craftItem"] = 56067,
-            ["name"] = AL["Dark Iron Signet Ring"],
+            ["name"] = L["Dark Iron Signet Ring"],
             ["castTime"] = 5.13,
             ["tools"] = { 41326, 41328 },
             ["reagents"] = {
@@ -14944,7 +14944,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41714] = {
             ["craftItem"] = 56068,
-            ["name"] = AL["Opal Guided Bangles"],
+            ["name"] = L["Opal Guided Bangles"],
             ["castTime"] = 5.13,
             ["tools"] = { 41326, 41328 },
             ["reagents"] = {
@@ -14957,7 +14957,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41716] = {
             ["craftItem"] = 56069,
-            ["name"] = AL["Crown of Elegance"],
+            ["name"] = L["Crown of Elegance"],
             ["castTime"] = 5.13,
             ["tools"] = { 41326, 41328 },
             ["reagents"] = {
@@ -14970,7 +14970,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41718] = {
             ["craftItem"] = 56070,
-            ["name"] = AL["Ornate Mithril Bracelets"],
+            ["name"] = L["Ornate Mithril Bracelets"],
             ["castTime"] = 5.13,
             ["tools"] = { 41326, 41328 },
             ["reagents"] = {
@@ -14983,7 +14983,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41720] = {
             ["craftItem"] = 56071,
-            ["name"] = AL["Regal Twilight Staff"],
+            ["name"] = L["Regal Twilight Staff"],
             ["castTime"] = 5.13,
             ["tools"] = { 41326, 41328 },
             ["reagents"] = {
@@ -14997,7 +14997,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41722] = {
             ["craftItem"] = 56072,
-            ["name"] = AL["Pendant of Instability"],
+            ["name"] = L["Pendant of Instability"],
             ["castTime"] = 5.13,
             ["tools"] = { 41326, 41328 },
             ["reagents"] = {
@@ -15010,7 +15010,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41724] = {
             ["craftItem"] = 56073,
-            ["name"] = AL["Ornament of Restraint"],
+            ["name"] = L["Ornament of Restraint"],
             ["castTime"] = 5.13,
             ["tools"] = { 41326, 41328 },
             ["reagents"] = {
@@ -15023,7 +15023,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41726] = {
             ["craftItem"] = 55330,
-            ["name"] = AL["Hydrathorn Bracers"],
+            ["name"] = L["Hydrathorn Bracers"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -15034,7 +15034,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41728] = {
             ["craftItem"] = 55331,
-            ["name"] = AL["Blackrock Ironclamps"],
+            ["name"] = L["Blackrock Ironclamps"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155, 41326 },
             ["reagents"] = {
@@ -15047,7 +15047,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41730] = {
             ["craftItem"] = 55332,
-            ["name"] = AL["Monastery Emberbrace"],
+            ["name"] = L["Monastery Emberbrace"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155, 41326 },
             ["reagents"] = {
@@ -15058,7 +15058,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41732] = {
             ["craftItem"] = 55333,
-            ["name"] = AL["Shadowmoon Orb"],
+            ["name"] = L["Shadowmoon Orb"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -15069,7 +15069,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41734] = {
             ["craftItem"] = 55334,
-            ["name"] = AL["Fangclaw Relic"],
+            ["name"] = L["Fangclaw Relic"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -15083,7 +15083,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41736] = {
             ["craftItem"] = 55335,
-            ["name"] = AL["Netherbane Rod"],
+            ["name"] = L["Netherbane Rod"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155, 41326 },
             ["reagents"] = {
@@ -15094,7 +15094,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41738] = {
             ["craftItem"] = 55336,
-            ["name"] = AL["Marine Root"],
+            ["name"] = L["Marine Root"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155, 41326 },
             ["reagents"] = {
@@ -15105,7 +15105,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41740] = {
             ["craftItem"] = 55337,
-            ["name"] = AL["Mistwood Tiara"],
+            ["name"] = L["Mistwood Tiara"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -15116,7 +15116,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41742] = {
             ["craftItem"] = 55338,
-            ["name"] = AL["Venomspire Diadem"],
+            ["name"] = L["Venomspire Diadem"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155, 41326 },
             ["reagents"] = {
@@ -15129,7 +15129,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41744] = {
             ["craftItem"] = 55339,
-            ["name"] = AL["Bloodfire Circlet"],
+            ["name"] = L["Bloodfire Circlet"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155, 41326 },
             ["reagents"] = {
@@ -15140,7 +15140,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41746] = {
             ["craftItem"] = 55340,
-            ["name"] = AL["Shadowforged Eye"],
+            ["name"] = L["Shadowforged Eye"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -15153,7 +15153,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41748] = {
             ["craftItem"] = 55341,
-            ["name"] = AL["Totem of Self Preservation"],
+            ["name"] = L["Totem of Self Preservation"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -15166,7 +15166,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41750] = {
             ["craftItem"] = 55210,
-            ["name"] = AL["Facetted Moonstone Brooch"],
+            ["name"] = L["Facetted Moonstone Brooch"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -15177,7 +15177,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41752] = {
             ["craftItem"] = 55211,
-            ["name"] = AL["Obsidian Brooch"],
+            ["name"] = L["Obsidian Brooch"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -15188,7 +15188,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41754] = {
             ["craftItem"] = 55212,
-            ["name"] = AL["Smoldering Brooch"],
+            ["name"] = L["Smoldering Brooch"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -15199,7 +15199,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41756] = {
             ["craftItem"] = 55213,
-            ["name"] = AL["Vitriol Brooch"],
+            ["name"] = L["Vitriol Brooch"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155 },
             ["reagents"] = {
@@ -15210,7 +15210,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41760] = {
             ["craftItem"] = 56074,
-            ["name"] = AL["Graceful Agate Gemstone"],
+            ["name"] = L["Graceful Agate Gemstone"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155, 41326 },
             ["reagents"] = {
@@ -15221,7 +15221,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41762] = {
             ["craftItem"] = 56075,
-            ["name"] = AL["Dreary Opal Gemstone"],
+            ["name"] = L["Dreary Opal Gemstone"],
             ["castTime"] = 5.13,
             ["tools"] = { 41327, 41328 },
             ["reagents"] = {
@@ -15232,7 +15232,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41764] = {
             ["craftItem"] = 56077,
-            ["name"] = AL["Resurged Topaz Gemstone"],
+            ["name"] = L["Resurged Topaz Gemstone"],
             ["castTime"] = 5.13,
             ["tools"] = { 41327, 41328 },
             ["reagents"] = {
@@ -15243,7 +15243,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41768] = {
             ["craftItem"] = 56076,
-            ["name"] = AL["Resilient Arcane Gemstone"],
+            ["name"] = L["Resilient Arcane Gemstone"],
             ["castTime"] = 5.13,
             ["tools"] = { 41327, 41328 },
             ["reagents"] = {
@@ -15255,7 +15255,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41770] = {
             ["craftItem"] = 56019,
-            ["name"] = AL["Dense Gemstone Cluster"],
+            ["name"] = L["Dense Gemstone Cluster"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328 },
             ["reagents"] = {
@@ -15265,7 +15265,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41774] = {
             ["craftItem"] = 56090,
-            ["name"] = AL["Spellweaver Pendant"],
+            ["name"] = L["Spellweaver Pendant"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41327 },
             ["reagents"] = {
@@ -15277,7 +15277,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41776] = {
             ["craftItem"] = 56091,
-            ["name"] = AL["Ring of Midnight"],
+            ["name"] = L["Ring of Midnight"],
             ["castTime"] = 5.13,
             ["tools"] = { 55155, 41326 },
             ["reagents"] = {
@@ -15289,7 +15289,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41778] = {
             ["craftItem"] = 56092,
-            ["name"] = AL["Stormcloud Shackles"],
+            ["name"] = L["Stormcloud Shackles"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41327 },
             ["reagents"] = {
@@ -15301,7 +15301,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41780] = {
             ["craftItem"] = 56093,
-            ["name"] = AL["Stormcloud Signet"],
+            ["name"] = L["Stormcloud Signet"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41327 },
             ["reagents"] = {
@@ -15315,7 +15315,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41782] = {
             ["craftItem"] = 56094,
-            ["name"] = AL["Golden Runed Ring"],
+            ["name"] = L["Golden Runed Ring"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41327 },
             ["reagents"] = {
@@ -15329,7 +15329,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41784] = {
             ["craftItem"] = 56095,
-            ["name"] = AL["Mana Binding Signet"],
+            ["name"] = L["Mana Binding Signet"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -15343,7 +15343,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41786] = {
             ["craftItem"] = 56089,
-            ["name"] = AL["Ornate Mithril Crown"],
+            ["name"] = L["Ornate Mithril Crown"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -15355,7 +15355,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41788] = {
             ["craftItem"] = 55359,
-            ["name"] = AL["Blazefury Circlet"],
+            ["name"] = L["Blazefury Circlet"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -15369,7 +15369,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41790] = {
             ["craftItem"] = 55360,
-            ["name"] = AL["Ring of Unleashed Potential"],
+            ["name"] = L["Ring of Unleashed Potential"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -15383,7 +15383,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41792] = {
             ["craftItem"] = 55361,
-            ["name"] = AL["Empowered Domination Rod"],
+            ["name"] = L["Empowered Domination Rod"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -15397,7 +15397,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41794] = {
             ["craftItem"] = 55362,
-            ["name"] = AL["Orb of Clairvoyance"],
+            ["name"] = L["Orb of Clairvoyance"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -15410,7 +15410,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41796] = {
             ["craftItem"] = 55363,
-            ["name"] = AL["Grail of Forgotten Memories"],
+            ["name"] = L["Grail of Forgotten Memories"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -15424,7 +15424,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41798] = {
             ["craftItem"] = 55364,
-            ["name"] = AL["Guardbreaker Charm"],
+            ["name"] = L["Guardbreaker Charm"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -15437,7 +15437,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41800] = {
             ["craftItem"] = 55365,
-            ["name"] = AL["Rudeus' Focusing Cane"],
+            ["name"] = L["Rudeus' Focusing Cane"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -15452,7 +15452,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41802] = {
             ["craftItem"] = 55366,
-            ["name"] = AL["Spire of Channeled Power"],
+            ["name"] = L["Spire of Channeled Power"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -15466,7 +15466,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41804] = {
             ["craftItem"] = 55367,
-            ["name"] = AL["Bindings of Luminance"],
+            ["name"] = L["Bindings of Luminance"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -15479,7 +15479,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41806] = {
             ["craftItem"] = 55368,
-            ["name"] = AL["Crown of the Illustrious Queen"],
+            ["name"] = L["Crown of the Illustrious Queen"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -15493,7 +15493,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41808] = {
             ["craftItem"] = 56096,
-            ["name"] = AL["Mastercrafted Diamond Bangles"],
+            ["name"] = L["Mastercrafted Diamond Bangles"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -15507,7 +15507,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [41821] = {
             ["craftItem"] = 61818,
-            ["name"] = AL["Gorgeous Mountain Gemstone"],
+            ["name"] = L["Gorgeous Mountain Gemstone"],
             ["castTime"] = 5.13,
             ["tools"] = { 41328, 41326 },
             ["reagents"] = {
@@ -15519,7 +15519,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [45054] = {
             ["craftItem"] = 30818,
-            ["name"] = AL["Maritime Gumbo"],
+            ["name"] = L["Maritime Gumbo"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 2674 },
@@ -15528,7 +15528,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [45057] = {
             ["craftItem"] = 51268,
-            ["name"] = AL["Unstable Mining Dynamite"],
+            ["name"] = L["Unstable Mining Dynamite"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 4359, 4 },
@@ -15540,7 +15540,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [45063] = {
             ["craftItem"] = 51264,
-            ["name"] = AL["Blast Shield"],
+            ["name"] = L["Blast Shield"],
             ["castTime"] = 12.5,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -15551,7 +15551,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [45066] = {
             ["craftItem"] = 51256,
-            ["name"] = AL["Gloves of Manathirst"],
+            ["name"] = L["Gloves of Manathirst"],
             ["castTime"] = 25,
             ["reagents"] = {
                 { 2996, 3 },
@@ -15561,7 +15561,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [45069] = {
             ["craftItem"] = 51284,
-            ["name"] = AL["Lynxstep Boots"],
+            ["name"] = L["Lynxstep Boots"],
             ["castTime"] = 8,
             ["reagents"] = {
                 { 2318, 8 },
@@ -15572,9 +15572,9 @@ GetSpellInfoAtlasLootDB = {
         },
         [45451] = {
             ["craftItem"] = 61216,
-            ["name"] = AL["Smelt Dreamsteel"],
+            ["name"] = L["Smelt Dreamsteel"],
             ["castTime"] = 3,
-            ["text"] = AL["Allows the miner to smelt a dreamsteel bar. Smelting dreamsteel requires a forge."],
+            ["text"] = L["Allows the miner to smelt a dreamsteel bar. Smelting dreamsteel requires a forge."],
             ["reagents"] = {
                 { 61198 },
                 { 3859 },
@@ -15583,7 +15583,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [45453] = {
             ["craftItem"] = 61230,
-            ["name"] = AL["Dreamthread"],
+            ["name"] = L["Dreamthread"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 61198 },
@@ -15593,7 +15593,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [45455] = {
             ["craftItem"] = 61229,
-            ["name"] = AL["Dreamhide"],
+            ["name"] = L["Dreamhide"],
             ["castTime"] = 12.5,
             ["reagents"] = {
                 { 61198 },
@@ -15603,7 +15603,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [45457] = {
             ["craftItem"] = 61360,
-            ["name"] = AL["Dreamthread Mantle"],
+            ["name"] = L["Dreamthread Mantle"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 61230, 20 },
@@ -15616,7 +15616,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [45459] = {
             ["craftItem"] = 61361,
-            ["name"] = AL["Dreamthread Kilt"],
+            ["name"] = L["Dreamthread Kilt"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 61230, 14 },
@@ -15629,7 +15629,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [45461] = {
             ["craftItem"] = 61362,
-            ["name"] = AL["Dreamthread Bracers"],
+            ["name"] = L["Dreamthread Bracers"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 61230, 8 },
@@ -15640,7 +15640,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [45463] = {
             ["craftItem"] = 61363,
-            ["name"] = AL["Dreamthread Gloves"],
+            ["name"] = L["Dreamthread Gloves"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 61230, 8 },
@@ -15652,7 +15652,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [45465] = {
             ["craftItem"] = 61364,
-            ["name"] = AL["Dreamsteel Mantle"],
+            ["name"] = L["Dreamsteel Mantle"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -15666,7 +15666,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [45467] = {
             ["craftItem"] = 61365,
-            ["name"] = AL["Dreamsteel Leggings"],
+            ["name"] = L["Dreamsteel Leggings"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -15678,7 +15678,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [45469] = {
             ["craftItem"] = 61366,
-            ["name"] = AL["Dreamsteel Bracers"],
+            ["name"] = L["Dreamsteel Bracers"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -15690,7 +15690,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [45471] = {
             ["craftItem"] = 61367,
-            ["name"] = AL["Dreamsteel Boots"],
+            ["name"] = L["Dreamsteel Boots"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -15703,7 +15703,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [45473] = {
             ["craftItem"] = 61356,
-            ["name"] = AL["Dreamhide Mantle"],
+            ["name"] = L["Dreamhide Mantle"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 61229, 22 },
@@ -15714,7 +15714,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [45475] = {
             ["craftItem"] = 61357,
-            ["name"] = AL["Dreamhide Bracers"],
+            ["name"] = L["Dreamhide Bracers"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 61229, 8 },
@@ -15725,7 +15725,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [45477] = {
             ["craftItem"] = 61358,
-            ["name"] = AL["Dreamhide Leggings"],
+            ["name"] = L["Dreamhide Leggings"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 61229, 12 },
@@ -15737,7 +15737,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [45479] = {
             ["craftItem"] = 61359,
-            ["name"] = AL["Dreamhide Belt"],
+            ["name"] = L["Dreamhide Belt"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 61229, 8 },
@@ -15749,7 +15749,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [45481] = {
             ["craftItem"] = 61187,
-            ["name"] = AL["Intricate Gyroscope Goggles"],
+            ["name"] = L["Intricate Gyroscope Goggles"],
             ["castTime"] = 60,
             ["tools"] = { 10498, 6219 },
             ["reagents"] = {
@@ -15763,7 +15763,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [45483] = {
             ["craftItem"] = 61188,
-            ["name"] = AL["Inscribed Runic Bracers"],
+            ["name"] = L["Inscribed Runic Bracers"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 12810, 12 },
@@ -15775,7 +15775,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [45485] = {
             ["craftItem"] = 61186,
-            ["name"] = AL["Gloves of Unwinding Mystery"],
+            ["name"] = L["Gloves of Unwinding Mystery"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 14 },
@@ -15787,7 +15787,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [45487] = {
             ["craftItem"] = 61185,
-            ["name"] = AL["Dawnstone Hammer"],
+            ["name"] = L["Dawnstone Hammer"],
             ["castTime"] = 25,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -15801,9 +15801,9 @@ GetSpellInfoAtlasLootDB = {
         },
         [45611] = {
             ["craftItem"] = 65032,
-            ["name"] = AL["Agitating Poison"],
+            ["name"] = L["Agitating Poison"],
             ["castTime"] = 3,
-            ["text"] = AL["Coats a weapon with poison that lasts for 30 minutes.\nEach strike has a 20% chance of poisoning the enemy which instantly inflicts 67 to 85 Nature damage, and causes additional threat.  115 charges."],
+            ["text"] = L["Coats a weapon with poison that lasts for 30 minutes.\nEach strike has a 20% chance of poisoning the enemy which instantly inflicts 67 to 85 Nature damage, and causes additional threat.  115 charges."],
             ["reagents"] = {
                 { 2931, 2 },
                 { 3372 },
@@ -15811,7 +15811,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [45625] = {
             ["craftItem"] = 84040,
-            ["name"] = AL["Le Fishe Au Chocolat"],
+            ["name"] = L["Le Fishe Au Chocolat"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 13889 },
@@ -15822,7 +15822,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [45627] = {
             ["craftItem"] = 84041,
-            ["name"] = AL["Gilneas Hot Stew"],
+            ["name"] = L["Gilneas Hot Stew"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 12203 },
@@ -15832,9 +15832,9 @@ GetSpellInfoAtlasLootDB = {
         },
         [45878] = {
             ["craftItem"] = 54009,
-            ["name"] = AL["Dissolvent Poison"],
+            ["name"] = L["Dissolvent Poison"],
             ["castTime"] = 3,
-            ["text"] = AL["Coats a weapon with poison that lasts for 60 minutes.\nEach strike has a 20% chance to poison the enemy, instantly inflicting 88 to 113 damage. This damage ignores armor. 100 charges."],
+            ["text"] = L["Coats a weapon with poison that lasts for 60 minutes.\nEach strike has a 20% chance to poison the enemy, instantly inflicting 88 to 113 damage. This damage ignores armor. 100 charges."],
             ["reagents"] = {
                 { 8924, 2 },
                 { 2931, 3 },
@@ -15843,9 +15843,9 @@ GetSpellInfoAtlasLootDB = {
         },
         [45882] = {
             ["craftItem"] = 54010,
-            ["name"] = AL["Dissolvent Poison II"],
+            ["name"] = L["Dissolvent Poison II"],
             ["castTime"] = 3,
-            ["text"] = AL["Coats a weapon with poison that lasts for 60 minutes.\nEach strike has a 20% chance to poison the enemy, instantly inflicting 106 to 142 damage. This damage ignores armor. 115 charges."],
+            ["text"] = L["Coats a weapon with poison that lasts for 60 minutes.\nEach strike has a 20% chance to poison the enemy, instantly inflicting 106 to 142 damage. This damage ignores armor. 115 charges."],
             ["reagents"] = {
                 { 8924, 3 },
                 { 5173, 4 },
@@ -15854,7 +15854,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [45989] = {
             ["craftItem"] = 50237,
-            ["name"] = AL["Elixir of Greater Nature Power"],
+            ["name"] = L["Elixir of Greater Nature Power"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 10286, 3 },
@@ -15865,7 +15865,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46085] = {
             ["craftItem"] = 53015,
-            ["name"] = AL["Gurubashi Gumbo"],
+            ["name"] = L["Gurubashi Gumbo"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 3667 },
@@ -15878,7 +15878,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46600] = {
             ["craftItem"] = 46600,
-            ["name"] = AL["Lordaeron Breastplate"],
+            ["name"] = L["Lordaeron Breastplate"],
             ["castTime"] = 12.5,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -15889,7 +15889,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46608] = {
             ["craftItem"] = 60098,
-            ["name"] = AL["Hypertech Battery Pack"],
+            ["name"] = L["Hypertech Battery Pack"],
             ["castTime"] = 12.5,
             ["tools"] = { 6219, 10498 },
             ["reagents"] = {
@@ -15900,7 +15900,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46610] = {
             ["craftItem"] = 60099,
-            ["name"] = AL["Battery-Powered Crowd Pummeler"],
+            ["name"] = L["Battery-Powered Crowd Pummeler"],
             ["castTime"] = 25,
             ["tools"] = { 10498, 5956 },
             ["reagents"] = {
@@ -15915,7 +15915,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46620] = {
             ["craftItem"] = 83405,
-            ["name"] = AL["Grifter's Boots"],
+            ["name"] = L["Grifter's Boots"],
             ["castTime"] = 10,
             ["reagents"] = {
                 { 4304, 7 },
@@ -15924,7 +15924,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46621] = {
             ["craftItem"] = 83404,
-            ["name"] = AL["Grifter's Gauntlets"],
+            ["name"] = L["Grifter's Gauntlets"],
             ["castTime"] = 10,
             ["reagents"] = {
                 { 4304, 6 },
@@ -15933,7 +15933,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46622] = {
             ["craftItem"] = 83403,
-            ["name"] = AL["Grifter's Belt"],
+            ["name"] = L["Grifter's Belt"],
             ["castTime"] = 10,
             ["reagents"] = {
                 { 4234, 10 },
@@ -15943,7 +15943,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46623] = {
             ["craftItem"] = 83402,
-            ["name"] = AL["Grifter's Leggings"],
+            ["name"] = L["Grifter's Leggings"],
             ["castTime"] = 10,
             ["reagents"] = {
                 { 4304, 10 },
@@ -15954,7 +15954,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46624] = {
             ["craftItem"] = 83401,
-            ["name"] = AL["Grifter's Tunic"],
+            ["name"] = L["Grifter's Tunic"],
             ["castTime"] = 10,
             ["reagents"] = {
                 { 4304, 12 },
@@ -15965,7 +15965,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46625] = {
             ["craftItem"] = 83400,
-            ["name"] = AL["Grifter's Cover"],
+            ["name"] = L["Grifter's Cover"],
             ["castTime"] = 10,
             ["reagents"] = {
                 { 4304, 8 },
@@ -15976,7 +15976,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46626] = {
             ["craftItem"] = 83410,
-            ["name"] = AL["Steel Plate Boots"],
+            ["name"] = L["Steel Plate Boots"],
             ["castTime"] = 10,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -15986,7 +15986,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46627] = {
             ["craftItem"] = 83411,
-            ["name"] = AL["Steel Plate Gauntlets"],
+            ["name"] = L["Steel Plate Gauntlets"],
             ["castTime"] = 10,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -15996,7 +15996,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46628] = {
             ["craftItem"] = 83412,
-            ["name"] = AL["Steel Plate Legguards"],
+            ["name"] = L["Steel Plate Legguards"],
             ["castTime"] = 10,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -16007,7 +16007,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46629] = {
             ["craftItem"] = 83413,
-            ["name"] = AL["Steel Plate Armor"],
+            ["name"] = L["Steel Plate Armor"],
             ["castTime"] = 10,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -16019,7 +16019,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46630] = {
             ["craftItem"] = 83414,
-            ["name"] = AL["Steel Plate Pauldrons"],
+            ["name"] = L["Steel Plate Pauldrons"],
             ["castTime"] = 10,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -16031,7 +16031,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46631] = {
             ["craftItem"] = 83415,
-            ["name"] = AL["Steel Plate Barbute"],
+            ["name"] = L["Steel Plate Barbute"],
             ["castTime"] = 10,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -16045,7 +16045,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46633] = {
             ["craftItem"] = 83280,
-            ["name"] = AL["Diviner's Pantaloons"],
+            ["name"] = L["Diviner's Pantaloons"],
             ["castTime"] = 10,
             ["reagents"] = {
                 { 4339, 4 },
@@ -16056,7 +16056,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46634] = {
             ["craftItem"] = 83281,
-            ["name"] = AL["Diviner's Robes"],
+            ["name"] = L["Diviner's Robes"],
             ["castTime"] = 10,
             ["reagents"] = {
                 { 4339, 10 },
@@ -16069,7 +16069,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46635] = {
             ["craftItem"] = 83282,
-            ["name"] = AL["Diviner's Cowl"],
+            ["name"] = L["Diviner's Cowl"],
             ["castTime"] = 10,
             ["reagents"] = {
                 { 4339, 4 },
@@ -16080,7 +16080,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46636] = {
             ["craftItem"] = 83283,
-            ["name"] = AL["Diviner's Boots"],
+            ["name"] = L["Diviner's Boots"],
             ["castTime"] = 10,
             ["reagents"] = {
                 { 4339, 3 },
@@ -16091,7 +16091,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46637] = {
             ["craftItem"] = 83284,
-            ["name"] = AL["Diviner's Mitts"],
+            ["name"] = L["Diviner's Mitts"],
             ["castTime"] = 10,
             ["reagents"] = {
                 { 4339, 3 },
@@ -16102,7 +16102,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46638] = {
             ["craftItem"] = 83285,
-            ["name"] = AL["Diviner's Epaulets"],
+            ["name"] = L["Diviner's Epaulets"],
             ["castTime"] = 10,
             ["reagents"] = {
                 { 4339, 6 },
@@ -16114,7 +16114,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46639] = {
             ["craftItem"] = 83286,
-            ["name"] = AL["Augerer's Hat"],
+            ["name"] = L["Augerer's Hat"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4339, 3 },
@@ -16126,7 +16126,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46640] = {
             ["craftItem"] = 83287,
-            ["name"] = AL["Augerer's Robe"],
+            ["name"] = L["Augerer's Robe"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4339, 6 },
@@ -16139,7 +16139,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46641] = {
             ["craftItem"] = 83291,
-            ["name"] = AL["Augerer's Trousers"],
+            ["name"] = L["Augerer's Trousers"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4339, 4 },
@@ -16151,7 +16151,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46642] = {
             ["craftItem"] = 83290,
-            ["name"] = AL["Augerer's Mantle"],
+            ["name"] = L["Augerer's Mantle"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4339, 3 },
@@ -16163,7 +16163,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46643] = {
             ["craftItem"] = 83289,
-            ["name"] = AL["Augerer's Gloves"],
+            ["name"] = L["Augerer's Gloves"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4339, 3 },
@@ -16175,7 +16175,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46644] = {
             ["craftItem"] = 83288,
-            ["name"] = AL["Augerer's Boots"],
+            ["name"] = L["Augerer's Boots"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4339, 2 },
@@ -16187,7 +16187,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46645] = {
             ["craftItem"] = 83292,
-            ["name"] = AL["Pillager's Hood"],
+            ["name"] = L["Pillager's Hood"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 5 },
@@ -16197,7 +16197,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46646] = {
             ["craftItem"] = 83293,
-            ["name"] = AL["Pillager's Amice"],
+            ["name"] = L["Pillager's Amice"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 4 },
@@ -16208,7 +16208,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46647] = {
             ["craftItem"] = 83294,
-            ["name"] = AL["Pillager's Robe"],
+            ["name"] = L["Pillager's Robe"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 8 },
@@ -16221,7 +16221,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46648] = {
             ["craftItem"] = 83295,
-            ["name"] = AL["Pillager's Grips"],
+            ["name"] = L["Pillager's Grips"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 2 },
@@ -16231,7 +16231,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46649] = {
             ["craftItem"] = 83296,
-            ["name"] = AL["Pillager's Shoes"],
+            ["name"] = L["Pillager's Shoes"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 2 },
@@ -16242,7 +16242,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46650] = {
             ["craftItem"] = 83297,
-            ["name"] = AL["Pillager's Pantaloons"],
+            ["name"] = L["Pillager's Pantaloons"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 4 },
@@ -16253,7 +16253,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46651] = {
             ["craftItem"] = 60294,
-            ["name"] = AL["Bloodstone Warblade"],
+            ["name"] = L["Bloodstone Warblade"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -16265,7 +16265,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46652] = {
             ["craftItem"] = 60293,
-            ["name"] = AL["Untempered Runeblade"],
+            ["name"] = L["Untempered Runeblade"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -16279,7 +16279,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46653] = {
             ["craftItem"] = 65000,
-            ["name"] = AL["Red Dragonscale Leggings"],
+            ["name"] = L["Red Dragonscale Leggings"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 35 },
@@ -16291,7 +16291,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46654] = {
             ["craftItem"] = 65001,
-            ["name"] = AL["Red Dragonscale Shoulders"],
+            ["name"] = L["Red Dragonscale Shoulders"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 30 },
@@ -16303,7 +16303,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46655] = {
             ["craftItem"] = 65002,
-            ["name"] = AL["Red Dragonscale Boots"],
+            ["name"] = L["Red Dragonscale Boots"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 30 },
@@ -16315,7 +16315,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46656] = {
             ["craftItem"] = 65003,
-            ["name"] = AL["Robe of Sacrifice"],
+            ["name"] = L["Robe of Sacrifice"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 12 },
@@ -16329,7 +16329,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46657] = {
             ["craftItem"] = 65004,
-            ["name"] = AL["Ornate Bloodstone Dagger"],
+            ["name"] = L["Ornate Bloodstone Dagger"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -16345,7 +16345,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46659] = {
             ["craftItem"] = 65006,
-            ["name"] = AL["Stormscale Leggings"],
+            ["name"] = L["Stormscale Leggings"],
             ["castTime"] = 10,
             ["reagents"] = {
                 { 8170, 30 },
@@ -16358,7 +16358,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46660] = {
             ["craftItem"] = 65007,
-            ["name"] = AL["Imperial Plate Gauntlets"],
+            ["name"] = L["Imperial Plate Gauntlets"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -16369,7 +16369,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46661] = {
             ["craftItem"] = 65008,
-            ["name"] = AL["Dream's Herald"],
+            ["name"] = L["Dream's Herald"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -16383,7 +16383,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46662] = {
             ["craftItem"] = 65009,
-            ["name"] = AL["Shadowskin Boots"],
+            ["name"] = L["Shadowskin Boots"],
             ["castTime"] = 10,
             ["reagents"] = {
                 { 4304, 8 },
@@ -16396,7 +16396,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46663] = {
             ["craftItem"] = 65010,
-            ["name"] = AL["Copper Knuckles"],
+            ["name"] = L["Copper Knuckles"],
             ["castTime"] = 10,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -16406,7 +16406,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46664] = {
             ["craftItem"] = 65011,
-            ["name"] = AL["Sharpened Claw"],
+            ["name"] = L["Sharpened Claw"],
             ["castTime"] = 10,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -16417,7 +16417,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46665] = {
             ["craftItem"] = 65012,
-            ["name"] = AL["Bronze Bruiser"],
+            ["name"] = L["Bronze Bruiser"],
             ["castTime"] = 10,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -16430,7 +16430,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46666] = {
             ["craftItem"] = 65013,
-            ["name"] = AL["Frostbound Slasher"],
+            ["name"] = L["Frostbound Slasher"],
             ["castTime"] = 10,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -16443,7 +16443,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46667] = {
             ["craftItem"] = 65014,
-            ["name"] = AL["Pauldron of Deflection"],
+            ["name"] = L["Pauldron of Deflection"],
             ["castTime"] = 10,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -16456,7 +16456,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [46695] = {
             ["craftItem"] = 65019,
-            ["name"] = AL["Dragonscale Leggings"],
+            ["name"] = L["Dragonscale Leggings"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4304, 30 },
@@ -16467,7 +16467,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [47015] = {
             ["craftItem"] = 81061,
-            ["name"] = AL["Primalist's Gloves"],
+            ["name"] = L["Primalist's Gloves"],
             ["castTime"] = 10,
             ["reagents"] = {
                 { 8170, 6 },
@@ -16477,7 +16477,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [47016] = {
             ["craftItem"] = 81062,
-            ["name"] = AL["Primalist's Shoulders"],
+            ["name"] = L["Primalist's Shoulders"],
             ["castTime"] = 10,
             ["reagents"] = {
                 { 8170, 12 },
@@ -16487,7 +16487,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [47017] = {
             ["craftItem"] = 81063,
-            ["name"] = AL["Primalist's Headdress"],
+            ["name"] = L["Primalist's Headdress"],
             ["castTime"] = 10,
             ["reagents"] = {
                 { 8170, 10 },
@@ -16498,7 +16498,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [47018] = {
             ["craftItem"] = 81064,
-            ["name"] = AL["Primalist's Pants"],
+            ["name"] = L["Primalist's Pants"],
             ["castTime"] = 10,
             ["reagents"] = {
                 { 8170, 12 },
@@ -16508,7 +16508,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [47019] = {
             ["craftItem"] = 81066,
-            ["name"] = AL["Primalist's Vest"],
+            ["name"] = L["Primalist's Vest"],
             ["castTime"] = 10,
             ["reagents"] = {
                 { 8170, 24 },
@@ -16519,7 +16519,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [47020] = {
             ["craftItem"] = 81065,
-            ["name"] = AL["Primalist's Boots"],
+            ["name"] = L["Primalist's Boots"],
             ["castTime"] = 10,
             ["reagents"] = {
                 { 8170, 8 },
@@ -16529,7 +16529,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [47021] = {
             ["craftItem"] = 60288,
-            ["name"] = AL["Rune-Etched Greaves"],
+            ["name"] = L["Rune-Etched Greaves"],
             ["castTime"] = 10,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -16542,7 +16542,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [47022] = {
             ["craftItem"] = 60289,
-            ["name"] = AL["Rune-Etched Legplates"],
+            ["name"] = L["Rune-Etched Legplates"],
             ["castTime"] = 10,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -16555,7 +16555,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [47023] = {
             ["craftItem"] = 60290,
-            ["name"] = AL["Rune-Etched Breastplate"],
+            ["name"] = L["Rune-Etched Breastplate"],
             ["castTime"] = 10,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -16569,7 +16569,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [47024] = {
             ["craftItem"] = 60291,
-            ["name"] = AL["Rune-Etched Crown"],
+            ["name"] = L["Rune-Etched Crown"],
             ["castTime"] = 10,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -16581,7 +16581,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [47025] = {
             ["craftItem"] = 60292,
-            ["name"] = AL["Rune-Etched Mantle"],
+            ["name"] = L["Rune-Etched Mantle"],
             ["castTime"] = 10,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -16594,7 +16594,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [47026] = {
             ["craftItem"] = 60287,
-            ["name"] = AL["Rune-Etched Grips"],
+            ["name"] = L["Rune-Etched Grips"],
             ["castTime"] = 10,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -16606,7 +16606,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [47027] = {
             ["craftItem"] = 51312,
-            ["name"] = AL["Portable Wormhole Generator - Stormwind"],
+            ["name"] = L["Portable Wormhole Generator - Stormwind"],
             ["castTime"] = 10,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -16618,7 +16618,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [47028] = {
             ["craftItem"] = 51313,
-            ["name"] = AL["Portable Wormhole Generator - Orgrimmar"],
+            ["name"] = L["Portable Wormhole Generator - Orgrimmar"],
             ["castTime"] = 10,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -16630,7 +16630,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [47029] = {
             ["craftItem"] = 60573,
-            ["name"] = AL["Hateforge Helmet"],
+            ["name"] = L["Hateforge Helmet"],
             ["castTime"] = 10,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -16642,7 +16642,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [47030] = {
             ["craftItem"] = 60574,
-            ["name"] = AL["Hateforge Cuirass"],
+            ["name"] = L["Hateforge Cuirass"],
             ["castTime"] = 10,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -16656,7 +16656,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [47031] = {
             ["craftItem"] = 60575,
-            ["name"] = AL["Hateforge Leggings"],
+            ["name"] = L["Hateforge Leggings"],
             ["castTime"] = 10,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -16669,7 +16669,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [47032] = {
             ["craftItem"] = 60576,
-            ["name"] = AL["Hateforge Belt"],
+            ["name"] = L["Hateforge Belt"],
             ["castTime"] = 10,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -16681,7 +16681,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [47033] = {
             ["craftItem"] = 60577,
-            ["name"] = AL["Hateforge Grips"],
+            ["name"] = L["Hateforge Grips"],
             ["castTime"] = 10,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -16694,7 +16694,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [47034] = {
             ["craftItem"] = 60578,
-            ["name"] = AL["Hateforge Boots"],
+            ["name"] = L["Hateforge Boots"],
             ["castTime"] = 10,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -16707,7 +16707,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [47035] = {
             ["craftItem"] = 65021,
-            ["name"] = AL["Verdant Dreamer's Breastplate"],
+            ["name"] = L["Verdant Dreamer's Breastplate"],
             ["castTime"] = 10,
             ["reagents"] = {
                 { 8211 },
@@ -16720,7 +16720,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [49551] = {
             ["craftItem"] = 83309,
-            ["name"] = AL["Empowering Herbal Salad"],
+            ["name"] = L["Empowering Herbal Salad"],
             ["castTime"] = 5,
             ["reagents"] = {
                 { 8838 },
@@ -16730,9 +16730,9 @@ GetSpellInfoAtlasLootDB = {
         },
         [51924] = {
             ["craftItem"] = 47408,
-            ["name"] = AL["Corrosive Poison"],
+            ["name"] = L["Corrosive Poison"],
             ["castTime"] = 3,
-            ["text"] = AL["Coats a weapon with poison that lasts for 60 minutes. \nEach strike has a 30% chance of poisoning the enemy for 100 damage over 12 sec.  Stacks up to 5 times on a single target.  105 charges."],
+            ["text"] = L["Coats a weapon with poison that lasts for 60 minutes. \nEach strike has a 30% chance of poisoning the enemy for 100 damage over 12 sec.  Stacks up to 5 times on a single target.  105 charges."],
             ["reagents"] = {
                 { 8924, 3 },
                 { 5173, 3 },
@@ -16741,9 +16741,9 @@ GetSpellInfoAtlasLootDB = {
         },
         [52576] = {
             ["craftItem"] = 47409,
-            ["name"] = AL["Corrosive Poison II"],
+            ["name"] = L["Corrosive Poison II"],
             ["castTime"] = 3,
-            ["text"] = AL["Coats a weapon with poison that lasts for 60 minutes. \nEach strike has a 30% chance of poisoning the enemy for 128 damage over 12 sec.  Stacks up to 5 times on a single target.  105 charges."],
+            ["text"] = L["Coats a weapon with poison that lasts for 60 minutes. \nEach strike has a 30% chance of poisoning the enemy for 128 damage over 12 sec.  Stacks up to 5 times on a single target.  105 charges."],
             ["reagents"] = {
                 { 8924, 3 },
                 { 5173, 3 },
@@ -16752,7 +16752,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [52747] = {
             ["craftItem"] = 58304,
-            ["name"] = AL["Voltage-Neutralizing Nature Reflector"],
+            ["name"] = L["Voltage-Neutralizing Nature Reflector"],
             ["castTime"] = 45,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -16765,7 +16765,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [52749] = {
             ["craftItem"] = 58305,
-            ["name"] = AL["Giga-Charged Arcane Reflector"],
+            ["name"] = L["Giga-Charged Arcane Reflector"],
             ["castTime"] = 45,
             ["tools"] = { 5956, 6219 },
             ["reagents"] = {
@@ -16779,7 +16779,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [54001] = {
             ["craftItem"] = 65015,
-            ["name"] = AL["Blue Dragonscale Boots"],
+            ["name"] = L["Blue Dragonscale Boots"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 24 },
@@ -16790,7 +16790,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [54003] = {
             ["craftItem"] = 61648,
-            ["name"] = AL["Fury of the Timbermaw"],
+            ["name"] = L["Fury of the Timbermaw"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -16801,7 +16801,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [54005] = {
             ["craftItem"] = 61649,
-            ["name"] = AL["Pauldrons of the Timbermaw"],
+            ["name"] = L["Pauldrons of the Timbermaw"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -16813,7 +16813,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [54007] = {
             ["craftItem"] = 65038,
-            ["name"] = AL["Corehound Gloves"],
+            ["name"] = L["Corehound Gloves"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 17010, 9 },
@@ -16826,7 +16826,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [54009] = {
             ["craftItem"] = 65039,
-            ["name"] = AL["Fiery Chain Breastplate"],
+            ["name"] = L["Fiery Chain Breastplate"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -16837,7 +16837,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [54011] = {
             ["craftItem"] = 65035,
-            ["name"] = AL["Flarecore Boots"],
+            ["name"] = L["Flarecore Boots"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14342, 6 },
@@ -16849,7 +16849,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [54013] = {
             ["craftItem"] = 65036,
-            ["name"] = AL["Chromatic Leggings"],
+            ["name"] = L["Chromatic Leggings"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 17012, 6 },
@@ -16862,7 +16862,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [54015] = {
             ["craftItem"] = 65037,
-            ["name"] = AL["Molten Leggings"],
+            ["name"] = L["Molten Leggings"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 17011, 6 },
@@ -16875,7 +16875,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57008] = {
             ["craftItem"] = 65022,
-            ["name"] = AL["Breastplate of the Earth"],
+            ["name"] = L["Breastplate of the Earth"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4304, 40 },
@@ -16886,7 +16886,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57010] = {
             ["craftItem"] = 65023,
-            ["name"] = AL["Boots of the Wind"],
+            ["name"] = L["Boots of the Wind"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 4304, 20 },
@@ -16897,7 +16897,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57012] = {
             ["craftItem"] = 65024,
-            ["name"] = AL["Earthguard Tunic"],
+            ["name"] = L["Earthguard Tunic"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 20 },
@@ -16911,7 +16911,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57014] = {
             ["craftItem"] = 65025,
-            ["name"] = AL["Flamewrath Leggings"],
+            ["name"] = L["Flamewrath Leggings"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 20 },
@@ -16925,7 +16925,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57016] = {
             ["craftItem"] = 65026,
-            ["name"] = AL["Depthstalker Helmet"],
+            ["name"] = L["Depthstalker Helmet"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 15 },
@@ -16939,7 +16939,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57018] = {
             ["craftItem"] = 65027,
-            ["name"] = AL["Windwalker Boots"],
+            ["name"] = L["Windwalker Boots"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 10 },
@@ -16953,7 +16953,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57020] = {
             ["craftItem"] = 60909,
-            ["name"] = AL["Dustguider Sash"],
+            ["name"] = L["Dustguider Sash"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 10 },
@@ -16964,7 +16964,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57022] = {
             ["craftItem"] = 60910,
-            ["name"] = AL["Centaur Battle Harness"],
+            ["name"] = L["Centaur Battle Harness"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 8170, 20 },
@@ -16975,7 +16975,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57024] = {
             ["craftItem"] = 60907,
-            ["name"] = AL["Windbinder Gloves"],
+            ["name"] = L["Windbinder Gloves"],
             ["castTime"] = 60,
             ["reagents"] = {
                 { 14048, 10 },
@@ -16986,7 +16986,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57026] = {
             ["craftItem"] = 60908,
-            ["name"] = AL["Mantle of Centaur Authority"],
+            ["name"] = L["Mantle of Centaur Authority"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -16999,7 +16999,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57047] = {
             ["craftItem"] = 60976,
-            ["name"] = AL["Danonzo's Tel'Abim Surprise"],
+            ["name"] = L["Danonzo's Tel'Abim Surprise"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 60955 },
@@ -17009,7 +17009,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57049] = {
             ["craftItem"] = 60977,
-            ["name"] = AL["Danonzo's Tel'Abim Delight"],
+            ["name"] = L["Danonzo's Tel'Abim Delight"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 60955 },
@@ -17019,7 +17019,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57051] = {
             ["craftItem"] = 60978,
-            ["name"] = AL["Danonzo's Tel'Abim Medley"],
+            ["name"] = L["Danonzo's Tel'Abim Medley"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 60955 },
@@ -17029,7 +17029,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57111] = {
             ["craftItem"] = 61181,
-            ["name"] = AL["Potion of Quickness"],
+            ["name"] = L["Potion of Quickness"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 8846 },
@@ -17040,7 +17040,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57113] = {
             ["craftItem"] = 61182,
-            ["name"] = AL["Thorium Spurs"],
+            ["name"] = L["Thorium Spurs"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -17052,9 +17052,9 @@ GetSpellInfoAtlasLootDB = {
         },
         [57115] = {
             ["craftItem"] = 61183,
-            ["name"] = AL["Enchanted Armor Kit"],
+            ["name"] = L["Enchanted Armor Kit"],
             ["castTime"] = 25,
-            ["text"] = AL["Permanently increase the intellect by 8 and spell power by 6 of an item worn on the chest, legs, hands or feet.  Only usable on items level 60 and above."],
+            ["text"] = L["Permanently increase the intellect by 8 and spell power by 6 of an item worn on the chest, legs, hands or feet.  Only usable on items level 60 and above."],
             ["reagents"] = {
                 { 12810, 3 },
                 { 61673, 3 },
@@ -17063,7 +17063,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57129] = {
             ["craftItem"] = 61225,
-            ["name"] = AL["Lucidity Potion"],
+            ["name"] = L["Lucidity Potion"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 730 },
@@ -17074,7 +17074,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57131] = {
             ["craftItem"] = 61224,
-            ["name"] = AL["Dreamshard Elixir"],
+            ["name"] = L["Dreamshard Elixir"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 61198 },
@@ -17084,7 +17084,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57163] = {
             ["craftItem"] = 61779,
-            ["name"] = AL["Copper Belt Buckle"],
+            ["name"] = L["Copper Belt Buckle"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -17095,7 +17095,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57166] = {
             ["craftItem"] = 61780,
-            ["name"] = AL["Bronze Belt Buckle"],
+            ["name"] = L["Bronze Belt Buckle"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -17106,7 +17106,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57169] = {
             ["craftItem"] = 61781,
-            ["name"] = AL["Iron Belt Buckle"],
+            ["name"] = L["Iron Belt Buckle"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -17117,7 +17117,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57172] = {
             ["craftItem"] = 61782,
-            ["name"] = AL["Mithril Belt Buckle"],
+            ["name"] = L["Mithril Belt Buckle"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -17129,7 +17129,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57175] = {
             ["craftItem"] = 61783,
-            ["name"] = AL["Thorium Belt Buckle"],
+            ["name"] = L["Thorium Belt Buckle"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -17141,7 +17141,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57178] = {
             ["craftItem"] = 61784,
-            ["name"] = AL["Arcanite Belt Buckle"],
+            ["name"] = L["Arcanite Belt Buckle"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -17154,7 +17154,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57181] = {
             ["craftItem"] = 61785,
-            ["name"] = AL["Dreamsteel Belt Buckle"],
+            ["name"] = L["Dreamsteel Belt Buckle"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -17166,7 +17166,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57187] = {
             ["craftItem"] = 60007,
-            ["name"] = AL["Towerforge Crown"],
+            ["name"] = L["Towerforge Crown"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -17179,7 +17179,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57189] = {
             ["craftItem"] = 60008,
-            ["name"] = AL["Towerforge Breastplate"],
+            ["name"] = L["Towerforge Breastplate"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -17192,7 +17192,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57191] = {
             ["craftItem"] = 60009,
-            ["name"] = AL["Towerforge Pauldrons"],
+            ["name"] = L["Towerforge Pauldrons"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -17205,7 +17205,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57193] = {
             ["craftItem"] = 60010,
-            ["name"] = AL["Towerforge Demolisher"],
+            ["name"] = L["Towerforge Demolisher"],
             ["castTime"] = 60,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -17219,7 +17219,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57196] = {
             ["craftItem"] = 61810,
-            ["name"] = AL["Bloody Belt Buckle"],
+            ["name"] = L["Bloody Belt Buckle"],
             ["castTime"] = 45,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -17230,11 +17230,11 @@ GetSpellInfoAtlasLootDB = {
         },
         [57555] = {
             ["craftItem"] = 7067,
-            ["name"] = AL["Transmute: Elemental Earth"],
+            ["name"] = L["Transmute: Elemental Earth"],
             ["castTime"] = 25,
             ["tools"] = { 9149 },
             ["cooldown"] = 600,
-            ["text"] = AL["Transmutes a Heart of Fire into three Elemental Earth."],
+            ["text"] = L["Transmutes a Heart of Fire into three Elemental Earth."],
             ["reagents"] = {
                 { 7075 },
             },
@@ -17242,11 +17242,11 @@ GetSpellInfoAtlasLootDB = {
         },
         [57557] = {
             ["craftItem"] = 7070,
-            ["name"] = AL["Transmute: Elemental Water"],
+            ["name"] = L["Transmute: Elemental Water"],
             ["castTime"] = 25,
             ["tools"] = { 9149 },
             ["cooldown"] = 600,
-            ["text"] = AL["Transmutes a Globe of Water into three Elemental Water."],
+            ["text"] = L["Transmutes a Globe of Water into three Elemental Water."],
             ["reagents"] = {
                 { 7079 },
             },
@@ -17254,7 +17254,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57601] = {
             ["craftItem"] = 55518,
-            ["name"] = AL["Cosmic Headdress"],
+            ["name"] = L["Cosmic Headdress"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 61673, 5 },
@@ -17265,7 +17265,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57603] = {
             ["craftItem"] = 55519,
-            ["name"] = AL["Cosmic Mantle"],
+            ["name"] = L["Cosmic Mantle"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 61673, 4 },
@@ -17276,7 +17276,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57605] = {
             ["craftItem"] = 55520,
-            ["name"] = AL["Cosmic Vest"],
+            ["name"] = L["Cosmic Vest"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 61673, 7 },
@@ -17287,7 +17287,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57607] = {
             ["craftItem"] = 55521,
-            ["name"] = AL["Cosmic Leggings"],
+            ["name"] = L["Cosmic Leggings"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 61673, 7 },
@@ -17298,7 +17298,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57609] = {
             ["craftItem"] = 55522,
-            ["name"] = AL["Ethereal Helmet"],
+            ["name"] = L["Ethereal Helmet"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 61673, 5 },
@@ -17309,7 +17309,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57611] = {
             ["craftItem"] = 55523,
-            ["name"] = AL["Ethereal Shoulder Pads"],
+            ["name"] = L["Ethereal Shoulder Pads"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 61673, 4 },
@@ -17320,7 +17320,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57613] = {
             ["craftItem"] = 55524,
-            ["name"] = AL["Ethereal Tunic"],
+            ["name"] = L["Ethereal Tunic"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 61673, 8 },
@@ -17331,7 +17331,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57615] = {
             ["craftItem"] = 55525,
-            ["name"] = AL["Ethereal Leggings"],
+            ["name"] = L["Ethereal Leggings"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 61673, 6 },
@@ -17342,7 +17342,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57617] = {
             ["craftItem"] = 55526,
-            ["name"] = AL["Otherworldly Coif"],
+            ["name"] = L["Otherworldly Coif"],
             ["castTime"] = 5.13,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -17354,7 +17354,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57619] = {
             ["craftItem"] = 55527,
-            ["name"] = AL["Otherworldly Spaulders"],
+            ["name"] = L["Otherworldly Spaulders"],
             ["castTime"] = 5.13,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -17366,7 +17366,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57621] = {
             ["craftItem"] = 55528,
-            ["name"] = AL["Otherworldly Breastplate"],
+            ["name"] = L["Otherworldly Breastplate"],
             ["castTime"] = 5.13,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -17378,7 +17378,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57623] = {
             ["craftItem"] = 55529,
-            ["name"] = AL["Otherworldly Leggings"],
+            ["name"] = L["Otherworldly Leggings"],
             ["castTime"] = 5.13,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -17390,7 +17390,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57625] = {
             ["craftItem"] = 55530,
-            ["name"] = AL["Reflective Helmet"],
+            ["name"] = L["Reflective Helmet"],
             ["castTime"] = 5.13,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -17401,7 +17401,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57627] = {
             ["craftItem"] = 55531,
-            ["name"] = AL["Reflective Pauldrons"],
+            ["name"] = L["Reflective Pauldrons"],
             ["castTime"] = 5.13,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -17412,7 +17412,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57629] = {
             ["craftItem"] = 55532,
-            ["name"] = AL["Reflective Breastplate"],
+            ["name"] = L["Reflective Breastplate"],
             ["castTime"] = 5.13,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -17423,7 +17423,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57631] = {
             ["craftItem"] = 55533,
-            ["name"] = AL["Reflective Leggings"],
+            ["name"] = L["Reflective Leggings"],
             ["castTime"] = 5.13,
             ["tools"] = { 5956 },
             ["reagents"] = {
@@ -17434,7 +17434,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [57633] = {
             ["craftItem"] = 55534,
-            ["name"] = AL["Ley-Kissed Drape"],
+            ["name"] = L["Ley-Kissed Drape"],
             ["castTime"] = 5.13,
             ["reagents"] = {
                 { 61673, 4 },
@@ -17446,7 +17446,7 @@ GetSpellInfoAtlasLootDB = {
         },
         [58044] = {
             ["craftItem"] = 41674,
-            ["name"] = AL["Ambersap Glazed Boar Ribs"],
+            ["name"] = L["Ambersap Glazed Boar Ribs"],
             ["castTime"] = 3,
             ["reagents"] = {
                 { 41675 },
@@ -17455,7 +17455,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36842] = {
-            ["name"] = AL["Oakwood Bow"],
+            ["name"] = L["Oakwood Bow"],
             ["craftItem"] = 42099,
             ["castTime"] = 10.0,
             ["tools"] = { 42004 },
@@ -17467,7 +17467,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36843] = {
-            ["name"] = AL["Simple Fishing Lure"],
+            ["name"] = L["Simple Fishing Lure"],
             ["craftItem"] = 114,
             ["castTime"] = 3.0,
             ["reagents"] = {
@@ -17476,7 +17476,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36844] = {
-            ["name"] = AL["Healing Salve"],
+            ["name"] = L["Healing Salve"],
             ["craftItem"] = 42125,
             ["castTime"] = 3.0,
             ["reagents"] = {
@@ -17486,7 +17486,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36845] = {
-            ["name"] = AL["Fishing Bag"],
+            ["name"] = L["Fishing Bag"],
             ["craftItem"] = 33371,
             ["castTime"] = 10.0,
             ["reagents"] = {
@@ -17497,7 +17497,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36846] = {
-            ["name"] = AL["Skinner’s Pack"],
+            ["name"] = L["Skinner’s Pack"],
             ["craftItem"] = 33372,
             ["castTime"] = 10.0,
             ["reagents"] = {
@@ -17508,7 +17508,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36847] = {
-            ["name"] = AL["Gardening Pitchfork"],
+            ["name"] = L["Gardening Pitchfork"],
             ["craftItem"] = 42100,
             ["castTime"] = 10.0,
             ["tools"] = { 42004, 5956 },
@@ -17519,7 +17519,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36848] = {
-            ["name"] = AL["Murloc Scale Coat"],
+            ["name"] = L["Murloc Scale Coat"],
             ["craftItem"] = 42101,
             ["castTime"] = 10.0,
             ["reagents"] = {
@@ -17530,7 +17530,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36849] = {
-            ["name"] = AL["Bundle of Bright Wood Sticks"],
+            ["name"] = L["Bundle of Bright Wood Sticks"],
             ["craftItem"] = 42150,
             ["castTime"] = 3.0,
             ["tools"] = { 42004 },
@@ -17539,7 +17539,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36850] = {
-            ["name"] = AL["Sturdy Net"],
+            ["name"] = L["Sturdy Net"],
             ["craftItem"] = 42154,
             ["castTime"] = 3.0,
             ["reagents"] = {
@@ -17547,7 +17547,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36851] = {
-            ["name"] = AL["Sturdy Cane"],
+            ["name"] = L["Sturdy Cane"],
             ["craftItem"] = 42102,
             ["castTime"] = 10.0,
             ["tools"] = { 42004 },
@@ -17558,7 +17558,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36852] = {
-            ["name"] = AL["Sturdy Knife"],
+            ["name"] = L["Sturdy Knife"],
             ["craftItem"] = 42103,
             ["castTime"] = 10.0,
             ["tools"] = { 42004, 5956 },
@@ -17571,7 +17571,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36853] = {
-            ["name"] = AL["Sturdy Blade"],
+            ["name"] = L["Sturdy Blade"],
             ["craftItem"] = 42104,
             ["castTime"] = 10.0,
             ["tools"] = { 42004, 5956 },
@@ -17584,7 +17584,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36854] = {
-            ["name"] = AL["Reliable Fishing Rod"],
+            ["name"] = L["Reliable Fishing Rod"],
             ["craftItem"] = 42105,
             ["castTime"] = 10.0,
             ["tools"] = { 42004 },
@@ -17595,7 +17595,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36855] = {
-            ["name"] = AL["Throwable Net"],
+            ["name"] = L["Throwable Net"],
             ["craftItem"] = 42132,
             ["castTime"] = 3.0,
             ["reagents"] = {
@@ -17604,7 +17604,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36856] = {
-            ["name"] = AL["Hat of the Junior Chef"],
+            ["name"] = L["Hat of the Junior Chef"],
             ["craftItem"] = 42106,
             ["castTime"] = 10.0,
             ["reagents"] = {
@@ -17617,7 +17617,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36857] = {
-            ["name"] = AL["Treasure Compass"],
+            ["name"] = L["Treasure Compass"],
             ["craftItem"] = 42107,
             ["castTime"] = 10.0,
             ["reagents"] = {
@@ -17629,7 +17629,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36858] = {
-            ["name"] = AL["Bright Wood Arrows"],
+            ["name"] = L["Bright Wood Arrows"],
             ["craftItem"] = 42198,
             ["castTime"] = 3.0,
             ["craftQuantityMin"] = 200,
@@ -17641,7 +17641,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36859] = {
-            ["name"] = AL["Studded Ration’s Bag"],
+            ["name"] = L["Studded Ration’s Bag"],
             ["craftItem"] = 33373,
             ["castTime"] = 10.0,
             ["reagents"] = {
@@ -17654,7 +17654,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36860] = {
-            ["name"] = AL["Potent Healing Salve"],
+            ["name"] = L["Potent Healing Salve"],
             ["craftItem"] = 42126,
             ["castTime"] = 3.0,
             ["reagents"] = {
@@ -17664,7 +17664,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36861] = {
-            ["name"] = AL["Spicy Fishing Lure"],
+            ["name"] = L["Spicy Fishing Lure"],
             ["craftItem"] = 125,
             ["castTime"] = 3.0,
             ["reagents"] = {
@@ -17673,7 +17673,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [30004] = {
-            ["name"] = AL["Slowing Bolas"],
+            ["name"] = L["Slowing Bolas"],
             ["craftItem"] = 106,
             ["castTime"] = 3.0,
             ["reagents"] = {
@@ -17682,7 +17682,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [30006] = {
-            ["name"] = AL["Edged Machete"],
+            ["name"] = L["Edged Machete"],
             ["craftItem"] = 42108,
             ["castTime"] = 10.0,
             ["tools"] = { 42004, 5956 },
@@ -17694,7 +17694,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [30008] = {
-            ["name"] = AL["Iron Spear"],
+            ["name"] = L["Iron Spear"],
             ["craftItem"] = 42109,
             ["castTime"] = 10.0,
             ["tools"] = { 5956 },
@@ -17706,7 +17706,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [30010] = {
-            ["name"] = AL["Reinforced Fishing Rod"],
+            ["name"] = L["Reinforced Fishing Rod"],
             ["craftItem"] = 42110,
             ["castTime"] = 10.0,
             ["tools"] = { 42004 },
@@ -17718,7 +17718,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [30013] = {
-            ["name"] = AL["Water Trudgers"],
+            ["name"] = L["Water Trudgers"],
             ["craftItem"] = 42111,
             ["castTime"] = 10.0,
             ["reagents"] = {
@@ -17729,7 +17729,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [30015] = {
-            ["name"] = AL["Bundle of Shade Wood Sticks"],
+            ["name"] = L["Bundle of Shade Wood Sticks"],
             ["craftItem"] = 42151,
             ["castTime"] = 3.0,
             ["tools"] = { 42004 },
@@ -17738,7 +17738,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36747] = {
-            ["name"] = AL["Jungle Remedy"],
+            ["name"] = L["Jungle Remedy"],
             ["craftItem"] = 2633,
             ["castTime"] = 3.0,
             ["reagents"] = {
@@ -17748,7 +17748,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [30017] = {
-            ["name"] = AL["Sharpened Herb Sickle"],
+            ["name"] = L["Sharpened Herb Sickle"],
             ["craftItem"] = 42112,
             ["castTime"] = 10.0,
             ["tools"] = { 42004 },
@@ -17761,7 +17761,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36749] = {
-            ["name"] = AL["Spirited Precision Sickle"],
+            ["name"] = L["Spirited Precision Sickle"],
             ["craftItem"] = 42231,
             ["castTime"] = 20.0,
             ["reagents"] = {
@@ -17773,7 +17773,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36751] = {
-            ["name"] = AL["Prospector’s Magnifying Lens"],
+            ["name"] = L["Prospector’s Magnifying Lens"],
             ["craftItem"] = 42232,
             ["castTime"] = 20.0,
             ["reagents"] = {
@@ -17786,7 +17786,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [30022] = {
-            ["name"] = AL["Lined Wintercloak"],
+            ["name"] = L["Lined Wintercloak"],
             ["craftItem"] = 42113,
             ["castTime"] = 10.0,
             ["reagents"] = {
@@ -17798,7 +17798,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [30024] = {
-            ["name"] = AL["Sleek Pinewood Bow"],
+            ["name"] = L["Sleek Pinewood Bow"],
             ["craftItem"] = 42114,
             ["castTime"] = 10.0,
             ["tools"] = { 42004 },
@@ -17810,7 +17810,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [30027] = {
-            ["name"] = AL["Superior Healing Salve"],
+            ["name"] = L["Superior Healing Salve"],
             ["craftItem"] = 42127,
             ["castTime"] = 3.0,
             ["reagents"] = {
@@ -17820,7 +17820,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [30029] = {
-            ["name"] = AL["Savory Fishing Lure"],
+            ["name"] = L["Savory Fishing Lure"],
             ["craftItem"] = 133,
             ["castTime"] = 3.0,
             ["reagents"] = {
@@ -17829,7 +17829,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [30031] = {
-            ["name"] = AL["Smooth Ironfeather Arrows"],
+            ["name"] = L["Smooth Ironfeather Arrows"],
             ["craftItem"] = 42200,
             ["castTime"] = 3.0,
             ["craftQuantityMin"] = 200,
@@ -17841,7 +17841,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [30033] = {
-            ["name"] = AL["Heavy Duty Machete"],
+            ["name"] = L["Heavy Duty Machete"],
             ["craftItem"] = 42120,
             ["castTime"] = 10.0,
             ["tools"] = { 5956 },
@@ -17852,7 +17852,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36765] = {
-            ["name"] = AL["Bundle of Simple Sticks"],
+            ["name"] = L["Bundle of Simple Sticks"],
             ["craftItem"] = 42149,
             ["castTime"] = 3.0,
             ["tools"] = { 42004 },
@@ -17861,7 +17861,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36766] = {
-            ["name"] = AL["Crude Walking Stick"],
+            ["name"] = L["Crude Walking Stick"],
             ["craftItem"] = 42089,
             ["castTime"] = 10.0,
             ["tools"] = { 42004 },
@@ -17870,7 +17870,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36767] = {
-            ["name"] = AL["Crude Machete"],
+            ["name"] = L["Crude Machete"],
             ["craftItem"] = 42090,
             ["castTime"] = 10.0,
             ["tools"] = { 42004, 5956 },
@@ -17880,7 +17880,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [30037] = {
-            ["name"] = AL["Thorium Spear"],
+            ["name"] = L["Thorium Spear"],
             ["craftItem"] = 42122,
             ["castTime"] = 10.0,
             ["tools"] = { 42004, 5956 },
@@ -17892,7 +17892,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36769] = {
-            ["name"] = AL["Crude Hunting Bow"],
+            ["name"] = L["Crude Hunting Bow"],
             ["craftItem"] = 42092,
             ["castTime"] = 10.0,
             ["tools"] = { 42004 },
@@ -17902,7 +17902,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36770] = {
-            ["name"] = AL["Copper Lantern"],
+            ["name"] = L["Copper Lantern"],
             ["craftItem"] = 42093,
             ["castTime"] = 10.0,
             ["tools"] = { 5956 },
@@ -17912,7 +17912,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36771] = {
-            ["name"] = AL["Simple Slingshot"],
+            ["name"] = L["Simple Slingshot"],
             ["craftItem"] = 42229,
             ["castTime"] = 3.0,
             ["craftQuantityMin"] = 20,
@@ -17924,7 +17924,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36772] = {
-            ["name"] = AL["Simple Herbalist’s Backpack"],
+            ["name"] = L["Simple Herbalist’s Backpack"],
             ["craftItem"] = 33369,
             ["castTime"] = 10.0,
             ["reagents"] = {
@@ -17935,7 +17935,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36773] = {
-            ["name"] = AL["Makeshift Rations Bag"],
+            ["name"] = L["Makeshift Rations Bag"],
             ["craftItem"] = 33370,
             ["castTime"] = 10.0,
             ["reagents"] = {
@@ -17946,7 +17946,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36774] = {
-            ["name"] = AL["Weak Healing Salve"],
+            ["name"] = L["Weak Healing Salve"],
             ["craftItem"] = 42233,
             ["castTime"] = 3.0,
             ["reagents"] = {
@@ -17956,7 +17956,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [30045] = {
-            ["name"] = AL["Mastercraft Fishing Rod"],
+            ["name"] = L["Mastercraft Fishing Rod"],
             ["craftItem"] = 42123,
             ["castTime"] = 10.0,
             ["tools"] = { 42004 },
@@ -17970,7 +17970,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [30050] = {
-            ["name"] = AL["Miner’s Rucksack"],
+            ["name"] = L["Miner’s Rucksack"],
             ["craftItem"] = 33375,
             ["castTime"] = 10.0,
             ["reagents"] = {
@@ -17983,7 +17983,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [30052] = {
-            ["name"] = AL["Herbalist’s Knapsack"],
+            ["name"] = L["Herbalist’s Knapsack"],
             ["craftItem"] = 33376,
             ["castTime"] = 10.0,
             ["reagents"] = {
@@ -17996,7 +17996,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [30054] = {
-            ["name"] = AL["Skinner’s Carryall"],
+            ["name"] = L["Skinner’s Carryall"],
             ["craftItem"] = 33378,
             ["castTime"] = 10.0,
             ["reagents"] = {
@@ -18009,7 +18009,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36786] = {
-            ["name"] = AL["Gardening Gloves"],
+            ["name"] = L["Gardening Gloves"],
             ["craftItem"] = 42095,
             ["castTime"] = 10.0,
             ["reagents"] = {
@@ -18019,7 +18019,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36787] = {
-            ["name"] = AL["Crude Fishing Rod"],
+            ["name"] = L["Crude Fishing Rod"],
             ["craftItem"] = 42096,
             ["castTime"] = 10.0,
             ["tools"] = { 42004 },
@@ -18029,7 +18029,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [30057] = {
-            ["name"] = AL["Cooling Ration’s Bag"],
+            ["name"] = L["Cooling Ration’s Bag"],
             ["craftItem"] = 33379,
             ["castTime"] = 10.0,
             ["reagents"] = {
@@ -18042,7 +18042,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36789] = {
-            ["name"] = AL["Gardening Broom"],
+            ["name"] = L["Gardening Broom"],
             ["craftItem"] = 42098,
             ["castTime"] = 10.0,
             ["tools"] = { 42004 },
@@ -18054,7 +18054,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [46068] = {
-            ["name"] = AL["Cleaning Cloth"],
+            ["name"] = L["Cleaning Cloth"],
             ["craftItem"] = 60001,
             ["castTime"] = 3.0,
             ["reagents"] = {
@@ -18063,8 +18063,8 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [46072] = {
-            ["name"] = AL["Traveler's Tent"],
-            ["text"] = AL["Sets up a traveler's tent. While under the cover of the tent you are resting and may gain rested experience. Can only be used outdoors."],
+            ["name"] = L["Traveler's Tent"],
+            ["text"] = L["Sets up a traveler's tent. While under the cover of the tent you are resting and may gain rested experience. Can only be used outdoors."],
             ["craftItem"] = 51283,
             ["castTime"] = 10.0,
             ["cooldown"] = 7200.0,
@@ -18075,7 +18075,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [30061] = {
-            ["name"] = AL["Starfeather Arrows"],
+            ["name"] = L["Starfeather Arrows"],
             ["craftItem"] = 42201,
             ["castTime"] = 10.0,
             ["craftQuantityMin"] = 200,
@@ -18086,7 +18086,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [46064] = {
-            ["name"] = AL["Dim Torch"],
+            ["name"] = L["Dim Torch"],
             ["craftItem"] = 6182,
             ["castTime"] = 2.0,
             ["reagents"] = {
@@ -18094,7 +18094,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [30063] = {
-            ["name"] = AL["Major Healing Salve"],
+            ["name"] = L["Major Healing Salve"],
             ["craftItem"] = 42129,
             ["castTime"] = 3.0,
             ["reagents"] = {
@@ -18104,7 +18104,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36795] = {
-            ["name"] = AL["Nutritious Rations"],
+            ["name"] = L["Nutritious Rations"],
             ["craftItem"] = 42155,
             ["castTime"] = 10.0,
             ["craftQuantityMin"] = 3,
@@ -18115,7 +18115,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36796] = {
-            ["name"] = AL["Shade Wood Arrows"],
+            ["name"] = L["Shade Wood Arrows"],
             ["craftItem"] = 42199,
             ["castTime"] = 3.0,
             ["craftQuantityMin"] = 200,
@@ -18127,7 +18127,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36797] = {
-            ["name"] = AL["Vine Cutter"],
+            ["name"] = L["Vine Cutter"],
             ["craftItem"] = 42115,
             ["castTime"] = 10.0,
             ["tools"] = { 5956 },
@@ -18139,7 +18139,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36798] = {
-            ["name"] = AL["Hiking Staff"],
+            ["name"] = L["Hiking Staff"],
             ["craftItem"] = 42116,
             ["castTime"] = 10.0,
             ["tools"] = { 42004 },
@@ -18150,7 +18150,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36799] = {
-            ["name"] = AL["Tree Hatchet"],
+            ["name"] = L["Tree Hatchet"],
             ["craftItem"] = 42117,
             ["castTime"] = 10.0,
             ["tools"] = { 5956 },
@@ -18162,7 +18162,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36800] = {
-            ["name"] = AL["Bundle of Tropical Sticks"],
+            ["name"] = L["Bundle of Tropical Sticks"],
             ["craftItem"] = 42152,
             ["castTime"] = 3.0,
             ["tools"] = { 42004 },
@@ -18171,7 +18171,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36801] = {
-            ["name"] = AL["Sunshade Hat"],
+            ["name"] = L["Sunshade Hat"],
             ["craftItem"] = 42118,
             ["castTime"] = 10.0,
             ["reagents"] = {
@@ -18183,7 +18183,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36802] = {
-            ["name"] = AL["Thick Rations Bag"],
+            ["name"] = L["Thick Rations Bag"],
             ["craftItem"] = 33374,
             ["castTime"] = 10.0,
             ["reagents"] = {
@@ -18195,7 +18195,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36803] = {
-            ["name"] = AL["Warped Recurve Bow"],
+            ["name"] = L["Warped Recurve Bow"],
             ["craftItem"] = 42119,
             ["castTime"] = 10.0,
             ["tools"] = { 42004 },
@@ -18208,7 +18208,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36804] = {
-            ["name"] = AL["Spiced Berries "],
+            ["name"] = L["Spiced Berries "],
             ["craftItem"] = 42130,
             ["castTime"] = 3.0,
             ["reagents"] = {
@@ -18218,7 +18218,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36805] = {
-            ["name"] = AL["Aromatic Berries"],
+            ["name"] = L["Aromatic Berries"],
             ["craftItem"] = 42131,
             ["castTime"] = 3.0,
             ["reagents"] = {
@@ -18228,7 +18228,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36806] = {
-            ["name"] = AL["Advanced Camouflage"],
+            ["name"] = L["Advanced Camouflage"],
             ["craftItem"] = 42230,
             ["castTime"] = 3.0,
             ["reagents"] = {
@@ -18238,7 +18238,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36807] = {
-            ["name"] = AL["Emergency Parachute"],
+            ["name"] = L["Emergency Parachute"],
             ["craftItem"] = 42156,
             ["castTime"] = 3.0,
             ["reagents"] = {
@@ -18248,7 +18248,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36808] = {
-            ["name"] = AL["Stabilizing Healing Salve"],
+            ["name"] = L["Stabilizing Healing Salve"],
             ["craftItem"] = 42128,
             ["castTime"] = 3.0,
             ["reagents"] = {
@@ -18258,7 +18258,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [30078] = {
-            ["name"] = AL["Snap Trap"],
+            ["name"] = L["Snap Trap"],
             ["craftItem"] = 42328,
             ["castTime"] = 10.0,
             ["reagents"] = {
@@ -18267,7 +18267,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [46077] = {
-            ["name"] = AL["Repaired Electro-Lantern"],
+            ["name"] = L["Repaired Electro-Lantern"],
             ["craftItem"] = 65030,
             ["castTime"] = 5.0,
             ["reagents"] = {
@@ -18280,7 +18280,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [46075] = {
-            ["name"] = AL["Iron Lantern"],
+            ["name"] = L["Iron Lantern"],
             ["craftItem"] = 2714,
             ["castTime"] = 2.0,
             ["tools"] = { 5956 },
@@ -18291,8 +18291,8 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [46074] = {
-            ["name"] = AL["Simple Wooden Planter"],
-            ["text"] = AL["Sets up a simple wooden planter. Planters allow you to plant seeds and cultivate crops."],
+            ["name"] = L["Simple Wooden Planter"],
+            ["text"] = L["Sets up a simple wooden planter. Planters allow you to plant seeds and cultivate crops."],
             ["craftItem"] = 51705,
             ["castTime"] = 10.0,
             ["reagents"] = {
@@ -18301,8 +18301,8 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [46073] = {
-            ["name"] = AL["Fishing Boat"],
-            ["text"] = AL["Sets up a fishing boat. While on your boat you gain +50 fishing skill. Can only be used outdoors near a deep enough body of water."],
+            ["name"] = L["Fishing Boat"],
+            ["text"] = L["Sets up a fishing boat. While on your boat you gain +50 fishing skill. Can only be used outdoors near a deep enough body of water."],
             ["craftItem"] = 51282,
             ["castTime"] = 20.0,
             ["cooldown"] = 3600.0,
@@ -18314,7 +18314,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [47101] = {
-            ["name"] = AL["Survivalist's Skinning Knife"],
+            ["name"] = L["Survivalist's Skinning Knife"],
             ["craftItem"] = 7009,
             ["castTime"] = 12.5,
             ["reagents"] = {
@@ -18324,7 +18324,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [30084] = {
-            ["name"] = AL["Firefin Fishing Trap"],
+            ["name"] = L["Firefin Fishing Trap"],
             ["craftItem"] = 42330,
             ["castTime"] = 10.0,
             ["tools"] = { 42004 },
@@ -18335,7 +18335,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [47103] = {
-            ["name"] = AL["Driftwood Fishing Pole"],
+            ["name"] = L["Driftwood Fishing Pole"],
             ["craftItem"] = 7010,
             ["castTime"] = 12.5,
             ["tools"] = { 42004 },
@@ -18346,7 +18346,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [30086] = {
-            ["name"] = AL["Stonescale Fishing Trap"],
+            ["name"] = L["Stonescale Fishing Trap"],
             ["craftItem"] = 42331,
             ["castTime"] = 10.0,
             ["tools"] = { 42004 },
@@ -18357,7 +18357,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [46066] = {
-            ["name"] = AL["Murloc's Flippers"],
+            ["name"] = L["Murloc's Flippers"],
             ["craftItem"] = 65028,
             ["castTime"] = 10.0,
             ["reagents"] = {
@@ -18369,7 +18369,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36809] = {
-            ["name"] = AL["Premium Fishing Lure"],
+            ["name"] = L["Premium Fishing Lure"],
             ["craftItem"] = 145,
             ["castTime"] = 3.0,
             ["reagents"] = {
@@ -18378,7 +18378,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [30071] = {
-            ["name"] = AL["Blackmouth Fishing Trap"],
+            ["name"] = L["Blackmouth Fishing Trap"],
             ["craftItem"] = 42329,
             ["castTime"] = 10.0,
             ["reagents"] = {
@@ -18388,7 +18388,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36788] = {
-            ["name"] = AL["Hunting Spear"],
+            ["name"] = L["Hunting Spear"],
             ["craftItem"] = 42097,
             ["castTime"] = 10.0,
             ["tools"] = { 42004, 5956 },
@@ -18400,7 +18400,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36785] = {
-            ["name"] = AL["Makeshift Knife"],
+            ["name"] = L["Makeshift Knife"],
             ["craftItem"] = 42094,
             ["castTime"] = 10.0,
             ["tools"] = { 42004, 5956 },
@@ -18411,7 +18411,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [30042] = {
-            ["name"] = AL["Bundle of Star Wood Sticks"],
+            ["name"] = L["Bundle of Star Wood Sticks"],
             ["craftItem"] = 42153,
             ["castTime"] = 3.0,
             ["tools"] = { 42004 },
@@ -18420,7 +18420,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [30039] = {
-            ["name"] = AL["Razor-sharp Skinning Knife"],
+            ["name"] = L["Razor-sharp Skinning Knife"],
             ["craftItem"] = 42124,
             ["castTime"] = 10.0,
             ["tools"] = { 5956 },
@@ -18434,7 +18434,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36768] = {
-            ["name"] = AL["Crude Hatchet"],
+            ["name"] = L["Crude Hatchet"],
             ["craftItem"] = 42091,
             ["castTime"] = 10.0,
             ["reagents"] = {
@@ -18443,7 +18443,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [30035] = {
-            ["name"] = AL["Thorium Edged Machete"],
+            ["name"] = L["Thorium Edged Machete"],
             ["craftItem"] = 42121,
             ["castTime"] = 10.0,
             ["tools"] = { 5956 },
@@ -18456,7 +18456,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [30069] = {
-            ["name"] = AL["Oil-Powered Cooker"],
+            ["name"] = L["Oil-Powered Cooker"],
             ["craftItem"] = 36701,
             ["castTime"] = 20.0,
             ["reagents"] = {
@@ -18469,7 +18469,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [30067] = {
-            ["name"] = AL["Starfeather Arrows"],
+            ["name"] = L["Starfeather Arrows"],
             ["craftItem"] = 42201,
             ["castTime"] = 3.0,
             ["craftQuantityMin"] = 200,
@@ -18481,7 +18481,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [30073] = {
-            ["name"] = AL["Rugged Mining Sack"],
+            ["name"] = L["Rugged Mining Sack"],
             ["craftItem"] = 42294,
             ["castTime"] = 10.0,
             ["reagents"] = {
@@ -18493,7 +18493,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [30065] = {
-            ["name"] = AL["Fisherman's Backpack"],
+            ["name"] = L["Fisherman's Backpack"],
             ["craftItem"] = 33377,
             ["castTime"] = 10.0,
             ["reagents"] = {
@@ -18506,7 +18506,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [7636] = {
-            ["name"] = AL["Green Woolen Robe"],
+            ["name"] = L["Green Woolen Robe"],
             ["craftItem"] = 6243,
             ["castTime"] = 12.5,
             ["reagents"] = {
@@ -18516,7 +18516,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [65210] = {
-            ["name"] = AL["Simple Bronze Katana"],
+            ["name"] = L["Simple Bronze Katana"],
             ["craftItem"] = 93223,
             ["castTime"] = 12.5,
             ["reagents"] = {
@@ -18527,7 +18527,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [83] = {
-            ["name"] = AL["Stormreaver Gloves"],
+            ["name"] = L["Stormreaver Gloves"],
             ["craftItem"] = 58134,
             ["castTime"] = 60,
             ["reagents"] = {
@@ -18540,7 +18540,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36915] = {
-            ["name"] = AL["Spellwoven Nobility Drape"],
+            ["name"] = L["Spellwoven Nobility Drape"],
             ["craftItem"] = 55056,
             ["castTime"] = 25,
             ["reagents"] = {
@@ -18553,7 +18553,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [34760] = {
-            ["name"] = AL["Grimtotem Bracers"],
+            ["name"] = L["Grimtotem Bracers"],
             ["craftItem"] = 42204,
             ["castTime"] = 60,
             ["reagents"] = {
@@ -18565,7 +18565,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [34762] = {
-            ["name"] = AL["Ceremonial Belt Buckle"],
+            ["name"] = L["Ceremonial Belt Buckle"],
             ["craftItem"] = 42203,
             ["castTime"] = 45,
             ["reagents"] = {
@@ -18576,7 +18576,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36948] = {
-            ["name"] = AL["Bulwark of Unshaken Earth"],
+            ["name"] = L["Bulwark of Unshaken Earth"],
             ["craftItem"] = 33135,
             ["castTime"] = 60,
             ["reagents"] = {
@@ -18589,7 +18589,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [34758] = {
-            ["name"] = AL["Kodoheart Necklace"],
+            ["name"] = L["Kodoheart Necklace"],
             ["craftItem"] = 42205,
             ["castTime"] = 5.13,
             ["reagents"] = {
@@ -18601,7 +18601,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [36946] = {
-            ["name"] = AL["Facetted Crystal Scope"],
+            ["name"] = L["Facetted Crystal Scope"],
             ["craftItem"] = 33146,
             ["castTime"] = 45,
             ["reagents"] = {
@@ -18613,7 +18613,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [32310] = {
-            ["name"] = AL["Enchanted Thorium Shells"],
+            ["name"] = L["Enchanted Thorium Shells"],
             ["craftItem"] = 42202,
             ["castTime"] = 5,
             ["craftQuantityMin"] = 200,
@@ -18623,7 +18623,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [32313] = {
-            ["name"] = AL["Squid Eel Skewer"],
+            ["name"] = L["Squid Eel Skewer"],
             ["craftItem"] = 42163,
             ["castTime"] = 3,
             ["craftQuantityMin"] = 2,
@@ -18634,7 +18634,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [1207] = {
-            ["name"] = AL["Fried Strider with a Side of Berries"],
+            ["name"] = L["Fried Strider with a Side of Berries"],
             ["craftItem"] = 68513,
             ["castTime"] = 3,
             ["reagents"] = {
@@ -18644,7 +18644,7 @@ GetSpellInfoAtlasLootDB = {
             },
         },
         [58046] = {
-            ["name"] = AL["Crawford Apple Tarte"],
+            ["name"] = L["Crawford Apple Tarte"],
             ["craftItem"] = 41673,
             ["castTime"] = 3,
             ["reagents"] = {

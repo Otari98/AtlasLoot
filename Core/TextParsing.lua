@@ -665,6 +665,7 @@ do
         if not itemID then return "" end
         if mem[itemID] then return mem[itemID] end
         local itemName, itemLink, itemQuality, itemLevel, itemType, itemSubType, itemCount, itemEquipLoc, itemTexture = GetItemInfo(itemID)
+        if not itemName then return "" end
         local text = ""
         if itemEquipLoc ~= "" and _G[itemEquipLoc] and itemEquipLoc ~= "INVTYPE_BAG" then
             if Gear[itemSubType] and itemEquipLoc ~= "INVTYPE_CLOAK" and itemEquipLoc ~= "INVTYPE_BODY" then
@@ -677,8 +678,8 @@ do
         end
         if Gear[itemSubType] then
             text = Gear[itemSubType]
-        else
-            text = itemSubType and itemSubType or ""
+        elseif itemSubType then
+            text = itemSubType
         end
         mem[itemID] = text
         return text

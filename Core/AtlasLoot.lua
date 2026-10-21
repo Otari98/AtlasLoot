@@ -90,6 +90,7 @@ the required resources are in place
 ]]
 function AtlasLoot.ItemsFrame_OnLoad(self)
     self:RegisterEvent("PLAYER_ENTERING_WORLD")
+    self.refreshTime = nil
     self.refresh = {}
     self.queue = {}
 end
@@ -1221,7 +1222,6 @@ function AtlasLoot.ShowContainerFrame(self)
                 button:SetAlpha(1)
                 button.flashTimer = nil
             end
-            button:Hide()
         end
     elseif AtlasLootItemsFrameContainer:IsVisible() then
         AtlasLootItemsFrameContainer:Hide()
@@ -1231,6 +1231,10 @@ function AtlasLoot.ShowContainerFrame(self)
 
     if not AtlasLootItemsFrameContainer:IsVisible() and lastSelectedButton == self then
         AtlasLootItemsFrameContainer:Show()
+    end
+
+    for _, button in pairs(AtlasLoot.ContainerButtons) do
+        button:Hide()
     end
 
     local row = 0
@@ -1323,7 +1327,7 @@ function AtlasLoot.ContainerItem_OnClick(self, button)
     end
 end
 
-function AtlasLoot.SayItemReagents(id, color, name, safe)
+function AtlasLoot.SayItemReagents(id, color, name)
     if not id then return end
     local chatline = ""
     local itemCount = 0
@@ -1354,6 +1358,7 @@ function AtlasLoot.SayItemReagents(id, color, name, safe)
         end
     end
     if string.sub(id, 1, 1) == "s" then
+        -- spell
         local spellID = tonumber(string.sub(id, 2))
         local craftItem = tonumber(GetSpellInfoAtlasLootDB["craftspells"][spellID]["craftItem"])
         if craftItem and craftItem ~= 0 then
@@ -1367,8 +1372,9 @@ function AtlasLoot.SayItemReagents(id, color, name, safe)
                     craftnumber = craftnumber..qtyMin.."x"
                 end
             end
-            SendChatMessage(L["To craft "]..craftnumber..AtlasLoot.GetItemLink(craftItem)..L[" the following reagents are needed:"], channel, nil, chatnumber)
             local reagents = GetSpellInfoAtlasLootDB["craftspells"][spellID]["reagents"]
+            local link = craftnumber..AtlasLoot.GetItemLink(craftItem)
+            SendChatMessage(string.format(L["To craft %s the following reagents are needed:"], link), channel, nil, chatnumber)
             if type(reagents) == "table" then
                 for j = 1, table.getn(reagents) do
                     local tempnumber = reagents[j][2]
@@ -1389,7 +1395,8 @@ function AtlasLoot.SayItemReagents(id, color, name, safe)
             end
         else
             local reagents = GetSpellInfoAtlasLootDB["craftspells"][spellID]["reagents"]
-            SendChatMessage(L["To cast "]..NORMAL_FONT_COLOR_CODE.."|Henchant:"..spellID.."|h["..name.."]|h|r"..L[" the following items are needed:"], channel, nil, chatnumber)
+            local link = string.format("%s|Henchant:%d|h[%s]|h|r", NORMAL_FONT_COLOR_CODE, spellID, name)
+            SendChatMessage(string.format(L["To cast %s the following items are needed:"], link), channel, nil, chatnumber)
             if type(reagents) == "table" then
                 for j = 1, table.getn(reagents) do
                     local tempnumber = reagents[j][2]
@@ -1410,32 +1417,31 @@ function AtlasLoot.SayItemReagents(id, color, name, safe)
             end
         end
     elseif string.sub(id, 1, 1) == "e" then
+        -- enchant
         local spellID = tonumber(string.sub(id, 2))
         local item = tonumber(GetSpellInfoAtlasLootDB["enchants"][spellID]["item"])
+        local link = string.format("%s|Henchant:%d|h[%s]|h|r", NORMAL_FONT_COLOR_CODE, spellID, name)
         if tListActivity[1] and WIM_Windows[tListActivity[1]].is_visible then
             if not item then
-                SendChatMessage(NORMAL_FONT_COLOR_CODE.."|Henchant:"..spellID.."|h["..name.."]|h|r", channel, nil, chatnumber)
+                SendChatMessage(link, channel, nil, chatnumber)
             else
-                SendChatMessage(L["To craft "]..AtlasLoot.GetItemLink(item)..L[" you need this: "]..NORMAL_FONT_COLOR_CODE.."|Henchant:"..spellID.."|h["..name.."]|h|r", channel, nil, chatnumber)
+                SendChatMessage(string.format(L["To craft %s you need this: %s"], AtlasLoot.GetItemLink(item), link), channel, nil, chatnumber)
             end
         elseif ChatFrameEditBox:IsVisible() then
             if not item then
-                ChatFrameEditBox:Insert(NORMAL_FONT_COLOR_CODE.."|Henchant:"..spellID.."|h["..name.."]|h|r")
+                ChatFrameEditBox:Insert(link)
             else
-                ChatFrameEditBox:Insert(L["To craft "]..AtlasLoot.GetItemLink(item)..L[" you need this: "]..NORMAL_FONT_COLOR_CODE.."|Henchant:"..spellID.."|h["..name.."]|h|r")
+                ChatFrameEditBox:Insert(string.format(L["To craft %s you need this: %s"], AtlasLoot.GetItemLink(item), link))
             end
         else
             if not item then
-                SendChatMessage(color.."|Henchant:"..spellID.."|h["..name.."]|h|r", channel, nil, chatnumber)
+                SendChatMessage(link, channel, nil, chatnumber)
             else
-                SendChatMessage(L["To craft "]..AtlasLoot.GetItemLink(item)..L[" you need this: "]..NORMAL_FONT_COLOR_CODE.."|Henchant:"..spellID.."|h["..name.."]|h|r", channel, nil, chatnumber)
+                SendChatMessage(string.format(L["To craft %s you need this: %s"], AtlasLoot.GetItemLink(item), link), channel, nil, chatnumber)
             end
         end
     else
-        if safe then
-            SendChatMessage("["..name.."]", channel, nil, chatnumber)
-        else
-            SendChatMessage(color.."|Hitem:"..id..":0:0:0|h["..name.."]|h|r", channel, nil, chatnumber)
-        end
+        -- item
+        SendChatMessage(string.format("%s|Hitem:%d:0:0:0|h[%s]|h|r", color, id, name), channel, nil, chatnumber)
     end
 end

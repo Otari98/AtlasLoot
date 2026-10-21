@@ -1,4 +1,4 @@
-local AL = AtlasLoot.L
+local L = AtlasLoot.L
 
 AtlasLootBossButtons = AtlasLootBossButtons or {}
 
@@ -1055,7 +1055,7 @@ AtlasLoot_Data["AtlasLootGeneralPvPItems"] = {
         { 4, 18243, "Ability_Mount_Mechastrider", "=q4=Black Battlestrider", "=ds=#e7#" },
         { 5, 18241, "Ability_Mount_Nightmarehorse", "=q4=Black War Steed Bridle", "=ds=#e7#" },
         { 6, 18242, "Ability_Mount_Blackpanther", "=q4=Reins of the Black War Tiger", "=ds=#e7#" },
-        { 8, 0, "", "=q7="..AL["Alterac Valley"], "" },
+        { 8, 0, "", "=q7="..L["Alterac Valley"], "" },
         { 9, 19030, "Ability_Mount_MountainRam", "=q4=Stormpike Battle Charger", "=ds=#e7#" },
         { 16, 0, "", "=q6=#m6#" },
         { 17, 0, "", "=q18=#rnk# 11" },
@@ -1063,7 +1063,7 @@ AtlasLoot_Data["AtlasLootGeneralPvPItems"] = {
         { 19, 18247, "Ability_Mount_Kodo_03", "=q4=Black War Kodo", "=ds=#e7#" },
         { 20, 18246, "Ability_Mount_Raptor", "=q4=Whistle of the Black War Raptor", "=ds=#e7#" },
         { 21, 18248, "Ability_Mount_Undeadhorse", "=q4=Armored Red Deathcharger", "=ds=#e7#" },
-        { 23, 0, "", "=q18="..AL["Alterac Valley"], "" },
+        { 23, 0, "", "=q18="..L["Alterac Valley"], "" },
         { 24, 19029, "INV_Misc_Horn_01", "=q4=Horn of the Frostwolf Howler", "=ds=#e7#" },
     },
     PVPPriestAC = {
