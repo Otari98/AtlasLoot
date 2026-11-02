@@ -213,7 +213,7 @@ AtlasLoot_Data.MENUS = {
         { 7, "BRRepMenu", "inv_jewelry_ring_04", L["Blood Ring"] },
         { 16, "PvP60Accessories1", "INV_Jewelry_Talisman_09", L["PvP Accessories"], ORANGE..L["Rank 2-9"] },
         { 18, "PVPSET", "INV_Helmet_05", L["PvP Armor Sets"], ORANGE..L["Rank 7-13"] },
-        { 20, "PVPWeapons1", "INV_Sword_11", L["PvP Weapons"], ORANGE..L["Rank 14"] },
+        { 20, "PVPWeapons1", "INV_Sword_11", L["PvP Weapons"], ORANGE..L["Rank"].." 6-14" },
         { 22, "PvPMountsPvP", "Ability_Mount_RidingHorse", L["PvP Mounts"], ORANGE..L["Rank 11"] },
     },
     BRRepMenu = {
@@ -671,7 +671,7 @@ AtlasLoot_HewdropDown = {
         ["PVPMENU"] = {
             { { L["PvP Armor Sets"], "PVPSET" }, },
             { { L["PvP Accessories"], "PvP60Accessories1" }, },
-            { { L["Rank 14 Weapons"], "PVPWeapons1" }, },
+            { { L["PvP Weapons"], "PVPWeapons1" }, },
             { { L["PvP Mounts"], "PvPMountsPvP" }, },
             { { L["Blood Ring"], "BRRepMenu" }, },
             { { L["Alterac Valley"], "AVRepMenu" }, },

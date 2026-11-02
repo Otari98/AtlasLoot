@@ -3056,6 +3056,16 @@
     },
     ["PVPWeapons2"] = {
         Prev_Page = "PVPWeapons1",
+        Next_Page = "PVPWeapons3",
+        Back_Page = "PVPMENU",
+    },
+    ["PVPWeapons3"] = {
+        Prev_Page = "PVPWeapons2",
+        Next_Page = "PVPWeapons4",
+        Back_Page = "PVPMENU",
+    },
+    ["PVPWeapons4"] = {
+        Prev_Page = "PVPWeapons3",
         Back_Page = "PVPMENU",
     },
     ["PVPDruid"] = {

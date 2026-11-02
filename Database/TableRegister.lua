@@ -1090,6 +1090,8 @@ AtlasLoot_TableNames = {
     ["PvP60Accessories4"] = { L["PvP Accessories"], "AtlasLootGeneralPvPItems" },
     ["PVPWeapons1"] = { L["PvP Weapons"], "AtlasLootGeneralPvPItems" },
     ["PVPWeapons2"] = { L["PvP Weapons"], "AtlasLootGeneralPvPItems" },
+    ["PVPWeapons3"] = { L["PvP Weapons"], "AtlasLootGeneralPvPItems" },
+    ["PVPWeapons4"] = { L["PvP Weapons"], "AtlasLootGeneralPvPItems" },
     ["PvPMountsPvP"] = { L["PvP Mounts"], "AtlasLootGeneralPvPItems" },
     --Level 60 PvP Sets
     ["PVPDruid"] = { L["PvP"].." "..L["Rank 7-13"], "AtlasLootGeneralPvPItems" },

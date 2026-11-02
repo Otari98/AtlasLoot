@@ -29,7 +29,7 @@ function AtlasLoot.ClearBookmarks()
 end
 
 function AtlasLoot.UpdateBookmarkButtons()
-    local width = AtlasLoot.AnchorPoint == AtlasLoot.Anchor_Atlas and 95 or 95
+    local width = 95
     if table.getn(AtlasLootCharDB["Bookmarks"]) > SHOWN_BOOKMARKS then
         AtlasLootMoreBookmarksButton:Show()
     else
