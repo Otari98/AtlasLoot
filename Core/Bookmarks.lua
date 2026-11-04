@@ -4,12 +4,12 @@ local wipe = AtlasLoot.wipe
 local tcontains = AtlasLoot.tcontains
 
 local MovingIndex = nil
-local ChosenDockIndex = nil
-local SHOWN_BOOKMARKS = 5
-local FIRST_HIDDEN_BOOKMARK = SHOWN_BOOKMARKS + 1
+local ChosenIndex = nil
+local BOOKMARKS_PER_ROW = 5
+local NUM_ROWS = 2
+local VISIBLE_BOOKMARKS = BOOKMARKS_PER_ROW * NUM_ROWS
 
 AtlasLoot.BookmarkFrames = {}
-AtlasLoot.DockRegions = {}
 
 function AtlasLoot.AddBookmark(dataID)
     if not tcontains(AtlasLootCharDB["Bookmarks"], dataID) then
@@ -30,21 +30,22 @@ end
 
 function AtlasLoot.UpdateBookmarkButtons()
     local width = 95
-    if table.getn(AtlasLootCharDB["Bookmarks"]) > SHOWN_BOOKMARKS then
+    if table.getn(AtlasLootCharDB["Bookmarks"]) > VISIBLE_BOOKMARKS then
         AtlasLootMoreBookmarksButton:Show()
     else
         AtlasLootMoreBookmarksButton:Hide()
         width = width + 5
     end
-    for i = 1, table.getn(AtlasLoot.BookmarkFrames) do
+    for i = 1, VISIBLE_BOOKMARKS do
         local button = AtlasLoot.BookmarkFrames[i]
+        if not button then break end
         local dataID = AtlasLootCharDB["Bookmarks"][i]
         local current = AtlasLootItemsFrame.refresh[1]
         button:UnlockHighlight()
         if math.floor(button:GetWidth()) ~= width then
             PanelTemplates_TabResize(0, button, width, width)
         end
-        if dataID and i <= SHOWN_BOOKMARKS then
+        if dataID then
             local info = AtlasLoot_TableNames[dataID]
             button:Enable()
             button:SetActive(true)
@@ -79,25 +80,27 @@ function AtlasLoot.BookmarkButton_OnLoad(self)
     self.Left = _G[name.."Left"]
     self.Right = _G[name.."Right"]
     self.Middle = _G[name.."Middle"]
-    self.DockRegion = _G[name.."DockRegion"]
     self.Text = _G[name.."Text"]
     self.Highlight = self:GetHighlightTexture()
     self.Left:SetVertexColor(0, 0, 0, 1)
     self.Right:SetVertexColor(0, 0, 0, 1)
     self.Middle:SetVertexColor(0, 0, 0, 1)
-    AtlasLoot.BookmarkFrames[id] = self
-    AtlasLoot.DockRegions[id] = self.DockRegion
     self.SetActive = function(self, active)
-        local lowalpha = self:GetID() == FIRST_HIDDEN_BOOKMARK and 0 or 0.5
-        -- do it in this way so that dock region always has full opacity
-        self.Left:SetAlpha(active and 1 or lowalpha)
-        self.Right:SetAlpha(active and 1 or lowalpha)
-        self.Middle:SetAlpha(active and 1 or lowalpha)
+        self.Left:SetAlpha(active and 1 or 0.5)
+        self.Right:SetAlpha(active and 1 or 0.5)
+        self.Middle:SetAlpha(active and 1 or 0.5)
+        self.isActive = active
     end
-    self:SetActive(false)
+    if id == 0 then -- floating one
+        self:SetActive(true)
+        self:Enable()
+    else
+        self:SetActive(false)
+        self:Disable()
+    end
     self:RegisterForDrag("LeftButton")
     self.Highlight:SetAlpha(0.65)
-    self:Disable()
+    AtlasLoot.BookmarkFrames[id] = self
 end
 
 function AtlasLoot.BookmarkButton_OnClick(self, button)
@@ -139,15 +142,15 @@ end
 function AtlasLoot.StopMovingBookmark(abort)
     AtlasLootDefaultFrameFloatingBookmarkButton:StopMovingOrSizing()
     AtlasLootDefaultFrameFloatingBookmarkButton:Hide()
-    -- print(string.format("moving:%s chosen:%s", tostring(MovingIndex), tostring(ChosenDockIndex)))
-    if not abort and ChosenDockIndex and MovingIndex and ChosenDockIndex ~= MovingIndex and ChosenDockIndex ~= MovingIndex + 1 then
-        local numBookmarks = table.getn(AtlasLootCharDB["Bookmarks"])
-        if ChosenDockIndex < 1 or ChosenDockIndex > numBookmarks + 1 then return end
-        if ChosenDockIndex > MovingIndex then ChosenDockIndex = ChosenDockIndex - 1 end
-        table.insert(AtlasLootCharDB["Bookmarks"], ChosenDockIndex, table.remove(AtlasLootCharDB["Bookmarks"], MovingIndex))
+    -- print(string.format("moving:%s chosen:%s", tostring(MovingIndex), tostring(ChosenIndex)))
+    if not abort and ChosenIndex and MovingIndex and ChosenIndex ~= MovingIndex then
+        local bookmarks = AtlasLootCharDB["Bookmarks"]
+        if ChosenIndex > 0 and ChosenIndex <= table.getn(bookmarks) then
+            bookmarks[ChosenIndex], bookmarks[MovingIndex] = bookmarks[MovingIndex], bookmarks[ChosenIndex]
+        end
     end
     MovingIndex = nil
-    ChosenDockIndex = nil
+    ChosenIndex = nil
     AtlasLoot.UpdateBookmarkButtons()
 end
 
@@ -171,7 +174,7 @@ function AtlasLoot.MoreBookmarksButton_OnClick(self, button)
         AtlasLoot.Hewdrop:Close(1)
         return
     end
-    if table.getn(AtlasLootCharDB["Bookmarks"]) <= SHOWN_BOOKMARKS then
+    if table.getn(AtlasLootCharDB["Bookmarks"]) <= VISIBLE_BOOKMARKS then
         return
     end
     AtlasLoot.Hewdrop:Open(self,
@@ -186,9 +189,9 @@ function AtlasLoot.MoreBookmarksButton_OnClick(self, button)
             local first, last, step = 0, 0, 0
             local numBookmarks = table.getn(AtlasLootCharDB["Bookmarks"])
             if AtlasLoot.AnchorPoint == AtlasLoot.Anchor_Atlas then
-                first, last, step = numBookmarks, FIRST_HIDDEN_BOOKMARK, -1
+                first, last, step = numBookmarks, VISIBLE_BOOKMARKS+1, -1
             else
-                first, last, step = FIRST_HIDDEN_BOOKMARK, numBookmarks, 1
+                first, last, step = VISIBLE_BOOKMARKS+1, numBookmarks, 1
             end
             for i = first, last, step do
                 local dataID = AtlasLootCharDB["Bookmarks"][i]
@@ -235,21 +238,6 @@ function AtlasLoot.MoreBookmarksButton_OnClick(self, button)
     end
 end
 
-function AtlasLoot.FloatingBookmark_OnShow(self)
-    for _, frame in ipairs(AtlasLoot.DockRegions) do
-        frame:Show()
-    end
-    self:SetActive(true)
-    self:Enable()
-end
-
-function AtlasLoot.FloatingBookmark_OnHide(self)
-    for _, frame in ipairs(AtlasLoot.DockRegions) do
-        frame:Hide()
-    end
-    AtlasLootDefaultFrameFloatingDockRegion:Hide()
-end
-
 function AtlasLoot.FloatingBookmark_OnUpdate(self, elapsed)
     if not MovingIndex then return end
     local cursorX, cursorY = GetCursorPosition()
@@ -257,42 +245,28 @@ function AtlasLoot.FloatingBookmark_OnUpdate(self, elapsed)
     cursorX = cursorX / scale
     cursorY = cursorY / scale
     AtlasLootDefaultFrameFloatingBookmarkButton:ClearAllPoints()
-    AtlasLootDefaultFrameFloatingBookmarkButton:SetPoint("LEFT", nil, "BOTTOMLEFT", cursorX - 30, cursorY)
-    ChosenDockIndex = nil
-    local numBookmarks = table.getn(AtlasLootCharDB["Bookmarks"])
-    for i = 1, table.getn(AtlasLoot.DockRegions) do
-        local movingUp = MovingIndex > i
-        local movingDown = MovingIndex + 1 < i
-        local region = AtlasLoot.DockRegions[i]
-        if MouseIsOver(region) and i <= numBookmarks + 1 and (movingUp or movingDown) then
-            region.Highlight:Show()
-            ChosenDockIndex = i
-        else
-            region.Highlight:Hide()
+    AtlasLootDefaultFrameFloatingBookmarkButton:SetPoint("LEFT", nil, "BOTTOMLEFT", cursorX - 40, cursorY + 2)
+    ChosenIndex = nil
+    for _, button in pairs(AtlasLoot.BookmarkFrames) do
+        button:UnlockHighlight()
+    end
+    for id, button in pairs(AtlasLoot.BookmarkFrames) do
+        if MouseIsOver(button, -5, 0, 0, 0) then
+            ChosenIndex = id
+            if button.isActive then button:LockHighlight() end
+            break
         end
     end
-    AtlasLootDefaultFrameFloatingDockRegion:Hide()
     local dropdownOpen = AtlasLoot.Hewdrop:IsOpen(AtlasLootMoreBookmarksButton)
-    if not ChosenDockIndex and dropdownOpen and Hewdrop20Level1.buttons then
-        Hewdrop20Level1.count = nil
+    if dropdownOpen and Hewdrop20Level1.buttons then
         for _, button in ipairs(Hewdrop20Level1.buttons) do
-            local middle = button:GetHeight() / 2
-            local overTopHalf = MouseIsOver(button, 0, middle)
-            local overBottomHalf = MouseIsOver(button, -middle, 0)
-            local i = 0
-            local inReverse = AtlasLoot.AnchorPoint == AtlasLoot.Anchor_Atlas
-            if overTopHalf then
-                i = inReverse and button.arg1 + 1 or button.arg1
-            elseif overBottomHalf then
-                i = inReverse and button.arg1 or button.arg1 + 1
-            end
-            local movingUp = MovingIndex > i
-            local movingDown = MovingIndex + 1 < i
-            if (overTopHalf or overBottomHalf) and (movingUp or movingDown) then
-                AtlasLootDefaultFrameFloatingDockRegion:Show()
-                AtlasLootDefaultFrameFloatingDockRegion:SetPoint("CENTER", button, overTopHalf and "TOP" or "BOTTOM", 0, 0)
-                AtlasLootDefaultFrameFloatingDockRegionHighlight:SetWidth(button:GetWidth() + 28)
-                ChosenDockIndex = i
+            button.highlight:Hide()
+        end
+        Hewdrop20Level1.count = nil -- stops it from hiding on timeout
+        for _, button in ipairs(Hewdrop20Level1.buttons) do
+            if MouseIsOver(button) then
+                ChosenIndex = button.arg1
+                button.highlight:Show()
                 break
             end
         end

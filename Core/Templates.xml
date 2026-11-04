@@ -1,29 +1,8 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/">
 
-    <Frame name="AtlasLootDockRegionTemplate" virtual="true" enableMouse="true" hidden="true">
-        <Size x="92" y="50"/>
-        <Anchors>
-            <Anchor point="CENTER" relativePoint="LEFT"><Offset x="2" y="-2"/></Anchor>
-        </Anchors>
-        <Layers>
-            <Layer level="BACKGROUND">
-                <Texture name="$parentHighlight" file="Interface\ChatFrame\UI-ChatFrame-DockHighlight" alphaMode="ADD">
-                    <Size x="32" y="32"/>
-                    <Anchors>
-                        <Anchor point="CENTER"/>
-                    </Anchors>
-                </Texture>
-            </Layer>
-        </Layers>
-        <Scripts>
-            <OnLoad>
-                this.Highlight = _G[this:GetName().."Highlight"]
-            </OnLoad>
-        </Scripts>
-    </Frame>
-
     <Button name="AtlasLootBookmarkButtonTemplate" virtual="true" movable="true">
         <Size x="95" y="34"/>
+        <HitRectInsets left="0" right="0" top="11" bottom="-2"/>
         <Layers>
             <Layer level="BACKGROUND">
                 <Texture name="$parentLeft" file="Interface\ChatFrame\ChatFrameTab">
@@ -82,9 +61,6 @@
                 AtlasLoot.StopMovingBookmark()
             </OnDragStop>
         </Scripts>
-        <Frames>
-            <Frame name="$parentDockRegion" inherits="AtlasLootDockRegionTemplate"/>
-        </Frames>
     </Button>
 
     <Button name="AtlasLootContainerItemTemplate" virtual="true">

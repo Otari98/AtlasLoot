@@ -2,7 +2,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/">
 
     <Frame name="AtlasLootDefaultFrame" toplevel="true" movable="true" enableMouse="true" hidden="true" parent="UIParent">
-        <Size x="600" y="690"/>
+        <Size x="600" y="710"/>
         <Anchors>
             <Anchor point="CENTER"/>
         </Anchors>
@@ -38,7 +38,27 @@
             </Button>
             <Button name="AtlasLootDefaultFrameBookmark6" inherits="AtlasLootBookmarkButtonTemplate" id="6">
                 <Anchors>
-                    <Anchor point="TOPLEFT" relativeTo="AtlasLootDefaultFrameBookmark5" relativePoint="TOPRIGHT"><Offset x="-3" y="0"/></Anchor>
+                    <Anchor point="BOTTOMLEFT" relativeTo="AtlasLootDefaultFrameBookmark1" relativePoint="TOPLEFT"><Offset x="0" y="-14"/></Anchor>
+                </Anchors>
+            </Button>
+            <Button name="AtlasLootDefaultFrameBookmark7" inherits="AtlasLootBookmarkButtonTemplate" id="7">
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativeTo="AtlasLootDefaultFrameBookmark6" relativePoint="TOPRIGHT"><Offset x="-3" y="0"/></Anchor>
+                </Anchors>
+            </Button>
+            <Button name="AtlasLootDefaultFrameBookmark8" inherits="AtlasLootBookmarkButtonTemplate" id="8">
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativeTo="AtlasLootDefaultFrameBookmark7" relativePoint="TOPRIGHT"><Offset x="-3" y="0"/></Anchor>
+                </Anchors>
+            </Button>
+            <Button name="AtlasLootDefaultFrameBookmark9" inherits="AtlasLootBookmarkButtonTemplate" id="9">
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativeTo="AtlasLootDefaultFrameBookmark8" relativePoint="TOPRIGHT"><Offset x="-3" y="0"/></Anchor>
+                </Anchors>
+            </Button>
+            <Button name="AtlasLootDefaultFrameBookmark10" inherits="AtlasLootBookmarkButtonTemplate" id="10">
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativeTo="AtlasLootDefaultFrameBookmark9" relativePoint="TOPRIGHT"><Offset x="-3" y="0"/></Anchor>
                 </Anchors>
             </Button>
             <Button name="AtlasLootMoreBookmarksButton">
@@ -68,6 +88,7 @@
                 </Scripts>
             </Button>
             <Button name="AtlasLootDefaultFrameFloatingBookmarkButton" inherits="AtlasLootBookmarkButtonTemplate" frameStrata="TOOLTIP" movable="true" hidden="true" parent="UIParent" id="0">
+                <HighlightTexture/>
                 <Scripts>
                     <OnEnter/>
                     <OnLeave/>
@@ -80,31 +101,10 @@
                         AtlasLoot.FloatingBookmark_OnUpdate(this, arg1)
                     </OnUpdate>
                     <OnShow>
-                        AtlasLoot.FloatingBookmark_OnShow(this)
+                        GameTooltip:Hide()
                     </OnShow>
-                    <OnHide>
-                        AtlasLoot.FloatingBookmark_OnHide(this)
-                    </OnHide>
                 </Scripts>
             </Button>
-            <Frame name="AtlasLootDefaultFrameFloatingDockRegion" frameStrata="TOOLTIP" enableMouse="true" hidden="true" parent="UIParent">
-                <Size x="132" y="36"/>
-                <Layers>
-                    <Layer level="BACKGROUND">
-                        <Texture name="$parentHighlight" file="Interface\AddOns\AtlasLoot\Images\UI-ChatFrame-DockHighlightH" alphaMode="ADD">
-                            <Size x="128" y="32"/>
-                            <Anchors>
-                                <Anchor point="CENTER"/>
-                            </Anchors>
-                        </Texture>
-                    </Layer>
-                </Layers>
-                <Scripts>
-                    <OnLoad>
-                        this.Highlight = _G[this:GetName().."Highlight"]
-                    </OnLoad>
-                </Scripts>
-            </Frame>
             <Button name="$parent_CloseButton" inherits="UIPanelCloseButton">
                 <Anchors>
                     <Anchor point="TOPRIGHT">

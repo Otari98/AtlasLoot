@@ -29,7 +29,7 @@ ATLASLOOT_OPTIONS_EQUIPCOMPARE_DISABLED = L["|cff9d9d9dUse EquipCompare|r"]
 -- Make the Hewdrop menu in the standalone loot browser accessible here
 AtlasLoot.Hewdrop = AceLibrary("Hewdrop-2.0")
 
-AtlasLoot.Anchor_Default = { "TOPLEFT", "AtlasLootDefaultFrame", "TOPLEFT", 45, -110 }
+AtlasLoot.Anchor_Default = { "TOPLEFT", "AtlasLootDefaultFrame", "TOPLEFT", 45, -130 }
 AtlasLoot.Anchor_Atlas = { "TOPLEFT", "AtlasFrame", "TOPLEFT", 18, -84 }
 -- local Anchor_AlphaMap = { "TOPLEFT", "AlphaMapAlphaMapFrame", "TOPLEFT", 0, 0 }
 AtlasLoot.AnchorPoint = AtlasLoot.Anchor_Default

@@ -17,7 +17,7 @@ function AtlasLoot.SetupForAtlas()
     if not panel then
         panel = CreateFrame("Frame", "AtlasLootPanel", AtlasFrame)
         panel:SetWidth(533)
-        panel:SetHeight(95)
+        panel:SetHeight(110)
         panel:SetPoint("TOPLEFT", AtlasFrame, "BOTTOMLEFT", 6, 6)
         panel:Show()
         panel:EnableMouse(true)
@@ -47,14 +47,17 @@ function AtlasLoot.SetupForAtlas()
         end)
     end
 
+    AtlasLoot.BookmarkFrames[1]:ClearAllPoints()
     AtlasLoot.BookmarkFrames[1]:SetPoint("TOPLEFT", panel, "TOPLEFT", 22, -3)
     AtlasLoot.BookmarkFrames[1]:SetParent(panel)
+    AtlasLoot.BookmarkFrames[6]:ClearAllPoints()
+    AtlasLoot.BookmarkFrames[6]:SetPoint("TOPLEFT", AtlasLoot.BookmarkFrames[1], "BOTTOMLEFT", 0, 14)
+    AtlasLoot.BookmarkFrames[6]:SetParent(panel)
     for i = 0, table.getn(AtlasLoot.BookmarkFrames) do
         local bookmark = AtlasLoot.BookmarkFrames[i]
         if i > 0 then
             bookmark:SetParent(panel)
             bookmark:Show()
-            bookmark.DockRegion:SetFrameLevel(bookmark:GetFrameLevel() + 2)
         end
         bookmark.Left:SetTexCoord(0, 0.25, 1, 0)
         bookmark.Middle:SetTexCoord(0.25, 0.75, 1, 0)
@@ -69,7 +72,7 @@ function AtlasLoot.SetupForAtlas()
     AtlasLootMoreBookmarksButton:SetParent(panel)
     AtlasLootWishListButton:SetParent(panel)
     AtlasLootWishListButton:ClearAllPoints()
-    AtlasLootWishListButton:SetPoint("LEFT", panel, 23, -5)
+    AtlasLootWishListButton:SetPoint("LEFT", panel, 23, -15)
     AtlasLootSearchBox:SetParent(panel)
 
     AtlasLootMoreBookmarksButton:Show()
@@ -84,15 +87,17 @@ function AtlasLoot.SetupForDefault()
     AtlasLoot.StopMovingBookmark(true)
 
     AtlasLoot.AnchorPoint = AtlasLoot.Anchor_Default
-
-    AtlasLoot.BookmarkFrames[1]:SetPoint("TOPLEFT", AtlasLootDefaultFrame, "TOPLEFT", 55, -80)
+    AtlasLoot.BookmarkFrames[1]:ClearAllPoints()
+    AtlasLoot.BookmarkFrames[1]:SetPoint("TOPLEFT", AtlasLootDefaultFrame, "TOPLEFT", 55, -100)
     AtlasLoot.BookmarkFrames[1]:SetParent(AtlasLootDefaultFrame)
+    AtlasLoot.BookmarkFrames[6]:ClearAllPoints()
+    AtlasLoot.BookmarkFrames[6]:SetPoint("BOTTOMLEFT", AtlasLoot.BookmarkFrames[1], "TOPLEFT", 0, -14)
+    AtlasLoot.BookmarkFrames[6]:SetParent(panel)
     for i = 0, table.getn(AtlasLoot.BookmarkFrames) do
         local bookmark = AtlasLoot.BookmarkFrames[i]
         if i > 0 then
             bookmark:SetParent(AtlasLootDefaultFrame)
             bookmark:Show()
-            bookmark.DockRegion:SetFrameLevel(bookmark:GetFrameLevel() + 2)
         end
         bookmark.Left:SetTexCoord(0, 0.25, 0, 1)
         bookmark.Middle:SetTexCoord(0.25, 0.75, 0, 1)
