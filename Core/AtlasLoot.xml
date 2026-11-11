@@ -666,11 +666,11 @@
                 <Anchors>
                     <Anchor point="TOPLEFT" relativeTo="AtlasLootItemsFrame" relativePoint="TOPRIGHT"/>
                 </Anchors>
-                <Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+                <Backdrop bgFile="Interface\Buttons\WHITE8X8" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
                     <EdgeSize val="16"/>
                     <TileSize val="16"/>
                     <BackgroundInsets left="4" right="4" top="4" bottom="4"/>
-                    <Color r="1" g="1" b="1" a="1"/>
+                    <Color r="0" g="0" b="0" a="0.8"/>
                     <BorderColor r="1" g="0.82" b="0" a="1"/>
                 </Backdrop>
             </Frame>

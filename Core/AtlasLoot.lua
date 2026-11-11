@@ -1153,7 +1153,7 @@ function AtlasLoot.ItemButton_OnClick(self, button)
     local link = ""
     local chatEditBox = WIM_EditBoxInFocus or ChatFrameEditBox
     if isItem then
-        local itemName = GetItemInfo(self.itemID)
+        local itemName = GetItemInfo(self.itemID) or name
         link = string.format("%s|Hitem:%d:0:0:0|h[%s]|h|r", color, self.itemID, itemName)
     elseif isEnchant then
         local spellID = tonumber(string.sub(self.itemID, 2))
@@ -1214,9 +1214,7 @@ function AtlasLoot.ShowContainerFrame(self)
     local data = self.container
     if not data then return end
 
-    -- Dark panel (same look as the AtlasLoot window) drawn above everything else in it.
     local containerLevel = AtlasLootItemsFrame:GetFrameLevel() + 20
-    AtlasLootItemsFrameContainer:SetBackdropColor(0.03, 0.03, 0.03, 1)
     AtlasLootItemsFrameContainer:SetFrameLevel(containerLevel)
 
     if self ~= lastSelectedButton then
@@ -1243,14 +1241,11 @@ function AtlasLoot.ShowContainerFrame(self)
     for _, button in pairs(AtlasLoot.ContainerButtons) do
         button:Hide()
     end
-
-    -- Optional tier headers: a row written as { id1, id2, ..., label = "text" }
-    -- gets a label (and a divider line above it, except on the first row).
-    for _, fs in pairs(AtlasLoot.ContainerLabels) do
-        fs:Hide()
+    for _, label in pairs(AtlasLoot.ContainerLabels) do
+        label:Hide()
     end
-    for _, tex in pairs(AtlasLoot.ContainerSeparators) do
-        tex:Hide()
+    for _, separator in pairs(AtlasLoot.ContainerSeparators) do
+        separator:Hide()
     end
 
     local y = 5
@@ -1258,37 +1253,39 @@ function AtlasLoot.ShowContainerFrame(self)
     local buttonIndex = 1
     local maxCols = 1
     local labelIndex = 0
+    local separatorIndex = 0
     local labelWidth = 0
 
     for i = 1, table.getn(data) do
-        local label = data[i].label
-        if label then
+        local text = data[i].label
+        if text then
             labelIndex = labelIndex + 1
-            if i > 1 then
+            if data[i].separator then
+                separatorIndex = separatorIndex + 1
                 y = y + 6
-                local sep = AtlasLoot.ContainerSeparators[labelIndex]
-                if not sep then
-                    sep = AtlasLootItemsFrameContainer:CreateTexture(nil, "ARTWORK")
-                    sep:SetTexture(1, 0.82, 0, 0.45)
-                    sep:SetHeight(1)
-                    AtlasLoot.ContainerSeparators[labelIndex] = sep
+                local separator = AtlasLoot.ContainerSeparators[separatorIndex]
+                if not separator then
+                    separator = AtlasLootItemsFrameContainer:CreateTexture(nil, "ARTWORK")
+                    separator:SetTexture(1, 0.82, 0, 0.45)
+                    separator:SetHeight(1)
+                    AtlasLoot.ContainerSeparators[separatorIndex] = separator
                 end
-                sep:ClearAllPoints()
-                sep:SetPoint("TOPLEFT", AtlasLootItemsFrameContainer, "TOPLEFT", 6, -(y - 3))
-                sep:SetPoint("TOPRIGHT", AtlasLootItemsFrameContainer, "TOPRIGHT", -6, -(y - 3))
-                sep:Show()
+                separator:ClearAllPoints()
+                separator:SetPoint("TOPLEFT", AtlasLootItemsFrameContainer, "TOPLEFT", 6, -(y - 1))
+                separator:SetPoint("TOPRIGHT", AtlasLootItemsFrameContainer, "TOPRIGHT", -6, -(y - 1))
+                separator:Show()
             end
-            local fs = AtlasLoot.ContainerLabels[labelIndex]
-            if not fs then
-                fs = AtlasLootItemsFrameContainer:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
-                fs:SetJustifyH("LEFT")
-                AtlasLoot.ContainerLabels[labelIndex] = fs
+            local label = AtlasLoot.ContainerLabels[labelIndex]
+            if not label then
+                label = AtlasLootItemsFrameContainer:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
+                label:SetJustifyH("LEFT")
+                AtlasLoot.ContainerLabels[labelIndex] = label
             end
-            fs:SetText(label)
-            fs:ClearAllPoints()
-            fs:SetPoint("TOPLEFT", AtlasLootItemsFrameContainer, "TOPLEFT", 8, -y)
-            fs:Show()
-            local w = fs:GetStringWidth()
+            label:SetText(AtlasLoot.DecompressText(text))
+            label:ClearAllPoints()
+            label:SetPoint("TOPLEFT", AtlasLootItemsFrameContainer, "TOPLEFT", 8, -y - 5)
+            label:Show()
+            local w = label:GetStringWidth()
             if w and w > labelWidth then
                 labelWidth = w
             end
