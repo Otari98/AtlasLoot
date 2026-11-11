@@ -65,6 +65,8 @@ AtlasLoot_Data["AtlasLootFallback"] = {
 }
 
 AtlasLoot.ContainerButtons = {}
+AtlasLoot.ContainerLabels = {}
+AtlasLoot.ContainerSeparators = {}
 
 SLASH_ATLASLOOT1 = "/atlasloot"
 SLASH_ATLASLOOT2 = "/al"
@@ -1212,6 +1214,11 @@ function AtlasLoot.ShowContainerFrame(self)
     local data = self.container
     if not data then return end
 
+    -- Dark panel (same look as the AtlasLoot window) drawn above everything else in it.
+    local containerLevel = AtlasLootItemsFrame:GetFrameLevel() + 20
+    AtlasLootItemsFrameContainer:SetBackdropColor(0.03, 0.03, 0.03, 1)
+    AtlasLootItemsFrameContainer:SetFrameLevel(containerLevel)
+
     if self ~= lastSelectedButton then
         AtlasLootItemsFrameContainer:Show()
         lastSelectedButton = self
@@ -1237,12 +1244,56 @@ function AtlasLoot.ShowContainerFrame(self)
         button:Hide()
     end
 
-    local row = 0
+    -- Optional tier headers: a row written as { id1, id2, ..., label = "text" }
+    -- gets a label (and a divider line above it, except on the first row).
+    for _, fs in pairs(AtlasLoot.ContainerLabels) do
+        fs:Hide()
+    end
+    for _, tex in pairs(AtlasLoot.ContainerSeparators) do
+        tex:Hide()
+    end
+
+    local y = 5
     local col = 0
     local buttonIndex = 1
     local maxCols = 1
+    local labelIndex = 0
+    local labelWidth = 0
 
     for i = 1, table.getn(data) do
+        local label = data[i].label
+        if label then
+            labelIndex = labelIndex + 1
+            if i > 1 then
+                y = y + 6
+                local sep = AtlasLoot.ContainerSeparators[labelIndex]
+                if not sep then
+                    sep = AtlasLootItemsFrameContainer:CreateTexture(nil, "ARTWORK")
+                    sep:SetTexture(1, 0.82, 0, 0.45)
+                    sep:SetHeight(1)
+                    AtlasLoot.ContainerSeparators[labelIndex] = sep
+                end
+                sep:ClearAllPoints()
+                sep:SetPoint("TOPLEFT", AtlasLootItemsFrameContainer, "TOPLEFT", 6, -(y - 3))
+                sep:SetPoint("TOPRIGHT", AtlasLootItemsFrameContainer, "TOPRIGHT", -6, -(y - 3))
+                sep:Show()
+            end
+            local fs = AtlasLoot.ContainerLabels[labelIndex]
+            if not fs then
+                fs = AtlasLootItemsFrameContainer:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
+                fs:SetJustifyH("LEFT")
+                AtlasLoot.ContainerLabels[labelIndex] = fs
+            end
+            fs:SetText(label)
+            fs:ClearAllPoints()
+            fs:SetPoint("TOPLEFT", AtlasLootItemsFrameContainer, "TOPLEFT", 8, -y)
+            fs:Show()
+            local w = fs:GetStringWidth()
+            if w and w > labelWidth then
+                labelWidth = w
+            end
+            y = y + 16
+        end
         col = 0
         for j = 1, table.getn(data[i]) do
             local itemButton = AtlasLoot.ContainerButtons[buttonIndex]
@@ -1264,8 +1315,9 @@ function AtlasLoot.ShowContainerFrame(self)
             if not tex then
                 tex = "Interface\\Icons\\INV_Misc_QuestionMark"
             end
-            itemButton:SetPoint("TOPLEFT", AtlasLootItemsFrameContainer, (col * 35) + 5, -(row * 35) - 5)
+            itemButton:SetPoint("TOPLEFT", AtlasLootItemsFrameContainer, (col * 35) + 5, -y)
             itemButton:SetBackdropBorderColor(r, g, b)
+            itemButton:SetFrameLevel(containerLevel + 1)
             itemButton:Show()
             _G["AtlasLootContainerItem"..buttonIndex.."Icon"]:SetTexture(tex)
             col = col + 1
@@ -1274,11 +1326,15 @@ function AtlasLoot.ShowContainerFrame(self)
             end
             buttonIndex = buttonIndex + 1
         end
-        row = row + 1
+        y = y + 35
+    end
+    local width = 16 + (maxCols * 35)
+    if labelWidth + 20 > width then
+        width = labelWidth + 20
     end
     AtlasLootItemsFrameContainer:SetPoint("TOPLEFT", self, "BOTTOMLEFT", -2, 2)
-    AtlasLootItemsFrameContainer:SetWidth(16 + (maxCols * 35))
-    AtlasLootItemsFrameContainer:SetHeight(16 + (row * 35))
+    AtlasLootItemsFrameContainer:SetWidth(width)
+    AtlasLootItemsFrameContainer:SetHeight(y + 11)
 end
 
 function AtlasLoot.ContainerItem_OnEnter(self)
