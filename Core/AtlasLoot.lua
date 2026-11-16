@@ -1130,10 +1130,13 @@ end
 
 function AtlasLoot.ItemButton_OnClick(self, button)
     AtlasLoot.Hewdrop:Close(1)
-    if self.container then
+    local shift = IsShiftKeyDown()
+    local control = IsControlKeyDown()
+    local alt = IsAltKeyDown()
+    if self.container and not (shift or control or alt) then
         AtlasLoot.ShowContainerFrame(self)
         return
-    elseif self.lootpage then
+    elseif self.lootpage and not (shift or control or alt) then
         AtlasLoot.ShowItemsFrame(self.lootpage)
         return
     end
@@ -1141,6 +1144,7 @@ function AtlasLoot.ItemButton_OnClick(self, button)
         return
     end
     local name = self._Name:GetText()
+    if not name then return end
     local _, _, color = string.find(name, "(|c%x%x%x%x%x%x%x%x)")
     color = color or NORMAL_FONT_COLOR_CODE
     name = string.gsub(name, "|c%x%x%x%x%x%x%x%x", "")
@@ -1176,13 +1180,13 @@ function AtlasLoot.ItemButton_OnClick(self, button)
             link = string.format("%s|Henchant:%d|h[%s]|h|r", color, spellID, name)
         end
     end
-    if IsShiftKeyDown() then
+    if shift then
         if chatEditBox and chatEditBox:IsVisible() then
             chatEditBox:Insert(link)
         else
             AtlasLoot.SayItemReagents(self.itemID, color, name)
         end
-    elseif IsAltKeyDown() then
+    elseif alt then
         if dataSource == "WishList" then
             AtlasLoot.DeleteFromWishList(self.itemID)
         elseif dataSource == "SearchResult" then
@@ -1190,7 +1194,7 @@ function AtlasLoot.ItemButton_OnClick(self, button)
         else
             AtlasLoot.AddToWishlist(self.itemID, texture, self.itemIDName, self.itemIDExtra, dataID.."|"..dataSource)
         end
-    elseif IsControlKeyDown() then
+    elseif control then
         if self.dressingroomID and self.dressingroomID ~= 0 then
             DressUpItemLink(self.dressingroomID)
         end
