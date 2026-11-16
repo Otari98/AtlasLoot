@@ -885,6 +885,7 @@ function AtlasLoot.ItemButton_OnLoad(self)
     end
     self._ContainerBorder = _G[name.."_ContainerBorder"]
     self._ContainerBorderHighlight = _G[name.."_ContainerBorderHighlight"]
+    self.elapsed = TOOLTIP_UPDATE_TIME
 end
 
 local stringArgs = {}
@@ -1110,6 +1111,12 @@ function AtlasLoot.ItemButton_OnEnter(self)
             AtlasLootTooltip:SetPoint("BOTTOMLEFT", AtlasLootTooltip2, "TOPLEFT", 0, 0)
         end
     end
+
+    if IsControlKeyDown() and self.dressingroomID and self.dressingroomID ~= 0 then
+        ShowInspectCursor()
+    else
+        ResetCursor()
+    end
 end
 
 function AtlasLoot.ItemButton_OnLeave(self)
@@ -1118,6 +1125,7 @@ function AtlasLoot.ItemButton_OnLeave(self)
     GameTooltip:Hide()
     ShoppingTooltip1:Hide()
     ShoppingTooltip2:Hide()
+    ResetCursor()
 end
 
 function AtlasLoot.ItemButton_OnClick(self, button)
@@ -1206,6 +1214,15 @@ function AtlasLoot.ItemButton_OnClick(self, button)
                 end
             end
         end
+    end
+end
+
+function AtlasLoot.ItemButton_OnUpdate(self, elapsed)
+    self.elapsed = self.elapsed - elapsed
+    if self.elapsed > 0 then return end
+    self.elapsed = TOOLTIP_UPDATE_TIME
+    if AtlasLootTooltip:IsOwned(self) then
+        AtlasLoot.ItemButton_OnEnter(self)
     end
 end
 
@@ -1334,6 +1351,10 @@ function AtlasLoot.ShowContainerFrame(self)
     AtlasLootItemsFrameContainer:SetHeight(y + 11)
 end
 
+function AtlasLoot.ContainerItem_OnLoad(self)
+    self.elapsed = TOOLTIP_UPDATE_TIME
+end
+
 function AtlasLoot.ContainerItem_OnEnter(self)
     local itemID = self.itemID
     if not itemID then return end
@@ -1345,11 +1366,18 @@ function AtlasLoot.ContainerItem_OnEnter(self)
         AtlasLootTooltip:AddLine(L["ItemID:"].." "..itemID)
     end
     AtlasLootTooltip:Show()
+
+    if IsControlKeyDown() then
+        ShowInspectCursor()
+    else
+        ResetCursor()
+    end
 end
 
 function AtlasLoot.ContainerItem_OnLeave(self)
     AtlasLootTooltip:Hide()
     AtlasLootTooltip.itemID = nil
+    ResetCursor()
 end
 
 function AtlasLoot.ContainerItem_OnClick(self, button)
@@ -1377,6 +1405,15 @@ function AtlasLoot.ContainerItem_OnClick(self, button)
         else
             AtlasLoot.AddToWishlist(itemID, tex, name, self.itemIDExtra, dataID.."|"..dataSource)
         end
+    end
+end
+
+function AtlasLoot.ContainerItem_OnUpdate(self, elapsed)
+    self.elapsed = self.elapsed - elapsed
+    if self.elapsed > 0 then return end
+    self.elapsed = TOOLTIP_UPDATE_TIME
+    if AtlasLootTooltip:IsOwned(self) then
+        AtlasLoot.ContainerItem_OnEnter(self)
     end
 end
 
