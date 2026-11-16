@@ -105,14 +105,14 @@
                     </OnShow>
                 </Scripts>
             </Button>
-            <Button name="$parent_CloseButton" inherits="UIPanelCloseButton">
+            <Button name="AtlasLootDefaultFrame_CloseButton" inherits="UIPanelCloseButton">
                 <Anchors>
                     <Anchor point="TOPRIGHT">
                         <Offset x="-10" y="-10"/>
                     </Anchor>
                 </Anchors>
             </Button>
-            <Button name="$parent_Atlas" inherits="UIPanelButtonTemplate">
+            <Button name="AtlasLootDefaultFrame_Atlas" inherits="UIPanelButtonTemplate">
                 <Size x="105" y="20"/>
                 <Anchors>
                     <Anchor point="TOPRIGHT">
@@ -134,7 +134,7 @@
                     </OnShow>
                 </Scripts>
             </Button>
-            <Button name="$parent_Options" inherits="UIPanelButtonTemplate">
+            <Button name="AtlasLootDefaultFrame_Options" inherits="UIPanelButtonTemplate">
                 <Size x="105" y="20"/>
                 <Anchors>
                     <Anchor point="TOPLEFT">
@@ -152,7 +152,7 @@
                     </OnShow>
                 </Scripts>
             </Button>
-            <Button name="$parent_Menu" inherits="UIPanelButtonTemplate">
+            <Button name="AtlasLootDefaultFrame_Menu" inherits="UIPanelButtonTemplate">
                 <Size x="130" y="20"/>
                 <Anchors>
                     <Anchor point="TOP">
@@ -173,7 +173,7 @@
                     </OnShow>
                 </Scripts>
             </Button>
-            <Button name="$parent_SubMenu" inherits="UIPanelButtonTemplate">
+            <Button name="AtlasLootDefaultFrame_SubMenu" inherits="UIPanelButtonTemplate">
                 <Size x="130" y="20"/>
                 <Anchors>
                     <Anchor point="TOP">
@@ -347,7 +347,7 @@
         </Frames>
         <Layers>
             <Layer level="ARTWORK">
-                <Texture name="$parentHeader" file="Interface\DialogFrame\UI-DialogBox-Header">
+                <Texture name="AtlasLootDefaultFrameHeader" file="Interface\DialogFrame\UI-DialogBox-Header">
                     <Size x="425" y="64"/>
                     <Anchors>
                         <Anchor point="TOP">
@@ -362,7 +362,7 @@
                         </Anchor>
                     </Anchors>
                 </FontString>
-                <FontString name="$parent_Notice" inherits="GameFontNormal">
+                <FontString name="AtlasLootDefaultFrame_Notice" inherits="GameFontNormal">
                     <Anchors>
                         <Anchor point="BOTTOM">
                             <Offset x="0" y="17"/>
@@ -371,14 +371,14 @@
                 </FontString>
             </Layer>
             <Layer level="OVERLAY">
-                <FontString name="$parent_SelectedCategory" inherits="GameFontNormal">
+                <FontString name="AtlasLootDefaultFrame_SelectedCategory" inherits="GameFontNormal">
                     <Anchors>
                         <Anchor point="TOP">
                             <Offset x="0" y="-50"/>
                         </Anchor>
                     </Anchors>
                 </FontString>
-                <FontString name="$parent_SelectedTable" inherits="GameFontNormal">
+                <FontString name="AtlasLootDefaultFrame_SelectedTable" inherits="GameFontNormal">
                     <Anchors>
                         <Anchor point="TOP">
                             <Offset x="0" y="-50"/>
@@ -438,9 +438,9 @@
                     </OnShow>
                 </Scripts>
             </CheckButton>
-            <Button name="$parent_CloseButton" inherits="UIPanelCloseButton">
+            <Button name="AtlasLootItemsFrame_CloseButton" inherits="UIPanelCloseButton">
                 <Anchors>
-                    <Anchor point="TOPRIGHT" relativeTo="$parent" relativePoint="TOPRIGHT">
+                    <Anchor point="TOPRIGHT">
                         <Offset x="-5" y="-5"/>
                     </Anchor>
                 </Anchors>
@@ -729,7 +729,7 @@
         </Backdrop>
         <Layers>
             <Layer level="ARTWORK">
-                <Texture name="$parentHeader" file="Interface\DialogFrame\UI-DialogBox-Header">
+                <Texture name="AtlasLootOptionsFrameHeader" file="Interface\DialogFrame\UI-DialogBox-Header">
                     <Size x="256" y="64"/>
                     <Anchors>
                         <Anchor point="TOP">
@@ -737,7 +737,7 @@
                         </Anchor>
                     </Anchors>
                 </Texture>
-                <FontString name="$parent_Title" inherits="GameFontNormal">
+                <FontString name="AtlasLootOptionsFrame_Title" inherits="GameFontNormal">
                     <Anchors>
                         <Anchor point="TOP"/>
                     </Anchors>
@@ -745,7 +745,7 @@
             </Layer>
         </Layers>
         <Frames>
-            <CheckButton name="$parentDefaultTT" inherits="OptionsCheckButtonTemplate">
+            <CheckButton name="AtlasLootOptionsFrameDefaultTT" inherits="OptionsCheckButtonTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT">
                         <Offset x="20" y="-40"/>
@@ -760,7 +760,7 @@
                     </OnClick>
                 </Scripts>
             </CheckButton>
-            <CheckButton name="$parentLootlinkTT" inherits="OptionsCheckButtonTemplate">
+            <CheckButton name="AtlasLootOptionsFrameLootlinkTT" inherits="OptionsCheckButtonTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT">
                         <Offset x="20" y="-70"/>
@@ -775,7 +775,7 @@
                     </OnClick>
                 </Scripts>
             </CheckButton>
-            <CheckButton name="$parentItemSyncTT" inherits="OptionsCheckButtonTemplate">
+            <CheckButton name="AtlasLootOptionsFrameItemSyncTT" inherits="OptionsCheckButtonTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT">
                         <Offset x="20" y="-100"/>
@@ -790,7 +790,7 @@
                     </OnClick>
                 </Scripts>
             </CheckButton>
-            <CheckButton name="$parentShowSource" inherits="OptionsCheckButtonTemplate">
+            <CheckButton name="AtlasLootOptionsFrameShowSource" inherits="OptionsCheckButtonTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT">
                         <Offset x="20" y="-130"/>
@@ -805,7 +805,7 @@
                     </OnClick>
                 </Scripts>
             </CheckButton>
-            <CheckButton name="$parentWishlistGroupedByDungeon" inherits="OptionsCheckButtonTemplate">
+            <CheckButton name="AtlasLootOptionsFrameWishlistGroupedByDungeon" inherits="OptionsCheckButtonTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT">
                         <Offset x="20" y="-250"/>
@@ -820,7 +820,7 @@
                     </OnClick>
                 </Scripts>
             </CheckButton>
-            <CheckButton name="$parentEquipCompare" inherits="OptionsCheckButtonTemplate">
+            <CheckButton name="AtlasLootOptionsFrameEquipCompare" inherits="OptionsCheckButtonTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT">
                         <Offset x="20" y="-190"/>
@@ -835,7 +835,7 @@
                     </OnClick>
                 </Scripts>
             </CheckButton>
-            <CheckButton name="$parentItemID" inherits="OptionsCheckButtonTemplate">
+            <CheckButton name="AtlasLootOptionsFrameItemID" inherits="OptionsCheckButtonTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT">
                         <Offset x="20" y="-160"/>
@@ -850,7 +850,7 @@
                     </OnClick>
                 </Scripts>
             </CheckButton>
-            <CheckButton name="$parentMinimap" inherits="OptionsCheckButtonTemplate">
+            <CheckButton name="AtlasLootOptionsFrameMinimap" inherits="OptionsCheckButtonTemplate">
                 <Anchors>
                     <Anchor point="TOP">
                         <Offset x="20" y="-40"/>
@@ -866,7 +866,7 @@
                     </OnClick>
                 </Scripts>
             </CheckButton>
-            <CheckButton name="$parentHidePanel" inherits="OptionsCheckButtonTemplate">
+            <CheckButton name="AtlasLootOptionsFrameHidePanel" inherits="OptionsCheckButtonTemplate">
                 <Anchors>
                     <Anchor point="TOP">
                         <Offset x="20" y="-70"/>
@@ -888,7 +888,7 @@
                     </OnClick>
                 </Scripts>
             </CheckButton>
-            <CheckButton name="$parentOpaque" inherits="OptionsCheckButtonTemplate">
+            <CheckButton name="AtlasLootOptionsFrameOpaque" inherits="OptionsCheckButtonTemplate">
                 <Anchors>
                     <Anchor point="TOP">
                         <Offset x="20" y="-100"/>
@@ -903,7 +903,7 @@
                     </OnClick>
                 </Scripts>
             </CheckButton>
-            <Slider name="$ParentSliderButtonRad" inherits="OptionsSliderTemplate">
+            <Slider name="AtlasLootOptionsFrameSliderButtonRad" inherits="OptionsSliderTemplate">
                 <Size x="240" y="16"/>
                 <Anchors>
                     <Anchor point="TOP">
@@ -919,7 +919,7 @@
                     </OnValueChanged>
                 </Scripts>
             </Slider>
-            <Slider name="$ParentSliderButtonPos" inherits="OptionsSliderTemplate">
+            <Slider name="AtlasLootOptionsFrameSliderButtonPos" inherits="OptionsSliderTemplate">
                 <Size x="240" y="16"/>
                 <Anchors>
                     <Anchor point="TOP">
@@ -935,7 +935,7 @@
                     </OnValueChanged>
                 </Scripts>
             </Slider>
-            <Button name="$parentDone" inherits="UIPanelButtonTemplate2">
+            <Button name="AtlasLootOptionsFrameDone" inherits="UIPanelButtonTemplate2">
                 <Size x="80" y="21"/>
                 <Anchors>
                     <Anchor point="BOTTOM">
@@ -951,7 +951,7 @@
                     </OnClick>
                 </Scripts>
             </Button>
-            <Button name="$ParentResetPosition" inherits="UIPanelButtonTemplate2">
+            <Button name="AtlasLootOptionsFrameResetPosition" inherits="UIPanelButtonTemplate2">
                 <Size x="160" y="21"/>
                 <Anchors>
                     <Anchor point="BOTTOM">
@@ -967,7 +967,7 @@
                     </OnClick>
                 </Scripts>
             </Button>
-            <Button name="$ParentDefaultSettings" inherits="UIPanelButtonTemplate2">
+            <Button name="AtlasLootOptionsFrameDefaultSettings" inherits="UIPanelButtonTemplate2">
                 <Size x="160" y="21"/>
                 <Anchors>
                     <Anchor point="BOTTOM">
